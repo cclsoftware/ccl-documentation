@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Styles Reference &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/target-highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Skin Elements Reference" href="skin-elements-classmodel.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">CCL Skin Definition Language</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter/index.html">Chapters</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="skin-elements-classmodel.html">Skin Elements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Visual Styles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basicstyle">BasicStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#borderstyle">BorderStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buttonstyle">ButtonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checkboxstyle">CheckBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comboboxstyle">ComboBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dialoggroupstyle">DialogGroupStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dividerstyle">DividerStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dropboxstyle">DropBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editboxstyle">EditBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#headerviewstyle">HeaderViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imageviewstyle">ImageViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#itemviewstyle">ItemViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#knobstyle">KnobStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelstyle">LabelStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listviewstyle">ListViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#menubarcontrolstyle">MenuBarControlStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#menucontrolstyle">MenuControlStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagecontrolstyle">PageControlStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#popupselectorstyle">PopupSelectorStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#progressbarstyle">ProgressBarStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rangesliderstyle">RangeSliderStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sceneview3dstyle">SceneView3DStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scrollbarstyle">ScrollBarStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scrollbuttonstyle">ScrollButtonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scrollpickerstyle">ScrollPickerStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scrollviewstyle">ScrollViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#segmentbox">SegmentBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selectboxstyle">SelectBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sliderstyle">SliderStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tabviewstyle">TabViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textboxstyle">TextBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolbuttonstyle">ToolButtonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#treeviewstyle">TreeViewStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trivectorpadstyle">TriVectorPadStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updownbuttonstyle">UpDownButtonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valuebarstyle">ValueBarStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valueboxstyle">ValueBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vectorpadstyle">VectorPadStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windowbackgroundstyle">WindowBackgroundStyle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#defaultcolors">DefaultColors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standardstyles">StandardStyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themecolors">ThemeColors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themecursors">ThemeCursors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themeelementimages">ThemeElementImages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themeelementstates">ThemeElementStates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themeelementstateson">ThemeElementStatesOn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#themefonts">ThemeFonts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thememetrics">ThemeMetrics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">References</a></li>
+      <li class="breadcrumb-item active">Visual Styles Reference</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visual-styles-reference">
+<h1>Visual Styles Reference<a class="headerlink" href="#visual-styles-reference" title="Permalink to this heading"></a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<section id="basicstyle">
+<span id="visual-styles-classmodel-class-basicstyle"></span><h3>BasicStyle<a class="headerlink" href="#basicstyle" title="Permalink to this heading"></a></h3>
+<p>Basic visual style attributes inherited by all other styles.</p>
+<p><strong>Attributes (9)</strong></p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-borderstyle"><span class="std std-ref">BorderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-comboboxstyle"><span class="std std-ref">ComboBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialoggroupstyle"><span class="std std-ref">DialogGroupStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dividerstyle"><span class="std std-ref">DividerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dropboxstyle"><span class="std std-ref">DropBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-headerviewstyle"><span class="std std-ref">HeaderViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-imageviewstyle"><span class="std std-ref">ImageViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-knobstyle"><span class="std std-ref">KnobStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-labelstyle"><span class="std std-ref">LabelStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-listviewstyle"><span class="std std-ref">ListViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menubarcontrolstyle"><span class="std std-ref">MenuBarControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menucontrolstyle"><span class="std std-ref">MenuControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-pagecontrolstyle"><span class="std std-ref">PageControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-popupselectorstyle"><span class="std std-ref">PopupSelectorStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-progressbarstyle"><span class="std std-ref">ProgressBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-rangesliderstyle"><span class="std std-ref">RangeSliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sceneview3dstyle"><span class="std std-ref">SceneView3DStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbarstyle"><span class="std std-ref">ScrollBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbuttonstyle"><span class="std std-ref">ScrollButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollpickerstyle"><span class="std std-ref">ScrollPickerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollviewstyle"><span class="std std-ref">ScrollViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sliderstyle"><span class="std std-ref">SliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-tabviewstyle"><span class="std std-ref">TabViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-toolbuttonstyle"><span class="std std-ref">ToolButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-trivectorpadstyle"><span class="std std-ref">TriVectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-updownbuttonstyle"><span class="std std-ref">UpDownButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-valuebarstyle"><span class="std std-ref">ValueBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-vectorpadstyle"><span class="std std-ref">VectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-windowbackgroundstyle"><span class="std std-ref">WindowBackgroundStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="borderstyle">
+<span id="visual-styles-classmodel-class-borderstyle"></span><h3>BorderStyle<a class="headerlink" href="#borderstyle" title="Permalink to this heading"></a></h3>
+<p>Draws either the “background” image if availble, or the “backcolor”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-border"><span class="std std-ref">Border</span></a>]</p>
+<p><strong>Attributes (10)</strong></p>
+<ul class="simple">
+<li><p><strong>border.background</strong> (<em>image</em>): a “border.background” image can be used, with the default “background” image is its fallback</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="buttonstyle">
+<span id="visual-styles-classmodel-class-buttonstyle"></span><h3>ButtonStyle<a class="headerlink" href="#buttonstyle" title="Permalink to this heading"></a></h3>
+<p>A button draws a background and some content.</p>
+<p><strong>Description</strong></p>
+<p>The background is not drawn when the option “transparent” is set.
+The background can be an image “background” (or “left” or “right” when the correspending option is set).</p>
+<p>A frame of the image is chosen depending on the mouse state and parameter value.
+Supported frame names are “normal[On]”, “pressed[On]”, “mouseover[On]”, “disabled[On]”, “focus[On]”.</p>
+<p>When an image is used, an additonal background color “backcolor.on” or “backcolor.off” can be drawn underneath the button image.
+When no image is specified, a rectangular frame in color “forecolor” can be drawn with option “border”.
+For the content, a padding can be specified. The content can be an “icon”, “title” or both.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-button"><span class="std std-ref">Button</span></a>]</p>
+<p><strong>Attributes (60)</strong></p>
+<ul class="simple">
+<li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
+<li><p><strong>backcolor.off</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (even when a colorParam is used)</p></li>
+<li><p><strong>backcolor.on</strong> (<em>color</em>): background color drawn underneath button image when button is switched on (overwritten by opaque colorParam color)</p></li>
+<li><p><strong>backcolor.radius</strong> (<em>metric</em>): radius for backcolor / forcolor</p></li>
+<li><p><strong>backcolor.transparent</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (when colorParam color is transparent)</p></li>
+<li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
+<li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
+<li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
+<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): “iconcolor” is used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
+<li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
+<li><p><strong>iconcolor.bright</strong> (<em>color</em>): “iconcolor.bright” is used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): “iconcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): “iconcolor.disabled” is used when button is disabled</p></li>
+<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): “iconcolor.mouseover” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): “iconcolor.mouseoverOn” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.on</strong> (<em>color</em>): “iconcolor.on” is used when “colorize.icon” is set and button is switched on</p></li>
+<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): “iconcolor.pressed” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): “iconcolor.pressedOn” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): “iconcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): “iconcolor.transparentOn” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
+<li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
+<li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for icon &amp; title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for title and/or icon</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for title and/or icon</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for title and/or icon</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for title and/or icon</p></li>
+<li><p><strong>right</strong> (<em>image</em>): used instead of “background” image when button has option “right”</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>single</strong> (<em>image</em>): used instead of “background” image when button has option “left” and “right”</p></li>
+<li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
+<li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
+<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): “textcolor.bright” is used when “colorize.icon” is set and the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): “textcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when button is disabled</p></li>
+<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): “textcolor.mouseover” used (instead of “textcolor”) when mouse is over button</p></li>
+<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): “textcolor.mouseoverOn” used (instead of “textcolor.on”) when mouse is over button</p></li>
+<li><p><strong>textcolor.on</strong> (<em>color</em>): “textcolor.on” is used (instead of “textcolor”) when button is switched on</p></li>
+<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): text color used (instead of “textcolor”) when phase is on</p></li>
+<li><p><strong>textcolor.pressed</strong> (<em>color</em>): “textcolor.pressed” used (instead of “textcolor.on”) when button is pressed and off</p></li>
+<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): “textcolor.pressedOn” used (instead of “textcolor.pressed”) when button is pressed and on</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one pixel if the button is on</p></li>
+<li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the button title</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-checkboxstyle"><span class="std std-ref">CheckBoxStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="checkboxstyle">
+<span id="visual-styles-classmodel-class-checkboxstyle"></span><h3>CheckBoxStyle<a class="headerlink" href="#checkboxstyle" title="Permalink to this heading"></a></h3>
+<p>Draws an image that shows the parameter state (typically a checkmark) and an additional title besides the image.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-checkbox"><span class="std std-ref">CheckBox</span></a>]</p>
+<p><strong>Attributes (63)</strong></p>
+<ul class="simple">
+<li><p><strong>buttonstyle</strong> (<em>metric</em>): if this is set (“1”), the control is drawn like a button</p></li>
+<li><p><strong>checkboxrightside</strong> (<em>metric</em>): if this is set (“1”), the checkbox is drawn algined to the right side of the view rect</p></li>
+<li><p><strong>mixedicon</strong> (<em>image</em>): fallback when no mixedicon at the checkbox is defined</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
+<li><p><strong>backcolor.off</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (even when a colorParam is used)</p></li>
+<li><p><strong>backcolor.on</strong> (<em>color</em>): background color drawn underneath button image when button is switched on (overwritten by opaque colorParam color)</p></li>
+<li><p><strong>backcolor.radius</strong> (<em>metric</em>): radius for backcolor / forcolor</p></li>
+<li><p><strong>backcolor.transparent</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (when colorParam color is transparent)</p></li>
+<li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
+<li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
+<li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
+<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): “iconcolor” is used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
+<li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
+<li><p><strong>iconcolor.bright</strong> (<em>color</em>): “iconcolor.bright” is used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): “iconcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): “iconcolor.disabled” is used when button is disabled</p></li>
+<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): “iconcolor.mouseover” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): “iconcolor.mouseoverOn” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.on</strong> (<em>color</em>): “iconcolor.on” is used when “colorize.icon” is set and button is switched on</p></li>
+<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): “iconcolor.pressed” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): “iconcolor.pressedOn” is used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): “iconcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): “iconcolor.transparentOn” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
+<li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
+<li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for icon &amp; title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for title and/or icon</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for title and/or icon</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for title and/or icon</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for title and/or icon</p></li>
+<li><p><strong>right</strong> (<em>image</em>): used instead of “background” image when button has option “right”</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>single</strong> (<em>image</em>): used instead of “background” image when button has option “left” and “right”</p></li>
+<li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
+<li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
+<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): “textcolor.bright” is used when “colorize.icon” is set and the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): “textcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when button is disabled</p></li>
+<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): “textcolor.mouseover” used (instead of “textcolor”) when mouse is over button</p></li>
+<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): “textcolor.mouseoverOn” used (instead of “textcolor.on”) when mouse is over button</p></li>
+<li><p><strong>textcolor.on</strong> (<em>color</em>): “textcolor.on” is used (instead of “textcolor”) when button is switched on</p></li>
+<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): text color used (instead of “textcolor”) when phase is on</p></li>
+<li><p><strong>textcolor.pressed</strong> (<em>color</em>): “textcolor.pressed” used (instead of “textcolor.on”) when button is pressed and off</p></li>
+<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): “textcolor.pressedOn” used (instead of “textcolor.pressed”) when button is pressed and on</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one pixel if the button is on</p></li>
+<li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the button title</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="comboboxstyle">
+<span id="visual-styles-classmodel-class-comboboxstyle"></span><h3>ComboBoxStyle<a class="headerlink" href="#comboboxstyle" title="Permalink to this heading"></a></h3>
+<p>If option “transparent” is not set, a ComboBox draws a background image.</p>
+<p><strong>Description</strong></p>
+<p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
+<p>The “button” image is drawn at the right. The remaining space shows the text field to edit the parameter value with an optional padding.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-combobox"><span class="std std-ref">ComboBox</span></a>]</p>
+<p><strong>Attributes (15)</strong></p>
+<ul class="simple">
+<li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that something can popup</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="dialoggroupstyle">
+<span id="visual-styles-classmodel-class-dialoggroupstyle"></span><h3>DialogGroupStyle<a class="headerlink" href="#dialoggroupstyle" title="Permalink to this heading"></a></h3>
+<p>A dialog group draws a background image and optional title.</p>
+<p><strong>Description</strong></p>
+<p>The style contains 2 images “Image” and “SecondaryImage”, that can be selected via the option “primary” or “secondary”.
+If the DialogGroup has a title, it is drawn at the top edge.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-dialoggroup"><span class="std std-ref">DialogGroup</span></a>]</p>
+<p><strong>Attributes (14)</strong></p>
+<ul class="simple">
+<li><p><strong>Image</strong> (<em>image</em>): used when options “primary” is set (or as default)</p></li>
+<li><p><strong>SecondaryImage</strong> (<em>image</em>): used when options “secondary” is set</p></li>
+<li><p><strong>headergap</strong> (<em>metric</em>): a gap between the header and body is left of “headergap” pixels</p></li>
+<li><p><strong>headerheight</strong> (<em>metric</em>): height of text rectangle when title is drawn</p></li>
+<li><p><strong>headerlinecolor</strong> (<em>color</em>): color for simple divider line between header and body when there is no headergap</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="dividerstyle">
+<span id="visual-styles-classmodel-class-dividerstyle"></span><h3>DividerStyle<a class="headerlink" href="#dividerstyle" title="Permalink to this heading"></a></h3>
+<p>A divider draws a background image, and optionally a handle centered on top.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-divider"><span class="std std-ref">Divider</span></a>]</p>
+<p><strong>Attributes (13)</strong></p>
+<ul class="simple">
+<li><p><strong>hGrip</strong> (<em>image</em>): handle for a horizontal divider</p></li>
+<li><p><strong>hImage</strong> (<em>image</em>): background for a horizontal divider</p></li>
+<li><p><strong>vGrip</strong> (<em>image</em>): handle for a vertical divider</p></li>
+<li><p><strong>vImage</strong> (<em>image</em>): background for a vertical divider</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="dropboxstyle">
+<span id="visual-styles-classmodel-class-dropboxstyle"></span><h3>DropBoxStyle<a class="headerlink" href="#dropboxstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (12)</strong></p>
+<ul class="simple">
+<li><p><strong>freespace</strong> (<em>metric</em>): free space after last item</p></li>
+<li><p><strong>noSnap</strong> (<em>metric</em>): don’t snap to views size</p></li>
+<li><p><strong>spacing</strong> (<em>metric</em>): spacing between items</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="editboxstyle">
+<span id="visual-styles-classmodel-class-editboxstyle"></span><h3>EditBoxStyle<a class="headerlink" href="#editboxstyle" title="Permalink to this heading"></a></h3>
+<p>An EditBox is drawn just like a TextBox.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-editbox"><span class="std std-ref">EditBox</span></a>]</p>
+<p><strong>Attributes (29)</strong></p>
+<ul class="simple">
+<li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>native.padding.bottom</strong> (<em>metric</em>): bottom padding for the native text control</p></li>
+<li><p><strong>native.padding.left</strong> (<em>metric</em>): left padding for the native text control</p></li>
+<li><p><strong>native.padding.right</strong> (<em>metric</em>): right padding for the native text control</p></li>
+<li><p><strong>native.padding.top</strong> (<em>metric</em>): top padding for the native text control</p></li>
+<li><p><strong>selectioncolor</strong> (<em>color</em>): background color for selected ranges</p></li>
+<li><p><strong>textcolor.placeholder</strong> (<em>color</em>): dedicated color for optional placeholder string</p></li>
+<li><p><strong>textfont.placeholder</strong> (<em>string</em>): dedicated font for optional placeholder string</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-valueboxstyle"><span class="std std-ref">ValueBoxStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="headerviewstyle">
+<span id="visual-styles-classmodel-class-headerviewstyle"></span><h3>HeaderViewStyle<a class="headerlink" href="#headerviewstyle" title="Permalink to this heading"></a></h3>
+<p>A headerView draws column headers for each column of a column list.</p>
+<p><strong>Description</strong></p>
+<p>The “backgound” image is draw in each column rectangle, and the column title is drawn in top.</p>
+<p><strong>Attributes (11)</strong></p>
+<ul class="simple">
+<li><p><strong>backcolor.spacing</strong> (<em>color</em>): color for the space between two columns</p></li>
+<li><p><strong>spacing</strong> (<em>metric</em>): space between two columns</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="imageviewstyle">
+<span id="visual-styles-classmodel-class-imageviewstyle"></span><h3>ImageViewStyle<a class="headerlink" href="#imageviewstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-imageview"><span class="std std-ref">ImageView</span></a>]</p>
+<p><strong>Attributes (18)</strong></p>
+<ul class="simple">
+<li><p><strong>border</strong> (<em>metric</em>): (set automatically for tiled images) - used to optimize redraws when the ImageView is resized</p></li>
+<li><p><strong>fill.image</strong> (<em>metric</em>): image is resized to fill out the ImageView size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>imagecolor</strong> (<em>color</em>): imagecolor is used to colorize the image (colorize option set)</p></li>
+<li><p><strong>imagecolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as imagecolor</p></li>
+<li><p><strong>imagecolor.bright</strong> (<em>color</em>): imagecolor. Bright is used when colorize option is set and the current luminance of the “colorname” color is below the “imagecolor.threshold”.</p></li>
+<li><p><strong>imagecolor.context</strong> (<em>color</em>): imagecolor. Context is used (colorize option NOT set) to modify the image automatically when supported - needs to be a template/monochrome image (colorize filter is used) or an adaptive image (lightadapt filter is used).</p></li>
+<li><p><strong>imagecolor.on</strong> (<em>color</em>): imagecolor. On is used to colorize the image when the “selectname” is on (colorize option set).</p></li>
+<li><p><strong>imagecolor.threshold</strong> (<em>metric</em>): imagecolor. Bright is used instead of “imagecolor” if the luminance threshold for the current “colorname” color is below this value - default is 0.35.</p></li>
+<li><p><strong>imagecolor.transparent</strong> (<em>color</em>): imagecolor. Transparent is used (colorize option set) when current colorparam color is transparent.</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): fill the view when “selectname” is off (colorize option set) and no image is available</p></li>
+<li><p><strong>background</strong> (<em>image</em>): the image to be drawn</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): fill the view when “selectname” is on (colorize option set) and no image is available</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="itemviewstyle">
+<span id="visual-styles-classmodel-class-itemviewstyle"></span><h3>ItemViewStyle<a class="headerlink" href="#itemviewstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (38)</strong></p>
+<ul class="simple">
+<li><p><strong>backcolor2</strong> (<em>color</em>): used to draw alternating backgrounds, the other color is “backcolor”</p></li>
+<li><p><strong>columnWidth.xxx</strong> (<em>metric</em>): overrides the default width (in pixels) for the column with name “xxx”</p></li>
+<li><p><strong>folderIcon</strong> (<em>image</em>): icon for folder items (closed)</p></li>
+<li><p><strong>highQualityMode</strong> (<em>metric</em>): set highQualityMode for image interpolations</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): color to colorize icons of unselected items</p></li>
+<li><p><strong>margin</strong> (<em>metric</em>): margin (in pixels) of itemview content</p></li>
+<li><p><strong>menu.separatorcolor</strong> (<em>color</em>): color of separating line for menu separators</p></li>
+<li><p><strong>openFolderIcon</strong> (<em>image</em>): icon for open folder items</p></li>
+<li><p><strong>rowHeight</strong> (<em>metric</em>): height of rows (in pixels)</p></li>
+<li><p><strong>scrollRows</strong> (<em>metric</em>): how many rows should scroll on mousewheel</p></li>
+<li><p><strong>scrolling.background</strong> (<em>image</em>): background for the whole view</p></li>
+<li><p><strong>selectediconcolor</strong> (<em>color</em>): color to colorize icons of selected items</p></li>
+<li><p><strong>selectedtextcolor</strong> (<em>color</em>): used instead of “textcolor” for selected items</p></li>
+<li><p><strong>selectionColor</strong> (<em>color</em>): used to fill a rectangle around selected items</p></li>
+<li><p><strong>separatorBeneath</strong> (<em>metric</em>): draw one pixel separator beneath items (on the bottom border - not below)</p></li>
+<li><p><strong>separatorcolor</strong> (<em>color</em>): color of separating line between rows</p></li>
+<li><p><strong>thumbnailFactor</strong> (<em>metric</em>): thumbnails exceeding the thumbnail limits will be scaled with this factor</p></li>
+<li><p><strong>thumbnailFrameColor</strong> (<em>color</em>): color of separating frame around thumbnails</p></li>
+<li><p><strong>thumbnailLimit.height</strong> (<em>metric</em>): thumbnails will be scaled down to (at least) this limit</p></li>
+<li><p><strong>thumbnailLimit.width</strong> (<em>metric</em>): thumbnails will be scaled down to (at least) this limit</p></li>
+<li><p><strong>thumbnailMarginV</strong> (<em>metric</em>): additional vertical margin for itemContent if thumbnails available</p></li>
+<li><p><strong>thumbnailPadding.bottom</strong> (<em>metric</em>): bottom padding for thumbnails</p></li>
+<li><p><strong>thumbnailPadding.left</strong> (<em>metric</em>): left padding for thumbnails</p></li>
+<li><p><strong>thumbnailPadding.top</strong> (<em>metric</em>): top padding for thumbnails</p></li>
+<li><p><strong>vSnapEnabled</strong> (<em>metric</em>): enable snapping to itemSize after scrolling</p></li>
+<li><p><strong>xxx.backcolor</strong> (<em>color</em>): custom background color for items of kind “xxx”</p></li>
+<li><p><strong>xxx.backcolor2</strong> (<em>color</em>): custom alternating background color for items of kind “xxx”</p></li>
+<li><p><strong>xxx.rowHeight</strong> (<em>metric</em>): custom rowHeight for items of kind “xxx”</p></li>
+<li><p><strong>xxx.separatorcolor</strong> (<em>color</em>): custom separator line color for items of kind “xxx”</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-treeviewstyle"><span class="std std-ref">TreeViewStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="knobstyle">
+<span id="visual-styles-classmodel-class-knobstyle"></span><h3>KnobStyle<a class="headerlink" href="#knobstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-knob"><span class="std std-ref">Knob</span></a>]</p>
+<p><strong>Attributes (38)</strong></p>
+<ul class="simple">
+<li><p><strong>allowstretch</strong> (<em>metric</em>): allowstretch of background image (default is TRUE)</p></li>
+<li><p><strong>althilitecolor</strong> (<em>color</em>): color used to draw a circle from the current position to the current position of an optional offset parameter. Set via Knob attribute “referencename”.</p></li>
+<li><p><strong>circle</strong> (<em>metric</em>): a partial circle around the center is drawn. Same as Knob option “circle”. the circle color is the “hilitecolor” or set from the “colorname” parameter.</p></li>
+<li><p><strong>circle.indicatorwidth</strong> (<em>metric</em>): draw a partial circle indicator with the given width in degrees around the center. The circle indicator uses “indicatorcolor”.</p></li>
+<li><p><strong>circle.reversecolor</strong> (<em>color</em>): color used to draw a circle from the current position to range end</p></li>
+<li><p><strong>disabledoverlay</strong> (<em>image</em>): optional disabled overlay image to show an individual disabled state</p></li>
+<li><p><strong>filmstrip</strong> (<em>metric</em>): specifies that the “background” image should be used as a filmstrip. Same as Knob option “filmstrip”.</p></li>
+<li><p><strong>foreground</strong> (<em>image</em>): overlay image above the circle (alternative name “overlay” can be used)</p></li>
+<li><p><strong>framecount</strong> (<em>metric</em>): an external framecount can be used to repeat the existing filmstrip frames and reduce the overall memory footprint</p></li>
+<li><p><strong>indicator</strong> (<em>metric</em>): a line from the center to the end of the circle is drawn. Same as Knob option “indicator”. Color “indicatorcolor” is used.</p></li>
+<li><p><strong>indicatorcolor</strong> (<em>color</em>): color used for drawing the “indicator”</p></li>
+<li><p><strong>indicatormargin</strong> (<em>metric</em>): margin between view boudaries and indicator</p></li>
+<li><p><strong>indicatorwidth</strong> (<em>metric</em>): used when it should be different from the strokewidth (which is the default)</p></li>
+<li><p><strong>linearOffset</strong> (<em>metric</em>): used to remap filmstrip frames. LinearOffset is the optional offset used to transform the normalized value.</p></li>
+<li><p><strong>linearScaler</strong> (<em>metric</em>): used to remap filmstrip frames. LinearScaler is the slope used to transform the normalized value.</p></li>
+<li><p><strong>logscaler</strong> (<em>metric</em>): used to remap filmstrip frames. 1/logscaler * log(normalizedValue) is used to map frames onto a logarithmic curve.</p></li>
+<li><p><strong>margin</strong> (<em>metric</em>): margin between view boudaries and circle</p></li>
+<li><p><strong>overlay.filmstrip</strong> (<em>metric</em>): specifies that the “foreground” image should be used as a filmstrip</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for background image, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for background image</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for background image</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for background image</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for background image</p></li>
+<li><p><strong>range</strong> (<em>metric</em>): the range in degrees for circle and indicator</p></li>
+<li><p><strong>state1</strong> (<em>color</em>): color used for drawing a special marker when the knob’s visual state is 1</p></li>
+<li><p><strong>state2</strong> (<em>color</em>): color used for drawing a special marker when the knob’s visual state is 2</p></li>
+<li><p><strong>state3</strong> (<em>color</em>): color used for drawing a special marker when the knob’s visual state is 3</p></li>
+<li><p><strong>topoverlay</strong> (<em>image</em>): topoverlay image (above the indicator)</p></li>
+<li><p><strong>topoverlay.filmstrip</strong> (<em>metric</em>): specifies that the “topoverlay” image should be used as a filmstrip</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>metric</em>): color used to draw a circle from the range start to range end (when no overlay is used)</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used to draw a circle from range start to the current position</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): strokewidth of the optional circle</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="labelstyle">
+<span id="visual-styles-classmodel-class-labelstyle"></span><h3>LabelStyle<a class="headerlink" href="#labelstyle" title="Permalink to this heading"></a></h3>
+<p>A label draws it’s title using the style’s “textfont”, “textcolor”, and “textalignment” (for single line text) or “textoptions” (for multiline text).</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-label"><span class="std std-ref">Label</span></a>]</p>
+<p><strong>Attributes (9)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="listviewstyle">
+<span id="visual-styles-classmodel-class-listviewstyle"></span><h3>ListViewStyle<a class="headerlink" href="#listviewstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (34)</strong></p>
+<ul class="simple">
+<li><p><strong>icons.background</strong> (<em>image</em>): for “viewtype=”icons”: draw background for each cell (use second frame for selection)</p></li>
+<li><p><strong>icons.dataheight</strong> (<em>metric</em>): for “viewtype=”icons”: height of icon</p></li>
+<li><p><strong>icons.dataleft</strong> (<em>metric</em>): for “viewtype=”icons”: left of icon inside item rectangle</p></li>
+<li><p><strong>icons.datatop</strong> (<em>metric</em>): for “viewtype=”icons”: top of icon inside item rectangle</p></li>
+<li><p><strong>icons.datawidth</strong> (<em>metric</em>): for “viewtype=”icons”: width of icon</p></li>
+<li><p><strong>icons.fixedColumns</strong> (<em>metric</em>): for “viewtype=”icons”: use a fixed number of columns</p></li>
+<li><p><strong>icons.height</strong> (<em>metric</em>): for “viewtype=”icons”: total height of one item</p></li>
+<li><p><strong>icons.iconsethalfsize</strong> (<em>metric</em>): for “viewtype=”icons”: alternative way of displaying iconset images in half-size</p></li>
+<li><p><strong>icons.mirrored</strong> (<em>metric</em>): for “viewtype=”icons”: draw icon columns in reverse order</p></li>
+<li><p><strong>icons.multiLineTitle</strong> (<em>metric</em>): for “viewtype=”icons”: draw title as multiline text</p></li>
+<li><p><strong>icons.showthumbnails</strong> (<em>metric</em>): for “viewtype=”icons”: draw thumbnails (if available) instead of icons,</p></li>
+<li><p><strong>icons.textfont</strong> (<em>string</em>): for “viewtype=”icons”: optional alternative font in icons mode (falls back to “textfont” if not specified)</p></li>
+<li><p><strong>icons.textheight</strong> (<em>metric</em>): for “viewtype=”icons”: height of title</p></li>
+<li><p><strong>icons.textleft</strong> (<em>metric</em>): for “viewtype=”icons”: left of title inside item rectangle</p></li>
+<li><p><strong>icons.texttop</strong> (<em>metric</em>): for “viewtype=”icons”: top of title inside item rectangle</p></li>
+<li><p><strong>icons.textwidth</strong> (<em>metric</em>): for “viewtype=”icons”: width of title</p></li>
+<li><p><strong>icons.width</strong> (<em>metric</em>): for “viewtype=”icons”: total width of one item</p></li>
+<li><p><strong>list.dataheight</strong> (<em>metric</em>): for “viewtype=”list”: height of list</p></li>
+<li><p><strong>list.dataleft</strong> (<em>metric</em>): for “viewtype=”list”: left of list inside item rectangle</p></li>
+<li><p><strong>list.datatop</strong> (<em>metric</em>): for “viewtype=”list”: top of list inside item rectangle</p></li>
+<li><p><strong>list.datawidth</strong> (<em>metric</em>): for “viewtype=”list”: width of list</p></li>
+<li><p><strong>list.padding.bottom</strong> (<em>metric</em>): for “viewtype=”list”: bottom padding of list</p></li>
+<li><p><strong>list.selectionbackground</strong> (<em>image</em>): for “viewtype=”list”: use a color for selectionbackground as an image</p></li>
+<li><p><strong>list.textalign</strong> (<em>enum</em>): for “viewtype=”list”: set text alignment for cells (default: kLeftCenter)</p></li>
+<li><p><strong>list.textmargin</strong> (<em>metric</em>): for “viewtype=”list”: left text margin in cell</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="menubarcontrolstyle">
+<span id="visual-styles-classmodel-class-menubarcontrolstyle"></span><h3>MenuBarControlStyle<a class="headerlink" href="#menubarcontrolstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (13)</strong></p>
+<ul class="simple">
+<li><p><strong>activecolor</strong> (<em>color</em>): used to draw instead of “backcolor” for the active menu (when no button image available)</p></li>
+<li><p><strong>activetextcolor</strong> (<em>color</em>): used instead of “textcolor” for the active menu</p></li>
+<li><p><strong>menuButton</strong> (<em>image</em>): background for menu buttons</p></li>
+<li><p><strong>menuHeight</strong> (<em>metric</em>): height of menu buttons</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="menucontrolstyle">
+<span id="visual-styles-classmodel-class-menucontrolstyle"></span><h3>MenuControlStyle<a class="headerlink" href="#menucontrolstyle" title="Permalink to this heading"></a></h3>
+<p>A MenuControl is a custom implementation of a menu (e.g. a context menu).</p>
+<p><strong>Attributes (31)</strong></p>
+<ul class="simple">
+<li><p><strong>bordercolor</strong> (<em>color</em>): used to draw a border around the whole menu</p></li>
+<li><p><strong>checkmarkicon</strong> (<em>image</em>): a checkmark icon drawn after a checked item</p></li>
+<li><p><strong>checkmarkwidth</strong> (<em>metric</em>): width (in points) used to draw the checkmark icon</p></li>
+<li><p><strong>disabledtextcolor</strong> (<em>color</em>): used instead of “textcolor” for disabled items</p></li>
+<li><p><strong>explicitrowheight</strong> (<em>metric</em>): row height (in points) is not determined by the iconsize and spacing anymore</p></li>
+<li><p><strong>headercolor</strong> (<em>color</em>): used to fill the header area</p></li>
+<li><p><strong>headertextcolor</strong> (<em>color</em>): used instead of “textcolor” in the header area</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): color to colorize icons of unselected items</p></li>
+<li><p><strong>largeiconsize</strong> (<em>metric</em>): icon size (in points) for a large menu</p></li>
+<li><p><strong>menuarrowwidth</strong> (<em>metric</em>): width (in points) of the arrow that indicates a sub menu</p></li>
+<li><p><strong>normaliconsize</strong> (<em>metric</em>): icon size (in points) for a normal menu</p></li>
+<li><p><strong>segmentmargin</strong> (<em>metric</em>): margin (in points) between left border and first segment of an item (icon, title, key, arrow)</p></li>
+<li><p><strong>segmentspacing</strong> (<em>metric</em>): spacing (in points) between segments of an item (icon, title, key, arrow)</p></li>
+<li><p><strong>selectediconcolor</strong> (<em>color</em>): used instead of “iconcolor” to colorize icons of selected items</p></li>
+<li><p><strong>selectedtextcolor</strong> (<em>color</em>): used instead of “textcolor” for the currently selected item</p></li>
+<li><p><strong>selectionbackcolor</strong> (<em>color</em>): used to hihlite selected items, if no “selectionbarimage” is available</p></li>
+<li><p><strong>selectionbarimage</strong> (<em>image</em>): background image for a selected item</p></li>
+<li><p><strong>selectionframecolor</strong> (<em>color</em>): used to draw a frame around selected items</p></li>
+<li><p><strong>separatorSpacing</strong> (<em>metric</em>): optional spacing definition for spacing (in points) between separated items</p></li>
+<li><p><strong>separatorcolor</strong> (<em>color</em>): used to draw separator lines</p></li>
+<li><p><strong>smallfont</strong> (<em>string</em>): used for menu item descriptions</p></li>
+<li><p><strong>spacing</strong> (<em>metric</em>): spacing (in points) between items</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="pagecontrolstyle">
+<span id="visual-styles-classmodel-class-pagecontrolstyle"></span><h3>PageControlStyle<a class="headerlink" href="#pagecontrolstyle" title="Permalink to this heading"></a></h3>
+<p>A PageControl draws a row of dots, with one dot per scroll page.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-pagecontrol"><span class="std std-ref">PageControl</span></a>]</p>
+<p><strong>Attributes (11)</strong></p>
+<ul class="simple">
+<li><p><strong>dot</strong> (<em>image</em>): dot image with frames “normal” and “normalOn” for the current page</p></li>
+<li><p><strong>spacing</strong> (<em>metric</em>): spacing (in pixels) between the dots</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): image drawn undeneath the dots</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="popupselectorstyle">
+<span id="visual-styles-classmodel-class-popupselectorstyle"></span><h3>PopupSelectorStyle<a class="headerlink" href="#popupselectorstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (11)</strong></p>
+<ul class="simple">
+<li><p><strong>popup.offset.x</strong> (<em>metric</em>): an additional horizontal offset to the popup position, applied when opened from SelectBox or PopupBox</p></li>
+<li><p><strong>popup.offset.y</strong> (<em>metric</em>): an additional vertical offset to the popup position, applied when opened from SelectBox or PopupBox</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="progressbarstyle">
+<span id="visual-styles-classmodel-class-progressbarstyle"></span><h3>ProgressBarStyle<a class="headerlink" href="#progressbarstyle" title="Permalink to this heading"></a></h3>
+<p>A Progres bar draws a bar that reflects the parameter value over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-progressbar"><span class="std std-ref">ProgressBar</span></a>]</p>
+<p><strong>Attributes (11)</strong></p>
+<ul class="simple">
+<li><p><strong>foreground</strong> (<em>image</em>): used to draw a bar over the background that reflects the parameter value</p></li>
+<li><p><strong>indicator</strong> (<em>image</em>): drawn at the boundary between the background and the bar</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="rangesliderstyle">
+<span id="visual-styles-classmodel-class-rangesliderstyle"></span><h3>RangeSliderStyle<a class="headerlink" href="#rangesliderstyle" title="Permalink to this heading"></a></h3>
+<p>A Range Slider draws two handle moving over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-rangeslider"><span class="std std-ref">RangeSlider</span></a>]</p>
+<p><strong>Attributes (13)</strong></p>
+<ul class="simple">
+<li><p><strong>hHandle2</strong> (<em>image</em>): handle (horizontal slider)</p></li>
+<li><p><strong>hSmallHandle2</strong> (<em>image</em>): handle (horizontal slider with option “small”)</p></li>
+<li><p><strong>vHandle2</strong> (<em>image</em>): handle (vertical slider)</p></li>
+<li><p><strong>vSmallHandle2</strong> (<em>image</em>): handle (vertical slider with option “small”)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="sceneview3dstyle">
+<span id="visual-styles-classmodel-class-sceneview3dstyle"></span><h3>SceneView3DStyle<a class="headerlink" href="#sceneview3dstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (10)</strong></p>
+<ul class="simple">
+<li><p><strong>camera</strong> (<em>string</em>)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="scrollbarstyle">
+<span id="visual-styles-classmodel-class-scrollbarstyle"></span><h3>ScrollBarStyle<a class="headerlink" href="#scrollbarstyle" title="Permalink to this heading"></a></h3>
+<p>A Scrollbar indicates the scrolling position of a scroll view.</p>
+<p><strong>Description</strong></p>
+<p>A scroll bar has a background, up/down buttons (vertical) and a handle (thumb).</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-scrollbar"><span class="std std-ref">ScrollBar</span></a>]</p>
+<p><strong>Attributes (22)</strong></p>
+<ul class="simple">
+<li><p><strong>clipBackground</strong> (<em>metric</em>): background is only drawn outside of handle area</p></li>
+<li><p><strong>hBack</strong> (<em>image</em>): background (horizontal bar)</p></li>
+<li><p><strong>hButtonDown</strong> (<em>image</em>): “right” button (horizontal bar)</p></li>
+<li><p><strong>hButtonUp</strong> (<em>image</em>): “left” button (horizontal bar)</p></li>
+<li><p><strong>hSmallBack</strong> (<em>image</em>): background (horizontal bar with option “small”)</p></li>
+<li><p><strong>hSmallThumb</strong> (<em>image</em>): small handle (horizontal bar with option “small”)</p></li>
+<li><p><strong>hThumb</strong> (<em>image</em>): handle (horizontal bar)</p></li>
+<li><p><strong>vBack</strong> (<em>image</em>): background (vertical bar)</p></li>
+<li><p><strong>vButtonDown</strong> (<em>image</em>): “down” button (vertical bar)</p></li>
+<li><p><strong>vButtonUp</strong> (<em>image</em>): “up” button (vertical bar)</p></li>
+<li><p><strong>vSmallBack</strong> (<em>image</em>): background (vertical bar with option “small”)</p></li>
+<li><p><strong>vSmallThumb</strong> (<em>image</em>): small handle (vertical bar with option “small”)</p></li>
+<li><p><strong>vThumb</strong> (<em>image</em>): handle (vertical bar)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="scrollbuttonstyle">
+<span id="visual-styles-classmodel-class-scrollbuttonstyle"></span><h3>ScrollButtonStyle<a class="headerlink" href="#scrollbuttonstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-scrollbutton"><span class="std std-ref">ScrollButton</span></a>]</p>
+<p><strong>Attributes (17)</strong></p>
+<ul class="simple">
+<li><p><strong>hButtonDown</strong> (<em>image</em>): “left” button background (horizontal button)</p></li>
+<li><p><strong>hButtonUp</strong> (<em>image</em>): “right” button background (horizontal button)</p></li>
+<li><p><strong>hIconDown</strong> (<em>image</em>): “left” icon (horizontal button)</p></li>
+<li><p><strong>hIconUp</strong> (<em>image</em>): “right” icon (horizontal button)</p></li>
+<li><p><strong>vButtonDown</strong> (<em>image</em>): “down” button background (vertical button)</p></li>
+<li><p><strong>vButtonUp</strong> (<em>image</em>): “up” button background (vertical button)</p></li>
+<li><p><strong>vIconDown</strong> (<em>image</em>): “down” icon (vertical button)</p></li>
+<li><p><strong>vIconUp</strong> (<em>image</em>): “up” icon (vertical button)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="scrollpickerstyle">
+<span id="visual-styles-classmodel-class-scrollpickerstyle"></span><h3>ScrollPickerStyle<a class="headerlink" href="#scrollpickerstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (20)</strong></p>
+<ul class="simple">
+<li><p><strong>barrelTextColor</strong> (<em>color</em>): textcolor for the neighboring unselected values on the barrel</p></li>
+<li><p><strong>barrelTextFont</strong> (<em>string</em>): barrel font</p></li>
+<li><p><strong>centerBackcolor</strong> (<em>color</em>): backcolor for the center view</p></li>
+<li><p><strong>centerOffset</strong> (<em>metric</em>): optional vertical/horizontal offset of the center view - default is (clientSize - centerSize) / 2</p></li>
+<li><p><strong>centerOverlayImage</strong> (<em>image</em>): additional optional overlay for the center view</p></li>
+<li><p><strong>centerSize</strong> (<em>metric</em>): optional height/width of the vertical/horizontal center view, where the current value is displayed</p></li>
+<li><p><strong>centerTextColor</strong> (<em>color</em>): textcolor for the center view</p></li>
+<li><p><strong>centerTextFont</strong> (<em>string</em>): center view font</p></li>
+<li><p><strong>gradientThickness</strong> (<em>metric</em>): thickness of the fade-out area at the border of the barrel</p></li>
+<li><p><strong>itemSize</strong> (<em>metric</em>): optional explicit item size (height/width in vertical/horizontal case)</p></li>
+<li><p><strong>minimalEditWidth</strong> (<em>metric</em>): optional minimal width for the horizontal scrollpicker edit control</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backcolor for the control</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="scrollviewstyle">
+<span id="visual-styles-classmodel-class-scrollviewstyle"></span><h3>ScrollViewStyle<a class="headerlink" href="#scrollviewstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (14)</strong></p>
+<ul class="simple">
+<li><p><strong>borderSize</strong> (<em>metric</em>): size (in pixels) of an optional border</p></li>
+<li><p><strong>buttonSize</strong> (<em>metric</em>): size of scroll buttons in pixels. For example: width for a vertical button.</p></li>
+<li><p><strong>buttonSpacing</strong> (<em>metric</em>): spacing between scroll buttons and scrollview edge</p></li>
+<li><p><strong>inertialDuration</strong> (<em>metric</em>): duration in seconds for inertial motion after user release the scrollview (not supported on all platforms)</p></li>
+<li><p><strong>scrollBarSize</strong> (<em>metric</em>): size of scrollbars in pixels. For example: width for a vertical bar.</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="segmentbox">
+<span id="visual-styles-classmodel-class-segmentbox"></span><h3>SegmentBox<a class="headerlink" href="#segmentbox" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>]</p>
+<p><strong>Attributes (12)</strong></p>
+<ul class="simple">
+<li><p><strong>state1</strong> (<em>color</em>): alternative text color when the parameter’s visual state is 1</p></li>
+<li><p><strong>state2</strong> (<em>color</em>): alternative text color when the parameter’s visual state is 2</p></li>
+<li><p><strong>state3</strong> (<em>color</em>): alternative text color when the parameter’s visual state is 3</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="selectboxstyle">
+<span id="visual-styles-classmodel-class-selectboxstyle"></span><h3>SelectBoxStyle<a class="headerlink" href="#selectboxstyle" title="Permalink to this heading"></a></h3>
+<p>If option “transparent” is not set, a SelectBox draws a background image.</p>
+<p><strong>Description</strong></p>
+<p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
+<p>An image “states” can be used to show a different frame for (integer) each parameter value.</p>
+<p>The “button” image is drawn at the right (can be changed with option “leadingbutton”).
+The remaining space shows the text representation of the parameter, with an optional “padding”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>]</p>
+<p><strong>Attributes (24)</strong></p>
+<ul class="simple">
+<li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that somthing can popup</p></li>
+<li><p><strong>button.beneath</strong> (<em>metric</em>): button image is drawn beneath text or state images and doesn’t affect their drawrect</p></li>
+<li><p><strong>button.leading</strong> (<em>metric</em>): button image is drawn before the text - set can also be set with button-option “leadingbutton”</p></li>
+<li><p><strong>button.trailing</strong> (<em>metric</em>): button image is drawn after the text - can also be set with button-option “trailingbutton”</p></li>
+<li><p><strong>contextcolor</strong> (<em>color</em>): if set, used to create a modified version of the image given by the imageprovider</p></li>
+<li><p><strong>fill.button</strong> (<em>metric</em>): button image is resized to fill out the selectbox height (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>fill.image</strong> (<em>metric</em>): image from imageprovider is resized to fill out the selectbox size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>states</strong> (<em>image</em>): image with frames for each (integer) parameter state</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="sliderstyle">
+<span id="visual-styles-classmodel-class-sliderstyle"></span><h3>SliderStyle<a class="headerlink" href="#sliderstyle" title="Permalink to this heading"></a></h3>
+<p>A Slider draws handle moving over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-slider"><span class="std std-ref">Slider</span></a>]</p>
+<p><strong>Attributes (29)</strong></p>
+<ul class="simple">
+<li><p><strong>centerlinecolor</strong> (<em>color</em>): color for a centerline, when the parameter is bipolar and style is “bargraph”</p></li>
+<li><p><strong>centerlinewidth</strong> (<em>metric</em>): width for the centerline</p></li>
+<li><p><strong>disabledHandleColor</strong> (<em>color</em>): color to colorize the handle, when the parameter is disabled (usually handles are not drawn in this case)</p></li>
+<li><p><strong>hBack</strong> (<em>image</em>): background image (horizontal slider) - with optional frames (see above)</p></li>
+<li><p><strong>hDeepBack</strong> (<em>image</em>): additional background (horizontal slider)</p></li>
+<li><p><strong>hHandle</strong> (<em>image</em>): handle (horizontal slider) - with optional frames (see above)</p></li>
+<li><p><strong>hSmallBack</strong> (<em>image</em>): background image (horizontal slider with option “small”) - with optional frames (see above)</p></li>
+<li><p><strong>hSmallHandle</strong> (<em>image</em>): handle (horizontal slider with option “small”) - with optional frames (see above)</p></li>
+<li><p><strong>handleColor</strong> (<em>color</em>): color to colorize the handle, when the parameter is bipolar and style is “bargraph”</p></li>
+<li><p><strong>margin</strong> (<em>metric</em>): margin between handle and view edges in min/max handle positions</p></li>
+<li><p><strong>scaleHandle</strong> (<em>metric</em>): when handles are too big or small they are scaled with respect to their aspectratio</p></li>
+<li><p><strong>touchFineMaxScale</strong> (<em>metric</em>): max finescale factor (0…1)</p></li>
+<li><p><strong>touchFineMaxSpeed</strong> (<em>metric</em>): upper bound for finescale factor interpolation</p></li>
+<li><p><strong>touchFineMinScale</strong> (<em>metric</em>): min finescale factor (0…1)</p></li>
+<li><p><strong>touchFineMinSpeed</strong> (<em>metric</em>): lower bound for finescale factor interpolation</p></li>
+<li><p><strong>vBack</strong> (<em>image</em>): background image (vertical slider) - can have optional second frame for on-state of style “bargraph” - optional “disabled” on-state frame cannot be the first one</p></li>
+<li><p><strong>vDeepBack</strong> (<em>image</em>): additional background (vertical slider)</p></li>
+<li><p><strong>vHandle</strong> (<em>image</em>): handle (vertical slider) - can have optional second “pressed” frame - and optional third “mouseover” frame - optional “disabled” frame cannot be the first one</p></li>
+<li><p><strong>vSmallBack</strong> (<em>image</em>): background image (vertical slider with option “small”) - with optional frames (see above)</p></li>
+<li><p><strong>vSmallHandle</strong> (<em>image</em>): handle (vertical slider with option “small”) - with optional frames (see above)</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="tabviewstyle">
+<span id="visual-styles-classmodel-class-tabviewstyle"></span><h3>TabViewStyle<a class="headerlink" href="#tabviewstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-tabview"><span class="std std-ref">TabView</span></a>]</p>
+<p><strong>Attributes (21)</strong></p>
+<ul class="simple">
+<li><p><strong>activecolor</strong> (<em>color</em>): used to draw instead of “backcolor” for the active tab (when no button image available)</p></li>
+<li><p><strong>activetextcolor</strong> (<em>color</em>): used instead of “textcolor” for the active tab</p></li>
+<li><p><strong>borderColor</strong> (<em>color</em>): color of border frame, drawn when no”background” image is available</p></li>
+<li><p><strong>first</strong> (<em>image</em>): background for the first of multiple buttons</p></li>
+<li><p><strong>headerBackground</strong> (<em>image</em>): background for header rect</p></li>
+<li><p><strong>last</strong> (<em>image</em>): background for the last of multiple buttons</p></li>
+<li><p><strong>menuBackground</strong> (<em>image</em>): background for menu button (shown when not all tabs fit in the view)</p></li>
+<li><p><strong>menuIcon</strong> (<em>image</em>): icon shown on menu button</p></li>
+<li><p><strong>middle</strong> (<em>image</em>): background for the middle buttons</p></li>
+<li><p><strong>prefericon</strong> (<em>metric</em>): in case of an icon and a title - only show the icon</p></li>
+<li><p><strong>single</strong> (<em>image</em>): background for a single button</p></li>
+<li><p><strong>tabHeight</strong> (<em>metric</em>): height of tab buttons</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background for content rect</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="textboxstyle">
+<span id="visual-styles-classmodel-class-textboxstyle"></span><h3>TextBoxStyle<a class="headerlink" href="#textboxstyle" title="Permalink to this heading"></a></h3>
+<p>If option “transparent” is not set, a TextBox draws a background image.</p>
+<p><strong>Description</strong></p>
+<p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
+<p>The text is drawn with an optional “padding”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>]</p>
+<p><strong>Attributes (21)</strong></p>
+<ul class="simple">
+<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="toolbuttonstyle">
+<span id="visual-styles-classmodel-class-toolbuttonstyle"></span><h3>ToolButtonStyle<a class="headerlink" href="#toolbuttonstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-toolbutton"><span class="std std-ref">ToolButton</span></a>]</p>
+<p><strong>Attributes (14)</strong></p>
+<ul class="simple">
+<li><p><strong>popup.offset.x</strong> (<em>metric</em>): an additional horizontal offset to the popup position</p></li>
+<li><p><strong>popup.offset.y</strong> (<em>metric</em>): an additional vertical offset to the popup position</p></li>
+<li><p><strong>popup.palette.bottom</strong> (<em>metric</em>): popup the palette on the bottom (mode parameter must be a IPaletteProvider)</p></li>
+<li><p><strong>popup.palette.right</strong> (<em>metric</em>): popup the palette on the right side (mode parameter must be a IPaletteProvider)</p></li>
+<li><p><strong>popupstyle</strong> (<em>metric</em>): when “popupstyle” is true - the toolButton visualStyle is also used for the popup</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="treeviewstyle">
+<span id="visual-styles-classmodel-class-treeviewstyle"></span><h3>TreeViewStyle<a class="headerlink" href="#treeviewstyle" title="Permalink to this heading"></a></h3>
+<p><strong>Attributes (42)</strong></p>
+<ul class="simple">
+<li><p><strong>expandSize</strong> (<em>metric</em>): size of expand symbol (same width &amp; height)</p></li>
+<li><p><strong>iconSize</strong> (<em>metric</em>): size of item icons (same width &amp; height)</p></li>
+<li><p><strong>itemInset</strong> (<em>metric</em>): inset (in pixels) per tree depth level</p></li>
+<li><p><strong>leafInset</strong> (<em>metric</em>): additional inset for leaf items</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor2</strong> (<em>color</em>): used to draw alternating backgrounds, the other color is “backcolor”</p></li>
+<li><p><strong>columnWidth.xxx</strong> (<em>metric</em>): overrides the default width (in pixels) for the column with name “xxx”</p></li>
+<li><p><strong>folderIcon</strong> (<em>image</em>): icon for folder items (closed)</p></li>
+<li><p><strong>highQualityMode</strong> (<em>metric</em>): set highQualityMode for image interpolations</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): color to colorize icons of unselected items</p></li>
+<li><p><strong>margin</strong> (<em>metric</em>): margin (in pixels) of itemview content</p></li>
+<li><p><strong>menu.separatorcolor</strong> (<em>color</em>): color of separating line for menu separators</p></li>
+<li><p><strong>openFolderIcon</strong> (<em>image</em>): icon for open folder items</p></li>
+<li><p><strong>rowHeight</strong> (<em>metric</em>): height of rows (in pixels)</p></li>
+<li><p><strong>scrollRows</strong> (<em>metric</em>): how many rows should scroll on mousewheel</p></li>
+<li><p><strong>scrolling.background</strong> (<em>image</em>): background for the whole view</p></li>
+<li><p><strong>selectediconcolor</strong> (<em>color</em>): color to colorize icons of selected items</p></li>
+<li><p><strong>selectedtextcolor</strong> (<em>color</em>): used instead of “textcolor” for selected items</p></li>
+<li><p><strong>selectionColor</strong> (<em>color</em>): used to fill a rectangle around selected items</p></li>
+<li><p><strong>separatorBeneath</strong> (<em>metric</em>): draw one pixel separator beneath items (on the bottom border - not below)</p></li>
+<li><p><strong>separatorcolor</strong> (<em>color</em>): color of separating line between rows</p></li>
+<li><p><strong>thumbnailFactor</strong> (<em>metric</em>): thumbnails exceeding the thumbnail limits will be scaled with this factor</p></li>
+<li><p><strong>thumbnailFrameColor</strong> (<em>color</em>): color of separating frame around thumbnails</p></li>
+<li><p><strong>thumbnailLimit.height</strong> (<em>metric</em>): thumbnails will be scaled down to (at least) this limit</p></li>
+<li><p><strong>thumbnailLimit.width</strong> (<em>metric</em>): thumbnails will be scaled down to (at least) this limit</p></li>
+<li><p><strong>thumbnailMarginV</strong> (<em>metric</em>): additional vertical margin for itemContent if thumbnails available</p></li>
+<li><p><strong>thumbnailPadding.bottom</strong> (<em>metric</em>): bottom padding for thumbnails</p></li>
+<li><p><strong>thumbnailPadding.left</strong> (<em>metric</em>): left padding for thumbnails</p></li>
+<li><p><strong>thumbnailPadding.top</strong> (<em>metric</em>): top padding for thumbnails</p></li>
+<li><p><strong>vSnapEnabled</strong> (<em>metric</em>): enable snapping to itemSize after scrolling</p></li>
+<li><p><strong>xxx.backcolor</strong> (<em>color</em>): custom background color for items of kind “xxx”</p></li>
+<li><p><strong>xxx.backcolor2</strong> (<em>color</em>): custom alternating background color for items of kind “xxx”</p></li>
+<li><p><strong>xxx.rowHeight</strong> (<em>metric</em>): custom rowHeight for items of kind “xxx”</p></li>
+<li><p><strong>xxx.separatorcolor</strong> (<em>color</em>): custom separator line color for items of kind “xxx”</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="trivectorpadstyle">
+<span id="visual-styles-classmodel-class-trivectorpadstyle"></span><h3>TriVectorPadStyle<a class="headerlink" href="#trivectorpadstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-trivectorpad"><span class="std std-ref">TriVectorPad</span></a>]</p>
+<p><strong>Attributes (23)</strong></p>
+<ul class="simple">
+<li><p><strong>handle</strong> (<em>image</em>): handle image</p></li>
+<li><p><strong>handleColor</strong> (<em>color</em>): color for the handle when no image is provided</p></li>
+<li><p><strong>handlesize</strong> (<em>metric</em>): size where handle can be clicked (in pixels) when handle is drawn as a circle (no “handle” image)</p></li>
+<li><p><strong>handlethickness</strong> (<em>metric</em>): width of pen in pixels when handle is drawn as a circle (no “handle” image)</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding fallback</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding triangle base (or peak if upside down)</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for triangle base</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for triangle base</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding triangle peak (or base if upside down)</p></li>
+<li><p><strong>peakpadding.left</strong> (<em>image</em>): left padding for triangle peak</p></li>
+<li><p><strong>snapPointColor</strong> (<em>color</em>): color for the snap point highlights</p></li>
+<li><p><strong>snapsize</strong> (<em>metric</em>): size of the snappoint at corner (or at the edge-center when “invert” option is set)</p></li>
+<li><p><strong>triangle</strong> (<em>image</em>): triangle image</p></li>
+<li><p><strong>triangleColor</strong> (<em>color</em>): color of the triangle when no image is provided</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backcolor when no image is provided</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="updownbuttonstyle">
+<span id="visual-styles-classmodel-class-updownbuttonstyle"></span><h3>UpDownButtonStyle<a class="headerlink" href="#updownbuttonstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-updownbutton"><span class="std std-ref">UpDownButton</span></a>]</p>
+<p><strong>Attributes (9)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="valuebarstyle">
+<span id="visual-styles-classmodel-class-valuebarstyle"></span><h3>ValueBarStyle<a class="headerlink" href="#valuebarstyle" title="Permalink to this heading"></a></h3>
+<p>Displays a value as a horizontal or verical bar.</p>
+<p><strong>Description</strong></p>
+<p>If no image is specified, “forecolor” and “backcolor” are used to draw the bar and the background as a filled rectangle.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebar"><span class="std std-ref">ValueBar</span></a>]</p>
+<p><strong>Attributes (14)</strong></p>
+<ul class="simple">
+<li><p><strong>centerlinecolor</strong> (<em>color</em>): color for a centerline, when the parameter is bipolar</p></li>
+<li><p><strong>centerlinewidth</strong> (<em>metric</em>): width for the centerline</p></li>
+<li><p><strong>colorize.hilite</strong> (<em>metric</em>): use hilitecolor or colorparam color if applicable to colorize the hiliteimage</p></li>
+<li><p><strong>hilitecolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used to colorize the hiliteimage</p></li>
+<li><p><strong>hilitecolor.transparent</strong> (<em>color</em>): hilitecolor. Transparent is used when colorize.hilite is set and the current color from colorparam is transparent.</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): the background valuebar color when no valueBarImage is available</p></li>
+<li><p><strong>background</strong> (<em>image</em>): used to draw the background (frame “normal”) and bar (frame “normalOn”)</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): the active valuebar color (using “forecolor” as fallback) - also used to colorize the valueBarImage when “colorize.hilite” is true</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="valueboxstyle">
+<span id="visual-styles-classmodel-class-valueboxstyle"></span><h3>ValueBoxStyle<a class="headerlink" href="#valueboxstyle" title="Permalink to this heading"></a></h3>
+<p>Drawn like an EditBox.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebox"><span class="std std-ref">ValueBox</span></a>]</p>
+<p><strong>Attributes (29)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>native.padding.bottom</strong> (<em>metric</em>): bottom padding for the native text control</p></li>
+<li><p><strong>native.padding.left</strong> (<em>metric</em>): left padding for the native text control</p></li>
+<li><p><strong>native.padding.right</strong> (<em>metric</em>): right padding for the native text control</p></li>
+<li><p><strong>native.padding.top</strong> (<em>metric</em>): top padding for the native text control</p></li>
+<li><p><strong>selectioncolor</strong> (<em>color</em>): background color for selected ranges</p></li>
+<li><p><strong>textcolor.placeholder</strong> (<em>color</em>): dedicated color for optional placeholder string</p></li>
+<li><p><strong>textfont.placeholder</strong> (<em>string</em>): dedicated font for optional placeholder string</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
+<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
+<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="vectorpadstyle">
+<span id="visual-styles-classmodel-class-vectorpadstyle"></span><h3>VectorPadStyle<a class="headerlink" href="#vectorpadstyle" title="Permalink to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-vectorpad"><span class="std std-ref">VectorPad</span></a>]</p>
+<p><strong>Attributes (17)</strong></p>
+<ul class="simple">
+<li><p><strong>crosshair</strong> (<em>color</em>): draw crosshair</p></li>
+<li><p><strong>crosshair.color</strong> (<em>color</em>): color for crosshair</p></li>
+<li><p><strong>drawlabels</strong> (<em>metric</em>): draws labels with min / max values for both parameters</p></li>
+<li><p><strong>handle</strong> (<em>image</em>): handle</p></li>
+<li><p><strong>handlecolor</strong> (<em>color</em>): used when “handle” image is not available</p></li>
+<li><p><strong>handlesize</strong> (<em>metric</em>): size where handle can be clicked (in pixels) when handle is drawn as a circle (no “handle” image)</p></li>
+<li><p><strong>handlethickness</strong> (<em>metric</em>): width of line in pixels) when handle is drawn as a circle (no “handle” image)</p></li>
+<li><p><strong>reference.color</strong> (<em>color</em>): used to draw the second frame of the “background” image, when the luminacnce of this “reference.color” is &gt; 0. 5f.</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): used when “back” image is not available</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): used for “drawlabels”</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="windowbackgroundstyle">
+<span id="visual-styles-classmodel-class-windowbackgroundstyle"></span><h3>WindowBackgroundStyle<a class="headerlink" href="#windowbackgroundstyle" title="Permalink to this heading"></a></h3>
+<p>Draws a background image.</p>
+<p><strong>Description</strong></p>
+<p>Two separate images can be specified for normal windows and dialogs.
+if no image is available, “backcolor” is used.</p>
+<p><strong>Attributes (11)</strong></p>
+<ul class="simple">
+<li><p><strong>DialogBack</strong> (<em>image</em>): used when window is a dialog</p></li>
+<li><p><strong>WindowBack</strong> (<em>image</em>): used when window is not a dialog</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this heading"></a></h2>
+<section id="defaultcolors">
+<span id="visual-styles-classmodel-enumeration-defaultcolors"></span><h3>DefaultColors<a class="headerlink" href="#defaultcolors" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>aliceblue</strong></p></li>
+<li><p><strong>antiquewhite</strong></p></li>
+<li><p><strong>aqua</strong></p></li>
+<li><p><strong>aquamarine</strong></p></li>
+<li><p><strong>azure</strong></p></li>
+<li><p><strong>beige</strong></p></li>
+<li><p><strong>bisque</strong></p></li>
+<li><p><strong>black</strong></p></li>
+<li><p><strong>blanchedalmond</strong></p></li>
+<li><p><strong>blue</strong></p></li>
+<li><p><strong>blueviolet</strong></p></li>
+<li><p><strong>brown</strong></p></li>
+<li><p><strong>burlywood</strong></p></li>
+<li><p><strong>cadetblue</strong></p></li>
+<li><p><strong>chartreuse</strong></p></li>
+<li><p><strong>chocolate</strong></p></li>
+<li><p><strong>coral</strong></p></li>
+<li><p><strong>cornflowerblue</strong></p></li>
+<li><p><strong>cornsilk</strong></p></li>
+<li><p><strong>crimson</strong></p></li>
+<li><p><strong>cyan</strong></p></li>
+<li><p><strong>darkblue</strong></p></li>
+<li><p><strong>darkcyan</strong></p></li>
+<li><p><strong>darkgoldenrod</strong></p></li>
+<li><p><strong>darkgray</strong></p></li>
+<li><p><strong>darkgreen</strong></p></li>
+<li><p><strong>darkgrey</strong></p></li>
+<li><p><strong>darkkhaki</strong></p></li>
+<li><p><strong>darkmagenta</strong></p></li>
+<li><p><strong>darkolivegreen</strong></p></li>
+<li><p><strong>darkorange</strong></p></li>
+<li><p><strong>darkorchid</strong></p></li>
+<li><p><strong>darkred</strong></p></li>
+<li><p><strong>darksalmon</strong></p></li>
+<li><p><strong>darkseagreen</strong></p></li>
+<li><p><strong>darkslateblue</strong></p></li>
+<li><p><strong>darkslategray</strong></p></li>
+<li><p><strong>darkslategrey</strong></p></li>
+<li><p><strong>darkturquoise</strong></p></li>
+<li><p><strong>darkviolet</strong></p></li>
+<li><p><strong>deeppink</strong></p></li>
+<li><p><strong>deepskyblue</strong></p></li>
+<li><p><strong>dimgray</strong></p></li>
+<li><p><strong>dimgrey</strong></p></li>
+<li><p><strong>dodgerblue</strong></p></li>
+<li><p><strong>firebrick</strong></p></li>
+<li><p><strong>floralwhite</strong></p></li>
+<li><p><strong>forestgreen</strong></p></li>
+<li><p><strong>fuchsia</strong></p></li>
+<li><p><strong>gainsboro</strong></p></li>
+<li><p><strong>ghostwhite</strong></p></li>
+<li><p><strong>gold</strong></p></li>
+<li><p><strong>goldenrod</strong></p></li>
+<li><p><strong>gray</strong></p></li>
+<li><p><strong>green</strong></p></li>
+<li><p><strong>greenyellow</strong></p></li>
+<li><p><strong>grey</strong></p></li>
+<li><p><strong>honeydew</strong></p></li>
+<li><p><strong>hotpink</strong></p></li>
+<li><p><strong>indianred</strong></p></li>
+<li><p><strong>indigo</strong></p></li>
+<li><p><strong>ivory</strong></p></li>
+<li><p><strong>khaki</strong></p></li>
+<li><p><strong>lavender</strong></p></li>
+<li><p><strong>lavenderblush</strong></p></li>
+<li><p><strong>lawngreen</strong></p></li>
+<li><p><strong>lemonchiffon</strong></p></li>
+<li><p><strong>lightblue</strong></p></li>
+<li><p><strong>lightcoral</strong></p></li>
+<li><p><strong>lightcyan</strong></p></li>
+<li><p><strong>lightgoldenrodyellow</strong></p></li>
+<li><p><strong>lightgray</strong></p></li>
+<li><p><strong>lightgreen</strong></p></li>
+<li><p><strong>lightgrey</strong></p></li>
+<li><p><strong>lightpink</strong></p></li>
+<li><p><strong>lightsalmon</strong></p></li>
+<li><p><strong>lightseagreen</strong></p></li>
+<li><p><strong>lightskyblue</strong></p></li>
+<li><p><strong>lightslategray</strong></p></li>
+<li><p><strong>lightslategrey</strong></p></li>
+<li><p><strong>lightsteelblue</strong></p></li>
+<li><p><strong>lightyellow</strong></p></li>
+<li><p><strong>lime</strong></p></li>
+<li><p><strong>limegreen</strong></p></li>
+<li><p><strong>linen</strong></p></li>
+<li><p><strong>magenta</strong></p></li>
+<li><p><strong>maroon</strong></p></li>
+<li><p><strong>mediumaquamarine</strong></p></li>
+<li><p><strong>mediumblue</strong></p></li>
+<li><p><strong>mediumnightblue</strong></p></li>
+<li><p><strong>mediumorchid</strong></p></li>
+<li><p><strong>mediumpurple</strong></p></li>
+<li><p><strong>mediumseagreen</strong></p></li>
+<li><p><strong>mediumslateblue</strong></p></li>
+<li><p><strong>mediumspringgreen</strong></p></li>
+<li><p><strong>mediumturquoise</strong></p></li>
+<li><p><strong>mediumvioletred</strong></p></li>
+<li><p><strong>mintcream</strong></p></li>
+<li><p><strong>mintyrose</strong></p></li>
+<li><p><strong>moccasin</strong></p></li>
+<li><p><strong>navajowhite</strong></p></li>
+<li><p><strong>navy</strong></p></li>
+<li><p><strong>oldlace</strong></p></li>
+<li><p><strong>olive</strong></p></li>
+<li><p><strong>olivedrab</strong></p></li>
+<li><p><strong>orange</strong></p></li>
+<li><p><strong>orangered</strong></p></li>
+<li><p><strong>orchid</strong></p></li>
+<li><p><strong>palegoldenrod</strong></p></li>
+<li><p><strong>palegreen</strong></p></li>
+<li><p><strong>paleturquoise</strong></p></li>
+<li><p><strong>palevioletred</strong></p></li>
+<li><p><strong>papayawhip</strong></p></li>
+<li><p><strong>peachpuff</strong></p></li>
+<li><p><strong>peru</strong></p></li>
+<li><p><strong>pink</strong></p></li>
+<li><p><strong>plum</strong></p></li>
+<li><p><strong>powderblue</strong></p></li>
+<li><p><strong>purple</strong></p></li>
+<li><p><strong>red</strong></p></li>
+<li><p><strong>rosybrown</strong></p></li>
+<li><p><strong>royalblue</strong></p></li>
+<li><p><strong>saddlebrown</strong></p></li>
+<li><p><strong>salmon</strong></p></li>
+<li><p><strong>sandybrown</strong></p></li>
+<li><p><strong>seagreen</strong></p></li>
+<li><p><strong>seashell</strong></p></li>
+<li><p><strong>sienna</strong></p></li>
+<li><p><strong>silver</strong></p></li>
+<li><p><strong>skyblue</strong></p></li>
+<li><p><strong>slateblue</strong></p></li>
+<li><p><strong>slategray</strong></p></li>
+<li><p><strong>slategrey</strong></p></li>
+<li><p><strong>snow</strong></p></li>
+<li><p><strong>springgreen</strong></p></li>
+<li><p><strong>steelblue</strong></p></li>
+<li><p><strong>tan</strong></p></li>
+<li><p><strong>teal</strong></p></li>
+<li><p><strong>thistle</strong></p></li>
+<li><p><strong>tomato</strong></p></li>
+<li><p><strong>turquoise</strong></p></li>
+<li><p><strong>violet</strong></p></li>
+<li><p><strong>wheat</strong></p></li>
+<li><p><strong>white</strong></p></li>
+<li><p><strong>whitesmoke</strong></p></li>
+<li><p><strong>yellow</strong></p></li>
+<li><p><strong>yellowgreen</strong></p></li>
+</ul>
+</section>
+<section id="standardstyles">
+<span id="visual-styles-classmodel-enumeration-standardstyles"></span><h3>StandardStyles<a class="headerlink" href="#standardstyles" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>Border</strong></p></li>
+<li><p><strong>Button</strong></p></li>
+<li><p><strong>CheckBox</strong></p></li>
+<li><p><strong>ComboBox</strong></p></li>
+<li><p><strong>ContextMenu</strong></p></li>
+<li><p><strong>DialogGroup</strong></p></li>
+<li><p><strong>Divider</strong></p></li>
+<li><p><strong>EditBox</strong></p></li>
+<li><p><strong>HeaderView</strong></p></li>
+<li><p><strong>Knob</strong></p></li>
+<li><p><strong>Label</strong></p></li>
+<li><p><strong>ListView</strong></p></li>
+<li><p><strong>MenuBarControl</strong></p></li>
+<li><p><strong>MenuControl</strong></p></li>
+<li><p><strong>PageControl</strong></p></li>
+<li><p><strong>PalettePopup</strong></p></li>
+<li><p><strong>PerspectiveSwitcher</strong></p></li>
+<li><p><strong>PopupMenu</strong></p></li>
+<li><p><strong>PopupMenuLarge</strong></p></li>
+<li><p><strong>ProgressBar</strong></p></li>
+<li><p><strong>RadioButton</strong></p></li>
+<li><p><strong>RangeSlider</strong></p></li>
+<li><p><strong>ScrollBar</strong></p></li>
+<li><p><strong>ScrollButton</strong></p></li>
+<li><p><strong>ScrollPicker</strong></p></li>
+<li><p><strong>SegmentBox</strong></p></li>
+<li><p><strong>SelectBox</strong></p></li>
+<li><p><strong>Slider</strong></p></li>
+<li><p><strong>TabView</strong></p></li>
+<li><p><strong>TextBox</strong></p></li>
+<li><p><strong>TreeView</strong></p></li>
+<li><p><strong>TriVectorPad</strong></p></li>
+<li><p><strong>UpDownBox</strong></p></li>
+<li><p><strong>ValueBar</strong></p></li>
+<li><p><strong>ValueBox</strong></p></li>
+<li><p><strong>VectorPad</strong></p></li>
+<li><p><strong>WindowBackground</strong></p></li>
+</ul>
+</section>
+<section id="themecolors">
+<span id="visual-styles-classmodel-enumeration-themecolors"></span><h3>ThemeColors<a class="headerlink" href="#themecolors" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>AlphaCursorColor</strong></p></li>
+<li><p><strong>AlphaSelectionColor</strong></p></li>
+<li><p><strong>HyperlinkColor</strong></p></li>
+<li><p><strong>ListViewBackColor</strong></p></li>
+<li><p><strong>PushButtonTextColor</strong></p></li>
+<li><p><strong>SelectionColor</strong></p></li>
+<li><p><strong>SelectionTextColor</strong></p></li>
+<li><p><strong>TooltipBackColor</strong></p></li>
+<li><p><strong>TooltipTextColor</strong></p></li>
+</ul>
+</section>
+<section id="themecursors">
+<span id="visual-styles-classmodel-enumeration-themecursors"></span><h3>ThemeCursors<a class="headerlink" href="#themecursors" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>ArrowCursor</strong></p></li>
+<li><p><strong>CopyCursor</strong></p></li>
+<li><p><strong>CrosshairCursor</strong></p></li>
+<li><p><strong>GrabCursor</strong></p></li>
+<li><p><strong>GrabbingCursor</strong></p></li>
+<li><p><strong>NoDropCursor</strong></p></li>
+<li><p><strong>PointhandCursor</strong></p></li>
+<li><p><strong>SizeDownCursor</strong></p></li>
+<li><p><strong>SizeHorizontalCursor</strong></p></li>
+<li><p><strong>SizeLeftCursor</strong></p></li>
+<li><p><strong>SizeLeftDownCursor</strong></p></li>
+<li><p><strong>SizeLeftDownRightUpCursor</strong></p></li>
+<li><p><strong>SizeLeftUpCursor</strong></p></li>
+<li><p><strong>SizeLeftUpRightDownCursor</strong></p></li>
+<li><p><strong>SizeRightCursor</strong></p></li>
+<li><p><strong>SizeRightDownCursor</strong></p></li>
+<li><p><strong>SizeRightUpCursor</strong></p></li>
+<li><p><strong>SizeUpCursor</strong></p></li>
+<li><p><strong>SizeVerticalCursor</strong></p></li>
+<li><p><strong>TextCursor</strong></p></li>
+<li><p><strong>WaitCursor</strong></p></li>
+<li><p><strong>ZoomInCursor</strong></p></li>
+<li><p><strong>ZoomOutCursor</strong></p></li>
+</ul>
+</section>
+<section id="themeelementimages">
+<span id="visual-styles-classmodel-enumeration-themeelementimages"></span><h3>ThemeElementImages<a class="headerlink" href="#themeelementimages" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>Button</strong></p></li>
+<li><p><strong>CheckBox</strong></p></li>
+<li><p><strong>RadioButton</strong></p></li>
+<li><p><strong>TreeViewExpandButton</strong></p></li>
+</ul>
+</section>
+<section id="themeelementstates">
+<span id="visual-styles-classmodel-enumeration-themeelementstates"></span><h3>ThemeElementStates<a class="headerlink" href="#themeelementstates" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>disabled</strong></p></li>
+<li><p><strong>focus</strong></p></li>
+<li><p><strong>mouseover</strong></p></li>
+<li><p><strong>normal</strong></p></li>
+<li><p><strong>pressed</strong></p></li>
+</ul>
+</section>
+<section id="themeelementstateson">
+<span id="visual-styles-classmodel-enumeration-themeelementstateson"></span><h3>ThemeElementStatesOn<a class="headerlink" href="#themeelementstateson" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>disabledOn</strong></p></li>
+<li><p><strong>focus</strong></p></li>
+<li><p><strong>mouseoverOn</strong></p></li>
+<li><p><strong>normalOn</strong></p></li>
+<li><p><strong>pressedOn</strong></p></li>
+</ul>
+</section>
+<section id="themefonts">
+<span id="visual-styles-classmodel-enumeration-themefonts"></span><h3>ThemeFonts<a class="headerlink" href="#themefonts" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>MenuFont</strong></p></li>
+</ul>
+</section>
+<section id="thememetrics">
+<span id="visual-styles-classmodel-enumeration-thememetrics"></span><h3>ThemeMetrics<a class="headerlink" href="#thememetrics" title="Permalink to this heading"></a></h3>
+<p><strong>Enumerators</strong></p>
+<ul class="simple">
+<li><p><strong>Border</strong></p></li>
+<li><p><strong>ButtonHeight</strong></p></li>
+<li><p><strong>ButtonWidth</strong></p></li>
+<li><p><strong>CheckBoxSize</strong></p></li>
+<li><p><strong>DividerOutreach</strong></p></li>
+<li><p><strong>DividerSize</strong></p></li>
+<li><p><strong>HeaderHeight</strong></p></li>
+<li><p><strong>Margin</strong></p></li>
+<li><p><strong>ScrollBarSize</strong></p></li>
+<li><p><strong>SliderHandleSize</strong></p></li>
+<li><p><strong>Spacing</strong></p></li>
+<li><p><strong>SystemMarginLeft</strong></p></li>
+<li><p><strong>SystemMarginRight</strong></p></li>
+<li><p><strong>SystemNavigationBarHeight</strong></p></li>
+<li><p><strong>SystemStatusBarHeight</strong></p></li>
+<li><p><strong>TextBoxHeight</strong></p></li>
+<li><p><strong>TitleBarHeight</strong></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="skin-elements-classmodel.html" class="btn btn-neutral float-left" title="Skin Elements Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on May 16, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

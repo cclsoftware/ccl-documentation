@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Scheme &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/target-highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="References" href="../../reference/index.html" />
+    <link rel="prev" title="Layouts" href="../layouts/index.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">CCL Skin Definition Language</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forms/index.html">Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layouts/index.html">Layouts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Color Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skin-attributes">Skin Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#value-curves">Value Curves</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
+      <li class="breadcrumb-item active">Color Scheme</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="color-scheme">
+<h1>Color Scheme<a class="headerlink" href="#color-scheme" title="Permalink to this heading"></a></h1>
+<p>A color scheme item (&lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-colorscheme-color"><span class="std std-ref">ColorScheme.Color</span></a>&gt; in skin xml) can change (shift) depending on settings made in an app’s color scheme options.</p>
+<p>A color may invert (color scheme option <code class="docutils literal notranslate"><span class="pre">colorInversion</span></code>)</p>
+<section id="skin-attributes">
+<h2>Skin Attributes<a class="headerlink" href="#skin-attributes" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>defines base color</p>
+</dd>
+<dt class="field-even">huefixed<span class="colon">:</span></dt>
+<dd class="field-even"><p>keeps the base color’s hue value as is when color scheme option hue level changed</p>
+</dd>
+<dt class="field-odd">invertible<span class="colon">:</span></dt>
+<dd class="field-odd"><p>[default: true] defines whether a color is affected by color inversion (e.g. set to false if you don’t want it to automatically invert)</p>
+</dd>
+<dt class="field-even">invertedcolor<span class="colon">:</span></dt>
+<dd class="field-even"><p>defines specific color when inverted</p>
+</dd>
+<dt class="field-odd">invertedvalue<span class="colon">:</span></dt>
+<dd class="field-odd"><p>overrides luminance value of base and inverted color when inverted</p>
+</dd>
+<dt class="field-even">saturation<span class="colon">:</span></dt>
+<dd class="field-even"><p>defines how saturation value is affected when color scheme options are changed (value or curve)</p>
+</dd>
+<dt class="field-odd">luminance<span class="colon">:</span></dt>
+<dd class="field-odd"><p>defines how luminance value is affected when color scheme options are changed (value or curve)</p>
+</dd>
+<dt class="field-even">contrast<span class="colon">:</span></dt>
+<dd class="field-even"><p>defines how contrast values are affected when color scheme options are changed (value or curve)</p>
+</dd>
+<dt class="field-odd">slcombined<span class="colon">:</span></dt>
+<dd class="field-odd"><p>increases the saturation with increasing luminance <em>(deprecated)</em></p>
+</dd>
+</dl>
+</section>
+<section id="value-curves">
+<h2>Value Curves<a class="headerlink" href="#value-curves" title="Permalink to this heading"></a></h2>
+<p>A value curve is linear in general. Each curve can define segments with different slopes.</p>
+<ul class="simple">
+<li><p>there are 2 sections separated by a <code class="docutils literal notranslate"><span class="pre">:</span></code> - lower segments : upper segments</p></li>
+<li><p>segments are separated by <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>the value that is added to the base color value at the “end” of a segment is defined by the segment value divided by the number of segments in this section</p></li>
+<li><p>segments are uniformly spread over a section</p></li>
+<li><p>lower segments’ end is at min - upper segments’ end is at max</p></li>
+<li><p>a segment can define a jump offset at its end:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> always applied</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span></code> applied when colorInversion is set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">X</span></code> applied when colorInversion is not set</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/ColorScheme.drawio.png"><img alt="rough sketch of ColorSchemes (png inlcudes draw.io code)" class="align-center" src="../../../_images/ColorScheme.drawio.png" style="width: 500px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../layouts/index.html" class="btn btn-neutral float-left" title="Layouts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../reference/index.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on May 16, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

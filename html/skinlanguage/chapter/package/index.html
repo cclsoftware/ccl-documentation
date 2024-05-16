@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Package &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/target-highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Forms" href="../forms/index.html" />
+    <link rel="prev" title="Chapters" href="../index.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">CCL Skin Definition Language</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Skin Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forms/index.html">Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layouts/index.html">Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colorscheme/index.html">Color Scheme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
+      <li class="breadcrumb-item active">Skin Package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="skin-package">
+<h1>Skin Package<a class="headerlink" href="#skin-package" title="Permalink to this heading"></a></h1>
+<p>A <em>skin package</em> has to contain a <em>skin.xml</em> file on root-level. This file is used to include other XML files inside the same package with the Include tag, or import other packages with the Import tag.</p>
+<p><strong>Example</strong></p>
+<p>Here is an example <em>skin.xml</em> file. Its basic structure consists of a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-skin"><span class="std std-ref">Skin</span></a>&gt; root element that parents the five main sections &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-imports"><span class="std std-ref">Imports</span></a>&gt;, &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-includes"><span class="std std-ref">Includes</span></a>&gt;, &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-resources"><span class="std std-ref">Resources</span></a>&gt;, &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-styles"><span class="std std-ref">Styles</span></a>&gt; and &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-forms"><span class="std std-ref">Forms</span></a>&gt;:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Skin&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Import</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;@standard&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Imports&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Includes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Include</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;path/to/file.xml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Includes&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Resources&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;InternalName&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;path/to/file.png&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Resources&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Styles&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyStyle&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Color</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;backcolor&quot;</span><span class="w"> </span><span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Style&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Styles&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ApplicationWindow&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;quit&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Quit&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Chapters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../forms/index.html" class="btn btn-neutral float-right" title="Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on May 16, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
