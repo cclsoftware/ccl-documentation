@@ -51,277 +51,26 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">CCL Skin Definition Language</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter/index.html">Chapters</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">References</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Skin Elements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#groups">Groups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#animation-8">Animation (8)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#controls-35">Controls (35)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#general-37">General (37)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layout-12">Layout (12)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resources-16">Resources (16)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shapes-7">Shapes (7)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#styles-9">Styles (9)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#views-11">Views (11)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#workspace-6">Workspace (6)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Skin Definition Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter/index.html">Chapters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">References</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Skin Elements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#groups">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#schema-groups">Schema Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enums">Enums</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#schema-groups">Schema Groups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#frame-children-4">Frame.Children (4)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#image-children-4">Image.Children (4)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#perspective-children-2">Perspective.Children (2)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resources-children-14">Resources.Children (14)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shapes-children-5">Shapes.Children (5)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#skin-children-11">Skin.Children (11)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-2">Style (2)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-children-11">Style.Children (11)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#target-2">Target (2)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#themeelements-children-3">ThemeElements.Children (3)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trigger-children-4">Trigger.Children (4)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#viewsandstatements-78">ViewsAndStatements (78)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch-children-2">switch.Children (2)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#abstractlayout">AbstractLayout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#activityindicator">ActivityIndicator</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#align">Align</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#alignview">AlignView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#anchor">Anchor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation">Animation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#basicshape">BasicShape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#border">Border</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#button">Button</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#checkbox">CheckBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#color">Color</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#colorbox">ColorBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#colorscheme">ColorScheme</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#colorscheme-color">ColorScheme.Color</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combobox">ComboBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#commandbarview">CommandBarView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#control">Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cursor">Cursor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cursorview">CursorView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delegate">Delegate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dialogbutton">DialogButton</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dialoggroup">DialogGroup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#divider">Divider</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dropbox">DropBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editbox">EditBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#element">Element</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ellipse">Ellipse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#embeddedframe">EmbeddedFrame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#external">External</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#externals">Externals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flexbox">Flexbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#font">Font</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fontresource">FontResource</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#form">Form</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#forms">Forms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frame">Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gradient">Gradient</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gradientstop">GradientStop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#header">Header</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#helpanchor">HelpAnchor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#horizontal">Horizontal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#iconset">IconSet</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#image">Image</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imagefilter">ImageFilter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imagepart">ImagePart</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imageview">ImageView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#import">Import</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imports">Imports</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#include">Include</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#includes">Includes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#invoker">Invoker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#itemview">ItemView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#knob">Knob</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#label">Label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layout">Layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#line">Line</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lineargradient">LinearGradient</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#link">Link</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listview">ListView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#metric">Metric</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#model3d">Model3D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multitoggle">MultiToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#null">Null</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#overlay">Overlay</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#overlays">Overlays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pagecontrol">PageControl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameter">Parameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#perspective">Perspective</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#picture">Picture</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#popupbox">PopupBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#progressbar">ProgressBar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#radialgradient">RadialGradient</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#radiobutton">RadioButton</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rangeslider">RangeSlider</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rectangle">Rectangle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resource">Resource</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resources">Resources</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sceneview3d">SceneView3D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollbar">ScrollBar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollbutton">ScrollButton</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollpicker">ScrollPicker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollview">ScrollView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#segmentbox">SegmentBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#selectbox">SelectBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#setter">Setter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shape">Shape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shapecolormapping">ShapeColorMapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shapeimage">ShapeImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shapes">Shapes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sizevariant">SizeVariant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#skin">Skin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slider">Slider</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#space">Space</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#startanimation">StartAnimation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stopanimation">StopAnimation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#string">String</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style">Style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stylealias">StyleAlias</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#styles">Styles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#swipebox">SwipeBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tabview">TabView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#table">Table</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#target">Target</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#textbox">TextBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#texteditor">TextEditor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#themeelements">ThemeElements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toggle">Toggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toolbutton">ToolButton</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#treeview">TreeView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trivectorpad">TriVectorPad</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#triangle">Triangle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trigger">Trigger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#triggerview">TriggerView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#triggers">Triggers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#updownbox">UpDownBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#updownbutton">UpDownButton</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#valuebar">ValueBar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#valuebox">ValueBox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#valuecontrol">ValueControl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variant">Variant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vectorpad">VectorPad</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vertical">Vertical</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view">View</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webview">WebView</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windowclass">WindowClass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windowclasses">WindowClasses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#workspace">Workspace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#workspaces">Workspaces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zoomable">Zoomable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#case">case</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#default">default</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#define">define</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foreach">foreach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if">if</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#statement">statement</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#styleselector">styleselector</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#switch">switch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#using">using</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zoom">zoom</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#align-align">Align.align</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#alignview-options">AlignView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation-function">Animation.function</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation-options">Animation.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#animation-reset">Animation.reset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#basicshape-style">BasicShape.style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#button-options">Button.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#checkbox-options">CheckBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#colorbox-options">ColorBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combobox-options">ComboBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combobox-returnkeytype">ComboBox.returnKeyType</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delegate-options">Delegate.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dialogbutton-result">DialogButton.result</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dialoggroup-options">DialogGroup.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#divider-options">Divider.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dropbox-options">DropBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editbox-options">EditBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editbox-returnkeytype">EditBox.returnKeyType</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flexbox-flex-align">Flexbox.flex.align</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flexbox-flex-direction">Flexbox.flex.direction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flexbox-flex-justify">Flexbox.flex.justify</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flexbox-flex-wrap">Flexbox.flex.wrap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#font-smoothing">Font.smoothing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#font-style">Font.style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fontresource-style">FontResource.style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#form-buttons">Form.buttons</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#form-options">Form.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#form-windowstyle">Form.windowstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frame-options">Frame.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#image-tile">Image.tile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imagefilter-name">ImageFilter.name</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imageview-options">ImageView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#itemview-options">ItemView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#itemview-scrolloptions">ItemView.scrolloptions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#knob-options">Knob.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#label-options">Label.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layout-options">Layout.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layoutclasses">LayoutClasses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#line-scalealign">Line.scalealign</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#link-options">Link.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listview-options">ListView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listview-texttrimmode">ListView.texttrimmode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listview-viewtype">ListView.viewtype</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multitoggle-options">MultiToggle.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameter-options">Parameter.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameter-type">Parameter.type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#perspective-options">Perspective.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#perspective-orientation">Perspective.orientation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#perspective-transition">Perspective.transition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#popupbox-options">PopupBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#popupbox-popup">PopupBox.popup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#radiobutton-options">RadioButton.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rangeslider-options">RangeSlider.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollbutton-part">ScrollButton.part</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollpicker-options">ScrollPicker.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scrollview-options">ScrollView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#segmentbox-options">SegmentBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#selectbox-options">SelectBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#selectbox-popup">SelectBox.popup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slider-mode">Slider.mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slider-options">Slider.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-textalign">Style.textalign</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-textoptions">Style.textoptions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-textsmoothing">Style.textsmoothing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#style-textstyle">Style.textstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tabview-options">TabView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#textbox-options">TextBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#textbox-texttrimmode">TextBox.texttrimmode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toggle-options">Toggle.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toolbutton-options">ToolButton.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toolbutton-popup">ToolButton.popup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#treeview-options">TreeView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trivectorpad-options">TriVectorPad.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#triggerview-gesturepriority">TriggerView.gesturepriority</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#triggerview-options">TriggerView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#updownbutton-options">UpDownButton.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#valuebox-options">ValueBox.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variant-options">Variant.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view-attach">View.attach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view-flex-alignself">View.flex.alignself</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view-layerbacking">View.layerBacking</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view-options">View.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#view-transition">View.transition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webview-options">WebView.options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#workspace-windowstyle">Workspace.windowstyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visual-styles-classmodel.html">Visual Styles</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="visual-styles-classmodel.html">Visual Styles</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
 
         </div>
@@ -338,6 +87,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Skin Definition Language</a></li>
           <li class="breadcrumb-item"><a href="index.html">References</a></li>
       <li class="breadcrumb-item active">Skin Elements Reference</li>
       <li class="wy-breadcrumbs-aside">
