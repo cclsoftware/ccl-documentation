@@ -59,6 +59,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deployment-and-installation">Deployment and Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-package-structure">Installation Package Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extension-code-signing">Extension Code Signing</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="reference/index.html">References</a></li>
@@ -94,18 +95,18 @@
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
 <section id="deployment-and-installation">
 <h2>Deployment and Installation<a class="headerlink" href="#deployment-and-installation" title="Permalink to this heading"></a></h2>
-<p>Extensions are deployed as self-contained installation packages which are basically digitally signed ZIP archives with the <em>.install</em> file name extension and a predefined file and folder structure inside the archive. Installation is done by the host application utilizing the CCL extension installation system.</p>
-<p>The extension installer verifies the digital signature and extracts all files to the host-specific extension location. To uninstall an extension, the host removes the extension’s sub folder recursively. No further installation steps are supported.</p>
+<p>Extensions are deployed as self-contained installation packages which are basically digitally signed ZIP archives with the <em>.install</em> file name extension and a predefined file and folder structure inside the archive. Installation is done by the CCL-based host application.</p>
+<p>The application verifies the digital signature and extracts all files to the host-specific extension location. To uninstall an extension, the host removes the extension’s sub folder recursively. No further installation steps are supported.</p>
 </section>
 <section id="installation-package-structure">
 <h2>Installation Package Structure<a class="headerlink" href="#installation-package-structure" title="Permalink to this heading"></a></h2>
-<p>An installable extension package is composed of the actual extension content alongside a package information <em>metainfo.xml</em> and installation manifest <em>installdata.xml</em> file. The <em>metainfo.xml</em> defines the package ID and package display information, the <em>installdata.xml</em> file defines installation process instructions for use with the CCL extension installer system.</p>
-<p>The content of the <em>metainfo.xml</em> and <em>installdata.xml</em> files could look like this:</p>
+<p>An installable extension package is composed of the actual extension content alongside a package information <em>metainfo.xml</em> and installation manifest <em>installdata.xml</em> file. The <em>metainfo.xml</em> defines the package identifier and package display information, the <em>installdata.xml</em> file defines installation process instructions like the expected host application identifier and version.</p>
+<p>The content of the <em>metainfo.xml</em> and <em>installdata.xml</em> files look like this:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">metainfo.xml</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;MetaInformation&gt;</span>
-<span class="w">  </span><span class="nt">&lt;Attribute</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Package:ID&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;com.vendor.package&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Attribute</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Package:ID&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;com.vendor.package.platform&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;Attribute</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Package:Name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Demo Package&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;Attribute</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Package:Description&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Demo Package Description&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;Attribute</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Package:Version&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.0.0.0&quot;</span><span class="nt">/&gt;</span>
@@ -120,13 +121,50 @@
 <div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;InstallManifest&gt;</span>
 <span class="w">  </span><span class="nt">&lt;InstallFile&gt;</span>
-<span class="w">    </span><span class="nt">&lt;RequiredApp</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;demoapp.retail&quot;</span><span class="w"> </span><span class="na">minVersion=</span><span class="s">&quot;1.5.0.0&quot;</span><span class="w"> </span><span class="na">maxVersion=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;RequiredApp</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;demoapp.*&quot;</span><span class="w"> </span><span class="na">minVersion=</span><span class="s">&quot;1.5.0.0&quot;</span><span class="w"> </span><span class="na">maxVersion=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/InstallFile&gt;</span>
 <span class="nt">&lt;/InstallManifest&gt;</span>
 </pre></div>
 </div>
 </div>
 <p>See the <a class="reference internal" href="reference/index.html#extension-xml-reference"><span class="std std-ref">reference section</span></a> for an XML format specification.</p>
+</section>
+<section id="extension-code-signing">
+<h2>Extension Code Signing<a class="headerlink" href="#extension-code-signing" title="Permalink to this heading"></a></h2>
+<p>Extensions need to be digitally signed by the extension vendor. This can be done with the CCL CLI Tools publicly available at <a class="reference external" href="https://ccl.dev">ccl.dev</a>.</p>
+<p>Use the following command line for signing:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>cclcrypt -vendorsign [OUTPUT_FILE] [INPUT_FILE] [DEVELOPER_TOKEN_FILE]
+</pre></div>
+</div>
+<p>Conceptually, extension signing is based on standard RSA public key cryptography. The developer token is a JWT (<a class="reference external" href="https://jwt.io/">JSON Web Token</a>) typically stored in a .license file that holds all information needed for signing, including your official vendor name, your private RSA key, and a wrapped version of your public RSA key counter-signed by the host application vendor.</p>
+<p>These steps are required to create a new developer token:</p>
+<ol class="arabic simple">
+<li><p>Create a new RSA key pair using</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>cclcrypt -generate [OUTPUT_FOLDER] [KEY_NAME]
+</pre></div>
+</div>
+<p>This will create two files in the output folder “[KEY_NAME].privatekey” with the private RSA key and “[KEY_NAME].publickey” with the public RSA key. Make sure the private key is stored safely and never leaves your secure environment.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Send the “[KEY_NAME].publickey” file to the host application vendor for counter-signing. You will receive your public vendor token (in JWT format) in return. It contains your official vendor name as agreed upon with the host vendor.</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please use the exact same spelling of the vendor name in the extension <em>metainfo.xml</em> file, otherwise signature verification will fail.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Merge the counter-signed public vendor token and your private RSA key to a fully-qualified developer token using</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>cclcrypt -create-private-token [OUTPUT_FILE] [PRIVATE_VENDOR_KEY_FILE] [PUBLIC_VENDOR_TOKEN_FILE]
+</pre></div>
+</div>
+<p>Make sure the developer token is stored safely and never leaves your secure environment.</p>
+</div></blockquote>
 </section>
 </section>
 
@@ -142,7 +180,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 01, 2024.
+      <span class="lastupdated">Last updated on Jul 01, 2024.
       </span></p>
   </div>
 

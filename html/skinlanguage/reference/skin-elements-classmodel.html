@@ -1070,11 +1070,11 @@ When the delegagte gets removed, the child view is destroyed.</p>
 Everytime the property change is triggered by the application, the content gets recreated (see code example).</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- the option &quot;selectalways&quot; here ensures that the view</span>
-<span class="cm">is recreated although the property value did not really change --&gt;</span>
-<span class="nt">&lt;Variant</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;hasContent&quot;</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;selectalways&quot;</span><span class="nt">&gt;</span>
-<span class="w">   </span><span class="nt">&lt;Delegate</span><span class="w"> </span><span class="na">form.name=</span><span class="s">&quot;MyContent&quot;</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;IMyController&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Variant&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">the</span> <span class="n">option</span> <span class="s">&quot;selectalways&quot;</span> <span class="n">here</span> <span class="n">ensures</span> <span class="n">that</span> <span class="n">the</span> <span class="n">view</span>
+<span class="n">is</span> <span class="n">recreated</span> <span class="n">although</span> <span class="n">the</span> <span class="n">property</span> <span class="n">value</span> <span class="n">did</span> <span class="n">not</span> <span class="n">really</span> <span class="n">change</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Variant</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;hasContent&quot;</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;selectalways&quot;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">Delegate</span> <span class="n">form</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;MyContent&quot;</span> <span class="n">controller</span><span class="o">=</span><span class="s">&quot;IMyController&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Variant</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1135,7 +1135,7 @@ Everytime the property change is triggered by the application, the content gets 
 <p>Usually used in dialogs.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;DialogButton</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;cancel&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">DialogButton</span> <span class="n">result</span><span class="o">=</span><span class="s">&quot;cancel&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1500,19 +1500,19 @@ and placed in the root frame of a perspective with the same name and a parent cl
 <p>When a window class is about to be opened, the workspace system ensures that the parent class, whose view contains the EmbeddeFrame view gets opened first.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- inside form of parent window --&gt;</span>
-<span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyParentForm&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="cm">&lt;!-- ... --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;EmbeddedFrame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Embedded&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Form&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">inside</span> <span class="n">form</span> <span class="n">of</span> <span class="n">parent</span> <span class="n">window</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Form</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyParentForm&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">EmbeddedFrame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;Embedded&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Form</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- in root frame of perspective --&gt;</span>
-<span class="nt">&lt;EmbeddedFrame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Embedded&quot;</span><span class="w"> </span><span class="na">parent.class=</span><span class="s">&quot;MyParentClass&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;a&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;b&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/Frame&gt;</span>
-<span class="nt">&lt;/EmbeddedFrame&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">in</span> <span class="n">root</span> <span class="n">frame</span> <span class="n">of</span> <span class="n">perspective</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">EmbeddedFrame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;Embedded&quot;</span> <span class="n">parent</span><span class="p">.</span><span class="k">class</span><span class="o">=</span><span class="s">&quot;MyParentClass&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;A&quot;</span> <span class="n">groups</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;B&quot;</span> <span class="n">groups</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">Frame</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">EmbeddedFrame</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1690,7 +1690,7 @@ and placed in the root frame of a perspective with the same name and a parent cl
 <p>Defines a font resource.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;FontResource</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;fonts/SEMPRG_.TTF&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">FontResource</span> <span class="n">url</span><span class="o">=</span><span class="s">&quot;fonts/SEMPRG_.TTF&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1808,12 +1808,12 @@ Complex arrangements can be build with horizontal or vertical frame groups, whic
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-perspective"><span class="std std-ref">Perspective</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPerspective&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyFrame1&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyFrame2&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;group2 group3&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;windowClassA&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/Frame&gt;</span>
-<span class="nt">&lt;/Perspective&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Perspective</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyPerspective&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyFrame1&quot;</span> <span class="n">groups</span><span class="o">=</span><span class="s">&quot;group1&quot;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="n">Frame</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyFrame2&quot;</span> <span class="n">groups</span><span class="o">=</span><span class="s">&quot;group2 group3&quot;</span> <span class="k">default</span><span class="o">=</span><span class="s">&quot;windowClassA&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">Frame</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Perspective</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -2055,7 +2055,7 @@ Like in the basic layout of the View class, a view only get’s sized horizontal
 If frames has the value “all”, the sizes 16, 32, 48, 64, 128, 256, 512. Otherwise only 16 and 32 used.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;IconSet</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileIcon:song&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;icons/song_doc.iconset&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">IconSet</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;FileIcon:song&quot;</span> <span class="n">url</span><span class="o">=</span><span class="s">&quot;icons/song_doc.iconset&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -2092,17 +2092,17 @@ If frames has the value “all”, the sizes 16, 32, 48, 64, 128, 256, 512. Othe
 <p>An image can be defined by specifying a file url, another image resource or a set of multiple frames.</p>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- From file --&gt;</span>
-<span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyImage1&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;folder/file.png&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">From</span> <span class="n">file</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyImage1&quot;</span> <span class="n">url</span><span class="o">=</span><span class="s">&quot;folder/file.png&quot;</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- From another image --&gt;</span>
-<span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyImage2&quot;</span><span class="w"> </span><span class="na">image=</span><span class="s">&quot;MyImage1&quot;</span><span class="nt">&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">From</span> <span class="n">another</span> <span class="n">image</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyImage2&quot;</span> <span class="n">image</span><span class="o">=</span><span class="s">&quot;MyImage1&quot;</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- Set of multiple frames --&gt;</span>
-<span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyMultiImage&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myFrame1&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;a.png&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myFrame1&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;b.png&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Image&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">Set</span> <span class="n">of</span> <span class="n">multiple</span> <span class="n">frames</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyMultiImage&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;myFrame1&quot;</span> <span class="n">url</span><span class="o">=</span><span class="s">&quot;a.png&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;myFrame1&quot;</span> <span class="n">url</span><span class="o">=</span><span class="s">&quot;b.png&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Image</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -2157,7 +2157,7 @@ If frames has the value “all”, the sizes 16, 32, 48, 64, 128, 256, 512. Othe
 <p>An ImagePart defines a excerpt of an image as a new image resource.</p>
 <div class="literal-block-wrapper docutils container" id="id8">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ImagePart</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPart&quot;</span><span class="w"> </span><span class="na">image=</span><span class="s">&quot;MyImage&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,3,7,1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ImagePart</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyPart&quot;</span> <span class="n">image</span><span class="o">=</span><span class="s">&quot;MyImage&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,3,7,1&quot;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -2342,8 +2342,8 @@ The method “name” of the target object is then called.</p>
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-trigger"><span class="std std-ref">Trigger</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id9">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Invoker</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;window&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;popupContextMenu&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;Invoker</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;parent.controller&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;select&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Invoker</span> <span class="n">target</span><span class="o">=</span><span class="s">&quot;window&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;popupContextMenu&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Invoker</span> <span class="n">target</span><span class="o">=</span><span class="s">&quot;parent.controller&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;select&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -2681,10 +2681,10 @@ The title can be omitted, and child views can be used instead e.g. an ImageView.
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-anchor"><span class="std std-ref">Anchor</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id10">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Example: link url specified in parent anchor element --&gt;</span>
-<span class="nt">&lt;Anchor</span><span class="w"> </span><span class="na">url =</span><span class="w"> </span><span class="s">&quot;https:://ccl.dev&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Link</span><span class="w"> </span><span class="na">title =</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/Anchor&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="nl">Example</span><span class="p">:</span> <span class="n">link</span> <span class="n">url</span> <span class="n">specified</span> <span class="n">in</span> <span class="n">parent</span> <span class="n">anchor</span> <span class="n">element</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Anchor</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https:://ccl.dev&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Link</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Anchor</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -3106,13 +3106,13 @@ It draws a row of dots, with one dot per scroll page, where the current page is 
 These parameters can be defined inside a &lt;Perspective&gt; element. In a form description, these parameters can be addressed via the “CustomParams” controller of a perspective.</p>
 <div class="literal-block-wrapper docutils container" id="id11">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myPerspective&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="cm">&lt;!-- ... --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myParam&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">range=</span><span class="s">&quot;0,32767&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Perspective&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Perspective</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;myPerspective&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">Parameter</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;myParam&quot;</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;int&quot;</span> <span class="n">range</span><span class="o">=</span><span class="s">&quot;0,32767&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Perspective</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- address via &quot;CustomParams&quot; controller of a perspective: --&gt;</span>
-<span class="nt">&lt;Divider</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://Workspace/myWorkspaceID/myPerspectiveID/CustomParams/myParam&quot;</span><span class="nt">/&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">address</span> <span class="n">via</span> <span class="s">&quot;CustomParams&quot;</span> <span class="n">controller</span> <span class="n">of</span> <span class="n">a</span> <span class="nl">perspective</span><span class="p">:</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Divider</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;://Workspace/myWorkspaceID/myPerspectiveID/CustomParams/myParam&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -3232,12 +3232,12 @@ clicked outside of it.</p>
 and “mouse down” when the PopupBox is either hovered or pressed.</p>
 <div class="literal-block-wrapper docutils container" id="id12">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id12" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Inside the popup form description, the special controller name &quot;source&quot; can be used to</span>
-<span class="cm">address the original controller that contains the &lt;PopupBox&gt; --&gt;</span>
-<span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPopup&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;source&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="nt">&lt;/using&gt;</span>
-<span class="nt">&lt;/Form&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">Inside</span> <span class="n">the</span> <span class="n">popup</span> <span class="n">form</span> <span class="n">description</span><span class="p">,</span> <span class="n">the</span> <span class="n">special</span> <span class="n">controller</span> <span class="n">name</span> <span class="s">&quot;source&quot;</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span>
+<span class="n">address</span> <span class="n">the</span> <span class="n">original</span> <span class="n">controller</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">PopupBox</span><span class="o">&gt;</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Form</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyPopup&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="k">using</span> <span class="n">controller</span><span class="o">=</span><span class="s">&quot;source&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="k">using</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Form</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -3773,14 +3773,14 @@ The “limit” option delimits the value ranges. Changing the upper value canno
 </dl>
 <div class="literal-block-wrapper docutils container" id="id13">
 <div class="code-block-caption"><span class="caption-text">Example: standard scrollpicker usage</span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nt">&lt;ScrollPicker</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;foo&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,110,110&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">ScrollPicker</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;foo&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,0,110,110&quot;</span><span class="o">/&gt;</span>
 
-<span class="w"> </span>#<span class="w"> </span>Second<span class="w"> </span>horizontal<span class="w"> </span>example<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>wraparound<span class="w"> </span>option
-<span class="w"> </span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;HorizontalScrollPickerStyle&quot;</span><span class="w"> </span><span class="na">inherit=</span><span class="s">&quot;Standard.ScrollPicker&quot;</span><span class="nt">&gt;</span>
-<span class="w">     </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;itemSize&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
-<span class="w">     </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;centerSize&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;35&quot;</span><span class="nt">/&gt;</span>
-<span class="w"> </span><span class="nt">&lt;/Style&gt;</span>
-<span class="w"> </span><span class="nt">&lt;ScrollPicker</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bar&quot;</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;wraparound horizontal&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;HorizontalScrollPickerStyle&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,110,20&quot;</span><span class="nt">/&gt;</span>
+ <span class="cp"># Second horizontal example using the wraparound option</span>
+ <span class="o">&lt;</span><span class="n">Style</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;HorizontalScrollPickerStyle&quot;</span> <span class="n">inherit</span><span class="o">=</span><span class="s">&quot;Standard.ScrollPicker&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">Metric</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;itemSize&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;30&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">Metric</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;centerSize&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;35&quot;</span><span class="o">/&gt;</span>
+ <span class="o">&lt;/</span><span class="n">Style</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">ScrollPicker</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;bar&quot;</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;wraparound horizontal&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;HorizontalScrollPickerStyle&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,0,110,20&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -4039,8 +4039,8 @@ path, and that source property value gets assigned to the target property.</p>
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-trigger"><span class="std std-ref">Trigger</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id14" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Setter</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;parent.parent.parent.value&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;@parent.name&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;Setter</span><span class="w"> </span><span class="na">parameter=</span><span class="s">&quot;://WindowManager/StartPage&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Setter</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;parent.parent.parent.value&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;@parent.name&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Setter</span> <span class="n">parameter</span><span class="o">=</span><span class="s">&quot;://WindowManager/StartPage&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -4159,11 +4159,11 @@ path, and that source property value gets assigned to the target property.</p>
 The best matching child view gets selected every time the container size changes.</p>
 <div class="literal-block-wrapper docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id15" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;SizeVariant</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;tiny&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- used when parent height &lt; 10 --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;small&quot;</span><span class="w"> </span><span class="na">data.minsize=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- used when parent height &gt;= 10 and &lt; 20 --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;large&quot;</span><span class="w"> </span><span class="na">data.minsize=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- used when parent height &gt;= 20 --&gt;</span>
-<span class="nt">&lt;/SizeVariant&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">SizeVariant</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;all&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;tiny&quot;</span><span class="o">/&gt;</span> <span class="o">&lt;!--</span> <span class="n">used</span> <span class="n">when</span> <span class="n">parent</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;small&quot;</span> <span class="n">data</span><span class="p">.</span><span class="n">minsize</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="o">/&gt;</span> <span class="o">&lt;!--</span> <span class="n">used</span> <span class="n">when</span> <span class="n">parent</span> <span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="n">and</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;large&quot;</span> <span class="n">data</span><span class="p">.</span><span class="n">minsize</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="o">/&gt;</span> <span class="o">&lt;!--</span> <span class="n">used</span> <span class="n">when</span> <span class="n">parent</span> <span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="o">--&gt;</span>
+<span class="o">&lt;/</span><span class="n">SizeVariant</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -4370,16 +4370,16 @@ Apart from that it behaves the same as a view.</p>
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-trigger"><span class="std std-ref">Trigger</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-animation"><span class="std std-ref">Animation</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-stopanimation"><span class="std std-ref">StopAnimation</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id16" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Triggers&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Trigger</span><span class="w"> </span><span class="na">event=</span><span class="s">&quot;onAttached&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;StartAnimation&gt;</span>
-<span class="w">            </span><span class="nt">&lt;Animation</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;children[scrollView].vpos&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">duration=</span><span class="s">&quot;60&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/StartAnimation&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/Trigger&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Trigger</span><span class="w"> </span><span class="na">event=</span><span class="s">&quot;onRemoved&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;StopAnimation</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;children[scrollView].vpos&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/Trigger&gt;</span>
-<span class="nt">&lt;/Triggers&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Triggers</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Trigger</span> <span class="n">event</span><span class="o">=</span><span class="s">&quot;onAttached&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">StartAnimation</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Animation</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;children[scrollView].vpos&quot;</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="n">duration</span><span class="o">=</span><span class="s">&quot;60&quot;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;/</span><span class="n">StartAnimation</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">Trigger</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Trigger</span> <span class="n">event</span><span class="o">=</span><span class="s">&quot;onRemoved&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">StopAnimation</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;children[scrollView].vpos&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">Trigger</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Triggers</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -4446,15 +4446,15 @@ It can be assigned to a view element via it’s “style” attribute.
 Styles with the attribute “appstyle” can also be accessed directly by the application for specific purposes.</p>
 <div class="literal-block-wrapper docutils container" id="id17">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id17" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyStyle&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Font</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;textfont&quot;</span><span class="w"> </span><span class="na">face=</span><span class="s">&quot;Arial&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;bold&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Color</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;textcolor&quot;</span><span class="w"> </span><span class="na">color=</span><span class="s">&quot;#666666&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Image</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;background&quot;</span><span class="w"> </span><span class="na">image=</span><span class="s">&quot;SomeImage&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;padding.left&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;7&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Align</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;textalign&quot;</span><span class="w"> </span><span class="na">align=</span><span class="s">&quot;left&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Options</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;someOption&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;23&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Options</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;someOption&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Align.align&quot;</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;left top&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Style&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Style</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyStyle&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Font</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;textfont&quot;</span> <span class="n">face</span><span class="o">=</span><span class="s">&quot;Arial&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;bold&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Color</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;textcolor&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;#666666&quot;</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Image</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;background&quot;</span> <span class="n">image</span><span class="o">=</span><span class="s">&quot;SomeImage&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Metric</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;padding.left&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;7&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Align</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;textalign&quot;</span> <span class="n">align</span><span class="o">=</span><span class="s">&quot;left&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Options</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;someOption&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;23&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">Options</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;someOption&quot;</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;Align.align&quot;</span> <span class="n">options</span><span class="o">=</span><span class="s">&quot;left top&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Style</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -4497,10 +4497,10 @@ Styles with the attribute “appstyle” can also be accessed directly by the ap
 The parameter must be globally accessible. The value of the parameter is interpreted as an index in the list of available styles.</p>
 <div class="literal-block-wrapper docutils container" id="id18">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id18" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;StyleAlias</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyStyle&quot;</span>
-<span class="w">        </span><span class="na">parameter=</span><span class="s">&quot;://hostapp/Configuration/styleIndex&quot;</span>
-<span class="w">        </span><span class="na">styles=</span><span class="s">&quot;MyFirstStyle MySecondStyle MyThirdStyle&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/StyleAlias&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">StyleAlias</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyStyle&quot;</span>
+        <span class="n">parameter</span><span class="o">=</span><span class="s">&quot;://hostapp/Configuration/styleIndex&quot;</span>
+        <span class="n">styles</span><span class="o">=</span><span class="s">&quot;MyFirstStyle MySecondStyle MyThirdStyle&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">StyleAlias</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -5296,20 +5296,20 @@ Actions are executed in order of their appearance.</p>
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-triggerview"><span class="std std-ref">TriggerView</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-setter"><span class="std std-ref">Setter</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-invoker"><span class="std std-ref">Invoker</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-startanimation"><span class="std std-ref">StartAnimation</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-stopanimation"><span class="std std-ref">StopAnimation</span></a>] [<a class="reference internal" href="#skin-elements-classmodel-class-triggers"><span class="std std-ref">Triggers</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id19">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id19" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyStyle&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Triggers&gt;</span>
-<span class="w">        </span><span class="nt">&lt;Trigger</span><span class="w"> </span><span class="na">event=</span><span class="s">&quot;onDoubleClick&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;StartAnimation&gt;</span>
-<span class="w">                </span><span class="nt">&lt;Animation</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;children[scrollView].vpos&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">duration=</span><span class="s">&quot;98&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;/StartAnimation&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/Trigger&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Style</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;MyStyle&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Triggers</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Trigger</span> <span class="n">event</span><span class="o">=</span><span class="s">&quot;onDoubleClick&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">StartAnimation</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">Animation</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;children[scrollView].vpos&quot;</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="n">duration</span><span class="o">=</span><span class="s">&quot;98&quot;</span><span class="o">/&gt;</span>
+            <span class="o">&lt;/</span><span class="n">StartAnimation</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">Trigger</span><span class="o">&gt;</span>
 
-<span class="w">        </span><span class="nt">&lt;Trigger</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;value&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;Setter</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;phase&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;Invoker</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;window&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;popupContextMenu&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/Trigger&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/Triggers&gt;</span>
-<span class="nt">&lt;/Style&gt;</span>
+        <span class="o">&lt;</span><span class="n">Trigger</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;value&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Setter</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;phase&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="n">Invoker</span> <span class="n">target</span><span class="o">=</span><span class="s">&quot;window&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;popupContextMenu&quot;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;/</span><span class="n">Trigger</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">Triggers</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Style</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -5733,22 +5733,22 @@ the ValueBox allows changing the value by dragging the mouse up and down, like a
 The active child can selected via a numeric parameter or a property of the controller.</p>
 <div class="literal-block-wrapper docutils container" id="id20">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id20" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Example 1: A numeric parameter selects a view by index --&gt;</span>
-<span class="nt">&lt;Variant</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;indexValue&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;fitsize&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Variant 0&quot;</span><span class="nt">/&gt;</span><span class="w">    </span><span class="cm">&lt;!-- shown when indexValue is 0 --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Variant 1&quot;</span><span class="nt">/&gt;</span><span class="w">    </span><span class="cm">&lt;!-- shown when indexValue is 1 --&gt;</span>
-<span class="nt">&lt;/Variant&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">Example</span> <span class="mi">1</span><span class="o">:</span> <span class="n">A</span> <span class="n">numeric</span> <span class="n">parameter</span> <span class="n">selects</span> <span class="n">a</span> <span class="n">view</span> <span class="n">by</span> <span class="n">index</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Variant</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;indexValue&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;fitsize&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Variant 0&quot;</span><span class="o">/&gt;</span>    <span class="o">&lt;!--</span> <span class="n">shown</span> <span class="n">when</span> <span class="n">indexValue</span> <span class="n">is</span> <span class="mi">0</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Variant 1&quot;</span><span class="o">/&gt;</span>    <span class="o">&lt;!--</span> <span class="n">shown</span> <span class="n">when</span> <span class="n">indexValue</span> <span class="n">is</span> <span class="mi">1</span> <span class="o">--&gt;</span>
+<span class="o">&lt;/</span><span class="n">Variant</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- Example 2: A property of the controller selects a view by property value. --&gt;</span>
-<span class="nt">&lt;Variant</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;indexValue&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;fitsize&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Variant 0&quot;</span><span class="nt">/&gt;</span><span class="w">    </span><span class="cm">&lt;!-- shown when indexValue is 0 --&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Variant 1&quot;</span><span class="nt">/&gt;</span><span class="w">    </span><span class="cm">&lt;!-- shown when indexValue is 1 --&gt;</span>
-<span class="nt">&lt;/Variant&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">Example</span> <span class="mi">2</span><span class="o">:</span> <span class="n">A</span> <span class="n">property</span> <span class="n">of</span> <span class="n">the</span> <span class="n">controller</span> <span class="n">selects</span> <span class="n">a</span> <span class="n">view</span> <span class="n">by</span> <span class="n">property</span> <span class="n">value</span><span class="p">.</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Variant</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;indexValue&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;fitsize&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Variant 0&quot;</span><span class="o">/&gt;</span>    <span class="o">&lt;!--</span> <span class="n">shown</span> <span class="n">when</span> <span class="n">indexValue</span> <span class="n">is</span> <span class="mi">0</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Variant 1&quot;</span><span class="o">/&gt;</span>    <span class="o">&lt;!--</span> <span class="n">shown</span> <span class="n">when</span> <span class="n">indexValue</span> <span class="n">is</span> <span class="mi">1</span> <span class="o">--&gt;</span>
+<span class="o">&lt;/</span><span class="n">Variant</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- Example 3: A boolean parameter switches a view/on/off --&gt;</span>
-<span class="nt">&lt;Variant</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;boolValue&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;fitsize&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Variant&quot;</span><span class="nt">/&gt;</span><span class="w">    </span><span class="cm">&lt;!-- shown when boolValue is true --&gt;</span>
-<span class="nt">&lt;/Variant&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">Example</span> <span class="mi">3</span><span class="o">:</span> <span class="n">A</span> <span class="n">boolean</span> <span class="n">parameter</span> <span class="n">switches</span> <span class="n">a</span> <span class="n">view</span><span class="o">/</span><span class="n">on</span><span class="o">/</span><span class="n">off</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">Variant</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;boolValue&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;fitsize&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Label</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Variant&quot;</span><span class="o">/&gt;</span>    <span class="o">&lt;!--</span> <span class="n">shown</span> <span class="n">when</span> <span class="n">boolValue</span> <span class="n">is</span> <span class="nb">true</span> <span class="o">--&gt;</span>
+<span class="o">&lt;/</span><span class="n">Variant</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -5937,10 +5937,10 @@ When views are nested, the “attach” attribute specifies some basic layout be
 Defines can be used for style and inside size, width and height attributes:</p>
 <div class="literal-block-wrapper docutils container" id="id21">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id21" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;define</span><span class="w"> </span><span class="na">w=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">z=</span><span class="s">&quot;MyStyle&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;$z&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,$w,20&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;$w&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;20&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;hcenter top bottom&quot;</span><span class="nt">/&gt;</span>
-<span class="w"> </span><span class="nt">&lt;/define&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">define</span> <span class="n">w</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="n">z</span><span class="o">=</span><span class="s">&quot;MyStyle&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">View</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;$z&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,0,$w,20&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;all&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">View</span> <span class="n">width</span><span class="o">=</span><span class="s">&quot;$w&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;hcenter top bottom&quot;</span><span class="o">/&gt;</span>
+ <span class="o">&lt;/</span><span class="n">define</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6055,7 +6055,7 @@ In this case, the “group” attribute specifies in which workspace frames the 
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-workspace"><span class="std std-ref">Workspace</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id22">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id22" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://WindowManager/MyClass&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Toggle</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;://WindowManager/MyClass&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6108,7 +6108,7 @@ The view tree created by each perspective will be inserted into the PerspectiveC
 <p>See also: [<a class="reference internal" href="#skin-elements-classmodel-class-perspective"><span class="std std-ref">Perspective</span></a>]</p>
 <div class="literal-block-wrapper docutils container" id="id23">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id23" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PerspectiveContainer&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,1024,768&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">View</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;PerspectiveContainer&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,0,1024,768&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6156,7 +6156,7 @@ The view tree created by each perspective will be inserted into the PerspectiveC
 </dl>
 <div class="literal-block-wrapper docutils container" id="id24">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id24" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Zoomable</span><span class="w"> </span><span class="na">form.name=</span><span class="s">&quot;MyContent&quot;</span><span class="w"> </span><span class="na">factors=</span><span class="s">&quot;0.5 1.0 1.5 2&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Zoomable</span> <span class="n">form</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;MyContent&quot;</span> <span class="n">factors</span><span class="o">=</span><span class="s">&quot;0.5 1.0 1.5 2&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;0,0,100,100&quot;</span> <span class="n">attach</span><span class="o">=</span><span class="s">&quot;all&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6259,20 +6259,20 @@ The variables are valid inside the &lt;define&gt; tag and in form instantiations
 <p>Apart from simple assignments of constant literals or variable values, some extra directives can be used in the value (see code example).</p>
 <div class="literal-block-wrapper docutils container" id="id25">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id25" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;define</span><span class="w"> </span><span class="na">keyName=</span><span class="s">&quot;productKey&quot;</span><span class="w"> </span><span class="na">listName=</span><span class="s">&quot;productKeyList&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;define</span><span class="w"> </span><span class="na">number=</span><span class="s">&quot;@property:number&quot;</span><span class="w"> </span><span class="na">left=</span><span class="s">&quot;@eval:$number % 2&quot;</span><span class="w"> </span><span class="na">permission=</span><span class="s">&quot;aux$number&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">define</span> <span class="n">keyName</span><span class="o">=</span><span class="s">&quot;productKey&quot;</span> <span class="n">listName</span><span class="o">=</span><span class="s">&quot;productKeyList&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">define</span> <span class="n">number</span><span class="o">=</span><span class="s">&quot;@property:number&quot;</span> <span class="n">left</span><span class="o">=</span><span class="s">&quot;@eval:$number % 2&quot;</span> <span class="n">permission</span><span class="o">=</span><span class="s">&quot;aux$number&quot;</span><span class="o">&gt;</span>
 
-<span class="cm">&lt;!-- Additional directives:</span>
-<span class="cm">@property:propertyPath:</span>
-<span class="cm">resolve the value of a property (starting with current controller)</span>
+<span class="o">&lt;!--</span> <span class="n">Additional</span> <span class="nl">directives</span><span class="p">:</span>
+<span class="err">@</span><span class="nl">property</span><span class="p">:</span><span class="nl">propertyPath</span><span class="p">:</span>
+<span class="n">resolve</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span> <span class="n">property</span> <span class="p">(</span><span class="n">starting</span> <span class="n">with</span> <span class="n">current</span> <span class="n">controller</span><span class="p">)</span>
 
-<span class="cm">@select:$variable:str1,str2,...,strn:</span>
-<span class="cm">select a string from a list, indexed by a given variable</span>
+<span class="err">@</span><span class="nl">select</span><span class="p">:</span><span class="err">$</span><span class="nl">variable</span><span class="p">:</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">,...,</span><span class="nl">strn</span><span class="p">:</span>
+<span class="n">select</span> <span class="n">a</span> <span class="n">string</span> <span class="n">from</span> <span class="n">a</span> <span class="n">list</span><span class="p">,</span> <span class="n">indexed</span> <span class="n">by</span> <span class="n">a</span> <span class="n">given</span> <span class="n">variable</span>
 
-<span class="cm">@eval:</span>
-<span class="cm">evaluate an arithmetic expresssion, with operators</span>
-<span class="cm">+ - * / %, parenthesis, constant literals and variable values ($)</span>
-<span class="cm">--&gt;</span>
+<span class="err">@</span><span class="nl">eval</span><span class="p">:</span>
+<span class="n">evaluate</span> <span class="n">an</span> <span class="n">arithmetic</span> <span class="n">expresssion</span><span class="p">,</span> <span class="n">with</span> <span class="n">operators</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span> <span class="o">%</span><span class="p">,</span> <span class="n">parenthesis</span><span class="p">,</span> <span class="n">constant</span> <span class="n">literals</span> <span class="n">and</span> <span class="n">variable</span> <span class="n">values</span> <span class="p">(</span><span class="err">$</span><span class="p">)</span>
+<span class="o">--&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6300,10 +6300,10 @@ The variables are valid inside the &lt;define&gt; tag and in form instantiations
 </ol>
 <div class="literal-block-wrapper docutils container" id="id26">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id26" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Example 1 --&gt;</span>
-<span class="nt">&lt;foreach</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;$index&quot;</span><span class="w"> </span><span class="na">count=</span><span class="s">&quot;numTools&quot;</span><span class="nt">&gt;</span>
-<span class="cm">&lt;!-- Example 2 --&gt;</span>
-<span class="nt">&lt;foreach</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;$n&quot;</span><span class="w"> </span><span class="na">in=</span><span class="s">&quot;$names&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="n">Example</span> <span class="mi">1</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">foreach</span> <span class="n">variable</span><span class="o">=</span><span class="s">&quot;$index&quot;</span> <span class="n">count</span><span class="o">=</span><span class="s">&quot;numTools&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;!--</span> <span class="n">Example</span> <span class="mi">2</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">foreach</span> <span class="n">variable</span><span class="o">=</span><span class="s">&quot;$n&quot;</span> <span class="n">in</span><span class="o">=</span><span class="s">&quot;$names&quot;</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6383,12 +6383,12 @@ The variables are valid inside the &lt;define&gt; tag and in form instantiations
 The active style is selected via a numeric parameter as index (specified as “name”).</p>
 <div class="literal-block-wrapper docutils container" id="id27">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id27" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Example: changing the style of a button based on value of a parameter &quot;selected&quot;:</span>
-<span class="cm">(assuming &quot;RedButtonStyle&quot; and &quot;BlueButtonStyle&quot; are defined in &lt;Styles&gt;)</span>
-<span class="cm">--&gt;</span>
-<span class="nt">&lt;styleselector</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;selected&quot;</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;$ButtonStyle&quot;</span><span class="w"> </span><span class="na">styles=</span><span class="s">&quot;RedButtonStyle BlueButtonStyle&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;close&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;$ButtonStyle&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/styleselector&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!--</span> <span class="nl">Example</span><span class="p">:</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">style</span> <span class="n">of</span> <span class="n">a</span> <span class="n">button</span> <span class="n">based</span> <span class="n">on</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span> <span class="n">parameter</span> <span class="s">&quot;selected&quot;</span><span class="o">:</span>
+<span class="p">(</span><span class="n">assuming</span> <span class="s">&quot;RedButtonStyle&quot;</span> <span class="n">and</span> <span class="s">&quot;BlueButtonStyle&quot;</span> <span class="n">are</span> <span class="n">defined</span> <span class="n">in</span> <span class="o">&lt;</span><span class="n">Styles</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">styleselector</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;selected&quot;</span> <span class="n">variable</span><span class="o">=</span><span class="s">&quot;$ButtonStyle&quot;</span> <span class="n">styles</span><span class="o">=</span><span class="s">&quot;RedButtonStyle BlueButtonStyle&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Button</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;close&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;$ButtonStyle&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">styleselector</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6414,17 +6414,17 @@ The active style is selected via a numeric parameter as index (specified as “n
 <p>Selects one of multiple available alternative cases based on a property or variable value.</p>
 <div class="literal-block-wrapper docutils container" id="id28">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id28" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;switch</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;myProperty&quot;</span><span class="nt">&gt;</span>
-<span class="w"> </span><span class="nt">&lt;case</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="cm">&lt;!-- ... --&gt;</span>
-<span class="w"> </span><span class="nt">&lt;/case&gt;</span>
-<span class="w"> </span><span class="nt">&lt;case</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="cm">&lt;!-- ... --&gt;</span>
-<span class="w"> </span><span class="nt">&lt;/case&gt;</span>
-<span class="w"> </span><span class="nt">&lt;default&gt;</span>
-<span class="w">  </span><span class="cm">&lt;!-- ... --&gt;</span>
-<span class="w"> </span><span class="nt">&lt;/defautl&gt;</span>
-<span class="nt">&lt;/switch&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="k">switch</span> <span class="n">property</span><span class="o">=</span><span class="s">&quot;myProperty&quot;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="k">case</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+ <span class="o">&lt;/</span><span class="k">case</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="k">case</span> <span class="n">value</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+ <span class="o">&lt;/</span><span class="k">case</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="k">default</span><span class="o">&gt;</span>
+  <span class="o">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+ <span class="o">&lt;/</span><span class="n">defautl</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="k">switch</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -6490,9 +6490,9 @@ Inside the using tag, this new controller will be the current controller that is
 <p>The sizes and selected visual style metrics of these views will be multiplied by the zoom factor.</p>
 <div class="literal-block-wrapper docutils container" id="id29">
 <div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id29" title="Permalink to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;zoom</span><span class="w"> </span><span class="na">factor=</span><span class="s">&quot;1.5&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;10,10,100,100&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Zoomed&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- resulting size will be &quot;15,15,150,150&quot; --&gt;</span>
-<span class="nt">&lt;/zoom&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">zoom</span> <span class="n">factor</span><span class="o">=</span><span class="s">&quot;1.5&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Button</span> <span class="n">size</span><span class="o">=</span><span class="s">&quot;10,10,100,100&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Zoomed&quot;</span><span class="o">&gt;</span> <span class="o">&lt;!--</span> <span class="n">resulting</span> <span class="n">size</span> <span class="n">will</span> <span class="n">be</span> <span class="s">&quot;15,15,150,150&quot;</span> <span class="o">--&gt;</span>
+<span class="o">&lt;/</span><span class="n">zoom</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -8756,7 +8756,7 @@ Inside the using tag, this new controller will be the current controller that is
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 01, 2024.
+      <span class="lastupdated">Last updated on Jul 01, 2024.
       </span></p>
   </div>
 
