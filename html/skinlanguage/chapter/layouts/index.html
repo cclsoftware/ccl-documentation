@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layouts &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>Layout &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css" />
@@ -59,15 +59,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Layouts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#basic-layout-of-views">Basic Layout of Views</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Layout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anchor-layout">Anchor Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flexbox-layout">Flexbox Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfacing-between-flexbox-and-anchor-layouts">Interfacing between Flexbox and Anchor Layouts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips-tricks">Tips &amp; Tricks</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../colorscheme/index.html">Color Scheme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorial/index.html">Tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
 </ul>
 </li>
@@ -90,7 +92,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">CCL Skin Definition Language</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
-      <li class="breadcrumb-item active">Layouts</li>
+      <li class="breadcrumb-item active">Layout</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -99,13 +101,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="layouts">
-<h1>Layouts<a class="headerlink" href="#layouts" title="Permalink to this heading"></a></h1>
+  <section id="layout">
+<h1>Layout<a class="headerlink" href="#layout" title="Permalink to this heading"></a></h1>
 <p>Each view can contain other views as child views. The coordinates of a child view are relative to the parent view. If a part of the child view exceeds the area of the parent view it is clipped.</p>
+<p>Views can be arranged responsively considering outer constraints like the available size within their parent and/or according to inner constrains like the required size to properly display their contents (e.g. a label containing text of a specific length).</p>
+<p>Two layout systems are supported, anchor layouts and a subset of the CSS Flexbox layout system.</p>
+<p>Both can be used side-by-side and nested withing the same view tree. For more information on interfacing between both systems, see chapter <a class="reference internal" href="#flexbox-anchor-interfacing"><span class="std std-ref">Interfacing between Flexbox and Anchor Layouts</span></a>.</p>
+<section id="anchor-layout">
+<h2>Anchor Layout<a class="headerlink" href="#anchor-layout" title="Permalink to this heading"></a></h2>
 <p>By default, resizing a view doesn’t affect the size or relative position of it’s children. However, the “attach” attribute of a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-view"><span class="std std-ref">View</span></a>&gt; offers several options to define a certain relationship between positions and sizes of child and parent views.</p>
 <section id="basic-layout-of-views">
-<h2>Basic Layout of Views<a class="headerlink" href="#basic-layout-of-views" title="Permalink to this heading"></a></h2>
+<h3>Basic Layout of Views<a class="headerlink" href="#basic-layout-of-views" title="Permalink to this heading"></a></h3>
 <p>By specifying one or more of the four edge names “left, right, top, bottom” the respective edges of the child follow the corresponding parent edges. When the parent view is resized, the distance between an attached child edge and it’s corresponding parent edge stays fixed as long as possible within the current size limits.</p>
+</section>
 <section id="table-3-1-view-attach-examples">
 <h3>Table 3.1. View Attach Examples<a class="headerlink" href="#table-3-1-view-attach-examples" title="Permalink to this heading"></a></h3>
 <table class="docutils align-default">
@@ -179,9 +187,174 @@
 <p>results in:</p>
 <a class="reference internal image-reference" href="../../../_images/layout_example_1.png"><img alt="../../../_images/layout_example_1.png" src="../../../_images/layout_example_1.png" style="width: 400px;" /></a>
 </section>
-<section id="specialized-layout-containers">
-<h3>Specialized Layout Containers<a class="headerlink" href="#specialized-layout-containers" title="Permalink to this heading"></a></h3>
-<p>To be continued …</p>
+</section>
+<section id="flexbox-layout">
+<h2>Flexbox Layout<a class="headerlink" href="#flexbox-layout" title="Permalink to this heading"></a></h2>
+<p>The Flexbox layout system is implemented according to the specification for the <a class="reference external" href="https://www.w3.org/TR/css-Flexbox-1/">CSS Flexible Box Layout Module</a> and additionally implements features from the <a class="reference external" href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment Module</a>.</p>
+<p>Not all specified features might be implemented yet, please refer to the specification of the <a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-view"><span class="std std-ref">View Element</span></a> and <a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-flexbox"><span class="std std-ref">Flexbox Element</span></a> for further information.</p>
+<p>Besides the comprehensive specification, many tutorials can be found online. A good “cheat sheet” is the <a class="reference external" href="https://css-tricks.com/snippets/css/a-guide-to-Flexbox/">CSS Guide to Flexbox</a> with container properties explained on the left and child properties explained on the right.</p>
+<section id="skin-attribute-naming-scheme">
+<h3>Skin Attribute Naming Scheme<a class="headerlink" href="#skin-attribute-naming-scheme" title="Permalink to this heading"></a></h3>
+<p>All Flexbox attributes are prefixed with “flex.” and omit dashes following CCL Skin style guidelines.</p>
+<p><strong>Example</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>CSS</p></th>
+<th class="head"><p>CCL Skin</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>justify-content: flex-start</p></td>
+<td><p>flex.justify=”flexstart”</p></td>
+</tr>
+<tr class="row-odd"><td><p>flex-wrap: wrap-reverse</p></td>
+<td><p>flex.wrap=”wrapreverse”</p></td>
+</tr>
+</tbody>
+</table>
+<p>Please refer to <a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-flexbox"><span class="std std-ref">Flexbox Element</span></a> and <a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-view"><span class="std std-ref">View Element</span></a> for the full attribute specification.</p>
+</section>
+<section id="flex-sizemode">
+<h3>flex.sizemode<a class="headerlink" href="#flex-sizemode" title="Permalink to this heading"></a></h3>
+<p>A CCL-specific attribute for views inside a Flexbox to specify how content sizes are considered.</p>
+<ul class="simple">
+<li><p>flex.sizemode=”fill” (default): An initial size derived from the content is ignored (explicitly defined sizes are always considered).</p></li>
+<li><p>flex.sizemode=[“hug”, “hughorizontal”, “hugvertical”]: The view tries to take its contents size</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Size limits (e.g. propagated from content) of views added to a Flexbox are always considered</p>
+</div>
+</section>
+</section>
+<section id="interfacing-between-flexbox-and-anchor-layouts">
+<span id="flexbox-anchor-interfacing"></span><h2>Interfacing between Flexbox and Anchor Layouts<a class="headerlink" href="#interfacing-between-flexbox-and-anchor-layouts" title="Permalink to this heading"></a></h2>
+<p><strong>Example</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Skin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AFlexboxThing&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Root of a Flexbox layout tree</span>
+<span class="cm">            * attached to an anchor layout system using attach=&quot;all&quot;</span>
+<span class="cm">            * flex.align=&quot;stretch&quot; could be omitted since it is the default--&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Flexbox</span><span class="w"> </span><span class="na">flex.direction=</span><span class="s">&quot;column&quot;</span><span class="w"> </span><span class="na">flex.align=</span><span class="s">&quot;stretch&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- A label being sized by its parent Flexbox.</span>
+<span class="cm">                * The label will fill the width of the Flexbox, since flex.direction=&quot;column&quot;</span>
+<span class="cm">                and alignment specifies rule &quot;stretch&quot; for the cross axis.</span>
+<span class="cm">                * Labels have initial size limits for the maximum width, too. Since</span>
+<span class="cm">                initial size limits are always considered we have to specify sizelimits=&quot;none&quot;</span>
+<span class="cm">                in order to allow the label to stretch over the whole width.</span>
+<span class="cm">                * The height has to be specified (or flex.grow &gt; 0), otherwise the height will</span>
+<span class="cm">                be zero since initial sizes are ignored by default --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;A label&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;32&quot;</span><span class="w"> </span><span class="na">sizelimits=</span><span class="s">&quot;none&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">                </span><span class="cm">&lt;!-- Same as before, but now the label should hug its contents</span>
+<span class="cm">                * The label will be aligned to the left hand side, since the inherited size</span>
+<span class="cm">                takes precedence over align=&quot;stretch&quot; --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;A label hugging it&#39;s text&quot;</span><span class="w"> </span><span class="na">flex.sizemode=</span><span class="s">&quot;hug&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Flexbox&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- An Flexbox nested in an Anchor layout container --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Horizontal</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AFlexboxThing&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Horizontal&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
+<section id="flexbox-nested-in-an-anchor-layout-system">
+<h3>Flexbox nested in an Anchor Layout system<a class="headerlink" href="#flexbox-nested-in-an-anchor-layout-system" title="Permalink to this heading"></a></h3>
+<p>A Flexbox which is a child of an anchor layout container can be attached to its parent like any other view.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Skin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AnAnchorLayoutThing&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Horizontal</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- The Flexbox edges will keep their distance to the parent edges if the</span>
+<span class="cm">                parent is resized --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Flexbox</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SomeLabel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/Flexbox&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Horizontal&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="anchor-layout-container-nested-in-a-flexbox">
+<h3>Anchor layout container nested in a Flexbox<a class="headerlink" href="#anchor-layout-container-nested-in-a-flexbox" title="Permalink to this heading"></a></h3>
+<p>An anchor layout container can be nested in a Flexbox like any other view.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Skin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NestedAnchorLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Flexbox</span><span class="w"> </span><span class="na">flex.direction=</span><span class="s">&quot;column&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- The &lt;Horizontal&gt; container will be set to a width of 100 pixels</span>
+<span class="cm">                due to the alignment default &quot;stretch&quot; and the it will grow vertically</span>
+<span class="cm">                to a height of 100 pixels due to flex.grow=&quot;1&quot; --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Horizontal</span><span class="w"> </span><span class="na">flex.grow=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Some label&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/Horizontal&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Flexbox&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="attachments-within-flexbox-layouts">
+<h3>Attachments within Flexbox layouts<a class="headerlink" href="#attachments-within-flexbox-layouts" title="Permalink to this heading"></a></h3>
+<p>As an attribute of anchor layout children and containers, “attach” in general has no relevance within a Flexbox layout tree except at the interface to an anchor layout system.</p>
+<p>There is one exception: attach=”fitsize” is interpreted as flex.sizemode=”hug” since variants nested in a Flexbox would otherwise have to specify both attributes redundantly.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Skin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FlexboxAttachments&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Flexbox</span><span class="w"> </span><span class="na">flex.direction=</span><span class="s">&quot;column&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- Flexboxes interpret attach=&quot;fitsize&quot; as flex.sizemode=&quot;hug&quot; --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Variant</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;fitsize&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;Space</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,40,40&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;Space</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,80,80&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/Variant&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Flexbox&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tips-tricks">
+<h2>Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permalink to this heading"></a></h2>
+<section id="vertically-stacked-views-backgrounds-overlays">
+<h3>Vertically stacked views / Backgrounds / Overlays<a class="headerlink" href="#vertically-stacked-views-backgrounds-overlays" title="Permalink to this heading"></a></h3>
+<p>Using Flexboxes, it is easy to add overlays which fill the container.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Skin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Forms&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FlexboxOverlays&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- The Flexbox adapts to the size of the &quot;image&quot; view since flex.sizemode=&quot;hug&quot;</span>
+<span class="cm">            is set. At the same time, the overlay fills the whole Flexbox. Reason:</span>
+<span class="cm">            * absolute position type removes the view from the flex layout flow</span>
+<span class="cm">            * inset.&lt;edge&gt; specifies the distance to the corresponding parent edge</span>
+<span class="cm">            * inset is a shorthand for the distance to all edges --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Flexbox</span><span class="w"> </span><span class="na">flex.direction=</span><span class="s">&quot;row&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,100,100&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;content&quot;</span><span class="w"> </span><span class="na">flex.grow=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;ImageView</span><span class="w"> </span><span class="na">image=</span><span class="s">&quot;roundedFrameOverlay&quot;</span><span class="w"> </span><span class="na">flex.positiontype=</span><span class="s">&quot;absolute&quot;</span><span class="w"> </span><span class="na">flex.inset=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Flexbox&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Forms&gt;</span>
+<span class="nt">&lt;/Skin&gt;</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -197,8 +370,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jul 04, 2024.
+    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Apr 28, 2025.
       </span></p>
   </div>
 

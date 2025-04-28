@@ -56,7 +56,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Skin Definition Language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter/index.html">Chapters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/index.html">Tutorials</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">References</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="skin-elements-classmodel.html">Skin Elements</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Visual Styles</a><ul>
@@ -123,6 +122,7 @@
 <section id="borderstyle">
 <span id="visual-styles-classmodel-class-borderstyle"></span><h3>BorderStyle<a class="headerlink" href="#borderstyle" title="Permalink to this heading"></a></h3>
 <p>Draws either the “background” image if availble, or the “backcolor”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-border"><span class="std std-ref">Border</span></a>]</p>
 <p><strong>Attributes (10)</strong></p>
 <ul class="simple">
 <li><p><strong>border.background</strong> (<em>image</em>): a “border.background” image can be used, with the default “background” image is its fallback</p></li>
@@ -155,6 +155,7 @@ Supported frame names are “normal[On]”, “pressed[On]”, “mouseover[On]�
 <p>When an image is used, an additonal background color “backcolor.on” or “backcolor.off” can be drawn underneath the button image.
 When no image is specified, a rectangular frame in color “forecolor” can be drawn with option “border”.
 For the content, a padding can be specified. The content can be an “icon”, “title” or both.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-button"><span class="std std-ref">Button</span></a>]</p>
 <p><strong>Attributes (60)</strong></p>
 <ul class="simple">
 <li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
@@ -230,6 +231,7 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <section id="checkboxstyle">
 <span id="visual-styles-classmodel-class-checkboxstyle"></span><h3>CheckBoxStyle<a class="headerlink" href="#checkboxstyle" title="Permalink to this heading"></a></h3>
 <p>Draws an image that shows the parameter state (typically a checkmark) and an additional title besides the image.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-checkbox"><span class="std std-ref">CheckBox</span></a>]</p>
 <p><strong>Attributes (63)</strong></p>
 <ul class="simple">
 <li><p><strong>buttonstyle</strong> (<em>metric</em>): if this is set (“1”), the control is drawn like a button</p></li>
@@ -313,6 +315,7 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
 <p>The “button” image is drawn at the right. The remaining space shows the text field to edit the parameter value with an optional padding.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-combobox"><span class="std std-ref">ComboBox</span></a>]</p>
 <p><strong>Attributes (15)</strong></p>
 <ul class="simple">
 <li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that something can popup</p></li>
@@ -345,6 +348,7 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <p><strong>Description</strong></p>
 <p>The style contains 2 images “Image” and “SecondaryImage”, that can be selected via the option “primary” or “secondary”.
 If the DialogGroup has a title, it is drawn at the top edge.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-dialoggroup"><span class="std std-ref">DialogGroup</span></a>]</p>
 <p><strong>Attributes (14)</strong></p>
 <ul class="simple">
 <li><p><strong>Image</strong> (<em>image</em>): used when options “primary” is set (or as default)</p></li>
@@ -373,6 +377,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="dividerstyle">
 <span id="visual-styles-classmodel-class-dividerstyle"></span><h3>DividerStyle<a class="headerlink" href="#dividerstyle" title="Permalink to this heading"></a></h3>
 <p>A divider draws a background image, and optionally a handle centered on top.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-divider"><span class="std std-ref">Divider</span></a>]</p>
 <p><strong>Attributes (13)</strong></p>
 <ul class="simple">
 <li><p><strong>hGrip</strong> (<em>image</em>): handle for a horizontal divider</p></li>
@@ -425,6 +430,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="editboxstyle">
 <span id="visual-styles-classmodel-class-editboxstyle"></span><h3>EditBoxStyle<a class="headerlink" href="#editboxstyle" title="Permalink to this heading"></a></h3>
 <p>An EditBox is drawn just like a TextBox.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-editbox"><span class="std std-ref">EditBox</span></a>]</p>
 <p><strong>Attributes (29)</strong></p>
 <ul class="simple">
 <li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
@@ -635,6 +641,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="labelstyle">
 <span id="visual-styles-classmodel-class-labelstyle"></span><h3>LabelStyle<a class="headerlink" href="#labelstyle" title="Permalink to this heading"></a></h3>
 <p>A label draws it’s title using the style’s “textfont”, “textcolor”, and “textalignment” (for single line text) or “textoptions” (for multiline text).</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-label"><span class="std std-ref">Label</span></a>]</p>
 <p><strong>Attributes (9)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
@@ -655,7 +662,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </section>
 <section id="listviewstyle">
 <span id="visual-styles-classmodel-class-listviewstyle"></span><h3>ListViewStyle<a class="headerlink" href="#listviewstyle" title="Permalink to this heading"></a></h3>
-<p><strong>Attributes (34)</strong></p>
+<p><strong>Attributes (35)</strong></p>
 <ul class="simple">
 <li><p><strong>icons.background</strong> (<em>image</em>): for “viewtype=”icons”: draw background for each cell (use second frame for selection)</p></li>
 <li><p><strong>icons.dataheight</strong> (<em>metric</em>): for “viewtype=”icons”: height of icon</p></li>
@@ -678,6 +685,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <li><p><strong>list.dataleft</strong> (<em>metric</em>): for “viewtype=”list”: left of list inside item rectangle</p></li>
 <li><p><strong>list.datatop</strong> (<em>metric</em>): for “viewtype=”list”: top of list inside item rectangle</p></li>
 <li><p><strong>list.datawidth</strong> (<em>metric</em>): for “viewtype=”list”: width of list</p></li>
+<li><p><strong>list.itembackground</strong> (<em>image</em>): for “viewtype=”list”: draw background for every unselected item in the list as an image</p></li>
 <li><p><strong>list.padding.bottom</strong> (<em>metric</em>): for “viewtype=”list”: bottom padding of list</p></li>
 <li><p><strong>list.selectionbackground</strong> (<em>image</em>): for “viewtype=”list”: draw background for a selected item as an image</p></li>
 <li><p><strong>list.textalign</strong> (<em>enum</em>): for “viewtype=”list”: set text alignment for cells (default: kLeftCenter)</p></li>
@@ -774,6 +782,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="pagecontrolstyle">
 <span id="visual-styles-classmodel-class-pagecontrolstyle"></span><h3>PageControlStyle<a class="headerlink" href="#pagecontrolstyle" title="Permalink to this heading"></a></h3>
 <p>A PageControl draws a row of dots, with one dot per scroll page.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-pagecontrol"><span class="std std-ref">PageControl</span></a>]</p>
 <p><strong>Attributes (11)</strong></p>
 <ul class="simple">
 <li><p><strong>dot</strong> (<em>image</em>): dot image with frames “normal” and “normalOn” for the current page</p></li>
@@ -798,8 +807,9 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </section>
 <section id="popupselectorstyle">
 <span id="visual-styles-classmodel-class-popupselectorstyle"></span><h3>PopupSelectorStyle<a class="headerlink" href="#popupselectorstyle" title="Permalink to this heading"></a></h3>
-<p><strong>Attributes (11)</strong></p>
+<p><strong>Attributes (12)</strong></p>
 <ul class="simple">
+<li><p><strong>popup.minwidth</strong> (<em>metric</em>): the popup’s minwidth sizelimit - used to override the default sizelimit (the width of the PopupBox)</p></li>
 <li><p><strong>popup.offset.x</strong> (<em>metric</em>): an additional horizontal offset to the popup position, applied when opened from SelectBox or PopupBox</p></li>
 <li><p><strong>popup.offset.y</strong> (<em>metric</em>): an additional vertical offset to the popup position, applied when opened from SelectBox or PopupBox</p></li>
 </ul>
@@ -823,6 +833,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="progressbarstyle">
 <span id="visual-styles-classmodel-class-progressbarstyle"></span><h3>ProgressBarStyle<a class="headerlink" href="#progressbarstyle" title="Permalink to this heading"></a></h3>
 <p>A Progres bar draws a bar that reflects the parameter value over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-progressbar"><span class="std std-ref">ProgressBar</span></a>]</p>
 <p><strong>Attributes (11)</strong></p>
 <ul class="simple">
 <li><p><strong>foreground</strong> (<em>image</em>): used to draw a bar over the background that reflects the parameter value</p></li>
@@ -848,6 +859,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="rangesliderstyle">
 <span id="visual-styles-classmodel-class-rangesliderstyle"></span><h3>RangeSliderStyle<a class="headerlink" href="#rangesliderstyle" title="Permalink to this heading"></a></h3>
 <p>A Range Slider draws two handle moving over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-rangeslider"><span class="std std-ref">RangeSlider</span></a>]</p>
 <p><strong>Attributes (13)</strong></p>
 <ul class="simple">
 <li><p><strong>hHandle2</strong> (<em>image</em>): handle (horizontal slider)</p></li>
@@ -874,9 +886,10 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </section>
 <section id="sceneview3dstyle">
 <span id="visual-styles-classmodel-class-sceneview3dstyle"></span><h3>SceneView3DStyle<a class="headerlink" href="#sceneview3dstyle" title="Permalink to this heading"></a></h3>
-<p><strong>Attributes (10)</strong></p>
+<p><strong>Attributes (11)</strong></p>
 <ul class="simple">
 <li><p><strong>camera</strong> (<em>string</em>)</p></li>
+<li><p><strong>multisamplingfactor</strong> (<em>metric</em>)</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
@@ -900,6 +913,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <p>A Scrollbar indicates the scrolling position of a scroll view.</p>
 <p><strong>Description</strong></p>
 <p>A scroll bar has a background, up/down buttons (vertical) and a handle (thumb).</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-scrollbar"><span class="std std-ref">ScrollBar</span></a>]</p>
 <p><strong>Attributes (22)</strong></p>
 <ul class="simple">
 <li><p><strong>clipBackground</strong> (<em>metric</em>): background is only drawn outside of handle area</p></li>
@@ -999,13 +1013,14 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </section>
 <section id="scrollviewstyle">
 <span id="visual-styles-classmodel-class-scrollviewstyle"></span><h3>ScrollViewStyle<a class="headerlink" href="#scrollviewstyle" title="Permalink to this heading"></a></h3>
-<p><strong>Attributes (14)</strong></p>
+<p><strong>Attributes (15)</strong></p>
 <ul class="simple">
 <li><p><strong>borderSize</strong> (<em>metric</em>): size (in pixels) of an optional border</p></li>
 <li><p><strong>buttonSize</strong> (<em>metric</em>): size of scroll buttons in pixels. For example: width for a vertical button.</p></li>
 <li><p><strong>buttonSpacing</strong> (<em>metric</em>): spacing between scroll buttons and scrollview edge</p></li>
 <li><p><strong>inertialDuration</strong> (<em>metric</em>): duration in seconds for inertial motion after user release the scrollview (not supported on all platforms)</p></li>
 <li><p><strong>scrollBarSize</strong> (<em>metric</em>): size of scrollbars in pixels. For example: width for a vertical bar.</p></li>
+<li><p><strong>snapDepth</strong> (<em>metric</em>): limits the view recursion depth for option “snapviewsdeep” (default: unlimited)</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
@@ -1058,6 +1073,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <p>An image “states” can be used to show a different frame for (integer) each parameter value.</p>
 <p>The “button” image is drawn at the right (can be changed with option “leadingbutton”).
 The remaining space shows the text representation of the parameter, with an optional “padding”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>]</p>
 <p><strong>Attributes (24)</strong></p>
 <ul class="simple">
 <li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that somthing can popup</p></li>
@@ -1096,6 +1112,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <section id="sliderstyle">
 <span id="visual-styles-classmodel-class-sliderstyle"></span><h3>SliderStyle<a class="headerlink" href="#sliderstyle" title="Permalink to this heading"></a></h3>
 <p>A Slider draws handle moving over a background.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-slider"><span class="std std-ref">Slider</span></a>]</p>
 <p><strong>Attributes (29)</strong></p>
 <ul class="simple">
 <li><p><strong>centerlinecolor</strong> (<em>color</em>): color for a centerline, when the parameter is bipolar and style is “bargraph”</p></li>
@@ -1177,6 +1194,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
 <p>The text is drawn with an optional “padding”.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>]</p>
 <p><strong>Attributes (21)</strong></p>
 <ul class="simple">
 <li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
@@ -1359,6 +1377,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <p>Displays a value as a horizontal or verical bar.</p>
 <p><strong>Description</strong></p>
 <p>If no image is specified, “forecolor” and “backcolor” are used to draw the bar and the background as a filled rectangle.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebar"><span class="std std-ref">ValueBar</span></a>]</p>
 <p><strong>Attributes (14)</strong></p>
 <ul class="simple">
 <li><p><strong>centerlinecolor</strong> (<em>color</em>): color for a centerline, when the parameter is bipolar</p></li>
@@ -1387,6 +1406,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <section id="valueboxstyle">
 <span id="visual-styles-classmodel-class-valueboxstyle"></span><h3>ValueBoxStyle<a class="headerlink" href="#valueboxstyle" title="Permalink to this heading"></a></h3>
 <p>Drawn like an EditBox.</p>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebox"><span class="std std-ref">ValueBox</span></a>]</p>
 <p><strong>Attributes (29)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p>
 <ul class="simple">
@@ -1809,8 +1829,8 @@ if no image is available, “backcolor” is used.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jul 04, 2024.
+    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Apr 28, 2025.
       </span></p>
   </div>
 

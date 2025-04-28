@@ -25,7 +25,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorials" href="../../tutorial/index.html" />
+    <link rel="next" title="References" href="../../reference/index.html" />
     <link rel="prev" title="Color Scheme" href="../colorscheme/index.html" />
     <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -59,7 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../colorscheme/index.html">Color Scheme</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Styles</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#composite-styles">Composite Styles</a></li>
@@ -67,7 +67,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorial/index.html">Tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
 </ul>
 </li>
@@ -100,8 +99,10 @@
            <div itemprop="articleBody">
              
   <section id="styles">
-<h1>Styles<a class="headerlink" href="#styles" title="Permalink to this heading"></a></h1>
-<p>…</p>
+<span id="visual-styles"></span><h1>Styles<a class="headerlink" href="#styles" title="Permalink to this heading"></a></h1>
+<p>A key element defining the appearance of controls is a visual style. This concept borrows some aspects from CSS used in HTML rendering. A visual style is defined once and can be shared among multiple controls. When no specific style is given a default “Standard” style is used.
+(I.e. A button without an explicit style will use the “Standard.Button” style)</p>
+<p>Instead of defining standard styles for every app - basic design packages can be imported. For a neutral cross-platform design these packages are <a class="reference internal" href="../package/index.html#neutralbase-and-neutraldesign"><span class="std std-ref">neutralbase and neutraldesign</span></a>.</p>
 <section id="composite-styles">
 <h2>Composite Styles<a class="headerlink" href="#composite-styles" title="Permalink to this heading"></a></h2>
 <p>Composite styles (e.g. style=”a b”) are merged from the given styles in the order of appearance. (Later styles overwrite earlier ones). Inherited properties are always overwritten by direct properties. (i.e. if there is a style “a” derived from “A” and a style “b” derived from “B” and they appear in a style array in the order [a b], then B.x is overwritten by a.x even though a appears before b.) This is because the composite style [a b] is derived from another ad-hoc built composite style [A B].</p>
@@ -134,14 +135,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../colorscheme/index.html" class="btn btn-neutral float-left" title="Color Scheme" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../tutorial/index.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../reference/index.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jul 04, 2024.
+    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Apr 28, 2025.
       </span></p>
   </div>
 
