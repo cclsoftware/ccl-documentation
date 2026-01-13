@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::ILocaleInfo &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::ILocaleInfo::PrintByteFlags" href="enum_CCL_ILocaleInfo_PrintByteFlags.html" />
+    <link rel="prev" title="struct CCL::ILanguagePack" href="struct_CCL_ILanguagePack.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_system.html">CCL-System</a></li>
+      <li class="breadcrumb-item active">struct CCL::ILocaleInfo</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-ilocaleinfo">
+<span id="doxid-struct-c-c-l-1-1-i-locale-info"></span><span id="index-0"></span><h1>struct CCL::ILocaleInfo<a class="headerlink" href="#struct-ccl-ilocaleinfo" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ilocaleinfo.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">ILocaleInfo</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_PrintByteFlags.html#doxid-struct-c-c-l-1-1-i-locale-info-1ad96651d7b42d5ccaced47d0489d6265a"><span class="std std-ref">PrintByteFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_PrintDateFlags.html#doxid-struct-c-c-l-1-1-i-locale-info-1a00330970e1788a6ca2ed161ab708e6f3"><span class="std std-ref">PrintDateFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_PrintDurationFlags.html#doxid-struct-c-c-l-1-1-i-locale-info-1a83b131b682f167e68bedf57499b423cb"><span class="std std-ref">PrintDurationFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_ScanFlags.html#doxid-struct-c-c-l-1-1-i-locale-info-1aea0c448b1902840c4e23110113ff21da"><span class="std std-ref">ScanFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_TimeUnit.html#doxid-struct-c-c-l-1-1-i-locale-info-1add9fe45e09605eee3e4a39c8a5c4476d"><span class="std std-ref">TimeUnit</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-info-1aafeb16cf7ace0b9504589781bce8dc3a"><span class="std std-ref">getTitle</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-info-1a9281b07a4ab868bf1feb929045a4b7bc"><span class="std std-ref">getDayOfWeek</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Date.html#doxid-class-core-1-1-date"><span class="std std-ref">Date</span></a><span></span><span class="o">&amp;</span> <span class="n">date</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-info-1a8e7c2edc7b3d168e4f9609192f8c8e5b"><span class="std std-ref">getWeekdayName</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">dayOfWeek</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-info-1a953c94a369f49836be6e992689f865dd"><span class="std std-ref">getMonthName</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">month</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1a16b58e083abe8927d63eee62521301bd"><span></span><span class="n">printDate</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Date.html#doxid-class-core-1-1-date"><span class="std std-ref">Date</span></a><span></span><span class="o">&amp;</span> <span class="n">date</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1a46aa58ffc92ec21f09044cf620926380"><span></span><span class="n">printTime</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Time.html#doxid-class-core-1-1-time"><span class="std std-ref">Time</span></a><span></span><span class="o">&amp;</span> <span class="n">time</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1ac1c2805daf14c83a0c17d3a6df2f6ad5"><span></span><span class="n">printTimeAgo</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_DateTime.html#doxid-class-core-1-1-date-time"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">localTime</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1a4deaa362b99ebce59273c077115e9a50"><span></span><span class="n">printTimeAhead</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_DateTime.html#doxid-class-core-1-1-date-time"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">localTime</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1a1ea5854e2a92d1a8376f0a97b2a96826"><span></span><span class="n">printDuration</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">seconds</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1aa229941d4e6325400c1782a9d6955095"><span></span><span class="n">printCurrency</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">value</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1ab8c73e677b7a8987165cc8ec2af577c8"><span></span><span class="n">printByteSize</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">byteSize</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1acf196ddab14f0abab4a14f4df21175b6"><span></span><span class="n">scanDuration</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span><span class="o">&amp;</span> <span class="n">seconds</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">defaultUnit</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ILocaleInfo_TimeUnit.html#doxid-struct-c-c-l-1-1-i-locale-info-1add9fe45e09605eee3e4a39c8a5c4476da3091d1a096c28d4993507f167253ebc7"><span class="std std-ref">kSeconds</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-info-1a541baf42cf6375644d75ecc66d38b6c8"><span></span><span class="n">printBytesPerSecond</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">bytesPerSecond</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-locale-info"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-info-1aafeb16cf7ace0b9504589781bce8dc3a"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <span class="n">getTitle</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get name of locale.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-info-1a9281b07a4ab868bf1feb929045a4b7bc"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="n">getDayOfWeek</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Date.html#doxid-class-core-1-1-date"><span class="std std-ref">Date</span></a><span></span><span class="o">&amp;</span> <span class="n">date</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Determine day of week for given date (0 = Sunday, 1 = Monday, etc.).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-info-1a8e7c2edc7b3d168e4f9609192f8c8e5b"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <span class="n">getWeekdayName</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">dayOfWeek</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get name of weekday (0 = Sunday).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-info-1a953c94a369f49836be6e992689f865dd"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <span class="n">getMonthName</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">month</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get name of month (1 = January).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_ILanguagePack.html" class="btn btn-neutral float-left" title="struct CCL::ILanguagePack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_ILocaleInfo_PrintByteFlags.html" class="btn btn-neutral float-right" title="enum CCL::ILocaleInfo::PrintByteFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

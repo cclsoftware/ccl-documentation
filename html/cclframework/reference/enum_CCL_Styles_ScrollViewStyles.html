@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::Styles::ScrollViewStyles &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Styles::TransitionType" href="enum_CCL_Styles_TransitionType.html" />
+    <link rel="prev" title="enum CCL::Styles::PlatformStyleID" href="enum_CCL_Styles_PlatformStyleID.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_view.html">Views</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_dialog.html">Dialogs</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_Styles.html">namespace CCL::Styles</a></li>
+      <li class="breadcrumb-item active">enum CCL::Styles::ScrollViewStyles</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-styles-scrollviewstyles">
+<span id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5"></span><span id="index-0"></span><h1>enum CCL::Styles::ScrollViewStyles<a class="headerlink" href="#enum-ccl-styles-scrollviewstyles" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iscrollview.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">ScrollViewStyles</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a86abc94dc3573f879710b01dfb8c4180"><span class="std std-ref">kScrollViewAppearanceHScrollBar</span></a><span></span>     <span class="o">=</span> <span class="n">kHorizontal</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa9f54a287ec60275966801af2320a409"><span class="std std-ref">kScrollViewAppearanceVScrollBar</span></a><span></span>     <span class="o">=</span> <span class="n">kVertical</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a79cbca950679280e3ee03aeb065f2983"><span></span><span class="n">kScrollViewAppearanceScrollBars</span></span><span></span>     <span class="o">=</span> <span class="n">kScrollViewAppearanceHScrollBar</span><span class="o">|</span><span class="n">kScrollViewAppearanceVScrollBar</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a643df1035e2801cd0f3df1d5045ce974"><span class="std std-ref">kScrollViewBehaviorAutoHideHBar</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a11c19d022e5c96ba7c32a7382d813e52"><span class="std std-ref">kScrollViewBehaviorAutoHideVBar</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a7e9163892ca76fc13aa381c569b19428"><span class="std std-ref">kScrollViewBehaviorAutoHideBoth</span></a><span></span>     <span class="o">=</span> <span class="n">kScrollViewBehaviorAutoHideHBar</span><span class="o">|</span><span class="n">kScrollViewBehaviorAutoHideVBar</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aff86880ff0b441aa67958fc5629a1bad"><span class="std std-ref">kScrollViewAppearanceHButtons</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a83ca1e52487ae85e7782258fa602f762"><span class="std std-ref">kScrollViewAppearanceVButtons</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a28538380eb5d7be957f71fc1828cf4c5"><span class="std std-ref">kScrollViewBehaviorAutoHideHButtons</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">4</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ac08bb6d2b9beea1d01fb17b797b4cc7c"><span class="std std-ref">kScrollViewBehaviorAutoHideVButtons</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">5</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a63a36f31731bdf469f12156bfddaabbd"><span class="std std-ref">kScrollViewBehaviorCanScrollH</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">6</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a0f521e4f47b057a1240d17fc898aa05d"><span class="std std-ref">kScrollViewBehaviorCanScrollV</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">7</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a713949d61aa6502902cea4e211b75a57"><span class="std std-ref">kScrollViewBehaviorExtendTarget</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a7941bc01985a762ff68ae2f142ede871"><span class="std std-ref">kScrollViewBehaviorNoScreenScroll</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">9</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a458f8927d521f7f9cd1923b89772355a"><span class="std std-ref">kScrollViewBehaviorLayeredScroll</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">10</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a6c900521373f3a012b813f715e822185"><span class="std std-ref">kScrollViewBehaviorSnapToViews</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">11</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ab5328d82ae34eeed0ec49cd6c4cc7d77"><span class="std std-ref">kScrollViewBehaviorSnapToViewsDeep</span></a><span></span>  <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">12</span><span class="p">)</span><span class="o">|</span><span class="n">kScrollViewBehaviorSnapToViews</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa59122737ad976a9a7b2374fd3a727ec"><span class="std std-ref">kScrollViewBehaviorTargetLimits</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">13</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a886a00b22d734fccc5870cd62e2e47ef"><span class="std std-ref">kScrollViewBehaviorScrollByPage</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">14</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a328eee9ebce212922d06f52b894b934d"><span class="std std-ref">kScrollViewBehaviorMouseScroll</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">15</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5af7445242488e68120c03b897cf604e43"><span class="std std-ref">kScrollViewBehaviorNotifications</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">16</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aebc77bccd4a55650032c21683dd0c804"><span class="std std-ref">kScrollViewBehaviorNoTiledLayers</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">17</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a62a44664e040db786688e09c7cc5d0e0"><span class="std std-ref">kScrollViewBehaviorRelativeResize</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">18</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a74a8b8da5f2a63a8d51b629aa6dde321"><span class="std std-ref">kScrollViewBehaviorSnappedTarget</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">19</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ac1e43a41571ca59fdd03318b0a3fb3b4"><span class="std std-ref">kScrollViewBehaviorOmniDirectional</span></a><span></span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">20</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aec8da5a6205312b6173e6c71e16b5b1a"><span class="std std-ref">kScrollViewBehaviorNoSwipe</span></a><span></span>          <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">21</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aea3c44fd0cbc5b5041ce27ca88d2c432"><span class="std std-ref">kScrollViewBehaviorAllowZoomGesture</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">22</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a1dd516c4ec59c233342374c2220866a2"><span class="std std-ref">kScrollViewBehaviorLimitToScreen</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">23</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a79bc74845cc50375d260710793caa2df"><span class="std std-ref">kScrollViewBehaviorLatchWheel</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">24</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5adb040abf1a1b839dbbdecde6973e2b06"><span class="std std-ref">kScrollViewAppearancePageControl</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">25</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a0040367e52b42bcfaa446fec631d414f"><span class="std std-ref">kScrollViewBehaviorCenterTarget</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">26</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a59e1b7e048ff7c0b372b8c6b51fb4be7"><span class="std std-ref">kScrollViewBehaviorVScrollSpace</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">27</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa84332e80aea3ae4d57a602acbf703c5"><span class="std std-ref">kScrollViewBehaviorHScrollSpace</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">28</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a86abc94dc3573f879710b01dfb8c4180"><span id="index-1"></span><span></span><span class="n">kScrollViewAppearanceHScrollBar</span></pre>
+<p>horizontal scrollbar</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa9f54a287ec60275966801af2320a409"><span id="index-2"></span><span></span><span class="n">kScrollViewAppearanceVScrollBar</span></pre>
+<p>vertical scrollbar</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a643df1035e2801cd0f3df1d5045ce974"><span id="index-3"></span><span></span><span class="n">kScrollViewBehaviorAutoHideHBar</span></pre>
+<p>automatically shows/hides horizontal scrollbar when necessary</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a11c19d022e5c96ba7c32a7382d813e52"><span id="index-4"></span><span></span><span class="n">kScrollViewBehaviorAutoHideVBar</span></pre>
+<p>automatically shows/hides vertical scrollbar when necessary</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a7e9163892ca76fc13aa381c569b19428"><span id="index-5"></span><span></span><span class="n">kScrollViewBehaviorAutoHideBoth</span></pre>
+<p>automatically shows/hides both scrollbars when necessary</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aff86880ff0b441aa67958fc5629a1bad"><span id="index-6"></span><span></span><span class="n">kScrollViewAppearanceHButtons</span></pre>
+<p>horizontal scroll buttons at left &amp; right edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a83ca1e52487ae85e7782258fa602f762"><span id="index-7"></span><span></span><span class="n">kScrollViewAppearanceVButtons</span></pre>
+<p>vertical scroll buttons at top &amp; bottom edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a28538380eb5d7be957f71fc1828cf4c5"><span id="index-8"></span><span></span><span class="n">kScrollViewBehaviorAutoHideHButtons</span></pre>
+<p>automatically show horizontal scroll buttons only when necessary</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ac08bb6d2b9beea1d01fb17b797b4cc7c"><span id="index-9"></span><span></span><span class="n">kScrollViewBehaviorAutoHideVButtons</span></pre>
+<p>automatically show vertical scroll buttons only when necessary</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a63a36f31731bdf469f12156bfddaabbd"><span id="index-10"></span><span></span><span class="n">kScrollViewBehaviorCanScrollH</span></pre>
+<p>allow horizontal scrolling even if the ScrollView has no (own) scrollbar or buttons</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a0f521e4f47b057a1240d17fc898aa05d"><span id="index-11"></span><span></span><span class="n">kScrollViewBehaviorCanScrollV</span></pre>
+<p>allow vertical scrolling even if the ScrollView has no (own) scrollbar or buttons</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a713949d61aa6502902cea4e211b75a57"><span id="index-12"></span><span></span><span class="n">kScrollViewBehaviorExtendTarget</span></pre>
+<p>make the target at least as big as the scroll area</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a7941bc01985a762ff68ae2f142ede871"><span id="index-13"></span><span></span><span class="n">kScrollViewBehaviorNoScreenScroll</span></pre>
+<p>do not use os scroll functions, just invalidate instead</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a458f8927d521f7f9cd1923b89772355a"><span id="index-14"></span><span></span><span class="n">kScrollViewBehaviorLayeredScroll</span></pre>
+<p>use graphic layers for scrolling, if available</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a6c900521373f3a012b813f715e822185"><span id="index-15"></span><span></span><span class="n">kScrollViewBehaviorSnapToViews</span></pre>
+<p>snap to subview positions; ignores the explicit snap value</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ab5328d82ae34eeed0ec49cd6c4cc7d77"><span id="index-16"></span><span></span><span class="n">kScrollViewBehaviorSnapToViewsDeep</span></pre>
+<p>snap to subview positions recursively</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa59122737ad976a9a7b2374fd3a727ec"><span id="index-17"></span><span></span><span class="n">kScrollViewBehaviorTargetLimits</span></pre>
+<p>adjust sizeLimits of ScrollView so that it can’t be larger than the target’s limits allow</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a886a00b22d734fccc5870cd62e2e47ef"><span id="index-18"></span><span></span><span class="n">kScrollViewBehaviorScrollByPage</span></pre>
+<p>snap to full pages, limit touch-based scrolling to one page per gesture</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a328eee9ebce212922d06f52b894b934d"><span id="index-19"></span><span></span><span class="n">kScrollViewBehaviorMouseScroll</span></pre>
+<p>allow scrolling by dragging the mouse in scroll view area</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5af7445242488e68120c03b897cf604e43"><span id="index-20"></span><span></span><span class="n">kScrollViewBehaviorNotifications</span></pre>
+<p>sends notifications about current postion during animation</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aebc77bccd4a55650032c21683dd0c804"><span id="index-21"></span><span></span><span class="n">kScrollViewBehaviorNoTiledLayers</span></pre>
+<p>when kScrollViewBehaviorLayeredScroll is set, use a regular layer instead of a tiled one</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a62a44664e040db786688e09c7cc5d0e0"><span id="index-22"></span><span></span><span class="n">kScrollViewBehaviorRelativeResize</span></pre>
+<p>scrollview resizes the target, keeping the ratio of the visible and hidden area</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a74a8b8da5f2a63a8d51b629aa6dde321"><span id="index-23"></span><span></span><span class="n">kScrollViewBehaviorSnappedTarget</span></pre>
+<p>target height is multiple of snap height</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5ac1e43a41571ca59fdd03318b0a3fb3b4"><span id="index-24"></span><span></span><span class="n">kScrollViewBehaviorOmniDirectional</span></pre>
+<p>scrollview allows scrolling in both directions at the same time</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aec8da5a6205312b6173e6c71e16b5b1a"><span id="index-25"></span><span></span><span class="n">kScrollViewBehaviorNoSwipe</span></pre>
+<p>no swipe gesture used for scrollviews</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aea3c44fd0cbc5b5041ce27ca88d2c432"><span id="index-26"></span><span></span><span class="n">kScrollViewBehaviorAllowZoomGesture</span></pre>
+<p>let another touch handler take over on a zoom gesture</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a1dd516c4ec59c233342374c2220866a2"><span id="index-27"></span><span></span><span class="n">kScrollViewBehaviorLimitToScreen</span></pre>
+<p>don’t grow larger than current monitor size when autosizing to content</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a79bc74845cc50375d260710793caa2df"><span id="index-28"></span><span></span><span class="n">kScrollViewBehaviorLatchWheel</span></pre>
+<p>view locks the mouse wheel scroll to itself (no child handling) for a limited time after the last handled mouse wheel event</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5adb040abf1a1b839dbbdecde6973e2b06"><span id="index-29"></span><span></span><span class="n">kScrollViewAppearancePageControl</span></pre>
+<p>use page controls instead of scroll bars</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a0040367e52b42bcfaa446fec631d414f"><span id="index-30"></span><span></span><span class="n">kScrollViewBehaviorCenterTarget</span></pre>
+<p>center target if target is smaller than scroll view (do not combine with kScrollViewBehaviorExtendTarget)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5a59e1b7e048ff7c0b372b8c6b51fb4be7"><span id="index-31"></span><span></span><span class="n">kScrollViewBehaviorVScrollSpace</span></pre>
+<p>addional reserved space for vertical scrollbar (avoid automatic horizontal scrollbar, because of space covered when vertical bar is shown)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4425e6d0ecf5746c7f9ed8e0f31cf8b5aa84332e80aea3ae4d57a602acbf703c5"><span id="index-32"></span><span></span><span class="n">kScrollViewBehaviorHScrollSpace</span></pre>
+<p>addional reserved space for horizontal scrollbar (avoid resizing of clip view, when kScrollViewBehaviorAutoHideHBar is set)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_Styles_PlatformStyleID.html" class="btn btn-neutral float-left" title="enum CCL::Styles::PlatformStyleID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Styles_TransitionType.html" class="btn btn-neutral float-right" title="enum CCL::Styles::TransitionType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

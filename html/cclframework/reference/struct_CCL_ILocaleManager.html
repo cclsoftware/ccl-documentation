@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::ILocaleManager &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::Threading::ILockProvider" href="struct_CCL_Threading_ILockProvider.html" />
+    <link rel="prev" title="enum CCL::ILocaleInfo::TimeUnit" href="enum_CCL_ILocaleInfo_TimeUnit.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_system.html">CCL-System</a></li>
+      <li class="breadcrumb-item active">struct CCL::ILocaleManager</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-ilocalemanager">
+<span id="doxid-struct-c-c-l-1-1-i-locale-manager"></span><span id="index-0"></span><h1>struct CCL::ILocaleManager<a class="headerlink" href="#struct-ccl-ilocalemanager" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ilocalemanager.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">ILocaleManager</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a5f4378e95ead561fb6d5b6d2c413b325"><span></span><span class="n">path</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a15061c136b3b7e3e1c7f835aaf17f140"><span></span><span class="n">tableID</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a91c04fc7c1436eaf4437ffadf2e3d7cb"><span></span><span class="n">variables</span></span><span></span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a7fd262128f6b617e9b14acc7a7aaf1f9"><span class="std std-ref">setLanguage</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">language</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1af349091f839cbc81b270d3efd5560880"><span class="std std-ref">getLanguage</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILocaleInfo.html#doxid-struct-c-c-l-1-1-i-locale-info"><span class="std std-ref">ILocaleInfo</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1aebf695f96abb947621142f853addf118"><span class="std std-ref">getCurrentLocale</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILocaleInfo.html#doxid-struct-c-c-l-1-1-i-locale-info"><span class="std std-ref">ILocaleInfo</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a0300c6fb28b504f85589f80f30ecf322"><span class="std std-ref">getLocale</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">language</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a96d66a062fe955cf6adf4d51e897fb84"><span class="std std-ref">DECLARE_STRINGID_MEMBER</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a03370e1e2e6032d608768390c394ca55"><span class="std std-ref">kMainTableID</span></a><span></span><span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1aa1516eaaf672f867922fdc691b7fa04b"><span class="std std-ref">loadModuleStrings</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*&amp;</span> <span class="n">table</span><span class="p">,</span>
+        <span class="n">ModuleRef</span> <span class="n">module</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">tableID</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">*</span> <span class="n">variables</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a85ebc1367768b2ecec32c7d5d5662333"><span class="std std-ref">getStrings</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">tableID</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a87821cd16f4e534340d1592eff4e219b"><span class="std std-ref">unloadStrings</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*</span> <span class="n">table</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1aaa070470b022bc3835b21ca442b62573"><span class="std std-ref">scanLanguagePacks</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="n">url</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknownIterator.html#doxid-struct-c-c-l-1-1-i-unknown-iterator"><span class="std std-ref">IUnknownIterator</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1ab8067331b92d06c877e6d571a310ca4c"><span class="std std-ref">createLanguagePackIterator</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILanguagePack.html#doxid-struct-c-c-l-1-1-i-language-pack"><span class="std std-ref">ILanguagePack</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a3ba6a1e186cba33e73f9ec8d13cd0e44"><span class="std std-ref">getActiveLanguagePack</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a52e72d5025c512f6788c4223f9b1cefe"><span class="std std-ref">setActiveLanguagePack</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ILanguagePack.html#doxid-struct-c-c-l-1-1-i-language-pack"><span class="std std-ref">ILanguagePack</span></a><span></span><span class="o">*</span> <span class="n">languagePack</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">FileType</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a50736f1917d296fdab8f0f2d6b3a5400"><span class="std std-ref">getLanguagePackFileType</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1abf527dc43c5149a004982a25d92637cc"><span class="std std-ref">getLanguagesFolder</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUrl.html#doxid-struct-c-c-l-1-1-i-url"><span class="std std-ref">IUrl</span></a><span></span><span class="o">&amp;</span> <span class="n">url</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a75adda8539b7d018de9b8ab63c3a5efa"><span class="std std-ref">getSystemLanguage</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a82155efa7a2c5a0f0ef1a3c434cc7f47"><span class="std std-ref">getInputLanguage</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknownIterator.html#doxid-struct-c-c-l-1-1-i-unknown-iterator"><span class="std std-ref">IUnknownIterator</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1aa3758450ef48e799c2f1e6893b2e98a8"><span class="std std-ref">createGeographicRegionIterator</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a60df181fae16eedda5349ef5c1c70d79"><span class="std std-ref">getSystemRegion</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">uchar</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1aad75deae062a178022f6b60c6ea22a46"><span class="std std-ref">getCharacterOnKey</span></a><span></span> <span class="p">(</span>
+        <span class="n">uchar</span> <span class="n">characterUS</span><span class="p">,</span>
+        <span class="n">tbool</span> <span class="n">withCapsLock</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-locale-manager-1a0577011b92de34224325f652bd022e0b"><span class="std std-ref">getMeasureSystem</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-locale-manager"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a7fd262128f6b617e9b14acc7a7aaf1f9"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setLanguage</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">language</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set current application language (e.g.</p>
+<p>“en”).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1af349091f839cbc81b270d3efd5560880"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getLanguage</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get current application language (e.g.</p>
+<p>“en”).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1aebf695f96abb947621142f853addf118"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILocaleInfo.html#doxid-struct-c-c-l-1-1-i-locale-info"><span class="std std-ref">ILocaleInfo</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <span class="n">getCurrentLocale</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get information for current locale.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a0300c6fb28b504f85589f80f30ecf322"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILocaleInfo.html#doxid-struct-c-c-l-1-1-i-locale-info"><span class="std std-ref">ILocaleInfo</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getLocale</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">language</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get locale information by language identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a96d66a062fe955cf6adf4d51e897fb84"><span id="index-5"></span><span></span><span class="n">DECLARE_STRINGID_MEMBER</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a03370e1e2e6032d608768390c394ca55"><span class="std std-ref">kMainTableID</span></a><span></span><span class="p">)</span></pre>
+<p>Load translation table.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1aa1516eaaf672f867922fdc691b7fa04b"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">loadModuleStrings</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*&amp;</span> <span class="n">table</span><span class="p">,</span>
+    <span class="n">ModuleRef</span> <span class="n">module</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">tableID</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">*</span> <span class="n">variables</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Load translation table of given module.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a85ebc1367768b2ecec32c7d5d5662333"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getStrings</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">tableID</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get translation table.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a87821cd16f4e534340d1592eff4e219b"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">unloadStrings</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITranslationTable.html#doxid-struct-c-c-l-1-1-i-translation-table"><span class="std std-ref">ITranslationTable</span></a><span></span><span class="o">*</span> <span class="n">table</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Unload translation table.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1aaa070470b022bc3835b21ca442b62573"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="n">scanLanguagePacks</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="n">url</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Scan for language packs at given location.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1ab8067331b92d06c877e6d571a310ca4c"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknownIterator.html#doxid-struct-c-c-l-1-1-i-unknown-iterator"><span class="std std-ref">IUnknownIterator</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createLanguagePackIterator</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create iterator for registered language packs (<a class="reference internal" href="struct_CCL_ILanguagePack.html#doxid-struct-c-c-l-1-1-i-language-pack"><span class="std std-ref">ILanguagePack</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a3ba6a1e186cba33e73f9ec8d13cd0e44"><span id="index-11"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_ILanguagePack.html#doxid-struct-c-c-l-1-1-i-language-pack"><span class="std std-ref">ILanguagePack</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getActiveLanguagePack</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get currently active language pack (can be null).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a52e72d5025c512f6788c4223f9b1cefe"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setActiveLanguagePack</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ILanguagePack.html#doxid-struct-c-c-l-1-1-i-language-pack"><span class="std std-ref">ILanguagePack</span></a><span></span><span class="o">*</span> <span class="n">languagePack</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set active language pack (can be null to reset, requires application restart).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a50736f1917d296fdab8f0f2d6b3a5400"><span id="index-13"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">FileType</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <span class="n">getLanguagePackFileType</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get language pack file type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1abf527dc43c5149a004982a25d92637cc"><span id="index-14"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">getLanguagesFolder</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUrl.html#doxid-struct-c-c-l-1-1-i-url"><span class="std std-ref">IUrl</span></a><span></span><span class="o">&amp;</span> <span class="n">url</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get application languages folder.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a75adda8539b7d018de9b8ab63c3a5efa"><span id="index-15"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getSystemLanguage</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get system UI language.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a82155efa7a2c5a0f0ef1a3c434cc7f47"><span id="index-16"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getInputLanguage</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get input language (keyboard layout) of calling thread.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1aa3758450ef48e799c2f1e6893b2e98a8"><span id="index-17"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknownIterator.html#doxid-struct-c-c-l-1-1-i-unknown-iterator"><span class="std std-ref">IUnknownIterator</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createGeographicRegionIterator</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create iterator for geographic regions (<a class="reference internal" href="struct_CCL_IGeographicRegion.html#doxid-struct-c-c-l-1-1-i-geographic-region"><span class="std std-ref">IGeographicRegion</span></a>) provided by the system.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a60df181fae16eedda5349ef5c1c70d79"><span id="index-18"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getSystemRegion</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get system region ISO 3166-1 alpha-2 code.</p>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">namespace</span></a> <a class="reference internal" href="namespace_CCL_CountryCode.html#doxid-namespace-c-c-l-1-1-country-code"><span class="std std-ref">CountryCode</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1aad75deae062a178022f6b60c6ea22a46"><span id="index-19"></span><span></span><span class="k">virtual</span> <span class="n">uchar</span> CCL_API<span></span> <span class="n">getCharacterOnKey</span> <span class="p">(</span>
+    <span class="n">uchar</span> <span class="n">characterUS</span><span class="p">,</span>
+    <span class="n">tbool</span> <span class="n">withCapsLock</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+<span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get character on key for current input language at location specified by a character on the ANSI (US-English) keyboard layout.</p>
+<p>Only defined for characters and digits.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-locale-manager-1a0577011b92de34224325f652bd022e0b"><span id="index-20"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getMeasureSystem</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get measure system.</p>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">namespace</span></a> <a class="reference internal" href="namespace_CCL_MeasureID.html#doxid-namespace-c-c-l-1-1-measure-i-d"><span class="std std-ref">MeasureID</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_ILocaleInfo_TimeUnit.html" class="btn btn-neutral float-left" title="enum CCL::ILocaleInfo::TimeUnit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Threading_ILockProvider.html" class="btn btn-neutral float-right" title="struct CCL::Threading::ILockProvider" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

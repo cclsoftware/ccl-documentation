@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::Persistence &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Persistence::MemberFlags" href="enum_CCL_Persistence_MemberFlags.html" />
+    <link rel="prev" title="namespace CCL::ParamName3D" href="namespace_CCL_ParamName3D.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">namespace CCL::Persistence</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-persistence">
+<span id="doxid-namespace-c-c-l-1-1-persistence"></span><span id="index-0"></span><h1>namespace CCL::Persistence<a class="headerlink" href="#namespace-ccl-persistence" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Persistence</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a50a2ecee30493aceeed9ce6feaf392e3"><span></span><span class="n">ObjectID</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a12be6b794a3055020b3d64ae5e14ec13"><span class="std std-ref">IExpression::kEquals</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1aaccbcae6fa38450fa2609c1b784c0ef5"><span></span><span class="n">EqualsExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7af9e6c7ebd4845bfb7bf8af942a61720a"><span class="std std-ref">IExpression::kNonEquals</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1af10096e8f7f249a2e094882977904760"><span></span><span class="n">NonEqualsExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a523ab2336648fdecca97590193b1da94"><span class="std std-ref">IExpression::kGreaterThan</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a9be4173bc928cca41f225face228bb4d"><span></span><span class="n">GreaterExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a81c3626ba5b2c4d586cdfd4ab7b46b0c"><span class="std std-ref">IExpression::kGreaterOrEqual</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1aee2f2e72fbd1fa99e16b9bebafbad2d7"><span></span><span class="n">GreaterOrEqualExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7ab2ddf8cf44ce6c88f82d4282f654da74"><span class="std std-ref">IExpression::kLessThan</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1ae172c9af0e4a10679b29493f56974040"><span></span><span class="n">LessThanExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a9c21d1502a3321a5e0a5325f03f1a38f"><span class="std std-ref">IExpression::kLessOrEqual</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a598f4cd2f4b375c61652fbbc7a1b162a"><span></span><span class="n">LessOrEqualExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a84d07a6774853c936870308d89349dd9"><span class="std std-ref">IExpression::kLike</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a883817e39660d78be2c0c3ee07b4e322"><span></span><span class="n">LikeExpression</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">CompareExpression</span> <span class="o">&lt;</span><a class="reference internal" href="enum_CCL_Persistence_IExpression_Type.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression-1a1d1cfd8ffb84e947f82999c682b666a7a4d3c7204f3610acbf465ace6a1782f9d"><span class="std std-ref">IExpression::kContains</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1adfb5d8e4eaff9662143dd160c1e19d9b"><span></span><span class="n">ContainsExpression</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span>
+<span class="p">{</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a6b7b47dd702d9e331586d485013fd1eaa5ce9b39cea863f16458b374d2a3a0814"><span></span><span class="n">kInvalidOID</span></span><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Persistence_MemberFlags.html#doxid-namespace-c-c-l-1-1-persistence-1a193de71a9c64f0fd2ae0991857a93366"><span class="std std-ref">MemberFlags</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Persistence_TableMapping.html#doxid-namespace-c-c-l-1-1-persistence-1a7304b6422fdb6662d56ba2170d03c33b"><span class="std std-ref">TableMapping</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_IExpression.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression"><span class="std std-ref">IExpression</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_IObjectState.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-object-state"><span class="std std-ref">IObjectState</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_IPersistentObject.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-object"><span class="std std-ref">IPersistentObject</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_IPersistentOwner.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-owner"><span class="std std-ref">IPersistentOwner</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_IPersistentStore.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store"><span class="std std-ref">IPersistentStore</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Persistence_Transaction.html#doxid-struct-c-c-l-1-1-persistence-1-1-transaction"><span class="std std-ref">Transaction</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_AndExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-and-expression"><span class="std std-ref">AndExpression</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">IExpression</span><span class="o">::</span><span class="n">Type</span> <span class="n">exprType</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_CompareExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-compare-expression"><span class="std std-ref">CompareExpression</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_CompoundExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-compound-expression"><span class="std std-ref">CompoundExpression</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_Expression.html#doxid-class-c-c-l-1-1-persistence-1-1-expression"><span class="std std-ref">Expression</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_ExpressionImpl.html#doxid-class-c-c-l-1-1-persistence-1-1-expression-impl"><span class="std std-ref">ExpressionImpl</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_InExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-in-expression"><span class="std std-ref">InExpression</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_Member.html#doxid-class-c-c-l-1-1-persistence-1-1-member"><span class="std std-ref">Member</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_NotExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-not-expression"><span class="std std-ref">NotExpression</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_ObjectQuery.html#doxid-class-c-c-l-1-1-persistence-1-1-object-query"><span class="std std-ref">ObjectQuery</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_OrExpression.html#doxid-class-c-c-l-1-1-persistence-1-1-or-expression"><span class="std std-ref">OrExpression</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">BaseUnknown</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Persistence_PersistentObject.html#doxid-class-c-c-l-1-1-persistence-1-1-persistent-object"><span class="std std-ref">PersistentObject</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a8288fbd4be3bc1b9ee677539a36ee58c"><span></span><span class="n">IExpression</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a807e4a2eb2701038b1634bef49076122"><span></span><span class="n">IPersistentStore</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1a2378d7e42c327b499f3320f3178bdb0f"><span></span><span class="n">IPersistentOwner</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1aa2746cb849bd765d306bd06bc295f1c2"><span></span><span class="n">IPersistentObject</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-persistence-1ab13519938aab9f3f3c93029627a2a288"><span></span><span class="n">isValid</span></span><span></span> <span class="p">(</span><a class="reference internal" href="#doxid-namespace-c-c-l-1-1-persistence-1a50a2ecee30493aceeed9ce6feaf392e3"><span class="std std-ref">ObjectID</span></a><span></span> <span class="n">oid</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace Persistence</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_CCL_ParamName3D.html" class="btn btn-neutral float-left" title="namespace CCL::ParamName3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Persistence_MemberFlags.html" class="btn btn-neutral float-right" title="enum CCL::Persistence::MemberFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

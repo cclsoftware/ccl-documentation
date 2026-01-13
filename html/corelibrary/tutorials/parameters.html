@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parameters &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Components" href="components.html" />
+    <link rel="prev" title="Application Model" href="appmodel.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="appmodel.html">Application Model</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about-value-controllers">About Value Controllers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-value-controllers">Using Value Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html">GUI for embedded applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicviews.html">GUI for dynamic views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtti.html">Run-time type information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Parameters</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameters">
+<span id="id1"></span><h1>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h1>
+<p>The Core Library supports an architectural pattern that separates the internal representation of information from the user interface. This is accomplished using parameters, components, and views, similar to the established Model-View-Controller (MVC) pattern. There are two flavors of parameters in the library. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Parameter.html#doxid-class-core-1-1-portable-1-1-parameter"><span class="std std-ref"><span class="pre">Core::Portable::Parameter</span></span></a></code> class and it’s derived classes can be used when heap memory is available, whereas parameters used with the more lightweight <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> class are intended for use in embedded systems without a heap. This tutorial is focused on value controllers.</p>
+<section id="about-value-controllers">
+<h2>About Value Controllers<a class="headerlink" href="#about-value-controllers" title="Link to this heading"></a></h2>
+<p>As the name suggests, a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> manages a set of values of different types. These can be booleans, integers, floats, and strings, all with a numeric identifier that is used to store and retrieve values. Values can have additional properties depending on the nature of the parameter they represent. For instance, integers and floats may be limited in range, have a default value, and stepping distance.</p>
+<p>The value controller usually hosts the parameters and ensures the values stay within their defined ranges. Whenever a value changes it notifies one or more observers about the change. The GUI toolkit from the Core Library allows to connect many of its UI elements to parameters from the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code>.</p>
+</section>
+<section id="using-value-controllers">
+<h2>Using Value Controllers<a class="headerlink" href="#using-value-controllers" title="Link to this heading"></a></h2>
+<p>Your custom controller class inherits from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> and implements <code class="docutils literal notranslate"><span class="pre">getModelValue</span></code>,  <code class="docutils literal notranslate"><span class="pre">setModelValue</span></code>, and <code class="docutils literal notranslate"><span class="pre">getModelString</span></code>. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> base class manages parameters and their definitions, however, since it is designed to be used in resource contrained environemnts it does not allocate actual memory to hold the values. Therefore, you need to list a member variable for each parameter in the class definition.</p>
+<p>The following code block shows how to create a basic controller class with two parameters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyController</span><span class="p">:</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">RootValueController</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyController</span> <span class="p">();</span>
+
+<span class="k">protected</span><span class="o">:</span>
+  <span class="c1">// RootValueController</span>
+  <span class="n">Value</span> <span class="n">getModelValue</span> <span class="p">(</span><span class="kt">int</span> <span class="n">paramTag</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="nf">setModelValue</span> <span class="p">(</span><span class="kt">int</span> <span class="n">paramTag</span><span class="p">,</span> <span class="n">Value</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+
+<span class="k">private</span><span class="o">:</span>
+  <span class="kt">float</span> <span class="n">firstValue</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">secondValue</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Aside from the class definition, you also need to define a set of integers identifiers used to access the values. It makes sense to define an enumeration type that represents the volume parameters from the previous example.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="n">MyParameters</span>
+<span class="p">{</span>
+  <span class="n">kFirstValue</span><span class="p">,</span>
+  <span class="n">kSecondValue</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>You also need to define parameter properties by creating a list of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_Core_Portable_ParamInfo.html#doxid-struct-core-1-1-portable-1-1-param-info"><span class="std std-ref"><span class="pre">Core::Portable::ParamInfo</span></span></a></code> objects that is passed to the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> constructor. The Core Library provides a set of macros to simplify the list definition. The following example uses the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1a897a9dcf5347ec1025f7468dd3e46b64"><span class="std std-ref"><span class="pre">BEGIN_PARAMINFO</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1ab2dd0fb00ad998d38c10dac0d971f165"><span class="std std-ref"><span class="pre">END_PARAMINFO</span></span></a></code>, and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1aa3fb4ea5ffce42cea1730f573c2e7408"><span class="std std-ref"><span class="pre">PARAM_FLOAT</span></span></a></code> macros to define the properties of the parameters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BEGIN_PARAMINFO</span> <span class="p">(</span><span class="n">kMyParamList</span><span class="p">)</span>
+  <span class="n">PARAM_FLOAT</span> <span class="p">(</span><span class="n">kFirstValue</span><span class="p">,</span> <span class="s">&quot;firstValue&quot;</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">20.0f</span><span class="p">,</span> <span class="mf">5.0f</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+  <span class="n">PARAM_FLOAT</span> <span class="p">(</span><span class="n">kSecondValue</span><span class="p">,</span> <span class="s">&quot;secondValue&quot;</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">20.0f</span><span class="p">,</span> <span class="mf">5.0f</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">END_PARAMINFO</span>
+</pre></div>
+</div>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1a897a9dcf5347ec1025f7468dd3e46b64"><span class="std std-ref"><span class="pre">BEGIN_PARAMINFO</span></span></a></code> starts the declaration of an array of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_Core_Portable_ParamInfo.html#doxid-struct-core-1-1-portable-1-1-param-info"><span class="std std-ref"><span class="pre">Core::Portable::ParamInfo</span></span></a></code> objects using the identifier <code class="docutils literal notranslate"><span class="pre">kMyParamList</span></code>. Each parameter is declared using the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1aa3fb4ea5ffce42cea1730f573c2e7408"><span class="std std-ref"><span class="pre">PARAM_FLOAT</span></span></a></code> macro. Other macros are also available for the declaration of boolean, integer, string, or list parameters. The second parameter contains the name string of the parameter. It is used to allow to obtain parameter values by their name instead of using the numeric identifier. The following arguments describe the minimum, maximum, and default values. The remaining arguments are usually just set to zero. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreparaminfo-8h-1ab2dd0fb00ad998d38c10dac0d971f165"><span class="std std-ref"><span class="pre">END_PARAMINFO</span></span></a></code> macro terminates the parameter definition.</p>
+<p>The constructor of the <code class="docutils literal notranslate"><span class="pre">MyController</span></code> class can now pass the parameter information to the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> class.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyController</span><span class="o">::</span><span class="n">MyController</span> <span class="p">()</span>
+<span class="o">:</span> <span class="n">RootValueController</span> <span class="p">(</span><span class="n">kMyParamList</span><span class="p">,</span> <span class="n">ARRAY_COUNT</span> <span class="p">(</span><span class="n">kMyParamList</span><span class="p">)),</span>
+  <span class="n">firstValue</span> <span class="p">(</span><span class="mf">0.0f</span><span class="p">),</span>
+  <span class="n">secondValue</span> <span class="p">(</span><span class="mf">0.0f</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The base class uses the <code class="docutils literal notranslate"><span class="pre">getModelValue</span></code> and <code class="docutils literal notranslate"><span class="pre">setModelValue</span></code> functions to access the variables in the derived class. The implementation of these fuctions is straightforward.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Value</span> <span class="n">MyController</span><span class="o">::</span><span class="n">getModelValue</span> <span class="p">(</span><span class="kt">int</span> <span class="n">paramTag</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">switch</span><span class="p">(</span><span class="n">paramTag</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="k">case</span> <span class="nl">kFirstValue</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">firstValue</span><span class="p">;</span>
+
+  <span class="k">case</span> <span class="nl">kSecondValue</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">secondValue</span><span class="p">;</span>
+
+  <span class="k">default</span>
+      <span class="k">return</span> <span class="nf">Value</span> <span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="n">MyController</span><span class="o">::</span><span class="n">setModelValue</span> <span class="p">(</span><span class="kt">int</span> <span class="n">paramTag</span><span class="p">,</span> <span class="n">Value</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">switch</span><span class="p">(</span><span class="n">paramTag</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="k">case</span> <span class="nl">kFirstValue</span><span class="p">:</span>
+      <span class="n">firstValue</span> <span class="o">=</span> <span class="n">value</span><span class="p">.</span><span class="n">asFloat</span> <span class="p">();</span>
+      <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+
+  <span class="k">case</span> <span class="nl">kSecondValue</span><span class="p">:</span>
+      <span class="n">firstValue</span> <span class="o">=</span> <span class="n">value</span><span class="p">.</span><span class="n">asFloat</span> <span class="p">();</span>
+      <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+
+  <span class="k">default</span><span class="o">:</span>
+      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To get and set parameter values use the <code class="docutils literal notranslate"><span class="pre">getValue</span></code> and <code class="docutils literal notranslate"><span class="pre">setValue</span></code> functions from the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_ValueController.html#doxid-class-core-1-1-portable-1-1-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::ValueController</span></span></a></code> class. This class also provides a number of other functions to access parameters and their properties. The following example demonstrates how to increase both values simultaneously.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyController</span> <span class="n">controller</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">increaseValues</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Value</span> <span class="n">firstValue</span> <span class="o">=</span> <span class="n">controller</span><span class="p">.</span><span class="n">getValue</span> <span class="p">(</span><span class="n">kFirstValue</span><span class="p">);</span>
+  <span class="n">controller</span><span class="p">.</span><span class="n">setFloatValue</span> <span class="p">(</span><span class="n">kFirstValue</span><span class="p">,</span> <span class="n">firstValue</span><span class="p">.</span><span class="n">asFloat</span> <span class="p">()</span> <span class="o">+</span> <span class="mf">1.0f</span><span class="p">);</span>
+
+  <span class="n">Value</span> <span class="n">secondValue</span> <span class="o">=</span> <span class="n">controller</span><span class="p">.</span><span class="n">getValue</span> <span class="p">(</span><span class="n">kSecondValue</span><span class="p">);</span>
+  <span class="n">controller</span><span class="p">.</span><span class="n">setFloatValue</span> <span class="p">(</span><span class="n">kSecondValue</span><span class="p">,</span> <span class="n">secondValue</span><span class="p">.</span><span class="n">asFloat</span> <span class="p">()</span> <span class="o">+</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="appmodel.html" class="btn btn-neutral float-left" title="Application Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="components.html" class="btn btn-neutral float-right" title="Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

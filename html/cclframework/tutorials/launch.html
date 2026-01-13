@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Launch Utility from Parent Application &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Switching from Qt" href="qt.html" />
+    <link rel="prev" title="Tutorials" href="index.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Launch Utility from Parent Application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#macos-xcode-project">macOS Xcode project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-visual-studio-project">Windows Visual Studio project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qt.html">Switching from Qt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Launch Utility from Parent Application</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="launch-utility-from-parent-application">
+<h1>Launch Utility from Parent Application<a class="headerlink" href="#launch-utility-from-parent-application" title="Link to this heading"></a></h1>
+<p>Technical notes on how to package a utility app with a parent application and launch it at runtime. This note assumes that you have generated a new app using the <a class="reference internal" href="../cmdtools/builder.html#ccl-tools-cclbuilder"><span class="std std-ref">CCL Builder</span></a> tool.</p>
+<section id="macos-xcode-project">
+<h2>macOS Xcode project<a class="headerlink" href="#macos-xcode-project" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Add your utility app’s xcode project to the parent app’s xcode workspace by opening it’s containing folder in finder and dragging the project into the parent app’s project navigator. Add the utility as a build dependency to the parent app’s xcode project by going to edit target -&gt; Build and adding the build target for the utility app with the + button.</p></li>
+<li><p>Create a symlink from the output of the build folder to the appropriate plugin folder by adding the following to the utility app’s “Run Script” build phase:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>rm -rf &quot;../../../../../build/mac/$CONFIGURATION/Plugins/$FULL_PRODUCT_NAME&quot;
+
+ln -s &quot;$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME&quot;
+  &quot;../../../../../build/mac/$CONFIGURATION/Plugins/$FULL_PRODUCT_NAME&quot;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The path to <em>/build/mac/$CONFIGURATION</em> is relative to the project directory.</p>
+</div>
+</li>
+<li><p>Remove the <em>“Copy Frameworks and Dylibs”</em> build step.</p>
+<p>The utility app should not have it’s own copies of the ccl frameworks. It uses instead the existing ones in the outer app. To make this work, the &#64;rpath for the dynamic linker needs to be set accordingly. In your utility app’s “Build Settings”, search for “rpath” and change the values to the following:</p>
+<a class="reference internal image-reference" href="../../_images/macbuild.png"><img alt="../../_images/macbuild.png" class="align-center" src="../../_images/macbuild.png" width="500" />
+</a>
+<p>Once again, these paths are relative.</p>
+</li>
+<li><p>Copy the file from the Plugins folder to the appropriate location in the parent app by adding the following to the “run script” build phase of the parent app, keeping in mind that paths are relative.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># copy utility app
+
+YOURAPPNAME=&quot;The name of your app.app&quot;
+
+YOURAPPPATH=$PROJECT_DIR/../../../../../build/mac/$CONFIGURATION/Plugins/$YOURAPPNAME
+
+YOURAPPTARGET=$TARGET_BUILD_DIR/$TARGETNAME.app/Contents/Plugins/$YOURAPPNAME
+
+if [ -d &quot;$YOURAPPPATH&quot; ] || [ $CONFIGURATION = &quot;Release&quot; ] ; then
+
+    mkdir -p &quot;$TARGET_BUILD_DIR/$TARGETNAME.app/Contents/PlugIns/&quot;
+
+    rm -rf &quot;$YOURAPPTARGET&quot;
+
+    cp -r &quot;$YOURAPPPATH&quot; &quot;$YOURAPPTARGET&quot;
+
+fi
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="windows-visual-studio-project">
+<h2>Windows Visual Studio project<a class="headerlink" href="#windows-visual-studio-project" title="Link to this heading"></a></h2>
+<p>If you have built the new app using the cclbuilder utility, the only changes needed are:</p>
+<ul class="simple">
+<li><p>Add the utility app to it’s parent’s visual studio solution.</p></li>
+<li><p>Add the utility project as a build dependency for the parent app  by right clicking the parent app project in VS -&gt; Build Dependencies -&gt; Project Dependencies and adding the project to the list.</p></li>
+<li><p>Modify the utility app’s CustomBuild settings by opening it’s .vcxproj in a text editor, searching for “&lt;CustomBuild” and changing the path of <em>\tools\bin\win\ccl\package.exe</em> to be correct relative to your project’s location on disk.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want the parent app’s installer to install the child app, you need to edit the nsis scripts for the parent app to include the child app.</p>
+</div>
+</section>
+<section id="source-code">
+<h2>Source code<a class="headerlink" href="#source-code" title="Link to this heading"></a></h2>
+<p>Below is an example of launching the app from it’s parent app from C++. A real example of this code is in <em>applications/hardware/universalcontrol/desktop/source/uclaunchpanel.cpp</em>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="nf">filename</span> <span class="p">(</span><span class="s">&quot;Your app name&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="nf">folderName</span> <span class="p">(</span><span class="s">&quot;Plugins&quot;</span><span class="p">);</span>
+<span class="n">Url</span> <span class="n">path</span><span class="p">;</span>
+
+<span class="cp">#if DEBUG</span>
+    <span class="n">GET_BUILD_FOLDER_LOCATION</span> <span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="cp">#else</span>
+    <span class="n">System</span><span class="o">::</span><span class="n">GetSystem</span> <span class="p">().</span><span class="n">getLocation</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">System</span><span class="o">::</span><span class="n">kAppDeploymentFolder</span><span class="p">);</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CCL_PLATFORM_MAC</span>
+    <span class="n">path</span><span class="p">.</span><span class="n">descend</span> <span class="p">(</span><span class="n">LegalFolderName</span> <span class="p">(</span><span class="n">folderName</span><span class="p">));</span>
+<span class="cp">#endif</span>
+
+<span class="n">path</span><span class="p">.</span><span class="n">descend</span> <span class="p">(</span><span class="n">LegalFileName</span> <span class="p">(</span><span class="n">filename</span><span class="p">));</span>
+<span class="n">path</span><span class="p">.</span><span class="n">setFileType</span> <span class="p">(</span><span class="n">FileTypes</span><span class="o">::</span><span class="n">App</span> <span class="p">(),</span> <span class="nb">true</span><span class="p">);</span>
+
+<span class="n">System</span><span class="o">::</span><span class="n">GetSystemShell</span> <span class="p">().</span><span class="n">openUrl</span> <span class="p">(</span><span class="n">path</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Because you are launching this app from a parent app, you will not be able to debug it’s source code unless you launch the utility app’s target. ie if you are trying to debug the obs setup wizard, you cannot do so by launching the ucapp target.</p>
+<p>You must instead launch the obssetupwizard target as a standalone app. Due to the decision to remove the “copy Frameworks and Dylibs step” on mac, you must first build the parent app in order to debug the utility app.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qt.html" class="btn btn-neutral float-right" title="Switching from Qt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

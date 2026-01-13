@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::Internal::IGraphicsHelper &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Internal::IGraphicsHelper::ColorFormatFlags" href="enum_CCL_Internal_IGraphicsHelper_ColorFormatFlags.html" />
+    <link rel="prev" title="enum CCL::IGraphics::Modes" href="enum_CCL_IGraphics_Modes.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">struct CCL::Internal::IGraphicsHelper</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-internal-igraphicshelper">
+<span id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper"></span><span id="index-0"></span><h1>struct CCL::Internal::IGraphicsHelper<a class="headerlink" href="#struct-ccl-internal-igraphicshelper" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Helper methods for public graphics class implementation. <a class="reference internal" href="#details-struct-c-c-l-1-1-internal-1-1-i-graphics-helper"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;igraphicshelper.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">IGraphicsHelper</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Internal_IGraphicsHelper_ColorFormatFlags.html#doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a3afa7fac85624140c979cc2761bb46b3"><span class="std std-ref">ColorFormatFlags</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1af6e18bb7ede35a9b295c0b72e802dfc9"><span></span><span class="n">Color_fromCString</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">This</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">cString</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a3c7ee29b6b1d03828a2b4e97c3c56eea"><span></span><span class="n">Color_toCString</span></span><span></span> <span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">This</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">cString</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">cStringSize</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ae06bda2951b175289280a6e67a677c11"><span></span><span class="n">Font_getDefaultFont</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a1eb2efc2c3a960e6586232e3af59ddb3"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
+        <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a072f0f0ef846924340e9ac26a125ffc3"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ae728ac8e22e56321fc659c4c6eb34015"><span></span><span class="n">Font_measureStringImage</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <span class="n">tbool</span> <span class="n">shiftToBaseline</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ac22d824c3119fff40aeddb49738aae67"><span></span><span class="n">Font_measureText</span></span><span></span> <span class="p">(</span>
+        <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <span class="n">Coord</span> <span class="n">lineWidth</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a995ef84e2dca39330e83d5deffe41a83"><span></span><span class="n">Font_measureText</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">lineWidth</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a9407020bf07e158b566b81d4b9e3babc"><span></span><span class="n">Font_collapseString</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">maxWidth</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">trimMode</span><span class="p">,</span>
+        <span class="n">tbool</span> <span class="n">exact</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IFontTable.html#doxid-struct-c-c-l-1-1-i-font-table"><span class="std std-ref">IFontTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a732a94a53eedbc9b344f316ed7578bc6"><span></span><span class="n">Font_collectFonts</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a0d900821234a87f2afdcb4b15f84f28b"><span></span><span class="n">Factory_getNumImageFormats</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">FileType</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a1179ede809e4d4d850508793f96d1b63"><span></span><span class="n">Factory_getImageFormat</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1add293c9ffa5177f56d5ebb5fc903acc8"><span></span><span class="n">Factory_loadImageFile</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="n">path</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a0d8cb72cad21473013b735ece80e4618"><span></span><span class="n">Factory_saveImageFile</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="n">path</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">image</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">*</span> <span class="n">encoderOptions</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a0f8ec0b39900b509f97d0d171a5ccf89"><span></span><span class="n">Factory_loadImageStream</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">stream</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">FileType</span></a><span></span><span class="o">&amp;</span> <span class="n">format</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a695ad0db277b3ce4fea28fccf076eec9"><span></span><span class="n">Factory_saveImageStream</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">stream</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">image</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">FileType</span></a><span></span><span class="o">&amp;</span> <span class="n">format</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">*</span> <span class="n">encoderOptions</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a8169b5258a634c792c01283d4becc601"><span></span><span class="n">Factory_createBitmap</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">width</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">height</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_IBitmap_PixelFormat.html#doxid-struct-c-c-l-1-1-i-bitmap-1a60883d4958a60b91661e97027a85072a"><span class="std std-ref">IBitmap::PixelFormat</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_IBitmap_PixelFormat.html#doxid-struct-c-c-l-1-1-i-bitmap-1a60883d4958a60b91661e97027a85072aa8cadb7b1406f2e3233ddf5276c8c07ed"><span class="std std-ref">IBitmap::kRGB</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">scaleFactor</span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a701483ca0e9f4952576c5b191b54dc35"><span></span><span class="n">Factory_createBitmapGraphics</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">bitmap</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IBitmapFilter.html#doxid-struct-c-c-l-1-1-i-bitmap-filter"><span class="std std-ref">IBitmapFilter</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a3781abcdfea368f332619aac80eeacda"><span></span><span class="n">Factory_createBitmapFilter</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">which</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IGraphicsPath.html#doxid-struct-c-c-l-1-1-i-graphics-path"><span class="std std-ref">IGraphicsPath</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ac0c3e0138fd4f739b83acaf3c1ab7097"><span></span><span class="n">Factory_createPath</span></span><span></span> <span class="p">(</span><a class="reference internal" href="enum_CCL_IGraphicsPath_TypeHint.html#doxid-struct-c-c-l-1-1-i-graphics-path-1ab2f762cdae10915b1207c47408e50545"><span class="std std-ref">IGraphicsPath::TypeHint</span></a><span></span> <span class="n">type</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IGradient.html#doxid-struct-c-c-l-1-1-i-gradient"><span class="std std-ref">IGradient</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a3cd221782b948a16b7f747eeef5f3a5f"><span></span><span class="n">Factory_createGradient</span></span><span></span> <span class="p">(</span><a class="reference internal" href="enum_CCL_IGradient_TypeHint.html#doxid-struct-c-c-l-1-1-i-gradient-1ab2f762cdae10915b1207c47408e50545"><span class="std std-ref">IGradient::TypeHint</span></a><span></span> <span class="n">type</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a522e2796d8f80188383a45c533d29c88"><span></span><span class="n">Factory_createShapeImage</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a6e7878406b1716b784a064913dcc0fec"><span></span><span class="n">Factory_createShapeBuilder</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">shapeImage</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextLayout.html#doxid-struct-c-c-l-1-1-i-text-layout"><span class="std std-ref">ITextLayout</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a9918d5881ce4a72b74d5c31de03a8d09"><span></span><span class="n">Factory_createTextLayout</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IGraphicsLayer.html#doxid-struct-c-c-l-1-1-i-graphics-layer"><span class="std std-ref">IGraphicsLayer</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a8da0adc320fd777eaec960cdde584d0a"><span></span><span class="n">Factory_createGraphicsLayer</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">cid</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUIValue.html#doxid-struct-c-c-l-1-1-i-u-i-value"><span class="std std-ref">IUIValue</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a58e53ad0bbf762c128ac01d1d8ec155c"><span></span><span class="n">Factory_createValue</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1accf9b54f7cef89011ca6a941a5d0f29a"><span></span><span class="n">Factory_createFilmstrip</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">sourceImage</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">frames</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a73d868ef21ec161d4baf4a6e31729588"><span></span><span class="n">Factory_createImagePart</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">sourceImage</span><span class="p">,</span>
+        <span class="n">RectRef</span> <span class="n">partRect</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a89bf688e325fc5ad893b4255098f6eef"><span></span><span class="n">Factory_createMultiImage</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">images</span> <span class="p">[],</span>
+        <a class="reference internal" href="class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref">CString</span></a><span></span> <span class="n">frameNames</span> <span class="p">[],</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">count</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a22694c0d1097a8249141fb5dd02d4aad"><span></span><span class="n">Factory_createMultiResolutionBitmap</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">bitmaps</span> <span class="p">[],</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">scaleFactors</span> <span class="p">[],</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">count</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-internal-1-1-i-graphics-helper"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Helper methods for public graphics class implementation.</p>
+<p>Do not use this interface directly.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_IGraphics_Modes.html" class="btn btn-neutral float-left" title="enum CCL::IGraphics::Modes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Internal_IGraphicsHelper_ColorFormatFlags.html" class="btn btn-neutral float-right" title="enum CCL::Internal::IGraphicsHelper::ColorFormatFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

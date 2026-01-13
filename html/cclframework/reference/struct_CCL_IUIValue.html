@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::IUIValue &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::IUIValue::Type" href="enum_CCL_IUIValue_Type.html" />
+    <link rel="prev" title="struct CCL::ITextLayout::Range" href="struct_CCL_ITextLayout_Range.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">struct CCL::IUIValue</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-iuivalue">
+<span id="doxid-struct-c-c-l-1-1-i-u-i-value"></span><span id="index-0"></span><h1>struct CCL::IUIValue<a class="headerlink" href="#struct-ccl-iuivalue" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Interface to wrap UI data structures like points and rectangles into IUnknown/Variant. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-u-i-value"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iuivalue.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">IUIValue</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_IUIValue_Type.html#doxid-struct-c-c-l-1-1-i-u-i-value-1a1d1cfd8ffb84e947f82999c682b666a7"><span class="std std-ref">Type</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a834fe12f85433ad5806103e70936b575"><span></span><span class="n">reset</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a5c16485cb2d94802183efc3f81ed9ec4"><span></span><span class="n">copyFrom</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">IUIValue</span><span class="o">*</span> <span class="n">value</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_CCL_IUIValue_Type.html#doxid-struct-c-c-l-1-1-i-u-i-value-1a1d1cfd8ffb84e947f82999c682b666a7"><span class="std std-ref">Type</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a49b3860a9d077e52f8881377ff058a38"><span></span><span class="n">getType</span></span><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1aeb51a98af77e261b6f4e1ab029f5d7a7"><span></span><span class="n">fromPoint</span></span><span></span> <span class="p">(</span><span class="n">PointRef</span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a301ed401b0befbe3a64b60c8fab37922"><span></span><span class="n">toPoint</span></span><span></span> <span class="p">(</span><span class="n">Point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a4198e264fa127cfe2ffb0b58ca6bb531"><span></span><span class="n">fromRect</span></span><span></span> <span class="p">(</span><span class="n">RectRef</span> <span class="n">r</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1accb2352e0cd65e5517a56ca7e84c7afb"><span></span><span class="n">toRect</span></span><span></span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a718cd1e5327d4a1a26d095406ab8957d"><span></span><span class="n">fromTransform</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a52642c7dcde5d83401f6e8aa5e7a4a90"><span></span><span class="n">toTransform</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Transform.html#doxid-struct-c-c-l-1-1-transform"><span class="std std-ref">Transform</span></a><span></span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a8a0ba8b4dcc333fd0f2152088eac54bf"><span></span><span class="n">fromColor</span></span><span></span> <span class="p">(</span><span class="n">ColorRef</span> <span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a53643ac369a201522f2bbcc4b78a2f15"><span></span><span class="n">toColor</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a723fc0dd0cb49db68caacb1dab615ef2"><span></span><span class="n">fromColorF</span></span><span></span> <span class="p">(</span><span class="n">ColorFRef</span> <span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a61628d342f9d7748af6e7703bbd1faf7"><span></span><span class="n">toColorF</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_ColorF.html#doxid-struct-core-1-1-color-f"><span class="std std-ref">ColorF</span></a><span></span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a817e1dccc563b87cda0bd643f6a73f20"><span></span><span class="n">fromPointF</span></span><span></span> <span class="p">(</span><span class="n">PointFRef</span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a49b403f9e9d9e0ca035b79ac5bf6ffaa"><span></span><span class="n">toPointF</span></span><span></span> <span class="p">(</span><span class="n">PointF</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a783bab1d7610ffb7c632d269a2bcfc20"><span></span><span class="n">fromRectF</span></span><span></span> <span class="p">(</span><span class="n">RectFRef</span> <span class="n">r</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a735e7f1781bc5cc081ce00a2ac232c69"><span></span><span class="n">toRectF</span></span><span></span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a63700039a7eebff2e6c2d31442746479"><span></span><span class="n">fromPointF3D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a005df6ff49c9032ccefbee3c0ff596c2"><span class="std std-ref">PointF3DRef</span></a><span></span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1ae1ff4bc5e7dbba07a356d595d30d7429"><span></span><span class="n">toPointF3D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_PointF3D.html#doxid-struct-c-c-l-1-1-point-f3-d"><span class="std std-ref">PointF3D</span></a><span></span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a5734652525800b7e7cd3593f79b24630"><span></span><span class="n">fromPointF4D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1abd311e689e41b753ca025446944743e1"><span class="std std-ref">PointF4DRef</span></a><span></span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a7e2d529e28183eded38cbf6ec73b1814"><span></span><span class="n">toPointF4D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_PointF4D.html#doxid-struct-c-c-l-1-1-point-f4-d"><span class="std std-ref">PointF4D</span></a><span></span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1aad10e61e8d613bd02b448cc8ba49a9f0"><span></span><span class="n">fromTransform3D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1af4a5f3dc3ac7babd860a7d452c44a815"><span class="std std-ref">Transform3DRef</span></a><span></span> <span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-u-i-value-1add7ac10eeff4db0f79550d695112cc48"><span></span><span class="n">toTransform3D</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">Transform3D</span></a><span></span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PointF</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-u-i-value-1a82de18e0ad7f1d13ccea29ab8b0c8686"><span class="std std-ref">convertToPointF</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">IUIValue</span> INLINE<span></span> <span class="n">IUIValue</span><span class="o">*</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-u-i-value-1a4b796c18a925d6eaa298bf4f55d55c81"><span class="std std-ref">toValue</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a9e5bc5c75848765e068d86da7f5e23da"><span class="std std-ref">VariantRef</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-u-i-value"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Interface to wrap UI data structures like points and rectangles into IUnknown/Variant.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a82de18e0ad7f1d13ccea29ab8b0c8686"><span id="index-1"></span><span></span><span class="n">PointF</span> <span class="n">convertToPointF</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Get value as PointF if conversion possible.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-u-i-value-1a4b796c18a925d6eaa298bf4f55d55c81"><span id="index-2"></span><span></span><span class="k">static</span> <span class="n">IUIValue</span> INLINE<span></span> <span class="n">IUIValue</span><span class="o">*</span> <span class="n">toValue</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a9e5bc5c75848765e068d86da7f5e23da"><span class="std std-ref">VariantRef</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Get <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-u-i-value"><span class="std std-ref">IUIValue</span></a> object from <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_ITextLayout_Range.html" class="btn btn-neutral float-left" title="struct CCL::ITextLayout::Range" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_IUIValue_Type.html" class="btn btn-neutral float-right" title="enum CCL::IUIValue::Type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

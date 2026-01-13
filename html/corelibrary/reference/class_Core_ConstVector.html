@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template class Core::ConstVector &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class Core::Deque" href="class_Core_Deque.html" />
+    <link rel="prev" title="template class Core::ConstMap" href="class_Core_ConstMap.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_collect.html">Collections</a></li>
+      <li class="breadcrumb-item active">template class Core::ConstVector</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-core-constvector">
+<span id="doxid-class-core-1-1-const-vector"></span><span id="index-0"></span><h1>template class Core::ConstVector<a class="headerlink" href="#template-class-core-constvector" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Immutable one-dimensional array container class. <a class="reference internal" href="#details-class-core-1-1-const-vector"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corevector.h&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">ConstVector</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1aed17f478f2330fcc8404d2b5f8713658"><span class="std std-ref">ConstVector</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">items</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">numItems</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1acf82f9b2937375c7b1cf3dccb3df3312"><span class="std std-ref">isEmpty</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a9e0fde1a3bbccee836572b4d81a3e1f1"><span class="std std-ref">count</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a88e67ba0b2c86d90b878b45efecdfd81"><span class="std std-ref">isValidIndex</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a7b1d0d6b0242e10700c5a509e487c960"><span class="std std-ref">at</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">idx</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a95323f4d07d38dba46c826fbd33d1d80"><span class="std std-ref">first</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a281dc6ddd046bd6f2793f83f83682b4d"><span class="std std-ref">last</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a8b4c39e2d7e7697afc2dcfee272bcdc7"><span class="std std-ref">isEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-const-vector-1ada542a02aebdaa8647498cb51c6f387e"><span></span><span class="k">operator</span> <span class="o">==</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-const-vector-1a8e9e19a319bed3119bcf6b04656790db"><span></span><span class="k">operator</span> <span class="o">!=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a4a9fec1639a505f5661b483e56b91067"><span class="std std-ref">index</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a4fef904b55d57ced9e390f3aa2646450"><span class="std std-ref">index</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">item</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1adb6c0b1fc5058e1d495e0ed5e96bf9f9"><span class="std std-ref">contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a30c6068ae9f390d8511caff9e487c6e9"><span class="std std-ref">containsAnyOf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a9a052879b8abdd8e9b42062eb1036023"><span class="std std-ref">search</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1adfd4e818105afc4c1022395895f964e5"><span class="std std-ref">findIf</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Predicate</span></a><span></span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a63f718590bdce60a1f109d8851469290"><span class="std std-ref">findIf</span></a><span></span><span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1a65625b12f82ea4362738439643d88dd7"><span class="std std-ref">getItems</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-const-vector-1a88183fbb9682823fda12b5ecd92d76d4"><span></span><span class="k">operator</span> <span class="n">T</span><span class="o">*</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span><span class="o">&lt;</span><span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="class_Core_VectorIterator.html#doxid-class-core-1-1-vector-iterator"><span class="std std-ref">VectorIterator</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-const-vector-1ae011a7930104b72151dc79b21d7d6e01"><span></span><span class="n">begin</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span><span class="o">&lt;</span><span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="class_Core_VectorIterator.html#doxid-class-core-1-1-vector-iterator"><span class="std std-ref">VectorIterator</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-const-vector-1a50ac8c38835633f777ccf7336044d146"><span></span><span class="n">end</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-core-1-1-const-vector-1ae9d8608d0fb42fd9e150c0ed88dca22b"><span class="std std-ref">getError</span></a><span></span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">ResizePolicy</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector"><span class="std std-ref">MutableVector</span></a><span></span><span class="p">;</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-const-vector"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Immutable one-dimensional array container class.</p>
+<p>External memory is passed as C array.</p>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1aed17f478f2330fcc8404d2b5f8713658"><span id="index-1"></span><span></span><span class="n">ConstVector</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">items</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">numItems</span><span class="p">)</span></pre>
+<p>[LIGHT] Construct with C array (no copying).</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1acf82f9b2937375c7b1cf3dccb3df3312"><span id="index-2"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">isEmpty</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if container is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a9e0fde1a3bbccee836572b4d81a3e1f1"><span id="index-3"></span>INLINE<span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">count</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get number of elements in container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a88e67ba0b2c86d90b878b45efecdfd81"><span id="index-4"></span>INLINE<span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">isValidIndex</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if index is valid for accessing element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a7b1d0d6b0242e10700c5a509e487c960"><span id="index-5"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">at</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">idx</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Get element at index.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a95323f4d07d38dba46c826fbd33d1d80"><span id="index-6"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">first</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get first element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a281dc6ddd046bd6f2793f83f83682b4d"><span id="index-7"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">last</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get last element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a8b4c39e2d7e7697afc2dcfee272bcdc7"><span id="index-8"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">isEqual</span><span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if other vecotor is equal.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a4a9fec1639a505f5661b483e56b91067"><span id="index-9"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Get index of given element in container (by reference).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a4fef904b55d57ced9e390f3aa2646450"><span id="index-10"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">item</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Get index of given element in container (by pointer).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1adb6c0b1fc5058e1d495e0ed5e96bf9f9"><span id="index-11"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">contains</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if container holds given element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a30c6068ae9f390d8511caff9e487c6e9"><span id="index-12"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">containsAnyOf</span><span class="p">(</span><span class="k">const</span> <span class="n">ConstVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if container holds any other other container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a9a052879b8abdd8e9b42062eb1036023"><span id="index-13"></span><span></span><span class="n">T</span><span class="o">*</span> <span class="n">search</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Search for given element and return its address.</p>
+<p>Uses binary search, vector needs to be sorted.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1adfd4e818105afc4c1022395895f964e5"><span id="index-14"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+<span class="n">T</span><span class="o">*</span> <span class="n">findIf</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Predicate</span></a><span></span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Find element based on predicate.</p>
+<p>predicate: (T&amp;) -&gt; bool</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a63f718590bdce60a1f109d8851469290"><span id="index-15"></span><span></span><span class="n">T</span><span class="o">*</span> <span class="n">findIf</span><span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Find element based on predicate.</p>
+<p>Use DEFINE_CONTAINER_PREDICATE.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1a65625b12f82ea4362738439643d88dd7"><span id="index-16"></span>INLINE<span></span> <span class="n">T</span><span class="o">*</span> <span class="n">getItems</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get start address of array.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-const-vector-1ae9d8608d0fb42fd9e150c0ed88dca22b"><span id="index-17"></span><span></span><span class="k">static</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">getError</span><span class="p">()</span></pre>
+<p>Access error element.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_ConstMap.html" class="btn btn-neutral float-left" title="template class Core::ConstMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_Deque.html" class="btn btn-neutral float-right" title="template class Core::Deque" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

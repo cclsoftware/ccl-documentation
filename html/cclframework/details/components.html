@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Model &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Application Phases" href="phases.html" />
+    <link rel="prev" title="Using strings" href="strings.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Application Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#event-driven-programming">Event-Driven Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-types">Application Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#component-tree">Component Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#context-menu-handling">Context menu handling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-menu">Application Menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Application Model</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="application-model">
+<h1>Application Model<a class="headerlink" href="#application-model" title="Link to this heading"></a></h1>
+<section id="event-driven-programming">
+<h2>Event-Driven Programming<a class="headerlink" href="#event-driven-programming" title="Link to this heading"></a></h2>
+<p>As usual on platforms with graphical user interfaces, the control flow of a CCL application is triggered by UI events
+like mouse, keyboard or touch input. The CCL framework internally runs an <a class="reference external" href="https://en.wikipedia.org/wiki/Event-driven_programming">event loop</a>
+that receives these events from the OS and dispatches them e.g. to a window of the application.</p>
+<p>For example, when the user presses a mouse button, the framework receives an OS event and passes it as a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_MouseEvent.html#doxid-struct-c-c-l-1-1-mouse-event"><span class="std std-ref"><span class="pre">CCL::MouseEvent</span></span></a></code>
+to the active window, which in turn passes it through its view tree until a view handles it.</p>
+</section>
+<section id="application-types">
+<h2>Application Types<a class="headerlink" href="#application-types" title="Link to this heading"></a></h2>
+<p>CCL applications can run on desktop (Windows, macOS, Linux) and mobile (iOS, Android) platforms.</p>
+<p>Typically, the application code and the UI decription in XML can be completely platform-independent,
+as platform details are handled under the hood by the framework.
+However, there are some differences between desktop and mobile platforms that you should be aware of.</p>
+<section id="asynchronous-event-handling">
+<h3>Asynchronous Event Handling<a class="headerlink" href="#asynchronous-event-handling" title="Link to this heading"></a></h3>
+<p>Some UI interactions like modal dialogs are internally handled differently on desktop and mobile platforms:</p>
+<ul class="simple">
+<li><p>On most desktop platforms, running a modal dialog is implemented as a “modal loop”, that blocks the main event loop while the dialog is open.
+On such platforms, a call like <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_DialogBox.html#doxid-class-c-c-l-1-1-dialog-box"><span class="std std-ref"><span class="pre">DialogBox::runDialog</span> <span class="pre">()</span></span></a></code> returns after the dialog closed
+(which was convinient as the return value, that indicates the clicked button, can be interpreteted directly after the <code class="docutils literal notranslate"><span class="pre">runDialog</span> <span class="pre">()</span></code> call).</p></li>
+<li><p>On mobile platforms, <code class="docutils literal notranslate"><span class="pre">runDialog</span> <span class="pre">()</span></code> returns immediately, while the dialog is still open.
+To handle the result, the asynchronous call <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_DialogBox.html#doxid-class-c-c-l-1-1-dialog-box"><span class="std std-ref"><span class="pre">DialogBox::runDialogAsync</span></span></a></code> must be used.
+It returns immediately, but allows to add a lambda function (with the help of the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Promise.html#doxid-class-c-c-l-1-1-promise"><span class="std std-ref"><span class="pre">Promise</span></span></a></code> class) that will be called when the dialog is closed.</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Promise</span> <span class="nf">promise</span> <span class="p">(</span><span class="n">DialogBox</span> <span class="p">()</span><span class="o">-&gt;</span><span class="n">runDialogAsync</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">Styles</span><span class="o">::</span><span class="n">kWindowCombinedStyleDialog</span><span class="p">,</span> <span class="n">Styles</span><span class="o">::</span><span class="n">kOkayButton</span><span class="o">|</span><span class="n">Styles</span><span class="o">::</span><span class="n">kCancelButton</span><span class="p">));</span>
+<span class="n">promise</span><span class="p">.</span><span class="n">then</span> <span class="p">([]</span> <span class="p">(</span><span class="n">IAsyncOperation</span><span class="o">&amp;</span> <span class="n">operation</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// lambda is called when dialog is closed, result specifies the clicked button</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">operation</span><span class="p">.</span><span class="n">getResult</span> <span class="p">().</span><span class="n">asInt</span> <span class="p">()</span> <span class="o">==</span> <span class="n">DialogResult</span><span class="o">::</span><span class="n">kOkay</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//...</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Other UI interactions with a similar asynchronous behavior are
+<code class="doxyrest-cref docutils literal notranslate"><span class="pre">AlertBox::runAsync</span> <span class="pre">()</span></code>,
+<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IPopupSelector.html#doxid-struct-c-c-l-1-1-i-popup-selector"><span class="std std-ref"><span class="pre">IPopupSelector::popupAsync</span> <span class="pre">()</span></span></a></code>,
+<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IFileSelector.html#doxid-struct-c-c-l-1-1-i-file-selector"><span class="std std-ref"><span class="pre">IFileSelector::runAsync</span> <span class="pre">()</span></span></a></code>,
+<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IDragSession.html#doxid-struct-c-c-l-1-1-i-drag-session"><span class="std std-ref"><span class="pre">IDragSession::dragAsync</span> <span class="pre">()</span></span></a></code>.</p>
+<p>In general, it’s recommended to use the asynchronous version of these methods.
+This way you are on the safe side when some code originally written for desktop will later also run on a mobile platform.</p>
+</section>
+<section id="ui-element-sizes">
+<h3>UI Element Sizes<a class="headerlink" href="#ui-element-sizes" title="Link to this heading"></a></h3>
+<p>UI controls on mobile platforms often need to be larger than on desktop, as they are typically used with touch input.</p>
+<p>The <em>neutraldesign</em> skin package already takes care of such decisions by defining many standard styles with e.g. different font sizes for mobile and desktop applications.
+By importing <em>neutraldesign</em> into your applicaiton skin, you might not need further adjustments.</p>
+<p>If you still need to distinguish between mobile and desktop in a skin, this can be done by using the XML processing instructions
+<code class="docutils literal notranslate"><span class="pre">&lt;?defined&gt;</span> <span class="pre">mobileap?&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;?defined</span> <span class="pre">desktopapp?&gt;</span></code>. They mark sections of XML to be only valid for the given application type.</p>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyButton&quot;</span><span class="w"> </span><span class="na">inherit=</span><span class="s">&quot;Standard.Button&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cp">&lt;?defined mobileapp?&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Font</span><span class="w">  </span><span class="na">name=</span><span class="s">&quot;textfont&quot;</span><span class="w">  </span><span class="na">themeid=</span><span class="s">&quot;StandardUI&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;14&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cp">&lt;?defined desktopapp?&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Font</span><span class="w">  </span><span class="na">name=</span><span class="s">&quot;textfont&quot;</span><span class="w">  </span><span class="na">themeid=</span><span class="s">&quot;StandardUI&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">12/</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cp">&lt;?defined?&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h2>
+<p>Components are reusable building blocks of an application.
+They can be nested: a component has access to child and parent components.
+Each module of an application has a global component tree that starts with the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_RootComponent.html#doxid-class-c-c-l-1-1-root-component"><span class="std std-ref"><span class="pre">RootComponent</span></span></a></code>.</p>
+<p>A component (including child components) an also exist outside this global tree, e.g.</p>
+<ul class="simple">
+<li><p>A component for a modal dialog might be created only for the lifetime of the dialog.</p></li>
+<li><p>In document-based applications, each document has its own document tree starting with the document controller.</p></li>
+</ul>
+<p>Components can be seen as the backend of the UI. The base class <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Component.html#doxid-class-c-c-l-1-1-component"><span class="std std-ref"><span class="pre">Component</span></span></a></code> offers functionality like managing parameters, handling commands and context menus.</p>
+<p>Components and their parameters typically present aspects of an underlying data model so that views like UI controls can connect to them.
+They implement the application logic for managing the UI by reacting to changes in both the data model and the views.
+This is similar to the <a class="reference external" href="https://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model</a> design pattern
+or the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">model</span></code> in the <a class="reference external" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">MVVM</a> pattern.</p>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<p>A parameter is an object that represents a “value”. Standard parameter types are <em>Bool</em>, <em>Integer</em>, <em>Float</em>, <em>String</em>, <em>List</em>.
+It can be identified by name or tag (integer) and is often used as “backend” for UI Controls like <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Button</span></code>, <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Toggle</span></code>, <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::TextBox</span></code>, <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Slider</span></code>, etc.</p>
+<p>Values are abstracted as <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref"><span class="pre">Variant</span></span></a></code> in the parameter interface.
+Numerical parameters (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_IntParam.html#doxid-class-c-c-l-1-1-int-param"><span class="std std-ref"><span class="pre">IntParam</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_FloatParam.html#doxid-class-c-c-l-1-1-float-param"><span class="std std-ref"><span class="pre">FloatParam</span></span></a></code>) have minimum and maximum value and a default value.
+Based on this range, the value can be translated to / from a <em>normalized</em> scale between 0.1 and 1.0 .</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;</span> <span class="n">param</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">IntParam</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;level&quot;</span><span class="p">));</span>
+<span class="n">param</span><span class="o">-&gt;</span><span class="n">setDefaultValue</span> <span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+
+<span class="n">param</span><span class="o">-&gt;</span><span class="n">setValue</span> <span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<span class="n">param</span><span class="o">-&gt;</span><span class="n">setNormalized</span> <span class="p">(</span><span class="mf">0.25f</span><span class="p">);</span>
+
+<span class="n">String</span> <span class="n">string</span><span class="p">;</span>
+<span class="n">param</span><span class="o">-&gt;</span><span class="n">toString</span> <span class="p">(</span><span class="n">string</span><span class="p">);</span>
+</pre></div>
+</div>
+<section id="parameter-notifications">
+<h3>Parameter notifications<a class="headerlink" href="#parameter-notifications" title="Link to this heading"></a></h3>
+<p>A parameter has one <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IParamObserver.html#doxid-struct-c-c-l-1-1-i-param-observer"><span class="std std-ref"><span class="pre">IParamObserver</span></span></a></code>, called “controller” (typically the owning component)
+and can have multiple observers (e.g. UI Controls) through the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref"><span class="pre">ISubject</span></span></a></code> / <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref"><span class="pre">IObserver</span></span></a></code> mechanism.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">param</span><span class="o">-&gt;</span><span class="n">connect</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">Tag</span><span class="o">::</span><span class="n">kLevel</span><span class="p">);</span> <span class="c1">// sets controller &amp; tag</span>
+</pre></div>
+</div>
+<p>When the value changes</p>
+<ul class="simple">
+<li><p>the controller is notified via a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IParamObserver.html#doxid-struct-c-c-l-1-1-i-param-observer-1a9879cd769a477b959f6b618af8b357c1"><span class="std std-ref"><span class="pre">IParamObserver::paramChanged</span> <span class="pre">()</span></span></a></code> call</p></li>
+<li><p>the observers are informed via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a273e834d0d36f49e1af9759e9c3fca3c"><span class="std std-ref"><span class="pre">kChanged</span></span></a></code> message</p></li>
+</ul>
+<p>Methods that change the value have an <code class="docutils literal notranslate"><span class="pre">update</span></code> argument.
+Setting the parameter value with <code class="docutils literal notranslate"><span class="pre">update</span> <span class="pre">==</span> <span class="pre">true</span></code> leads to a <code class="docutils literal notranslate"><span class="pre">paramChanged</span> <span class="pre">()</span></code> call of the controller (in addition the <code class="docutils literal notranslate"><span class="pre">kChanged</span></code> message for the observers).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CCL_API</span> <span class="nf">setValue</span> <span class="p">(</span><span class="n">VariantRef</span> <span class="n">v</span><span class="p">,</span> <span class="n">tbool</span> <span class="n">update</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">CCL_API</span> <span class="nf">setNormalized</span> <span class="p">(</span><span class="kt">float</span> <span class="n">v</span><span class="p">,</span> <span class="n">tbool</span> <span class="n">update</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">CCL_API</span> <span class="nf">fromString</span> <span class="p">(</span><span class="n">StringRef</span> <span class="n">s</span><span class="p">,</span> <span class="n">tbool</span> <span class="n">update</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The typical use is:</p>
+<ul class="simple">
+<li><p>A UI control connected to the parameter sets the value with <code class="docutils literal notranslate"><span class="pre">update</span> <span class="pre">==</span> <span class="pre">true</span></code> to inform the controller.</p></li>
+<li><p>The owning component usually sets the value (e.g. from the data model) with <code class="docutils literal notranslate"><span class="pre">update</span> <span class="pre">==</span> <span class="pre">false</span></code>, because he doesn’t need a notification for the value he already knows.</p></li>
+</ul>
+</section>
+<section id="parameters-in-a-component">
+<h3>Parameters in a Component<a class="headerlink" href="#parameters-in-a-component" title="Link to this heading"></a></h3>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-component-8cpp-1ade041a3ff335ab97b44b60c462b8cba5"><span class="std std-ref"><span class="pre">Component</span></span></a></code> base class has a <code class="docutils literal notranslate"><span class="pre">paramList</span></code> that helps managing parameters.
+It makes these parameters available by implementing the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IController.html#doxid-struct-c-c-l-1-1-i-controller"><span class="std std-ref"><span class="pre">IController</span></span></a></code> interface.</p>
+<p>A derived component class typically</p>
+<ul class="simple">
+<li><p>adds parameters to the <code class="docutils literal notranslate"><span class="pre">paramList</span></code></p></li>
+<li><p>sets parameter values according to data model or some internal state</p></li>
+<li><p>implements <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IParamObserver.html#doxid-struct-c-c-l-1-1-i-param-observer-1a9879cd769a477b959f6b618af8b357c1"><span class="std std-ref"><span class="pre">IParamObserver::paramChanged</span> <span class="pre">()</span></span></a></code> to handle parameter changes</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyComponent</span><span class="o">::</span><span class="n">MyComponent</span> <span class="p">()</span>
+<span class="o">:</span> <span class="n">Component</span> <span class="p">(</span><span class="s">&quot;MyComponent&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">paramList</span><span class="p">.</span><span class="n">addInteger</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;level&quot;</span><span class="p">,</span> <span class="n">Tag</span><span class="o">::</span><span class="n">kLevel</span><span class="p">);</span>
+    <span class="n">paramList</span><span class="p">.</span><span class="n">addString</span> <span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="n">Tag</span><span class="o">::</span><span class="n">kName</span><span class="p">);</span>
+    <span class="n">paramList</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">MyParameter</span> <span class="p">(</span><span class="s">&quot;format&quot;</span><span class="p">),</span> <span class="n">Tag</span><span class="o">::</span><span class="n">kFormat</span><span class="p">);</span>
+
+    <span class="n">paramList</span><span class="p">.</span><span class="n">byTag</span> <span class="p">(</span><span class="n">Tag</span><span class="o">::</span><span class="n">kLevel</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">setValue</span> <span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">///////////////////////////////////////////////////////////////////</span>
+
+<span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">paramChanged</span> <span class="p">(</span><span class="n">IParameter</span><span class="o">*</span> <span class="n">param</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">param</span><span class="o">-&gt;</span><span class="n">getTag</span> <span class="p">())</span>
+    <span class="p">{</span>
+    <span class="k">case</span> <span class="n">Tag</span><span class="o">::</span><span class="nl">kLevel</span><span class="p">:</span>
+        <span class="c1">// level param has changed, do something with the new value</span>
+        <span class="n">applyLevel</span> <span class="p">(</span><span class="n">param</span><span class="o">-&gt;</span><span class="n">getValue</span> <span class="p">().</span><span class="n">asInt</span> <span class="p">());</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">SuperClass</span><span class="o">::</span><span class="n">paramChanged</span> <span class="p">(</span><span class="n">param</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="component-tree">
+<h2>Component Tree<a class="headerlink" href="#component-tree" title="Link to this heading"></a></h2>
+<p>Components can have a name and child components. This makes it possible to address them in the component tree via a path.
+Similar, paths can also be created for the parameters of a component.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// add a MyComponent instance to the RootComponent</span>
+<span class="k">auto</span><span class="o">*</span> <span class="n">myComponent</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">MyComponent</span><span class="p">;</span>
+<span class="n">myComponent</span><span class="o">-&gt;</span><span class="n">setName</span> <span class="p">(</span><span class="s">&quot;MyComponent&quot;</span><span class="p">);</span>
+<span class="n">RootComponent</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">addComponent</span> <span class="p">(</span><span class="n">myComponent</span><span class="p">);</span>
+
+<span class="c1">// add a ChildComponent to MyComponent</span>
+<span class="k">auto</span><span class="o">*</span> <span class="n">childComponent</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">MyChildComponent</span><span class="p">;</span>
+<span class="n">childComponent</span><span class="o">-&gt;</span><span class="n">setName</span> <span class="p">(</span><span class="s">&quot;MyChildComponent&quot;</span><span class="p">);</span>
+<span class="n">myComponent</span><span class="o">-&gt;</span><span class="n">addComponent</span> <span class="p">(</span><span class="n">childComponent</span><span class="p">);</span>
+
+<span class="c1">// Component path of MyChildComponent</span>
+<span class="s">&quot;object://hostapp/MyComponent/MyChildComponent&quot;</span>
+
+<span class="c1">// Parameter path of the &quot;level&quot; parameter in MyComponent</span>
+<span class="s">&quot;hostapp/MyComponent/level&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<p>Commands are “One-Shot” actions, identified by category and name.
+Example: <em>“Edit” - “Delete”</em></p>
+<p>This classification resembles to the menu structure of common desktop applications with menus like “File” and “Edit”.
+Category and name are not only used as internal identifiers, but also appear in the (english) UI, e.g. in menu items.</p>
+<p>Commands can be triggered by various means:</p>
+<ul>
+<li><p>Menu items</p></li>
+<li><p>Keyboard shortcuts</p></li>
+<li><p>Hardware buttons on a device</p></li>
+<li><p>Programmatically</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">::</span><span class="n">GetCommandTable</span> <span class="p">().</span><span class="n">performCommand</span> <span class="p">(</span><span class="n">CommandMsg</span> <span class="p">(</span><span class="s">&quot;Edit&quot;</span><span class="p">,</span> <span class="s">&quot;Delete&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<section id="handling-commands-in-a-component">
+<h3>Handling Commands in a Component<a class="headerlink" href="#handling-commands-in-a-component" title="Link to this heading"></a></h3>
+<p>Commands are handled via the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_ICommandHandler.html#doxid-struct-c-c-l-1-1-i-command-handler"><span class="std std-ref"><span class="pre">ICommandHandler</span></span></a></code> interface. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Component.html#doxid-class-c-c-l-1-1-component"><span class="std std-ref"><span class="pre">Component</span></span></a></code> base class already implements it (by passing the command to child components).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span> <span class="nl">ICommandHandler</span><span class="p">:</span> <span class="n">IUnknown</span>
+<span class="p">{</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">checkCommandCategory</span> <span class="p">(</span><span class="n">CStringRef</span> <span class="n">category</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="nf">interpretCommand</span> <span class="p">(</span><span class="k">const</span> <span class="n">CommandMsg</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>To handle command, a component can override <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_ICommandHandler.html#doxid-struct-c-c-l-1-1-i-command-handler-1aee7a632d7af21202a99d703b2b665d96"><span class="std std-ref"><span class="pre">ICommandHandler::interpretCommand</span></span></a></code>, compare <code class="docutils literal notranslate"><span class="pre">msg.category</span></code> and <code class="docutils literal notranslate"><span class="pre">msg.name</span></code> with the commands it wants to handle
+and execute code if there is a match.</p>
+<p>This can be simplified using the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CommandDispatcher.html#doxid-class-c-c-l-1-1-command-dispatcher"><span class="std std-ref"><span class="pre">CommandDispatcher</span></span></a></code> template and related helper macros that manage the dispatching of category and name.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyComponent</span><span class="p">:</span> <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">Component</span>
+                   <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">CommandDispatcher</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">DECLARE_CLASS</span> <span class="p">(</span><span class="n">MyComponent</span><span class="p">,</span> <span class="n">Component</span><span class="p">)</span>
+
+    <span class="n">MyComponent</span> <span class="p">();</span>
+
+    <span class="n">DECLARE_COMMANDS</span> <span class="p">(</span><span class="n">MyComponent</span><span class="p">)</span> <span class="c1">// declares interpretCommand and dispatch table</span>
+    <span class="n">DECLARE_COMMAND_CATEGORY</span> <span class="p">(</span><span class="s">&quot;Edit&quot;</span><span class="p">,</span> <span class="n">Component</span><span class="p">)</span> <span class="c1">// implements checkCommandCategory</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="c1">// Command methods</span>
+    <span class="kt">bool</span> <span class="n">onEditDelete</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// these macros create a dispatch-table and an implementation of interpretCommand</span>
+<span class="c1">// that automatically calls the given method when category and name match</span>
+
+<span class="n">BEGIN_COMMANDS</span> <span class="p">(</span><span class="n">MyComponent</span><span class="p">)</span>
+    <span class="n">DEFINE_COMMAND</span> <span class="p">(</span><span class="s">&quot;Edit&quot;</span><span class="p">,</span> <span class="s">&quot;Delete&quot;</span><span class="p">,</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">onEditDelete</span><span class="p">)</span>
+<span class="n">END_COMMANDS</span> <span class="p">(</span><span class="n">MyComponent</span><span class="p">)</span>
+
+<span class="n">IMPLEMENT_COMMANDS</span> <span class="p">(</span><span class="n">MyComponent</span><span class="p">,</span> <span class="n">Component</span><span class="p">)</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="kt">bool</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">onEditDelete</span> <span class="p">(</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">checkOnly</span> <span class="p">())</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// checkOnly flag: can the command be executed?</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="c1">// execute the command (delete something)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In most situations, the framework delivers a command message twice:
+first with the <code class="docutils literal notranslate"><span class="pre">kCheckOnly</span></code> flag set to check if the command can be executed (e.g. for greying out unavailable commands in a menu)
+and then without the flag for the actual execution. So it’s very important to check for <code class="docutils literal notranslate"><span class="pre">args.checkOnly</span> <span class="pre">()</span></code> in a command handling method: <strong>only execute the command if the flag is not set</strong>.</p>
+</section>
+</section>
+<section id="context-menu-handling">
+<h2>Context menu handling<a class="headerlink" href="#context-menu-handling" title="Link to this heading"></a></h2>
+<p>When a context menu is opened (e.g. on right click with a mouse or long press gesture on touch screen),
+the controllers of all views under the mouse can contribute to the menu if they implement the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IContextMenuHandler.html#doxid-struct-c-c-l-1-1-i-context-menu-handler"><span class="std std-ref"><span class="pre">IContextMenuHandler</span></span></a></code> interface (already done by the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Component.html#doxid-class-c-c-l-1-1-component"><span class="std std-ref"><span class="pre">Component</span></span></a></code> base class).</p>
+<p>A derived component class can override <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IContextMenuHandler.html#doxid-struct-c-c-l-1-1-i-context-menu-handler-1a6ec06f6bc297257bffd61cac350775ac"><span class="std std-ref"><span class="pre">IContextMenuHandler::appendContextMenu</span></span></a></code> and append commands to the menu (typically commands it handles).
+Returning <code class="docutils literal notranslate"><span class="pre">kResultTrue</span></code> stops building the menu.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">tresult</span> <span class="n">CCL_API</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">appendContextMenu</span> <span class="p">(</span><span class="n">IContextMenu</span><span class="o">&amp;</span> <span class="n">contextMenu</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">contextMenu</span><span class="p">.</span><span class="n">addCommandItem</span> <span class="p">(</span><span class="n">XSTR</span> <span class="p">(</span><span class="n">Delete</span><span class="p">),</span> <span class="s">&quot;Edit&quot;</span><span class="p">,</span> <span class="s">&quot;Delete&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+    <span class="n">contextMenu</span><span class="p">.</span><span class="n">addSeparatorItem</span> <span class="p">();</span>
+    <span class="n">contextMenu</span><span class="p">.</span><span class="n">addCommandItem</span> <span class="p">(</span><span class="n">XSTR</span> <span class="p">(</span><span class="n">Paste</span><span class="p">),</span> <span class="s">&quot;Edit&quot;</span><span class="p">,</span> <span class="s">&quot;Paste&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">SuperClass</span><span class="o">::</span><span class="n">appendContextMenu</span> <span class="p">(</span><span class="n">contextMenu</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="application-menu">
+<h2>Application Menu<a class="headerlink" href="#application-menu" title="Link to this heading"></a></h2>
+<p>An application can have a classical menu bar or an inplace application menu that can be invoked with a button in the UI.
+Both are defined in XML, as a tree of nested submenus and command items.
+The framework looks for the menu definitions as resources named <code class="docutils literal notranslate"><span class="pre">menubar.xml</span></code> or <code class="docutils literal notranslate"><span class="pre">appmenu.xml</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;MenuBar&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Menu</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;File&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;MenuItem</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;New&quot;</span><span class="w"> </span><span class="na">follow=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;MenuItem</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Open&quot;</span><span class="w"> </span><span class="na">follow=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;MenuItem</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Close&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;MenuSeparator/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;MenuItem</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Save&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;MenuSeparator/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;MenuItem</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Quit&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Menu&gt;</span>
+
+<span class="w">    </span>...
+<span class="nt">&lt;/MenuBar&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="views">
+<h2>Views<a class="headerlink" href="#views" title="Link to this heading"></a></h2>
+<p>A view represents a rectangular area on the screen. It has a size and position (relative to the parent view).
+Views can be nested. A Window is typically the root of a view tree.</p>
+<p>A view</p>
+<ul class="simple">
+<li><p>can draw itself</p></li>
+<li><p>can handle user input: mouse / key / touch / drag &amp; drop</p></li>
+<li><p>can react to other events: onSize (), attached (), detached ()</p></li>
+</ul>
+<section id="view-classes-in-cclgui">
+<h3>View classes in cclgui<a class="headerlink" href="#view-classes-in-cclgui" title="Link to this heading"></a></h3>
+<p>The Base class CCL::View implements the nesting and has the interfaces IView, IViewChildren.</p>
+<p>The cclgui framework has a lot of derived view classes. Some examples are:</p>
+<ul class="simple">
+<li><p>Controls like <code class="docutils literal notranslate"><span class="pre">Button</span></code>, <code class="docutils literal notranslate"><span class="pre">Toggle</span></code>, <code class="docutils literal notranslate"><span class="pre">Slider</span></code>, <code class="docutils literal notranslate"><span class="pre">Knob</span></code>, <code class="docutils literal notranslate"><span class="pre">Label</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBox</span></code>, <code class="docutils literal notranslate"><span class="pre">EditBox</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LayoutView</span></code> for arranging child view in various ways</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ScrollView</span></code> for presenting a larger target view in a smaller viewport</p></li>
+</ul>
+<p>Views are only created in the cclgui module. In other modules (e.g. the application module), it’s not allowed to derive from view classes.
+An application can work with views via the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref"><span class="pre">IView</span></span></a></code> interface and the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_ViewBox.html#doxid-class-c-c-l-1-1-view-box"><span class="std std-ref"><span class="pre">ViewBox</span></span></a></code> helper class.</p>
+</section>
+<section id="usercontrols">
+<h3>UserControls<a class="headerlink" href="#usercontrols" title="Link to this heading"></a></h3>
+<p>To implement custom views, application code can derive from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_UserControl.html#doxid-class-c-c-l-1-1-user-control"><span class="std std-ref"><span class="pre">UserControl</span></span></a></code>.
+A user control is an application object that cooperates with a special view of class <code class="doxyrest-cref docutils literal notranslate"><span class="pre">UserControlHost</span></code>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">UserControlHost</span></code> is part of the view tree like any other view. It delegates all relevant UI events to the <code class="docutils literal notranslate"><span class="pre">UserControl</span></code>
+They communicate via interfaces <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IUserControlHost.html#doxid-struct-c-c-l-1-1-i-user-control-host"><span class="std std-ref"><span class="pre">IUserControlHost</span></span></a></code> (and <code class="docutils literal notranslate"><span class="pre">IView</span></code>) and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IUserControl.html#doxid-struct-c-c-l-1-1-i-user-control"><span class="std std-ref"><span class="pre">IUserControl</span></span></a></code>.
+All this is managed by the base classes. A derived <code class="docutils literal notranslate"><span class="pre">UserControl</span></code> just overrides the methods it needs.</p>
+<p>Example: Deriving from <code class="docutils literal notranslate"><span class="pre">UserControl</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyCustomView</span><span class="p">:</span> <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">UserControl</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MyCustomView</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">RectRef</span> <span class="n">size</span><span class="p">);</span>
+
+    <span class="c1">// draw contents</span>
+    <span class="kt">void</span> <span class="nf">draw</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">DrawEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// react to various events</span>
+    <span class="kt">void</span> <span class="nf">onSize</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">PointRef</span> <span class="n">delta</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">attached</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">IView</span><span class="o">*</span> <span class="n">parent</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">removed</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">IView</span><span class="o">*</span> <span class="n">parent</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// handle user input events</span>
+    <span class="kt">bool</span> <span class="nf">onKeyDown</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">KeyEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="nf">onKeyUp</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">KeyEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="nf">onMouseWheel</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">MouseWheelEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// handle user input transactions</span>
+    <span class="n">CCL</span><span class="o">::</span><span class="n">IMouseHandler</span><span class="o">*</span> <span class="n">CCL_API</span> <span class="n">createMouseHandler</span><span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">MouseEvent</span> <span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="n">CCL</span><span class="o">::</span><span class="n">ITouchHandler</span><span class="o">*</span> <span class="n">CCL_API</span> <span class="n">createTouchHandler</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">TouchEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="n">CCL</span><span class="o">::</span><span class="n">IDragHandler</span><span class="o">*</span> <span class="n">CCL_API</span> <span class="n">createDragHandler</span> <span class="p">(</span><span class="k">const</span> <span class="n">CCL</span><span class="o">::</span><span class="n">DragEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// ...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-views-in-a-component">
+<h3>Creating Views in a Component<a class="headerlink" href="#creating-views-in-a-component" title="Link to this heading"></a></h3>
+<p>The Component base class inherits the IViewFactory interface. A derived class can implement it by</p>
+<ul class="simple">
+<li><p>creating a view defined as <code class="docutils literal notranslate"><span class="pre">&lt;Form&gt;</span></code> in the application skin</p></li>
+<li><p>creating a UserControl (implemented in the application module)</p></li>
+<li><p>create a framework view (implemented in cclgui)</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IView</span><span class="o">*</span> <span class="n">CCL_API</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">createView</span> <span class="p">(</span><span class="n">StringID</span> <span class="n">name</span><span class="p">,</span> <span class="n">VariantRef</span> <span class="n">data</span><span class="p">,</span> <span class="k">const</span> <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s">&quot;MyEditView&quot;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// a) create a view defined as &lt;Form&gt; in skin, pass &quot;this&quot; as controller (e.g. to provide parameters)</span>
+        <span class="n">ITheme</span><span class="o">*</span> <span class="n">theme</span> <span class="o">=</span> <span class="n">getTheme</span> <span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">theme</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">theme</span><span class="o">-&gt;</span><span class="n">createView</span> <span class="p">(</span><span class="s">&quot;EditorView&quot;</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">asUnknown</span> <span class="p">());</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s">&quot;MyUserControl&quot;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// b) create a UserControl (implemented in the appplication module)</span>
+        <span class="k">auto</span><span class="o">*</span> <span class="n">myView</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">MyUserControl</span> <span class="p">(</span><span class="n">bounds</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">*</span><span class="n">myView</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s">&quot;MyView&quot;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// c) create a framework view (implemented in cclgui)</span>
+        <span class="n">ViewBox</span> <span class="n">view</span> <span class="p">(</span><span class="n">ClassID</span><span class="o">::</span><span class="n">View</span><span class="p">,</span> <span class="n">bounds</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">SuperClass</span><span class="o">::</span><span class="n">createView</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">bounds</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="strings.html" class="btn btn-neutral float-left" title="Using strings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="phases.html" class="btn btn-neutral float-right" title="Application Phases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::System::FolderType &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::System::ShellOpenFlags" href="enum_CCL_System_ShellOpenFlags.html" />
+    <link rel="prev" title="enum CCL::System::ComputerInfoFlags" href="enum_CCL_System_ComputerInfoFlags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_system.html">CCL-System</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_System.html">namespace CCL::System</a></li>
+      <li class="breadcrumb-item active">enum CCL::System::FolderType</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-system-foldertype">
+<span id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96"></span><span id="index-0"></span><h1>enum CCL::System::FolderType<a class="headerlink" href="#enum-ccl-system-foldertype" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Folder types. <a class="reference internal" href="#details-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;isysteminfo.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">FolderType</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a90300b8558dbc8db89093f0f2e75f07b"><span class="std std-ref">kSystemFolder</span></a><span></span>              <span class="o">=</span> <span class="sc">&#39;Syst&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a2ff3872a00781c271136c91117086937"><span class="std std-ref">kProgramsFolder</span></a><span></span>            <span class="o">=</span> <span class="sc">&#39;Prog&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0da76d8c2ee3bcf7e6364eaa6839b55f"><span class="std std-ref">kSharedDataFolder</span></a><span></span>          <span class="o">=</span> <span class="sc">&#39;ShDt&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a5608f46bf63baeb061eeea8176b668eb"><span class="std std-ref">kSharedSettingsFolder</span></a><span></span>      <span class="o">=</span> <span class="sc">&#39;ShSe&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a7f855726ef2df6b1a87632b04e8fc27f"><span class="std std-ref">kSharedSupportFolder</span></a><span></span>       <span class="o">=</span> <span class="sc">&#39;ShSp&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a29f88d0f0c574a02b338e7ba911edfad"><span class="std std-ref">kTempFolder</span></a><span></span>                <span class="o">=</span> <span class="sc">&#39;Temp&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ad3f250bf5362645b743292a33822ac53"><span class="std std-ref">kDesktopFolder</span></a><span></span>             <span class="o">=</span> <span class="sc">&#39;Desk&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ac461701e838def34f2de11e87b6809a5"><span class="std std-ref">kUserSettingsFolder</span></a><span></span>        <span class="o">=</span> <span class="sc">&#39;Sett&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ac4a915a0f482e2a0c07d2de211fa7535"><span class="std std-ref">kUserPreferencesFolder</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;Pref&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a9f6fe089f6f2c189e5920a380e2bb7f3"><span class="std std-ref">kUserDocumentFolder</span></a><span></span>        <span class="o">=</span> <span class="sc">&#39;Docs&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a875b06ee9d48208477327d85ca433329"><span class="std std-ref">kUserMusicFolder</span></a><span></span>           <span class="o">=</span> <span class="sc">&#39;Msic&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ab706365f8bd1fe72e62afe30c0ce57be"><span class="std std-ref">kUserDownloadsFolder</span></a><span></span>       <span class="o">=</span> <span class="sc">&#39;Dwnl&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0f5ea911829f563962044efea28de5cf"><span class="std std-ref">kUserAppSupportFolder</span></a><span></span>      <span class="o">=</span> <span class="sc">&#39;UPrg&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96afedda6876ef25215ce56dfd70399326d"><span class="std std-ref">kCompanySettingsFolder</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;CSet&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a4fabea5aac36b455582ffb9f5b9625c6"><span class="std std-ref">kCompanySupportFolder</span></a><span></span>      <span class="o">=</span> <span class="sc">&#39;CSup&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0396bf4f49c1fcc80d685c6e474428d1"><span class="std std-ref">kCompanyContentFolder</span></a><span></span>      <span class="o">=</span> <span class="sc">&#39;CCnt&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96adcdbbdb7d092314931aa0385bed6ef31"><span class="std std-ref">kUserContentFolder</span></a><span></span>         <span class="o">=</span> <span class="sc">&#39;Cont&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a687612b9a94a4ca5d9f8d10f0dae25b3"><span class="std std-ref">kSharedContentFolder</span></a><span></span>       <span class="o">=</span> <span class="sc">&#39;SCnt&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96aeabbf542162dee7675d0d5f320bab326"><span class="std std-ref">kAppFactoryContentFolder</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;FCnt&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96afbb8d869571c0832787b8ac64c98db4b"><span class="std std-ref">kAppSettingsFolder</span></a><span></span>         <span class="o">=</span> <span class="sc">&#39;Apps&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a2f3fd26251b58d98d6924e4a5fb40344"><span class="std std-ref">kAppSettingsPlatformFolder</span></a><span></span> <span class="o">=</span> <span class="sc">&#39;xAps&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a097d8d78f0944ec89d9b31521a166c98"><span class="std std-ref">kSharedAppSettingsFolder</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;ShAp&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a601079224bb18696dd32ce42d86470bd"><span class="std std-ref">kAppSupportFolder</span></a><span></span>          <span class="o">=</span> <span class="sc">&#39;Supp&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a702cb9469e57e357c677a1f055e5f24d"><span class="std std-ref">kAppDeploymentFolder</span></a><span></span>       <span class="o">=</span> <span class="sc">&#39;Depl&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a58257ce621def3761126d159453626ab"><span class="std std-ref">kAppPluginsFolder</span></a><span></span>          <span class="o">=</span> <span class="sc">&#39;Plug&#39;</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Folder types.</p>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a90300b8558dbc8db89093f0f2e75f07b"><span id="index-1"></span><span></span><span class="n">kSystemFolder</span></pre>
+<p>[R] folder where the OS is installed</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a2ff3872a00781c271136c91117086937"><span id="index-2"></span><span></span><span class="n">kProgramsFolder</span></pre>
+<p>[R] programs/applications folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0da76d8c2ee3bcf7e6364eaa6839b55f"><span id="index-3"></span><span></span><span class="n">kSharedDataFolder</span></pre>
+<p>[R] Data folder for all users</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a5608f46bf63baeb061eeea8176b668eb"><span id="index-4"></span><span></span><span class="n">kSharedSettingsFolder</span></pre>
+<p>[R] <a class="reference internal" href="class_CCL_Settings.html#doxid-class-c-c-l-1-1-settings"><span class="std std-ref">Settings</span></a> folder for all users</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a7f855726ef2df6b1a87632b04e8fc27f"><span id="index-5"></span><span></span><span class="n">kSharedSupportFolder</span></pre>
+<p>[R] application support files for all apps/users (scripts, plug-ins, etc.)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a29f88d0f0c574a02b338e7ba911edfad"><span id="index-6"></span><span></span><span class="n">kTempFolder</span></pre>
+<p>[R] user temporary folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ad3f250bf5362645b743292a33822ac53"><span id="index-7"></span><span></span><span class="n">kDesktopFolder</span></pre>
+<p>[R] user desktop folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ac461701e838def34f2de11e87b6809a5"><span id="index-8"></span><span></span><span class="n">kUserSettingsFolder</span></pre>
+<p>[R] user “Settings” folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ac4a915a0f482e2a0c07d2de211fa7535"><span id="index-9"></span><span></span><span class="n">kUserPreferencesFolder</span></pre>
+<p>[R] user “Preferences” folder (differs on Mac OS only, otherwise same as kUserSettingsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a9f6fe089f6f2c189e5920a380e2bb7f3"><span id="index-10"></span><span></span><span class="n">kUserDocumentFolder</span></pre>
+<p>[R] user “Documents” folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a875b06ee9d48208477327d85ca433329"><span id="index-11"></span><span></span><span class="n">kUserMusicFolder</span></pre>
+<p>[R] user “Music” folder (fallback to “Documents”)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96ab706365f8bd1fe72e62afe30c0ce57be"><span id="index-12"></span><span></span><span class="n">kUserDownloadsFolder</span></pre>
+<p>[R] user “Downloads” folder (fallback to “Documents”)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0f5ea911829f563962044efea28de5cf"><span id="index-13"></span><span></span><span class="n">kUserAppSupportFolder</span></pre>
+<p>[R] user application support folder</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96afedda6876ef25215ce56dfd70399326d"><span id="index-14"></span><span></span><span class="n">kCompanySettingsFolder</span></pre>
+<p>[R] company-wide settings folder (resides in kSharedSettingsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a4fabea5aac36b455582ffb9f5b9625c6"><span id="index-15"></span><span></span><span class="n">kCompanySupportFolder</span></pre>
+<p>[R] company-wide application support folder (resides in kSharedSupportFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a0396bf4f49c1fcc80d685c6e474428d1"><span id="index-16"></span><span></span><span class="n">kCompanyContentFolder</span></pre>
+<p>[R] company-wide content for all users (resides in kSharedDataFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96adcdbbdb7d092314931aa0385bed6ef31"><span id="index-17"></span><span></span><span class="n">kUserContentFolder</span></pre>
+<p>[R/W] user “DocumentsAppName” folder (usually in kUserDocumentFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a687612b9a94a4ca5d9f8d10f0dae25b3"><span id="index-18"></span><span></span><span class="n">kSharedContentFolder</span></pre>
+<p>[R] shared application content for all users (resides in kSharedDataFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96aeabbf542162dee7675d0d5f320bab326"><span id="index-19"></span><span></span><span class="n">kAppFactoryContentFolder</span></pre>
+<p>[R] application factory content folder (usually same as kUserContentFolder, dependes on platform)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96afbb8d869571c0832787b8ac64c98db4b"><span id="index-20"></span><span></span><span class="n">kAppSettingsFolder</span></pre>
+<p>[R] user application settings folder (resides in kUserSettingsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a2f3fd26251b58d98d6924e4a5fb40344"><span id="index-21"></span><span></span><span class="n">kAppSettingsPlatformFolder</span></pre>
+<p>[R] platform-specific settings folder (resides in kAppSettingsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a097d8d78f0944ec89d9b31521a166c98"><span id="index-22"></span><span></span><span class="n">kSharedAppSettingsFolder</span></pre>
+<p>[R] shared application settings folder (resides in kCompanySettingsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a601079224bb18696dd32ce42d86470bd"><span id="index-23"></span><span></span><span class="n">kAppSupportFolder</span></pre>
+<p>[R] application support files (scripts, plug-ins, etc., usually in kProgramsFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a702cb9469e57e357c677a1f055e5f24d"><span id="index-24"></span><span></span><span class="n">kAppDeploymentFolder</span></pre>
+<p>[R/W] application support files, can differ in debug builds (defaults to kAppSupportFolder)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-system-1aeff662af2bd9a10a6b77886adf2ecb96a58257ce621def3761126d159453626ab"><span id="index-25"></span><span></span><span class="n">kAppPluginsFolder</span></pre>
+<p>[R] plug-ins to be loaded by application (usually in kAppSupportFolder/Plugins)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_System_ComputerInfoFlags.html" class="btn btn-neutral float-left" title="enum CCL::System::ComputerInfoFlags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_System_ShellOpenFlags.html" class="btn btn-neutral float-right" title="enum CCL::System::ShellOpenFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

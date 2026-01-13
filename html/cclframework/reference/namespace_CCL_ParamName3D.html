@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::ParamName3D &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::Persistence" href="namespace_CCL_Persistence.html" />
+    <link rel="prev" title="struct CCL::Net::ServiceBasicInformation" href="struct_CCL_Net_ServiceBasicInformation.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">namespace CCL::ParamName3D</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-paramname3d">
+<span id="doxid-namespace-c-c-l-1-1-param-name3-d"></span><span id="index-0"></span><h1>namespace CCL::ParamName3D<a class="headerlink" href="#namespace-ccl-paramname3d" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">ParamName3D</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a447a246cc9ed943a8013f5ab0b1cb414"><span></span><span class="n">kProjectionMatrix</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1aeef1cdbef95dbcc36d62e00cbcb759ca"><span class="std std-ref">projectionMatrix</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a6cc350d7318516fa9054976395e2486b"><span></span><span class="n">kModelMatrix</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a6044a2ed3ceed27fbbb5c757f87e610d"><span class="std std-ref">modelMatrix</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ad13c65e06c8cbe6bb33baf56b2415fcb"><span></span><span class="n">kModelViewMatrix</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1aad23acfad13f66403eaa429b2f56b168"><span class="std std-ref">modelViewMatrix</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1af44e6e220c15819031c85d7bc82746d5"><span></span><span class="n">kNormalMatrix</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a4340032ff670b7714e5573331ffcc03c"><span class="std std-ref">normalMatrix</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1aa2c96b5fd2536c0cd52e009cb197778e"><span></span><span class="n">kCameraPosition</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1ac4498750b25db81e6a660990e08271e9"><span class="std std-ref">cameraPosition</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1af4201f4f61f17efd452ba575132b8a22"><span></span><span class="n">kAmbientLight</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1ada1ccd2ac4e3f31797f328dbc17245dc"><span class="std std-ref">ambientLight</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a7d75f7e57b2c3fc9861da99d45aab1ba"><span></span><span class="n">kDirectionalLight</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a84e6b393eb3a1ea3c8e6bd100ab788e7"><span class="std std-ref">directionalLight</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a0fc2cabbfc48ff3bdebd38f768fb055a"><span></span><span class="n">kPointLight</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a84dcaa6a0c36270773e65f8a3fabf8a1"><span class="std std-ref">pointLight</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a105430dc3d46fd8875850156d6ed438b"><span></span><span class="n">kLightColor</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a37dbdc30935031c05304482e1be89d8f"><span class="std std-ref">color</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1abc79928ced68f2c82c901091acac835c"><span></span><span class="n">kLightDirection</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a99f26e6ee9fcd62f75203b5402df8098"><span class="std std-ref">direction</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1aec32b0ea7817642eead5e33cd5e65ce1"><span></span><span class="n">kLightPosition</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a7130b1618285588513fd1ff97884b9d9"><span class="std std-ref">position</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1af87f6baf8044cdabd48bdb003d03a39e"><span></span><span class="n">kPointLightConstantTerm</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a47f93d11f19780315a4455863c602316"><span class="std std-ref">constantTerm</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1acab23a2e25df9e76107dd3b49a637a71"><span></span><span class="n">kPointLightLinearFactor</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1ab2bd1c5b4123115bcfb7a9cdd52beee2"><span class="std std-ref">linearFactor</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ac84459560c29e14b305649ed50194ee6"><span></span><span class="n">kPointLightQuadraticFactor</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1aa70e8f4f43a8e3c6e68db328d5ded7a1"><span class="std std-ref">quadraticFactor</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ac440d74dbef430e842f3ab5dc7cf15c6"><span></span><span class="n">kLightMask</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1a920966615820740a78b1bd7b8acbb292"><span class="std std-ref">lightMask</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ad90f30491501f7adb7ef0356f36aebf1"><span></span><span class="n">kMaterialColor</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1acd1f676aa8edde9a494fe6eae5800840"><span class="std std-ref">materialColor</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a408d4f18c09942c866f525d17a53e019"><span></span><span class="n">kShininess</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-param-name3-d-1ac036624dcba3a49e9ea8dc498012a92c"><span class="std std-ref">shininess</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ab9c4efc6093a489a6724e97065d8d42e"><span></span><span class="n">kOpacity</span></span><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace ParamName3D</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-param-name3-d"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1aeef1cdbef95dbcc36d62e00cbcb759ca"><span id="index-1"></span><span></span> <span class="n">projectionMatrix</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">Transform3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a6044a2ed3ceed27fbbb5c757f87e610d"><span id="index-2"></span><span></span> <span class="n">modelMatrix</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">Transform3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1aad23acfad13f66403eaa429b2f56b168"><span id="index-3"></span><span></span> <span class="n">modelViewMatrix</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">Transform3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a4340032ff670b7714e5573331ffcc03c"><span id="index-4"></span><span></span> <span class="n">normalMatrix</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">Transform3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ac4498750b25db81e6a660990e08271e9"><span id="index-5"></span><span></span> <span class="n">cameraPosition</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_PointF4D.html#doxid-struct-c-c-l-1-1-point-f4-d"><span class="std std-ref">PointF4D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ada1ccd2ac4e3f31797f328dbc17245dc"><span id="index-6"></span><span></span> <span class="n">ambientLight</span></pre>
+<p>&lt; [struct]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a84e6b393eb3a1ea3c8e6bd100ab788e7"><span id="index-7"></span><span></span> <span class="n">directionalLight</span></pre>
+<p>&lt; [struct]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a84dcaa6a0c36270773e65f8a3fabf8a1"><span id="index-8"></span><span></span> <span class="n">pointLight</span></pre>
+<p>&lt; [struct]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a37dbdc30935031c05304482e1be89d8f"><span id="index-9"></span><span></span> <span class="n">color</span></pre>
+<p>&lt; [ColorF]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a99f26e6ee9fcd62f75203b5402df8098"><span id="index-10"></span><span></span> <span class="n">direction</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_PointF4D.html#doxid-struct-c-c-l-1-1-point-f4-d"><span class="std std-ref">PointF4D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a7130b1618285588513fd1ff97884b9d9"><span id="index-11"></span><span></span> <span class="n">position</span></pre>
+<p>&lt; [<a class="reference internal" href="struct_CCL_PointF4D.html#doxid-struct-c-c-l-1-1-point-f4-d"><span class="std std-ref">PointF4D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a47f93d11f19780315a4455863c602316"><span id="index-12"></span><span></span> <span class="n">constantTerm</span></pre>
+<p>&lt; [float]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ab2bd1c5b4123115bcfb7a9cdd52beee2"><span id="index-13"></span><span></span> <span class="n">linearFactor</span></pre>
+<p>&lt; [float]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1aa70e8f4f43a8e3c6e68db328d5ded7a1"><span id="index-14"></span><span></span> <span class="n">quadraticFactor</span></pre>
+<p>&lt; [float]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1a920966615820740a78b1bd7b8acbb292"><span id="index-15"></span><span></span> <span class="n">lightMask</span></pre>
+<p>&lt; [int]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1acd1f676aa8edde9a494fe6eae5800840"><span id="index-16"></span><span></span> <span class="n">materialColor</span></pre>
+<p>&lt; [ColorF]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-param-name3-d-1ac036624dcba3a49e9ea8dc498012a92c"><span id="index-17"></span><span></span> <span class="n">shininess</span></pre>
+<p>&lt; [float]</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_Net_ServiceBasicInformation.html" class="btn btn-neutral float-left" title="struct CCL::Net::ServiceBasicInformation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_Persistence.html" class="btn btn-neutral float-right" title="namespace CCL::Persistence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

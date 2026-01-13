@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace Core::Skin::ViewAttributes &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace Core::Skin::ViewClasses" href="namespace_Core_Skin_ViewClasses.html" />
+    <link rel="prev" title="namespace Core::Skin::ResourceAttributes" href="namespace_Core_Skin_ResourceAttributes.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Skin.html">namespace Core::Skin</a></li>
+      <li class="breadcrumb-item active">namespace Core::Skin::ViewAttributes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-core-skin-viewattributes">
+<span id="doxid-namespace-core-1-1-skin-1-1-view-attributes"></span><span id="index-0"></span><h1>namespace Core::Skin::ViewAttributes<a class="headerlink" href="#namespace-core-skin-viewattributes" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">ViewAttributes</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a9e388c608e2f57f9a4d53c0de74a0e9c"><span></span><span class="n">kType</span></span><span></span> <span class="o">=</span> <span class="s">&quot;type&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a9788fb0cd58ccd23a32907e1ab4f6193"><span></span><span class="n">kName</span></span><span></span> <span class="o">=</span> <span class="s">&quot;name&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1abdea2824522127f33138c769dc4070a3"><span></span><span class="n">kChildren</span></span><span></span> <span class="o">=</span> <span class="s">&quot;children&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a91df5a8e9c0c26845969e4e8ebd84db2"><span></span><span class="n">kDefines</span></span><span></span> <span class="o">=</span> <span class="s">&quot;def&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a72e5b09e0248469d803525ece440eebd"><span></span><span class="n">kController</span></span><span></span> <span class="o">=</span> <span class="s">&quot;controller&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a314a2ed8862dab09772e77dd9c1aaadc"><span></span><span class="n">kViewName</span></span><span></span> <span class="o">=</span> <span class="s">&quot;viewname&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a7285081c10fdf90b688236d04da84f79"><span></span><span class="n">kInherit</span></span><span></span> <span class="o">=</span> <span class="s">&quot;inherit&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a2599877c3a6c1c709121acd9029bee8f"><span></span><span class="n">kOptions</span></span><span></span> <span class="o">=</span> <span class="s">&quot;options&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1abb17e254b272b667df5ff485bce9bf22"><span></span><span class="n">kStyle</span></span><span></span> <span class="o">=</span> <span class="s">&quot;style&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a48e0d95472b478253b7c8551d88f2a27"><span></span><span class="n">kBackColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;backcolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a2e3e68f696d23e60d0fe3448f1195a4c"><span></span><span class="n">kBackColorDisabled</span></span><span></span> <span class="o">=</span> <span class="s">&quot;backcolor.disabled&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a912ecbb625930b6ca65b184d9bf4289f"><span></span><span class="n">kForeColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;forecolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1ade65cafe3a1256adfb4860451d68e4df"><span></span><span class="n">kForeColorDisabled</span></span><span></span> <span class="o">=</span> <span class="s">&quot;forecolor.disabled&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a1f55b6df6a2214f66cbdedbba8043fc5"><span></span><span class="n">kTextColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;textcolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a8c60b03aeaae7395f8f835a20ff52220"><span></span><span class="n">kTextColorOn</span></span><span></span> <span class="o">=</span> <span class="s">&quot;textcolor.on&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a32e0bf7e6dc8f18543b838dd36077796"><span></span><span class="n">kTextColorDisabled</span></span><span></span> <span class="o">=</span> <span class="s">&quot;textcolor.disabled&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1ace2617137771f2776c28cd0294a3d2e9"><span></span><span class="n">kHiliteColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;hilitecolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1afe6ea0b0564f76a9647c924e321d282c"><span></span><span class="n">kFont</span></span><span></span> <span class="o">=</span> <span class="s">&quot;font&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a35247947cb802e653ed24556362d233d"><span></span><span class="n">kTextAlign</span></span><span></span> <span class="o">=</span> <span class="s">&quot;textalign&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a182e1b401850fa2970e9c0f7916d4dc8"><span></span><span class="n">kTitle</span></span><span></span> <span class="o">=</span> <span class="s">&quot;title&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1ac1d7aab40b9150ee82f9b402b74bb83f"><span></span><span class="n">kImage</span></span><span></span> <span class="o">=</span> <span class="s">&quot;image&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a1c325166eea43d218c1b0f2725af7885"><span></span><span class="n">kIcon</span></span><span></span> <span class="o">=</span> <span class="s">&quot;icon&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1af91e324bd95c1a182289aab5487f2cf2"><span></span><span class="n">kBackground</span></span><span></span> <span class="o">=</span> <span class="s">&quot;background&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1afbf7489bae996b11d4e9a146c2f9757c"><span></span><span class="n">kTextTrimMode</span></span><span></span> <span class="o">=</span> <span class="s">&quot;texttrim&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a6c74b73329784bb0b3066086f8e2fde8"><span></span><span class="n">kRadioValue</span></span><span></span> <span class="o">=</span> <span class="s">&quot;radiovalue&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1aba2da8b8899b7a0712fe2794c1a794c4"><span></span><span class="n">kKeyboardLayout</span></span><span></span> <span class="o">=</span> <span class="s">&quot;keyboardlayout&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1abe4d6a785d078d62ad781a4e8af58767"><span></span><span class="n">kKeyboardCapitalization</span></span><span></span> <span class="o">=</span> <span class="s">&quot;capitalization&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a39264c47b43ff1a6eaddd77e5f6e2457"><span></span><span class="n">kRowHeight</span></span><span></span> <span class="o">=</span> <span class="s">&quot;rowheight&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1acd36d0c51ca3b93f97d98404921eb079"><span></span><span class="n">kSelectColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;selectcolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1ae7b4624a57ee0ed6993bbdefc8dc587c"><span></span><span class="n">kSeparatorColor</span></span><span></span> <span class="o">=</span> <span class="s">&quot;separatorcolor&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a784603eb521e17fb96257c7ca974e4e5"><span></span><span class="n">kItemInset</span></span><span></span> <span class="o">=</span> <span class="s">&quot;iteminset&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a25feda9eb5920ab22ae4c90c26be0166"><span></span><span class="n">kScrollerSize</span></span><span></span> <span class="o">=</span> <span class="s">&quot;scrollersize&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a225ecc40aff95b84cd836925842fa409"><span></span><span class="n">kContentSize</span></span><span></span> <span class="o">=</span> <span class="s">&quot;contentsize&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-skin-1-1-view-attributes-1a4a106aa59570d959badc4fb43617f5a4"><span></span><span class="n">kFocusBorder</span></span><span></span> <span class="o">=</span> <span class="s">&quot;focusborder&quot;</span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace ViewAttributes</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_Core_Skin_ResourceAttributes.html" class="btn btn-neutral float-left" title="namespace Core::Skin::ResourceAttributes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_Core_Skin_ViewClasses.html" class="btn btn-neutral float-right" title="namespace Core::Skin::ViewClasses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

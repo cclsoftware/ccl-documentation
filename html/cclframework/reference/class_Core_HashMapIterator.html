@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template class Core::HashMapIterator &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class CCL::HashTable" href="class_CCL_HashTable.html" />
+    <link rel="prev" title="template class Core::HashMap" href="class_Core_HashMap.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+          <li class="breadcrumb-item"><a href="group_base_collect.html">Collections</a></li>
+      <li class="breadcrumb-item active">template class Core::HashMapIterator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-core-hashmapiterator">
+<span id="doxid-class-core-1-1-hash-map-iterator"></span><span id="index-0"></span><h1>template class Core::HashMapIterator<a class="headerlink" href="#template-class-core-hashmapiterator" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Hash map iterator. <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#details-class-core-1-1-hash-map-iterator"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corehashmap.h&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TKey</span><span class="p">,</span> <span class="k">class</span> <span class="n">TValue</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">HashMapIterator</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMap.html#doxid-class-core-1-1-hash-map"><span class="std std-ref">HashMap</span></a><span></span> <span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span> <span class="n">TValue</span><span class="o">&gt;::</span><span class="n">TAssociation</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-hash-map-iterator-1a1aed4b29fa59b38af551c61cc61cdbf3"><span></span><span class="n">Association</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-hash-map-iterator-1adaacb1d988fcb23220291bf6cb1bdfc7"><span></span><span class="n">HashMapIterator</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMap.html#doxid-class-core-1-1-hash-map"><span class="std std-ref">HashMap</span></a><span></span> <span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span> <span class="n">TValue</span><span class="o">&gt;&amp;</span> <span class="n">map</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a53696257abcf958af60783f641fd9618"><span class="std std-ref">done</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a394ecb3ba8dcea0cbcc3fba8d2306ec3"><span class="std std-ref">first</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1ab8ab6458b874d68a456b82dd9df83bab"><span class="std std-ref">last</span></a><span></span> <span class="p">();</span>
+    <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a1aed4b29fa59b38af551c61cc61cdbf3"><span class="std std-ref">Association</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1ae2e66a37ca67745646de1516b129bfea"><span class="std std-ref">nextAssociation</span></a><span></span> <span class="p">();</span>
+    <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a1aed4b29fa59b38af551c61cc61cdbf3"><span class="std std-ref">Association</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a3c5a9dfc2aeefcc36d7b11ef8047e4c3"><span class="std std-ref">previousAssociation</span></a><span></span> <span class="p">();</span>
+    <span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1ab7a0ce323bcc3ebaf58f710c1b9ee927"><span class="std std-ref">next</span></a><span></span> <span class="p">();</span>
+    <span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1aba0c34484b7044573e9bcb14a543a152"><span class="std std-ref">previous</span></a><span></span> <span class="p">();</span>
+    <span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a06bf11319fbd7f4c3f209705c7d64ecc"><span class="std std-ref">peekNext</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-hash-map-iterator-1a8ac27c1b1c594042a90cb924f3c2c731"><span></span><span class="k">operator</span> <span class="o">==</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">HashMapIterator</span> <span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span> <span class="n">TValue</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-hash-map-iterator-1a55fd9275bb99e9da0e458ee7fe2fdb38"><span></span><span class="k">operator</span> <span class="o">!=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">HashMapIterator</span> <span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span> <span class="n">TValue</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-hash-map-iterator"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Hash map iterator.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1a53696257abcf958af60783f641fd9618"><span id="index-1"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">done</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if iteration is done.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1a394ecb3ba8dcea0cbcc3fba8d2306ec3"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">first</span> <span class="p">()</span></pre>
+<p>Seek to first element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1ab8ab6458b874d68a456b82dd9df83bab"><span id="index-3"></span><span></span><span class="kt">void</span> <span class="n">last</span> <span class="p">()</span></pre>
+<p>Seek to last element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1ae2e66a37ca67745646de1516b129bfea"><span id="index-4"></span><span></span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a1aed4b29fa59b38af551c61cc61cdbf3"><span class="std std-ref">Association</span></a><span></span><span class="o">&amp;</span> <span class="n">nextAssociation</span> <span class="p">()</span></pre>
+<p>Seek and return next key/value pair.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1a3c5a9dfc2aeefcc36d7b11ef8047e4c3"><span id="index-5"></span><span></span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator-1a1aed4b29fa59b38af551c61cc61cdbf3"><span class="std std-ref">Association</span></a><span></span><span class="o">&amp;</span> <span class="n">previousAssociation</span> <span class="p">()</span></pre>
+<p>Seek and return previous key/value pair.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1ab7a0ce323bcc3ebaf58f710c1b9ee927"><span id="index-6"></span><span></span><span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <span class="n">next</span> <span class="p">()</span></pre>
+<p>Seek and return next value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1aba0c34484b7044573e9bcb14a543a152"><span id="index-7"></span><span></span><span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <span class="n">previous</span> <span class="p">()</span></pre>
+<p>Seek and return previous value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-hash-map-iterator-1a06bf11319fbd7f4c3f209705c7d64ecc"><span id="index-8"></span><span></span><span class="k">const</span> <span class="n">TValue</span><span class="o">&amp;</span> <span class="n">peekNext</span> <span class="p">()</span></pre>
+<p>Peek at next value (but don’t seek).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_HashMap.html" class="btn btn-neutral float-left" title="template class Core::HashMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_CCL_HashTable.html" class="btn btn-neutral float-right" title="template class CCL::HashTable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

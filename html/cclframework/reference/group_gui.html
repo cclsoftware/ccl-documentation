@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL-GUI &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3D Graphics" href="group_gui_graphics3d.html" />
+    <link rel="prev" title="template class CCL::UnknownPtr" href="class_CCL_UnknownPtr.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+      <li class="breadcrumb-item active">CCL-GUI</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-gui">
+<span id="doxid-group-gui"></span><span id="index-0"></span><h1>CCL-GUI<a class="headerlink" href="#ccl-gui" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Graphical User Interface (dynamic library).</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="group_gui_graphics3d.html#doxid-group-gui-graphics3d"><span class="std std-ref">3D Graphics</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_accessibility.html#doxid-group-gui-accessibility"><span class="std std-ref">Accessibility</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_command.html#doxid-group-gui-command"><span class="std std-ref">Commands</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_data.html#doxid-group-gui-data"><span class="std std-ref">Data Transfer</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_graphics.html#doxid-group-gui-graphics"><span class="std std-ref">Graphics</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_help.html#doxid-group-gui-help"><span class="std std-ref">Help System</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_menu.html#doxid-group-gui-menu"><span class="std std-ref">Menu</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_param.html#doxid-group-gui-param"><span class="std std-ref">Parameters</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_skin.html#doxid-group-gui-skin"><span class="std std-ref">Skin</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_event.html#doxid-group-gui-event"><span class="std std-ref">User Interface Events</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_view.html#doxid-group-gui-view"><span class="std std-ref">Views</span></a></div>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="group_gui_appview.html#doxid-group-gui-appview"><span class="std std-ref">Custom Controls</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_dialog.html#doxid-group-gui-dialog"><span class="std std-ref">Dialogs</span></a></div>
+<div class="line"><a class="reference internal" href="group_gui_item.html#doxid-group-gui-item"><span class="std std-ref">List- and Treeviews</span></a></div>
+</div>
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_ClassID.html#doxid-namespace-c-c-l-1-1-class-i-d"><span class="std std-ref">CCL::ClassID</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Win32_DpiAwarenessScope.html#doxid-struct-c-c-l-1-1-win32-1-1-dpi-awareness-scope"><span class="std std-ref">CCL::Win32::DpiAwarenessScope</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">CCL::IAnimation</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IApplication.html#doxid-struct-c-c-l-1-1-i-application"><span class="std std-ref">CCL::IApplication</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IApplicationProvider.html#doxid-struct-c-c-l-1-1-i-application-provider"><span class="std std-ref">CCL::IApplicationProvider</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAutoScroller.html#doxid-struct-c-c-l-1-1-i-auto-scroller"><span class="std std-ref">CCL::IAutoScroller</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IColorPalette.html#doxid-struct-c-c-l-1-1-i-color-palette"><span class="std std-ref">CCL::IColorPalette</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IColorPaletteModel.html#doxid-struct-c-c-l-1-1-i-color-palette-model"><span class="std std-ref">CCL::IColorPaletteModel</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Win32_IDpiInfo.html#doxid-struct-c-c-l-1-1-win32-1-1-i-dpi-info"><span class="std std-ref">CCL::Win32::IDpiInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IDrawable.html#doxid-struct-c-c-l-1-1-i-drawable"><span class="std std-ref">CCL::IDrawable</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IImageDrawable.html#doxid-struct-c-c-l-1-1-i-image-drawable"><span class="std std-ref">CCL::IImageDrawable</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IImagePalette.html#doxid-struct-c-c-l-1-1-i-image-palette"><span class="std std-ref">CCL::IImagePalette</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_MacOS_IMetalGraphicsInfo.html#doxid-struct-c-c-l-1-1-mac-o-s-1-1-i-metal-graphics-info"><span class="std std-ref">CCL::MacOS::IMetalGraphicsInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IMouseCursor.html#doxid-struct-c-c-l-1-1-i-mouse-cursor"><span class="std std-ref">CCL::IMouseCursor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IMouseHandler.html#doxid-struct-c-c-l-1-1-i-mouse-handler"><span class="std std-ref">CCL::IMouseHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_INameNavigator.html#doxid-struct-c-c-l-1-1-i-name-navigator"><span class="std std-ref">CCL::INameNavigator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_INamedItemIterator.html#doxid-struct-c-c-l-1-1-i-named-item-iterator"><span class="std std-ref">CCL::INamedItemIterator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_INavigator.html#doxid-struct-c-c-l-1-1-i-navigator"><span class="std std-ref">CCL::INavigator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPalette.html#doxid-struct-c-c-l-1-1-i-palette"><span class="std std-ref">CCL::IPalette</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPaletteItemModel.html#doxid-struct-c-c-l-1-1-i-palette-item-model"><span class="std std-ref">CCL::IPaletteItemModel</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPaletteProvider.html#doxid-struct-c-c-l-1-1-i-palette-provider"><span class="std std-ref">CCL::IPaletteProvider</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPresentable.html#doxid-struct-c-c-l-1-1-i-presentable"><span class="std std-ref">CCL::IPresentable</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Win32_IScreenInfo.html#doxid-struct-c-c-l-1-1-win32-1-1-i-screen-info"><span class="std std-ref">CCL::Win32::IScreenInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISprite.html#doxid-struct-c-c-l-1-1-i-sprite"><span class="std std-ref">CCL::ISprite</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISystemShell.html#doxid-struct-c-c-l-1-1-i-system-shell"><span class="std std-ref">CCL::ISystemShell</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Win32_ITaskBar.html#doxid-struct-c-c-l-1-1-win32-1-1-i-task-bar"><span class="std std-ref">CCL::Win32::ITaskBar</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITextModel.html#doxid-struct-c-c-l-1-1-i-text-model"><span class="std std-ref">CCL::ITextModel</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITextModelProvider.html#doxid-struct-c-c-l-1-1-i-text-model-provider"><span class="std std-ref">CCL::ITextModelProvider</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITimer.html#doxid-struct-c-c-l-1-1-i-timer"><span class="std std-ref">CCL::ITimer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITimerTask.html#doxid-struct-c-c-l-1-1-i-timer-task"><span class="std std-ref">CCL::ITimerTask</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITouchCollection.html#doxid-struct-c-c-l-1-1-i-touch-collection"><span class="std std-ref">CCL::ITouchCollection</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITouchHandler.html#doxid-struct-c-c-l-1-1-i-touch-handler"><span class="std std-ref">CCL::ITouchHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUserInterface.html#doxid-struct-c-c-l-1-1-i-user-interface"><span class="std std-ref">CCL::IUserInterface</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUserOption.html#doxid-struct-c-c-l-1-1-i-user-option"><span class="std std-ref">CCL::IUserOption</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUserOptionDialog.html#doxid-struct-c-c-l-1-1-i-user-option-dialog"><span class="std std-ref">CCL::IUserOptionDialog</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUserOptionList.html#doxid-struct-c-c-l-1-1-i-user-option-list"><span class="std std-ref">CCL::IUserOptionList</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IViewAnimator.html#doxid-struct-c-c-l-1-1-i-view-animator"><span class="std std-ref">CCL::IViewAnimator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IViewScreenCapture.html#doxid-struct-c-c-l-1-1-i-view-screen-capture"><span class="std std-ref">CCL::IViewScreenCapture</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IVisualStyle.html#doxid-struct-c-c-l-1-1-i-visual-style"><span class="std std-ref">CCL::IVisualStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IVisualStyleItem.html#doxid-struct-c-c-l-1-1-i-visual-style-item"><span class="std std-ref">CCL::IVisualStyleItem</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_PopupSizeInfo.html#doxid-struct-c-c-l-1-1-popup-size-info"><span class="std std-ref">CCL::PopupSizeInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_TouchInfo.html#doxid-struct-core-1-1-touch-info"><span class="std std-ref">Core::TouchInfo</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractDrawable.html#doxid-class-c-c-l-1-1-abstract-drawable"><span class="std std-ref">CCL::AbstractDrawable</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractPalette.html#doxid-class-c-c-l-1-1-abstract-palette"><span class="std std-ref">CCL::AbstractPalette</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractTouchHandler.html#doxid-class-c-c-l-1-1-abstract-touch-handler"><span class="std std-ref">CCL::AbstractTouchHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_ControlGridPainter.html#doxid-class-c-c-l-1-1-control-grid-painter"><span class="std std-ref">CCL::ControlGridPainter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_ControlScalePainter.html#doxid-class-c-c-l-1-1-control-scale-painter"><span class="std std-ref">CCL::ControlScalePainter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_IdleClient.html#doxid-class-c-c-l-1-1-idle-client"><span class="std std-ref">CCL::IdleClient</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_ImageDrawable.html#doxid-class-c-c-l-1-1-image-drawable"><span class="std std-ref">CCL::ImageDrawable</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_ImagePaletteAccessor.html#doxid-class-c-c-l-1-1-image-palette-accessor"><span class="std std-ref">CCL::ImagePaletteAccessor</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_SolidDrawable.html#doxid-class-c-c-l-1-1-solid-drawable"><span class="std std-ref">CCL::SolidDrawable</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_WaitCursor.html#doxid-class-c-c-l-1-1-wait-cursor"><span class="std std-ref">CCL::WaitCursor</span></a><span></span><span class="p">;</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_UnknownPtr.html" class="btn btn-neutral float-left" title="template class CCL::UnknownPtr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="group_gui_graphics3d.html" class="btn btn-neutral float-right" title="3D Graphics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::Font &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Font::CollectFontFlags" href="enum_CCL_Font_CollectFontFlags.html" />
+    <link rel="prev" title="enum CCL::Brush::BrushType" href="enum_CCL_Brush_BrushType.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">class CCL::Font</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-font">
+<span id="doxid-class-c-c-l-1-1-font"></span><span id="index-0"></span><h1>class CCL::Font<a class="headerlink" href="#class-ccl-font" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a> definition. <a class="reference internal" href="#details-class-c-c-l-1-1-font"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;font.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">Font</span><span class="p">:</span> <span class="k">protected</span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font"><span class="std std-ref">CCL::PlainFont</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Font_CollectFontFlags.html#doxid-class-c-c-l-1-1-font-1aaf53b71ac98b2f705ae271d2ee16d313"><span class="std std-ref">CollectFontFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Font_Defaults.html#doxid-class-c-c-l-1-1-font-1a52f9f7db3d0e1a8c744b3832a4379a29"><span class="std std-ref">Defaults</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Font_SmoothingMode.html#doxid-class-c-c-l-1-1-font-1a08e3ee97907b015a9402d405b4877cf9"><span class="std std-ref">SmoothingMode</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Font_Styles.html#doxid-class-c-c-l-1-1-font-1a7aa3419d0e6ee02d49e91aeca67fc9fd"><span class="std std-ref">Styles</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Font_TrimMode.html#doxid-class-c-c-l-1-1-font-1a0cd3ac7af16f5e4848317aea237d1bac"><span class="std std-ref">TrimMode</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1aa3d6656320f1a7278c0c2c7fdf07617c"><span></span><span class="n">size</span></span><span></span><span class="p">;</span>
+    <span class="n">Size</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1aa95071ce653d4493d2ed59272ac951b8"><span></span><span class="n">kBold</span></span><span></span><span class="p">;</span>
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a498622b7012850ea3d8f8c01ff1af3ba"><span></span><span class="n">kUnderline</span></span><span></span><span class="p">;</span>
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StyleName</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a5029c34dbc231c6190351d9295e907f0"><span></span><span class="n">spacing</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a7fb4ba0abb874db57efa797b9b977968"><span></span><span class="n">Font</span></span><span></span> <span class="p">();</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1ae835f4d19872a5c47cdbf35e5355db89"><span></span><span class="n">Font</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">_face</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">_size</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_Defaults.html#doxid-class-c-c-l-1-1-font-1a52f9f7db3d0e1a8c744b3832a4379a29af7c1619fb726ec0ab9a3b7cfbf797b4a"><span class="std std-ref">kDefaultSize</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">_style</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_Styles.html#doxid-class-c-c-l-1-1-font-1a7aa3419d0e6ee02d49e91aeca67fc9fda227e8416235cd3b43077ca91504a463f"><span class="std std-ref">kNormal</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">_mode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_SmoothingMode.html#doxid-class-c-c-l-1-1-font-1a08e3ee97907b015a9402d405b4877cf9a398a2c1952b274e43d9ab637830d9737"><span class="std std-ref">kDefault</span></a><span></span>
+    <span class="p">);</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1adef59f01b6430d28ecd39f97705d14cc"><span></span><span class="n">Font</span></span><span></span> <span class="p">(</span>FontRef<span></span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a2eb3cc36050bb802c37d212104bb77a2"><span></span><span class="n">PROPERTY_STRING_METHODS</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a115b92c4a5e15012f239f9db370b9bdb"><span class="std std-ref">face</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Face</span></a><span></span><span class="p">);</span>
+    <span class="n">Size</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a052bf181b80d47eb32f58ef2b0ad01e9"><span></span><span class="n">PROPERTY_BY_VALUE</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a9de4a1b8589ee213fe24ec0f26213484"><span class="std std-ref">style</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Style</span></a><span></span><span class="p">);</span>
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a682ea3fca601ca3ffaea9ad7eab4e547"><span></span><span class="n">PROPERTY_FLAG</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a9de4a1b8589ee213fe24ec0f26213484"><span class="std std-ref">style</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Font_Styles.html#doxid-class-c-c-l-1-1-font-1a7aa3419d0e6ee02d49e91aeca67fc9fda6b657aa91573e7996686e7b461c3ad98"><span class="std std-ref">kItalic</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isItalic</span></a><span></span><span class="p">);</span>
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a0cad9d1821022dd876d54401af402623"><span></span><span class="n">PROPERTY_FLAG</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a9de4a1b8589ee213fe24ec0f26213484"><span class="std std-ref">style</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Font_Styles.html#doxid-class-c-c-l-1-1-font-1a7aa3419d0e6ee02d49e91aeca67fc9fda4301a64d1f0315a668deaab5b3bda113"><span class="std std-ref">kStrikeout</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isStrikeout</span></a><span></span><span class="p">);</span>
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StyleName</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a21a4f6c90e602ed366e53565b0eda495"><span class="std std-ref">PROPERTY_BY_VALUE</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a1ea5d0cb93f22f7d0fdf804bd68c3326"><span class="std std-ref">mode</span></a><span></span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-listvieweditcomponent-8cpp-1a496d9db3a8db482c378cceb1b8d24b0e"><span class="std std-ref">Mode</span></a><span></span><span class="p">);</span>
+
+    <span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StyleName</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Spacing</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a7edcc954dff1c14f6be2448bb6d8e8a4"><span class="std std-ref">PROPERTY_BY_VALUE</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a815a3aaa00cfa4ac5d589d897364a1cf"><span class="std std-ref">lineSpacing</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LineSpacing</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a4aa33b95bd21cc9f107a5821f9ea5027"><span></span><span class="n">isEqual</span></span><span></span> <span class="p">(</span>FontRef<span></span> <span class="n">font</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Font</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1ab92cb9b217c13d2e6c0b0213f4f61caa"><span></span><span class="n">zoom</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">zoomFactor</span><span class="p">);</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="n">Font</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a5209cdac9f4716ffff0da2af3b05cb2c"><span class="std std-ref">getDefaultFont</span></a><span></span> <span class="p">();</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a1198c909b7c776a66e43ab07dbc267f6"><span class="std std-ref">getStringWidth</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span> FontRef<span></span> <span class="n">font</span><span class="p">);</span>
+    <span class="k">static</span> <span class="n">CoordF</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1aa1f8f8ce184231bb7335780fcf763eff"><span></span><span class="n">getStringWidthF</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span> FontRef<span></span> <span class="n">font</span><span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a49309176f4ece1ea58bccb8bdbedbf18"><span class="std std-ref">measureString</span></a><span></span> <span class="p">(</span>
+        <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a447c5e00459ad9a7450a769061092872"><span></span><span class="n">measureString</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a326c79943b48c50daeb6c6a517dc70e8"><span class="std std-ref">measureStringImage</span></a><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">shiftToBaseline</span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1ac64459f0dd58154426397f2518c632ea"><span class="std std-ref">measureText</span></a><span></span> <span class="p">(</span>
+        <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <span class="n">Coord</span> <span class="n">lineWidth</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/enum_Core_Alignment_Flags.html#doxid-struct-core-1-1-alignment-1aa705cf7e79a21c2352b00ffe20cd295facd74755b504e8afaa23eb23d68ecae77"><span class="std std-ref">Alignment::kLeftTop</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_TextFormat_Flags.html#doxid-class-c-c-l-1-1-text-format-1aa705cf7e79a21c2352b00ffe20cd295faf2b7ba5e359949b27c448f765442971d"><span class="std std-ref">TextFormat::kWordBreak</span></a><span></span><span class="p">)</span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a2bc9c4fbce37b61cf27c6c9d718f9cf0"><span></span><span class="n">measureText</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">lineWidth</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/enum_Core_Alignment_Flags.html#doxid-struct-core-1-1-alignment-1aa705cf7e79a21c2352b00ffe20cd295facd74755b504e8afaa23eb23d68ecae77"><span class="std std-ref">Alignment::kLeftTop</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_TextFormat_Flags.html#doxid-class-c-c-l-1-1-text-format-1aa705cf7e79a21c2352b00ffe20cd295faf2b7ba5e359949b27c448f765442971d"><span class="std std-ref">TextFormat::kWordBreak</span></a><span></span><span class="p">)</span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1aed9190c9c01eba82648f19e60f88648e"><span class="std std-ref">collapseString</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
+        <span class="n">Coord</span> <span class="n">maxWidth</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">trimMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_TrimMode.html#doxid-class-c-c-l-1-1-font-1a0cd3ac7af16f5e4848317aea237d1baca0555b18c563b7dce12f7b19d2b066362"><span class="std std-ref">kTrimModeDefault</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">exact</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-font-1a235fa783b2cc2b71fc62ebf09f124c71"><span></span><span class="n">collapseString</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">maxWidth</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">trimMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_TrimMode.html#doxid-class-c-c-l-1-1-font-1a0cd3ac7af16f5e4848317aea237d1baca0555b18c563b7dce12f7b19d2b066362"><span class="std std-ref">kTrimModeDefault</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">exact</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+    <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="struct_CCL_IFontTable.html#doxid-struct-c-c-l-1-1-i-font-table"><span class="std std-ref">IFontTable</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a934a957222054a971fbff8c193d114c7"><span class="std std-ref">collectFonts</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_CollectFontFlags.html#doxid-class-c-c-l-1-1-font-1aaf53b71ac98b2f705ae271d2ee16d313a458c52c97ebcef938c8043c66dd44d7e"><span class="std std-ref">kCollectAppFonts</span></a><span></span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a115b92c4a5e15012f239f9db370b9bdb"><span class="std std-ref">face</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1aa6ea9b07932df851a61fa72bd01761fe"><span class="std std-ref">size</span></a><span></span> <span class="o">=</span> <span class="mf">0.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a9de4a1b8589ee213fe24ec0f26213484"><span class="std std-ref">style</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1ac1612ef6d046b45bf698d7c2c284e0ca"><span class="std std-ref">styleName</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a1ea5d0cb93f22f7d0fdf804bd68c3326"><span class="std std-ref">mode</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1aedc6398ddf4719ad026969c7a74ab8ba"><span class="std std-ref">spacing</span></a><span></span> <span class="o">=</span> <span class="mf">0.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a815a3aaa00cfa4ac5d589d897364a1cf"><span class="std std-ref">lineSpacing</span></a><span></span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-font"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a> definition.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a21a4f6c90e602ed366e53565b0eda495"><span id="index-1"></span><span></span><span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StyleName</span></a><span></span> <span class="n">PROPERTY_BY_VALUE</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a1ea5d0cb93f22f7d0fdf804bd68c3326"><span class="std std-ref">mode</span></a><span></span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-listvieweditcomponent-8cpp-1a496d9db3a8db482c378cceb1b8d24b0e"><span class="std std-ref">Mode</span></a><span></span><span class="p">)</span></pre>
+<p>&lt; style name overwrites style flags</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a7edcc954dff1c14f6be2448bb6d8e8a4"><span id="index-2"></span><span></span><span class="n">Size</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isBold</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">isUnderline</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StyleName</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Spacing</span></a><span></span> <span class="n">PROPERTY_BY_VALUE</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_PlainFont.html#doxid-struct-c-c-l-1-1-plain-font-1a815a3aaa00cfa4ac5d589d897364a1cf"><span class="std std-ref">lineSpacing</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LineSpacing</span></a><span></span>
+<span class="p">)</span></pre>
+<p>&lt; additional character spacing in points</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a5209cdac9f4716ffff0da2af3b05cb2c"><span id="index-3"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">Font</span><span class="o">&amp;</span> <span class="n">getDefaultFont</span> <span class="p">()</span></pre>
+<p>Get default font.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a1198c909b7c776a66e43ab07dbc267f6"><span id="index-4"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">getStringWidth</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span> FontRef<span></span> <span class="n">font</span><span class="p">)</span></pre>
+<p>Get width of <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a49309176f4ece1ea58bccb8bdbedbf18"><span id="index-5"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">measureString</span> <span class="p">(</span>
+    <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">)</span></pre>
+<p>Get extent of <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a326c79943b48c50daeb6c6a517dc70e8"><span id="index-6"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">measureStringImage</span> <span class="p">(</span>
+    <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">shiftToBaseline</span>
+<span class="p">)</span></pre>
+<p>Get extent of a <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string’s glyphs without typographical spacing.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1ac64459f0dd58154426397f2518c632ea"><span id="index-7"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">measureText</span> <span class="p">(</span>
+    <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <span class="n">Coord</span> <span class="n">lineWidth</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/enum_Core_Alignment_Flags.html#doxid-struct-core-1-1-alignment-1aa705cf7e79a21c2352b00ffe20cd295facd74755b504e8afaa23eb23d68ecae77"><span class="std std-ref">Alignment::kLeftTop</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_TextFormat_Flags.html#doxid-class-c-c-l-1-1-text-format-1aa705cf7e79a21c2352b00ffe20cd295faf2b7ba5e359949b27c448f765442971d"><span class="std std-ref">TextFormat::kWordBreak</span></a><span></span><span class="p">)</span>
+<span class="p">)</span></pre>
+<p>Get extent of a multiline text area.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1aed9190c9c01eba82648f19e60f88648e"><span id="index-8"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">collapseString</span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
+    <span class="n">Coord</span> <span class="n">maxWidth</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">trimMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_TrimMode.html#doxid-class-c-c-l-1-1-font-1a0cd3ac7af16f5e4848317aea237d1baca0555b18c563b7dce12f7b19d2b066362"><span class="std std-ref">kTrimModeDefault</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">exact</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+<span class="p">)</span></pre>
+<p>Collapse string to fit into given width (replacing characters with “..”).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a934a957222054a971fbff8c193d114c7"><span id="index-9"></span><span></span><span class="k">static</span> <a class="reference internal" href="struct_CCL_IFontTable.html#doxid-struct-c-c-l-1-1-i-font-table"><span class="std std-ref">IFontTable</span></a><span></span><span class="o">*</span> <span class="n">collectFonts</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_CollectFontFlags.html#doxid-class-c-c-l-1-1-font-1aaf53b71ac98b2f705ae271d2ee16d313a458c52c97ebcef938c8043c66dd44d7e"><span class="std std-ref">kCollectAppFonts</span></a><span></span><span class="p">)</span></pre>
+<p>Create list of fonts.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_Brush_BrushType.html" class="btn btn-neutral float-left" title="enum CCL::Brush::BrushType" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Font_CollectFontFlags.html" class="btn btn-neutral float-right" title="enum CCL::Font::CollectFontFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

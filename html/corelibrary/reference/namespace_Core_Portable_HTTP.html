@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace Core::Portable::HTTP &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::Portable::HTTP::ContentDescriptor" href="struct_Core_Portable_HTTP_ContentDescriptor.html" />
+    <link rel="prev" title="namespace Core::Portable::ComponentFlags" href="namespace_Core_Portable_ComponentFlags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Portable.html">namespace Core::Portable</a></li>
+      <li class="breadcrumb-item active">namespace Core::Portable::HTTP</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-core-portable-http">
+<span id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p"></span><span id="index-0"></span><h1>namespace Core::Portable::HTTP<a class="headerlink" href="#namespace-core-portable-http" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">HTTP</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_CStringBuffer.html#doxid-class-core-1-1-c-string-buffer"><span class="std std-ref">CStringBuffer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="global.html#doxid-coretypes-8h-1ad20f0453f0015b22116cdc32921236b1"><span class="std std-ref">STRING_STACK_SPACE_MAX</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1ac6f057cc09a053a6ec029fb5c8128e90"><span></span><span class="n">LineBuffer</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Portable_HTTP_ContentDescriptor.html#doxid-struct-core-1-1-portable-1-1-h-t-t-p-1-1-content-descriptor"><span class="std std-ref">ContentDescriptor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Portable_HTTP_IFormDataReceiver.html#doxid-struct-core-1-1-portable-1-1-h-t-t-p-1-1-i-form-data-receiver"><span class="std std-ref">IFormDataReceiver</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Portable_HTTP_IRequestHandler.html#doxid-struct-core-1-1-portable-1-1-h-t-t-p-1-1-i-request-handler"><span class="std std-ref">IRequestHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Portable_HTTP_URLDecoder.html#doxid-struct-core-1-1-portable-1-1-h-t-t-p-1-1-u-r-l-decoder"><span class="std std-ref">URLDecoder</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_ContentServer.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-content-server"><span class="std std-ref">ContentServer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_FormReader.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-form-reader"><span class="std std-ref">FormReader</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_HeaderList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list"><span class="std std-ref">HeaderList</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list"><span class="std std-ref">KeyValueList</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_Request.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-request"><span class="std std-ref">Request</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_Response.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-response"><span class="std std-ref">Response</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_ServerRunLoop.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-server-run-loop"><span class="std std-ref">ServerRunLoop</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_StreamAccessor.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-stream-accessor"><span class="std std-ref">StreamAccessor</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1af238f9c58ee0e228476ce3f467cf7656"><span></span><span class="n">kContentType</span></span><span></span> <span class="o">=</span> <span class="s">&quot;Content-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Type&quot;</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1abeffae4e5c6563040737f3d4ed98f9f7"><span></span><span class="n">kContentLength</span></span><span></span> <span class="o">=</span> <span class="s">&quot;Content-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Length&quot;</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1a45ec355943eec3d860829464aa6d6f15"><span></span><span class="n">kContentDisposition</span></span><span></span> <span class="o">=</span> <span class="s">&quot;Content-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Disposition&quot;</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1a4de5c38ea4eaa67253249bfd8cc25474"><span></span><span class="n">kServer</span></span><span></span> <span class="o">=</span> <span class="s">&quot;Server&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1a123b1ecabe9def203f8d1e97882204cf"><span></span><span class="n">kConnection</span></span><span></span> <span class="o">=</span> <span class="s">&quot;Connection&quot;</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1aa785b5b16a505ae31811e148673037c0"><span></span><span class="n">kMultipartForm</span></span><span></span> <span class="o">=</span> <span class="s">&quot;multipart/</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">form</span></a><span></span><span class="o">-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">data&quot;</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1-1-portable-1-1-h-t-t-p-1a7adff1c1420230f12baa563c7171156f"><span></span><span class="n">kWebForm</span></span><span></span> <span class="o">=</span> <span class="s">&quot;application/x-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">www</span></a><span></span><span class="o">-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">form</span></a><span></span><span class="o">-</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">urlencoded&quot;</span></a><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace HTTP</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_Core_Portable_ComponentFlags.html" class="btn btn-neutral float-left" title="namespace Core::Portable::ComponentFlags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_Portable_HTTP_ContentDescriptor.html" class="btn btn-neutral float-right" title="struct Core::Portable::HTTP::ContentDescriptor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

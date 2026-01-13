@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::Security::Crypto::Internal::ICryptoService &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::IDataCompressor" href="struct_CCL_IDataCompressor.html" />
+    <link rel="prev" title="struct CCL::IAttributeQueue" href="struct_CCL_IAttributeQueue.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+          <li class="breadcrumb-item"><a href="group_base_io.html">IO</a></li>
+      <li class="breadcrumb-item active">struct CCL::Security::Crypto::Internal::ICryptoService</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-security-crypto-internal-icryptoservice">
+<span id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service"></span><span id="index-0"></span><h1>struct CCL::Security::Crypto::Internal::ICryptoService<a class="headerlink" href="#struct-ccl-security-crypto-internal-icryptoservice" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Helper methods for crypto class implementation. <a class="reference internal" href="#details-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;icryptoservice.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">ICryptoService</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a93e0f8f919d202e7f17d1daaf8e573b8"><span class="std std-ref">RNG_generate</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a37135bc30fccf4f7272b9a012383d762"><span class="std std-ref">MD5_calculate</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ae78cec4bc8181a11261a684c32f98862"><span class="std std-ref">SHA1_calculate</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a7aa398b6d1046fa11fa8b37081eacb04"><span class="std std-ref">SHA256_calculate</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a64264bd796b134bada60168bcf25d21f"><span class="std std-ref">HMAC_SHA1_sign</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a56a73dbb29ab8a97f6edc5a453735c98"><span class="std std-ref">HMAC_SHA256_sign</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a0375be801aeeb2c5934ea02ef02dff21"><span></span><span class="n">HKDF_deriveKey</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">_derivedKey</span><span class="p">,</span>
+        <span class="n">uint32</span> <span class="n">derivedKeyLength</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">secret</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">salt</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a31cd83c5bc66d13d9e856379aa727ac4"><span class="std std-ref">AES_encrypt</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">iv</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_Security_Crypto_BlockCipherMode.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1ab9f67c590a8061de23329ddee0c0f99a"><span class="std std-ref">BlockCipherMode</span></a><span></span> <span class="n">mode</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a4862d967da12dc7a5d0a926d9f2351d6"><span class="std std-ref">AES_decrypt</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">iv</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_Security_Crypto_BlockCipherMode.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1ab9f67c590a8061de23329ddee0c0f99a"><span class="std std-ref">BlockCipherMode</span></a><span></span> <span class="n">mode</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1aa901b9075dd5e507d025dbbe5217b5b6"><span class="std std-ref">RSA_generateKeyPair</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+        <span class="n">uint32</span> <span class="n">keyLength</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a79ca34b4377e9f0c82a16158699b76ac"><span class="std std-ref">RSA_encrypt</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1abc683b1f4071fceda9de16595856a1bf"><span class="std std-ref">RSA_decrypt</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a3282628acfa9e9d2eb7bc64d76639d46"><span class="std std-ref">RSA_sign</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_Security_Crypto_Hash.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a4bb64ca18aa30fe73276fff5b72bb6b0"><span class="std std-ref">Hash</span></a><span></span> <span class="n">hash</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a11e0999a95290573a66b9c1befa511fd"><span class="std std-ref">RSA_verify</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_Security_Crypto_Hash.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a4bb64ca18aa30fe73276fff5b72bb6b0"><span class="std std-ref">Hash</span></a><span></span> <span class="n">hash</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ac28bc42a9ca6b632e9cad39e50ae3d34"><span class="std std-ref">BER_decode</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_Security_Crypto_IASN1ContentHandler.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-a-s-n1-content-handler"><span class="std std-ref">IASN1ContentHandler</span></a><span></span><span class="o">&amp;</span> <span class="n">reader</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ae7bbd93678e96d77224c3fd89e1ee811"><span class="std std-ref">DER_encode</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">tag</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">content</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a42857df530254e0b789ea5b054ff0c25"><span class="std std-ref">PKCS7_decodeData</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_Security_Crypto_IASN1ContentHandler.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-a-s-n1-content-handler"><span class="std std-ref">IASN1ContentHandler</span></a><span></span><span class="o">&amp;</span> <span class="n">reader</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1acfd1b62a5e923e665f96648156e40872"><span class="std std-ref">PKCS7_getCertificates</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">certficates</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_Security_Crypto_IInteger.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-integer"><span class="std std-ref">IInteger</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ad7ea4c201c8d59cd250e5d2ea0cd5609"><span class="std std-ref">Integer_create</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Helper methods for crypto class implementation.</p>
+<p>Do not use this interface directly.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a93e0f8f919d202e7f17d1daaf8e573b8"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RNG_generate</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Generate random data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a37135bc30fccf4f7272b9a012383d762"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">MD5_calculate</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_MD5.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-m-d5"><span class="std std-ref">MD5</span></a>] Calculate digest from data stream - DEPRECATED.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ae78cec4bc8181a11261a684c32f98862"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">SHA1_calculate</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_SHA1.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-s-h-a1"><span class="std std-ref">SHA1</span></a>] Calculate digest from data stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a7aa398b6d1046fa11fa8b37081eacb04"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">SHA256_calculate</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">digest</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a><span></span><span class="o">*</span> <span class="n">progress</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_SHA256.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-s-h-a256"><span class="std std-ref">SHA256</span></a>] Calculate digest from data stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a64264bd796b134bada60168bcf25d21f"><span id="index-5"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">HMAC_SHA1_sign</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[HMAC-SHA1] Sign data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a56a73dbb29ab8a97f6edc5a453735c98"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">HMAC_SHA256_sign</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[HMAC-SHA256] Sign data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a31cd83c5bc66d13d9e856379aa727ac4"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">AES_encrypt</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">iv</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_Security_Crypto_BlockCipherMode.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1ab9f67c590a8061de23329ddee0c0f99a"><span class="std std-ref">BlockCipherMode</span></a><span></span> <span class="n">mode</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_AES.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-a-e-s"><span class="std std-ref">AES</span></a>] Encrypt data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a4862d967da12dc7a5d0a926d9f2351d6"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">AES_decrypt</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">key</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">iv</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_Security_Crypto_BlockCipherMode.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1ab9f67c590a8061de23329ddee0c0f99a"><span class="std std-ref">BlockCipherMode</span></a><span></span> <span class="n">mode</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_AES.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-a-e-s"><span class="std std-ref">AES</span></a>] Decrypt data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1aa901b9075dd5e507d025dbbe5217b5b6"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RSA_generateKeyPair</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+    <span class="n">uint32</span> <span class="n">keyLength</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_RSA.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-r-s-a"><span class="std std-ref">RSA</span></a>] Generate private/public key pair.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a79ca34b4377e9f0c82a16158699b76ac"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RSA_encrypt</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL_Security_Crypto.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a85e0ed4eaf2794ba9f7ded475edd3eb1"><span class="std std-ref">BlockRef</span></a><span></span> <span class="n">randomData</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_RSA.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-r-s-a"><span class="std std-ref">RSA</span></a>] Encrypt data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1abc683b1f4071fceda9de16595856a1bf"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RSA_decrypt</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">plainData</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">cipherData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_RSA.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-r-s-a"><span class="std std-ref">RSA</span></a>] Decrypt data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a3282628acfa9e9d2eb7bc64d76639d46"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RSA_sign</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">privateKey</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_Security_Crypto_Hash.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a4bb64ca18aa30fe73276fff5b72bb6b0"><span class="std std-ref">Hash</span></a><span></span> <span class="n">hash</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_RSA.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-r-s-a"><span class="std std-ref">RSA</span></a>] Sign data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a11e0999a95290573a66b9c1befa511fd"><span id="index-13"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">RSA_verify</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">publicKey</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">signature</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_Security_Crypto_Hash.html#doxid-namespace-c-c-l-1-1-security-1-1-crypto-1a4bb64ca18aa30fe73276fff5b72bb6b0"><span class="std std-ref">Hash</span></a><span></span> <span class="n">hash</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>[<a class="reference internal" href="class_CCL_Security_Crypto_RSA.html#doxid-class-c-c-l-1-1-security-1-1-crypto-1-1-r-s-a"><span class="std std-ref">RSA</span></a>] Verify data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ac28bc42a9ca6b632e9cad39e50ae3d34"><span id="index-14"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">BER_decode</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_Security_Crypto_IASN1ContentHandler.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-a-s-n1-content-handler"><span class="std std-ref">IASN1ContentHandler</span></a><span></span><span class="o">&amp;</span> <span class="n">reader</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Parse ASN.1 encoded data (Basic Encoding Rules)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ae7bbd93678e96d77224c3fd89e1ee811"><span id="index-15"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">DER_encode</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">tag</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">content</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Write ASN.1 encoded data (Distinguished Encoding Rules)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1a42857df530254e0b789ea5b054ff0c25"><span id="index-16"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">PKCS7_decodeData</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_Security_Crypto_IASN1ContentHandler.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-a-s-n1-content-handler"><span class="std std-ref">IASN1ContentHandler</span></a><span></span><span class="o">&amp;</span> <span class="n">reader</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Parse the ASN.1 payload from a PKCS #7 container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1acfd1b62a5e923e665f96648156e40872"><span id="index-17"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">PKCS7_getCertificates</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">certficates</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">IStream</span></a><span></span><span class="o">&amp;</span> <span class="n">encodedData</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get an X.509 certificate (chain) from a PKCS #7 container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service-1ad7ea4c201c8d59cd250e5d2ea0cd5609"><span id="index-18"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_Security_Crypto_IInteger.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-integer"><span class="std std-ref">IInteger</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">Integer_create</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create new integer instance.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_IAttributeQueue.html" class="btn btn-neutral float-left" title="struct CCL::IAttributeQueue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_IDataCompressor.html" class="btn btn-neutral float-right" title="struct CCL::IDataCompressor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

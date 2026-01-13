@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Phases &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Android Startup Sequence" href="android.html" />
+    <link rel="prev" title="Application Model" href="components.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Application Phases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#startup">Startup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shutdown">Shutdown</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Application Phases</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="application-phases">
+<h1>Application Phases<a class="headerlink" href="#application-phases" title="Link to this heading"></a></h1>
+<p>Phases for desktop applications (Windows, similar for macOS).</p>
+<section id="startup">
+<h2>Startup<a class="headerlink" href="#startup" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Call Stack</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WinMain</span> <span class="p">()</span>
+  <span class="n">ccl_main_gui</span> <span class="p">()</span>
+    <span class="n">ccl_main_gui_init</span> <span class="p">()</span>
+       <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">beforeInit</span> <span class="p">()</span>
+         <span class="n">UserInterface</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span>
+           <span class="n">NativeGraphicsEngine</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span>
+           <span class="n">WindowsUserInterface</span><span class="o">::</span><span class="n">startupPlatform</span> <span class="p">()</span>
+
+         <span class="n">ccl_app_init</span> <span class="p">()</span>
+         <span class="n">Application</span><span class="o">::</span><span class="n">beforeInitialize</span> <span class="p">()</span>
+
+    <span class="n">WindowsUserInterface</span><span class="o">::</span><span class="n">runEventLoop</span> <span class="p">()</span>
+       <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">onInit</span> <span class="p">()</span>
+        <span class="n">Kernel</span><span class="o">::</span><span class="n">initialize</span> <span class="p">()</span>
+          <span class="n">Application</span><span class="o">::</span><span class="n">initialize</span> <span class="p">()</span>
+            <span class="n">Application</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span>
+
+        <span class="n">Application</span><span class="o">::</span><span class="n">processCommandLine</span> <span class="p">()</span>
+
+      <span class="n">Application</span><span class="o">::</span><span class="n">uiInitialized</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Call Details</strong></p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47WinMainv">
+<span id="_CPPv37WinMainv"></span><span id="_CPPv27WinMainv"></span><span id="WinMain"></span><span class="sig-name descname"><span class="n"><span class="pre">WinMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47WinMainv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/platform/win/winmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412ccl_main_guiv">
+<span id="_CPPv312ccl_main_guiv"></span><span id="_CPPv212ccl_main_guiv"></span><span id="ccl_main_gui"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_main_gui</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccl_main_guiv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ccl_main_gui_initv">
+<span id="_CPPv317ccl_main_gui_initv"></span><span id="_CPPv217ccl_main_gui_initv"></span><span id="ccl_main_gui_init"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_main_gui_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup10beforeInitEv">
+<span id="_CPPv3N18ApplicationStartup10beforeInitEv"></span><span id="_CPPv2N18ApplicationStartup10beforeInitEv"></span><span id="ApplicationStartup::beforeInit"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">beforeInit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13UserInterface7startupEv">
+<span id="_CPPv3N13UserInterface7startupEv"></span><span id="_CPPv2N13UserInterface7startupEv"></span><span id="UserInterface::startup"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">UserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/gui/gui.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20NativeGraphicsEngine7startupEv">
+<span id="_CPPv3N20NativeGraphicsEngine7startupEv"></span><span id="_CPPv2N20NativeGraphicsEngine7startupEv"></span><span id="NativeGraphicsEngine::startup"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">NativeGraphicsEngine</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20NativeGraphicsEngine7startupEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/gui/graphics/nativegraphics.cpp</p>
+</dd>
+</dl>
+<p>Overridden by platform engine.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20WindowsUserInterface15startupPlatformEv">
+<span id="_CPPv3N20WindowsUserInterface15startupPlatformEv"></span><span id="_CPPv2N20WindowsUserInterface15startupPlatformEv"></span><span id="WindowsUserInterface::startupPlatform"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">WindowsUserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startupPlatform</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20WindowsUserInterface15startupPlatformEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/platform/win/gui/gui.win.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412ccl_app_initv">
+<span id="_CPPv312ccl_app_initv"></span><span id="_CPPv212ccl_app_initv"></span><span id="ccl_app_init"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_app_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Implemented in application code (create Application object).</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11Application16beforeInitializeEv">
+<span id="_CPPv3N11Application16beforeInitializeEv"></span><span id="_CPPv2N11Application16beforeInitializeEv"></span><span id="Application::beforeInitialize"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Application</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">beforeInitialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11Application16beforeInitializeEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/app/application.cpp</p>
+</dd>
+</dl>
+<p>Load settings, strings, command table, …</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20WindowsUserInterface12runEventLoopEv">
+<span id="_CPPv3N20WindowsUserInterface12runEventLoopEv"></span><span id="_CPPv2N20WindowsUserInterface12runEventLoopEv"></span><span id="WindowsUserInterface::runEventLoop"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">WindowsUserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">runEventLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20WindowsUserInterface12runEventLoopEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/platform/win/gui/gui.win.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup6onInitEv">
+<span id="_CPPv3N18ApplicationStartup6onInitEv"></span><span id="_CPPv2N18ApplicationStartup6onInitEv"></span><span id="ApplicationStartup::onInit"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onInit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Kernel10initializeEv">
+<span id="_CPPv3N6Kernel10initializeEv"></span><span id="_CPPv2N6Kernel10initializeEv"></span><span id="Kernel::initialize"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Kernel</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Kernel10initializeEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/base/kernel.cpp</p>
+</dd>
+</dl>
+<p>Also see <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Kernel.html#doxid-class-c-c-l-1-1-kernel-1ab3e7cc706c522b3231f9156bba461436"><span class="std std-ref"><span class="pre">CCL::Kernel::initialize</span></span></a></code>.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11Application10initializeEv">
+<span id="_CPPv3N11Application10initializeEv"></span><span id="_CPPv2N11Application10initializeEv"></span><span id="Application::initialize"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Application</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11Application10initializeEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/app/application.cpp</p>
+</dd>
+</dl>
+<p>Typically calls createWindow (), System::GetWindowManager ().createApplicationWindow ()  or initWindowlessApplication (), calls GUI.setApplication() in cclgui.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11Application18processCommandLineEv">
+<span id="_CPPv3N11Application18processCommandLineEv"></span><span id="_CPPv2N11Application18processCommandLineEv"></span><span id="Application::processCommandLine"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Application</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">processCommandLine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11Application18processCommandLineEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/app/application.cpp</p>
+</dd>
+</dl>
+<p>Overridden in derived application class.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11Application13uiInitializedEv">
+<span id="_CPPv3N11Application13uiInitializedEv"></span><span id="_CPPv2N11Application13uiInitializedEv"></span><span id="Application::uiInitialized"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Application</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">uiInitialized</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/app/application.cpp</p>
+</dd>
+</dl>
+<p>Overridden in derived application class.</p>
+</dd></dl>
+
+</section>
+<section id="shutdown">
+<h2>Shutdown<a class="headerlink" href="#shutdown" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Call Stack</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ccl_main_gui_exit</span> <span class="p">()</span>
+  <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">cleanup</span> <span class="p">()</span>
+    <span class="n">Kernel</span><span class="o">::</span><span class="n">terminate</span> <span class="p">()</span>
+    <span class="n">PlugInManager</span><span class="o">::</span><span class="n">terminate</span> <span class="p">()</span>
+    <span class="n">ThreadPool</span><span class="o">::</span><span class="n">terminate</span> <span class="p">()</span>
+
+  <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">checkRestart</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Call Details</strong></p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ccl_main_gui_exitv">
+<span id="_CPPv317ccl_main_gui_exitv"></span><span id="_CPPv217ccl_main_gui_exitv"></span><span id="ccl_main_gui_exit"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_main_gui_exit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccl_main_gui_exitv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup7cleanupEv">
+<span id="_CPPv3N18ApplicationStartup7cleanupEv"></span><span id="_CPPv2N18ApplicationStartup7cleanupEv"></span><span id="ApplicationStartup::cleanup"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">cleanup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ApplicationStartup7cleanupEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Kernel9terminateEv">
+<span id="_CPPv3N6Kernel9terminateEv"></span><span id="_CPPv2N6Kernel9terminateEv"></span><span id="Kernel::terminate"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Kernel</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">terminate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Kernel9terminateEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/base/kernel.cpp</p>
+</dd>
+</dl>
+<p>Also see <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Kernel.html#doxid-class-c-c-l-1-1-kernel-1a74a45d2648335936561898c390281a6a"><span class="std std-ref"><span class="pre">CCL::Kernel::terminate</span></span></a></code></p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PlugInManager9terminateEv">
+<span id="_CPPv3N13PlugInManager9terminateEv"></span><span id="_CPPv2N13PlugInManager9terminateEv"></span><span id="PlugInManager::terminate"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">PlugInManager</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">terminate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PlugInManager9terminateEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/system/plugins/plugmanager.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ThreadPool9terminateEv">
+<span id="_CPPv3N10ThreadPool9terminateEv"></span><span id="_CPPv2N10ThreadPool9terminateEv"></span><span id="ThreadPool::terminate"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ThreadPool</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">terminate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ThreadPool9terminateEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/system/threading/threadpool.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup12checkRestartEv">
+<span id="_CPPv3N18ApplicationStartup12checkRestartEv"></span><span id="_CPPv2N18ApplicationStartup12checkRestartEv"></span><span id="ApplicationStartup::checkRestart"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">checkRestart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ApplicationStartup12checkRestartEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">File<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="components.html" class="btn btn-neutral float-left" title="Application Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="android.html" class="btn btn-neutral float-right" title="Android Startup Sequence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

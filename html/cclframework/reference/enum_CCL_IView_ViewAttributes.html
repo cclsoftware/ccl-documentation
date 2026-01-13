@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::IView::ViewAttributes &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::IView3D" href="struct_CCL_IView3D.html" />
+    <link rel="prev" title="enum CCL::IView::SizeModes" href="enum_CCL_IView_SizeModes.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_view.html">Views</a></li>
+          <li class="breadcrumb-item"><a href="struct_CCL_IView.html">struct CCL::IView</a></li>
+      <li class="breadcrumb-item active">enum CCL::IView::ViewAttributes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-iview-viewattributes">
+<span id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085"></span><span id="index-0"></span><h1>enum CCL::IView::ViewAttributes<a class="headerlink" href="#enum-ccl-iview-viewattributes" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>View attributes. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iview.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">ViewAttributes</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a0cff29011d8fb82f8ac51bc0eaaa82db"><span class="std std-ref">kName</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085acf2a0c67a26fee6a91500254fe699611"><span class="std std-ref">kTitle</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085abbdcd42e45412bf043e5c56bf3843f1b"><span class="std std-ref">kTooltip</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a01cfd48af01d0158878734d413fcbb41"><span class="std std-ref">kStyleFlags</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085af327c6969ba0132142a518aef0055350"><span class="std std-ref">kTheme</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085afc4a8263478742c851ff5ec4f6632604"><span class="std std-ref">kVisualStyle</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a65b9e737dcdd43563595c001d8a431e9"><span class="std std-ref">kController</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a1f67edcfcb4b37dd6bbcebe19d9534fb"><span class="std std-ref">kSizeMode</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a3436da9e47ace9bc0632b62330e657cb"><span class="std std-ref">kSizeModeDisabled</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a7f29c40b8fcb8c4154608b8aa56a98f3"><span class="std std-ref">kInputEnabled</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a809957070ff311c9b9a03cf4df4567d4"><span class="std std-ref">kMouseState</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a819cac50ecad71211f882084d55924c3"><span class="std std-ref">kThemeElementState</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ac8ea61e5e4cb3def8417230c749725a1"><span class="std std-ref">kFocusEnabled</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ad87e532bbc9a64d66664d639041d2b36"><span class="std std-ref">kTooltipTrackingEnabled</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ad0a51fb93044fbcbd4896f3841ed69d9"><span class="std std-ref">kLayerBackingEnabled</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a66bfb18b105a8226eaa02e6b82f690d9"><span class="std std-ref">kGraphicsLayer</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a1627c2a0b31e762d3ab057b472f1b726"><span class="std std-ref">kAccessibilityEnabled</span></a><span></span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>View attributes.</p>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a0cff29011d8fb82f8ac51bc0eaaa82db"><span id="index-1"></span><span></span><span class="n">kName</span></pre>
+<p>[<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085acf2a0c67a26fee6a91500254fe699611"><span id="index-2"></span><span></span><span class="n">kTitle</span></pre>
+<p>[<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085abbdcd42e45412bf043e5c56bf3843f1b"><span id="index-3"></span><span></span><span class="n">kTooltip</span></pre>
+<p>[<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a01cfd48af01d0158878734d413fcbb41"><span id="index-4"></span><span></span><span class="n">kStyleFlags</span></pre>
+<p>[int64]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085af327c6969ba0132142a518aef0055350"><span id="index-5"></span><span></span><span class="n">kTheme</span></pre>
+<p>[<a class="reference internal" href="struct_CCL_ITheme.html#doxid-struct-c-c-l-1-1-i-theme"><span class="std std-ref">ITheme</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085afc4a8263478742c851ff5ec4f6632604"><span id="index-6"></span><span></span><span class="n">kVisualStyle</span></pre>
+<p>[<a class="reference internal" href="struct_CCL_IVisualStyle.html#doxid-struct-c-c-l-1-1-i-visual-style"><span class="std std-ref">IVisualStyle</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a65b9e737dcdd43563595c001d8a431e9"><span id="index-7"></span><span></span><span class="n">kController</span></pre>
+<p>[<a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a1f67edcfcb4b37dd6bbcebe19d9534fb"><span id="index-8"></span><span></span><span class="n">kSizeMode</span></pre>
+<p>[int]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a3436da9e47ace9bc0632b62330e657cb"><span id="index-9"></span><span></span><span class="n">kSizeModeDisabled</span></pre>
+<p>[boolean]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a7f29c40b8fcb8c4154608b8aa56a98f3"><span id="index-10"></span><span></span><span class="n">kInputEnabled</span></pre>
+<p>[boolean]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a809957070ff311c9b9a03cf4df4567d4"><span id="index-11"></span><span></span><span class="n">kMouseState</span></pre>
+<p>[int]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a819cac50ecad71211f882084d55924c3"><span id="index-12"></span><span></span><span class="n">kThemeElementState</span></pre>
+<p>[int]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ac8ea61e5e4cb3def8417230c749725a1"><span id="index-13"></span><span></span><span class="n">kFocusEnabled</span></pre>
+<p>[boolean]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ad87e532bbc9a64d66664d639041d2b36"><span id="index-14"></span><span></span><span class="n">kTooltipTrackingEnabled</span></pre>
+<p>[boolean]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085ad0a51fb93044fbcbd4896f3841ed69d9"><span id="index-15"></span><span></span><span class="n">kLayerBackingEnabled</span></pre>
+<p>[boolean]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a66bfb18b105a8226eaa02e6b82f690d9"><span id="index-16"></span><span></span><span class="n">kGraphicsLayer</span></pre>
+<p>[<a class="reference internal" href="struct_CCL_IGraphicsLayer.html#doxid-struct-c-c-l-1-1-i-graphics-layer"><span class="std std-ref">IGraphicsLayer</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-view-1abf0f6cae3a3a243367d1674a5984b085a1627c2a0b31e762d3ab057b472f1b726"><span id="index-17"></span><span></span><span class="n">kAccessibilityEnabled</span></pre>
+<p>[boolean]</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_IView_SizeModes.html" class="btn btn-neutral float-left" title="enum CCL::IView::SizeModes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_IView3D.html" class="btn btn-neutral float-right" title="struct CCL::IView3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

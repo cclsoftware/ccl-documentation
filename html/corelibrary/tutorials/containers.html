@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Containers &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Run-time type information" href="rtti.html" />
+    <link rel="prev" title="GUI for dynamic views" href="dynamicviews.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="appmodel.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html">GUI for embedded applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicviews.html">GUI for dynamic views</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Containers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#array">Array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitset">BitSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buffer">Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deque">Deque</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixeddeque">FixedDeque</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linkedlist">LinkedList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intrusivelinkedlist">IntrusiveLinkedList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constvector">ConstVector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mutablevector">MutableVector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vector">Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixedsizevector">FixedSizeVector</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rtti.html">Run-time type information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Containers</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="containers">
+<h1>Containers<a class="headerlink" href="#containers" title="Link to this heading"></a></h1>
+<p>The Core Library offers a variety of container classes for common uses cases. The following sections give examples to demonstrate their use.</p>
+<section id="array">
+<h2>Array<a class="headerlink" href="#array" title="Link to this heading"></a></h2>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Core::Array</span></code> class wraps a block of memory containing elements of a particular type. The class can manage the underlying memory of the array itself or just point to it. There are several functions available to manage the memory and access it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span> <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mf">0.5f</span><span class="p">,</span> <span class="mf">1.5f</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mf">71f</span><span class="p">,</span> <span class="mf">3.14f</span> <span class="p">};</span>
+
+<span class="c1">// Create an empty array</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">;</span>
+
+<span class="c1">// Create an array using existing data. The data is copied to heap memory.</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">b</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+
+<span class="c1">// Create an array using existing data. The buffer does</span>
+<span class="c1">// not own the memory, it just wraps pointer and size.</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">c</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">false</span><span class="p">);</span>
+
+<span class="c1">// Get a pointer to the first element and the number of elements</span>
+<span class="kt">float</span><span class="o">*</span> <span class="n">address</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">getAddress</span> <span class="p">();</span>
+<span class="n">uint32</span> <span class="n">size</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">getSize</span> <span class="p">();</span>
+
+<span class="c1">// Fill the memory block with zeros</span>
+<span class="n">b</span><span class="p">.</span><span class="n">zeroFill</span> <span class="p">();</span>
+
+<span class="c1">// Access the array</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.2f</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+</pre></div>
+</div>
+</section>
+<section id="bitset">
+<h2>BitSet<a class="headerlink" href="#bitset" title="Link to this heading"></a></h2>
+<p>A bitset manages a sequence of bits. Bits can be set, cleared, or toggled. There are also functions to find or count bits. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_BitSet.html#doxid-class-core-1-1-bit-set"><span class="std std-ref"><span class="pre">Core::BitSet</span></span></a></code> class stores bit data on the heap and can grow dynamically if needed.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a bitset that holds 64 bits.</span>
+<span class="n">BitSet</span> <span class="nf">bitset</span> <span class="p">(</span><span class="mi">64</span><span class="p">);</span>
+
+<span class="c1">// Set and clear a particular bit</span>
+<span class="n">bitset</span><span class="p">.</span><span class="n">setBit</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">bitset</span><span class="p">.</span><span class="n">setBit</span> <span class="p">(</span><span class="mi">29</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+
+<span class="c1">// Obtain the value of a bit</span>
+<span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="n">bitset</span><span class="p">.</span><span class="n">getBit</span> <span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1">// Flip a bit</span>
+<span class="n">bitset</span><span class="p">.</span><span class="n">toggleBit</span> <span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+
+<span class="c1">// Find the first bit set</span>
+<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">bitset</span><span class="p">.</span><span class="n">findFirst</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+<span class="c1">// Determine the number of set bits</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">bitset</span><span class="p">.</span><span class="n">countBits</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="buffer">
+<h2>Buffer<a class="headerlink" href="#buffer" title="Link to this heading"></a></h2>
+<p>A buffer encapsulates a block of raw memory. It usually owns the memory determining its lifetime but can also point to memory that is managed elsewhere. To construct a new buffer that owns the memory call the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Core::Buffer</span></code> constructor optionally passing a pointer and the size of an existing block of memory. The <code class="docutils literal notranslate"><span class="pre">Buffer</span></code> class provides a variety of different functions to manage the memory and access it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">uint8</span> <span class="n">data</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span> <span class="p">};</span>
+<span class="kt">char</span> <span class="n">hello</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Hello!&quot;</span><span class="p">;</span>
+
+<span class="c1">// Create an empty buffer</span>
+<span class="n">Buffer</span> <span class="n">a</span><span class="p">;</span>
+
+<span class="c1">// Create a buffer using existing data. The data is copied to heap memory.</span>
+<span class="n">Buffer</span> <span class="nf">b</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+
+<span class="c1">// Create a buffer using existing data. The buffer does</span>
+<span class="c1">// not own the memory, it just wraps pointer and size.</span>
+<span class="n">Buffer</span> <span class="nf">c</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">false</span><span class="p">);</span>
+
+<span class="c1">// Check if the buffer is empty</span>
+<span class="kt">bool</span> <span class="n">empty</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">isNull</span> <span class="p">();</span>
+
+<span class="c1">// Get a pointer to the memory block and its size</span>
+<span class="kt">void</span><span class="o">*</span> <span class="n">address</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">getAddress</span> <span class="p">();</span>
+<span class="n">uint32</span> <span class="n">size</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">getSize</span> <span class="p">();</span>
+
+<span class="c1">// Fill the memory block with zeros</span>
+<span class="n">b</span><span class="p">.</span><span class="n">zeroFill</span> <span class="p">();</span>
+
+<span class="c1">// Fill the memory block using a value</span>
+<span class="n">b</span><span class="p">.</span><span class="n">byteFill</span> <span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>
+
+<span class="c1">// Copy memory</span>
+<span class="n">b</span><span class="p">.</span><span class="n">copyFrom</span> <span class="p">(</span><span class="n">hello</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">hello</span><span class="p">));</span>
+
+<span class="c1">// Obtain a pointer of a certain type to the memory block</span>
+<span class="k">const</span> <span class="n">uint8</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">as</span><span class="o">&lt;</span><span class="n">uint8</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="deque">
+<h2>Deque<a class="headerlink" href="#deque" title="Link to this heading"></a></h2>
+<p>A double-ended queue (abbreviated to deque) is a data structure that allows to add or remove elements from either the front or back. It is implemented in <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Deque.html#doxid-class-core-1-1-deque"><span class="std std-ref"><span class="pre">Core::Deque</span></span></a></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">deque</span><span class="p">;</span>
+
+<span class="c1">// Add elements</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="c1">// Remove elements</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">popFront</span> <span class="p">();</span> <span class="c1">// returns 5</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">popBack</span> <span class="p">();</span>  <span class="c1">// returns 6</span>
+
+<span class="c1">// Peek at first/last element</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">peekFront</span> <span class="p">();</span> <span class="c1">// returns 3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">peekBack</span> <span class="p">();</span>  <span class="c1">// return 4</span>
+</pre></div>
+</div>
+</section>
+<section id="fixeddeque">
+<h2>FixedDeque<a class="headerlink" href="#fixeddeque" title="Link to this heading"></a></h2>
+<p>Similar to <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Deque.html#doxid-class-core-1-1-deque"><span class="std std-ref"><span class="pre">Core::Deque</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_FixedDeque.html#doxid-class-core-1-1-fixed-deque"><span class="std std-ref"><span class="pre">Core::FixedDeque</span></span></a></code> implements a double-ended queue that uses a user-provided memory block to store elements.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">FixedDeque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">deque</span><span class="p">;</span>
+
+<span class="c1">// Initialize the deque</span>
+<span class="kt">int</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">initialize</span> <span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buffer</span><span class="p">));</span>
+
+<span class="c1">// Add elements</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addFront</span> <span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">deque</span><span class="p">.</span><span class="n">addBack</span> <span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="c1">// Remove elements</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">popFront</span> <span class="p">();</span> <span class="c1">// returns 5</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">popBack</span> <span class="p">();</span>  <span class="c1">// returns 6</span>
+
+<span class="c1">// Peek at first/last element</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">peekFront</span> <span class="p">();</span> <span class="c1">// returns 3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">deque</span><span class="p">.</span><span class="n">peekBack</span> <span class="p">();</span>  <span class="c1">// return 4</span>
+</pre></div>
+</div>
+</section>
+<section id="linkedlist">
+<h2>LinkedList<a class="headerlink" href="#linkedlist" title="Link to this heading"></a></h2>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref"><span class="pre">Core::LinkedList</span></span></a></code> class implements a doubly linked list consisting of nodes that are not stored sequentially in memory.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">;</span>
+
+<span class="c1">// Add elements</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="c1">// Remove elements</span>
+<span class="n">list</span><span class="p">.</span><span class="n">remove</span> <span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="n">removeAt</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>  <span class="c1">// removes number 33</span>
+<span class="n">list</span> <span class="nf">removeLast</span> <span class="p">();</span> <span class="c1">// remove number 5</span>
+
+<span class="c1">// Check if the list is empty</span>
+<span class="kt">bool</span> <span class="n">empty</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">isEmpty</span> <span class="p">();</span>
+
+<span class="c1">// Check if element exists</span>
+<span class="kt">bool</span> <span class="n">exists</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">contains</span> <span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+
+<span class="c1">// Lookup elements</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">at</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>  <span class="c1">// returns 14</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">getFirst</span> <span class="p">();</span> <span class="c1">// returns 3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">getLast</span> <span class="p">();</span>  <span class="c1">// returns 99</span>
+
+<span class="c1">// Iterate elements</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">list</span><span class="p">)</span>
+  <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="intrusivelinkedlist">
+<h2>IntrusiveLinkedList<a class="headerlink" href="#intrusivelinkedlist" title="Link to this heading"></a></h2>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Core::IntrusiveLinkedList</span></code> class requires elements to provide storage for the links used to build the list. The elements added to the list must inherit from <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Core::IntrusiveLink</span></code> and their lifetime is managed by the caller.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nl">DataItem</span><span class="p">:</span> <span class="k">public</span> <span class="n">IntrusiveLink</span><span class="o">&lt;</span><span class="n">DataItem</span><span class="o">&gt;</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+  <span class="n">DataItem</span> <span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="n">IntrusiveLinkedList</span><span class="o">&lt;</span><span class="n">DataItem</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">;</span>
+
+<span class="c1">// Add elements</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">17</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">33</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">9</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">14</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">99</span><span class="p">));</span>
+<span class="n">list</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+
+<span class="c1">// Lookup elements</span>
+<span class="n">DataItem</span><span class="o">*</span> <span class="n">item</span> <span class="o">=</span> <span class="n">itemlist</span><span class="p">.</span><span class="n">at</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+<span class="c1">// Insert elements</span>
+<span class="n">list</span><span class="p">.</span><span class="n">insertBefore</span> <span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">NEW</span> <span class="n">DataItem</span> <span class="p">(</span><span class="mi">7</span><span class="p">));</span>
+
+<span class="c1">// Remove and free all remaining elements</span>
+<span class="k">while</span><span class="p">((</span><span class="n">item</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="n">removeLast</span> <span class="p">())</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+  <span class="k">delete</span> <span class="n">item</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="constvector">
+<h2>ConstVector<a class="headerlink" href="#constvector" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref"><span class="pre">Core::ConstVector</span></span></a></code> implements an immutable sequence of elements using external memory. It is functionality is extended by other classes, for instance, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector"><span class="std std-ref"><span class="pre">Core::MutableVector</span></span></a></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">data</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span> <span class="p">};</span>
+
+<span class="n">ConstVector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vector</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ARRAY_COUNT</span> <span class="p">(</span><span class="n">data</span><span class="p">));</span>
+
+<span class="c1">// Check if the vector is empty</span>
+<span class="kt">bool</span> <span class="n">empty</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">isEmpty</span> <span class="p">();</span>
+
+<span class="c1">// Lookup elements</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">at</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns 14</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">first</span> <span class="p">();</span> <span class="c1">// returns 3</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">last</span> <span class="p">();</span>  <span class="c1">// returns 7</span>
+
+<span class="c1">// Find elements or check if these exist</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">index</span> <span class="p">(</span><span class="mi">99</span><span class="p">);</span> <span class="c1">// returns 5</span>
+<span class="kt">bool</span> <span class="n">exists</span> <span class="o">=</span> <span class="n">vector</span><span class="p">.</span><span class="n">contains</span> <span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+
+<span class="c1">// Iterate elements</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">list</span><span class="p">)</span>
+  <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>There are two methods available to iterate over the elements of a vector. The previous examples uses the for-range based loop to print the values of the vector that was introduced with C++11. This is the recommended method, but if your toolchain doesn’t support C++11 or your code depends on a counter variable you can use the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-corevector-8h-1a08704d61a487a515e5e4398efa872a64"><span class="std std-ref"><span class="pre">VectorForEach</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-corevector-8h-1af42eae24d7d5faadcb0870b9535750b0"><span class="std std-ref"><span class="pre">VectorForEachFast</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-corevector-8h-1ad41d4108ba172605361d84840ff07f1f"><span class="std std-ref"><span class="pre">VectorForEachReverse</span></span></a></code>, and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-coreplatform-8h-1abccec18106e642e19bb0250853a23db6"><span class="std std-ref"><span class="pre">EndFor</span></span></a></code> macros. The following example prints the values of the vector using the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-corevector-8h-1a08704d61a487a515e5e4398efa872a64"><span class="std std-ref"><span class="pre">VectorForEach</span></span></a></code> macro.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">VectorForEach</span> <span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">EndFor</span>
+</pre></div>
+</div>
+</section>
+<section id="mutablevector">
+<h2>MutableVector<a class="headerlink" href="#mutablevector" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector"><span class="std std-ref"><span class="pre">Core::MutableVector</span></span></a></code> derives from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref"><span class="pre">Core::ConstVector</span></span></a></code> and adds functions to modify the data sequence. The memory for the sequence of elements is provided externally and it forms the base for <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref"><span class="pre">Core::Vector</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref"><span class="pre">Core::FixedSizeVector</span></span></a></code>. <code class="docutils literal notranslate"><span class="pre">MutableVector</span></code> cannot be used by itself, but instead requires the use of a derived class. See <code class="docutils literal notranslate"><span class="pre">Vector</span></code> or <code class="docutils literal notranslate"><span class="pre">FixedSizeVector</span></code> for example code.</p>
+</section>
+<section id="vector">
+<h2>Vector<a class="headerlink" href="#vector" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref"><span class="pre">Core::Vector</span></span></a></code> wraps a mutable sequence of elements and manages the memory used by the sequence. It also grows the memory if needed. Since it inherits from <code class="doxyrest-cref docutils literal notranslate"><span class="pre">MutableVector</span></code> is provides all of its functions.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vector</span><span class="p">;</span>
+
+<span class="c1">// Add elements</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="c1">// Add an item only if the vector doesn&#39;t contain it already</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">addOnce</span> <span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// will be added</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">addOnce</span> <span class="p">(</span><span class="mi">9</span><span class="p">);</span> <span class="c1">// will not be added</span>
+
+<span class="c1">// Remove elements</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">remove</span> <span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">removeAt</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>   <span class="c1">// removes number 33</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">removeFirst</span> <span class="p">();</span> <span class="c1">// removes number 3</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">removeLast</span><span class="p">();</span>   <span class="c1">// removes number 5</span>
+
+<span class="c1">// Sort and reverse elements;</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">sort</span> <span class="p">();</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">reverse</span> <span class="p">();</span>
+
+<span class="c1">// Grow the vector for a specified number of elements.</span>
+<span class="c1">// This can be useful if you know the number of elements to expect in advance.</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">setCount</span> <span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+
+<span class="c1">// Set all elements to zero</span>
+<span class="n">vector</span><span class="p">.</span><span class="n">zeroFill</span> <span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="fixedsizevector">
+<h2>FixedSizeVector<a class="headerlink" href="#fixedsizevector" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref"><span class="pre">Core::FixedSizeVector</span></span></a></code> wraps mutable sequence of elements that cannot grow beyond the initial size. With a few exceptions it has the same interface as <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref"><span class="pre">Core::Vector</span></span></a></code>. Hence, example code will be omitted.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dynamicviews.html" class="btn btn-neutral float-left" title="GUI for dynamic views" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rtti.html" class="btn btn-neutral float-right" title="Run-time type information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

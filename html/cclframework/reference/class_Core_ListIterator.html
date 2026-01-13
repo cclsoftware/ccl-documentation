@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template class Core::ListIterator &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class Core::ListLink" href="class_Core_ListLink.html" />
+    <link rel="prev" title="template class Core::LinkedList" href="class_Core_LinkedList.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+          <li class="breadcrumb-item"><a href="group_base_collect.html">Collections</a></li>
+      <li class="breadcrumb-item active">template class Core::ListIterator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-core-listiterator">
+<span id="doxid-class-core-1-1-list-iterator"></span><span id="index-0"></span><h1>template class Core::ListIterator<a class="headerlink" href="#template-class-core-listiterator" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>List iterator. <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#details-class-core-1-1-list-iterator"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corelinkedlist.h&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">ListIterator</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-list-iterator-1a59433fa6f466e1e8beadf5714e396a90"><span></span><span class="n">ListIterator</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">LinkedList</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">list</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1a53696257abcf958af60783f641fd9618"><span class="std std-ref">done</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1a394ecb3ba8dcea0cbcc3fba8d2306ec3"><span class="std std-ref">first</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1ab8ab6458b874d68a456b82dd9df83bab"><span class="std std-ref">last</span></a><span></span> <span class="p">();</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1ae572ed60e4de48af0b9513fc69c47ef2"><span class="std std-ref">next</span></a><span></span> <span class="p">();</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1a059289c65c56eb50b72c9b160431d8f8"><span class="std std-ref">previous</span></a><span></span> <span class="p">();</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator-1ae45d6561f9332d43b2f8743c1ece8737"><span class="std std-ref">peekNext</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-list-iterator-1aff87ffbccc841e2bf27f73c663a033d3"><span></span><span class="k">operator</span> <span class="o">==</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">ListIterator</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-list-iterator-1a4c5915b3d690f1a3b541e14e17c2e494"><span></span><span class="k">operator</span> <span class="o">!=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">ListIterator</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-list-iterator"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>List iterator.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1a53696257abcf958af60783f641fd9618"><span id="index-1"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">done</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if iteration is done.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1a394ecb3ba8dcea0cbcc3fba8d2306ec3"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">first</span> <span class="p">()</span></pre>
+<p>Seek to first element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1ab8ab6458b874d68a456b82dd9df83bab"><span id="index-3"></span><span></span><span class="kt">void</span> <span class="n">last</span> <span class="p">()</span></pre>
+<p>Seek to last element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1ae572ed60e4de48af0b9513fc69c47ef2"><span id="index-4"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">next</span> <span class="p">()</span></pre>
+<p>Seek and return next element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1a059289c65c56eb50b72c9b160431d8f8"><span id="index-5"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">previous</span> <span class="p">()</span></pre>
+<p>Seek and return previous element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-list-iterator-1ae45d6561f9332d43b2f8743c1ece8737"><span id="index-6"></span><span></span><span class="n">T</span><span class="o">&amp;</span> <span class="n">peekNext</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Peek at next element (but don’t seek).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_LinkedList.html" class="btn btn-neutral float-left" title="template class Core::LinkedList" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_ListLink.html" class="btn btn-neutral float-right" title="template class Core::ListLink" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

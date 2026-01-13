@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::Transform &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::TransformSetter" href="struct_CCL_TransformSetter.html" />
+    <link rel="prev" title="struct CCL::SizeLimit" href="struct_CCL_SizeLimit.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">struct CCL::Transform</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-transform">
+<span id="doxid-struct-c-c-l-1-1-transform"></span><span id="index-0"></span><h1>struct CCL::Transform<a class="headerlink" href="#struct-ccl-transform" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>2D Transformation Matrix <a class="reference internal" href="#details-struct-c-c-l-1-1-transform"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;transform.h&gt;</span>
+
+<span class="k">struct</span> <span class="n">Transform</span>
+<span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1a9404ccf1a95542ac80c0609271af0fb2"><span></span><span class="n">a0</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1ad36c8f7a507294aa8f53bb0baf28fb24"><span></span><span class="n">a1</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1aae36fc890ea9532f56273eb4ff3d8fc3"><span></span><span class="n">b0</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1a0a909289ec9fbfaa70c0e112ec9e3b15"><span></span><span class="n">b1</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1a618b1245721cc083957a0e13a409af25"><span></span><span class="n">t0</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1ab003a1a52083f94ec0e39bb78b8295b0"><span></span><span class="n">t1</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a9de68ec1c9b7809129814a3233ae4655"><span class="std std-ref">Transform</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a8e16a0e310645c2ed0bf1427fd0a70d2"><span class="std std-ref">Transform</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a1</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b1</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t1</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a1840b6779e28e7a3dcd2ad193c84cab8"><span class="std std-ref">operator ()</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a0</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a1</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b0</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b1</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t0</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t1</span>
+    <span class="p">);</span>
+
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a1aecbfa490ef7fbd65db295fe5b46645"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Transform</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1aa313f457ce35f4d62822bb4c05e11c7c"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1ab3559e4a4071e73751fbc60d4c951d65"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1ac7d05bd7bb4e214a6253fb3df2ebfb91"><span class="std std-ref">isIdentity</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a5aa97ed64d669122b033f4421563f617"><span class="std std-ref">translate</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">tx</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">ty</span><span class="p">);</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1aef221fbeb51db72ce0cb76928cad25cb"><span class="std std-ref">scale</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">sx</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">sy</span><span class="p">);</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1ac0a71e72657beb4285e8aa8359885f8a"><span class="std std-ref">rotate</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">);</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a14f6ba8370c1d143ecaa039e0ec39a05"><span class="std std-ref">skewX</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">);</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1aa4872a0a9cdfefb7949a721b41ef1a9d"><span class="std std-ref">skewY</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">);</span>
+    <span class="n">Transform</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a050e7ed81a7b508be09750e027d7f59a"><span class="std std-ref">multiply</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Transform</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+    <a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">Core::TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a63ef18cf56ef10678fb6e88a1b56ea4e"><span class="std std-ref">transform</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">Core::TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+    <a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">Core::TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform-1a1f0374499375538dc712f0b058ebc57e"><span class="std std-ref">transform</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">Core::TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+    <a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1a29100b1af17e102171c1402995ca85c3"><span></span><span class="n">transform</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+    <a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-transform-1a654ece89864ef62335f6cde5df9e01fc"><span></span><span class="n">transform</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-transform"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>2D Transformation Matrix</p>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a9de68ec1c9b7809129814a3233ae4655"><span id="index-1"></span><span></span><span class="n">Transform</span> <span class="p">()</span></pre>
+<p>Construct with identity matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a8e16a0e310645c2ed0bf1427fd0a70d2"><span id="index-2"></span><span></span><span class="n">Transform</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a1</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b1</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t0</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t1</span><span class="p">)</span></pre>
+<p>Construct matrix.</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a1840b6779e28e7a3dcd2ad193c84cab8"><span id="index-3"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="p">()</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a0</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">a1</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b0</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">b1</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t0</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">t1</span>
+<span class="p">)</span></pre>
+<p>Assign matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a1aecbfa490ef7fbd65db295fe5b46645"><span id="index-4"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Transform</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span></pre>
+<p>Assign matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1aa313f457ce35f4d62822bb4c05e11c7c"><span id="index-5"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="k">operator</span> <span class="o">==</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Comparison operator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1ab3559e4a4071e73751fbc60d4c951d65"><span id="index-6"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="k">operator</span> <span class="o">!=</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Comparison operator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1ac7d05bd7bb4e214a6253fb3df2ebfb91"><span id="index-7"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">isIdentity</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if this is an identity matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a5aa97ed64d669122b033f4421563f617"><span id="index-8"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">translate</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">tx</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">ty</span><span class="p">)</span></pre>
+<p>Translate matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1aef221fbeb51db72ce0cb76928cad25cb"><span id="index-9"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">scale</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">sx</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">sy</span><span class="p">)</span></pre>
+<p><a class="reference internal" href="class_CCL_Scale.html#doxid-class-c-c-l-1-1-scale"><span class="std std-ref">Scale</span></a> matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1ac0a71e72657beb4285e8aa8359885f8a"><span id="index-10"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">rotate</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">)</span></pre>
+<p>Rotate matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a14f6ba8370c1d143ecaa039e0ec39a05"><span id="index-11"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">skewX</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">)</span></pre>
+<p>Skew matrix horizontally.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1aa4872a0a9cdfefb7949a721b41ef1a9d"><span id="index-12"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">skewY</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">angle</span><span class="p">)</span></pre>
+<p>Skew matrix vertically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a050e7ed81a7b508be09750e027d7f59a"><span id="index-13"></span><span></span><span class="n">Transform</span><span class="o">&amp;</span> <span class="n">multiply</span> <span class="p">(</span><span class="k">const</span> <span class="n">Transform</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span></pre>
+<p>Multiply with other matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a63ef18cf56ef10678fb6e88a1b56ea4e"><span id="index-14"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+<a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">Core::TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">transform</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">Core::TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span></pre>
+<p><a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform"><span class="std std-ref">Transform</span></a> point.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-transform-1a1f0374499375538dc712f0b058ebc57e"><span id="index-15"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">TCoord</span><span class="o">&gt;</span>
+<a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">Core::TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">transform</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">Core::TRect</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TCoord</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span></pre>
+<p><a class="reference internal" href="#doxid-struct-c-c-l-1-1-transform"><span class="std std-ref">Transform</span></a> rectangle (bounding box of resulting parallelogram).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_SizeLimit.html" class="btn btn-neutral float-left" title="struct CCL::SizeLimit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_TransformSetter.html" class="btn btn-neutral float-right" title="struct CCL::TransformSetter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

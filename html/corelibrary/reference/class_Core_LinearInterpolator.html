@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::LinearInterpolator &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class Core::LinearReverseInterpolator" href="class_Core_LinearReverseInterpolator.html" />
+    <link rel="prev" title="class Core::InterpolatorFactory" href="class_Core_InterpolatorFactory.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_interpolator.html">Interpolators</a></li>
+      <li class="breadcrumb-item active">class Core::LinearInterpolator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-linearinterpolator">
+<span id="doxid-class-core-1-1-linear-interpolator"></span><span id="index-0"></span><h1>class Core::LinearInterpolator<a class="headerlink" href="#class-core-linearinterpolator" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Linear conversion between value range and normalized domain. <a class="reference internal" href="#details-class-core-1-1-linear-interpolator"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coreinterpolator.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">LinearInterpolator</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator"><span class="std std-ref">Core::Interpolator</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-linear-interpolator-1ab06ea15158edc5533ae3a32b30722a86"><span></span><span class="n">LinearInterpolator</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">minRange</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">maxRange</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-linear-interpolator-1a7aef36cf55eda2211acaca4c13c84a91"><span class="std std-ref">normalizedToRange</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">normalized</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-linear-interpolator-1a02984eb33141010c7ae9acb310ce9818"><span class="std std-ref">rangeToNormalized</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1acbea4c315198e69750d71b210bb6da3c"><span class="std std-ref">getName</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1a9559ab946c68b84c904ed576b9dcf771"><span class="std std-ref">setName</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">_name</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1abb082bf313652059d6a21675ee840533"><span class="std std-ref">getMinRange</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1aa606ff3147aac39db842d4ad03dd7f93"><span class="std std-ref">getMaxRange</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1abe25fcbd3d77f8f5c24d96b7db6d24d3"><span class="std std-ref">getMidRange</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1aa11a50e0e6d91fd5d47da9b610149a32"><span class="std std-ref">setRange</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">minRange</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">maxRange</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">midRange</span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">f</span></a><span></span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1a3f14843bab17be13a2d09814f6752a4e"><span class="std std-ref">normalizedToRange</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">normalized</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator-1ac10db4a408549c57f8df2f36ab0a96d2"><span class="std std-ref">rangeToNormalized</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-linear-interpolator"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Linear conversion between value range and normalized domain.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-linear-interpolator-1a7aef36cf55eda2211acaca4c13c84a91"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">normalizedToRange</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">normalized</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Convert from normalized domain [0..1] to value range [min..max].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-linear-interpolator-1a02984eb33141010c7ae9acb310ce9818"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">rangeToNormalized</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Convert from value range [min..max] to normalized domain [0..1].</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_InterpolatorFactory.html" class="btn btn-neutral float-left" title="class Core::InterpolatorFactory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_LinearReverseInterpolator.html" class="btn btn-neutral float-right" title="class Core::LinearReverseInterpolator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

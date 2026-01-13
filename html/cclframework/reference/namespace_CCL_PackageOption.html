@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::PackageOption &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::PackageOption::ThreadSafetyMode" href="enum_CCL_PackageOption_ThreadSafetyMode.html" />
+    <link rel="prev" title="CCL-System" href="group_ccl_system.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_system.html">CCL-System</a></li>
+      <li class="breadcrumb-item active">namespace CCL::PackageOption</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-packageoption">
+<span id="doxid-namespace-c-c-l-1-1-package-option"></span><span id="index-0"></span><h1>namespace CCL::PackageOption<a class="headerlink" href="#namespace-ccl-packageoption" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Package file options. <a class="reference internal" href="#details-namespace-c-c-l-1-1-package-option"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">PackageOption</span> <span class="p">{</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_PackageOption_ThreadSafetyMode.html#doxid-namespace-c-c-l-1-1-package-option-1a68efac5ec1a8c3a0b824925ce5b9a853"><span class="std std-ref">ThreadSafetyMode</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1a635a679a7474b8197fa19d739510206b"><span class="std std-ref">kFormatVersion</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1aa74fbca00ab66c45551539b422a32ff0"><span></span><span class="n">formatVersion</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1ae37ba3e176dee01494b4a92d1ef29916"><span class="std std-ref">kCompressed</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a01694ea4b99e7fdbcaf7429a76315159"><span></span><span class="n">compressed</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1a68d7d9f5ee37db308a76e7215677e107"><span class="std std-ref">kCompressionLevel</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1af1de7e8d067717ac655ae5682e375a75"><span></span><span class="n">compressionLevel</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1ae4ed2c2ca57f1218f22205f74691d8f2"><span class="std std-ref">kBasicEncrypted</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a8f68226d840c568b0004cbf1acf2ee0a"><span></span><span class="n">basicencrypted</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1a8eecf1e931fe9919a33cdf7d3a232341"><span class="std std-ref">kXTEAEncrypted</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1af86e5a48a4528c4e61313a18b0ca2eee"><span></span><span class="n">xteaencrypted</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1a05d9a1f175ca967c4157bbce74f6724c"><span class="std std-ref">kAESEncrypted</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a0960d535dbc86920959b449ac83b287e"><span></span><span class="n">aesencrypted</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1ad526aea8ab8ebd1bd7f7f8c71f7c991d"><span class="std std-ref">kExternalEncryptionKey</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a43169e7afa2e747854c54e8a5ca51182"><span></span><span class="n">externalkey</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1aa7ee32cc18f6abf9b9bdbee20c0ebfc6"><span class="std std-ref">kReservedBlockSize</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1af066f335e17ef8cbecbc4c9ef8f31168"><span></span><span class="n">reservedblocksize</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1acf227990020d6837f63bf376e0703dc7"><span class="std std-ref">kThreadSafe</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a1ff74a560ce49d9c65e442d1c9b2ed94"><span></span><span class="n">threadsafe</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1aeb61088263ddc1f14a81a628bfdb6e30"><span class="std std-ref">kFailOnInvalidFile</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a0333af8e993236a94b62e5ee26ea89f7"><span></span><span class="n">failOnInvalid</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-package-option-1a490903e55997b8bd7e9bb7c8b5d00150"><span class="std std-ref">kDetailedProgressEnabled</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-package-option-1a36d479a87f54d44050636d9829c533b5"><span></span><span class="n">detailedProgressEnabled</span></span><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace PackageOption</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-package-option"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Package file options.</p>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1a635a679a7474b8197fa19d739510206b"><span id="index-1"></span><span></span> <span class="n">kFormatVersion</span></pre>
+<p>Package file format version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1ae37ba3e176dee01494b4a92d1ef29916"><span id="index-2"></span><span></span> <span class="n">kCompressed</span></pre>
+<p>Package is compressed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1a68d7d9f5ee37db308a76e7215677e107"><span id="index-3"></span><span></span> <span class="n">kCompressionLevel</span></pre>
+<p>Package compression level.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1ae4ed2c2ca57f1218f22205f74691d8f2"><span id="index-4"></span><span></span> <span class="n">kBasicEncrypted</span></pre>
+<p>Package is encrypted using a very simple (unsafe) cipher algorithm.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1a8eecf1e931fe9919a33cdf7d3a232341"><span id="index-5"></span><span></span> <span class="n">kXTEAEncrypted</span></pre>
+<p>Package is encrypted using the XTEA algorithm.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1a05d9a1f175ca967c4157bbce74f6724c"><span id="index-6"></span><span></span> <span class="n">kAESEncrypted</span></pre>
+<p>Package is encrypted using 128 bit AES.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1ad526aea8ab8ebd1bd7f7f8c71f7c991d"><span id="index-7"></span><span></span> <span class="n">kExternalEncryptionKey</span></pre>
+<p>Encryption key not saved with the package file [string].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1aa7ee32cc18f6abf9b9bdbee20c0ebfc6"><span id="index-8"></span><span></span> <span class="n">kReservedBlockSize</span></pre>
+<p>Reserve block before file data [int].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1acf227990020d6837f63bf376e0703dc7"><span id="index-9"></span><span></span> <span class="n">kThreadSafe</span></pre>
+<p>Package sub-streams are thread-safe.</p>
+<p>[ThreadSafety]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1aeb61088263ddc1f14a81a628bfdb6e30"><span id="index-10"></span><span></span> <span class="n">kFailOnInvalidFile</span></pre>
+<p>All Package files must be valid on writing.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-package-option-1a490903e55997b8bd7e9bb7c8b5d00150"><span id="index-11"></span><span></span> <span class="n">kDetailedProgressEnabled</span></pre>
+<p>Enable detailed progress notifications.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="group_ccl_system.html" class="btn btn-neutral float-left" title="CCL-System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_PackageOption_ThreadSafetyMode.html" class="btn btn-neutral float-right" title="enum CCL::PackageOption::ThreadSafetyMode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

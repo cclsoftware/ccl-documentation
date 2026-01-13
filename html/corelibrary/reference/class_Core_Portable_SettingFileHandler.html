@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Portable::SettingFileHandler &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum Core::Portable::SettingFileHandler::Flags" href="enum_Core_Portable_SettingFileHandler_Flags.html" />
+    <link rel="prev" title="class Core::Portable::SettingFile" href="class_Core_Portable_SettingFile.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_portable.html">Core-Portable</a></li>
+      <li class="breadcrumb-item active">class Core::Portable::SettingFileHandler</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-portable-settingfilehandler">
+<span id="doxid-class-core-1-1-portable-1-1-setting-file-handler"></span><span id="index-0"></span><h1>class Core::Portable::SettingFileHandler<a class="headerlink" href="#class-core-portable-settingfilehandler" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Persistent application settings file handler.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corepersistence.h&gt;</span>
+
+<span class="k">class</span> <span class="n">SettingFileHandler</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_Core_Portable_SettingFileHandler_Flags.html#doxid-class-core-1-1-portable-1-1-setting-file-handler-1aa705cf7e79a21c2352b00ffe20cd295f"><span class="std std-ref">Flags</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_Core_Portable_SettingFileHandler_InternalFlags.html#doxid-class-core-1-1-portable-1-1-setting-file-handler-1a41058517d1970a6d41e034b051462ff9"><span class="std std-ref">InternalFlags</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a962162d9fa45ab89cdfcc871a11d3d0e"><span></span><span class="n">kDirty</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">isDirty</span></a><span></span> <a class="reference internal" href="global.html#doxid-coreclassmacros-8h-1a72c04982008558737083bbf1c1cda3ee"><span class="std std-ref">PROPERTY_VARIABLE</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">streamSizeEstimate</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">StreamSizeEstimate</span></a><span></span><span class="p">)</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">protected</span></a><span></span> <a class="reference internal" href="class_Core_Portable_FileName.html#doxid-class-core-1-1-portable-1-1-file-name"><span class="std std-ref">FileName</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1aad0cbc65f94796bd6b73b3f733bbe29d"><span></span><span class="n">filename</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_Portable_FileName.html#doxid-class-core-1-1-portable-1-1-file-name"><span class="std std-ref">FileName</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a6ca5fe0d2b67d21d91e515f7d114e446"><span></span><span class="n">altFilename</span></span><span></span><span class="p">;</span>
+     <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1afa0acf93bee8c96f370136c57bf2ae29"><span></span><span class="n">kCompress</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">isCompressed</span></a><span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a10fe721367edab01bdbc3fdfd97946d3"><span></span><span class="n">flags</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a0a0346022af84a4c679d3b098bb6a367"><span></span><span class="n">init</span></span><span></span><span class="p">(</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">companyName</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">productName</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">productFileName</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="enum_Core_Portable_Archiver_Format.html#doxid-class-core-1-1-portable-1-1-archiver-1ab4e88c89b3b7ea1735996cc4def22d58"><span class="std std-ref">Archiver::Format</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="enum_Core_Portable_Archiver_Format.html#doxid-class-core-1-1-portable-1-1-archiver-1ab4e88c89b3b7ea1735996cc4def22d58afe2ae1913e2064cd3c102864702e571f"><span class="std std-ref">Archiver::kJSON</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="enum_Core_Portable_Archiver_Format.html#doxid-class-core-1-1-portable-1-1-archiver-1ab4e88c89b3b7ea1735996cc4def22d58"><span class="std std-ref">Archiver::Format</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a233ed07e731b7c75c597ed05b5e986c8"><span></span><span class="n">getArchiveFormat</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_Portable_FileName.html#doxid-class-core-1-1-portable-1-1-file-name"><span class="std std-ref">FileName</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a142d349b07c6108a7d52cfd9313579bf"><span></span><span class="n">getFileName</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a6fc20e76932e03174016e402e38f50fc"><span></span><span class="n">swapFileName</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a263f3530dce5f3bd197e64897edba4f3"><span></span><span class="n">setFileModifyTimesToCurrent</span></span><span></span><span class="p">();</span>
+
+    <a class="reference internal" href="namespace_Core_Portable.html#doxid-namespace-core-1-1-portable-1ab90b66080858dc42f4871444cf28f3d8"><span class="std std-ref">FileIOTaskID</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a20f6a97a2b67ced97d3172bbba79fc1b"><span></span><span class="n">saveInBackground</span></span><span></span><span class="p">(</span>
+        <a class="reference internal" href="struct_Core_Portable_ArchiveUtils_AttributesPromise.html#doxid-struct-core-1-1-portable-1-1-archive-utils-1-1-attributes-promise"><span class="std std-ref">ArchiveUtils::AttributesPromise</span></a><span></span><span class="o">*</span> <span class="n">promise</span><span class="p">,</span>
+        <a class="reference internal" href="struct_Core_Portable_FileIOCompletionHandler.html#doxid-struct-core-1-1-portable-1-1-file-i-o-completion-handler"><span class="std std-ref">FileIOCompletionHandler</span></a><span></span><span class="o">*</span> <span class="n">completionHandler</span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a30e4bf906a564fb0bd3e764387038631"><span></span><span class="n">loadAttributes</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">inplace</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="enum_Core_Portable_FileStorageContext_Mode.html#doxid-class-core-1-1-portable-1-1-file-storage-context-1a46c8a310cf4c094f8c80e1cb8dc1f911"><span class="std std-ref">FileStorageContext::Mode</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a60ee261899aaa1b9cbc47ef865354a62"><span></span><span class="n">getStorageMode</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">saving</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1ac6bc5c33f054d49991611b70722c945e"><span></span><span class="n">PROPERTY_FLAG</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-class-core-1-1-portable-1-1-setting-file-handler-1a10fe721367edab01bdbc3fdfd97946d3"><span class="std std-ref">flags</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_Core_Portable_SettingFileHandler_Flags.html#doxid-class-core-1-1-portable-1-1-setting-file-handler-1aa705cf7e79a21c2352b00ffe20cd295fa590aa6b5ab9c2e0805ac5373ec50c6ff"><span class="std std-ref">kAlternateFileNames</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">alternateFileNames</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-setting-file-handler-1a5a2bf2cdb9a812d690e10e54438bf741"><span></span><span class="n">PROPERTY_FLAG</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-class-core-1-1-portable-1-1-setting-file-handler-1a10fe721367edab01bdbc3fdfd97946d3"><span class="std std-ref">flags</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_Core_Portable_SettingFileHandler_InternalFlags.html#doxid-class-core-1-1-portable-1-1-setting-file-handler-1a41058517d1970a6d41e034b051462ff9add4ce41ffb1d9b748da81c6142322ac2"><span class="std std-ref">kUseAltFileName</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">useAltFileName</span></a><span></span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_SettingFile.html#doxid-class-core-1-1-portable-1-1-setting-file"><span class="std std-ref">SettingFile</span></a><span></span><span class="p">;</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Portable_SettingFile.html" class="btn btn-neutral float-left" title="class Core::Portable::SettingFile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_Core_Portable_SettingFileHandler_Flags.html" class="btn btn-neutral float-right" title="enum Core::Portable::SettingFileHandler::Flags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

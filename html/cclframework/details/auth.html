@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authorization Policy &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Scripting" href="scripting.html" />
+    <link rel="prev" title="Graphical Update Call Sequence" href="gfxupdate.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Authorization Policy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Authorization Policy</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="authorization-policy">
+<h1>Authorization Policy<a class="headerlink" href="#authorization-policy" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The authorization policy used by the CCL <strong>security framework</strong> is a way of unlocking a set of features at runtime based on the application identity. The application identity can either be hardcoded or initialized from a .license file. Certain shared services and plug-ins require an authorization policy to be present in the host application.</p>
+<p>The policy can be written in XML or JSON. The format is inspired by access control lists (<a class="reference external" href="https://en.wikipedia.org/wiki/Access_control_list">https://en.wikipedia.org/wiki/Access_control_list</a>). The policy is digitally signed and stored encrypted in the application code. Each application needs its own secret key for the encryption and a new public/private key pair for signing.</p>
+<p>The application-wide policy is managed by the <strong>IAuthorizationManager</strong> singleton in CCL. There is a simplified implementation available in corelib for embedded use.</p>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h2>
+<p>The following steps are required to set up a new authorization policy:</p>
+<ul>
+<li><p>Setup folder structure following our naming convention:</p>
+<ul class="simple">
+<li><p>Add a “security” folder to the application for XML files and scripts</p></li>
+<li><p>Add a “source/bincpp” folder for generated source files</p></li>
+<li><p>Add a new appsecurity.cpp (or plugsecurity.cpp) file</p></li>
+</ul>
+</li>
+<li><p>Generate a new 128 bit AES cipher key and initialization vector (IV)</p>
+<ul>
+<li><p>Use whatever tool you like</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Example, Mac</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>openssl enc -aes-128-cbc -k secret -P -md sha1
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Add key/IV to appsecurity.cpp (e.g. kAuthPolicySecretKey and kAuthPolicyCipherIV)</p></li>
+<li><p>Add key/IV to cipher.xml in “security” folder (base-64 encoded)</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Example, Mac</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="sc">&#39;6A151BD08111BDFBA3494A41B4B1B7A2&#39;</span> <span class="o">|</span> <span class="n">xxd</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">p</span> <span class="o">|</span> <span class="n">base64</span>
+
+<span class="o">&lt;</span><span class="n">Cipher</span> <span class="n">algorithm</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">mode</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Attributes</span> <span class="nl">x</span><span class="p">:</span><span class="n">id</span><span class="o">=</span><span class="s">&quot;initialVector&quot;</span> <span class="n">material</span><span class="o">=</span><span class="s">&quot;...&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">Attributes</span> <span class="nl">x</span><span class="p">:</span><span class="n">id</span><span class="o">=</span><span class="s">&quot;secretKey&quot;</span> <span class="n">material</span><span class="o">=</span><span class="s">&quot;...&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Cipher</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Generate a new RSA public/private key pair</p>
+<ul class="simple">
+<li><p>Use the CCL crypt tool</p></li>
+<li><p>Store in authorizer.privatekey and authorizer.publickey</p></li>
+<li><p>Encrypt the public key with the AES cipher key</p></li>
+<li><p>Convert the encrypted public key to a C++ file using the CCL makebin tool and add it to the application project</p></li>
+</ul>
+</li>
+<li><p>Create the actual authpolicy.xml file</p>
+<ul class="simple">
+<li><p>Create a script to sign, encrypt, and convert the policy to a C++ file (e.g. make_authpolicy.bat/.sh)</p></li>
+<li><p>Always call this script after editing the policy</p></li>
+<li><p>Add the policy C++ file to the project and it to the <strong>ICryptoKeyStore</strong> during application initialization.</p></li>
+</ul>
+</li>
+<li><p>Make sure to call <strong>IAuthorizationManager::setAppIdentity()</strong> and <strong>IAuthorizationManager::loadPolicy()</strong></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gfxupdate.html" class="btn btn-neutral float-left" title="Graphical Update Call Sequence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scripting.html" class="btn btn-neutral float-right" title="Scripting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

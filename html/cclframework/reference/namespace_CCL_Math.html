@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::Math &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template struct CCL::Math::Constants" href="struct_CCL_Math_Constants.html" />
+    <link rel="prev" title="namespace CCL::MarkupTags" href="namespace_CCL_MarkupTags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">namespace CCL::Math</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-math">
+<span id="doxid-namespace-c-c-l-1-1-math"></span><span id="index-0"></span><h1>namespace CCL::Math<a class="headerlink" href="#namespace-ccl-math" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Math</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_CCL_Math_Rational.html#doxid-class-c-c-l-1-1-math-1-1-rational"><span class="std std-ref">Rational</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-math-1ae27145f564437882a0565e1434d54e14"><span></span><span class="n">Rational32</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_CCL_Math_Rational.html#doxid-class-c-c-l-1-1-math-1-1-rational"><span class="std std-ref">Rational</span></a><span></span> <span class="o">&lt;</span><span class="n">int64</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-math-1ae85d39cbc66d7ecf0faab2fb580592e8"><span></span><span class="n">Rational64</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">Core::TPoint</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-math-1a321119e586cc071f98aa84013bbeedaf"><span></span><span class="n">Point</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a321119e586cc071f98aa84013bbeedaf"><span class="std std-ref">Point</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-math-1a2444794f6e232d797295d20756357fff"><span></span><span class="n">PointRef</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Constants.html#doxid-struct-c-c-l-1-1-math-1-1-constants"><span class="std std-ref">Constants</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Constants-2.html#doxid-struct-c-c-l-1-1-math-1-1-constants-3-01float-01-4"><span class="std std-ref">Constants&lt;float&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Constants-3.html#doxid-struct-c-c-l-1-1-math-1-1-constants-3-01double-01-4"><span class="std std-ref">Constants&lt;double&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Functions.html#doxid-struct-c-c-l-1-1-math-1-1-functions-3-01double-01-4"><span class="std std-ref">Functions&lt;double&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Functions-2.html#doxid-struct-c-c-l-1-1-math-1-1-functions"><span class="std std-ref">Functions</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Functions-3.html#doxid-struct-c-c-l-1-1-math-1-1-functions-3-01float-01-4"><span class="std std-ref">Functions&lt;float&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Math_Range.html#doxid-struct-c-c-l-1-1-math-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_CubicBezierCurve.html#doxid-class-c-c-l-1-1-math-1-1-cubic-bezier-curve"><span class="std std-ref">CubicBezierCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_CubicCurve.html#doxid-class-c-c-l-1-1-math-1-1-cubic-curve"><span class="std std-ref">CubicCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_Curve.html#doxid-class-c-c-l-1-1-math-1-1-curve"><span class="std std-ref">Curve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_CurveApproacher.html#doxid-class-c-c-l-1-1-math-1-1-curve-approacher"><span class="std std-ref">CurveApproacher</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_CurveNormalizer.html#doxid-class-c-c-l-1-1-math-1-1-curve-normalizer"><span class="std std-ref">CurveNormalizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_ExponentialCurve.html#doxid-class-c-c-l-1-1-math-1-1-exponential-curve"><span class="std std-ref">ExponentialCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_LinearCurve.html#doxid-class-c-c-l-1-1-math-1-1-linear-curve"><span class="std std-ref">LinearCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_LinearSpline.html#doxid-class-c-c-l-1-1-math-1-1-linear-spline"><span class="std std-ref">LinearSpline</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_LogarithmicCurve.html#doxid-class-c-c-l-1-1-math-1-1-logarithmic-curve"><span class="std std-ref">LogarithmicCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_NaturalSpline.html#doxid-class-c-c-l-1-1-math-1-1-natural-spline"><span class="std std-ref">NaturalSpline</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_QuadraticCurve.html#doxid-class-c-c-l-1-1-math-1-1-quadratic-curve"><span class="std std-ref">QuadraticCurve</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_RangeList.html#doxid-class-c-c-l-1-1-math-1-1-range-list"><span class="std std-ref">RangeList</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_RangeListIterator.html#doxid-class-c-c-l-1-1-math-1-1-range-list-iterator"><span class="std std-ref">RangeListIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_Rational.html#doxid-class-c-c-l-1-1-math-1-1-rational"><span class="std std-ref">Rational</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_Region.html#doxid-class-c-c-l-1-1-math-1-1-region"><span class="std std-ref">Region</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_RegionIterator.html#doxid-class-c-c-l-1-1-math-1-1-region-iterator"><span class="std std-ref">RegionIterator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_ScaledCurve.html#doxid-class-c-c-l-1-1-math-1-1-scaled-curve"><span class="std std-ref">ScaledCurve</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_SplineIterator.html#doxid-class-c-c-l-1-1-math-1-1-spline-iterator"><span class="std std-ref">SplineIterator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Math_StepSpline.html#doxid-class-c-c-l-1-1-math-1-1-step-spline"><span class="std std-ref">StepSpline</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a42980eed636ec3638aa085a62e715348"><span class="std std-ref">degreesToRad</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">a</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1ae591a6aa76852e57e33b5034e02d60b0"><span class="std std-ref">radToDegrees</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">a</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1ae5fbadedd0716b64d42bfb75f15365e0"><span class="std std-ref">millimeterToInch</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">mm</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1af2b8f2a61e9801fee0ac6d45bb56bc21"><span class="std std-ref">inchToMillimeter</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inch</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a6379e8a40237cac2cd18d5139110383f"><span class="std std-ref">inchToCoord</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inch</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpi</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a4cb869652bce2fbbe0f41f6c41ed7e7d"><span class="std std-ref">millimeterToCoord</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">mm</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpi</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a63fe0aabcf5ba460aa46e0b535b1b4e7"><span class="std std-ref">dpiFromCoordSizeInch</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">coordSizeInInch</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1ac807cb9bc792d7bf2001206a8aafb0be"><span class="std std-ref">dpiFromCoordSizeMillimeter</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">coordSizeInMM</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a0f8bdff45468068ca14cd8bf63c2430b"><span class="std std-ref">centToFreqFactor</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">cent</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a9ee613d45ef8a1228d90694fcc03544c"><span class="std std-ref">centToFreq</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">cent</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a2147b7d186de8a9579315eedb7fada47"><span class="std std-ref">freqToCent</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">freq</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1adf2bc7eb7f56f45c81948033cc7813d7"><span class="std std-ref">dbToFactor</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">db</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a4540d792841c98540db7b5b8c283f645"><span class="std std-ref">factorToDb</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">factor</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a1c071c8b760103f949daf0ce7ee952ff"><span class="std std-ref">timeCentToSeconds</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">timeCent</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a73cc49cca9bada6fd6f653c82e75373b"><span class="std std-ref">secondsToTimeCent</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">seconds</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a701fe2611d91dc973aaf50596de35f4a"><span class="std std-ref">concave</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a3a87f38a084d62128841298363be24d3"><span class="std std-ref">convex</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1abdd6e0a283e58c1702cddcebf51ce86e"><span class="std std-ref">quadConcave</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1ad4a0bf6cc69c2f4878d16b8daad495f2"><span class="std std-ref">quadConvex</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a3c38e8e385ff2b5aa7f804c466b3adb0"><span class="std std-ref">cartesianToPolar</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">r</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">deltaX</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">deltaY</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a73cc8710d8eb7bb3b685e4ca9cd81809"><span class="std std-ref">polarToCartesian</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">deltaX</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">deltaY</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">r</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a84e84202aef3905b40eea5456d74b20c"><span class="std std-ref">stretchRadiusToSquare</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">r</span><span class="p">);</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-math-1a6c32a1ac9e680596ae4956c6b21950cc"><span class="std std-ref">normalizeAngle</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">angle</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace Math</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-math"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a42980eed636ec3638aa085a62e715348"><span id="index-1"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">degreesToRad</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">a</span><span class="p">)</span></pre>
+<p>Convert degrees to radians.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1ae591a6aa76852e57e33b5034e02d60b0"><span id="index-2"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">radToDegrees</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">a</span><span class="p">)</span></pre>
+<p>Convert radians to degrees.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1ae5fbadedd0716b64d42bfb75f15365e0"><span id="index-3"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">millimeterToInch</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">mm</span><span class="p">)</span></pre>
+<p>Convert mm to inch .</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1af2b8f2a61e9801fee0ac6d45bb56bc21"><span id="index-4"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inchToMillimeter</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inch</span><span class="p">)</span></pre>
+<p>Convert inch to mm.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a6379e8a40237cac2cd18d5139110383f"><span id="index-5"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inchToCoord</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">inch</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpi</span><span class="p">)</span></pre>
+<p>Convert inch to coordinates (dots).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a4cb869652bce2fbbe0f41f6c41ed7e7d"><span id="index-6"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">millimeterToCoord</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">mm</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpi</span><span class="p">)</span></pre>
+<p>Convert millimeter to coordinates (dots).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a63fe0aabcf5ba460aa46e0b535b1b4e7"><span id="index-7"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpiFromCoordSizeInch</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">coordSizeInInch</span><span class="p">)</span></pre>
+<p>Calculate DPI when one dot (coordinate) should be x inches wide.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1ac807cb9bc792d7bf2001206a8aafb0be"><span id="index-8"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dpiFromCoordSizeMillimeter</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">coordSizeInMM</span><span class="p">)</span></pre>
+<p>Calculate DPI when one dot (coordinate) should be x millimeters wide.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a0f8bdff45468068ca14cd8bf63c2430b"><span id="index-9"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">centToFreqFactor</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">cent</span><span class="p">)</span></pre>
+<p>Convert cent to frequency factor.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a9ee613d45ef8a1228d90694fcc03544c"><span id="index-10"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">centToFreq</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">cent</span><span class="p">)</span></pre>
+<p>Convert cent to freq.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a2147b7d186de8a9579315eedb7fada47"><span id="index-11"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">freqToCent</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">freq</span><span class="p">)</span></pre>
+<p>Convert freq to cent</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1adf2bc7eb7f56f45c81948033cc7813d7"><span id="index-12"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">dbToFactor</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">db</span><span class="p">)</span></pre>
+<p>Convert dB to factor.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a4540d792841c98540db7b5b8c283f645"><span id="index-13"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">factorToDb</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">factor</span><span class="p">)</span></pre>
+<p>Convert factor to dB.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a1c071c8b760103f949daf0ce7ee952ff"><span id="index-14"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">timeCentToSeconds</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">timeCent</span><span class="p">)</span></pre>
+<p>Convert timecent to seconds.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a73cc49cca9bada6fd6f653c82e75373b"><span id="index-15"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">secondsToTimeCent</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">seconds</span><span class="p">)</span></pre>
+<p>Convert seconds to timecent.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a701fe2611d91dc973aaf50596de35f4a"><span id="index-16"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">concave</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Modify input value using a concave logarithmic curve.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a3a87f38a084d62128841298363be24d3"><span id="index-17"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">convex</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Modify input value using a convex logarithmic curve.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1abdd6e0a283e58c1702cddcebf51ce86e"><span id="index-18"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">quadConcave</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Modify input value using a concave quadratic curve.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1ad4a0bf6cc69c2f4878d16b8daad495f2"><span id="index-19"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">quadConvex</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Modify input value using a convex quadratic curve.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a3c38e8e385ff2b5aa7f804c466b3adb0"><span id="index-20"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">cartesianToPolar</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">r</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">deltaX</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">deltaY</span><span class="p">)</span></pre>
+<p>convert xy-coordinates to angle and length</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a73cc8710d8eb7bb3b685e4ca9cd81809"><span id="index-21"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">polarToCartesian</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">deltaX</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">deltaY</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">r</span><span class="p">)</span></pre>
+<p>convert angle and length to xy-coordinates</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a84e84202aef3905b40eea5456d74b20c"><span id="index-22"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">stretchRadiusToSquare</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">theta</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">r</span><span class="p">)</span></pre>
+<p>stretch the radius of a circle to a square</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-math-1a6c32a1ac9e680596ae4956c6b21950cc"><span id="index-23"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">normalizeAngle</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&amp;</span> <span class="n">angle</span><span class="p">)</span></pre>
+<p>normalize an angle in radians to (-pi, pi)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_CCL_MarkupTags.html" class="btn btn-neutral float-left" title="namespace CCL::MarkupTags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Math_Constants.html" class="btn btn-neutral float-right" title="template struct CCL::Math::Constants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

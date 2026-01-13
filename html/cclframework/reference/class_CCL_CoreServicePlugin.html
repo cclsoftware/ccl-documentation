@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::CoreServicePlugin &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class CCL::PluginConstructor" href="class_CCL_PluginConstructor.html" />
+    <link rel="prev" title="template class CCL::CorePropertyHandlerHelper" href="class_CCL_CorePropertyHandlerHelper.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+          <li class="breadcrumb-item"><a href="group_base_plug.html">Plugins</a></li>
+      <li class="breadcrumb-item active">class CCL::CoreServicePlugin</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-coreserviceplugin">
+<span id="doxid-class-c-c-l-1-1-core-service-plugin"></span><span id="index-0"></span><h1>class CCL::CoreServicePlugin<a class="headerlink" href="#class-ccl-coreserviceplugin" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Wrapper service for core classes. <a class="reference internal" href="#details-class-c-c-l-1-1-core-service-plugin"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;serviceplugin.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">CoreServicePlugin</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin"><span class="std std-ref">CCL::ServicePlugin</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-core-service-plugin-1aa3c70f0f2488943187c6083438572f71"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-core-service-plugin-1a804b340350b1787d7a1f0d74c95accdc"><span class="std std-ref">terminate</span></a><span></span> <span class="p">();</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1ab8ec67b655aaa3a096fc1f4134ffaa21"><span class="std std-ref">Token</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="global.html#doxid-cclmacros-8h-1aeeef2dc35341b4c7206cfbda1893bb46"><span class="std std-ref">CLASS_INTERFACES</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown"><span class="std std-ref">Unknown</span></a><span></span><span class="p">)</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">protected</span></a><span></span> <a class="reference internal" href="class_CCL_ClassFactory.html#doxid-class-c-c-l-1-1-class-factory"><span class="std std-ref">ClassFactory</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin-1acdaa497eb4a85fa3e1d072291647fad3"><span class="std std-ref">classFactory</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown"><span class="std std-ref">Unknown</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown-1ae5d5189393bf0bb6a4e75bc85adaea9c"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown"><span class="std std-ref">Unknown</span></a><span></span><span class="o">&amp;</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown-1ae8915530da04b84cd124aca376cf8f57"><span class="std std-ref">getRetainCount</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1aefc0aab13705a9d17d34274ed816e301"><span class="std std-ref">setFactoryToken</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1ab8ec67b655aaa3a096fc1f4134ffaa21"><span class="std std-ref">Token</span></a><span></span> <span class="n">token</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1ab8ec67b655aaa3a096fc1f4134ffaa21"><span class="std std-ref">Token</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1a2783cdec1a41416df1c4d1c731ed62da"><span class="std std-ref">getFactoryToken</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="class_CCL_PluginInstance.html#doxid-class-c-c-l-1-1-plugin-instance-1aeb4d0188b13b8be4a801376968a0b547"><span class="std std-ref">setFactoryToken</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1ab8ec67b655aaa3a096fc1f4134ffaa21"><span class="std std-ref">Token</span></a><span></span> <span class="n">token</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IPluginInstance.html#doxid-struct-c-c-l-1-1-i-plugin-instance-1ab8ec67b655aaa3a096fc1f4134ffaa21"><span class="std std-ref">Token</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="class_CCL_PluginInstance.html#doxid-class-c-c-l-1-1-plugin-instance-1abffeaeb3f52d803a9815072de73b2956"><span class="std std-ref">getFactoryToken</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IComponent.html#doxid-struct-c-c-l-1-1-i-component-1a9bda885f7e552a533f21cdebd22a56d6"><span class="std std-ref">initialize</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">context</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IComponent.html#doxid-struct-c-c-l-1-1-i-component-1a48a45a9c27cadaa6b1646cdc2229dcb6"><span class="std std-ref">terminate</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IComponent.html#doxid-struct-c-c-l-1-1-i-component-1ae47a17b5183a9ffe884eb6a88485ca94"><span class="std std-ref">canTerminate</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin-1a8b686c8080f927fa9fb5c536c844875d"><span class="std std-ref">initialize</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">context</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin-1a804b340350b1787d7a1f0d74c95accdc"><span class="std std-ref">terminate</span></a><span></span> <span class="p">();</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin-1a5b075aba4d33c00317b22193ecfe4531"><span class="std std-ref">canTerminate</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_ClassFactory.html#doxid-class-c-c-l-1-1-class-factory"><span class="std std-ref">ClassFactory</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="class_CCL_ServicePlugin.html#doxid-class-c-c-l-1-1-service-plugin-1a94017f1212262f8b63ba7ce8d87e0b37"><span class="std std-ref">getClassFactory</span></a><span></span> <span class="p">();</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-core-service-plugin"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Wrapper service for core classes.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-core-service-plugin-1aa3c70f0f2488943187c6083438572f71"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">queryInterface</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span></pre>
+<p>Obtain pointer to another interface supported by this object.</p>
+<p>In case of success, the caller holds a reference to this interface, which must be released afterwards.</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>iid</p></td>
+<td><p>ID of requested interface (e.g. “ccl_iid&lt;ISomething&gt; ()”)</p></td>
+</tr>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p>receives pointer to requested interface</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>kResultOk for success, kResultNoInterface if unsupported.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-core-service-plugin-1a804b340350b1787d7a1f0d74c95accdc"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">terminate</span> <span class="p">()</span></pre>
+<p>Terminate plug-in component.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_CorePropertyHandlerHelper.html" class="btn btn-neutral float-left" title="template class CCL::CorePropertyHandlerHelper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_CCL_PluginConstructor.html" class="btn btn-neutral float-right" title="template class CCL::PluginConstructor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

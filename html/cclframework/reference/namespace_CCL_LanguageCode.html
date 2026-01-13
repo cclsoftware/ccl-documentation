@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::LanguageCode &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::Text" href="namespace_CCL_Text.html" />
+    <link rel="prev" title="struct CCL::LocalString::EnglishCorrection" href="struct_CCL_LocalString_EnglishCorrection.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
+      <li class="breadcrumb-item active">namespace CCL::LanguageCode</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-languagecode">
+<span id="doxid-namespace-c-c-l-1-1-language-code"></span><span id="index-0"></span><h1>namespace CCL::LanguageCode<a class="headerlink" href="#namespace-ccl-languagecode" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">LanguageCode</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1ad896b63205779b1b09e86d941ce13976"><span></span><span class="n">English</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1ab028c52286c95de48a1c773d7ed02d04"><span></span><span class="n">en</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a18bff3d9892c435006ca22f43a9f031f"><span></span><span class="n">German</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1ab4be1c568a6dc02dcaf2849852bdb13e"><span></span><span class="n">de</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1addddcf918bce70f82d5d59902a7e3fba"><span></span><span class="n">French</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a22c50379b54e3642dc31fa294fa5da9e"><span></span><span class="n">fr</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a1a2fba2f516cad50ef94b146902a8336"><span></span><span class="n">Spanish</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a57e1c4530990c95dbfbd6fa2baa6f3fe"><span></span><span class="n">es</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a08b6c46cb1fba0e45190b024751ebd33"><span></span><span class="n">Italian</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1abe6ae68f2bb310ea30b1fe389e0418d6"><span></span><span class="n">it</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a5ae3bec1c10d528930b4d4c037d20e7d"><span></span><span class="n">Portuguese</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1ac0ca150b0e000602a104bc1ca56005e3"><span></span><span class="n">pt</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a0d0c8efb236406ca6af73034453a8546"><span></span><span class="n">Japanese</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1abb0ed6ad56f41c6de469776171261226"><span></span><span class="n">ja</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a64155171e9660910c116a17b4ef4697e"><span></span><span class="n">Chinese</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1abdbd3b75b420e4fb94b1565418457bd0"><span></span><span class="n">zh</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a61efdf4626a55586569e71acf97c6554"><span></span><span class="n">EnglishUS</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-language-code-1ab028c52286c95de48a1c773d7ed02d04"><span class="std std-ref">en</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1af543162dd6ccae5002628e44c64bbf65"><span></span><span class="n">US</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a4baab5383f90677ec25ee964034760fd"><span></span><span class="n">GermanDE</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-language-code-1ab4be1c568a6dc02dcaf2849852bdb13e"><span class="std std-ref">de</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1a08b8d53d4a0757127d55bc070c4c2e60"><span></span><span class="n">DE</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-language-code-1aa2e59e13028e5050e2f5d7224bec266d"><span></span><span class="n">Neutral</span></span><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace LanguageCode</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_LocalString_EnglishCorrection.html" class="btn btn-neutral float-left" title="struct CCL::LocalString::EnglishCorrection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_Text.html" class="btn btn-neutral float-right" title="namespace CCL::Text" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::ISignalHandler &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::Threading::ISyncPrimitive" href="struct_CCL_Threading_ISyncPrimitive.html" />
+    <link rel="prev" title="struct CCL::Threading::ISharedMemory" href="struct_CCL_Threading_ISharedMemory.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_system.html">CCL-System</a></li>
+      <li class="breadcrumb-item active">struct CCL::ISignalHandler</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-isignalhandler">
+<span id="doxid-struct-c-c-l-1-1-i-signal-handler"></span><span id="index-0"></span><h1>struct CCL::ISignalHandler<a class="headerlink" href="#struct-ccl-isignalhandler" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Handler for signal protocol between <a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a> and <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a>. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-signal-handler"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;isignalhandler.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">ISignalHandler</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1ab95866b3d92a96186d35683cf607d434"><span class="std std-ref">advise</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a92e88cc356e5e4d3e7345099d455f3db"><span class="std std-ref">unadvise</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1ae1cd222a858101dd841691dcbe831f17"><span class="std std-ref">performSignal</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">MessageRef</span></a><span></span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a811f21e1b23824b18843492b6f4e908d"><span class="std std-ref">queueSignal</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a280159efc4d4e70439ed6879c94dd218"><span class="std std-ref">queueChanged</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1ab72c9c123a968f0b501a75024e9c614a"><span class="std std-ref">cancelSignals</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a08b00fdb9cae1d683e7c569023deda19"><span class="std std-ref">postMessage</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a2ff9e23066f0b30bec3d1757dc1f3e3f"><span class="std std-ref">postMessageBlocking</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a09e34f3b11e2babde0292d9cc997859a"><span class="std std-ref">cancelMessages</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a850aa5f77ca1f024fb31b19cc7a4d5d4"><span class="std std-ref">flush</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a0ad17b94307bba1c738299733fdad6e6"><span class="std std-ref">hasObservers</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a1419bccd564e667d5091dbb69674e01b"><span class="std std-ref">messagesPending</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-signal-handler"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Handler for signal protocol between <a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a> and <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a>.</p>
+<p><a class="reference internal" href="namespace_CCL_Threading.html#doxid-namespace-c-c-l-1-1-threading"><span class="std std-ref">Threading</span></a> Policy: Everything except <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a811f21e1b23824b18843492b6f4e908d"><span class="std std-ref">queueSignal()</span></a> and <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a08b00fdb9cae1d683e7c569023deda19"><span class="std std-ref">postMessage()</span></a> must be called from main thread only, otherwise the methods will fail with kResultWrongThread!</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1ab95866b3d92a96186d35683cf607d434"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">advise</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Establish connection between subject and observer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a92e88cc356e5e4d3e7345099d455f3db"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">unadvise</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Break connection between subject and observer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1ae1cd222a858101dd841691dcbe831f17"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">performSignal</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">MessageRef</span></a><span></span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>This will call <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer-1a1e77e5b23e3bdbc5a5bcf9f61670c8f7"><span class="std std-ref">IObserver::notify()</span></a> on all dependent observers of given subject.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a811f21e1b23824b18843492b6f4e908d"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">queueSignal</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Queue signal message of given subject.</p>
+<p>It is performed next time <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a850aa5f77ca1f024fb31b19cc7a4d5d4"><span class="std std-ref">flush()</span></a> is called. If equal messages are queued for a subject, the signal is performed only once.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a280159efc4d4e70439ed6879c94dd218"><span id="index-5"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">queueChanged</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Optimized version of <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a811f21e1b23824b18843492b6f4e908d"><span class="std std-ref">queueSignal()</span></a> for kChanged message without arguments.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1ab72c9c123a968f0b501a75024e9c614a"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">cancelSignals</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Discard any queued signal messages of given subject.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a08b00fdb9cae1d683e7c569023deda19"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">postMessage</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Post message directly to given observer with delay given in milliseconds.</p>
+<p>Delayed messages are delivered only once.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a2ff9e23066f0b30bec3d1757dc1f3e3f"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">postMessageBlocking</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref">IMessage</span></a><span></span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Similar to <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-signal-handler-1a08b00fdb9cae1d683e7c569023deda19"><span class="std std-ref">postMessage()</span></a>, but calling thread blocks until message is delivered or canceled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a09e34f3b11e2babde0292d9cc997859a"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">cancelMessages</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Discard any messages posted to given observer which have not been delivered yet.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a850aa5f77ca1f024fb31b19cc7a4d5d4"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">flush</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Flush queued signals.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a0ad17b94307bba1c738299733fdad6e6"><span id="index-11"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">hasObservers</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Return true, if it still has observers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-signal-handler-1a1419bccd564e667d5091dbb69674e01b"><span id="index-12"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">messagesPending</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref">IObserver</span></a><span></span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Return true, if there are undelivered messages for the observer.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_Threading_ISharedMemory.html" class="btn btn-neutral float-left" title="struct CCL::Threading::ISharedMemory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Threading_ISyncPrimitive.html" class="btn btn-neutral float-right" title="struct CCL::Threading::ISyncPrimitive" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

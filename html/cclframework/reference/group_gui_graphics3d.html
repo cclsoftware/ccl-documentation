@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Graphics &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::TransformUtils3D" href="namespace_CCL_TransformUtils3D.html" />
+    <link rel="prev" title="CCL-GUI" href="group_gui.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+      <li class="breadcrumb-item active">3D Graphics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="d-graphics">
+<span id="doxid-group-gui-graphics3d"></span><span id="index-0"></span><h1>3D Graphics<a class="headerlink" href="#d-graphics" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>3D Graphics interfaces. <a class="reference internal" href="#details-group-gui-graphics3d"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_TransformUtils3D.html#doxid-namespace-c-c-l-1-1-transform-utils3-d"><span class="std std-ref">CCL::TransformUtils3D</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_BoundingSphere3D.html#doxid-struct-c-c-l-1-1-bounding-sphere3-d"><span class="std std-ref">CCL::BoundingSphere3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IBufferAllocator3D.html#doxid-struct-c-c-l-1-1-i-buffer-allocator3-d"><span class="std std-ref">CCL::IBufferAllocator3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IBufferSegment3D.html#doxid-struct-c-c-l-1-1-i-buffer-segment3-d"><span class="std std-ref">CCL::IBufferSegment3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ICamera3D.html#doxid-struct-c-c-l-1-1-i-camera3-d"><span class="std std-ref">CCL::ICamera3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ICubeTessellator3D.html#doxid-struct-c-c-l-1-1-i-cube-tessellator3-d"><span class="std std-ref">CCL::ICubeTessellator3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ICustomMaterial3D.html#doxid-struct-c-c-l-1-1-i-custom-material3-d"><span class="std std-ref">CCL::ICustomMaterial3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGeometry3D.html#doxid-struct-c-c-l-1-1-i-geometry3-d"><span class="std std-ref">CCL::IGeometry3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGeometrySource3D.html#doxid-struct-c-c-l-1-1-i-geometry-source3-d"><span class="std std-ref">CCL::IGeometrySource3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphics3D.html#doxid-struct-c-c-l-1-1-i-graphics3-d"><span class="std std-ref">CCL::IGraphics3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsBuffer3D.html#doxid-struct-c-c-l-1-1-i-graphics-buffer3-d"><span class="std std-ref">CCL::IGraphicsBuffer3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsContent3D.html#doxid-struct-c-c-l-1-1-i-graphics-content3-d"><span class="std std-ref">CCL::IGraphicsContent3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsFactory3D.html#doxid-struct-c-c-l-1-1-i-graphics-factory3-d"><span class="std std-ref">CCL::IGraphicsFactory3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsPipeline3D.html#doxid-struct-c-c-l-1-1-i-graphics-pipeline3-d"><span class="std std-ref">CCL::IGraphicsPipeline3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsResource3D.html#doxid-struct-c-c-l-1-1-i-graphics-resource3-d"><span class="std std-ref">CCL::IGraphicsResource3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsShader3D.html#doxid-struct-c-c-l-1-1-i-graphics-shader3-d"><span class="std std-ref">CCL::IGraphicsShader3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGraphicsTexture2D.html#doxid-struct-c-c-l-1-1-i-graphics-texture2-d"><span class="std std-ref">CCL::IGraphicsTexture2D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IGridTessellator3D.html#doxid-struct-c-c-l-1-1-i-grid-tessellator3-d"><span class="std std-ref">CCL::IGridTessellator3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ILightSource3D.html#doxid-struct-c-c-l-1-1-i-light-source3-d"><span class="std std-ref">CCL::ILightSource3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IMaterial3D.html#doxid-struct-c-c-l-1-1-i-material3-d"><span class="std std-ref">CCL::IMaterial3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IModel3D.html#doxid-struct-c-c-l-1-1-i-model3-d"><span class="std std-ref">CCL::IModel3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IModelImporter3D.html#doxid-struct-c-c-l-1-1-i-model-importer3-d"><span class="std std-ref">CCL::IModelImporter3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IModelNode3D.html#doxid-struct-c-c-l-1-1-i-model-node3-d"><span class="std std-ref">CCL::IModelNode3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPointLight3D.html#doxid-struct-c-c-l-1-1-i-point-light3-d"><span class="std std-ref">CCL::IPointLight3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IScene3D.html#doxid-struct-c-c-l-1-1-i-scene3-d"><span class="std std-ref">CCL::IScene3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneChildren3D.html#doxid-struct-c-c-l-1-1-i-scene-children3-d"><span class="std std-ref">CCL::ISceneChildren3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneConstraints3D.html#doxid-struct-c-c-l-1-1-i-scene-constraints3-d"><span class="std std-ref">CCL::ISceneConstraints3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneHandler3D.html#doxid-struct-c-c-l-1-1-i-scene-handler3-d"><span class="std std-ref">CCL::ISceneHandler3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneNode3D.html#doxid-struct-c-c-l-1-1-i-scene-node3-d"><span class="std std-ref">CCL::ISceneNode3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneRenderer3D.html#doxid-struct-c-c-l-1-1-i-scene-renderer3-d"><span class="std std-ref">CCL::ISceneRenderer3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISceneResource3D.html#doxid-struct-c-c-l-1-1-i-scene-resource3-d"><span class="std std-ref">CCL::ISceneResource3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IShaderBufferWriter3D.html#doxid-struct-c-c-l-1-1-i-shader-buffer-writer3-d"><span class="std std-ref">CCL::IShaderBufferWriter3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IShaderParameterProvider3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-provider3-d"><span class="std std-ref">CCL::IShaderParameterProvider3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IShaderValue3D.html#doxid-struct-c-c-l-1-1-i-shader-value3-d"><span class="std std-ref">CCL::IShaderValue3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ISolidColorMaterial3D.html#doxid-struct-c-c-l-1-1-i-solid-color-material3-d"><span class="std std-ref">CCL::ISolidColorMaterial3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITessellator3D.html#doxid-struct-c-c-l-1-1-i-tessellator3-d"><span class="std std-ref">CCL::ITessellator3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITextureMaterial3D.html#doxid-struct-c-c-l-1-1-i-texture-material3-d"><span class="std std-ref">CCL::ITextureMaterial3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITransformConstraints3D.html#doxid-struct-c-c-l-1-1-i-transform-constraints3-d"><span class="std std-ref">CCL::ITransformConstraints3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUVSphereTessellator3D.html#doxid-struct-c-c-l-1-1-i-u-v-sphere-tessellator3-d"><span class="std std-ref">CCL::IUVSphereTessellator3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IVertexFormat3D.html#doxid-struct-c-c-l-1-1-i-vertex-format3-d"><span class="std std-ref">CCL::IVertexFormat3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_PlainTransform3D.html#doxid-struct-c-c-l-1-1-plain-transform3-d"><span class="std std-ref">CCL::PlainTransform3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_PointF3D.html#doxid-struct-c-c-l-1-1-point-f3-d"><span class="std std-ref">CCL::PointF3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_PointF4D.html#doxid-struct-c-c-l-1-1-point-f4-d"><span class="std std-ref">CCL::PointF4D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Ray3D.html#doxid-struct-c-c-l-1-1-ray3-d"><span class="std std-ref">CCL::Ray3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_SceneEdit3D.html#doxid-struct-c-c-l-1-1-scene-edit3-d"><span class="std std-ref">CCL::SceneEdit3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Transform3D.html#doxid-struct-c-c-l-1-1-transform3-d"><span class="std std-ref">CCL::Transform3D</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_VertexP.html#doxid-struct-c-c-l-1-1-vertex-p"><span class="std std-ref">CCL::VertexP</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_VertexPN.html#doxid-struct-c-c-l-1-1-vertex-p-n"><span class="std std-ref">CCL::VertexPN</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_VertexPT.html#doxid-struct-c-c-l-1-1-vertex-p-t"><span class="std std-ref">CCL::VertexPT</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_MappedBuffer3D.html#doxid-class-c-c-l-1-1-mapped-buffer3-d"><span class="std std-ref">CCL::MappedBuffer3D</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_RotationConstraints3D.html#doxid-class-c-c-l-1-1-rotation-constraints3-d"><span class="std std-ref">CCL::RotationConstraints3D</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_TranslationConstraints3D.html#doxid-class-c-c-l-1-1-translation-constraints3-d"><span class="std std-ref">CCL::TranslationConstraints3D</span></a><span></span><span class="p">;</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-group-gui-graphics3d"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>3D Graphics interfaces.</p>
+<p>There are two entry points for displaying 3D graphics in <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l"><span class="std std-ref">CCL</span></a> : <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CCL::UserView3D</span></a> and <a class="reference internal" href="struct_CCL_IScene3D.html#doxid-struct-c-c-l-1-1-i-scene3-d"><span class="std std-ref">CCL::IScene3D</span></a>.</p>
+<p><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CCL::UserView3D</span></a> can be used to create a custom 3D graphics view. An application developer can implement a new class derived from <a class="reference internal" href="struct_CCL_IGraphicsContent3D.html#doxid-struct-c-c-l-1-1-i-graphics-content3-d"><span class="std std-ref">CCL::IGraphicsContent3D</span></a> and attach the graphics content to the <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CCL::UserView3D</span></a>. 3D graphics objects can be created using <a class="reference internal" href="struct_CCL_IGraphicsFactory3D.html#doxid-struct-c-c-l-1-1-i-graphics-factory3-d"><span class="std std-ref">CCL::IGraphicsFactory3D</span></a>, which is passed to the <a class="reference internal" href="struct_CCL_IGraphicsContent3D.html#doxid-struct-c-c-l-1-1-i-graphics-content3-d"><span class="std std-ref">CCL::IGraphicsContent3D</span></a> in <a class="reference internal" href="struct_CCL_IGraphicsContent3D.html#doxid-struct-c-c-l-1-1-i-graphics-content3-d-1a841d67dff89ba5d77ae93a124694ae04"><span class="std std-ref">CCL::IGraphicsContent3D::createContent</span></a>. In order to render 3D content, the application developer needs to create shader objects (<a class="reference internal" href="struct_CCL_IGraphicsShader3D.html#doxid-struct-c-c-l-1-1-i-graphics-shader3-d"><span class="std std-ref">CCL::IGraphicsShader3D</span></a>) using the <a class="reference internal" href="struct_CCL_IGraphicsFactory3D.html#doxid-struct-c-c-l-1-1-i-graphics-factory3-d"><span class="std std-ref">CCL::IGraphicsFactory3D</span></a>. Shaders are programs that run on the GPU. The most common types of shaders are vertex shaders, which define how the vertices of a 3D geometry are rendered, and pixel shaders, which define the color output. An application developer can either supply custom vertex and pixel shaders or use stock shaders which are part of the framework. Once the shader objects have been created, these can be used to configure a pipeline (<a class="reference internal" href="struct_CCL_IGraphicsPipeline3D.html#doxid-struct-c-c-l-1-1-i-graphics-pipeline3-d"><span class="std std-ref">CCL::IGraphicsPipeline3D</span></a>), which is used to draw 3D geometries in the <a class="reference internal" href="struct_CCL_IGraphicsContent3D.html#doxid-struct-c-c-l-1-1-i-graphics-content3-d-1a1daa27525d052cf70e48573b24b2f311"><span class="std std-ref">CCL::IGraphicsContent3D::renderContent</span></a> method.</p>
+<p><a class="reference internal" href="struct_CCL_IScene3D.html#doxid-struct-c-c-l-1-1-i-scene3-d"><span class="std std-ref">CCL::IScene3D</span></a> provides the second, higher level approach to displaying 3D graphics. A scene is a tree of nodes, which in turn contain 3D models, camera objects, different types of lights, etc. It is the framework’s responsibility to render a scene. The application developer only needs to provide high level information about the objects that need to be rendered. Scenes can be added to an existing UI using the SceneView3D skin tag. In order to display 3D geometries in a scene, the application first needs to add a camera (<a class="reference internal" href="struct_CCL_ICamera3D.html#doxid-struct-c-c-l-1-1-i-camera3-d"><span class="std std-ref">CCL::ICamera3D</span></a>), some lights (<a class="reference internal" href="struct_CCL_ILightSource3D.html#doxid-struct-c-c-l-1-1-i-light-source3-d"><span class="std std-ref">CCL::ILightSource3D</span></a>) and model nodes (<a class="reference internal" href="struct_CCL_IModelNode3D.html#doxid-struct-c-c-l-1-1-i-model-node3-d"><span class="std std-ref">CCL::IModelNode3D</span></a>) to the scene. <a class="reference internal" href="namespace_CCL_Model.html#doxid-namespace-c-c-l-1-1-model"><span class="std std-ref">Model</span></a> nodes contain models (<a class="reference internal" href="struct_CCL_IModel3D.html#doxid-struct-c-c-l-1-1-i-model3-d"><span class="std std-ref">CCL::IModel3D</span></a>) and have a transform matrix which defines the position, orientation and scale of the model in the scene. Models in turn contain one or many geometries (<a class="reference internal" href="struct_CCL_IGeometry3D.html#doxid-struct-c-c-l-1-1-i-geometry3-d"><span class="std std-ref">CCL::IGeometry3D</span></a>) and a material (<a class="reference internal" href="struct_CCL_IMaterial3D.html#doxid-struct-c-c-l-1-1-i-material3-d"><span class="std std-ref">CCL::IMaterial3D</span></a>) for each of these geometries. Geometries contain vertex data, i.e. the geometric shape of a 3D object. Materials define how a geometry is rendered, e.g. using a solid color for each face or applying a texture. Models can either be defined in a skin file or in C++ code.</p>
+<p>Each material refers to a specific pixel shader. A solid color material uses a solid color pixel shader. A textured material uses a texture material shader. Material instances exist independently of models and can be used for multiple geometries. If a material is used multiple times, the same shader parameters (e.g. material color) are passed to the pixel shader for each geometry it is assigned to.</p>
+<p>A single geometry can be assigned to multiple models. Each model’s transform matrix is used to determine the position of the object (vertex shader parameters). Each model’s materials determine which pixel shaders are used to render its geometries and which shader parameter values are passed to the pixel shader.</p>
+<p>Each model needs a unique <a class="reference internal" href="struct_CCL_IShaderParameterSet3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-set3-d"><span class="std std-ref">CCL::IShaderParameterSet3D</span></a> for each geometry. A shader parameter set is a unique set of buffers which contain shader parameter and texture data, which is used to render a geometry. The GPU backend may render asynchronously, so shader parameter and texture data needs to stay valid across multiple draw calls for different geometries. The buffer segment used to store vertex shader parameters inside a <a class="reference internal" href="struct_CCL_IShaderParameterSet3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-set3-d"><span class="std std-ref">CCL::IShaderParameterSet3D</span></a> needs to be unique for a specific model node, as it stores the transform matrix of the node. It does not contain information about the geometry or the material. The buffer segment used to store pixel shader parameters inside a <a class="reference internal" href="struct_CCL_IShaderParameterSet3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-set3-d"><span class="std std-ref">CCL::IShaderParameterSet3D</span></a> needs to be unique for a specific material. It does not contain information about nodes or geometries. The <a class="reference internal" href="struct_CCL_IShaderParameterSet3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-set3-d"><span class="std std-ref">CCL::IShaderParameterSet3D</span></a> objects are managed by the scene renderer. <a class="reference internal" href="class_CCL_Application.html#doxid-class-c-c-l-1-1-application"><span class="std std-ref">Application</span></a> developers don’t need to create these objects explicitly when working with a scene.</p>
+<p>In order to use custom materials and custom pixel shaders, an application developer can create a new class derived from <a class="reference internal" href="struct_CCL_IShaderParameterProvider3D.html#doxid-struct-c-c-l-1-1-i-shader-parameter-provider3-d"><span class="std std-ref">CCL::IShaderParameterProvider3D</span></a>, create an instance of <a class="reference internal" href="struct_CCL_ICustomMaterial3D.html#doxid-struct-c-c-l-1-1-i-custom-material3-d"><span class="std std-ref">CCL::ICustomMaterial3D</span></a> using <code class="docutils literal notranslate"><span class="pre">ccl_new</span></code> (CCL::ClassID::CustomMaterial3D) and supply a pixel shader and shader parameters through these interfaces. CCL::ClassID::CustomMaterial3D also provides the <a class="reference internal" href="struct_CCL_ITextureMaterial3D.html#doxid-struct-c-c-l-1-1-i-texture-material3-d"><span class="std std-ref">CCL::ITextureMaterial3D</span></a> interface. Use this interface if your custom material requires textures.</p>
+<p>Custom shaders that are used in a scene need to follow some conventions. See <code class="docutils literal notranslate"><span class="pre">stockshader3d.h</span></code> for definitions of parameter names, buffer and texture indices that should be used in all shaders.</p>
+<p>There is currently no support for custom vertex shaders when working with scenes.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="group_gui.html" class="btn btn-neutral float-left" title="CCL-GUI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_TransformUtils3D.html" class="btn btn-neutral float-right" title="namespace CCL::TransformUtils3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workspaces &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Accessibility" href="../accessibility/index.html" />
+    <link rel="prev" title="Layout" href="../layouts/index.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">CCL Skin Definition Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Workspaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#window-classes">Window Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perspectives-and-frames">Perspectives and Frames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hosting-a-workspace-in-a-window">Hosting a Workspace in a Window</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">CCL Skin Definition Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
+      <li class="breadcrumb-item active">Workspaces</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workspaces">
+<h1>Workspaces<a class="headerlink" href="#workspaces" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Workspaces allow structuring the UI of an application in a flexible way.</p>
+<p>A Workspace contains multiple perspectives that the application can switch between.
+A perspective defines an arrangement of nested frames, that can each present the content of a window class.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Workspaces&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Workspace</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyApplication&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Perspective1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span>...
+<span class="w">    </span><span class="nt">&lt;/Perspective&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Perspective2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span>...
+<span class="w">    </span><span class="nt">&lt;/Perspective&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Workspace&gt;</span>
+<span class="nt">&lt;/Workspaces&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="window-classes">
+<h2>Window Classes<a class="headerlink" href="#window-classes" title="Link to this heading"></a></h2>
+<p>A window class defines a piece of UI that can appear somewhere in a workspace. It is identified by a name and an optional workspace ID (defaults to application workspace).
+The content is described by a form name and the url of a controller that will be used to create the view.
+It can have an optional command (specified by category and name) for toggling the visibility (open / close).</p>
+<p>The group attribute of a window class determines in which workspace frames of a perspective the content can appear.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;WindowClasses&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;WindowClass</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DocumentView&quot;</span>
+<span class="w">    </span><span class="na">controller=</span><span class="s">&quot;object://hostapp/DocumentManager/ActiveDocument&quot;</span>
+<span class="w">    </span><span class="na">form.name=</span><span class="s">&quot;DocumentView&quot;</span>
+<span class="w">    </span><span class="na">group=</span><span class="s">&quot;MainArea&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/WindowClasses&gt;</span>
+</pre></div>
+</div>
+<p>The window manager of the application maintains a parameter for each window class that reflects the
+open/closed state of the window class. It can be used to toggle it.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://WindowManager/MyClass&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="perspectives-and-frames">
+<h2>Perspectives and Frames<a class="headerlink" href="#perspectives-and-frames" title="Link to this heading"></a></h2>
+<p>A perspective has a set of nested frames that define the general structure of the UI.
+Frames with a “groups” attribute contain the actual content. They can be either empty or occupied by the view of a window class.
+The “groups” attribute is a list of group names from window classes, separated by spaces. It specifies which window classes can appear in the frame.</p>
+<p>Complex arrangements can be built with horizontal or vertical frame groups, which will create a layout container for their contained frames.
+An empty frame (or a frame group with only empty frames) collapses to an empty size, so it doesn’t take any space in the perspective.</p>
+<p>When the application wants to open a window class</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPerspective&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- layout group --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyFrame1&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyFrame2&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;group2 group3&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;windowClassA&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Frame&gt;</span>
+<span class="nt">&lt;/Perspective&gt;</span>
+</pre></div>
+</div>
+<section id="popup-frame">
+<h3>Popup Frame<a class="headerlink" href="#popup-frame" title="Link to this heading"></a></h3>
+<p>A frame with the option “popup” opens in a separate floating popup window (not in the frame structure of the perspective view tree).
+Workspaces often have a least one “popup multiple” frame as target for all floating window content.
+“multiple” here means that each matching window class will open in a new window, instead of replacing content in the existing popup window.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;popup multiple&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Popups&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;Popups&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- --&gt;</span>
+<span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;popup&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Song.Popups&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;Song.Popups&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="detached-frame">
+<h3>Detached Frame<a class="headerlink" href="#detached-frame" title="Link to this heading"></a></h3>
+<p>A frame with the options “popup detached” is a target for detaching a window class.
+This can be used for a window class that appears in a frame of the regular perspective view tree by default, but can optionally be detached into a separate window.
+The workspace maintains the detached state and uses it to determine if  the window class content should appear in a regular frame or in a detached window.</p>
+</section>
+<section id="embedded-frame">
+<h3>Embedded Frame<a class="headerlink" href="#embedded-frame" title="Link to this heading"></a></h3>
+<p>An embedded frame defines a sub tree of frames that can appear in the form of a parent class.
+The <a href="#id1"><span class="problematic" id="id2">|xml.class.EmbeddedFrame|</span></a> element must appear in two places: placed inside the form of a “parent” window class
+and placed in the root frame of a perspective with the same name and a parent class. It defines a separate subtree of frames.</p>
+<p>When a window class is about to be opened, the workspace system ensures that the parent class, whose view contains the EmbeddeFrame view gets opened first.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- inside form of parent window --&gt;</span>
+<span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyParentForm&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- ... --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;EmbeddedFrame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Embedded&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Form&gt;</span>
+
+<span class="cm">&lt;!-- in root frame of perspective --&gt;</span>
+<span class="nt">&lt;EmbeddedFrame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Embedded&quot;</span><span class="w"> </span><span class="na">parent.class=</span><span class="s">&quot;MyParentClass&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;a&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;b&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Frame&gt;</span>
+<span class="nt">&lt;/EmbeddedFrame&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-parameters">
+<h3>Custom Parameters<a class="headerlink" href="#custom-parameters" title="Link to this heading"></a></h3>
+<p>A perspective can define parameters that can be used in the skin.
+This makes sense for controlling some activity in the skin, when the parameter does not need to be known to the application logic.
+In a form description, these parameters can be addressed via the “CustomParams” controller of a perspective.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPerspective&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myParam&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">range=</span><span class="s">&quot;0,32767&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/Perspective&gt;</span>
+
+<span class="cm">&lt;!-- address via &quot;CustomParams&quot; controller of a perspective: --&gt;</span>
+<span class="nt">&lt;Divider</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://Workspace/myWorkspaceID/MyPerspective/CustomParams/myParam&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="hosting-a-workspace-in-a-window">
+<h2>Hosting a Workspace in a Window<a class="headerlink" href="#hosting-a-workspace-in-a-window" title="Link to this heading"></a></h2>
+<p>To make content of a workspace appear in the UI, a special view called “PerspectiveContainer” is provided by the WindowManager.
+The view tree created by the currently selected perspective will be inserted into the PerspectiveContainer.</p>
+<section id="application-workspace">
+<h3>Application Workspace<a class="headerlink" href="#application-workspace" title="Link to this heading"></a></h3>
+<p>An application skin can have multiple workspaces. If a workspace with the applicationID exists, it used as application workspace that provides the content of the main application window.
+The framework then automatically creates a PerspectiveContainer view for it that fills the application window.
+To customize this, the application skin can define a form “ApplicationWindow” that must contain a view called “PerspectiveContainer” (and optionally adds other elements like decors).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ApplicationWindow&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;Workspace&quot;</span><span class="w"> </span><span class="na">windowstyle=</span><span class="s">&quot;titlebar sizable restoresize restorepos&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PerspectiveContainer&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;PerspectiveContainer&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,1024,720&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Form&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="other-workspaces">
+<h3>Other Workspaces<a class="headerlink" href="#other-workspaces" title="Link to this heading"></a></h3>
+<p>To show the content of another workspace, we can reference the workspace as controller and let it create its PerspectiveContainer:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SomeForm&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;://Workspace/MyWorkspace&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PerspectiveContainer&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,1024,720&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/using&gt;</span>
+<span class="nt">&lt;/Form&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../layouts/index.html" class="btn btn-neutral float-left" title="Layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../accessibility/index.html" class="btn btn-neutral float-right" title="Accessibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

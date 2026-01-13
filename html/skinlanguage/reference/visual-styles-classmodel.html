@@ -1,31 +1,29 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visual Styles Reference &mdash; CCL Cross-platform Framework Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/target-highlight.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Extension Developer Documentation" href="../../extension/index.html" />
+    <link rel="next" title="Core Library" href="../../corelibrary/index.html" />
     <link rel="prev" title="Skin Elements Reference" href="skin-elements-classmodel.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -53,6 +51,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Skin Definition Language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter/index.html">Chapters</a></li>
@@ -67,6 +68,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
 
@@ -96,11 +99,11 @@
            <div itemprop="articleBody">
              
   <section id="visual-styles-reference">
-<h1>Visual Styles Reference<a class="headerlink" href="#visual-styles-reference" title="Permalink to this heading"></a></h1>
+<h1>Visual Styles Reference<a class="headerlink" href="#visual-styles-reference" title="Link to this heading"></a></h1>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <section id="basicstyle">
-<span id="visual-styles-classmodel-class-basicstyle"></span><h3>BasicStyle<a class="headerlink" href="#basicstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-basicstyle"></span><h3>BasicStyle<a class="headerlink" href="#basicstyle" title="Link to this heading"></a></h3>
 <p>Basic visual style attributes inherited by all other styles.</p>
 <p><strong>Attributes (9)</strong></p>
 <ul class="simple">
@@ -116,36 +119,11 @@
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-borderstyle"><span class="std std-ref">BorderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-comboboxstyle"><span class="std std-ref">ComboBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialoggroupstyle"><span class="std std-ref">DialogGroupStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dividerstyle"><span class="std std-ref">DividerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dropboxstyle"><span class="std std-ref">DropBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-headerviewstyle"><span class="std std-ref">HeaderViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-imageviewstyle"><span class="std std-ref">ImageViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-knobstyle"><span class="std std-ref">KnobStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-labelstyle"><span class="std std-ref">LabelStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-listviewstyle"><span class="std std-ref">ListViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menubarcontrolstyle"><span class="std std-ref">MenuBarControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menucontrolstyle"><span class="std std-ref">MenuControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-pagecontrolstyle"><span class="std std-ref">PageControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-popupselectorstyle"><span class="std std-ref">PopupSelectorStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-progressbarstyle"><span class="std std-ref">ProgressBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-rangesliderstyle"><span class="std std-ref">RangeSliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sceneview3dstyle"><span class="std std-ref">SceneView3DStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbarstyle"><span class="std std-ref">ScrollBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbuttonstyle"><span class="std std-ref">ScrollButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollpickerstyle"><span class="std std-ref">ScrollPickerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollviewstyle"><span class="std std-ref">ScrollViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sliderstyle"><span class="std std-ref">SliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-tabviewstyle"><span class="std std-ref">TabViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-toolbuttonstyle"><span class="std std-ref">ToolButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-trivectorpadstyle"><span class="std std-ref">TriVectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-updownbuttonstyle"><span class="std std-ref">UpDownButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-valuebarstyle"><span class="std std-ref">ValueBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-vectorpadstyle"><span class="std std-ref">VectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-windowbackgroundstyle"><span class="std std-ref">WindowBackgroundStyle</span></a>]</p></li>
-</ul>
-</section>
-<section id="borderstyle">
-<span id="visual-styles-classmodel-class-borderstyle"></span><h3>BorderStyle<a class="headerlink" href="#borderstyle" title="Permalink to this heading"></a></h3>
-<p>Draws either the “background” image if availble, or the “backcolor”.</p>
-<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-border"><span class="std std-ref">Border</span></a>]</p>
-<p><strong>Attributes (10)</strong></p>
-<ul class="simple">
-<li><p><strong>border.background</strong> (<em>image</em>): a “border.background” image can be used, with the default “background” image is its fallback</p></li>
-</ul>
-<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
-<ul class="simple">
-<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
-<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
-<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
-<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
-<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
-<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
-<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
-</ul>
-<p><strong>Meta</strong></p>
-<ul class="simple">
-<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-comboboxstyle"><span class="std std-ref">ComboBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialogbuilderstyle"><span class="std std-ref">DialogBuilderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialoggroupstyle"><span class="std std-ref">DialogGroupStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dividerstyle"><span class="std std-ref">DividerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dropboxstyle"><span class="std std-ref">DropBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-headerviewstyle"><span class="std std-ref">HeaderViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-imageviewstyle"><span class="std std-ref">ImageViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-knobstyle"><span class="std std-ref">KnobStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-labelstyle"><span class="std std-ref">LabelStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-listviewstyle"><span class="std std-ref">ListViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menubarcontrolstyle"><span class="std std-ref">MenuBarControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menucontrolstyle"><span class="std std-ref">MenuControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-pagecontrolstyle"><span class="std std-ref">PageControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-popupselectorstyle"><span class="std std-ref">PopupSelectorStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-progressbarstyle"><span class="std std-ref">ProgressBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-rangesliderstyle"><span class="std std-ref">RangeSliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sceneview3dstyle"><span class="std std-ref">SceneView3DStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbarstyle"><span class="std std-ref">ScrollBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbuttonstyle"><span class="std std-ref">ScrollButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollpickerstyle"><span class="std std-ref">ScrollPickerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollviewstyle"><span class="std std-ref">ScrollViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sliderstyle"><span class="std std-ref">SliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-tabviewstyle"><span class="std std-ref">TabViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-toolbuttonstyle"><span class="std std-ref">ToolButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-trivectorpadstyle"><span class="std std-ref">TriVectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-updownbuttonstyle"><span class="std std-ref">UpDownButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-valuebarstyle"><span class="std std-ref">ValueBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-vectorpadstyle"><span class="std std-ref">VectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-windowbackgroundstyle"><span class="std std-ref">WindowBackgroundStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="buttonstyle">
-<span id="visual-styles-classmodel-class-buttonstyle"></span><h3>ButtonStyle<a class="headerlink" href="#buttonstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-buttonstyle"></span><h3>ButtonStyle<a class="headerlink" href="#buttonstyle" title="Link to this heading"></a></h3>
 <p>A button draws a background and some content.</p>
 <p><strong>Description</strong></p>
 <p>The background is not drawn when the option “transparent” is set.
@@ -156,7 +134,7 @@ Supported frame names are “normal[On]”, “pressed[On]”, “mouseover[On]�
 When no image is specified, a rectangular frame in color “forecolor” can be drawn with option “border”.
 For the content, a padding can be specified. The content can be an “icon”, “title” or both.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-button"><span class="std std-ref">Button</span></a>]</p>
-<p><strong>Attributes (60)</strong></p>
+<p><strong>Attributes (65)</strong></p>
 <ul class="simple">
 <li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
 <li><p><strong>backcolor.off</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (even when a colorParam is used)</p></li>
@@ -166,20 +144,22 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
 <li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
 <li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
-<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspect ratio is kept) value: ]0-1]</p></li>
 <li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
-<li><p><strong>iconcolor</strong> (<em>color</em>): “iconcolor” is used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
 <li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
-<li><p><strong>iconcolor.bright</strong> (<em>color</em>): “iconcolor.bright” is used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): “iconcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): “iconcolor.disabled” is used when button is disabled</p></li>
-<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): “iconcolor.mouseover” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): “iconcolor.mouseoverOn” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.on</strong> (<em>color</em>): “iconcolor.on” is used when “colorize.icon” is set and button is switched on</p></li>
-<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): “iconcolor.pressed” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): “iconcolor.pressedOn” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): “iconcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): “iconcolor.transparentOn” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.bright</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.dark</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>iconcolor.darkOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): used when button is disabled</p></li>
+<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.on</strong> (<em>color</em>): used when “colorize.icon” is set and button is switched on</p></li>
+<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
 <li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
 <li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
 <li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
@@ -195,19 +175,22 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
 <li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
 <li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): “textcolor.bright” is used when “colorize.icon” is set and the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): “textcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when button is disabled</p></li>
-<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): “textcolor.mouseover” used (instead of “textcolor”) when mouse is over button</p></li>
-<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): “textcolor.mouseoverOn” used (instead of “textcolor.on”) when mouse is over button</p></li>
-<li><p><strong>textcolor.on</strong> (<em>color</em>): “textcolor.on” is used (instead of “textcolor”) when button is switched on</p></li>
-<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): text color used (instead of “textcolor”) when phase is on</p></li>
-<li><p><strong>textcolor.pressed</strong> (<em>color</em>): “textcolor.pressed” used (instead of “textcolor.on”) when button is pressed and off</p></li>
-<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): “textcolor.pressedOn” used (instead of “textcolor.pressed”) when button is pressed and on</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one pixel if the button is on</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): used when the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): used when the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>textcolor.darkOn</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): used instead of “textcolor” when button is disabled</p></li>
+<li><p><strong>textcolor.disabledOn</strong> (<em>color</em>): used instead of “textcolor.disabled” when button is disabled and on</p></li>
+<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): used instead of “textcolor” when mouse is over button</p></li>
+<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): used instead of “textcolor.on” when mouse is over button</p></li>
+<li><p><strong>textcolor.on</strong> (<em>color</em>): used instead of “textcolor” when button is switched on</p></li>
+<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): used instead of “textcolor” when phase is on and button is disabled</p></li>
+<li><p><strong>textcolor.pressed</strong> (<em>color</em>): used instead of “textcolor.on” when button is pressed and off</p></li>
+<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): used instead of “textcolor.pressed” when button is pressed and on</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used when the current color from colorparam is transparent</p></li>
+<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): used when the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one point if the button is on</p></li>
 <li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
@@ -229,10 +212,10 @@ For the content, a padding can be specified. The content can be an “icon”, �
 </ul>
 </section>
 <section id="checkboxstyle">
-<span id="visual-styles-classmodel-class-checkboxstyle"></span><h3>CheckBoxStyle<a class="headerlink" href="#checkboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-checkboxstyle"></span><h3>CheckBoxStyle<a class="headerlink" href="#checkboxstyle" title="Link to this heading"></a></h3>
 <p>Draws an image that shows the parameter state (typically a checkmark) and an additional title besides the image.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-checkbox"><span class="std std-ref">CheckBox</span></a>]</p>
-<p><strong>Attributes (63)</strong></p>
+<p><strong>Attributes (68)</strong></p>
 <ul class="simple">
 <li><p><strong>buttonstyle</strong> (<em>metric</em>): if this is set (“1”), the control is drawn like a button</p></li>
 <li><p><strong>checkboxrightside</strong> (<em>metric</em>): if this is set (“1”), the checkbox is drawn algined to the right side of the view rect</p></li>
@@ -248,20 +231,22 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
 <li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
 <li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
-<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspectratio is kept) value: ]0-1]</p></li>
+<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspect ratio is kept) value: ]0-1]</p></li>
 <li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
-<li><p><strong>iconcolor</strong> (<em>color</em>): “iconcolor” is used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
+<li><p><strong>iconcolor</strong> (<em>color</em>): used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
 <li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
-<li><p><strong>iconcolor.bright</strong> (<em>color</em>): “iconcolor.bright” is used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): “iconcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): “iconcolor.disabled” is used when button is disabled</p></li>
-<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): “iconcolor.mouseover” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): “iconcolor.mouseoverOn” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.on</strong> (<em>color</em>): “iconcolor.on” is used when “colorize.icon” is set and button is switched on</p></li>
-<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): “iconcolor.pressed” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): “iconcolor.pressedOn” is used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): “iconcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): “iconcolor.transparentOn” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.bright</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>iconcolor.dark</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>iconcolor.darkOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): used when button is disabled</p></li>
+<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.on</strong> (<em>color</em>): used when “colorize.icon” is set and button is switched on</p></li>
+<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
+<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
+<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
 <li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
 <li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
 <li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
@@ -277,19 +262,22 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
 <li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
 <li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): “textcolor.bright” is used when “colorize.icon” is set and the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): “textcolor.brightOn” is used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when button is disabled</p></li>
-<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): “textcolor.mouseover” used (instead of “textcolor”) when mouse is over button</p></li>
-<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): “textcolor.mouseoverOn” used (instead of “textcolor.on”) when mouse is over button</p></li>
-<li><p><strong>textcolor.on</strong> (<em>color</em>): “textcolor.on” is used (instead of “textcolor”) when button is switched on</p></li>
-<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): text color used (instead of “textcolor”) when phase is on</p></li>
-<li><p><strong>textcolor.pressed</strong> (<em>color</em>): “textcolor.pressed” used (instead of “textcolor.on”) when button is pressed and off</p></li>
-<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): “textcolor.pressedOn” used (instead of “textcolor.pressed”) when button is pressed and on</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): “textcolor.transparent” is used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one pixel if the button is on</p></li>
+<li><p><strong>textcolor.bright</strong> (<em>color</em>): used when the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): used when the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>textcolor.darkOn</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
+<li><p><strong>textcolor.disabled</strong> (<em>color</em>): used instead of “textcolor” when button is disabled</p></li>
+<li><p><strong>textcolor.disabledOn</strong> (<em>color</em>): used instead of “textcolor.disabled” when button is disabled and on</p></li>
+<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): used instead of “textcolor” when mouse is over button</p></li>
+<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): used instead of “textcolor.on” when mouse is over button</p></li>
+<li><p><strong>textcolor.on</strong> (<em>color</em>): used instead of “textcolor” when button is switched on</p></li>
+<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): used instead of “textcolor” when phase is on and button is disabled</p></li>
+<li><p><strong>textcolor.pressed</strong> (<em>color</em>): used instead of “textcolor.on” when button is pressed and off</p></li>
+<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): used instead of “textcolor.pressed” when button is pressed and on</p></li>
+<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
+<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used when the current color from colorparam is transparent</p></li>
+<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): used when the parameter is on and the current color from colorparam is transparent</p></li>
+<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one point if the button is on</p></li>
 <li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
@@ -310,7 +298,7 @@ For the content, a padding can be specified. The content can be an “icon”, �
 </ul>
 </section>
 <section id="comboboxstyle">
-<span id="visual-styles-classmodel-class-comboboxstyle"></span><h3>ComboBoxStyle<a class="headerlink" href="#comboboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-comboboxstyle"></span><h3>ComboBoxStyle<a class="headerlink" href="#comboboxstyle" title="Link to this heading"></a></h3>
 <p>If option “transparent” is not set, a ComboBox draws a background image.</p>
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
@@ -342,8 +330,31 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
 </ul>
 </section>
+<section id="dialogbuilderstyle">
+<span id="visual-styles-classmodel-class-dialogbuilderstyle"></span><h3>DialogBuilderStyle<a class="headerlink" href="#dialogbuilderstyle" title="Link to this heading"></a></h3>
+<p><strong>Attributes (10)</strong></p>
+<ul class="simple">
+<li><p><strong>noDialogFrame</strong> (<em>metric</em>): overrides the global configuration variable GUI. StandardDialog.UseDialogFrame for a dialog.</p></li>
+</ul>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
+<ul class="simple">
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
+<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
+<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
+<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
+<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
+<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
 <section id="dialoggroupstyle">
-<span id="visual-styles-classmodel-class-dialoggroupstyle"></span><h3>DialogGroupStyle<a class="headerlink" href="#dialoggroupstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-dialoggroupstyle"></span><h3>DialogGroupStyle<a class="headerlink" href="#dialoggroupstyle" title="Link to this heading"></a></h3>
 <p>A dialog group draws a background image and optional title.</p>
 <p><strong>Description</strong></p>
 <p>The style contains 2 images “Image” and “SecondaryImage”, that can be selected via the option “primary” or “secondary”.
@@ -375,7 +386,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="dividerstyle">
-<span id="visual-styles-classmodel-class-dividerstyle"></span><h3>DividerStyle<a class="headerlink" href="#dividerstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-dividerstyle"></span><h3>DividerStyle<a class="headerlink" href="#dividerstyle" title="Link to this heading"></a></h3>
 <p>A divider draws a background image, and optionally a handle centered on top.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-divider"><span class="std std-ref">Divider</span></a>]</p>
 <p><strong>Attributes (13)</strong></p>
@@ -403,7 +414,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="dropboxstyle">
-<span id="visual-styles-classmodel-class-dropboxstyle"></span><h3>DropBoxStyle<a class="headerlink" href="#dropboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-dropboxstyle"></span><h3>DropBoxStyle<a class="headerlink" href="#dropboxstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (12)</strong></p>
 <ul class="simple">
 <li><p><strong>freespace</strong> (<em>metric</em>): free space after last item</p></li>
@@ -428,10 +439,10 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="editboxstyle">
-<span id="visual-styles-classmodel-class-editboxstyle"></span><h3>EditBoxStyle<a class="headerlink" href="#editboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-editboxstyle"></span><h3>EditBoxStyle<a class="headerlink" href="#editboxstyle" title="Link to this heading"></a></h3>
 <p>An EditBox is drawn just like a TextBox.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-editbox"><span class="std std-ref">EditBox</span></a>]</p>
-<p><strong>Attributes (29)</strong></p>
+<p><strong>Attributes (30)</strong></p>
 <ul class="simple">
 <li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
 <li><p><strong>native.padding.bottom</strong> (<em>metric</em>): bottom padding for the native text control</p></li>
@@ -453,6 +464,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
 <li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
 <li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
 <li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
 <li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
 <li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
@@ -476,7 +488,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="headerviewstyle">
-<span id="visual-styles-classmodel-class-headerviewstyle"></span><h3>HeaderViewStyle<a class="headerlink" href="#headerviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-headerviewstyle"></span><h3>HeaderViewStyle<a class="headerlink" href="#headerviewstyle" title="Link to this heading"></a></h3>
 <p>A headerView draws column headers for each column of a column list.</p>
 <p><strong>Description</strong></p>
 <p>The “backgound” image is draw in each column rectangle, and the column title is drawn in top.</p>
@@ -503,7 +515,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="imageviewstyle">
-<span id="visual-styles-classmodel-class-imageviewstyle"></span><h3>ImageViewStyle<a class="headerlink" href="#imageviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-imageviewstyle"></span><h3>ImageViewStyle<a class="headerlink" href="#imageviewstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-imageview"><span class="std std-ref">ImageView</span></a>]</p>
 <p><strong>Attributes (18)</strong></p>
 <ul class="simple">
@@ -535,7 +547,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="itemviewstyle">
-<span id="visual-styles-classmodel-class-itemviewstyle"></span><h3>ItemViewStyle<a class="headerlink" href="#itemviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-itemviewstyle"></span><h3>ItemViewStyle<a class="headerlink" href="#itemviewstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (38)</strong></p>
 <ul class="simple">
 <li><p><strong>backcolor2</strong> (<em>color</em>): used to draw alternating backgrounds, the other color is “backcolor”</p></li>
@@ -587,7 +599,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="knobstyle">
-<span id="visual-styles-classmodel-class-knobstyle"></span><h3>KnobStyle<a class="headerlink" href="#knobstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-knobstyle"></span><h3>KnobStyle<a class="headerlink" href="#knobstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-knob"><span class="std std-ref">Knob</span></a>]</p>
 <p><strong>Attributes (38)</strong></p>
 <ul class="simple">
@@ -639,7 +651,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="labelstyle">
-<span id="visual-styles-classmodel-class-labelstyle"></span><h3>LabelStyle<a class="headerlink" href="#labelstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-labelstyle"></span><h3>LabelStyle<a class="headerlink" href="#labelstyle" title="Link to this heading"></a></h3>
 <p>A label draws it’s title using the style’s “textfont”, “textcolor”, and “textalignment” (for single line text) or “textoptions” (for multiline text).</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-label"><span class="std std-ref">Label</span></a>]</p>
 <p><strong>Attributes (9)</strong></p>
@@ -661,7 +673,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="listviewstyle">
-<span id="visual-styles-classmodel-class-listviewstyle"></span><h3>ListViewStyle<a class="headerlink" href="#listviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-listviewstyle"></span><h3>ListViewStyle<a class="headerlink" href="#listviewstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (35)</strong></p>
 <ul class="simple">
 <li><p><strong>icons.background</strong> (<em>image</em>): for “viewtype=”icons”: draw background for each cell (use second frame for selection)</p></li>
@@ -709,7 +721,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="menubarcontrolstyle">
-<span id="visual-styles-classmodel-class-menubarcontrolstyle"></span><h3>MenuBarControlStyle<a class="headerlink" href="#menubarcontrolstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-menubarcontrolstyle"></span><h3>MenuBarControlStyle<a class="headerlink" href="#menubarcontrolstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (13)</strong></p>
 <ul class="simple">
 <li><p><strong>activecolor</strong> (<em>color</em>): used to draw instead of “backcolor” for the active menu (when no button image available)</p></li>
@@ -735,7 +747,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="menucontrolstyle">
-<span id="visual-styles-classmodel-class-menucontrolstyle"></span><h3>MenuControlStyle<a class="headerlink" href="#menucontrolstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-menucontrolstyle"></span><h3>MenuControlStyle<a class="headerlink" href="#menucontrolstyle" title="Link to this heading"></a></h3>
 <p>A MenuControl is a custom implementation of a menu (e.g. a context menu).</p>
 <p><strong>Attributes (31)</strong></p>
 <ul class="simple">
@@ -780,7 +792,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="pagecontrolstyle">
-<span id="visual-styles-classmodel-class-pagecontrolstyle"></span><h3>PageControlStyle<a class="headerlink" href="#pagecontrolstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-pagecontrolstyle"></span><h3>PageControlStyle<a class="headerlink" href="#pagecontrolstyle" title="Link to this heading"></a></h3>
 <p>A PageControl draws a row of dots, with one dot per scroll page.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-pagecontrol"><span class="std std-ref">PageControl</span></a>]</p>
 <p><strong>Attributes (11)</strong></p>
@@ -806,7 +818,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="popupselectorstyle">
-<span id="visual-styles-classmodel-class-popupselectorstyle"></span><h3>PopupSelectorStyle<a class="headerlink" href="#popupselectorstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-popupselectorstyle"></span><h3>PopupSelectorStyle<a class="headerlink" href="#popupselectorstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (12)</strong></p>
 <ul class="simple">
 <li><p><strong>popup.minwidth</strong> (<em>metric</em>): the popup’s minwidth sizelimit - used to override the default sizelimit (the width of the PopupBox)</p></li>
@@ -831,7 +843,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="progressbarstyle">
-<span id="visual-styles-classmodel-class-progressbarstyle"></span><h3>ProgressBarStyle<a class="headerlink" href="#progressbarstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-progressbarstyle"></span><h3>ProgressBarStyle<a class="headerlink" href="#progressbarstyle" title="Link to this heading"></a></h3>
 <p>A Progres bar draws a bar that reflects the parameter value over a background.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-progressbar"><span class="std std-ref">ProgressBar</span></a>]</p>
 <p><strong>Attributes (11)</strong></p>
@@ -857,7 +869,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="rangesliderstyle">
-<span id="visual-styles-classmodel-class-rangesliderstyle"></span><h3>RangeSliderStyle<a class="headerlink" href="#rangesliderstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-rangesliderstyle"></span><h3>RangeSliderStyle<a class="headerlink" href="#rangesliderstyle" title="Link to this heading"></a></h3>
 <p>A Range Slider draws two handle moving over a background.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-rangeslider"><span class="std std-ref">RangeSlider</span></a>]</p>
 <p><strong>Attributes (13)</strong></p>
@@ -885,7 +897,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="sceneview3dstyle">
-<span id="visual-styles-classmodel-class-sceneview3dstyle"></span><h3>SceneView3DStyle<a class="headerlink" href="#sceneview3dstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-sceneview3dstyle"></span><h3>SceneView3DStyle<a class="headerlink" href="#sceneview3dstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (11)</strong></p>
 <ul class="simple">
 <li><p><strong>camera</strong> (<em>string</em>)</p></li>
@@ -909,7 +921,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="scrollbarstyle">
-<span id="visual-styles-classmodel-class-scrollbarstyle"></span><h3>ScrollBarStyle<a class="headerlink" href="#scrollbarstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-scrollbarstyle"></span><h3>ScrollBarStyle<a class="headerlink" href="#scrollbarstyle" title="Link to this heading"></a></h3>
 <p>A Scrollbar indicates the scrolling position of a scroll view.</p>
 <p><strong>Description</strong></p>
 <p>A scroll bar has a background, up/down buttons (vertical) and a handle (thumb).</p>
@@ -948,7 +960,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="scrollbuttonstyle">
-<span id="visual-styles-classmodel-class-scrollbuttonstyle"></span><h3>ScrollButtonStyle<a class="headerlink" href="#scrollbuttonstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-scrollbuttonstyle"></span><h3>ScrollButtonStyle<a class="headerlink" href="#scrollbuttonstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-scrollbutton"><span class="std std-ref">ScrollButton</span></a>]</p>
 <p><strong>Attributes (17)</strong></p>
 <ul class="simple">
@@ -979,7 +991,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="scrollpickerstyle">
-<span id="visual-styles-classmodel-class-scrollpickerstyle"></span><h3>ScrollPickerStyle<a class="headerlink" href="#scrollpickerstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-scrollpickerstyle"></span><h3>ScrollPickerStyle<a class="headerlink" href="#scrollpickerstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (20)</strong></p>
 <ul class="simple">
 <li><p><strong>barrelTextColor</strong> (<em>color</em>): textcolor for the neighboring unselected values on the barrel</p></li>
@@ -1012,7 +1024,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="scrollviewstyle">
-<span id="visual-styles-classmodel-class-scrollviewstyle"></span><h3>ScrollViewStyle<a class="headerlink" href="#scrollviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-scrollviewstyle"></span><h3>ScrollViewStyle<a class="headerlink" href="#scrollviewstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (15)</strong></p>
 <ul class="simple">
 <li><p><strong>borderSize</strong> (<em>metric</em>): size (in pixels) of an optional border</p></li>
@@ -1040,7 +1052,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="segmentbox">
-<span id="visual-styles-classmodel-class-segmentbox"></span><h3>SegmentBox<a class="headerlink" href="#segmentbox" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-segmentbox"></span><h3>SegmentBox<a class="headerlink" href="#segmentbox" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>]</p>
 <p><strong>Attributes (12)</strong></p>
 <ul class="simple">
@@ -1066,7 +1078,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 </ul>
 </section>
 <section id="selectboxstyle">
-<span id="visual-styles-classmodel-class-selectboxstyle"></span><h3>SelectBoxStyle<a class="headerlink" href="#selectboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-selectboxstyle"></span><h3>SelectBoxStyle<a class="headerlink" href="#selectboxstyle" title="Link to this heading"></a></h3>
 <p>If option “transparent” is not set, a SelectBox draws a background image.</p>
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
@@ -1110,7 +1122,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="sliderstyle">
-<span id="visual-styles-classmodel-class-sliderstyle"></span><h3>SliderStyle<a class="headerlink" href="#sliderstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-sliderstyle"></span><h3>SliderStyle<a class="headerlink" href="#sliderstyle" title="Link to this heading"></a></h3>
 <p>A Slider draws handle moving over a background.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-slider"><span class="std std-ref">Slider</span></a>]</p>
 <p><strong>Attributes (29)</strong></p>
@@ -1154,7 +1166,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="tabviewstyle">
-<span id="visual-styles-classmodel-class-tabviewstyle"></span><h3>TabViewStyle<a class="headerlink" href="#tabviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-tabviewstyle"></span><h3>TabViewStyle<a class="headerlink" href="#tabviewstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-tabview"><span class="std std-ref">TabView</span></a>]</p>
 <p><strong>Attributes (21)</strong></p>
 <ul class="simple">
@@ -1189,13 +1201,13 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="textboxstyle">
-<span id="visual-styles-classmodel-class-textboxstyle"></span><h3>TextBoxStyle<a class="headerlink" href="#textboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-textboxstyle"></span><h3>TextBoxStyle<a class="headerlink" href="#textboxstyle" title="Link to this heading"></a></h3>
 <p>If option “transparent” is not set, a TextBox draws a background image.</p>
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
 <p>The text is drawn with an optional “padding”.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>]</p>
-<p><strong>Attributes (21)</strong></p>
+<p><strong>Attributes (22)</strong></p>
 <ul class="simple">
 <li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
 <li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
@@ -1206,6 +1218,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
 <li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
 <li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
 <li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
 <li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
 <li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
@@ -1229,15 +1242,15 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="toolbuttonstyle">
-<span id="visual-styles-classmodel-class-toolbuttonstyle"></span><h3>ToolButtonStyle<a class="headerlink" href="#toolbuttonstyle" title="Permalink to this heading"></a></h3>
-<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-toolbutton"><span class="std std-ref">ToolButton</span></a>]</p>
-<p><strong>Attributes (14)</strong></p>
+<span id="visual-styles-classmodel-class-toolbuttonstyle"></span><h3>ToolButtonStyle<a class="headerlink" href="#toolbuttonstyle" title="Link to this heading"></a></h3>
+<p><strong>Attributes (15)</strong></p>
 <ul class="simple">
-<li><p><strong>popup.offset.x</strong> (<em>metric</em>): an additional horizontal offset to the popup position</p></li>
-<li><p><strong>popup.offset.y</strong> (<em>metric</em>): an additional vertical offset to the popup position</p></li>
-<li><p><strong>popup.palette.bottom</strong> (<em>metric</em>): popup the palette on the bottom (mode parameter must be a IPaletteProvider)</p></li>
-<li><p><strong>popup.palette.right</strong> (<em>metric</em>): popup the palette on the right side (mode parameter must be a IPaletteProvider)</p></li>
-<li><p><strong>popupstyle</strong> (<em>metric</em>): when “popupstyle” is true - the toolButton visualStyle is also used for the popup</p></li>
+<li><p><strong>decorform</strong> (<em>string</em>)</p></li>
+<li><p><strong>popup.offset.x</strong> (<em>metric</em>)</p></li>
+<li><p><strong>popup.offset.y</strong> (<em>metric</em>)</p></li>
+<li><p><strong>popup.palette.bottom</strong> (<em>metric</em>)</p></li>
+<li><p><strong>popup.palette.right</strong> (<em>metric</em>)</p></li>
+<li><p><strong>popupstyle</strong> (<em>metric</em>)</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
@@ -1257,7 +1270,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="treeviewstyle">
-<span id="visual-styles-classmodel-class-treeviewstyle"></span><h3>TreeViewStyle<a class="headerlink" href="#treeviewstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-treeviewstyle"></span><h3>TreeViewStyle<a class="headerlink" href="#treeviewstyle" title="Link to this heading"></a></h3>
 <p><strong>Attributes (42)</strong></p>
 <ul class="simple">
 <li><p><strong>expandSize</strong> (<em>metric</em>): size of expand symbol (same width &amp; height)</p></li>
@@ -1315,7 +1328,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="trivectorpadstyle">
-<span id="visual-styles-classmodel-class-trivectorpadstyle"></span><h3>TriVectorPadStyle<a class="headerlink" href="#trivectorpadstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-trivectorpadstyle"></span><h3>TriVectorPadStyle<a class="headerlink" href="#trivectorpadstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-trivectorpad"><span class="std std-ref">TriVectorPad</span></a>]</p>
 <p><strong>Attributes (23)</strong></p>
 <ul class="simple">
@@ -1352,7 +1365,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="updownbuttonstyle">
-<span id="visual-styles-classmodel-class-updownbuttonstyle"></span><h3>UpDownButtonStyle<a class="headerlink" href="#updownbuttonstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-updownbuttonstyle"></span><h3>UpDownButtonStyle<a class="headerlink" href="#updownbuttonstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-updownbutton"><span class="std std-ref">UpDownButton</span></a>]</p>
 <p><strong>Attributes (9)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
@@ -1373,7 +1386,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="valuebarstyle">
-<span id="visual-styles-classmodel-class-valuebarstyle"></span><h3>ValueBarStyle<a class="headerlink" href="#valuebarstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-valuebarstyle"></span><h3>ValueBarStyle<a class="headerlink" href="#valuebarstyle" title="Link to this heading"></a></h3>
 <p>Displays a value as a horizontal or verical bar.</p>
 <p><strong>Description</strong></p>
 <p>If no image is specified, “forecolor” and “backcolor” are used to draw the bar and the background as a filled rectangle.</p>
@@ -1404,10 +1417,10 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="valueboxstyle">
-<span id="visual-styles-classmodel-class-valueboxstyle"></span><h3>ValueBoxStyle<a class="headerlink" href="#valueboxstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-valueboxstyle"></span><h3>ValueBoxStyle<a class="headerlink" href="#valueboxstyle" title="Link to this heading"></a></h3>
 <p>Drawn like an EditBox.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebox"><span class="std std-ref">ValueBox</span></a>]</p>
-<p><strong>Attributes (29)</strong></p>
+<p><strong>Attributes (30)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
@@ -1430,6 +1443,7 @@ The remaining space shows the text representation of the parameter, with an opti
 <li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
 <li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
 <li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
+<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
 <li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
 <li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
 <li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
@@ -1452,7 +1466,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="vectorpadstyle">
-<span id="visual-styles-classmodel-class-vectorpadstyle"></span><h3>VectorPadStyle<a class="headerlink" href="#vectorpadstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-vectorpadstyle"></span><h3>VectorPadStyle<a class="headerlink" href="#vectorpadstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-vectorpad"><span class="std std-ref">VectorPad</span></a>]</p>
 <p><strong>Attributes (17)</strong></p>
 <ul class="simple">
@@ -1483,7 +1497,7 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 </section>
 <section id="windowbackgroundstyle">
-<span id="visual-styles-classmodel-class-windowbackgroundstyle"></span><h3>WindowBackgroundStyle<a class="headerlink" href="#windowbackgroundstyle" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-class-windowbackgroundstyle"></span><h3>WindowBackgroundStyle<a class="headerlink" href="#windowbackgroundstyle" title="Link to this heading"></a></h3>
 <p>Draws a background image.</p>
 <p><strong>Description</strong></p>
 <p>Two separate images can be specified for normal windows and dialogs.
@@ -1512,9 +1526,9 @@ if no image is available, “backcolor” is used.</p>
 </section>
 </section>
 <section id="enums">
-<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this heading"></a></h2>
+<h2>Enums<a class="headerlink" href="#enums" title="Link to this heading"></a></h2>
 <section id="defaultcolors">
-<span id="visual-styles-classmodel-enumeration-defaultcolors"></span><h3>DefaultColors<a class="headerlink" href="#defaultcolors" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-defaultcolors"></span><h3>DefaultColors<a class="headerlink" href="#defaultcolors" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>aliceblue</strong></p></li>
@@ -1667,10 +1681,9 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="standardstyles">
-<span id="visual-styles-classmodel-enumeration-standardstyles"></span><h3>StandardStyles<a class="headerlink" href="#standardstyles" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-standardstyles"></span><h3>StandardStyles<a class="headerlink" href="#standardstyles" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
-<li><p><strong>Border</strong></p></li>
 <li><p><strong>Button</strong></p></li>
 <li><p><strong>CheckBox</strong></p></li>
 <li><p><strong>ComboBox</strong></p></li>
@@ -1678,6 +1691,12 @@ if no image is available, “backcolor” is used.</p>
 <li><p><strong>DialogGroup</strong></p></li>
 <li><p><strong>Divider</strong></p></li>
 <li><p><strong>EditBox</strong></p></li>
+<li><p><strong>H1</strong></p></li>
+<li><p><strong>H2</strong></p></li>
+<li><p><strong>H3</strong></p></li>
+<li><p><strong>H4</strong></p></li>
+<li><p><strong>H5</strong></p></li>
+<li><p><strong>H6</strong></p></li>
 <li><p><strong>HeaderView</strong></p></li>
 <li><p><strong>Knob</strong></p></li>
 <li><p><strong>Label</strong></p></li>
@@ -1710,7 +1729,7 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themecolors">
-<span id="visual-styles-classmodel-enumeration-themecolors"></span><h3>ThemeColors<a class="headerlink" href="#themecolors" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themecolors"></span><h3>ThemeColors<a class="headerlink" href="#themecolors" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>AlphaCursorColor</strong></p></li>
@@ -1725,7 +1744,7 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themecursors">
-<span id="visual-styles-classmodel-enumeration-themecursors"></span><h3>ThemeCursors<a class="headerlink" href="#themecursors" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themecursors"></span><h3>ThemeCursors<a class="headerlink" href="#themecursors" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>ArrowCursor</strong></p></li>
@@ -1754,7 +1773,7 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themeelementimages">
-<span id="visual-styles-classmodel-enumeration-themeelementimages"></span><h3>ThemeElementImages<a class="headerlink" href="#themeelementimages" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themeelementimages"></span><h3>ThemeElementImages<a class="headerlink" href="#themeelementimages" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>Button</strong></p></li>
@@ -1764,7 +1783,7 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themeelementstates">
-<span id="visual-styles-classmodel-enumeration-themeelementstates"></span><h3>ThemeElementStates<a class="headerlink" href="#themeelementstates" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themeelementstates"></span><h3>ThemeElementStates<a class="headerlink" href="#themeelementstates" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>disabled</strong></p></li>
@@ -1775,7 +1794,7 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themeelementstateson">
-<span id="visual-styles-classmodel-enumeration-themeelementstateson"></span><h3>ThemeElementStatesOn<a class="headerlink" href="#themeelementstateson" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themeelementstateson"></span><h3>ThemeElementStatesOn<a class="headerlink" href="#themeelementstateson" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>disabledOn</strong></p></li>
@@ -1786,14 +1805,14 @@ if no image is available, “backcolor” is used.</p>
 </ul>
 </section>
 <section id="themefonts">
-<span id="visual-styles-classmodel-enumeration-themefonts"></span><h3>ThemeFonts<a class="headerlink" href="#themefonts" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-themefonts"></span><h3>ThemeFonts<a class="headerlink" href="#themefonts" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>MenuFont</strong></p></li>
 </ul>
 </section>
 <section id="thememetrics">
-<span id="visual-styles-classmodel-enumeration-thememetrics"></span><h3>ThemeMetrics<a class="headerlink" href="#thememetrics" title="Permalink to this heading"></a></h3>
+<span id="visual-styles-classmodel-enumeration-thememetrics"></span><h3>ThemeMetrics<a class="headerlink" href="#thememetrics" title="Link to this heading"></a></h3>
 <p><strong>Enumerators</strong></p>
 <ul class="simple">
 <li><p><strong>Border</strong></p></li>
@@ -1823,14 +1842,14 @@ if no image is available, “backcolor” is used.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="skin-elements-classmodel.html" class="btn btn-neutral float-left" title="Skin Elements Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../extension/index.html" class="btn btn-neutral float-right" title="Extension Developer Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../corelibrary/index.html" class="btn btn-neutral float-right" title="Core Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Apr 28, 2025.
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
       </span></p>
   </div>
 

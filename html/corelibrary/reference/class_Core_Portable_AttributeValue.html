@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Portable::AttributeValue &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum Core::Portable::AttributeValue::Types" href="enum_Core_Portable_AttributeValue_Types.html" />
+    <link rel="prev" title="class Core::Portable::AttributeQueue" href="class_Core_Portable_AttributeQueue.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_portable.html">Core-Portable</a></li>
+      <li class="breadcrumb-item active">class Core::Portable::AttributeValue</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-portable-attributevalue">
+<span id="doxid-class-core-1-1-portable-1-1-attribute-value"></span><span id="index-0"></span><h1>class Core::Portable::AttributeValue<a class="headerlink" href="#class-core-portable-attributevalue" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Class to hold a value of different types (int, float, string, etc.)</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coreattributes.h&gt;</span>
+
+<span class="k">class</span> <span class="n">AttributeValue</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_Core_Portable_AttributeValue_Types.html#doxid-class-core-1-1-portable-1-1-attribute-value-1a8aaeba5aed18516d10d61fe3139c9d32"><span class="std std-ref">Types</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a6afc164b8181823eefb96f72954200dc"><span></span><span class="n">kUserFlag2</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a5f1e1c25b8369f660499c967be2cd174"><span></span><span class="n">lValue</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a6bafc550346f61ba3132c11a2330c468"><span></span><span class="n">fValue</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1aed1cfb225a5fb77461e7972691e68a72"><span></span><span class="n">string</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_Portable_AttributeQueue.html#doxid-class-core-1-1-portable-1-1-attribute-queue"><span class="std std-ref">AttributeQueue</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a7ebe343a2335a459e5fb93a6dda00561"><span></span><span class="n">queue</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a72aaa655efab1205022ee6a399a0bbf2"><span></span><span class="n">attributes</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1abf92260b43adbbd3f05f8c665aaa5011"><span></span><span class="n">copyFrom</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">AttributeValue</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">,</span> <a class="reference internal" href="class_Core_Portable_AttributeAllocator.html#doxid-class-core-1-1-portable-1-1-attribute-allocator"><span class="std std-ref">AttributeAllocator</span></a><span></span><span class="o">&amp;</span> <span class="n">allocator</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a1ead1c837645f06d22b8c105a6128c19"><span></span><span class="n">makeReal</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">short</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1adbd2b1403464cb013424a2fda1665ceb"><span></span><span class="n">getType</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a0d79bece892b34367b12fdb279e1c0ee"><span></span><span class="n">PROPERTY_FLAG</span></span><span></span><span class="p">(</span>type<span></span><span class="p">,</span> <a class="reference internal" href="enum_Core_Portable_AttributeValue_Types.html#doxid-class-core-1-1-portable-1-1-attribute-value-1a8aaeba5aed18516d10d61fe3139c9d32a1c9a1866cc5d66ffd30835c1b1423f9f"><span class="std std-ref">kUserFlag1</span></a><span></span><span class="p">,</span> <span class="n">isUserFlag1</span><span class="p">);</span>
+    <span class="n">isUserFlag2</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1ac8bb3912a3ce86b15842e79d0b421204"><span></span><span class="n">clear</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a84a1fb25bedb4350c1e6c825e10fbe13"><span></span><span class="n">set</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a7fcae2caca3a6ef5e91b39f1ae0169b4"><span></span><span class="n">set</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">double</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a5cb2bc32cc1b5a38b393f67e4d47fa93"><span></span><span class="n">set</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">value</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">shared</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1ac8ec72f34636577cecde9ddc136c059c"><span></span><span class="n">set</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_Core_Portable_AttributeQueue.html#doxid-class-core-1-1-portable-1-1-attribute-queue"><span class="std std-ref">AttributeQueue</span></a><span></span><span class="o">&amp;</span> <span class="n">queue</span><span class="p">,</span> <a class="reference internal" href="class_Core_Portable_AttributeAllocator.html#doxid-class-core-1-1-portable-1-1-attribute-allocator"><span class="std std-ref">AttributeAllocator</span></a><span></span><span class="o">&amp;</span> <span class="n">allocator</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1af20f2860bef3c7b11d6d59e05e5b723a"><span></span><span class="n">set</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span> <a class="reference internal" href="class_Core_Portable_AttributeAllocator.html#doxid-class-core-1-1-portable-1-1-attribute-allocator"><span class="std std-ref">AttributeAllocator</span></a><span></span><span class="o">&amp;</span> <span class="n">allocator</span><span class="p">);</span>
+    <a class="reference internal" href="class_Core_Portable_AttributeQueue.html#doxid-class-core-1-1-portable-1-1-attribute-queue"><span class="std std-ref">AttributeQueue</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a07ccef4434ca08526dbaa833d92832d1"><span></span><span class="n">makeQueue</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1aeb913d2a9e2440c96ac85e2bf2c28ad5"><span></span><span class="n">makeAttributes</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_AttributeAllocator.html#doxid-class-core-1-1-portable-1-1-attribute-allocator"><span class="std std-ref">AttributeAllocator</span></a><span></span><span class="o">&amp;</span> <span class="n">allocator</span><span class="p">);</span>
+    <a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a6c77d3e6111e92819373b39de8879cbe"><span></span><span class="n">detachAttributes</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1ab4b172c7b8760a58b904da25518e43aa"><span></span><span class="n">getInt</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1af4c9462d5f17112ed3538017f60a623e"><span></span><span class="n">getFloat</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a40ba0c1b916f84a53722c937e9ec0be4"><span></span><span class="n">getString</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_Portable_AttributeQueue.html#doxid-class-core-1-1-portable-1-1-attribute-queue"><span class="std std-ref">AttributeQueue</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1acfc65303156dc3207d2b0a356a96bf94"><span></span><span class="n">getQueue</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_Portable_Attributes.html#doxid-class-core-1-1-portable-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a8edcc9e26465c3ad4bc4621814d20028"><span></span><span class="n">getAttributes</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-attribute-value-1a57015947136189c8e2618da1ec25a8f8"><span></span><span class="n">getEstimatedSize</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">deep</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">true</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_AttributeValue2.html#doxid-class-attribute-value2"><span class="std std-ref">AttributeValue2</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_Attribute.html#doxid-class-core-1-1-portable-1-1-attribute"><span class="std std-ref">Attribute</span></a><span></span><span class="p">;</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Portable_AttributeQueue.html" class="btn btn-neutral float-left" title="class Core::Portable::AttributeQueue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_Core_Portable_AttributeValue_Types.html" class="btn btn-neutral float-right" title="enum Core::Portable::AttributeValue::Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

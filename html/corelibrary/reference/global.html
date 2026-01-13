@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Namespace &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace AttributeFactory" href="namespace_AttributeFactory.html" />
+    <link rel="prev" title="Deprecated List" href="page_deprecated.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Global Namespace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">Global Namespace</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="global-namespace">
+<span id="index-0"></span><span id="global"></span><h1>Global Namespace<a class="headerlink" href="#global-namespace" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_AttributeFactory.html#doxid-namespace-attribute-factory"><span class="std std-ref">AttributeFactory</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core"><span class="std std-ref">Core</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Args.html#doxid-namespace-core-1-1-args"><span class="std std-ref">Core::Args</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Bluetooth.html#doxid-namespace-core-1-1-bluetooth"><span class="std std-ref">Core::Bluetooth</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_CoreSpinLock.html#doxid-namespace-core-1-1-core-spin-lock"><span class="std std-ref">Core::CoreSpinLock</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Errors.html#doxid-namespace-core-1-1-errors"><span class="std std-ref">Core::Errors</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_HTTPDefinitions.html#doxid-namespace-core-1-1-h-t-t-p-definitions"><span class="std std-ref">Core::HTTPDefinitions</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_HighPerformanceClock.html#doxid-namespace-core-1-1-high-performance-clock"><span class="std std-ref">Core::HighPerformanceClock</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_IO.html#doxid-namespace-core-1-1-i-o"><span class="std std-ref">Core::IO</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java"><span class="std std-ref">Core::Java</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Meta.html#doxid-namespace-core-1-1-meta"><span class="std std-ref">Core::Meta</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform"><span class="std std-ref">Core::Platform</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_CurrentProcess.html#doxid-namespace-core-1-1-platform-1-1-current-process"><span class="std std-ref">Core::Platform::CurrentProcess</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_CurrentThread.html#doxid-namespace-core-1-1-platform-1-1-current-thread"><span class="std std-ref">Core::Platform::CurrentThread</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_Debug.html#doxid-namespace-core-1-1-platform-1-1-debug"><span class="std std-ref">Core::Platform::Debug</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_FileSystem.html#doxid-namespace-core-1-1-platform-1-1-file-system"><span class="std std-ref">Core::Platform::FileSystem</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_HighPerformanceClock.html#doxid-namespace-core-1-1-platform-1-1-high-performance-clock"><span class="std std-ref">Core::Platform::HighPerformanceClock</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_Network.html#doxid-namespace-core-1-1-platform-1-1-network"><span class="std std-ref">Core::Platform::Network</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_PosixSocketSets.html#doxid-namespace-core-1-1-platform-1-1-posix-socket-sets"><span class="std std-ref">Core::Platform::PosixSocketSets</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SSLTypes.html#doxid-namespace-core-1-1-platform-1-1-s-s-l-types"><span class="std std-ref">Core::Platform::SSLTypes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SocketSets.html#doxid-namespace-core-1-1-platform-1-1-socket-sets"><span class="std std-ref">Core::Platform::SocketSets</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_StaticThreads.html#doxid-namespace-core-1-1-platform-1-1-static-threads"><span class="std std-ref">Core::Platform::StaticThreads</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SystemClock.html#doxid-namespace-core-1-1-platform-1-1-system-clock"><span class="std std-ref">Core::Platform::SystemClock</span></a><span></span><span class="p">;</span>
+            <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SystemClock_Helper.html#doxid-namespace-core-1-1-platform-1-1-system-clock-1-1-helper"><span class="std std-ref">Core::Platform::SystemClock::Helper</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_TLS.html#doxid-namespace-core-1-1-platform-1-1-t-l-s"><span class="std std-ref">Core::Platform::TLS</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Plugins.html#doxid-namespace-core-1-1-plugins"><span class="std std-ref">Core::Plugins</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable.html#doxid-namespace-core-1-1-portable"><span class="std std-ref">Core::Portable</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_AuthorizationPolicy.html#doxid-namespace-core-1-1-portable-1-1-authorization-policy"><span class="std std-ref">Core::Portable::AuthorizationPolicy</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_BMF.html#doxid-namespace-core-1-1-portable-1-1-b-m-f"><span class="std std-ref">Core::Portable::BMF</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_BitmapFileFormat.html#doxid-namespace-core-1-1-portable-1-1-bitmap-file-format"><span class="std std-ref">Core::Portable::BitmapFileFormat</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_Colors.html#doxid-namespace-core-1-1-portable-1-1-colors"><span class="std std-ref">Core::Portable::Colors</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ComponentFlags.html#doxid-namespace-core-1-1-portable-1-1-component-flags"><span class="std std-ref">Core::Portable::ComponentFlags</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_HTTP.html#doxid-namespace-core-1-1-portable-1-1-h-t-t-p"><span class="std std-ref">Core::Portable::HTTP</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_Logging.html#doxid-namespace-core-1-1-portable-1-1-logging"><span class="std std-ref">Core::Portable::Logging</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ResourceAttributes.html#doxid-namespace-core-1-1-portable-1-1-resource-attributes"><span class="std std-ref">Core::Portable::ResourceAttributes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ThreadAwareCompression.html#doxid-namespace-core-1-1-portable-1-1-thread-aware-compression"><span class="std std-ref">Core::Portable::ThreadAwareCompression</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ViewAttributes.html#doxid-namespace-core-1-1-portable-1-1-view-attributes"><span class="std std-ref">Core::Portable::ViewAttributes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ViewClasses.html#doxid-namespace-core-1-1-portable-1-1-view-classes"><span class="std std-ref">Core::Portable::ViewClasses</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Security.html#doxid-namespace-core-1-1-security"><span class="std std-ref">Core::Security</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Security_JOSE.html#doxid-namespace-core-1-1-security-1-1-j-o-s-e"><span class="std std-ref">Core::Security::JOSE</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin.html#doxid-namespace-core-1-1-skin"><span class="std std-ref">Core::Skin</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_FileNames.html#doxid-namespace-core-1-1-skin-1-1-file-names"><span class="std std-ref">Core::Skin::FileNames</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_KeyboardCapitalization.html#doxid-namespace-core-1-1-skin-1-1-keyboard-capitalization"><span class="std std-ref">Core::Skin::KeyboardCapitalization</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_KeyboardLayout.html#doxid-namespace-core-1-1-skin-1-1-keyboard-layout"><span class="std std-ref">Core::Skin::KeyboardLayout</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ResourceAttributes.html#doxid-namespace-core-1-1-skin-1-1-resource-attributes"><span class="std std-ref">Core::Skin::ResourceAttributes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ViewAttributes.html#doxid-namespace-core-1-1-skin-1-1-view-attributes"><span class="std std-ref">Core::Skin::ViewAttributes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ViewClasses.html#doxid-namespace-core-1-1-skin-1-1-view-classes"><span class="std std-ref">Core::Skin::ViewClasses</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets.html#doxid-namespace-core-1-1-sockets"><span class="std std-ref">Core::Sockets</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_Discovery.html#doxid-namespace-core-1-1-sockets-1-1-discovery"><span class="std std-ref">Core::Sockets::Discovery</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_Network.html#doxid-namespace-core-1-1-sockets-1-1-network"><span class="std std-ref">Core::Sockets::Network</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SSLTypes.html#doxid-namespace-core-1-1-sockets-1-1-s-s-l-types"><span class="std std-ref">Core::Sockets::SSLTypes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SocketTypes.html#doxid-namespace-core-1-1-sockets-1-1-socket-types"><span class="std std-ref">Core::Sockets::SocketTypes</span></a><span></span><span class="p">;</span>
+            <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html#doxid-namespace-core-1-1-sockets-1-1-socket-types-1-1-socket-option"><span class="std std-ref">Core::Sockets::SocketTypes::SocketOption</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_SystemClock.html#doxid-namespace-core-1-1-system-clock"><span class="std std-ref">Core::SystemClock</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Test.html#doxid-namespace-core-1-1-test"><span class="std std-ref">Core::Test</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text.html#doxid-namespace-core-1-1-text"><span class="std std-ref">Core::Text</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_Json.html#doxid-namespace-core-1-1-text-1-1-json"><span class="std std-ref">Core::Text::Json</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_UTFCodec.html#doxid-namespace-core-1-1-text-1-1-u-t-f-codec"><span class="std std-ref">Core::Text::UTFCodec</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_UTFFunctions.html#doxid-namespace-core-1-1-text-1-1-u-t-f-functions"><span class="std std-ref">Core::Text::UTFFunctions</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads.html#doxid-namespace-core-1-1-threads"><span class="std std-ref">Core::Threads</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_CurrentProcess.html#doxid-namespace-core-1-1-threads-1-1-current-process"><span class="std std-ref">Core::Threads::CurrentProcess</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_CurrentThread.html#doxid-namespace-core-1-1-threads-1-1-current-thread"><span class="std std-ref">Core::Threads::CurrentThread</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_TLS.html#doxid-namespace-core-1-1-threads-1-1-t-l-s"><span class="std std-ref">Core::Threads::TLS</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_Threading.html#doxid-namespace-core-1-1-threads-1-1-threading"><span class="std std-ref">Core::Threads::Threading</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_URLEncoding.html#doxid-namespace-core-1-1-u-r-l-encoding"><span class="std std-ref">Core::URLEncoding</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Usb.html#doxid-namespace-core-1-1-usb"><span class="std std-ref">Core::Usb</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Zip.html#doxid-namespace-core-1-1-zip"><span class="std std-ref">Core::Zip</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_libb64.html#doxid-namespacelibb64"><span class="std std-ref">libb64</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <span class="kt">uint8_t</span> <span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8cpp-1abffe7ab8f99f3c948cceeca5bc3b8ee4"><span></span><span class="n">sa_family_t</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_EvenNumberFunctor.html#doxid-struct-even-number-functor"><span class="std std-ref">EvenNumberFunctor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_ResolveContext.html#doxid-struct-resolve-context"><span class="std std-ref">ResolveContext</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_SecBufferList.html#doxid-struct-sec-buffer-list"><span class="std std-ref">SecBufferList</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_TestStorable.html#doxid-struct-test-storable"><span class="std std-ref">TestStorable</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Attribute2.html#doxid-class-attribute2"><span class="std std-ref">Attribute2</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_AttributeQueue2.html#doxid-class-attribute-queue2"><span class="std std-ref">AttributeQueue2</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_AttributeValue2.html#doxid-class-attribute-value2"><span class="std std-ref">AttributeValue2</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Attributes2.html#doxid-class-attributes2"><span class="std std-ref">Attributes2</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ClientThread.html#doxid-class-client-thread"><span class="std std-ref">ClientThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_RegTypeString.html#doxid-class-reg-type-string"><span class="std std-ref">RegTypeString</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ServerThread.html#doxid-class-server-thread"><span class="std std-ref">ServerThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_TestContext.html#doxid-class-test-context"><span class="std std-ref">TestContext</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<a class="reference internal" href="class_Core_HeapAllocator.html#doxid-class-core-1-1-heap-allocator"><span class="std std-ref">HeapAllocator</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-coreallocator-8dspti32-8cpp-1aad207577b190683e8d02c711d6fef975"><span></span><span class="n">defaultAllocator</span></span><span></span><span class="p">;</span>
+<span class="k">struct</span> <span class="n">_static_thread_data</span> <span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1a5451dda5a6645fd63833a3f590ae118a"><span></span><span class="n">__static_thread_data_list_start</span></span><span></span><span class="p">[];</span>
+<span class="k">struct</span> <span class="n">_static_thread_data</span> <span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1a2a241a85734834c21df16794958c3089"><span></span><span class="n">__static_thread_data_list_end</span></span><span></span><span class="p">[];</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1af27561556ed14b4607f5ce55e3ad0745"><span></span><span class="n">kAttrVectorSize</span></span><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1af4672b8c42fe251c52b1780ebc7db792"><span></span><span class="n">kAttrVectorDelta</span></span><span></span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1ae0e32a5621e95efee69c21f9605a68bc"><span></span><span class="n">kAttrPoolSize</span></span><span></span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1aa70be770e2345678ad357bca847d48fa"><span></span><span class="n">kAttrMediumPoolSize</span></span><span></span> <span class="o">=</span> <span class="mi">4000</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1ae34591431be5ab27c9f2d825f2861f2b"><span></span><span class="n">kAttrLargePoolSize</span></span><span></span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1a860ca3cb496a172d1a961bc5c73b2879"><span></span><span class="n">kAttrSmallStringSize</span></span><span></span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1a87c55d4315d5d54c98d07e84b3c04f3c"><span></span><span class="n">CoreMemoryPool</span></span><span></span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="doxyrest-code-target target" id="doxid-corefiletest-8cpp-1a66c13e33f52191d56eccd7656b06310e"><span></span><span class="n">kTestString</span></span><span></span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Core File Test&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="doxyrest-code-target target" id="doxid-coresockettest-8cpp-1a133c381234895bf0f428d8b7392dfc7e"><span></span><span class="n">text</span></span><span></span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;This is a test string</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coredeleteoperatorstubs-8cpp-1a7ce65fa46e9a9e6b3a8c9af4d2d6a1b1"><span></span><span class="k">operator</span> <span class="k">delete</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coredeleteoperatorstubs-8cpp-1a6b01ea39a68d477fb0597e0a03ea7c3b"><span></span><span class="k">operator</span> <span class="k">delete</span><span class="p">[]</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a46e7152332419474fd46a3a23d0395cd"><span></span><span class="n">core_malloc</span></span><span></span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a83af52f4e0417cbbd2b2ad5ec6491900"><span></span><span class="n">core_malloc_debug</span></span><span></span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1ab0e0b921de60699d7dfbce6415c25b8e"><span></span><span class="n">core_realloc</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a2dc1797f6db1f5ab2f0cde31b5c78a83"><span></span><span class="n">core_realloc_debug</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">line</span>
+<span class="p">);</span>
+
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1aff96a662e321c4538d2e0ea24a7203a3"><span></span><span class="n">core_free</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a6bade074bf10cc44cd224e25c771ff06"><span></span><span class="n">core_alloc_use</span></span><span></span><span class="p">();</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a8be2580dd733ee698de34edb1f65490e"><span></span><span class="n">core_alloc_unuse</span></span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1af377dafb9012487491beb4b93ae309a0"><span></span><span class="n">core_check_heap</span></span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a1adcfa2a15e15844651cc50a5c861cad"><span></span><span class="n">core_check_ptr</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corenewoperatorstubs-8cpp-1acfad8f0764cf06b8abd170d8569a7b3f"><span></span><span class="k">operator</span> <span class="k">new</span></span><span></span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corenewoperatorstubs-8cpp-1a8fb4213ce34d87b1076be664d2e6ff53"><span></span><span class="k">operator</span> <span class="k">new</span><span class="p">[]</span></span><span></span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corediscovery-8android-8cpp-1a28ed6e53e00717a2c65c099577835169"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="p">,</span>
+    <span class="n">NsdDiscoveryHandler</span><span class="p">,</span>
+    <span class="n">onServiceFound</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeHandler</span><span class="p">,</span>
+    <span class="n">jobject</span> <span class="n">serviceInfo</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corediscovery-8android-8cpp-1ad3f7f6f45d08dfddcccb5762c7825d3e"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="p">,</span>
+    <span class="n">NsdDiscoveryHandler</span><span class="p">,</span>
+    <span class="n">onServiceLost</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeHandler</span><span class="p">,</span>
+    <span class="n">jobject</span> <span class="n">serviceInfo</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corediscovery-8android-8cpp-1a12957dac1b86008ffb7d5b3554352344"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="p">,</span>
+    <span class="n">NsdResolveHandler</span><span class="p">,</span>
+    <span class="n">onServiceResolved</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeHandler</span><span class="p">,</span>
+    <span class="n">jobject</span> <span class="n">serviceInfo</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corediscovery-8android-8cpp-1ac01adf1f7e6a1006558d3e872b8874a9"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="p">,</span>
+    <span class="n">NsdRegistrationHandler</span><span class="p">,</span>
+    <span class="n">onRegistrationFailed</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeHandler</span><span class="p">,</span>
+    <span class="n">jobject</span> <span class="n">serviceInfo</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">errorCode</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corediscovery-8android-8cpp-1a7afff33992448d6b1b3da9caff8b72a5"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="p">,</span>
+    <span class="n">NsdRegistrationHandler</span><span class="p">,</span>
+    <span class="n">onServiceRegistered</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeHandler</span><span class="p">,</span>
+    <span class="n">jobject</span> <span class="n">serviceInfo</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-coresslcontext-8android-8cpp-1a4a495d3d9e32b420fcda6ee937fd5f77"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="n">SSLChannel</span><span class="p">,</span>
+    <span class="n">writeEncrypted</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeContext</span><span class="p">,</span>
+    <span class="n">jbyteArray</span> <span class="n">data</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">count</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-coresslcontext-8android-8cpp-1afea69373dde34e38b01810e57fe50daf"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="n">SSLChannel</span><span class="p">,</span>
+    <span class="n">readEncrypted</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java-1ab62e09750b64c04c5e37279977eb432b"><span class="std std-ref">JniIntPtr</span></a><span></span> <span class="n">nativeContext</span><span class="p">,</span>
+    <span class="n">jbyteArray</span> <span class="n">data</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">start</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">count</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corethread-8android-8cpp-1a72540dc1e7659d17b1cbd1c45e362371"><span></span><span class="n">ThreadEntry</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">param</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corethread-8cocoa-8cpp-1a9eddbc9815b11254ce5ea0cec93d19e9"><span></span><span class="n">CocoaThreadEntry</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">param</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-macosversion-8h-1ae816317cc9e74203fd7fa8a4d0592254"><span></span><span class="n">GetMacOSVersion</span></span><span></span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">major</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">minor</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">patch</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-macosversion-8h-1a831f4a4fb1823ca6acb42eaa490bc281"><span></span><span class="n">IsAtLeastMacOSVersion</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">wantMajor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">wantMinor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">wantPatch</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1a015697b4c79267a9d5286bab83ecc51f"><span></span><span class="n">ToNativePriority</span></span><span></span><span class="p">(</span>ThreadPriority<span></span> <span class="n">priority</span><span class="p">);</span>
+<span class="k">static</span> ThreadPriority<span></span> <span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1ae767b5bad1a3c563f226ddf817524c3a"><span></span><span class="n">FromNativePriority</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">ctlPrio</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1a66a005fce229f8aa918404d6f24e46a9"><span></span><span class="n">ThreadEntry</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">param</span><span class="p">);</span>
+<a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">Core::uint32</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-coretime-8dspti32-8h-1ad8e20c93f2e6af94cf7d6a4ef6d39bf7"><span></span><span class="n">CLK_gethtime</span></span><span></span><span class="p">();</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corethread-8cmsis-8cpp-1a494449db787cde6750d993f2fc075402"><span></span><span class="n">TLSDestructor</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corethread-8cmsis-8cpp-1a66a005fce229f8aa918404d6f24e46a9"><span></span><span class="n">ThreadEntry</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">param</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresscanf-8cpp-1ab1c4552aba80fe03c9b45fe27f4331ad"><span></span><span class="n">vsscanf</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="kt">va_list</span> <span class="n">ap</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresscanf-8cpp-1acd369d6926dd1e1fb503821a8b167414"><span></span><span class="n">sscanf</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-corestrcasecmp-8cpp-1a8f78577bb4b039f1e7ddd3148fd3e55e"><span></span><span class="n">strcasecmp</span></span><span></span><span class="p">(</span><span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">s1</span><span class="p">,</span> <span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">s2</span><span class="p">);</span>
+<span class="n">JNIEXPORT</span> <span class="n">jint</span> <span class="doxyrest-code-target target" id="doxid-corejnionload-8cpp-1a31734e0be752a40edb602aae49862783"><span></span><span class="n">JNI_OnLoad</span></span><span></span><span class="p">(</span><span class="n">JavaVM</span><span class="o">*</span> <span class="n">vm</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">reserved</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1ac3eb39d7dd5186de34d73253a8b372d2"><span></span><span class="n">getaddrinfo</span></span><span></span><span class="p">(</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">nodename</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">servname</span><span class="p">,</span>
+    <span class="k">const</span> <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">*</span> <span class="n">hints</span><span class="p">,</span>
+    <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">**</span> <span class="n">res</span>
+<span class="p">);</span>
+
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a5996eed1e393834ce228347f23443db9"><span></span><span class="n">freeaddrinfo</span></span><span></span><span class="p">(</span><span class="k">struct</span> <span class="n">addrinfo</span><span class="o">*</span> <span class="n">ai</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1aaaf2f15c3d464ebd84caabb51920c4bc"><span></span><span class="n">accept</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">addr</span><span class="p">,</span> <span class="kt">socklen_t</span><span class="o">*</span> <span class="n">addrlen</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a82199bcd81894331533a25f08e172480"><span></span><span class="n">bind</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">addr</span><span class="p">,</span> <span class="kt">socklen_t</span> <span class="n">addrlen</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a8744a596bc9132c457bcce518fb854dd"><span></span><span class="n">shutdown</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">how</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a510ead576f102243b70f612d91b5823b"><span></span><span class="n">close</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a30a78fb09c5f8eb192eb9da70babda64"><span></span><span class="n">connect</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">socklen_t</span> <span class="n">namelen</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a7bafa2b03fec4e2d4e7492269b262975"><span></span><span class="n">getsockname</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">socklen_t</span><span class="o">*</span> <span class="n">namelen</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a4f016ffafb303902b981988fdc675940"><span></span><span class="n">getpeername</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">socklen_t</span><span class="o">*</span> <span class="n">namelen</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a3437a49823cdfa961c994aaaf661bd36"><span></span><span class="n">setsockopt</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span> <span class="n">s</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">level</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">optname</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">optval</span><span class="p">,</span>
+    <span class="kt">socklen_t</span> <span class="n">optlen</span>
+<span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1aad5e3dc6d10cb45c3d98038a5733980c"><span></span><span class="n">getsockopt</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">level</span><span class="p">,</span> <span class="kt">int</span> <span class="n">optname</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">optval</span><span class="p">,</span> <span class="kt">socklen_t</span><span class="o">*</span> <span class="n">optlen</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1add5137ee4523809b8e087345ff5dae6f"><span></span><span class="n">listen</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">backlog</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1ac98728e53b98f1b22474f48ce6658749"><span></span><span class="n">recv</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">mem</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a0add4d77d9f1142e0256df85c5c4d992"><span></span><span class="n">recvfrom</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span> <span class="n">s</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">mem</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span>
+    <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">from</span><span class="p">,</span>
+    <span class="kt">socklen_t</span><span class="o">*</span> <span class="n">fromlen</span>
+<span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1ab4a2874617ed0d46a44b0da20b3850d0"><span></span><span class="n">send</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a7d0859ad197b472a5fd930872dab8763"><span></span><span class="n">sendto</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span> <span class="n">s</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span>
+    <span class="k">const</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">to</span><span class="p">,</span>
+    <span class="kt">socklen_t</span> <span class="n">tolen</span>
+<span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1af4e0711877c45a41168ac677b0670ccd"><span></span><span class="n">socket</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">domain</span><span class="p">,</span> <span class="kt">int</span> <span class="n">type</span><span class="p">,</span> <span class="kt">int</span> <span class="n">protocol</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a7697c5e2abe442fee5267ff362eff0b5"><span></span><span class="n">select</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span> <span class="n">maxfdp1</span><span class="p">,</span>
+    <span class="n">fd_set</span><span class="o">*</span> <span class="n">readset</span><span class="p">,</span>
+    <span class="n">fd_set</span><span class="o">*</span> <span class="n">writeset</span><span class="p">,</span>
+    <span class="n">fd_set</span><span class="o">*</span> <span class="n">exceptset</span><span class="p">,</span>
+    <span class="k">struct</span> <span class="n">timeval</span><span class="o">*</span> <span class="n">timeout</span>
+<span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1ad335869e1e00b0ffcd06144414112a90"><span></span><span class="n">ioctl</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">long</span> <span class="n">cmd</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">argp</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a688ddfcb57860e52019ef12c0a7992c4"><span></span><span class="n">read</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">mem</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1a38c3840346caad83300f12eb0a2e10c4"><span></span><span class="n">write</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8lwip-8h-1ab80c6b00ff4bad5290333b912c4c7ae9"><span></span><span class="n">fcntl</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cmd</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coresslcontext-8openssl-8cpp-1a67322d4b286a40b6409fb4b290c54b92"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><span class="n">OpenSSLInitializer</span><span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">DNSSD_API</span> <span class="doxyrest-code-target target" id="doxid-corediscovery-8posix-8cpp-1a5b6402b720c7e5e1fe2b0cdc6b05b5fa"><span></span><span class="n">DNSServiceRegisterReplyHandler</span></span><span></span><span class="p">(</span>
+    <span class="n">DNSServiceRef</span> <span class="n">sdRef</span><span class="p">,</span>
+    <span class="n">DNSServiceFlags</span> <span class="n">flags</span><span class="p">,</span>
+    <span class="n">DNSServiceErrorType</span> <span class="n">errorCode</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">_regtype</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">domain</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">context</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">DNSSD_API</span> <span class="doxyrest-code-target target" id="doxid-corediscovery-8posix-8cpp-1a9f71da28710008774de344f9f21fde7a"><span></span><span class="n">DNSServiceResolveReplyHandler</span></span><span></span><span class="p">(</span>
+    <span class="n">DNSServiceRef</span> <span class="n">sdRef</span><span class="p">,</span>
+    <span class="n">DNSServiceFlags</span> <span class="n">flags</span><span class="p">,</span>
+    <span class="kt">uint32_t</span> <span class="n">interfaceIndex</span><span class="p">,</span>
+    <span class="n">DNSServiceErrorType</span> <span class="n">errorCode</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fullname</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">hosttarget</span><span class="p">,</span>
+    <span class="kt">uint16_t</span> <span class="n">port</span><span class="p">,</span>
+    <span class="kt">uint16_t</span> <span class="n">txtLen</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">txtRecord</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">context</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">DNSSD_API</span> <span class="doxyrest-code-target target" id="doxid-corediscovery-8posix-8cpp-1aafd20b83c94ffa0cfe893cd56942dfa5"><span></span><span class="n">DNSServiceBrowseReplyHandler</span></span><span></span><span class="p">(</span>
+    <span class="n">DNSServiceRef</span> <span class="n">sdRef</span><span class="p">,</span>
+    <span class="n">DNSServiceFlags</span> <span class="n">flags</span><span class="p">,</span>
+    <span class="kt">uint32_t</span> <span class="n">interfaceIndex</span><span class="p">,</span>
+    <span class="n">DNSServiceErrorType</span> <span class="n">errorCode</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">serviceName</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">_regtype</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">replyDomain</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">context</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corethread-8posix-8cpp-1a66381e3d0bdcf0348e1501376c2e54c3"><span></span><span class="n">ToNativeThreadPriority</span></span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="o">&amp;</span> <span class="n">policy</span><span class="p">,</span>
+    <span class="n">sched_param</span><span class="o">&amp;</span> <span class="n">param</span><span class="p">,</span>
+    ThreadPriority<span></span> <span class="n">priority</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-corethread-8posix-8cpp-1a494449db787cde6750d993f2fc075402"><span></span><span class="n">TLSDestructor</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corethread-8posix-8cpp-1a72540dc1e7659d17b1cbd1c45e362371"><span></span><span class="n">ThreadEntry</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">param</span><span class="p">);</span>
+<span class="k">static</span> CString64<span></span> <span class="doxyrest-code-target target" id="doxid-coreinterprocess-8win-8cpp-1ae38dd97e7b2c0bf4ac0073a9ce2b0c15"><span></span><span class="n">addNamespace</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">global</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8win-8h-1a72fc15bc073649ea7d3dba09fd88da2a"><span></span><span class="n">core_private_alloc</span></span><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8win-8h-1ae24bea423757ecfb6d111df41ec73cf2"><span></span><span class="n">core_get_debug_filename</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8win-8cpp-1a01a410deb8331ac422568ea142605050"><span></span><span class="n">close</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Sockets.html#doxid-namespace-core-1-1-sockets-1a11f1b828f438474784405f0b21ddb718"><span class="std std-ref">SocketID</span></a><span></span> <span class="n">socket</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8win-8cpp-1ae8ee3b9dd52c2131399065b4e9c33fad"><span></span><span class="n">ioctl</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">Core::Platform::SocketID</span></a><span></span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">request</span><span class="p">,</span> <span class="p">...);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8win-8h-1ad41d84f5f6ec5d9bd6628a7e83de2f34"><span></span><span class="n">close</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">Core::Platform::SocketID</span></a><span></span> <span class="n">socket</span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coresocket-8win-8h-1ae8ee3b9dd52c2131399065b4e9c33fad"><span></span><span class="n">ioctl</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">Core::Platform::SocketID</span></a><span></span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">request</span><span class="p">,</span> <span class="p">...);</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-corethread-8win-8cpp-1a98212fa135c46e8c615288669164cdf3"><span></span><span class="n">ToNativeThreadPriority</span></span><span></span><span class="p">(</span>ThreadPriority<span></span> <span class="n">priority</span><span class="p">);</span>
+<span class="k">static</span> ThreadPriority<span></span> <span class="doxyrest-code-target target" id="doxid-corethread-8win-8cpp-1aae1592cc22219804dadc3c71b6a373cd"><span></span><span class="n">FromNativePriority</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">winPrio</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-corethread-8win-8cpp-1a6ac62703cd2e4038cc8570f2a7d4ae93"><span></span><span class="n">WaitForHandle</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">handle</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">milliseconds</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">DWORD</span> <span class="n">WINAPI</span> <span class="doxyrest-code-target target" id="doxid-corethread-8win-8cpp-1a37388d3181c84dc40d45ab8cee84bd02"><span></span><span class="n">ThreadEntry</span></span><span></span><span class="p">(</span><span class="n">LPVOID</span> <span class="n">param</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corethread-8win-8cpp-1a72a6c344014b8175895722e997571612"><span></span><span class="n">DEFINE_RECURSIVE_READ_WRITE_LOCK</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1afe29d6f92918701435754b7f8176dbc9"><span class="std std-ref">Win32RecursiveReadWriteLock</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corethread-8zephyr-8cpp-1a86eaee2ea2f947d8a4f1a9bd569316e6"><span></span><span class="n">LOG_MODULE_REGISTER</span></span><span></span><span class="p">(</span><span class="n">CoreThread</span><span class="p">,</span> <span class="n">LOG_LEVEL_DBG</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-corethread-8zephyr-8cpp-1a015697b4c79267a9d5286bab83ecc51f"><span></span><span class="n">ToNativePriority</span></span><span></span><span class="p">(</span>ThreadPriority<span></span> <span class="n">priority</span><span class="p">);</span>
+<span class="k">static</span> ThreadPriority<span></span> <span class="doxyrest-code-target target" id="doxid-corethread-8zephyr-8cpp-1abe00e664fb81c07b8c86ef7b3aa6ab58"><span></span><span class="n">FromNativePriority</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">zephyrPrio</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1a2a1f3cfe56724fc591372533c66eddd1"><span></span><span class="n">DEFINE_OBJECTPOOL_SIZE</span></span><span></span><span class="p">(</span><span class="n">Attribute2</span><span class="p">,</span> CoreMemoryPool<span></span><span class="p">,</span> <span class="n">kAttrLargePoolSize</span><span class="p">);</span>
+
+<span class="n">kAttrPoolSize</span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1ac0d67029d19cef9a5f461f64b3efe3b9"><span></span><span class="n">DEFINE_OBJECTPOOL_SIZE</span></span><span></span><span class="p">(</span>
+    <span class="n">Attributes2</span><span class="p">,</span>
+    CoreMemoryPool<span></span><span class="p">,</span>
+    <span class="n">kAttrMediumPoolSize</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="n">kAttrPoolSize</span> <span class="k">static</span> <span class="n">kAttrPoolSize</span> CoreMemoryPool<span></span> <span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1a1f864007f690ca0d128de444526e0842"><span></span><span class="n">gSmallStringPool</span></span><span></span><span class="p">(</span>
+    <span class="n">kAttrSmallStringSize</span><span class="p">,</span>
+    <span class="n">kAttrPoolSize</span><span class="p">,</span>
+    <span class="s">&quot;SmallStringPool&quot;</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-corefile-8cpp-1adad427bbed0398ac736ede7e699d0598"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_FileIOManager.html#doxid-class-core-1-1-portable-1-1-file-i-o-manager"><span class="std std-ref">FileIOManager</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corelogging-8cpp-1a74d98f06083abda177d3f334e487ccb7"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_Logger.html#doxid-class-core-1-1-portable-1-1-logger"><span class="std std-ref">Logger</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corepersistence-8cpp-1aadaac4cb4198fa262d52a247ae162989"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_SettingFile.html#doxid-class-core-1-1-portable-1-1-setting-file"><span class="std std-ref">Core::Portable::SettingFile</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corepluginmanager-8cpp-1af8997d686059dbabfc9679ff76501a55"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_PluginManager.html#doxid-class-core-1-1-portable-1-1-plugin-manager"><span class="std std-ref">PluginManager</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corebitmap-8cpp-1a272790fc60def779584eb411fef0bce5"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_DpiSetting.html#doxid-class-core-1-1-portable-1-1-dpi-setting"><span class="std std-ref">DpiSetting</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corebitmap-8cpp-1a84c2559d9ee67a5bbab95afee184550b"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_BitmapManager.html#doxid-class-core-1-1-portable-1-1-bitmap-manager"><span class="std std-ref">BitmapManager</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corefont-8cpp-1a4be8c8efca241572bfa6eaff00dad6b4"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_FontManager.html#doxid-class-core-1-1-portable-1-1-font-manager"><span class="std std-ref">FontManager</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corestaticview-8cpp-1a854db1a9efbca7898d64fb8209699e62"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_StaticThemePainter.html#doxid-class-core-1-1-portable-1-1-static-theme-painter"><span class="std std-ref">StaticThemePainter</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreview-8cpp-1a8e2fbcc9d49123ce0934ed27e61d0c05"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_StyleManager.html#doxid-class-core-1-1-portable-1-1-style-manager"><span class="std std-ref">StyleManager</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreview-8cpp-1ac9a90d9ac6a72c207de8a3772bd90a5e"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_ThemePainter.html#doxid-class-core-1-1-portable-1-1-theme-painter"><span class="std std-ref">ThemePainter</span></a><span></span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreviewbuilder-8cpp-1a6bd35256a7f7a86ccbd969ccd10d3be9"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_ViewBuilder.html#doxid-class-core-1-1-portable-1-1-view-builder"><span class="std std-ref">ViewBuilder</span></a><span></span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-corebuffer-8cpp-1ad8cb9ffd8e44f3501c3f60d9cafd9071"><span></span><span class="n">align_pointer</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">alignment</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreformatter-8cpp-1a14cd8950f33690bd28916a353f772c58"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">CoreFormatter</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a46e7152332419474fd46a3a23d0395cd"><span></span><span class="n">core_malloc</span></span><span></span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a83af52f4e0417cbbd2b2ad5ec6491900"><span></span><span class="n">core_malloc_debug</span></span><span></span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1ab0e0b921de60699d7dfbce6415c25b8e"><span></span><span class="n">core_realloc</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a2dc1797f6db1f5ab2f0cde31b5c78a83"><span></span><span class="n">core_realloc_debug</span></span><span></span><span class="p">(</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">line</span>
+<span class="p">);</span>
+
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1aff96a662e321c4538d2e0ea24a7203a3"><span></span><span class="n">core_free</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a6bade074bf10cc44cd224e25c771ff06"><span></span><span class="n">core_alloc_use</span></span><span></span><span class="p">();</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a8be2580dd733ee698de34edb1f65490e"><span></span><span class="n">core_alloc_unuse</span></span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1af377dafb9012487491beb4b93ae309a0"><span></span><span class="n">core_check_heap</span></span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a1adcfa2a15e15844651cc50a5c861cad"><span></span><span class="n">core_check_ptr</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+INLINE<span></span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a95154335c64eaa7b61a235bb8404babc"><span></span><span class="k">operator</span> <span class="k">new</span></span><span></span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+INLINE<span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1aeb94d5c3a454f2adeef24aa13ff016d6"><span></span><span class="k">operator</span> <span class="k">delete</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+INLINE<span></span> <span class="kt">void</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1a90acfb62310c264cb39dd144f09859ca"><span></span><span class="k">operator</span> <span class="k">new</span><span class="p">[]</span></span><span></span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+INLINE<span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1ae4ca0ebf58cb5cd1f7aff2490fb4af0a"><span></span><span class="k">operator</span> <span class="k">delete</span><span class="p">[]</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">line</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreallocatortest-8cpp-1aa90508a4a856d20c39023303455735ad"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterAllocatorTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coreatomictest-8cpp-1a2d3af3a6ea2f11554bdc915908507133"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterAtomicTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corecrctest-8cpp-1a261629b98f93dac86af64b9c10b7c2c8"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterCrcTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corecrttest-8cpp-1acc4f267f3057e840b6577ce1262158a7"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterCoreCrtTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coredequetest-8cpp-1ac51f02720a0f941c386296841711b094"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterDequeTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coredequetest-8cpp-1a0823cb8800c81d6fa7187e7884126625"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterFixedDequeTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corefiletest-8cpp-1a862f6f285f526ec1e0a97c1090f8f919"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterFileTest</span><span class="p">);</span>
+<span class="k">static</span> <span class="k">static</span> <span class="doxyrest-code-target target" id="doxid-corelinkedlisttest-8cpp-1a593b056d30d5014e61c159c0d7a9aa90"><span></span><span class="n">DEFINE_CONTAINER_PREDICATE_OBJECT</span></span><span></span><span class="p">(</span><span class="n">EvenNumberPredicate</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corelinkedlisttest-8cpp-1a146da5409b2f24049969458ee1b267ab"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterLinkedListTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corenetworktest-8cpp-1af389f29ab9b7b65b46de3bdea052b6df"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterNetworkTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coresockettest-8cpp-1a796adbd0b7bb78b0ffb61861581bb3b6"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterSocketTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corestorabletest-8cpp-1a4206e8f378018c1ad45688782dd6aadc"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterStorableTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corestringtest-8cpp-1a0a26693a09ca83e926a0b8055c88b502"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterStringTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coretestbase-8cpp-1a48064329d0d594135aae6299020c6459"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Test_TestRegistry.html#doxid-class-core-1-1-test-1-1-test-registry"><span class="std std-ref">TestRegistry</span></a><span></span><span class="p">);</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-coretestmain-8cpp-1a0ddf1224851353fc92bfbff6f499fa97"><span></span><span class="n">main</span></span><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[]);</span>
+<span class="doxyrest-code-target target" id="doxid-corethreadtest-8cpp-1afa8a2321ea1faf49be3c620f51ee3399"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterThreadTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corethreadtest-8cpp-1a8bdb6868a2bb53c43e34e46bb40eee3e"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterLockTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corethreadtest-8cpp-1ac54f3d935d5c793594b527c8b9e105ce"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterSignalTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coretimetest-8cpp-1a7e72dc27d64e75e59db7a7f2650bd070"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterTimeTest</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-coretreesettest-8cpp-1ae76a830d831f2e0ab2c8e5a72594a03a"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterTreeSetTest</span><span class="p">);</span>
+<span class="k">static</span> <span class="k">static</span> <span class="doxyrest-code-target target" id="doxid-corevectortest-8cpp-1a593b056d30d5014e61c159c0d7a9aa90"><span></span><span class="n">DEFINE_CONTAINER_PREDICATE_OBJECT</span></span><span></span><span class="p">(</span><span class="n">EvenNumberPredicate</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-corevectortest-8cpp-1aca80e2c3d3e6d4a6e424c0220471d19c"><span></span><span class="n">DEFINE_INITIALIZER</span></span><span></span><span class="p">(</span><span class="n">RegisterVectorTest</span><span class="p">);</span>
+
+<span class="c1">// macros</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1a6792a4c346e43393d7099a6cc50d6914"><span></span><span class="n">ADD_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">Class</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1a8ef53cd3980765678a3a3dbce4ba7ac4"><span></span><span class="n">ADD_CORE_CLASSINFO</span></span><span></span><span class="p">(</span><span class="n">VarName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1aeedf834b6985a6620f716c3650d95c42"><span></span><span class="n">ADD_CORE_CLASS_</span></span><span></span><span class="p">(</span><span class="n">Class</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a1f9d082d1ea749a1ef3b359ac8280377"><span></span><span class="n">ALIGNED_MALLOC</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreobserver-8h-1a1946aaa86f8da18114c9d18415203780"><span></span><span class="n">ARGUMENT_TYPE</span></span><span></span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1a80c1356125cafbdc91ea2b938644bb9e"><span class="std std-ref">ARRAY_COUNT</span></a><span></span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1a7c904192da295f2e58b4448939aa558f"><span></span><span class="n">ASSERT_COMPATIBLE_RGB565</span></span><span></span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1a9d2d522fd4bf9187acf855542f20887f"><span></span><span class="n">ASSERT_COMPATIBLE_RGBA</span></span><span></span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1a979a06de957c0a8ee52e308fd20f345e"><span></span><span class="n">ASSERT_COMPATIBLE_SIZE</span></span><span></span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreattributes-8cpp-1a97412c63bc273e272febe27669329146"><span></span><span class="n">ATTRIBUTE_POOL_ENABLED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1adfc0e7281b08ae52ee560172dcb1b509"><span></span><span class="n">BEGIN_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">Class</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1a38aabba3d8743a842bb1b5f17a1e80c3"><span></span><span class="n">BEGIN_CORE_CLASSINFO_BUNDLE</span></span><span></span><span class="p">(</span><span class="n">versionInfo</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1ad5c828bd7ae1eb9cc143cc483e7deaed"><span></span><span class="n">BEGIN_CORE_CLASSINFO_BUNDLE_</span></span><span></span><span class="p">(</span><span class="n">bundleName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1aa0e885445f0058725e1bdffcc9c4eaed"><span></span><span class="n">BEGIN_CORE_CLASS_</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreenumdef-8h-1a71f6ef01ebfff6db754d17af5da73a6a"><span class="std std-ref">BEGIN_ENUMINFO</span></a><span></span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a897a9dcf5347ec1025f7468dd3e46b64"><span></span><span class="n">BEGIN_PARAMINFO</span></span><span></span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coredevelopment-8h-1a7ce71a8eee46d28938613dba3f57f247"><span></span><span class="n">BUILD_FOLDER_NAME</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coregameinterface-8h-1a68fa898fa54048d84eeb9ea2290aff25"><span></span><span class="n">CLASS_TYPE_GAMECORE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8zephyr-8cpp-1a1c420bd9182fe120c88417c4daf48007"><span></span><span class="n">CONFIG_TOP_PRIORITY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8h-1a025e9b19b778931e5a21b5c3d334e752"><span></span><span class="n">CONTENT_FLAG_NONE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8h-1a8e92219fabb1a38bcec0019216b81c9b"><span></span><span class="n">CONTENT_FLAG_SSI</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8h-1a57efecc16f05bde45d0a5fc139bbf2fc"><span></span><span class="n">CONTENT_TYPE_BINARY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8h-1a08502d116d0775116fba0c99977b647f"><span></span><span class="n">CONTENT_TYPE_HTML</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8h-1a6b9fe57820b62f6b24dc172f70f816f8"><span></span><span class="n">CONTENT_TYPE_PNG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a49059d2267ce4695777764159f9ab1d0"><span></span><span class="n">CORE_AUTHOR_COPYRIGHT</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a9096ef0d704f500091e1d81f5be77177"><span></span><span class="n">CORE_AUTHOR_NAME</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreplatform-8h-1a5383cb3d55cb48d3ac978340d9df99c4"><span class="std std-ref">CORE_BIG_ENDIAN</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapdata-8h-1af16ed3db3febaff617e041eb9db1b13f"><span></span><span class="n">CORE_BITMAP_FORMAT_BGRA</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapdata-8h-1a5fbbb5fc931ba5f53d93f72e81444130"><span></span><span class="n">CORE_BITMAP_FORMAT_RGBA</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapdata-8h-1af561286025d141f30f409c47e258ee3b"><span></span><span class="n">CORE_BITMAP_PLATFORM_FORMAT</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a6e3aeeaa365b9af283b182c9f82b84b5"><span></span><span class="n">CORE_BUILD_TIMESTAMP</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a9480615fb19f6fd08c2e13ada03591e4"><span></span><span class="n">CORE_CLASS_PREFIX</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a6c76b0500cffc1294e1082cb762aeee9"><span></span><span class="n">CORE_COPYRIGHT_YEAR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejsonhandler-8cpp-1ad60dc6ea1f6044e32004fa5a7fa2f0ed"><span></span><span class="n">CORE_DOUBLE_AS_FLOAT</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplatform-8h-1aa2b861ab439e8c1f5286d8c6e8542cb5"><span></span><span class="n">CORE_EXTERNAL_PLATFORM_HEADER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1ae66f8a33ff17af0f9a7db701c0eb2459"><span></span><span class="n">CORE_EXTERNAL_PLATFORM_IMPLEMENTATION</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corefeatures-8h-1a3a8fc1e290061a0a358854ab34a5d62b"><span class="std std-ref">CORE_EXTERNAL_PLATFORM_IMPLEMENTATION_HEADER</span></a><span></span><span class="p">(</span><span class="n">FILEPREFIX</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1a2a6996c3940969cf685d9a72a6defd50"><span></span><span class="n">CORE_FEATURE_IMPLEMENTATION_CMSIS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1a89d9ed71a085a2c8675d1a97ef7a865a"><span></span><span class="n">CORE_FEATURE_IMPLEMENTATION_LWIP</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1a726fa7a282fd9f23462efba142813e06"><span></span><span class="n">CORE_FEATURE_IMPLEMENTATION_OPENSSL</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1ae479856a52715a4ec7c6c01bfc89f79c"><span></span><span class="n">CORE_FEATURE_IMPLEMENTATION_POSIX</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1ab724428d9d980bf04d20a639a18e789c"><span></span><span class="n">CORE_FEATURE_UNIMPLEMENTED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreatomic-8h-1a58db46b8851ac6274f0dfd97ab6c668d"><span></span><span class="n">CORE_HAS_ATOMICS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreatomicstack-8h-1ac2850fb40610b7258a6ca9c874b01664"><span></span><span class="n">CORE_HAS_ATOMIC_STACK</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprimitives-8h-1a86374cb1bc2cba2156ef784e24e2f43d"><span></span><span class="n">CORE_HAVE_GCC_BSWAP16</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprimitives-8h-1a6006fae767e02c2ab5eae42a3553e976"><span></span><span class="n">CORE_HAVE_GCC_BSWAP32</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprimitives-8h-1ae90897152c259e0e9f5c09c2bdbf3fa5"><span></span><span class="n">CORE_HAVE_GCC_BSWAP64</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8cocoa-8h-1af2bb5cc6e8a5c625a282c510c73c8e81"><span></span><span class="n">CORE_IFADDRS_HAVE_DATA_MEMBER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1af2bb5cc6e8a5c625a282c510c73c8e81"><span></span><span class="n">CORE_IFADDRS_HAVE_DATA_MEMBER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8cocoa-8h-1a52e7e79c7b845428e7adafab18b693b9"><span></span><span class="n">CORE_IFADDRS_HAVE_NETMASK_MEMBER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a52e7e79c7b845428e7adafab18b693b9"><span></span><span class="n">CORE_IFADDRS_HAVE_NETMASK_MEMBER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coredebug-8h-1a1c4bdfbb5cd0f490ec3da519bae7bacb"><span></span><span class="n">CORE_INDENT</span></span><span></span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreinterpolator-8cpp-1ae9239d323471874f645cad73b0aca149"><span></span><span class="n">CORE_INTERPOLATOR_REGISTRY_ENABLED</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreplatform-8h-1a5c53072291d53d2ecfeed4b61bcc480f"><span class="std std-ref">CORE_LITTLE_ENDIAN</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1ab6e1782a33f5418227bf784c770a274f"><span></span><span class="n">CORE_MALLOC_AVAILABLE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a8b4ab22f8a98a54c11bbaf28fc3ed177"><span></span><span class="n">CORE_MALLOC_ENABLED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremempool-8h-1a41cf1bcad9a4547eb4ec7ca1e47f9e1a"><span></span><span class="n">CORE_MEMORYPOOL_DEADLAND_FILL</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corememstream-8cpp-1aa8517a964898c7fc1c24b32c1ea8f7c2"><span></span><span class="n">CORE_MEMSTREAM_EXPONENTIAL_GROWTH</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreplatform-8h-1a65d266fbb22650d96911a038782b84cc"><span class="std std-ref">CORE_NATIVE_BYTEORDER</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1a462e9caa563ff3bc2746ab65f7530391"><span></span><span class="n">CORE_PLATFORM_IMPLEMENTATION</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corefeatures-8h-1a04c22f444e3e4b5fe7f328fb097572b4"><span class="std std-ref">CORE_PLATFORM_IMPLEMENTATION_HEADER</span></a><span></span><span class="p">(</span><span class="n">FILEPREFIX</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefeatures-8h-1a03161e52b0e01cddae5688b332ef270a"><span></span><span class="n">CORE_PLATFORM_INCLUDE_EVALUATOR_</span></span><span></span><span class="p">(</span><span class="n">FILEPREFIX</span><span class="p">,</span> <span class="n">PLATFORMDIR</span><span class="p">,</span> <span class="n">FILESUFFIX</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corepoolallocator-8h-1a19721b88f31714b5301c32c4989f5a4f"><span></span><span class="n">CORE_POOLALLOCATOR_USE_BITFIELD</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coredebug-8h-1ae8813c390d49bd03d239237236aaf93a"><span></span><span class="n">CORE_PRINT</span></span><span></span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coredebug-8h-1ae605e20404497d85d6b91c8197505b2d"><span></span><span class="n">CORE_PRINTF</span></span><span></span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="p">...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreviewbuilder-8cpp-1af080f0796dabb9ef8fc23b60ba1cc54d"><span></span><span class="n">CORE_PROFILE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corepersistence-8cpp-1af080f0796dabb9ef8fc23b60ba1cc54d"><span></span><span class="n">CORE_PROFILE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprofiling-8h-1af080f0796dabb9ef8fc23b60ba1cc54d"><span></span><span class="n">CORE_PROFILE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretestbase-8h-1a06d1d7049affcbaaaa0dbe705bef2541"><span></span><span class="n">CORE_REGISTER_TEST</span></span><span></span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplatform-8h-1ac993f7be38b97523647092580a5db0b5"><span></span><span class="n">CORE_STATIC_TEMPLATE_MEMBER</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretestbase-8h-1ab36e21124c0a8077ed4cd2ccf068e08a"><span></span><span class="n">CORE_TEST_FAILED</span></span><span></span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretestbase-8h-1ac802389d0a43234fe577283a94fe72a6"><span></span><span class="n">CORE_TEST_MESSAGE</span></span><span></span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretestbase-8h-1ad9b66b2b9bb3c887bde01afbbdbdc274"><span></span><span class="n">CORE_TEST_REGISTRY_ENABLED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corevector-8h-1ab16c014256e5f0524e7b833f350a4036"><span></span><span class="n">CORE_VECTOR_EXPONENTIAL_GROWTH</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1ab576b3fede6d2a856c9538e3f241bdc9"><span></span><span class="n">CORE_VERSION_BUILD</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a3a294e72941460520d6995b6d1a8dbc1"><span></span><span class="n">CORE_VERSION_MAJOR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a9d4c5b70f0339777eabdf92a328b8637"><span></span><span class="n">CORE_VERSION_MINOR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1a476bc12fc07f5463327d35013e47caac"><span></span><span class="n">CORE_VERSION_REVISION</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreversion-8h-1ad30ff46cb67d570921f2cb1b231b2eef"><span></span><span class="n">CORE_VERSION_STRING</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8cpp-1a6cb23a858b0a21bdaa644b9181dc415f"><span></span><span class="n">CRLF</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1ad8f36dbf2077fde75f5617b57816d2d7"><span></span><span class="n">CTL_DEFAULT_PRIORITY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1a2deeac074fbda13188e4df3859767a77"><span></span><span class="n">CTL_DEFAULT_STACK</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1a03ad3d1ab3bbe7bdc1d117509e5c2e13"><span></span><span class="n">CTL_THREAD_STATE_FINISHED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1a16bcaa4c2d70046766530dbbfd4681d9"><span></span><span class="n">CTL_THREAD_STATE_INIT</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8ctlrtos-8cpp-1ab70ae97b30636e7ecfb8b80489d9d3cc"><span></span><span class="n">CTL_THREAD_STATE_RUNNING</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplatform-8h-1ad72dbcf6d0153db1b8d8a58001feed83"><span></span><span class="n">DEBUG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreview-8cpp-1a3f6268b448164a94b38168baafb08ca4"><span></span><span class="n">DEBUG_FOCUS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coredebug-8h-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmap-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefont-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresimplereader-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretouchinput-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreviewbuilder-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreextensions-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresslcontext-8openssl-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresslcontext-8android-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corethread-8linux-8cpp-1a571d51360926bac393fcf9c972a5ffa8"><span></span><span class="n">DEBUG_LOG</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreviewshared-8cpp-1ae88be0951eaccbd885b395ab2c9395fd"><span></span><span class="n">DEBUG_REDRAW</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresslcontext-8cocoa-8cpp-1a21ded5ca7e2b71b5911b0d6a1d5be5b2"><span></span><span class="n">DEBUG_SSL</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1a2713853a698e6f6a7ef56b58dfa0fe69"><span></span><span class="n">DECLARE_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">Class</span><span class="p">,</span> <span class="n">Base</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1a3914990ce4a449ff74c5eae6f08b6fcc"><span></span><span class="n">DECLARE_CORE_CLASS_</span></span><span></span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">Class</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreview-8h-1a740fecd09ac6f5de3e7337f21d68cd05"><span></span><span class="n">DECLARE_CORE_VIEWCLASS</span></span><span></span><span class="p">(</span><span class="n">className</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreenumdef-8h-1a9839a7bfa352c05d4afaee020f51efe7"><span class="std std-ref">DECLARE_ENUMINFO</span></a><span></span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a4545177e00a5e2c1adab845817e3ee5c"><span></span><span class="n">DECLARE_JNI_CLASS</span></span><span></span><span class="p">(</span><span class="n">ClassName</span><span class="p">,</span> <span class="n">classPath</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a3e12bbc855b388bbbd826230ff0d7d5f"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD</span></span><span></span><span class="p">(</span> \
+    <span class="n">package</span><span class="p">,</span> \
+    <span class="n">ReturnType</span><span class="p">,</span> \
+    <span class="n">ClassName</span><span class="p">,</span> \
+    <span class="n">MethodName</span><span class="p">,</span> \
+    <span class="p">...</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a40305fb53f50ccb1525f017323b0f1b8"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE</span></span><span></span><span class="p">(</span><span class="n">ReturnType</span><span class="p">,</span> <span class="n">ClassName</span><span class="p">,</span> <span class="n">MethodName</span><span class="p">,</span> <span class="p">...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a7b4c54f229f7cb6d3d63b6d5ca86e739"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_CORE_NO_ARGS</span></span><span></span><span class="p">(</span><span class="n">ReturnType</span><span class="p">,</span> <span class="n">ClassName</span><span class="p">,</span> <span class="n">MethodName</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a17584908d985c99082f94b12d4786787"><span></span><span class="n">DECLARE_JNI_CLASS_METHOD_NO_ARGS</span></span><span></span><span class="p">(</span> \
+    <span class="n">package</span><span class="p">,</span> \
+    <span class="n">ReturnType</span><span class="p">,</span> \
+    <span class="n">ClassName</span><span class="p">,</span> \
+    <span class="n">MethodName</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a5dcabfe567b85b0ce798c889a81db241"><span></span><span class="n">DECLARE_JNI_CONSTRUCTOR</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="p">...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1aedbe427ead449dc89a23d974bb61aeba"><span></span><span class="n">DECLARE_JNI_FIELD</span></span><span></span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a19d6910979fec6a2e265831629bd22bf"><span></span><span class="n">DECLARE_JNI_METHOD</span></span><span></span><span class="p">(</span><span class="n">returnType</span><span class="p">,</span> <span class="n">methodName</span><span class="p">,</span> <span class="p">...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a23c345289c0d4136a821e563f9059bb8"><span></span><span class="n">DECLARE_JNI_STATIC_METHOD</span></span><span></span><span class="p">(</span><span class="n">returnType</span><span class="p">,</span> <span class="n">methodName</span><span class="p">,</span> <span class="p">...)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corestaticthread-8zephyr-8h-1a96f68c64d95407cc5820c850f05ea384"><span class="std std-ref">DECLARE_STATIC_THREAD</span></a><span></span><span class="p">(</span> \
+    <span class="n">partition</span><span class="p">,</span> \
+    <span class="n">owner</span><span class="p">,</span> \
+    <span class="n">classname</span><span class="p">,</span> \
+    <span class="n">name</span><span class="p">,</span> \
+    <span class="n">stackSize</span><span class="p">,</span> \
+    <span class="n">options</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1ab192a77632ae944c5f27b3b081ea25e5"><span></span><span class="n">DECLARE_STATIC_THREAD_</span></span><span></span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">stackSize</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corewebserver-8cpp-1a13dae059206df8d2d9b9b42e694b3f9c"><span></span><span class="n">DEFAULT_VERSION</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corecontainer-8h-1adb24770de1082e72ce87a5f0302d6e75"><span class="std std-ref">DEFINE_CONTAINER_PREDICATE</span></a><span></span><span class="p">(</span><span class="n">FunctionName</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corecontainer-8h-1a4b0bdc6ea90c13aeea634b5bfedcb840"><span class="std std-ref">DEFINE_CONTAINER_PREDICATE_OBJECT</span></a><span></span><span class="p">(</span><span class="n">FunctionName</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1ac45690b37b572fd53c9cd3ef9e9aa431"><span></span><span class="n">DEFINE_CORE_CLASSINFO</span></span><span></span><span class="p">(</span> \
+    <span class="n">VarName</span><span class="p">,</span> \
+    <span class="n">flags</span><span class="p">,</span> \
+    <span class="n">classType</span><span class="p">,</span> \
+    <span class="n">displayName</span><span class="p">,</span> \
+    <span class="n">classID</span><span class="p">,</span> \
+    <span class="n">classAttributes</span><span class="p">,</span> \
+    <span class="n">createFunction</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1a40fea6bf57f022b654d5a4bfb68efc7a"><span></span><span class="n">DEFINE_CORE_VERSIONINFO</span></span><span></span><span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="n">Vendor</span><span class="p">,</span> <span class="n">Version</span><span class="p">,</span> <span class="n">Copyright</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coretypes-8h-1a82fd92aa50fd5264379e23472b3c05c2"><span class="std std-ref">DEFINE_ENUM</span></a><span></span><span class="p">(</span><span class="n">Name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coregameinterface-8h-1a52c977c42a820a6a3d76dc2ab022cf7b"><span></span><span class="n">DEFINE_GAMECORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">VarName</span><span class="p">,</span> <span class="n">displayName</span><span class="p">,</span> <span class="n">classID</span><span class="p">,</span> <span class="n">createInstance</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1a0414d85a491573c0abc1d7817a29b2ec"><span class="std std-ref">DEFINE_INITIALIZER</span></a><span></span><span class="p">(</span><span class="n">Name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a6f725cab8387b7324d4bbafb3525b84e"><span></span><span class="n">DEFINE_JNI_CLASS</span></span><span></span><span class="p">(</span><span class="n">ClassName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a80a8a0d63ec1ad76478b56f86696140a"><span></span><span class="n">DEFINE_JNI_CONSTRUCTOR</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1aea9a6baaca4d34bbce13c625fcb95931"><span></span><span class="n">DEFINE_JNI_DEFAULT_CONSTRUCTOR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a51edd4c32d0afa087cff520810625c46"><span></span><span class="n">DEFINE_JNI_FIELD</span></span><span></span><span class="p">(</span><span class="n">fieldName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a10295ab32cc5f6f0548c2c122f086b9f"><span></span><span class="n">DEFINE_JNI_METHOD</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a7ff0fa2d49aadf0bd3398131df653caf"><span></span><span class="n">DEFINE_JNI_METHOD_NAME</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="n">javaName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a599f1d73a63e88175e375399ad7d2cb2"><span></span><span class="n">DEFINE_JNI_STATIC_METHOD</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1a14af9f3f6bdad8fa174c9e492449691c"><span></span><span class="n">DEFINE_JNI_STATIC_METHOD_NAME</span></span><span></span><span class="p">(</span><span class="n">methodName</span><span class="p">,</span> <span class="n">javaName</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremempool-8h-1aea968761dfec80a09eec428feeb304cb"><span></span><span class="n">DEFINE_OBJECTPOOL</span></span><span></span><span class="p">(</span><span class="n">Class</span><span class="p">,</span> <span class="n">Pool</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremempool-8h-1ac4229b59217a9a8df64202972a091fdb"><span></span><span class="n">DEFINE_OBJECTPOOL_SIZE</span></span><span></span><span class="p">(</span><span class="n">Class</span><span class="p">,</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreobserver-8h-1ac639790934997928962f329c819bcfd7"><span></span><span class="n">DEFINE_OBSERVER</span></span><span></span><span class="p">(</span><span class="n">type</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreobserver-8h-1ae3ce1e05b7b7baad2d1b64cb92f5d15b"><span></span><span class="n">DEFINE_OBSERVER_OVERRIDE</span></span><span></span><span class="p">(</span><span class="n">type</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coregesturerecognition-8impl-8h-1a3b05f614436e333fbe1d7e44bb198a5a"><span></span><span class="n">DEFINE_RECOGNIZERPOOL</span></span><span></span><span class="p">(</span><span class="n">Class</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corerecursivereadwritelock-8h-1aaac37df336bf7b3cba5b7df324e69297"><span class="std std-ref">DEFINE_RECURSIVE_READ_WRITE_LOCK</span></a><span></span><span class="p">(</span><span class="n">ImplementationClass</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresingleton-8h-1a24eaedd561dfee61ec499dee60832e90"><span></span><span class="n">DEFINE_SINGLETON</span></span><span></span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresingleton-8h-1a3f7e3630ce7a3a31001d768a8206d132"><span></span><span class="n">DEFINE_STATIC_SINGLETON</span></span><span></span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1ae31771e10e10f2da957d518514a65ec2"><span class="std std-ref">DEFINE_TERMINATOR</span></a><span></span><span class="p">(</span><span class="n">Name</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corevector-8h-1a9845742233851e05a484d56e2fdce583"><span class="std std-ref">DEFINE_VECTOR_COMPARE</span></a><span></span><span class="p">(</span><span class="n">FunctionName</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corevector-8h-1addfe23ef91ef925b0434e9c74e203796"><span class="std std-ref">DEFINE_VECTOR_COMPARE_OBJECT</span></a><span></span><span class="p">(</span><span class="n">FunctionName</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1a2845e4ea0f805d4748c4cc79e437120f"><span></span><span class="n">DELEGATE_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">Base</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coretypes-8h-1a1f1b098f673669db04b6f4aa6a8fdc8e"><span class="std std-ref">ENDLINE</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretypeinfo-8h-1ae657c4783e8532a3a0c97e6ea9b01909"><span></span><span class="n">END_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="n">Base</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1ab98a894d0f7ef7de1d9b83a52965f570"><span></span><span class="n">END_CORE_CLASSINFO_BUNDLE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplugin-8h-1a6096613da2ca09aa3d9bf2f0ed222285"><span></span><span class="n">END_CORE_CLASSINFO_BUNDLE_</span></span><span></span><span class="p">(</span><span class="n">bundleName</span><span class="p">,</span> <span class="n">versionInfo</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1ae580d64cfe57992aa4b193a0844ec422"><span></span><span class="n">END_DECLARE_JNI_CLASS</span></span><span></span><span class="p">(</span><span class="n">ClassName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejniclass-8h-1ace6ce95a2e3c9f6255d2a4f6ac53853a"><span></span><span class="n">END_DEFINE_JNI_CLASS</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreenumdef-8h-1acf30cb4e2b75ca6f842edfd0defdfeff"><span class="std std-ref">END_ENUMINFO</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1ab2dd0fb00ad998d38c10dac0d971f165"><span></span><span class="n">END_PARAMINFO</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreplatform-8h-1abccec18106e642e19bb0250853a23db6"><span class="std std-ref">EndFor</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coretypes-8h-1a6fc06c408b7c51eb867462d2733051a6"><span class="std std-ref">FORMAT_INT64</span></a><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreproperty-8h-1aaa19098360564e23bdcd88686d724e1e"><span class="std std-ref">FOUR_CHAR_ID</span></a><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corestringtraits-8h-1a049052fd02f170d95b576e3248766144"><span class="std std-ref">ForEachCStringToken</span></a><span></span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">delimiters</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corestringtraits-8h-1aff28228ac4c5478f73ba54abb2179a8f"><span class="std std-ref">ForEachCStringTokenInplace</span></a><span></span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">delimiters</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corevalues-8cpp-1a88c81ffbe6512be27421a3fe038b07db"><span></span><span class="n">ForEachParamInfo</span></span><span></span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corepluginmanager-8cpp-1aa57eeab6c115a605db447289538c0792"><span></span><span class="n">ForEachPlugInClass</span></span><span></span><span class="p">(</span><span class="n">codeResources</span><span class="p">,</span> <span class="n">classInfo</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1ab9327b1efc9b0366d233e93cd26737a0"><span></span><span class="n">ForEachRGBA</span></span><span></span><span class="p">(</span><span class="n">dstData</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">srcData</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corerectlist-8h-1a1f7301b97cd5c6da7fa8e1e4016b98a8"><span></span><span class="n">ForEachRectFast</span></span><span></span><span class="p">(</span><span class="n">rectList</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a792fa1589a4a066c62e3c3cf3e48fbc6"><span></span><span class="n">HAVE_ALIGNED_CRTDBG_H</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a53c8abb53817b35c725d7afd414d8567"><span></span><span class="n">HAVE_CRTDBG_H</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8cpp-1a97b7c5c8d793d7a7bb83f6f1ec66369c"><span></span><span class="n">HAVE_DEBUG_MALLOC_H</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a80d412cdeb960f62ace72900a6d8124d"><span></span><span class="n">IFF_RUNNING</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a80d412cdeb960f62ace72900a6d8124d"><span></span><span class="n">IFF_RUNNING</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1a94786c2ccfd95758a2fff73b04b67ec0"><span class="std std-ref">IMPORT_BINARY_RESOURCE</span></a><span></span><span class="p">(</span><span class="n">SymbolName</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a3d2472d6cf31b73eeb829110dd0fffea"><span></span><span class="n">INADDR_NONE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a3d2472d6cf31b73eeb829110dd0fffea"><span></span><span class="n">INADDR_NONE</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreuid-8h-1a696ee086dd04423f4d062a0e8e92f322"><span class="std std-ref">INLINE_UID</span></a><span></span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">data3</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corediscovery-8posix-8h-1a26769957ec1a2beaf223f33b66ee64ab"><span></span><span class="n">INVALID_SOCKET</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a26769957ec1a2beaf223f33b66ee64ab"><span></span><span class="n">INVALID_SOCKET</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a26769957ec1a2beaf223f33b66ee64ab"><span></span><span class="n">INVALID_SOCKET</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreintrusivelist-8h-1a7d9cf39851f872830a24aa41d6747d8a"><span></span><span class="n">IntrusiveListForEach</span></span><span></span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreintrusivelist-8h-1a54fe40bb58733ff8a7a63217fb288108"><span></span><span class="n">IntrusiveListForEachReverse</span></span><span></span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1ac5382a75039a4fcb43dae702433561b2"><span class="std std-ref">LAZYCAT</span></a><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebasicmacros-8h-1a26c3b69a818e7978431aa41477a5626c"><span></span><span class="n">LAZYCAT_HELP</span></span><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresslcontext-8win-8cpp-1af8d84187f60e9aeaed22bd7bc64dc68b"><span></span><span class="n">LOG_SECURITY_BUFFERS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmap-8cpp-1a457a9465abe1d2fea1429d403107409c"><span></span><span class="n">LOG_TOTAL_BITMAP_MEMORY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corecomponent-8cpp-1a4028a3c8dcd43e12f4612f7291855d51"><span></span><span class="n">LONG_STORAGE_DELAY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1afed2811f031822ec5afa1ee211fb7447"><span></span><span class="n">LWIP_COMPAT_SOCKETS</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corelinkedlist-8h-1ae3fea5744f1ea4df21ed9cfec87708c8"><span class="std std-ref">ListForEach</span></a><span></span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corelinkedlist-8h-1a46e591ee751e875831ab9545a2ea8499"><span class="std std-ref">ListForEachReverse</span></a><span></span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprimitives-8h-1ae6aca3e526ddd3d73a456659a5a12901"><span></span><span class="n">MAKE_BIG_ENDIAN</span></span><span></span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreprimitives-8h-1a08ff420c5e9d29a29cf94a1f26d17b77"><span></span><span class="n">MAKE_LITTLE_ENDIAN</span></span><span></span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corezipstream-8h-1abd2f406ac1f9c49236376115d78ccb5b"><span></span><span class="n">MAX_WBITS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreviewbuilder-8cpp-1ae928e4652639244b9ccdbb6d691325d0"><span></span><span class="n">MODIFY_INPLACE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1a4851103867455f0d26e167bbbc0c780f"><span></span><span class="n">MULTIPLY</span></span><span></span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplatform-8h-1ab6bca16ed021b1e211fde8669758f199"><span></span><span class="n">NEW</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coremalloc-8h-1ab6bca16ed021b1e211fde8669758f199"><span></span><span class="n">NEW</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreobserver-8h-1a95cbc47970f2ea43251eec851c59164d"><span></span><span class="n">OL_ARG</span></span><span></span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreobserver-8h-1a19865f428201ce805b4c09304f387996"><span></span><span class="n">OL_TEMPLATE</span></span><span></span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreatomic-8cocoa-8h-1a4797afcc52ccfeb76a90628f371c2398"><span></span><span class="n">OSATOMIC_USE_INLINED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1ae2f40b455c9c1cc7d72d0036863cd5c6"><span></span><span class="n">PARAM_ALIAS</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1af42301433ef5b47af81554b3db39802e"><span></span><span class="n">PARAM_ALIAS_</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">shortTitle</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a5c27f6e74f28b8a4a208b63854c2f6be"><span></span><span class="n">PARAM_BIPOLAR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a90ffc00fb1718c9186b2ecd280005112"><span></span><span class="n">PARAM_COLOR</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a3324594d9d3552f5ab28a7c59b45e703"><span></span><span class="n">PARAM_COLOR_</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">shortTitle</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1afb4ec7d69c1698bcd322c915cec30bbb"><span></span><span class="n">PARAM_DELTA</span></span><span></span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1aa3fb4ea5ffce42cea1730f573c2e7408"><span></span><span class="n">PARAM_FLOAT</span></span><span></span><span class="p">(</span> \
+    <span class="n">tag</span><span class="p">,</span> \
+    <span class="n">name</span><span class="p">,</span> \
+    <span class="n">min</span><span class="p">,</span> \
+    <span class="n">max</span><span class="p">,</span> \
+    <span class="k">default</span><span class="p">,</span> \
+    <span class="n">delta</span><span class="p">,</span> \
+    <span class="n">units</span><span class="p">,</span> \
+    <span class="n">curve</span><span class="p">,</span> \
+    <span class="n">mid</span><span class="p">,</span> \
+    <span class="n">flags</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a6f8a87d13a4ac5c6b4594a80282b6b3d"><span></span><span class="n">PARAM_FLOAT_</span></span><span></span><span class="p">(</span> \
+    <span class="n">tag</span><span class="p">,</span> \
+    <span class="n">name</span><span class="p">,</span> \
+    <span class="n">min</span><span class="p">,</span> \
+    <span class="n">max</span><span class="p">,</span> \
+    <span class="k">default</span><span class="p">,</span> \
+    <span class="n">delta</span><span class="p">,</span> \
+    <span class="n">units</span><span class="p">,</span> \
+    <span class="n">curve</span><span class="p">,</span> \
+    <span class="n">mid</span><span class="p">,</span> \
+    <span class="n">flags</span><span class="p">,</span> \
+    <span class="n">title</span><span class="p">,</span> \
+    <span class="n">shortTitle</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a491b95a32fbdd1e4efd2868f5ede927e"><span></span><span class="n">PARAM_INT</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">min</span><span class="p">,</span> <span class="n">max</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">curve</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a936fb23a643753416718ed6b7aec467c"><span></span><span class="n">PARAM_INT_</span></span><span></span><span class="p">(</span> \
+    <span class="n">tag</span><span class="p">,</span> \
+    <span class="n">name</span><span class="p">,</span> \
+    <span class="n">min</span><span class="p">,</span> \
+    <span class="n">max</span><span class="p">,</span> \
+    <span class="k">default</span><span class="p">,</span> \
+    <span class="n">units</span><span class="p">,</span> \
+    <span class="n">curve</span><span class="p">,</span> \
+    <span class="n">mid</span><span class="p">,</span> \
+    <span class="n">flags</span><span class="p">,</span> \
+    <span class="n">title</span><span class="p">,</span> \
+    <span class="n">shortTitle</span> \
+<span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a6e1c99bb5771c54144d202da9aa3130f"><span></span><span class="n">PARAM_LINKABLE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1ac2393f16e0085c6fa25a2be23779cfb0"><span></span><span class="n">PARAM_LIST</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">stringList</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a128326795c373321653d84afccbe9499"><span></span><span class="n">PARAM_LIST_</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">stringList</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">shortTitle</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a6d4ad8f2c5e144be01bb03382e39a39a"><span></span><span class="n">PARAM_MUTABLE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a0ffc3119b48ffbb2af4c681d1fe46869"><span></span><span class="n">PARAM_PRIVATE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a15ad0f71a72095994a5e4ad05e295ef5"><span></span><span class="n">PARAM_READONLY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1ab26b87c6ffaf94174dd5daf76964ea3a"><span></span><span class="n">PARAM_STORABLE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a411751580adf08e2d283bd75b14431bc"><span></span><span class="n">PARAM_STRING</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1aa3196749447a746c8dabac959914be8f"><span></span><span class="n">PARAM_STRING_</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">shortTitle</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1af3914d6177bdb8882348e3e00ca72c13"><span></span><span class="n">PARAM_TOGGLE</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1a4eeb469ffa5c82da4f383d2d0ab564ca"><span></span><span class="n">PARAM_TOGGLE_</span></span><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">shortTitle</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1ace3ab224ec814634024d7df623b099e8"><span></span><span class="n">PARAM_USERFLAG1</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreparaminfo-8h-1aa7dfd04a98731ed228e8f98de38d2c8c"><span></span><span class="n">PARAM_USERFLAG2</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corefilename-8cpp-1a83cebbffc784c0755f531e4c19abf8d0"><span></span><span class="n">PATH_CHAR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1af5cd7b10107c58146dac90cf9e234bc5"><span></span><span class="n">PLATFORM_THREAD</span></span><span></span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1a0c2d88fc79d0c942617ebac3fc734c5d"><span></span><span class="n">PLATFORM_THREAD_STACK</span></span><span></span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejsonhandler-8cpp-1a6ba876ffdb70353ce8ce0454aa65233c"><span></span><span class="n">PRESERVE_FLOATS</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a1fd7e9e8910963dbf1178162aa01346b"><span class="std std-ref">PROPERTY_BOOL</span></a><span></span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1abce43c37780eeaf69e33e74aa9e39bcb"><span class="std std-ref">PROPERTY_BY_REFERENCE</span></a><span></span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a85b0f8b71c42a9c0a85878414f619d44"><span class="std std-ref">PROPERTY_BY_VALUE</span></a><span></span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1aea85a73ba8a215fca98938360e07eb6c"><span class="std std-ref">PROPERTY_CSTRING_BUFFER</span></a><span></span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1ac3decb86d267491780628c53ac7c3bd3"><span class="std std-ref">PROPERTY_FLAG</span></a><span></span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1aca4060ff6c5ca54c8432ec788fa42982"><span class="std std-ref">PROPERTY_INDEX_FLAG32</span></a><span></span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1abc18a4afe5b89aae9f81743dec51d226"><span class="std std-ref">PROPERTY_INDEX_FLAG64</span></a><span></span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a62179b1dc6d7552160aff1785d25d8c2"><span class="std std-ref">PROPERTY_OBJECT</span></a><span></span><span class="p">(</span><span class="n">Class</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a47b6d8896d3d1ca2172f6fba6e39eba7"><span class="std std-ref">PROPERTY_POINTER</span></a><span></span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a7d93e512bda6a2881ffa73b94e5d9e32"><span class="std std-ref">PROPERTY_READONLY_FLAG</span></a><span></span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coreclassmacros-8h-1a72c04982008558737083bbf1c1cda3ee"><span class="std std-ref">PROPERTY_VARIABLE</span></a><span></span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">Method</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coregesturerecognition-8impl-8h-1ae0370a2a747e894e3746cac2718f1756"><span></span><span class="n">RECOGNIZER_POOL_SIZE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coreplatform-8h-1a5bd9a30fc22d9a737ee060d41a4ec479"><span></span><span class="n">RELEASE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebitmapprimitives-8impl-8h-1a458aa38ac2e97f9b0d01c8880be5c042"><span></span><span class="n">REVERT</span></span><span></span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a06a11612afb43fedd0194d8b59cb02ed"><span></span><span class="n">SD_BOTH</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a06a11612afb43fedd0194d8b59cb02ed"><span></span><span class="n">SD_BOTH</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corecomponent-8cpp-1a583546d57b0b2205d64ea7ac045ebf99"><span></span><span class="n">SIMULATE_LONG_STORAGE</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corejsonhandler-8cpp-1aaa5ed7fb4e082fbee4930cf49cafec4a"><span></span><span class="n">SKIP_COMMENTS</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresocket-8posix-8cpp-1aff55fe551a9992a54ec54621c524d0a4"><span></span><span class="n">SOCKET</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresocket-8posix-8cpp-1a96b16710896e204deb96b8db7eb107cb"><span></span><span class="n">SOCKET_DEFINED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresocket-8win-8h-1a96b16710896e204deb96b8db7eb107cb"><span></span><span class="n">SOCKET_DEFINED</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8lwip-8h-1a633b0396ff93d336a088412a190a5072"><span></span><span class="n">SOCKET_ERROR</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corenetwork-8posix-8h-1a633b0396ff93d336a088412a190a5072"><span></span><span class="n">SOCKET_ERROR</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1a4689212d5a549893cabb9d7782eecfb6"><span class="std std-ref">STRINGIFY</span></a><span></span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-corebasicmacros-8h-1ab2108b11d741d2478ad098e15323850b"><span></span><span class="n">STRINGIFY_HELPER</span></span><span></span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-coretypes-8h-1ad20f0453f0015b22116cdc32921236b1"><span class="std std-ref">STRING_STACK_SPACE_MAX</span></a><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresocket-8posix-8cpp-1a8f02455d581f55196a37a12377ecfc0e"><span></span><span class="n">TCP_NODELAY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coresocket-8armti32-8h-1a8f02455d581f55196a37a12377ecfc0e"><span></span><span class="n">TCP_NODELAY</span></span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coretestrunner-8cpp-1ac73ae18fb2a4a19f7a8ad02109ac9f3b"><span></span><span class="n">TestPrintf</span></span><span></span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corebasicmacros-8h-1adda72679f5a9cff59c5e5b6810f52286"><span class="std std-ref">UNIQUE_IDENT</span></a><span></span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corevector-8h-1a08704d61a487a515e5e4398efa872a64"><span class="std std-ref">VectorForEach</span></a><span></span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corevector-8h-1af42eae24d7d5faadcb0870b9535750b0"><span class="std std-ref">VectorForEachFast</span></a><span></span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-corevector-8h-1ad41d4108ba172605361d84840ff07f1f"><span class="std std-ref">VectorForEachReverse</span></a><span></span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-coregraphics-8cpp-1a4db79e141533be3d3727c5bf4b8dd661"><span></span><span class="n">plot</span></span><span></span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-global"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="macros">
+<h3>Macros<a class="headerlink" href="#macros" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1a80c1356125cafbdc91ea2b938644bb9e"><span id="index-1"></span><span></span><span class="cp">#define ARRAY_COUNT(a)</span></pre>
+<p>Count number of items in array.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreenumdef-8h-1a71f6ef01ebfff6db754d17af5da73a6a"><span id="index-2"></span><span></span><span class="cp">#define BEGIN_ENUMINFO(name)</span></pre>
+<p>Begin enumeration.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreplatform-8h-1a5383cb3d55cb48d3ac978340d9df99c4"><span id="index-3"></span><span></span><span class="cp">#define CORE_BIG_ENDIAN</span></pre>
+<p>big endian (Motorola)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corefeatures-8h-1a3a8fc1e290061a0a358854ab34a5d62b"><span id="index-4"></span><span></span><span class="cp">#define CORE_EXTERNAL_PLATFORM_IMPLEMENTATION_HEADER(FILEPREFIX)</span></pre>
+<p>Generate platform-specific include path for external implementation classes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreplatform-8h-1a5c53072291d53d2ecfeed4b61bcc480f"><span id="index-5"></span><span></span><span class="cp">#define CORE_LITTLE_ENDIAN</span></pre>
+<p>little endian (Intel)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreplatform-8h-1a65d266fbb22650d96911a038782b84cc"><span id="index-6"></span><span></span><span class="cp">#define CORE_NATIVE_BYTEORDER</span></pre>
+<p>Windows Intel, OMAP-L138, etc.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corefeatures-8h-1a04c22f444e3e4b5fe7f328fb097572b4"><span id="index-7"></span><span></span><span class="cp">#define CORE_PLATFORM_IMPLEMENTATION_HEADER(FILEPREFIX)</span></pre>
+<p>Generate platform-specific include path for implementation classes in external platform implementation directory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreenumdef-8h-1a9839a7bfa352c05d4afaee020f51efe7"><span id="index-8"></span><span></span><span class="cp">#define DECLARE_ENUMINFO(name)</span></pre>
+<p>Declare enumeration.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corestaticthread-8zephyr-8h-1a96f68c64d95407cc5820c850f05ea384"><span id="index-9"></span><span></span><span class="cp">#define DECLARE_STATIC_THREAD( \</span>
+<span class="cp">    partition, \</span>
+<span class="cp">    owner, \</span>
+<span class="cp">    classname, \</span>
+<span class="cp">    name, \</span>
+<span class="cp">    stackSize, \</span>
+<span class="cp">    options \</span>
+<span class="cp">)</span></pre>
+<p>Declare static core thread and stack storage.</p>
+<p>Default priority is the lowest available in the system. Note that actual stack size may vary from declaration.</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>partition</p></td>
+<td><p>memory partition the <a class="reference internal" href="class_Core_Threads_Thread.html#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref">Core::Threads::Thread</span></a> instance is allocated from</p></td>
+</tr>
+<tr class="row-even"><td><p>owner</p></td>
+<td><p>name of thread who will start() and own this thread (eg. fwapp)</p></td>
+</tr>
+<tr class="row-odd"><td><p>classname</p></td>
+<td><p>name of custom thread derived from Core::Thread</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>name of thread instance</p></td>
+</tr>
+<tr class="row-odd"><td><p>stackSize</p></td>
+<td><p>target stack size</p></td>
+</tr>
+<tr class="row-even"><td><p>options</p></td>
+<td><p>options passed to K_THREAD_DEFINE (e.g. K_USER)</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corecontainer-8h-1adb24770de1082e72ce87a5f0302d6e75"><span id="index-10"></span><span></span><span class="cp">#define DEFINE_CONTAINER_PREDICATE(FunctionName, Type, var)</span></pre>
+<p>Define predicate function for element in a container that is a pointer to an object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corecontainer-8h-1a4b0bdc6ea90c13aeea634b5bfedcb840"><span id="index-11"></span><span></span><span class="cp">#define DEFINE_CONTAINER_PREDICATE_OBJECT(FunctionName, Type, var)</span></pre>
+<p>Define predicate for element in a container that is an object or build-in type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coretypes-8h-1a82fd92aa50fd5264379e23472b3c05c2"><span id="index-12"></span><span></span><span class="cp">#define DEFINE_ENUM(Name)</span></pre>
+<p>Define compiler-independent enum type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1a0414d85a491573c0abc1d7817a29b2ec"><span id="index-13"></span><span></span><span class="cp">#define DEFINE_INITIALIZER(Name)</span></pre>
+<p>Define initialization function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corerecursivereadwritelock-8h-1aaac37df336bf7b3cba5b7df324e69297"><span id="index-14"></span><span></span><span class="cp">#define DEFINE_RECURSIVE_READ_WRITE_LOCK(ImplementationClass)</span></pre>
+<p>Wrapper class around non-recursive ReadWriteLock implementations, allowing recursive locking.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1ae31771e10e10f2da957d518514a65ec2"><span id="index-15"></span><span></span><span class="cp">#define DEFINE_TERMINATOR(Name)</span></pre>
+<p>Define terminate function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corevector-8h-1a9845742233851e05a484d56e2fdce583"><span id="index-16"></span><span></span><span class="cp">#define DEFINE_VECTOR_COMPARE(FunctionName, Type, lhs, rhs)</span></pre>
+<p>Define compare function for two elements in a vector that are pointers to object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corevector-8h-1addfe23ef91ef925b0434e9c74e203796"><span id="index-17"></span><span></span><span class="cp">#define DEFINE_VECTOR_COMPARE_OBJECT(FunctionName, Type, lhs, rhs)</span></pre>
+<p>Define compare function for two elements in a vector that are objects or build-in types.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coretypes-8h-1a1f1b098f673669db04b6f4aa6a8fdc8e"><span id="index-18"></span><span></span><span class="cp">#define ENDLINE</span></pre>
+<p>End of line.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreenumdef-8h-1acf30cb4e2b75ca6f842edfd0defdfeff"><span id="index-19"></span><span></span><span class="cp">#define END_ENUMINFO</span></pre>
+<p>End enumeration.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreplatform-8h-1abccec18106e642e19bb0250853a23db6"><span id="index-20"></span><span></span><span class="cp">#define EndFor</span></pre>
+<p>End of iteration macros.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coretypes-8h-1a6fc06c408b7c51eb867462d2733051a6"><span id="index-21"></span><span></span><span class="cp">#define FORMAT_INT64</span></pre>
+<p>printf placeholder for 64 Bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreproperty-8h-1aaa19098360564e23bdcd88686d724e1e"><span id="index-22"></span><span></span><span class="cp">#define FOUR_CHAR_ID(a, b, c, d)</span></pre>
+<p>Define four-character identifier.</p>
+<p>Some compilers don’t support multi-character constants.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corestringtraits-8h-1a049052fd02f170d95b576e3248766144"><span id="index-23"></span><span></span><span class="cp">#define ForEachCStringToken(string, delimiters, result)</span></pre>
+<p>Helper macro for iterating C-String tokens (copies string).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corestringtraits-8h-1aff28228ac4c5478f73ba54abb2179a8f"><span id="index-24"></span><span></span><span class="cp">#define ForEachCStringTokenInplace(string, delimiters, result)</span></pre>
+<p>Helper macro for iterating C-String tokens (modifies string inplace).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1a94786c2ccfd95758a2fff73b04b67ec0"><span id="index-25"></span><span></span><span class="cp">#define IMPORT_BINARY_RESOURCE(SymbolName)</span></pre>
+<p>Import binary resource linked with the program.</p>
+<p>Symbol names match with framework tools and CMake macros.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreuid-8h-1a696ee086dd04423f4d062a0e8e92f322"><span id="index-26"></span><span></span><span class="cp">#define INLINE_UID(data1, data2, data3, a, b, c, d, e, f, g, h)</span></pre>
+<p>Macro for inline UID definition.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1ac5382a75039a4fcb43dae702433561b2"><span id="index-27"></span><span></span><span class="cp">#define LAZYCAT(a, b)</span></pre>
+<p>Lazy concatenation (arguments are evaluated before concatenation)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corelinkedlist-8h-1ae3fea5744f1ea4df21ed9cfec87708c8"><span id="index-28"></span><span></span><span class="cp">#define ListForEach(list, T, var)</span></pre>
+<p>Iterate trough list (realtime safe, no memory allocations).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corelinkedlist-8h-1a46e591ee751e875831ab9545a2ea8499"><span id="index-29"></span><span></span><span class="cp">#define ListForEachReverse(list, T, var)</span></pre>
+<p>Iterate trough list in reverse order (realtime safe, no memory allocations).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a1fd7e9e8910963dbf1178162aa01346b"><span id="index-30"></span><span></span><span class="cp">#define PROPERTY_BOOL(member, Method)</span></pre>
+<p>Define boolean member.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1abce43c37780eeaf69e33e74aa9e39bcb"><span id="index-31"></span><span></span><span class="cp">#define PROPERTY_BY_REFERENCE(type, member, Method)</span></pre>
+<p>Setter/getter for already defined member (by reference).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a85b0f8b71c42a9c0a85878414f619d44"><span id="index-32"></span><span></span><span class="cp">#define PROPERTY_BY_VALUE(type, member, Method)</span></pre>
+<p>Setter/getter for already defined member (by value).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1aea85a73ba8a215fca98938360e07eb6c"><span id="index-33"></span><span></span><span class="cp">#define PROPERTY_CSTRING_BUFFER(size, member, Method)</span></pre>
+<p>Define C-string buffer member (by reference).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1ac3decb86d267491780628c53ac7c3bd3"><span id="index-34"></span><span></span><span class="cp">#define PROPERTY_FLAG(var, value, method)</span></pre>
+<p>Define flag member.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1aca4060ff6c5ca54c8432ec788fa42982"><span id="index-35"></span><span></span><span class="cp">#define PROPERTY_INDEX_FLAG32(var, method)</span></pre>
+<p>Define indexed flag member (32 bit integer).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1abc18a4afe5b89aae9f81743dec51d226"><span id="index-36"></span><span></span><span class="cp">#define PROPERTY_INDEX_FLAG64(var, method)</span></pre>
+<p>Define indexed flag member (64 bit integer).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a62179b1dc6d7552160aff1785d25d8c2"><span id="index-37"></span><span></span><span class="cp">#define PROPERTY_OBJECT(Class, member, Method)</span></pre>
+<p>Define object member (by reference).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a47b6d8896d3d1ca2172f6fba6e39eba7"><span id="index-38"></span><span></span><span class="cp">#define PROPERTY_POINTER(type, member, Method)</span></pre>
+<p>Define pointer member (by address).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a7d93e512bda6a2881ffa73b94e5d9e32"><span id="index-39"></span><span></span><span class="cp">#define PROPERTY_READONLY_FLAG(var, value, method)</span></pre>
+<p>Define read-only flag member.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coreclassmacros-8h-1a72c04982008558737083bbf1c1cda3ee"><span id="index-40"></span><span></span><span class="cp">#define PROPERTY_VARIABLE(type, member, Method)</span></pre>
+<p>Define simple member variable (by value).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1a4689212d5a549893cabb9d7782eecfb6"><span id="index-41"></span><span></span><span class="cp">#define STRINGIFY(s)</span></pre>
+<p>Stringify numeric definiton.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-coretypes-8h-1ad20f0453f0015b22116cdc32921236b1"><span id="index-42"></span><span></span><span class="cp">#define STRING_STACK_SPACE_MAX</span></pre>
+<p>Max.</p>
+<p>size of string buffer on stack.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corebasicmacros-8h-1adda72679f5a9cff59c5e5b6810f52286"><span id="index-43"></span><span></span><span class="cp">#define UNIQUE_IDENT(prefix)</span></pre>
+<p>Generate unique identifier at file scope.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corevector-8h-1a08704d61a487a515e5e4398efa872a64"><span id="index-44"></span><span></span><span class="cp">#define VectorForEach(items, T, var)</span></pre>
+<p>Iterate trough vector (realtime safe, no memory allocation).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corevector-8h-1af42eae24d7d5faadcb0870b9535750b0"><span id="index-45"></span><span></span><span class="cp">#define VectorForEachFast(items, T, var)</span></pre>
+<p>Iterate trough vector without checking index (uses pointer arithmetic, doesn’t call at ()).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-corevector-8h-1ad41d4108ba172605361d84840ff07f1f"><span id="index-46"></span><span></span><span class="cp">#define VectorForEachReverse(items, T, var)</span></pre>
+<p>Iterate trough vector in reverse order (realtime safe).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="page_deprecated.html" class="btn btn-neutral float-left" title="Deprecated List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_AttributeFactory.html" class="btn btn-neutral float-right" title="namespace AttributeFactory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

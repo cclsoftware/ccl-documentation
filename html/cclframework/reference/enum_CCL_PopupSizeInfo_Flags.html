@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::PopupSizeInfo::Flags &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::TouchInfo" href="struct_Core_TouchInfo.html" />
+    <link rel="prev" title="struct CCL::PopupSizeInfo" href="struct_CCL_PopupSizeInfo.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="struct_CCL_PopupSizeInfo.html">struct CCL::PopupSizeInfo</a></li>
+      <li class="breadcrumb-item active">enum CCL::PopupSizeInfo::Flags</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-popupsizeinfo-flags">
+<span id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295f"></span><span id="index-0"></span><h1>enum CCL::PopupSizeInfo::Flags<a class="headerlink" href="#enum-ccl-popupsizeinfo-flags" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ipopupselector.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">Flags</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faa9953673f54fd9f854de23739ebe2f7a"><span class="std std-ref">kLeft</span></a><span></span>               <span class="o">=</span> <span class="mh">0x01</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa28e0f004d9fc43a042d60286f37b6889"><span class="std std-ref">kRight</span></a><span></span>              <span class="o">=</span> <span class="mh">0x02</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa27e4615ea3b984b732636a599a7577b9"><span class="std std-ref">kHCenter</span></a><span></span>            <span class="o">=</span> <span class="mh">0x03</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fae85fc93eceabe99ef6c957c352570893"><span class="std std-ref">kHMouse</span></a><span></span>             <span class="o">=</span> <span class="mh">0x04</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa9216f98f924ac9f3f618279ac2c44b35"><span class="std std-ref">kHCenterRel</span></a><span></span>         <span class="o">=</span> <span class="mh">0x08</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faeeafb7dc951165d9e1a4734909c6b8f2"><span></span><span class="n">kHMask</span></span><span></span>              <span class="o">=</span> <span class="mh">0x0F</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa4bbdb3e71aa3fcbb2924835cf5242435"><span class="std std-ref">kTop</span></a><span></span>                <span class="o">=</span> <span class="mh">0x10</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa99876be9e5eee47e0384740c1d911bf0"><span class="std std-ref">kBottom</span></a><span></span>             <span class="o">=</span> <span class="mh">0x20</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa755b9f1c451b925322017910cb72b85a"><span class="std std-ref">kVCenter</span></a><span></span>            <span class="o">=</span> <span class="mh">0x30</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa9083604951c293c5e22079341516d54a"><span class="std std-ref">kVMouse</span></a><span></span>             <span class="o">=</span> <span class="mh">0x40</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faae9d28c6f0a22df51ca0785ee8ccbedb"><span class="std std-ref">kVCenterRel</span></a><span></span>         <span class="o">=</span> <span class="mh">0x80</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fad8dfe88062d0487e02212988120a4c68"><span></span><span class="n">kVMask</span></span><span></span>              <span class="o">=</span> <span class="mh">0xF0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa3c54cddbc484ae9a82fd81cf26e877d9"><span class="std std-ref">kHFillWindow</span></a><span></span>        <span class="o">=</span> <span class="mh">0x0100</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa7028a7fbdc2ae7fb75d364ead5748509"><span class="std std-ref">kVFillWindow</span></a><span></span>        <span class="o">=</span> <span class="mh">0x0200</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faadd3c5364afcdcf0f00886e7fb045876"><span class="std std-ref">kHasOffset</span></a><span></span>          <span class="o">=</span> <span class="mh">0x0400</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa858ef7a36dadfa5155d326a06932b925"><span class="std std-ref">kCanFlipParentEdge</span></a><span></span>  <span class="o">=</span> <span class="mh">0x0800</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa3f463733220ca7c493a6dba737609b5a"><span class="std std-ref">kForceFixedPosition</span></a><span></span> <span class="o">=</span> <span class="mh">0x1000</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295f"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faa9953673f54fd9f854de23739ebe2f7a"><span id="index-1"></span><span></span><span class="n">kLeft</span></pre>
+<p>alignment of popup view in relation to parent</p>
+<p>align popup to the left parent edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa28e0f004d9fc43a042d60286f37b6889"><span id="index-2"></span><span></span><span class="n">kRight</span></pre>
+<p>align popup to the right parent edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa27e4615ea3b984b732636a599a7577b9"><span id="index-3"></span><span></span><span class="n">kHCenter</span></pre>
+<p>center popup horizontally in parent</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fae85fc93eceabe99ef6c957c352570893"><span id="index-4"></span><span></span><span class="n">kHMouse</span></pre>
+<p>place popup horizonally at mouse position</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa9216f98f924ac9f3f618279ac2c44b35"><span id="index-5"></span><span></span><span class="n">kHCenterRel</span></pre>
+<p>center popup horizontally relative to “where.x”</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa4bbdb3e71aa3fcbb2924835cf5242435"><span id="index-6"></span><span></span><span class="n">kTop</span></pre>
+<p>align popup to the top parent edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa99876be9e5eee47e0384740c1d911bf0"><span id="index-7"></span><span></span><span class="n">kBottom</span></pre>
+<p>align popup to the bottom parent edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa755b9f1c451b925322017910cb72b85a"><span id="index-8"></span><span></span><span class="n">kVCenter</span></pre>
+<p>center popup vertically in parent</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa9083604951c293c5e22079341516d54a"><span id="index-9"></span><span></span><span class="n">kVMouse</span></pre>
+<p>place popup vertically at mouse position</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faae9d28c6f0a22df51ca0785ee8ccbedb"><span id="index-10"></span><span></span><span class="n">kVCenterRel</span></pre>
+<p>center popup vertically relative to “where.y”</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa3c54cddbc484ae9a82fd81cf26e877d9"><span id="index-11"></span><span></span><span class="n">kHFillWindow</span></pre>
+<p>enlarge up to parent window width, respecting size limits and an also specified anchor edge</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa7028a7fbdc2ae7fb75d364ead5748509"><span id="index-12"></span><span></span><span class="n">kVFillWindow</span></pre>
+<p>enlarge up to parent window height, respecting size limits and an also specified anchor edge; e.g. “bottom vfillwindow”: from parent bottom to window bottom</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295faadd3c5364afcdcf0f00886e7fb045876"><span id="index-13"></span><span></span><span class="n">kHasOffset</span></pre>
+<p>an additional offset to the position determined by the other flags is specified in “where”</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa858ef7a36dadfa5155d326a06932b925"><span id="index-14"></span><span></span><span class="n">kCanFlipParentEdge</span></pre>
+<p>if there is not enough space in the given direction, the position will be mirrored on parent center before trying the other direction</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-popup-size-info-1aa705cf7e79a21c2352b00ffe20cd295fa3f463733220ca7c493a6dba737609b5a"><span id="index-15"></span><span></span><span class="n">kForceFixedPosition</span></pre>
+<p>popup keeps its initial position and is not moved inside the screen rect</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_PopupSizeInfo.html" class="btn btn-neutral float-left" title="struct CCL::PopupSizeInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_TouchInfo.html" class="btn btn-neutral float-right" title="struct Core::TouchInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

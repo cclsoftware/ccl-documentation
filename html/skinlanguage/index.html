@@ -1,32 +1,30 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCL Skin Definition Language &mdash; CCL Cross-platform Framework Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/target-highlight.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Introduction" href="introduction.html" />
-    <link rel="prev" title="Home" href="../index.html" />
+    <link rel="prev" title="class UnfocusAction" href="../cclframework/reference/class_UnfocusAction.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -53,12 +51,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">CCL Skin Definition Language</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter/index.html">Chapters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/index.html">References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
 
@@ -86,7 +89,7 @@
            <div itemprop="articleBody">
              
   <section id="ccl-skin-definition-language">
-<span id="framework-skin"></span><h1>CCL Skin Definition Language<a class="headerlink" href="#ccl-skin-definition-language" title="Permalink to this heading"></a></h1>
+<span id="framework-skin"></span><h1>CCL Skin Definition Language<a class="headerlink" href="#ccl-skin-definition-language" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
@@ -94,6 +97,17 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter/index.html">Chapters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="chapter/package/index.html">Skin Package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter/package/index.html#neutral-design">Neutral Design</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter/colors/index.html">Colors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter/colors/index.html#color-scheme">Color Scheme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter/colors/index.html#value-curves">Value Curves</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter/styles/index.html">Styles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter/styles/index.html#composite-styles">Composite Styles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter/forms/index.html">Forms</a></li>
@@ -125,13 +139,25 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter/colorscheme/index.html">Color Scheme</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter/colorscheme/index.html#skin-attributes">Skin Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter/colorscheme/index.html#value-curves">Value Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter/workspace/index.html">Workspaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter/workspace/index.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter/workspace/index.html#window-classes">Window Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter/workspace/index.html#perspectives-and-frames">Perspectives and Frames</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#popup-frame">Popup Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#detached-frame">Detached Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#embedded-frame">Embedded Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#custom-parameters">Custom Parameters</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter/styles/index.html">Styles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter/styles/index.html#composite-styles">Composite Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter/workspace/index.html#hosting-a-workspace-in-a-window">Hosting a Workspace in a Window</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#application-workspace">Application Workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter/workspace/index.html#other-workspaces">Other Workspaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter/accessibility/index.html">Accessibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter/accessibility/index.html#relations">Relations</a></li>
 </ul>
 </li>
 </ul>
@@ -143,11 +169,11 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#animation-8">Animation (8)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#controls-34">Controls (34)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#general-37">General (37)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#layout-12">Layout (12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#layout-11">Layout (11)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#resources-15">Resources (15)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#shapes-7">Shapes (7)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#styles-9">Styles (9)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#views-11">Views (11)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#views-12">Views (12)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#workspace-6">Workspace (6)</a></li>
 </ul>
 </li>
@@ -178,7 +204,6 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#anchor">Anchor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#animation">Animation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#basicshape">BasicShape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#border">Border</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#button">Button</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#camera3d">Camera3D</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#checkbox">CheckBox</a></li>
@@ -211,7 +236,7 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#frame">Frame</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#gradient">Gradient</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#gradientstop">GradientStop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#heading">Heading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#helpanchor">HelpAnchor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#horizontal">Horizontal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#iconset">IconSet</a></li>
@@ -261,6 +286,7 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#sceneview3d">SceneView3D</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#scrollbar">ScrollBar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#scrollbutton">ScrollButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#scrollheader">ScrollHeader</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#scrollpicker">ScrollPicker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#scrollview">ScrollView</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/skin-elements-classmodel.html#segmentbox">SegmentBox</a></li>
@@ -427,10 +453,10 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/visual-styles-classmodel.html">Visual Styles</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="reference/visual-styles-classmodel.html#classes">Classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#basicstyle">BasicStyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#borderstyle">BorderStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#buttonstyle">ButtonStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#checkboxstyle">CheckBoxStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#comboboxstyle">ComboBoxStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#dialogbuilderstyle">DialogBuilderStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#dialoggroupstyle">DialogGroupStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#dividerstyle">DividerStyle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/visual-styles-classmodel.html#dropboxstyle">DropBoxStyle</a></li>
@@ -491,15 +517,15 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Home" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../cclframework/reference/class_UnfocusAction.html" class="btn btn-neutral float-left" title="class UnfocusAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Apr 28, 2025.
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
       </span></p>
   </div>
 

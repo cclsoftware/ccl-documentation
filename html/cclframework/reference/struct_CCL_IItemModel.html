@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::IItemModel &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::IItemModel::AccessibilityInfo" href="struct_CCL_IItemModel_AccessibilityInfo.html" />
+    <link rel="prev" title="enum CCL::IItemDragTarget::ItemDragFlags" href="enum_CCL_IItemDragTarget_ItemDragFlags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_view.html">Views</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_item.html">List- and Treeviews</a></li>
+      <li class="breadcrumb-item active">struct CCL::IItemModel</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-iitemmodel">
+<span id="doxid-struct-c-c-l-1-1-i-item-model"></span><span id="index-0"></span><h1>struct CCL::IItemModel<a class="headerlink" href="#struct-ccl-iitemmodel" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Model.html#doxid-namespace-c-c-l-1-1-model"><span class="std std-ref">Model</span></a> interface for list and tree controls. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-item-model"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iitemmodel.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">IItemModel</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_CCL_IItemModel_AccessibilityInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-accessibility-info"><span class="std std-ref">AccessibilityInfo</span></a><span></span><span class="p">;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="p">;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="p">;</span>
+    <span class="k">struct</span> <a class="reference internal" href="struct_CCL_IItemModel_StyleInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-style-info"><span class="std std-ref">StyleInfo</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1abd2cd2c48ae06c810ba20124bd063f01"><span class="std std-ref">viewDetached</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a><span></span><span class="o">*</span> <span class="n">itemView</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ae5b6a417432c0e3cca498f63ae4c8931"><span class="std std-ref">countFlatItems</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ac339582ab49432ac42c5ad0eaf40b5e4"><span class="std std-ref">getRootItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_ItemIndex.html#doxid-class-c-c-l-1-1-item-index"><span class="std std-ref">ItemIndex</span></a><span></span><span class="o">&amp;</span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a3ef9ef89fbd728b8c14e5f17a4bda072"><span class="std std-ref">isItemFolder</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1aafbe9329c31c540a6b8f1c5cf41eadc7"><span class="std std-ref">canExpandItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a7f75fc79095384074dae4236c1a9ce32"><span class="std std-ref">canAutoExpandItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ad4574d2f508a8eb92542de104ccd88b1"><span class="std std-ref">getSubItems</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">items</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a8d8b01c73e9eb8032b4a416b3a697996"><span class="std std-ref">getSelection</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a350499090621132346b65c1c473bd903"><span class="std std-ref">getItemTitle</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">title</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a33f709ef6b27ce413a0922ebba88e96c"><span class="std std-ref">getUniqueItemName</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a2dc328c99e4855620881ad4ef04c23d2"><span class="std std-ref">getItemIcon</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a535156fb42bf5d8b47eec98077273e7d"><span class="std std-ref">getItemThumbnail</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1aabb79f9a1a3779ddad7d4973d4f42964"><span class="std std-ref">getItemTooltip</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">tooltip</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a0640d818f939478a845cc6c1c1a45b40"><span class="std std-ref">canSelectItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a23fef0023b3f014ade2efdb3e347f919"><span class="std std-ref">getItemAccessibilityInfo</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IItemModel_AccessibilityInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-accessibility-info"><span class="std std-ref">AccessibilityInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ac69e0a314dd1cd3e7697bdbe8007e858"><span class="std std-ref">onItemFocused</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a95ddccb0510f7fd2bd555d482a48baa7"><span class="std std-ref">openItem</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a46dc32015fd0019e2a08a6af4d0fa736"><span class="std std-ref">canRemoveItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a79006d809823cfd7a6ed18badead606e"><span class="std std-ref">removeItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a089db1a30831a9cd7f35ec73bd9200a4"><span class="std std-ref">canInsertData</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IDragSession.html#doxid-struct-c-c-l-1-1-i-drag-session"><span class="std std-ref">IDragSession</span></a><span></span><span class="o">*</span> <span class="n">session</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="n">targetView</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ab58b16e52d971451f697841dc8326a44"><span class="std std-ref">insertData</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_IDragSession.html#doxid-struct-c-c-l-1-1-i-drag-session"><span class="std std-ref">IDragSession</span></a><span></span><span class="o">*</span> <span class="n">session</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a123d0b1ef72e181713504c1b3b9efe41"><span class="std std-ref">editCell</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a3bdc6b6228f635227cf2f788dc357463"><span class="std std-ref">drawCell</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a76d2ec168a79153ec7792d82305fb13f"><span class="std std-ref">drawIconOverlay</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1ad965e450069c7a7a12a672c98d1bfe99"><span class="std std-ref">getItemBackground</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a5e3b3691314e3af098e090b06824eccf"><span class="std std-ref">measureCellContent</span></a><span></span> <span class="p">(</span>
+        <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_StyleInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-style-info"><span class="std std-ref">StyleInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1aaf8a2b93618f16059fd2cc3be8b5ca76"><span class="std std-ref">drawItem</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a7a3ddeb9a512e661bf8e253aa946a772"><span class="std std-ref">createColumnHeaders</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IColumnHeaderList.html#doxid-struct-c-c-l-1-1-i-column-header-list"><span class="std std-ref">IColumnHeaderList</span></a><span></span><span class="o">&amp;</span> <span class="n">list</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1afa08dff416f0dce92698facaac2232b0"><span class="std std-ref">getSortColumnID</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">columnID</span><span class="p">,</span> <span class="n">tbool</span><span class="o">&amp;</span> <span class="n">upwards</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a79df9733b5937b51adeec29ef509a03a"><span class="std std-ref">createDragSessionData</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a39e1b434a7c9b8c103317e5b8ba79e91"><span class="std std-ref">appendItemMenu</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IContextMenu.html#doxid-struct-c-c-l-1-1-i-context-menu"><span class="std std-ref">IContextMenu</span></a><span></span><span class="o">&amp;</span> <span class="n">menu</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">item</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">&amp;</span> <span class="n">selection</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a62890b29c1d5a9120934955a35c3886e"><span class="std std-ref">interpretCommand</span></a><span></span> <span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_CommandMsg.html#doxid-struct-c-c-l-1-1-command-msg"><span class="std std-ref">CommandMsg</span></a><span></span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">item</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">&amp;</span> <span class="n">selection</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITouchHandler.html#doxid-struct-c-c-l-1-1-i-touch-handler"><span class="std std-ref">ITouchHandler</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-item-model-1a60700fdd90001e2a022a5451e867088a"><span class="std std-ref">createTouchHandler</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-item-model"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Model.html#doxid-namespace-c-c-l-1-1-model"><span class="std std-ref">Model</span></a> interface for list and tree controls.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1abd2cd2c48ae06c810ba20124bd063f01"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">viewDetached</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a><span></span><span class="o">*</span> <span class="n">itemView</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>View ends to use the model.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ae5b6a417432c0e3cca498f63ae4c8931"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="n">countFlatItems</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get item count of (flat) list.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ac339582ab49432ac42c5ad0eaf40b5e4"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getRootItem</span> <span class="p">(</span><a class="reference internal" href="class_CCL_ItemIndex.html#doxid-class-c-c-l-1-1-item-index"><span class="std std-ref">ItemIndex</span></a><span></span><span class="o">&amp;</span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get tree root item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a3ef9ef89fbd728b8c14e5f17a4bda072"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">isItemFolder</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if item is a folder.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1aafbe9329c31c540a6b8f1c5cf41eadc7"><span id="index-5"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">canExpandItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if item can be expanded.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a7f75fc79095384074dae4236c1a9ce32"><span id="index-6"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">canAutoExpandItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if item can be expanded automatically on click (if tree view has style kTreeViewAutoExpand).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ad4574d2f508a8eb92542de104ccd88b1"><span id="index-7"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getSubItems</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">items</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get children of given item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a8d8b01c73e9eb8032b4a416b3a697996"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getSelection</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get special item selection implementation provided by model.</p>
+<p>Return null to use default selection of view.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a350499090621132346b65c1c473bd903"><span id="index-9"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getItemTitle</span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">title</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get title of specified item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a33f709ef6b27ce413a0922ebba88e96c"><span id="index-10"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getUniqueItemName</span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get a unique name (unique among siblings) of specified item.</p>
+<p>Must not contain a ‘/’. Used for storing expand states of items.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a2dc328c99e4855620881ad4ef04c23d2"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getItemIcon</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get icon of specified item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a535156fb42bf5d8b47eec98077273e7d"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getItemThumbnail</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get thumbnail of specified item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1aabb79f9a1a3779ddad7d4973d4f42964"><span id="index-13"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getItemTooltip</span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">tooltip</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get tooltip of specified item.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a0640d818f939478a845cc6c1c1a45b40"><span id="index-14"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">canSelectItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if item can be selected.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a23fef0023b3f014ade2efdb3e347f919"><span id="index-15"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getItemAccessibilityInfo</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IItemModel_AccessibilityInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-accessibility-info"><span class="std std-ref">AccessibilityInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span>
+<span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get accessibility info.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ac69e0a314dd1cd3e7697bdbe8007e858"><span id="index-16"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">onItemFocused</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Item was focused.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a95ddccb0510f7fd2bd555d482a48baa7"><span id="index-17"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">openItem</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Item was double-clicked, or [Enter] key was pressed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a46dc32015fd0019e2a08a6af4d0fa736"><span id="index-18"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">canRemoveItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if item can be removed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a79006d809823cfd7a6ed18badead606e"><span id="index-19"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">removeItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Item should be removed (e.g.</p>
+<p>delete key pressed or dropped outside during drag session).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a089db1a30831a9cd7f35ec73bd9200a4"><span id="index-20"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">canInsertData</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IDragSession.html#doxid-struct-c-c-l-1-1-i-drag-session"><span class="std std-ref">IDragSession</span></a><span></span><span class="o">*</span> <span class="n">session</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="n">targetView</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Check if data can be inserted (during drag session).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ab58b16e52d971451f697841dc8326a44"><span id="index-21"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">insertData</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a><span></span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_IDragSession.html#doxid-struct-c-c-l-1-1-i-drag-session"><span class="std std-ref">IDragSession</span></a><span></span><span class="o">*</span> <span class="n">session</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Insert data (during drag session).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a123d0b1ef72e181713504c1b3b9efe41"><span id="index-22"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">editCell</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Edit cell.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a3bdc6b6228f635227cf2f788dc357463"><span id="index-23"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">drawCell</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Draw cell in list or tree view.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a76d2ec168a79153ec7792d82305fb13f"><span id="index-24"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">drawIconOverlay</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Draw overlay on top of item icon (optional).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1ad965e450069c7a7a12a672c98d1bfe99"><span id="index-25"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> CCL_API<span></span> <span class="n">getItemBackground</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get an optional background color id for an item.</p>
+<p>It is looked up in the visual style of the ItemView.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a5e3b3691314e3af098e090b06824eccf"><span id="index-26"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">measureCellContent</span> <span class="p">(</span>
+    <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_StyleInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-style-info"><span class="std std-ref">StyleInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get size of cell content.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1aaf8a2b93618f16059fd2cc3be8b5ca76"><span id="index-27"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">drawItem</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_DrawInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-draw-info"><span class="std std-ref">DrawInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Draw custom item, i.e.</p>
+<p>framework draws nothing (requires kListViewDrawCustomItem style).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a7a3ddeb9a512e661bf8e253aa946a772"><span id="index-28"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">createColumnHeaders</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IColumnHeaderList.html#doxid-struct-c-c-l-1-1-i-column-header-list"><span class="std std-ref">IColumnHeaderList</span></a><span></span><span class="o">&amp;</span> <span class="n">list</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create column headers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1afa08dff416f0dce92698facaac2232b0"><span id="index-29"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getSortColumnID</span> <span class="p">(</span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">columnID</span><span class="p">,</span> <span class="n">tbool</span><span class="o">&amp;</span> <span class="n">upwards</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get identifier of current sort column.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a79df9733b5937b51adeec29ef509a03a"><span id="index-30"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createDragSessionData</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create object for dragging item data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a39e1b434a7c9b8c103317e5b8ba79e91"><span id="index-31"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">appendItemMenu</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IContextMenu.html#doxid-struct-c-c-l-1-1-i-context-menu"><span class="std std-ref">IContextMenu</span></a><span></span><span class="o">&amp;</span> <span class="n">menu</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">item</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">&amp;</span> <span class="n">selection</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Append context menu for selected items.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a62890b29c1d5a9120934955a35c3886e"><span id="index-32"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">interpretCommand</span> <span class="p">(</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_CommandMsg.html#doxid-struct-c-c-l-1-1-command-msg"><span class="std std-ref">CommandMsg</span></a><span></span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">item</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemSelection.html#doxid-struct-c-c-l-1-1-i-item-selection"><span class="std std-ref">IItemSelection</span></a><span></span><span class="o">&amp;</span> <span class="n">selection</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Interpret commands for selected items.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-item-model-1a60700fdd90001e2a022a5451e867088a"><span id="index-33"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITouchHandler.html#doxid-struct-c-c-l-1-1-i-touch-handler"><span class="std std-ref">ITouchHandler</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createTouchHandler</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a7f15a8d2e26a07a6b957fea7a03aa0ed"><span class="std std-ref">ItemIndexRef</span></a><span></span> <span class="n">index</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">column</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IItemModel_EditInfo.html#doxid-struct-c-c-l-1-1-i-item-model-1-1-edit-info"><span class="std std-ref">EditInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">info</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create touch handler.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_IItemDragTarget_ItemDragFlags.html" class="btn btn-neutral float-left" title="enum CCL::IItemDragTarget::ItemDragFlags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_IItemModel_AccessibilityInfo.html" class="btn btn-neutral float-right" title="struct CCL::IItemModel::AccessibilityInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

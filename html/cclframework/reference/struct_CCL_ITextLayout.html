@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::ITextLayout &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::ITextLayout::LineMode" href="enum_CCL_ITextLayout_LineMode.html" />
+    <link rel="prev" title="struct CCL::IShaderParameterSet3D" href="struct_CCL_IShaderParameterSet3D.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">struct CCL::ITextLayout</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-itextlayout">
+<span id="doxid-struct-c-c-l-1-1-i-text-layout"></span><span id="index-0"></span><h1>struct CCL::ITextLayout<a class="headerlink" href="#struct-ccl-itextlayout" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> layout interface. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-text-layout"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextlayout.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">ITextLayout</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120"><span class="std std-ref">LineMode</span></a><span></span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ITextLayout_MeasureFlags.html#doxid-struct-c-c-l-1-1-i-text-layout-1a5f4d9efca2d41a29063d216a3045809b"><span class="std std-ref">MeasureFlags</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1ad199602659eda1189c56a5a8d3d98b35"><span class="std std-ref">construct</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="n">Coord</span> <span class="n">width</span><span class="p">,</span>
+        <span class="n">Coord</span> <span class="n">height</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120"><span class="std std-ref">LineMode</span></a><span></span> <span class="n">lineMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120a47399f08654be294623f531629f90bc2"><span class="std std-ref">kMultiLine</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">()</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a5ff23740e42167f3de4e6f0f73351613"><span class="std std-ref">construct</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">width</span><span class="p">,</span>
+        <span class="n">CoordF</span> <span class="n">height</span><span class="p">,</span>
+        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120"><span class="std std-ref">LineMode</span></a><span></span> <span class="n">lineMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120a47399f08654be294623f531629f90bc2"><span class="std std-ref">kMultiLine</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">()</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a568103b14282d019c4b7e974063cfd31"><span class="std std-ref">getText</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a503936a5397f2364b6599c0a52590dc0"><span class="std std-ref">resize</span></a><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">width</span><span class="p">,</span> <span class="n">Coord</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a08c7fa1d599c5d47ed5bc749b6ba564f"><span class="std std-ref">resize</span></a><span></span> <span class="p">(</span><span class="n">CoordF</span> <span class="n">width</span><span class="p">,</span> <span class="n">CoordF</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a00b967e09e0806a669ebb840a26fae23"><span class="std std-ref">setFontStyle</span></a><span></span> <span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">style</span><span class="p">,</span>
+        <span class="n">tbool</span> <span class="n">state</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a7385fa191695f9ea46086d0d261a142a"><span class="std std-ref">setFontSize</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1ab8843319dc81c73d657400bacd809663"><span class="std std-ref">setSpacing</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">spacing</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a7773503c4ef239587abe10dad25e37a6"><span class="std std-ref">setLineSpacing</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">lineSpacing</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a3c1e30ea9889fffcd63103d5175ba095"><span class="std std-ref">setTextColor</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span> <span class="n">color</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1af53d4f86759ba6477ddcfcc460234a78"><span class="std std-ref">getBounds</span></a><span></span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a0e08e87df5937fe2663872a8dc38441e"><span class="std std-ref">getBounds</span></a><span></span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a7db96138c11d35ca372b0dc272de70d1"><span class="std std-ref">getImageBounds</span></a><span></span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1ab6991aecc7a9bcbe1b4d3910fdb94486"><span class="std std-ref">getBaselineOffset</span></a><span></span> <span class="p">(</span><span class="n">PointF</span><span class="o">&amp;</span> <span class="n">offset</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1ac91e4f84c33fb947e84a11e820096c50"><span class="std std-ref">hitTest</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">textIndex</span><span class="p">,</span> <span class="n">PointF</span><span class="o">&amp;</span> <span class="n">position</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a0af14ce4211a4ad14aa7a9f253bbcb38"><span class="std std-ref">getCharacterBounds</span></a><span></span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a7b10ee8c08df81f82801fa75ffbca25f"><span class="std std-ref">getTextBounds</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IMutableRegion.html#doxid-struct-c-c-l-1-1-i-mutable-region"><span class="std std-ref">IMutableRegion</span></a><span></span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a5f0a88c02e025954098717f824489621"><span class="std std-ref">getLineRange</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a5a8aa5a40f00da56b0cfd0a6f0187e76"><span class="std std-ref">getWordRange</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a219835a82afc7d0c269450a8b0700111"><span class="std std-ref">getExplicitLineRange</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1ab3552ad807b3a570518fd3e15471ae9f"><span class="std std-ref">setBaselineOffset</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offset</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1addb2e10c47fbe946786f5bd0e037b6f4"><span class="std std-ref">setSuperscript</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-layout-1a389dd0836c2e0dbe77d9ce9ffaab0a91"><span class="std std-ref">setSubscript</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-text-layout"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> layout interface.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1ad199602659eda1189c56a5a8d3d98b35"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">construct</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">Coord</span> <span class="n">width</span><span class="p">,</span>
+    <span class="n">Coord</span> <span class="n">height</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120"><span class="std std-ref">LineMode</span></a><span></span> <span class="n">lineMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120a47399f08654be294623f531629f90bc2"><span class="std std-ref">kMultiLine</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">()</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Initialize text layout.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a5ff23740e42167f3de4e6f0f73351613"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">construct</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">CoordF</span> <span class="n">width</span><span class="p">,</span>
+    <span class="n">CoordF</span> <span class="n">height</span><span class="p">,</span>
+    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120"><span class="std std-ref">LineMode</span></a><span></span> <span class="n">lineMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ITextLayout_LineMode.html#doxid-struct-c-c-l-1-1-i-text-layout-1a2b4efb70ec5d58dd8ae04e71bf873120a47399f08654be294623f531629f90bc2"><span class="std std-ref">kMultiLine</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">()</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Initialize text layout (float coordinates).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a568103b14282d019c4b7e974063cfd31"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> CCL_API<span></span> <span class="n">getText</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get plain unformatted text (that was used to construct the layout).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a503936a5397f2364b6599c0a52590dc0"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">resize</span> <span class="p">(</span><span class="n">Coord</span> <span class="n">width</span><span class="p">,</span> <span class="n">Coord</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Resize the text layout.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a08c7fa1d599c5d47ed5bc749b6ba564f"><span id="index-5"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">resize</span> <span class="p">(</span><span class="n">CoordF</span> <span class="n">width</span><span class="p">,</span> <span class="n">CoordF</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Resize the text layout (float coordinates).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a00b967e09e0806a669ebb840a26fae23"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setFontStyle</span> <span class="p">(</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">style</span><span class="p">,</span>
+    <span class="n">tbool</span> <span class="n">state</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set font style for given text range (.</p>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="enum_CCL_Font_Styles.html#doxid-class-c-c-l-1-1-font-1a7aa3419d0e6ee02d49e91aeca67fc9fd"><span class="std std-ref">Font::Styles</span></a> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">enumeration</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a7385fa191695f9ea46086d0d261a142a"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setFontSize</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set font size for given text range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1ab8843319dc81c73d657400bacd809663"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setSpacing</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">spacing</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set character spacing for given text range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a7773503c4ef239587abe10dad25e37a6"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setLineSpacing</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">lineSpacing</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set line spacing for given text range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a3c1e30ea9889fffcd63103d5175ba095"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setTextColor</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span> <span class="n">color</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set color for given text range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1af53d4f86759ba6477ddcfcc460234a78"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getBounds</span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get bounding rectangle of formatted text.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a0e08e87df5937fe2663872a8dc38441e"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getBounds</span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get bounding rectangle of formatted text.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a7db96138c11d35ca372b0dc272de70d1"><span id="index-13"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getImageBounds</span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get tightly enclosing rectangle of the text’s glyphs.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1ab6991aecc7a9bcbe1b4d3910fdb94486"><span id="index-14"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getBaselineOffset</span> <span class="p">(</span><span class="n">PointF</span><span class="o">&amp;</span> <span class="n">offset</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the offset of the text’s baseline (in addition to the text alignment).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1ac91e4f84c33fb947e84a11e820096c50"><span id="index-15"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">hitTest</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">textIndex</span><span class="p">,</span> <span class="n">PointF</span><span class="o">&amp;</span> <span class="n">position</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the text position and coordinates of the cluster at the given position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a0af14ce4211a4ad14aa7a9f253bbcb38"><span id="index-16"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getCharacterBounds</span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get bounds of the character at textIndex.</p>
+<p>The bounds height is the line height.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a7b10ee8c08df81f82801fa75ffbca25f"><span id="index-17"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getTextBounds</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IMutableRegion.html#doxid-struct-c-c-l-1-1-i-mutable-region"><span class="std std-ref">IMutableRegion</span></a><span></span><span class="o">&amp;</span> <span class="n">bounds</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span>
+<span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get a set of rectangles which fully enclose the text in the given range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a5f0a88c02e025954098717f824489621"><span id="index-18"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getLineRange</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the text range of the line at the given text position, possibly ending with a newline character.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a5a8aa5a40f00da56b0cfd0a6f0187e76"><span id="index-19"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getWordRange</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the text range of the word at the given text position.</p>
+<p>If textIndex is between words, the range refers to the characters inbetween. The range does not include newlines.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a219835a82afc7d0c269450a8b0700111"><span id="index-20"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">getExplicitLineRange</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">textIndex</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the text range of the line at the given text position not considering layout line breaks but only explicit linebreaks by newline characters.</p>
+<p>The range does not include the newline character.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1ab3552ad807b3a570518fd3e15471ae9f"><span id="index-21"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setBaselineOffset</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offset</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set baseline up (positive offset) or down (negative offset) to shift text vertically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1addb2e10c47fbe946786f5bd0e037b6f4"><span id="index-22"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setSuperscript</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set superscript for text range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-layout-1a389dd0836c2e0dbe77d9ce9ffaab0a91"><span id="index-23"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setSubscript</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ITextLayout_Range.html#doxid-struct-c-c-l-1-1-i-text-layout-1-1-range"><span class="std std-ref">Range</span></a><span></span><span class="o">&amp;</span> <span class="n">range</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set subscript for text range.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_IShaderParameterSet3D.html" class="btn btn-neutral float-left" title="struct CCL::IShaderParameterSet3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_ITextLayout_LineMode.html" class="btn btn-neutral float-right" title="enum CCL::ITextLayout::LineMode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

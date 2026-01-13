@@ -1,0 +1,910 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL String Extractor &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="API Reference" href="../reference/index.html" />
+    <link rel="prev" title="CCL Modeller" href="modeller.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL Command-line Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="builder.html">CCL Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generator.html">CCL Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modeller.html">CCL Modeller</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CCL String Extractor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-scan">Auto scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xml-model-format">XML model format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xml-model-reference">XML model reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xml-model-examples">XML model examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#version-history">Version history</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Command-line Tools</a></li>
+      <li class="breadcrumb-item active">CCL String Extractor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-string-extractor">
+<h1>CCL String Extractor<a class="headerlink" href="#ccl-string-extractor" title="Link to this heading"></a></h1>
+<p><em>This document refers to <a class="reference internal" href="#changelog"><span class="std std-ref">xstring version 1.2.0</span></a></em>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The String Extractor tool parses strings from source and XML files and exports them to a file format suitable for localization.</p>
+<p><strong>Usage:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>xstring -[MODE] [INPUT_FOLDER] -[OUTPUT_FORMAT] [OUTPUT_FILE] [MODEL_PATH] -[OPTION]
+</pre></div>
+</div>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Command-line Arguments</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 10.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MODE</p></td>
+<td><p>No</p></td>
+<td><p>Mode: {<strong>skin</strong>, <strong>menu</strong>, <strong>tutorial</strong>, <strong>metainfo</strong>, <strong>template</strong>, <strong>custom</strong>, <strong>auto</strong>, <strong>code</strong>}, see <a class="reference internal" href="#parsermodes"><span class="std std-ref">parser modes</span></a>, default: <strong>auto</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>INPUT_FOLDER</p></td>
+<td><p>Yes</p></td>
+<td><p>Input folder to parse, <strong>must be a path to a folder</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p>OUTPUT_FORMAT</p></td>
+<td><p>No</p></td>
+<td><p>Output format: {<strong>po</strong>, <strong>xliff</strong>}, default: <strong>po</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OUTPUT_FILE</p></td>
+<td><p>Yes</p></td>
+<td><p>Path to result file.</p></td>
+</tr>
+<tr class="row-even"><td><p>MODEL_PATH</p></td>
+<td><p>Yes/No</p></td>
+<td><p>Specify <a class="reference internal" href="#custommodels"><span class="std std-ref">XML model file</span></a>, see <a class="reference internal" href="#parsermodes"><span class="std std-ref">parser modes</span></a> for details.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OPTION</p></td>
+<td><p>No</p></td>
+<td><p>Parser options: {<strong>v</strong> = print debug logs}.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="parsermodes"></span><table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Parser Modes</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 35.0%" />
+<col style="width: 10.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Exclusive</p></th>
+<th class="head"><p>Use of <a class="reference internal" href="#custommodels"><span class="std std-ref">XML model file</span></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>skin</p></td>
+<td><p>Parse &lt;Skin&gt; XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p>Optional, overwrite &lt;Skin&gt; default.</p></td>
+</tr>
+<tr class="row-odd"><td><p>menu</p></td>
+<td><p>Parse &lt;MenuBar&gt; XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p>Optional, overwrite &lt;MenuBar&gt; default.</p></td>
+</tr>
+<tr class="row-even"><td><p>tutorial</p></td>
+<td><p>Parse &lt;TutorialHelpCollection&gt; XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p>Optional, overwrite &lt;TutorialHelpCollection&gt; default.</p></td>
+</tr>
+<tr class="row-odd"><td><p>metainfo</p></td>
+<td><p>Parse &lt;MetaInformation&gt; XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p>Optional, overwrite &lt;MetaInformation&gt; default.</p></td>
+</tr>
+<tr class="row-even"><td><p>template</p></td>
+<td><p>Parse &lt;DocumentTemplate&gt; XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p>Optional, overwrite &lt;DocumentTemplate&gt; default.</p></td>
+</tr>
+<tr class="row-odd"><td><p>custom</p></td>
+<td><p>Parse custom format XML files.</p></td>
+<td><p>Yes</p></td>
+<td><p><strong>Required</strong>, specify custom XML format.</p></td>
+</tr>
+<tr class="row-even"><td><p>auto</p></td>
+<td><p>Parse files of any supported content type, see <a class="reference internal" href="#autoscansupported"><span class="std std-ref">auto scan supported format</span></a></p></td>
+<td><p>No</p></td>
+<td><p>Optional, add additional formats, overwrite built-in formats.</p></td>
+</tr>
+<tr class="row-odd"><td><p>code</p></td>
+<td><p>Parse source files, supported file extensions: .cpp, .h, .js, .mm.</p></td>
+<td><p>Yes</p></td>
+<td><p>Unsupported.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exclusive</strong>: parse the specified content type only, ignore other formats even if supported.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Run xstring without any arguments to get a usage description.</p>
+</div>
+<p><strong>Usage examples:</strong></p>
+<p>Parse any supported file format from /path/, create result file /path/output.po in gettext format:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>xstring /path/ /path/output.po
+</pre></div>
+</div>
+<p>Parse skin XML files from /path/to/skin, create result file /path/skin.po in gettext format:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>xstring -skin /path/to/skin -po /path/skin.po
+</pre></div>
+</div>
+<p>Parse custom XML format from /path/to/custom, create result file /path/custom.po, use model definition from file custom.json, print debug logs:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>xstring -custom /path/to/custom -po /path/custom.po custom.json -v
+</pre></div>
+</div>
+</section>
+<section id="auto-scan">
+<span id="autoscansupported"></span><h2>Auto scan<a class="headerlink" href="#auto-scan" title="Link to this heading"></a></h2>
+<p>Scan mode ‘-auto’ allows to read any supported content type from a given input directy without the need to explicitly specify an expected input file format. It enables the user to extract strings from multiple files of different format in a single scan. Auto scan supports the following file formats:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 70.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Format Description</p></th>
+<th class="head"><p>CCL Defined</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;Skin&gt; XML</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;MenuBar&gt; XML</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;TutorialHelpCollection&gt; XML</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;MetaInformation&gt; XML</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;DocumentTemplate&gt; XML</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Android &lt;resources&gt; XML</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>Annotated source code (.cpp, .h, .js, .mm)</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="xml-model-format">
+<span id="custommodels"></span><h2>XML model format<a class="headerlink" href="#xml-model-format" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Introduction<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>The String Extractor tool supports parsing of custom XML based formats. Parser rules (XML models) are defined via a JSON model file. The file format is:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SomeRootName&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mandatory, expected root element name.</span>
+<span class="w">    </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">      </span><span class="c1">// Optional, root element conditions (file is skipped on mismatch)</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XML&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mandatory, expected file extensions.</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Optional, scope rule applied for all matchers.</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// List of matchers</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With the matcher structure being:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// matcher attributes depending on matcher type, see reference below</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Optional, matcher specific scope rule (overrides model level scope)</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// Optional, list of conditions, AND-combined</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Model</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">root</span></code> element <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute denotes the expected XML file root element name. The String Extractor uses it to match XML files to models. The <code class="docutils literal notranslate"><span class="pre">extensions</span></code> value denotes the file extension for this model and causes the String Extractor to not skip this file type when traversing a directory. Note that different XML formats may share the same file extension.</p>
+<p><strong>Matchers</strong></p>
+<p>Matchers define which attributes to read from the XML file. Matchers are evaluated per XML node when the String Extractor traverses the XML tree. Matchers are OR-combined: a single XML node may satisfy multiple matchers resulting in multiple strings being returned from the same node.</p>
+<p><strong>Conditions</strong></p>
+<p>Conditions add additional constraints to a matcher. The parser requires all conditions to be satisfied to export a certain attribute. Conditions are AND-combined.</p>
+<p><strong>Scopes</strong></p>
+<p>Scopes define which string scope is exported. A scope rule can be defined on model or matcher level. Matcher level rules override the model level (global) rule. If a matcher level rule can not return a scope, the parser attempts to fallback to the model level scope.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Simplified examples for these concepts can be found <a class="reference internal" href="#modelexamples"><span class="std std-ref">here</span></a>, a production example file can be found <a class="reference internal" href="#skinmodel"><span class="std std-ref">here</span></a>.</p>
+</div>
+</section>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<p>Some model convenience features:</p>
+<p><strong>Combining models</strong></p>
+<p>A single model JSON file may contain multiple models:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;models&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// model 1</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// model 2</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Model inheritance</strong></p>
+<p>A model for which a <code class="docutils literal notranslate"><span class="pre">root</span></code> is set typically adds support for this XML format or replaces an existing model for this format entirely. If a built-in model should be reused but for a different file extension, the <code class="docutils literal notranslate"><span class="pre">inherit</span></code> attribute can be used over <code class="docutils literal notranslate"><span class="pre">root</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;inherit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DocumentTemplate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apptemplate&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example, the parser loads the <em>DocumentTemplate</em> built-in format but replaces its associated file extension to <em>apptemplate</em>. Note that if <code class="docutils literal notranslate"><span class="pre">inherit</span></code> is set, further configuration attributes such as scope rules or matchers will be ignored.</p>
+<p>Avoid specifying multiple models for the same format as the parser can register a single model per format only. When the parser loads a model it may overwrite an existing one if the format (root or inherited) was previously registered. Thus, if the same model is to be used for multiple file extensions, specify the extensions as a list but in a single model definition:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="c1">// Correct: both extensions are registered for &lt;DocumentTemplate&gt;</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;inherit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DocumentTemplate&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;apptemplate1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;apptemplate2&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">// Wrong: only apptemplate2 is registered for &lt;DocumentTemplate&gt;</span>
+<span class="nt">&quot;models&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;inherit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DocumentTemplate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apptemplate1&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;inherit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DocumentTemplate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apptemplate2&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="xml-model-reference">
+<h2>XML model reference<a class="headerlink" href="#xml-model-reference" title="Link to this heading"></a></h2>
+<section id="overview">
+<span id="modeloverview"></span><h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p><strong>Matchers</strong>: [<a class="reference internal" href="#attributematcher"><span class="std std-ref">Attribute</span></a>] [<a class="reference internal" href="#elementmatcher"><span class="std std-ref">Element</span></a>] <strong>Conditions:</strong> [<a class="reference internal" href="#attributecondition"><span class="std std-ref">Attribute Sibling</span></a>] [<a class="reference internal" href="#elementcondition"><span class="std std-ref">Element Name</span></a>] <strong>Scopes:</strong> [<a class="reference internal" href="#staticscope"><span class="std std-ref">Static Value</span></a>] [<a class="reference internal" href="#parentscope"><span class="std std-ref">Parent Element Attribute</span></a>]</p>
+<hr class="docutils" />
+</section>
+<section id="matcher-attribute">
+<span id="attributematcher"></span><h3>Matcher: attribute<a class="headerlink" href="#matcher-attribute" title="Link to this heading"></a></h3>
+<p>Semantic: parse all attributes of a certain name, irregardless of the element.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “attribute”</p></li>
+<li><p><strong>name</strong> {<em>string</em>}: required, name of the attribute to match, must be single value</p></li>
+<li><p><strong>options</strong> {<em>string, stringlist</em>}: optional, string processing options</p>
+<ul>
+<li><p>split: tokenize comma separated string</p></li>
+</ul>
+</li>
+<li><p><strong>scope</strong> {<em>scope handler</em>}: optional, define scope to export for this string</p></li>
+<li><p><strong>conditions</strong> {<em>list of conditions</em>}: optional, matcher constraints</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Example: parse all ‘text’ attributes.</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;split&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+<hr class="docutils" />
+</section>
+<section id="matcher-element">
+<span id="elementmatcher"></span><h3>Matcher: element<a class="headerlink" href="#matcher-element" title="Link to this heading"></a></h3>
+<p>Semantic: Parse all elements of a certain name, read string from the element text or an element attribute.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “element”</p></li>
+<li><p><strong>name</strong> {<em>string</em>}: required, name of the element to match</p></li>
+<li><p><strong>text</strong> {<em>bool</em>}: optional, try to read string from element text before <em>attribute</em> (default: off)</p></li>
+<li><p><strong>attribute</strong> {<em>string, stringlist</em>}: required for <em>text</em> off: name of the attribute to read string from, priority list, has no effect if <em>text</em> option is enabled and already returned a value</p></li>
+<li><p><strong>options</strong> {<em>string, stringlist</em>}: optional, string processing options</p>
+<ul>
+<li><p>split: tokenize comma separated string</p></li>
+</ul>
+</li>
+<li><p><strong>scope</strong> {<em>scope handler</em>}: optional, define scope to export for this string</p></li>
+<li><p><strong>conditions</strong> {<em>list of conditions</em>}: optional, matcher constraints</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Example: Parse ‘text’ attribute for all &lt;DemoElement&gt;, use ‘name’ or ‘label’ attribute if ‘text’ attribute does not exist, split value into tokens.</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoElement&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;attribute&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;label&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;split&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Example: Parse &lt;DemoElement&gt; element text</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoElement&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+<hr class="docutils" />
+</section>
+<section id="condition-attribute-sibling">
+<span id="attributecondition"></span><h3>Condition: attribute sibling<a class="headerlink" href="#condition-attribute-sibling" title="Link to this heading"></a></h3>
+<p>Semantic: Current node has another (or same) attribute with a certain value.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “attribute”</p></li>
+<li><p><strong>name</strong> {<em>string</em>}: required, name of the attribute to compare to</p></li>
+<li><p><strong>value</strong> {<em>string</em>}: required, expected value of the attribute that is compared to</p></li>
+<li><p><strong>operator</strong> {<em>string</em>}: optional, comparison type</p>
+<ul>
+<li><p>equal</p></li>
+<li><p>notequal</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Example: node must have a ‘type’ attribute with value ‘string’.</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+<hr class="docutils" />
+</section>
+<section id="condition-element-name">
+<span id="elementcondition"></span><h3>Condition: element name<a class="headerlink" href="#condition-element-name" title="Link to this heading"></a></h3>
+<p>Semantic: Current node must have certain element name.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “element”</p></li>
+<li><p><strong>name</strong> {<em>string</em>}: required, element name to match</p></li>
+<li><p><strong>operator</strong> {<em>string</em>}: optional, comparison type</p>
+<ul>
+<li><p>equal</p></li>
+<li><p>notequal</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Example: current node must be &lt;Parameter&gt;</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+<hr class="docutils" />
+</section>
+<section id="scope-static">
+<span id="staticscope"></span><h3>Scope: static<a class="headerlink" href="#scope-static" title="Link to this heading"></a></h3>
+<p>Semantic: constant scope value.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “static”</p></li>
+<li><p><strong>value</strong> {<em>string</em>}: required, scope string value to use</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Example: set scope to “[SomeText]”</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SomeText&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+<hr class="docutils" />
+</section>
+<section id="scope-parent-attribute">
+<span id="parentscope"></span><h3>Scope: parent attribute<a class="headerlink" href="#scope-parent-attribute" title="Link to this heading"></a></h3>
+<p>Semantic: Use parent element attribute value as scope.</p>
+<p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>kind</strong> {<em>string</em>}: required, object id for internal use, must be “parent”</p></li>
+<li><p><strong>element</strong> {<em>string, stringlist</em>}: required, name of the parent element, priority list</p></li>
+<li><p><strong>attribute</strong> {<em>string, stringlist</em>}: required, name of parent attribute to use, priority list</p></li>
+<li><p><strong>fallback</strong> {<em>string</em>}: optional, constant string value to use as fallback (default value)</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Example: use ‘name’ attribute of parent &lt;ParentName&gt;, use ‘SomeText’ if there is no &lt;ParentName&gt; parent.</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;parent&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;element&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;ParentName&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;AltParentName&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;attribute&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;label&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;fallback&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SomeText&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>-&gt; <a class="reference internal" href="#modeloverview"><span class="std std-ref">Back to overview</span></a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="xml-model-examples">
+<h2>XML model examples<a class="headerlink" href="#xml-model-examples" title="Link to this heading"></a></h2>
+<p id="modelexamples">Here are a few model examples:</p>
+<section id="attribute-matcher">
+<h3>Attribute matcher<a class="headerlink" href="#attribute-matcher" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Parse all ‘text’ attributes, irregardless of element name.</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoFormat&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="element-matcher">
+<h3>Element matcher<a class="headerlink" href="#element-matcher" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Parse ‘text’ attribute from all &lt;DemoElement&gt;.</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoFormat&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoElement&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;attribute&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;text&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="element-condition">
+<h3>Element condition<a class="headerlink" href="#element-condition" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Parse ‘text’ attribute if element name is not ‘Parameter’.</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoFormat&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notequal&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="root-element-filter">
+<h3>Root element filter<a class="headerlink" href="#root-element-filter" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Skip file if root element does not have a ‘localization’ attribute</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoFormat&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localization&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notequal&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="static-scope">
+<h3>Static scope<a class="headerlink" href="#static-scope" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Parse all ‘text’ attributes, irregardless of element name. Export each string with scope ‘TestScope’.</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DemoFormat&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TestScope&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="skin-model">
+<span id="skinmodel"></span><h3>Skin model<a class="headerlink" href="#skin-model" title="Link to this heading"></a></h3>
+<p>Production example: this is the model definition for the built-in <cite>&lt;Skin&gt;</cite> format, with added comments for illustration purposes:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;root&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Skin&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="c1">// For all elements: use the parent element name as scope</span>
+<span class="w">  </span><span class="c1">// if a parent named Form, WindowClass or Perspective</span>
+<span class="w">  </span><span class="c1">// exists, use &#39;Skin&#39; otherwise.</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;parent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;element&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;Form&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;WindowClass&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;Perspective&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;attribute&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fallback&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Skin&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;matchers&quot;</span><span class="p">:</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// Parse title attribute from any element.</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse tooltip attribute from any element.</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tooltip&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse placeholder attribute from any element.</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;placeholder&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse command.name attribute from any element but</span>
+<span class="w">    </span><span class="c1">// use &quot;Command&quot; as scope (overrides model level &#39;parent&#39;</span>
+<span class="w">    </span><span class="c1">// scope rule).</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;command.name&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Command&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse command.category attribute from any element but</span>
+<span class="w">    </span><span class="c1">// use &quot;Command&quot; as scope (overrides model level &#39;parent&#39;</span>
+<span class="w">    </span><span class="c1">// scope rule).</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;command.category&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Command&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse range attribute from all &lt;Parameter&gt; elements</span>
+<span class="w">    </span><span class="c1">// if the sibling &#39;type&#39; attribute value is &#39;string&#39;.</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;range&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// Parse range attribute from all &lt;Parameter&gt; elements</span>
+<span class="w">    </span><span class="c1">// if the sibling &#39;type&#39; attribute value is &#39;list&#39;.</span>
+<span class="w">    </span><span class="c1">// Stringsplit the list value into separate tokens.</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;range&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;split&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span>
+<span class="w">      </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;list&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="version-history">
+<span id="changelog"></span><h2>Version history<a class="headerlink" href="#version-history" title="Link to this heading"></a></h2>
+<section id="changelog-v1-2-0">
+<h3>Changelog v1.2.0<a class="headerlink" href="#changelog-v1-2-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>scan mode ‘-auto’ supports Android resources XML files as built-in format</p></li>
+</ul>
+</section>
+<section id="changelog-v1-1-2">
+<h3>Changelog v1.1.2<a class="headerlink" href="#changelog-v1-1-2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>change built-in skin parser to scan ‘placeholder’ attribute on all elements</p></li>
+</ul>
+</section>
+<section id="changelog-v1-1-1">
+<h3>Changelog v1.1.1<a class="headerlink" href="#changelog-v1-1-1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>parse &lt;MetaInformation&gt; ‘Package:Name’</p></li>
+</ul>
+</section>
+<section id="changelog-v1-1-0">
+<h3>Changelog v1.1.0<a class="headerlink" href="#changelog-v1-1-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>maintain XML formats as JSON model files</p></li>
+<li><p>added <em>-custom</em> parser mode: scan custom XML formats</p></li>
+<li><p>added <em>-auto</em> parser mode: scan any known content type</p></li>
+<li><p>added support for built-in <em>meta information</em> format</p></li>
+<li><p>added support for built-in <em>document template</em> format</p></li>
+<li><p>improved logging</p></li>
+<li><p>added <em>-v</em> option to toggle debug logs</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modeller.html" class="btn btn-neutral float-left" title="CCL Modeller" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reference/index.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

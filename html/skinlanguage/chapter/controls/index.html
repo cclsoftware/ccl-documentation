@@ -1,27 +1,25 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Controls &mdash; CCL Cross-platform Framework Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/target-highlight.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/target-highlight.js?v=df7d332b"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -53,23 +51,30 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclframework/index.html">CCL Cross-platform Framework</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">CCL Skin Definition Language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Controls</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#control-rendering">Control Rendering</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colorscheme/index.html">Color Scheme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
 
@@ -99,12 +104,12 @@
            <div itemprop="articleBody">
              
   <section id="controls">
-<h1>Controls<a class="headerlink" href="#controls" title="Permalink to this heading"></a></h1>
+<h1>Controls<a class="headerlink" href="#controls" title="Link to this heading"></a></h1>
 <p>The CCL framework provides a rich set of standard control types like buttons, check boxes, text edits, etc. as well as more complex controls like list views and tree views. Please see the reference section for a complete list of supported controls.</p>
 <p>The colors, bitmaps, fonts, etc. that make up the appearance of a control on screen can be defined separately as <a class="reference internal" href="../styles/index.html#visual-styles"><span class="std std-ref">visual styles</span></a>. This concept borrows some aspects from CSS used in HTML rendering. A visual style is defined once and can be shared among multiple controls. Additionally, controls provide special options for their behavior on a per-instance basis.</p>
 <p>Controls described in the skin XML definition are bound to parameters provided by the underlying component tree. This separates the graphical representation from the controller logic in the code behind. The parameter concept allows multiple controls to connect to the same parameter and it updates all representations automatically without further coding. For example, a parameter can be attached to a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>&gt; and a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>&gt; at the same time.</p>
 <section id="control-rendering">
-<h2>Control Rendering<a class="headerlink" href="#control-rendering" title="Permalink to this heading"></a></h2>
+<h2>Control Rendering<a class="headerlink" href="#control-rendering" title="Link to this heading"></a></h2>
 <p>In general, controls are updated on screen within the paint interval of a window provided by the operating system. The whole view tree is redrawn in an optimized way, where only areas which have been previously invalidated are actually updated. Invalidation is usually caused by parameter changes emited by the underlying component tree.</p>
 <p>There are scenarios where bypassing the regular paint interval results in better performance, e.g. when animated controls need to update very fast. This mechanism is called “direct update”. Only the rectangular region of a single control is updated at a time, without checking the whole view tree for invalidated regions. For direct update to work correctly controls must not overlap and they must be able to redraw their background completely opaque. To use alpha-transparency with directly updated controls an option for background composition can be set, where the control takes the background bitmap underneath in the nesting tree to redraw its background.</p>
 <p>Some controls can be set to transparent, which means they react on mouse or keyboard input but do not render anything on screen.</p>
@@ -122,8 +127,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Apr 28, 2025.
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
       </span></p>
   </div>
 

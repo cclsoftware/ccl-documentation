@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::Styles::CommonStyleFlags &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Styles::DialogStyleFlags" href="enum_CCL_Styles_DialogStyleFlags.html" />
+    <link rel="prev" title="enum CCL::Styles::ButtonOrder" href="enum_CCL_Styles_ButtonOrder.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_view.html">Views</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_dialog.html">Dialogs</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_Styles.html">namespace CCL::Styles</a></li>
+      <li class="breadcrumb-item active">enum CCL::Styles::CommonStyleFlags</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-styles-commonstyleflags">
+<span id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2"></span><span id="index-0"></span><h1>enum CCL::Styles::CommonStyleFlags<a class="headerlink" href="#enum-ccl-styles-commonstyleflags" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Common view styles. <a class="reference internal" href="#details-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;styleflags.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">CommonStyleFlags</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2ad4149164ae4bf90011d92a3dbfcce742"><span class="std std-ref">kHorizontal</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a4764485d9d221af213bf2b2769cdfc54"><span class="std std-ref">kVertical</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a33fa0f3e3003c9f9d370b560ab7e0b4c"><span class="std std-ref">kBorder</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2af09b7ed6b3945c1bd4dae9b5e7fc45d0"><span class="std std-ref">kTransparent</span></a><span></span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a4346f5b2a3703ccc94e0f58b6d8812cc"><span class="std std-ref">kDirectUpdate</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">4</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2aa6afdf1a26392f30216f83c7588a57d0"><span class="std std-ref">kComposited</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">5</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a97f016c4c49ae4530df445497a4b01a4"><span class="std std-ref">kTranslucent</span></a><span></span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">6</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2acfb2d0c5d492cc80b3b1340d3c5abeba"><span class="std std-ref">kTrigger</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">7</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2af99aeb93b2774bc0c7856d1510d17a54"><span class="std std-ref">kSmall</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2aa9953673f54fd9f854de23739ebe2f7a"><span class="std std-ref">kLeft</span></a><span></span>         <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">9</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a28e0f004d9fc43a042d60286f37b6889"><span class="std std-ref">kRight</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">10</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a09c5680c9d539b0b0a98b334b873bfd8"><span class="std std-ref">kMiddle</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">11</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2abf7a6f5f6d6138eadb511666468c998b"><span class="std std-ref">kLayerUpdate</span></a><span></span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">12</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a0196e8c58ec49fef52c9e2b6bb27d022"><span class="std std-ref">kNoHelpId</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">13</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Common view styles.</p>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2ad4149164ae4bf90011d92a3dbfcce742"><span id="index-1"></span><span></span><span class="n">kHorizontal</span></pre>
+<p>control orientation</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a4764485d9d221af213bf2b2769cdfc54"><span id="index-2"></span><span></span><span class="n">kVertical</span></pre>
+<p>control orientation</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a33fa0f3e3003c9f9d370b560ab7e0b4c"><span id="index-3"></span><span></span><span class="n">kBorder</span></pre>
+<p>usually default</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2af09b7ed6b3945c1bd4dae9b5e7fc45d0"><span id="index-4"></span><span></span><span class="n">kTransparent</span></pre>
+<p>don’t draw background</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a4346f5b2a3703ccc94e0f58b6d8812cc"><span id="index-5"></span><span></span><span class="n">kDirectUpdate</span></pre>
+<p>redraw control directly</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2aa6afdf1a26392f30216f83c7588a57d0"><span id="index-6"></span><span></span><span class="n">kComposited</span></pre>
+<p>use parent background when updated directly</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a97f016c4c49ae4530df445497a4b01a4"><span id="index-7"></span><span></span><span class="n">kTranslucent</span></pre>
+<p>alpha channel needs to be respected</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2acfb2d0c5d492cc80b3b1340d3c5abeba"><span id="index-8"></span><span></span><span class="n">kTrigger</span></pre>
+<p>enable property triggers</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2af99aeb93b2774bc0c7856d1510d17a54"><span id="index-9"></span><span></span><span class="n">kSmall</span></pre>
+<p>smaller variant</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2aa9953673f54fd9f854de23739ebe2f7a"><span id="index-10"></span><span></span><span class="n">kLeft</span></pre>
+<p>left variant</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a28e0f004d9fc43a042d60286f37b6889"><span id="index-11"></span><span></span><span class="n">kRight</span></pre>
+<p>right variant</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a09c5680c9d539b0b0a98b334b873bfd8"><span id="index-12"></span><span></span><span class="n">kMiddle</span></pre>
+<p>middle variant</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2abf7a6f5f6d6138eadb511666468c998b"><span id="index-13"></span><span></span><span class="n">kLayerUpdate</span></pre>
+<p>each invalidate also forces updating sub layers of all child views (deep)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a794647c31e51159a5164fd90fe3ffcd2a0196e8c58ec49fef52c9e2b6bb27d022"><span id="index-14"></span><span></span><span class="n">kNoHelpId</span></pre>
+<p>deliver empty help identifier (instead of delegating to parent): siblings (underneath) will get a chance to contribute a help id</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_Styles_ButtonOrder.html" class="btn btn-neutral float-left" title="enum CCL::Styles::ButtonOrder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Styles_DialogStyleFlags.html" class="btn btn-neutral float-right" title="enum CCL::Styles::DialogStyleFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

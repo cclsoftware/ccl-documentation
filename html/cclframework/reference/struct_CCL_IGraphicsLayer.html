@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::IGraphicsLayer &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::IGraphicsLayer::Modes" href="enum_CCL_IGraphicsLayer_Modes.html" />
+    <link rel="prev" title="enum CCL::Internal::IGraphicsHelper::ColorFormatFlags" href="enum_CCL_Internal_IGraphicsHelper_ColorFormatFlags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_graphics.html">Graphics</a></li>
+      <li class="breadcrumb-item active">struct CCL::IGraphicsLayer</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-igraphicslayer">
+<span id="doxid-struct-c-c-l-1-1-i-graphics-layer"></span><span id="index-0"></span><h1>struct CCL::IGraphicsLayer<a class="headerlink" href="#struct-ccl-igraphicslayer" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Graphics layers are surfaces which allow content to be rendered, transformed, and animated efficiently by the system compositor with hardware-accelleration if supported by the underlying platform. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-graphics-layer"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;igraphicslayer.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">IGraphicsLayer</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_IGraphicsLayer_Modes.html#doxid-struct-c-c-l-1-1-i-graphics-layer-1a5ba261125d0e6e60801792a10232cc09"><span class="std std-ref">Modes</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1aa35d1f002e532192d2cba217850c14fd"><span class="std std-ref">construct</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">content</span><span class="p">,</span>
+        <span class="n">RectRef</span> <span class="n">bounds</span> <span class="o">=</span> <span class="n">Rect</span> <span class="p">(),</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">contentScaleFactor</span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ae688dfcf112573b5297032fc9460d523"><span class="std std-ref">setContent</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">content</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab04265e14c9f454a94b21e3f03df7498"><span class="std std-ref">setOffset</span></a><span></span> <span class="p">(</span><span class="n">PointRef</span> <span class="n">offset</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1abc94b8df67d2d5c17432a65b63324f8b"><span class="std std-ref">setOffsetX</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offsetX</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ae6af3bc77620b4d99e01d9a50d0baa38"><span class="std std-ref">setOffsetY</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offsetY</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab492e50241f1edf32145ef783c36154a"><span class="std std-ref">setSize</span></a><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">width</span><span class="p">,</span> <span class="n">Coord</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1adb78ee677f6b68c9319328128825a65c"><span class="std std-ref">setMode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">mode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab16f7e32f4e4c7ef5985fee14abcf49f"><span class="std std-ref">setOpacity</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">opacity</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab7cea07c62cb66970de4412dfcbcafc9"><span class="std std-ref">setTransform</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">transform</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1af1b6a99a0add20b0088fbf650ec46efb"><span class="std std-ref">setContentScaleFactor</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">factor</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a26adcdadba180a24ecfc71906c2dfbdf"><span class="std std-ref">setUpdateNeeded</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab9bf146847bc3ba18bcd1b9a84dd4fe7"><span class="std std-ref">setUpdateNeeded</span></a><span></span> <span class="p">(</span><span class="n">RectRef</span> <span class="n">rect</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a22cea23ab4e3e66f16efe21146c1fb7f"><span class="std std-ref">getParentLayer</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a8200ec4536f22bc011cfc24e650fc478"><span class="std std-ref">addSublayer</span></a><span></span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1aa55971d0c2526f1137b85bfb53a91102"><span class="std std-ref">removeSublayer</span></a><span></span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a32d9df663f89f284f94412dae47c4621"><span class="std std-ref">placeAbove</span></a><span></span> <span class="p">(</span>
+        <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">,</span>
+        <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">sibling</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a527c1d5be8bae94461eda523c95ccddc"><span class="std std-ref">placeBelow</span></a><span></span> <span class="p">(</span>
+        <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">,</span>
+        <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">sibling</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a6961a72106aa82261cc9b6fcd717e0a9"><span class="std std-ref">getNextSibling</span></a><span></span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a79470e49d185a94027b1fa74370de0dc"><span class="std std-ref">getPreviousSibling</span></a><span></span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1aa0251d81322f04a1431c10982485a465"><span class="std std-ref">addAnimation</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">animation</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ae9985f80f72e3895b2bce982938be4d6"><span class="std std-ref">removeAnimation</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a90f74d897e35aaa33eea74fbd1211b13"><span class="std std-ref">getPresentationProperty</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span>
+    <span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1ab669f8a26e9a969efe646ca327617f57"><span class="std std-ref">flush</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a79229e7d019b539a6eeab3706d5461b7"><span class="std std-ref">suspendTiling</span></a><span></span> <span class="p">(</span><span class="n">tbool</span> <span class="n">suspend</span><span class="p">,</span> <span class="k">const</span> <span class="n">Rect</span><span class="o">*</span> <span class="n">visibleRect</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a9a2f55490207cce467d4bde0c09add10"><span class="std std-ref">setTileSize</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a20a8fec36c568cd4589f81b98b55066a"><span class="std std-ref">setBackColor</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-graphics-layer-1a2d34e888e4f1d7d0e271b9c1bc2a5790"><span class="std std-ref">DECLARE_STRINGID_MEMBER</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ab9c4efc6093a489a6724e97065d8d42e"><span class="std std-ref">kOpacity</span></a><span></span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-i-graphics-layer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Graphics layers are surfaces which allow content to be rendered, transformed, and animated efficiently by the system compositor with hardware-accelleration if supported by the underlying platform.</p>
+<p>On Windows, layers are implemented via DirectComposition, and with <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core"><span class="std std-ref">Core</span></a> Animation on macOS/iOS. On <a class="reference internal" href="namespace_CCL_Linux.html#doxid-namespace-c-c-l-1-1-linux"><span class="std std-ref">Linux</span></a>, layers are implemented using wl_subsurface.</p>
+<p>Graphics layers are rendered above any view elements that are not rendered as layer content. Layers can be nested. Sublayers are rendered above parent layers and previous siblings.</p>
+<p>The position of a layer, relative to its parent, is determined by its offset.</p>
+<p>Layers are always clipped at the window boundaries. Additional clipping behavior depends on <em>Modes</em> flags. When <em>kClipToBounds</em> is set, contents of the layer and all sublayers are clipped at the layer boundaries, determined by its size and offset.</p>
+<p>While the layer’s offset affects the position of the layer itself, an additional transform can be used to rotate, translate, or scale the layer content. This transform does not affect the offset, size, or clipping rectangle of the layer.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1aa35d1f002e532192d2cba217850c14fd"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">construct</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">content</span><span class="p">,</span>
+    <span class="n">RectRef</span> <span class="n">bounds</span> <span class="o">=</span> <span class="n">Rect</span> <span class="p">(),</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">contentScaleFactor</span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Construct a graphics layer.</p>
+<p>The layer will become visible on screen in the next update cycle of the compositor or when flush is called.</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>content</p></td>
+<td><p>The initial layer content, either an <a class="reference internal" href="struct_CCL_IBitmap.html#doxid-struct-c-c-l-1-1-i-bitmap"><span class="std std-ref">IBitmap</span></a> or an <a class="reference internal" href="struct_CCL_IGraphicsLayerContent.html#doxid-struct-c-c-l-1-1-i-graphics-layer-content"><span class="std std-ref">IGraphicsLayerContent</span></a> implementation.</p></td>
+</tr>
+<tr class="row-even"><td><p>bounds</p></td>
+<td><p>The boundaries of the layer. The top-left corner of this rect is used as the initial offset. Width and height of this rect determine the intial size.</p></td>
+</tr>
+<tr class="row-odd"><td><p>mode</p></td>
+<td><p>A combination of <em>Modes</em> flags.</p></td>
+</tr>
+<tr class="row-even"><td><p>contentScaleFactor</p></td>
+<td><p>The initial content scale factor of the layer.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ae688dfcf112573b5297032fc9460d523"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setContent</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">content</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the layer content, either an <a class="reference internal" href="struct_CCL_IBitmap.html#doxid-struct-c-c-l-1-1-i-bitmap"><span class="std std-ref">IBitmap</span></a> or an <a class="reference internal" href="struct_CCL_IGraphicsLayerContent.html#doxid-struct-c-c-l-1-1-i-graphics-layer-content"><span class="std std-ref">IGraphicsLayerContent</span></a> implementation.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab04265e14c9f454a94b21e3f03df7498"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setOffset</span> <span class="p">(</span><span class="n">PointRef</span> <span class="n">offset</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the position of the layer, relative to its parent.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1abc94b8df67d2d5c17432a65b63324f8b"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setOffsetX</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offsetX</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the horizontal position of the layer, relative to its parent.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ae6af3bc77620b4d99e01d9a50d0baa38"><span id="index-5"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setOffsetY</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">offsetY</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the vertical position of the layer, relative to its parent.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab492e50241f1edf32145ef783c36154a"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setSize</span> <span class="p">(</span><span class="n">Coord</span> <span class="n">width</span><span class="p">,</span> <span class="n">Coord</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the size of the layer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1adb78ee677f6b68c9319328128825a65c"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setMode</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">mode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set mode flags, see <em>Modes</em>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab16f7e32f4e4c7ef5985fee14abcf49f"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setOpacity</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">opacity</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the opacity of the layer content.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab7cea07c62cb66970de4412dfcbcafc9"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setTransform</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad2b08eb5a63721372c52435cc7540582"><span class="std std-ref">TransformRef</span></a><span></span> <span class="n">transform</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set a transform that is applied to the layer content.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1af1b6a99a0add20b0088fbf650ec46efb"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setContentScaleFactor</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">factor</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set the points to pixels scaling factor.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a26adcdadba180a24ecfc71906c2dfbdf"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setUpdateNeeded</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Invalidate the layer.</p>
+<p>Multiple changes are collected and will become visible on screen in the next update cycle of the compositor or when flush is called.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab9bf146847bc3ba18bcd1b9a84dd4fe7"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setUpdateNeeded</span> <span class="p">(</span><span class="n">RectRef</span> <span class="n">rect</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Invalidate part of the layer.</p>
+<p>Multiple changes are collected and will become visible on screen in the next update cycle of the compositor or when flush is called.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a22cea23ab4e3e66f16efe21146c1fb7f"><span id="index-13"></span><span></span><span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <span class="n">getParentLayer</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the parent layer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a8200ec4536f22bc011cfc24e650fc478"><span id="index-14"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">addSublayer</span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Add a sublayer.</p>
+<p>New layers are always drawn on top of previous sublayers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1aa55971d0c2526f1137b85bfb53a91102"><span id="index-15"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">removeSublayer</span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Remove a sublayer.</p>
+<p>If currently visible, the layer will become invisible in the next update cycle of the compositor or when flush is called.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a32d9df663f89f284f94412dae47c4621"><span id="index-16"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">placeAbove</span> <span class="p">(</span>
+    <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">,</span>
+    <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">sibling</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Change layer order, so that the given child layer is drawn right after the given <em>sibling</em>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a527c1d5be8bae94461eda523c95ccddc"><span id="index-17"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">placeBelow</span> <span class="p">(</span>
+    <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">,</span>
+    <span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">sibling</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Change layer order, so that the given child layer is drawn right before the given <em>sibling</em>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a6961a72106aa82261cc9b6fcd717e0a9"><span id="index-18"></span><span></span><span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <span class="n">getNextSibling</span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the sibling after the given child layer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a79470e49d185a94027b1fa74370de0dc"><span id="index-19"></span><span></span><span class="k">virtual</span> <span class="n">IGraphicsLayer</span><span class="o">*</span>CCL_API<span></span> <span class="n">getPreviousSibling</span> <span class="p">(</span><span class="n">IGraphicsLayer</span><span class="o">*</span> <span class="n">layer</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Get the sibling before the given child layer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1aa0251d81322f04a1431c10982485a465"><span id="index-20"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">addAnimation</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">animation</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Add an animation.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ae9985f80f72e3895b2bce982938be4d6"><span id="index-21"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">removeAnimation</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Remove an animation.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a90f74d897e35aaa33eea74fbd1211b13"><span id="index-22"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getPresentationProperty</span> <span class="p">(</span>
+    <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span>
+<span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>While an animation is running, get a property of the currently displayed state.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1ab669f8a26e9a969efe646ca327617f57"><span id="index-23"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">flush</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Commit pending changes to graphics hardware.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a79229e7d019b539a6eeab3706d5461b7"><span id="index-24"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">suspendTiling</span> <span class="p">(</span><span class="n">tbool</span> <span class="n">suspend</span><span class="p">,</span> <span class="k">const</span> <span class="n">Rect</span><span class="o">*</span> <span class="n">visibleRect</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Stop using tiles for drawing, only paint into visibleRect instead.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a9a2f55490207cce467d4bde0c09add10"><span id="index-25"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setTileSize</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set tile size in points.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a20a8fec36c568cd4589f81b98b55066a"><span id="index-26"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">setBackColor</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Set background color.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-graphics-layer-1a2d34e888e4f1d7d0e271b9c1bc2a5790"><span id="index-27"></span><span></span><span class="n">DECLARE_STRINGID_MEMBER</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ab9c4efc6093a489a6724e97065d8d42e"><span class="std std-ref">kOpacity</span></a><span></span><span class="p">)</span></pre>
+<p>&lt; float</p>
+<p>&lt; float &lt;<a class="reference internal" href="struct_CCL_IUIValue.html#doxid-struct-c-c-l-1-1-i-u-i-value"><span class="std std-ref">IUIValue</span></a> (Point or PointF) &lt;<a class="reference internal" href="struct_CCL_IUIValue.html#doxid-struct-c-c-l-1-1-i-u-i-value"><span class="std std-ref">IUIValue</span></a> (<a class="reference internal" href="struct_CCL_Transform.html#doxid-struct-c-c-l-1-1-transform"><span class="std std-ref">Transform</span></a>)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_Internal_IGraphicsHelper_ColorFormatFlags.html" class="btn btn-neutral float-left" title="enum CCL::Internal::IGraphicsHelper::ColorFormatFlags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_IGraphicsLayer_Modes.html" class="btn btn-neutral float-right" title="enum CCL::IGraphicsLayer::Modes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

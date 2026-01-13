@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android Startup Sequence &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="File system and URLs" href="filesystem_urls.html" />
+    <link rel="prev" title="Application Phases" href="phases.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Android Startup Sequence</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#call-stack">Call stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#call-details">Call details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Android Startup Sequence</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="android-startup-sequence">
+<h1>Android Startup Sequence<a class="headerlink" href="#android-startup-sequence" title="Link to this heading"></a></h1>
+<section id="call-stack">
+<h2>Call stack<a class="headerlink" href="#call-stack" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">block</span>
+  <span class="n">FrameworkActivity</span><span class="p">.</span><span class="n">loadNativeLibraries</span> <span class="p">(</span><span class="s">&quot;ccldemo&quot;</span><span class="p">)</span> <span class="c1">// Java ...</span>
+
+  <span class="n">System</span><span class="p">.</span><span class="n">loadLibrary</span> <span class="p">(</span><span class="n">mainModuleID</span><span class="p">)</span>
+  <span class="n">System</span><span class="p">.</span><span class="n">loadLibrary</span> <span class="p">(</span><span class="s">&quot;cclgui&quot;</span><span class="p">)</span>
+  <span class="n">System</span><span class="p">.</span><span class="n">loadLibrary</span> <span class="p">(</span><span class="s">&quot;ccltext&quot;</span><span class="p">)</span>
+  <span class="n">System</span><span class="p">.</span><span class="n">loadLibrary</span> <span class="p">(</span><span class="s">&quot;cclsystem&quot;</span><span class="p">)</span>
+
+    <span class="n">JNI_OnLoad</span> <span class="p">()</span> <span class="c1">// cclgui</span>
+
+<span class="c1">// main module ...</span>
+
+<span class="n">FrameworkActivity</span><span class="p">.</span><span class="n">onCreate</span> <span class="p">()</span> <span class="c1">// Java ...</span>
+  <span class="n">FrameworkView</span> <span class="p">()</span>
+    <span class="n">FrameworkView</span><span class="o">::</span><span class="n">constructNative</span> <span class="p">()</span> <span class="c1">// cclgui ...</span>
+
+  <span class="n">FrameworkActivity</span><span class="o">::</span><span class="n">onCreateNative</span> <span class="p">()</span>
+    <span class="n">AndroidSystemInformation</span><span class="o">::</span><span class="n">setNativeActivity</span> <span class="p">()</span> <span class="c1">// cclsystem ...</span>
+    <span class="n">AndroidSystemInformation</span><span class="o">::</span><span class="n">callAndroidMain</span> <span class="p">()</span>
+      <span class="n">CCLAndroidMain</span> <span class="p">()</span> <span class="c1">// main module ...</span>
+        <span class="n">FrameworkInitializer</span><span class="o">::</span><span class="n">init</span> <span class="p">()</span>
+          <span class="n">FrameworkInitializer</span><span class="o">::</span><span class="n">callModuleMain</span> <span class="p">()</span>
+            <span class="n">CCLModuleMain</span> <span class="p">()</span>
+
+        <span class="n">ccl_main_gui_init</span> <span class="p">()</span>
+          <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">beforeInit</span> <span class="p">()</span>
+            <span class="n">UserInterface</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span> <span class="c1">// cclgui ...</span>
+              <span class="n">AndroidUserInterface</span><span class="o">::</span><span class="n">startupPlatform</span> <span class="p">()</span>
+
+            <span class="n">ccl_app_init</span> <span class="p">()</span> <span class="c1">// main module</span>
+
+        <span class="n">AndroidUserInterface</span><span class="o">::</span><span class="n">runEventLoop</span> <span class="p">()</span> <span class="c1">// cclgui</span>
+          <span class="n">ApplicationStartup</span><span class="o">::</span><span class="n">onInit</span> <span class="p">()</span> <span class="c1">// main module</span>
+          <span class="n">FrameworkView</span><span class="o">::</span><span class="n">createApplicationView</span> <span class="p">()</span> <span class="c1">// cclgui</span>
+          <span class="n">Application</span><span class="o">::</span><span class="n">uiInitialized</span> <span class="p">()</span> <span class="c1">// main module</span>
+
+          <span class="c1">// main module ...</span>
+</pre></div>
+</div>
+</section>
+<section id="call-details">
+<h2>Call details<a class="headerlink" href="#call-details" title="Link to this heading"></a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="FrameworkActivity.loadNativeLibraries">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkActivity</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">loadNativeLibraries</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#FrameworkActivity.loadNativeLibraries" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Java</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>Application, example: CCLDemo.java</p>
+</dd>
+</dl>
+<p>Performed in application’s Activity class.</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="System.loadLibrary">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">loadLibrary</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#System.loadLibrary" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Java</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/java/FrameworkActivity.java</p>
+</dd>
+</dl>
+<p>Adds native main module and framework modules that require JNI access.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410JNI_OnLoadv">
+<span id="_CPPv310JNI_OnLoadv"></span><span id="_CPPv210JNI_OnLoadv"></span><span id="JNI_OnLoad"></span><span class="sig-name descname"><span class="n"><span class="pre">JNI_OnLoad</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410JNI_OnLoadv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/jni_onload.cpp</p>
+</dd>
+</dl>
+<p>Called in all CCL modules that export JNI_OnLoad.</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="FrameworkActivity.onCreate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkActivity</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onCreate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#FrameworkActivity.onCreate" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Java</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/java/FrameworkActivity.java</p>
+</dd>
+</dl>
+<p>Prepares Window, creates main FrameworkView.</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="FrameworkView">
+<span class="sig-name descname"><span class="n"><span class="pre">FrameworkView</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#FrameworkView" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Java</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/java/FrameworkView.java</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13FrameworkView15constructNativeEv">
+<span id="_CPPv3N13FrameworkView15constructNativeEv"></span><span id="_CPPv2N13FrameworkView15constructNativeEv"></span><span id="FrameworkView::constructNative"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkView</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">constructNative</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13FrameworkView15constructNativeEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/native/frameworkview.cpp</p>
+</dd>
+</dl>
+<p>Creates C++ counterpart of FrameworkView.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17FrameworkActivity14onCreateNativeEv">
+<span id="_CPPv3N17FrameworkActivity14onCreateNativeEv"></span><span id="_CPPv2N17FrameworkActivity14onCreateNativeEv"></span><span id="FrameworkActivity::onCreateNative"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkActivity</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onCreateNative</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17FrameworkActivity14onCreateNativeEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/native/frameworkactivity.cpp</p>
+</dd>
+</dl>
+<p>Creates FrameworkActivity (C++ counterpart), creates FrameworkGraphicsFactory (C++).</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24AndroidSystemInformation17setNativeActivityEv">
+<span id="_CPPv3N24AndroidSystemInformation17setNativeActivityEv"></span><span id="_CPPv2N24AndroidSystemInformation17setNativeActivityEv"></span><span id="AndroidSystemInformation::setNativeActivity"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">AndroidSystemInformation</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setNativeActivity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24AndroidSystemInformation17setNativeActivityEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclsystem</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/system/system.android.cpp</p>
+</dd>
+</dl>
+<p>Initialize cclsystem module (android specific part).</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24AndroidSystemInformation15callAndroidMainEv">
+<span id="_CPPv3N24AndroidSystemInformation15callAndroidMainEv"></span><span id="_CPPv2N24AndroidSystemInformation15callAndroidMainEv"></span><span id="AndroidSystemInformation::callAndroidMain"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">AndroidSystemInformation</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">callAndroidMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24AndroidSystemInformation15callAndroidMainEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclsystem</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/system/system.android.cpp</p>
+</dd>
+</dl>
+<p>Finds CCLAndroidMain function (exported by main module) and calls it.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414CCLAndroidMainv">
+<span id="_CPPv314CCLAndroidMainv"></span><span id="_CPPv214CCLAndroidMainv"></span><span id="CCLAndroidMain"></span><span class="sig-name descname"><span class="n"><span class="pre">CCLAndroidMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414CCLAndroidMainv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/system/system.android.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20FrameworkInitializer4initEv">
+<span id="_CPPv3N20FrameworkInitializer4initEv"></span><span id="_CPPv2N20FrameworkInitializer4initEv"></span><span id="FrameworkInitializer::init"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkInitializer</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20FrameworkInitializer4initEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclinit.h</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20FrameworkInitializer14callModuleMainEv">
+<span id="_CPPv3N20FrameworkInitializer14callModuleMainEv"></span><span id="_CPPv2N20FrameworkInitializer14callModuleMainEv"></span><span id="FrameworkInitializer::callModuleMain"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkInitializer</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">callModuleMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20FrameworkInitializer14callModuleMainEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclinit.h</p>
+</dd>
+</dl>
+<p>Called for all CCL modules (ccltext, cclsystem, …).</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413CCLModuleMainv">
+<span id="_CPPv313CCLModuleMainv"></span><span id="_CPPv213CCLModuleMainv"></span><span id="CCLModuleMain"></span><span class="sig-name descname"><span class="n"><span class="pre">CCLModuleMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413CCLModuleMainv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclmodmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ccl_main_gui_initv">
+<span id="_CPPv317ccl_main_gui_initv"></span><span id="_CPPv217ccl_main_gui_initv"></span><span id="ccl_main_gui_init"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_main_gui_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccl_main_gui_initv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup10beforeInitEv">
+<span id="_CPPv3N18ApplicationStartup10beforeInitEv"></span><span id="_CPPv2N18ApplicationStartup10beforeInitEv"></span><span id="ApplicationStartup::beforeInit"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">beforeInit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ApplicationStartup10beforeInitEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13UserInterface7startupEv">
+<span id="_CPPv3N13UserInterface7startupEv"></span><span id="_CPPv2N13UserInterface7startupEv"></span><span id="UserInterface::startup"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">UserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13UserInterface7startupEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/gui/gui.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20AndroidUserInterface15startupPlatformEv">
+<span id="_CPPv3N20AndroidUserInterface15startupPlatformEv"></span><span id="_CPPv2N20AndroidUserInterface15startupPlatformEv"></span><span id="AndroidUserInterface::startupPlatform"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">AndroidUserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startupPlatform</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20AndroidUserInterface15startupPlatformEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/gui/gui.android.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412ccl_app_initv">
+<span id="_CPPv312ccl_app_initv"></span><span id="_CPPv212ccl_app_initv"></span><span id="ccl_app_init"></span><span class="sig-name descname"><span class="n"><span class="pre">ccl_app_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccl_app_initv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20AndroidUserInterface12runEventLoopEv">
+<span id="_CPPv3N20AndroidUserInterface12runEventLoopEv"></span><span id="_CPPv2N20AndroidUserInterface12runEventLoopEv"></span><span id="AndroidUserInterface::runEventLoop"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">AndroidUserInterface</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">runEventLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20AndroidUserInterface12runEventLoopEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/gui/gui.android.cpp</p>
+</dd>
+</dl>
+<p>No loop, returns after initialization.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18ApplicationStartup6onInitEv">
+<span id="_CPPv3N18ApplicationStartup6onInitEv"></span><span id="_CPPv2N18ApplicationStartup6onInitEv"></span><span id="ApplicationStartup::onInit"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">ApplicationStartup</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onInit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ApplicationStartup6onInitEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/main/cclmain.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13FrameworkView21createApplicationViewEv">
+<span id="_CPPv3N13FrameworkView21createApplicationViewEv"></span><span id="_CPPv2N13FrameworkView21createApplicationViewEv"></span><span id="FrameworkView::createApplicationView"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">FrameworkView</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createApplicationView</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13FrameworkView21createApplicationViewEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cclgui</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/platform/android/native/frameworkview.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11Application13uiInitializedEv">
+<span id="_CPPv3N11Application13uiInitializedEv"></span><span id="_CPPv2N11Application13uiInitializedEv"></span><span id="Application::uiInitialized"></span><span class="sig-prename descclassname"><span class="n"><span class="pre">Application</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">uiInitialized</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11Application13uiInitializedEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Scope<span class="colon">:</span></dt>
+<dd class="field-odd"><p>main module</p>
+</dd>
+<dt class="field-even">File<span class="colon">:</span></dt>
+<dd class="field-even"><p>ccl/app/application.cpp</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="phases.html" class="btn btn-neutral float-left" title="Application Phases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="filesystem_urls.html" class="btn btn-neutral float-right" title="File system and URLs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

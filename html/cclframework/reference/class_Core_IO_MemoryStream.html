@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::IO::MemoryStream &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class Core::ObserverList" href="class_Core_ObserverList.html" />
+    <link rel="prev" title="struct Core::MemoryPool::Bucket" href="struct_Core_MemoryPool_Bucket.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+      <li class="breadcrumb-item active">class Core::IO::MemoryStream</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-io-memorystream">
+<span id="doxid-class-core-1-1-i-o-1-1-memory-stream"></span><span id="index-0"></span><h1>class Core::IO::MemoryStream<a class="headerlink" href="#class-core-io-memorystream" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Stream</span></a> backed by a block of heap memory that can grow dynamically. <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#details-class-core-1-1-i-o-1-1-memory-stream"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corememstream.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">MemoryStream</span><span class="p">:</span>
+    <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Core::IO::Stream</span></a><span></span><span class="p">,</span>
+    <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_BufferProvider.html#doxid-class-core-1-1-i-o-1-1-buffer-provider"><span class="std std-ref">Core::IO::BufferProvider</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a18e6c51fc489d9ccee6674130873d220"><span></span><span class="n">kDefaultGrow</span></span><span></span> <span class="o">=</span> <span class="mi">8192</span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a65f7c01651b422e7f713534b114f55f8"><span class="std std-ref">MemoryStream</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">memoryGrow</span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a18e6c51fc489d9ccee6674130873d220"><span class="std std-ref">kDefaultGrow</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1ad634d480f268ad699a0fef47c63e357b"><span class="std std-ref">MemoryStream</span></a><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">size</span><span class="p">);</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a6c82d2f3266c35c9b5a357d7ba7617e3"><span class="std std-ref">MemoryStream</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">MemoryStream</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a3da4ddc85554f14f818162ad2678a131"><span class="std std-ref">take</span></a><span></span> <span class="p">(</span><span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">);</span>
+    <span class="n">MemoryStream</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a8c5dcf0a3f528061b57e6a79e645a11f"><span class="std std-ref">take</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">buffer</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a63d24721689db9ec0ce15c7cc2d60168"><span class="std std-ref">copyFrom</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a3c640c4084d550812c12630dcc9f0532"><span class="std std-ref">allocateMemory</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">initWithZero</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1aef2ff54b943c604e2a17a44b5214bebd"><span class="std std-ref">getBuffer</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1af744d5e856556dcb34b557102f98cce0"><span class="std std-ref">getMemoryGrow</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a9e6bb985345f3c08646288c6eb5813b3"><span class="std std-ref">setMemoryGrow</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">memoryGrow</span><span class="p">);</span>
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1acbc342afb57fbae98c50d0547f9ed793"><span class="std std-ref">getBytesWritten</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1aea5aae94fc63a551acfa8bf968806690"><span class="std std-ref">setBytesWritten</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">bytesWritten</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a4e2b15074d3866b4722c2ca07be829ad"><span class="std std-ref">getPosition</span></a><span></span> <span class="p">();</span>
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1aa28010a571a2a4d403dc005e273bf5b1"><span class="std std-ref">setPosition</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a5a477a3a2eaff497ea5dcfeab442dced"><span class="std std-ref">readBytes</span></a><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a3ef46a65d44377bc3195054dc2f76629"><span class="std std-ref">writeBytes</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_BufferProvider.html#doxid-class-core-1-1-i-o-1-1-buffer-provider"><span class="std std-ref">BufferProvider</span></a><span></span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1aa151c71026da5f32f74ae6d8e6746549"><span class="std std-ref">getBufferProvider</span></a><span></span> <span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a50fa9686eff2ade8ce5731ba4135ebb2"><span class="std std-ref">moveBufferTo</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">buffer</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_IO_IByteStream.html#doxid-struct-core-1-1-i-o-1-1-i-byte-stream-1a63ed65a8307df6b2b0e405328ff5abc0"><span class="std std-ref">kIID</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/global.html#doxid-coreproperty-8h-1aaa19098360564e23bdcd88686d724e1e"><span class="std std-ref">FOUR_CHAR_ID</span></a><span></span> <span class="p">(</span><span class="sc">&#39;B&#39;</span><span class="p">,</span><span class="sc">&#39;S&#39;</span><span class="p">,</span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_IO_IByteStream.html#doxid-struct-core-1-1-i-o-1-1-i-byte-stream-1a7260ed171cab1edab19d6a0b551a2864"><span class="std std-ref">getPosition</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_IO_IByteStream.html#doxid-struct-core-1-1-i-o-1-1-i-byte-stream-1ae425f81dd2cab5d99910465e500416eb"><span class="std std-ref">setPosition</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_IO_IByteStream.html#doxid-struct-core-1-1-i-o-1-1-i-byte-stream-1a06561528cc58e1b08bde9f0aed5393f6"><span class="std std-ref">readBytes</span></a><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_IO_IByteStream.html#doxid-struct-core-1-1-i-o-1-1-i-byte-stream-1ab425283df8d19a214499d60170a075f8"><span class="std std-ref">writeBytes</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_BufferProvider.html#doxid-class-core-1-1-i-o-1-1-buffer-provider"><span class="std std-ref">BufferProvider</span></a><span></span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream-1a790ff1f3a3ed568b2d3df2f0a5717eaa"><span class="std std-ref">getBufferProvider</span></a><span></span> <span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_BufferProvider.html#doxid-class-core-1-1-i-o-1-1-buffer-provider-1abdcb033fc800d315c3365c81b86d9021"><span class="std std-ref">moveBufferTo</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">buffer</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-i-o-1-1-memory-stream"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Stream</span></a> backed by a block of heap memory that can grow dynamically.</p>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a65f7c01651b422e7f713534b114f55f8"><span id="index-1"></span><span></span><span class="n">MemoryStream</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">memoryGrow</span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_MemoryStream.html#doxid-class-core-1-1-i-o-1-1-memory-stream-1a18e6c51fc489d9ccee6674130873d220"><span class="std std-ref">kDefaultGrow</span></a><span></span><span class="p">)</span></pre>
+<p>[HEAVY] <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Stream</span></a> memory grows with given amount.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1ad634d480f268ad699a0fef47c63e357b"><span id="index-2"></span><span></span><span class="n">MemoryStream</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">size</span><span class="p">)</span></pre>
+<p>[LIGHT] Wraps buffer into stream, DOES NOT copy memory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a6c82d2f3266c35c9b5a357d7ba7617e3"><span id="index-3"></span><span></span><span class="n">MemoryStream</span> <span class="p">(</span><span class="k">const</span> <span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">)</span></pre>
+<p>Copy constructor.</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a3da4ddc85554f14f818162ad2678a131"><span id="index-4"></span><span></span><span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">take</span> <span class="p">(</span><span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">)</span></pre>
+<p>Take over memory from other memory stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a8c5dcf0a3f528061b57e6a79e645a11f"><span id="index-5"></span><span></span><span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">take</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">buffer</span><span class="p">)</span></pre>
+<p>Take over memory from other buffer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a63d24721689db9ec0ce15c7cc2d60168"><span id="index-6"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">copyFrom</span> <span class="p">(</span><span class="k">const</span> <span class="n">MemoryStream</span><span class="o">&amp;</span> <span class="n">ms</span><span class="p">)</span></pre>
+<p>Copy data from other memory stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a3c640c4084d550812c12630dcc9f0532"><span id="index-7"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">allocateMemory</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">initWithZero</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">)</span></pre>
+<p>Allocate (and optionally initialize) internal stream memory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1aef2ff54b943c604e2a17a44b5214bebd"><span id="index-8"></span><span></span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">getBuffer</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Access underlying buffer (read-only).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1af744d5e856556dcb34b557102f98cce0"><span id="index-9"></span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">getMemoryGrow</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Get current memory grow amount.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a9e6bb985345f3c08646288c6eb5813b3"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">setMemoryGrow</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">memoryGrow</span><span class="p">)</span></pre>
+<p>Change memory grow amount.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1acbc342afb57fbae98c50d0547f9ed793"><span id="index-11"></span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">getBytesWritten</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>Get number of bytes written to stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1aea5aae94fc63a551acfa8bf968806690"><span id="index-12"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">setBytesWritten</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">bytesWritten</span><span class="p">)</span></pre>
+<p>Manually set number of bytes written to stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a4e2b15074d3866b4722c2ca07be829ad"><span id="index-13"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">getPosition</span> <span class="p">()</span></pre>
+<p>Get current read/write position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1aa28010a571a2a4d403dc005e273bf5b1"><span id="index-14"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">setPosition</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">)</span></pre>
+<p>Set current read/write position.</p>
+<p class="rubric">See also:</p>
+<p><a class="reference internal" href="../../corelibrary/reference/enum_Core_IO_SeekMode.html#doxid-namespace-core-1-1-i-o-1a84d76d32dd4ef90e5a90cf759b7e563f"><span class="std std-ref">SeekMode</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a5a477a3a2eaff497ea5dcfeab442dced"><span id="index-15"></span><span></span><span class="k">virtual</span> <span class="kt">int</span> <span class="n">readBytes</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Read data from stream.</p>
+<p class="rubric">Returns:</p>
+<p>number of bytes read or -1 for error</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a3ef46a65d44377bc3195054dc2f76629"><span id="index-16"></span><span></span><span class="k">virtual</span> <span class="kt">int</span> <span class="n">writeBytes</span> <span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Write data to stream.</p>
+<p class="rubric">Returns:</p>
+<p>number of bytes written or -1 for error</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1aa151c71026da5f32f74ae6d8e6746549"><span id="index-17"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_IO_BufferProvider.html#doxid-class-core-1-1-i-o-1-1-buffer-provider"><span class="std std-ref">BufferProvider</span></a><span></span><span class="o">*</span> <span class="n">getBufferProvider</span> <span class="p">()</span></pre>
+<p>Provide access to underlying buffer (optional).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-i-o-1-1-memory-stream-1a50fa9686eff2ade8ce5731ba4135ebb2"><span id="index-18"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">moveBufferTo</span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_IO_Buffer.html#doxid-class-core-1-1-i-o-1-1-buffer"><span class="std std-ref">Buffer</span></a><span></span><span class="o">&amp;</span> <span class="n">buffer</span><span class="p">)</span></pre>
+<p>Transfer memory ownership to given buffer.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_MemoryPool_Bucket.html" class="btn btn-neutral float-left" title="struct Core::MemoryPool::Bucket" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_ObserverList.html" class="btn btn-neutral float-right" title="template class Core::ObserverList" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::SignalSlotList &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class CCL::SignalSource" href="class_CCL_SignalSource.html" />
+    <link rel="prev" title="class CCL::SignalSlot" href="class_CCL_SignalSlot.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">class CCL::SignalSlotList</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-signalslotlist">
+<span id="doxid-class-c-c-l-1-1-signal-slot-list"></span><span id="index-0"></span><h1>class CCL::SignalSlotList<a class="headerlink" href="#class-ccl-signalslotlist" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;signalslot.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">SignalSlotList</span><span class="p">:</span> <span class="k">private</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">Core::LinkedList</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-signal-slot-list-1acf82f9b2937375c7b1cf3dccb3df3312"><span></span><span class="n">isEmpty</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+    <a class="reference internal" href="class_CCL_SignalSlot.html#doxid-class-c-c-l-1-1-signal-slot"><span class="std std-ref">SignalSlot</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-signal-slot-list-1a70d500a3fe9d4a0254893e5c510859a0"><span></span><span class="n">advise</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">signalName</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">typename</span></a><span></span> <a class="reference internal" href="class_CCL_MemberFuncSlot.html#doxid-class-c-c-l-1-1-member-func-slot"><span class="std std-ref">MemberFuncSlot</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;::</span><span class="n">MemberFunc</span> <span class="n">memberFunc</span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-signal-slot-list-1a8ae808b96790102fe1b9e33cac0db010"><span></span><span class="n">unadvise</span></span><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_SignalSlot.html#doxid-class-c-c-l-1-1-signal-slot"><span class="std std-ref">SignalSlot</span></a><span></span><span class="o">*</span> <span class="n">slot</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-signal-slot-list-1a3dc5bd5a12918a7dbfd973875c5ddfc3"><span class="std std-ref">unadvise</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-signal-slot-list-1ac14b2c12ca3cba4a53a5c5f2ff23d70a"><span></span><span class="n">unadviseAll</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="class_CCL_SignalSlot.html#doxid-class-c-c-l-1-1-signal-slot"><span class="std std-ref">SignalSlot</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-signal-slot-list-1a192bdc08c992fe28bb070b95774975a5"><span></span><span class="n">getFirst</span></span><span></span> <span class="p">();</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a8eafa6f4c42b49f31d129b9b1bcae5eb"><span class="std std-ref">append</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1af7877987b95fbb28d6de0ba253bd4899"><span class="std std-ref">prepend</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a3ca678378182db1018d02c5bff90ce8e"><span class="std std-ref">insertBefore</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">before</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1aae8ad8eadeabe3998212ac612bf52327"><span class="std std-ref">insertBefore</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">iter</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a696da57cad77450ba61afc6d19dc9e0d"><span class="std std-ref">insertAfter</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">iter</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a676bf9aed50aeba55788c7ceae6819f5"><span class="std std-ref">insertAt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a78dd26ef29faa60e7ee1adcae230801f"><span class="std std-ref">addSorted</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a504af497904b152e90635030d76a2836"><span class="std std-ref">replace</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">iter</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">newData</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1ad579ce6bb056ab1d64bc030bf6c097e7"><span class="std std-ref">swapContent</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">LinkedList</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a4f7ecde4b81729d8ec39a460e1f90af8"><span class="std std-ref">remove</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1abbbbeb214f292a1c9d14b98bd1376dbd"><span class="std std-ref">removeAt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1ad4e0730c4220a895da774c66254bebda"><span class="std std-ref">remove</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">iter</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1aab1d855839cdc31b6d5846a8032d99b5"><span class="std std-ref">removeIf</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Predicate</span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">);</span>
+
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a89305f4fa8b29afcf8d95716eb4f8f21"><span class="std std-ref">removeIf</span></a><span></span> <span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a9b0a5a3ad9972ab0e8eb0b54873aac6b"><span class="std std-ref">removeAll</span></a><span></span> <span class="p">();</span>
+    <span class="n">T</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a2cc5cfd1a4619aa97164089bbada2864"><span class="std std-ref">removeFirst</span></a><span></span> <span class="p">();</span>
+    <span class="n">T</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a0320e164c37ff1df9f9311231d75e5a9"><span class="std std-ref">removeLast</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1acf82f9b2937375c7b1cf3dccb3df3312"><span class="std std-ref">isEmpty</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a2a33a4f2a8f5887dfeaed59404e5594f"><span class="std std-ref">isMultiple</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a0e2c15c517007b91c37b2aa68bf2484a"><span class="std std-ref">count</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a47fdc9eea42b6975cdc835bb2e08810e"><span class="std std-ref">sort</span></a><span></span> <span class="p">();</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a381aa4d12a8e032f599657c199820458"><span class="std std-ref">sort</span></a><span></span> <span class="p">(</span><span class="n">Predicate</span> <span class="n">greater</span><span class="p">);</span>
+
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a29e346218c9065fb985659f28856c3eb"><span class="std std-ref">at</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1adb6c0b1fc5058e1d495e0ed5e96bf9f9"><span class="std std-ref">contains</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a4f8b67b3c2b07cf7c4b65b0a2016bb65"><span class="std std-ref">lookup</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1abcfde9687c28f8f3eea0c2c2113906d8"><span class="std std-ref">getFirst</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a63d7f4818377b39f610ce0a0bd375e44"><span class="std std-ref">getLast</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a7ee50cc9217961ce50d50fdb10564095"><span class="std std-ref">findIf</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Predicate</span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a0cedebc50122160ed4ddeddbd47b1ae5"><span class="std std-ref">findIf</span></a><span></span> <span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">LinkedList</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1a6c2ef82469ed0cee8668732760d5c6eb"><span class="std std-ref">begin</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">LinkedList</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list-1aa83e1ccbfa7fa274565805928145001a"><span class="std std-ref">end</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-signal-slot-list"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-signal-slot-list-1a3dc5bd5a12918a7dbfd973875c5ddfc3"><span id="index-1"></span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">unadvise</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref">ISubject</span></a><span></span><span class="o">*</span> <span class="n">subject</span><span class="p">)</span></pre>
+<p>unadvise all slots of given subject</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_SignalSlot.html" class="btn btn-neutral float-left" title="class CCL::SignalSlot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_CCL_SignalSource.html" class="btn btn-neutral float-right" title="class CCL::SignalSource" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

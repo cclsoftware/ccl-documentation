@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Model &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parameters" href="parameters.html" />
+    <link rel="prev" title="Tutorials" href="index.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Application Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-application-class">Using the Application class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html">GUI for embedded applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicviews.html">GUI for dynamic views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtti.html">Run-time type information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Application Model</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="application-model">
+<h1>Application Model<a class="headerlink" href="#application-model" title="Link to this heading"></a></h1>
+<p>The Core Library supports developers by providing a lightweight application model through the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Application.html#doxid-class-core-1-1-portable-1-1-application"><span class="std std-ref"><span class="pre">Core::Portable::Application</span></span></a></code> class. This class maintains the application state, including initialization, runnning, and termination. It is called directly by the <code class="docutils literal notranslate"><span class="pre">main</span></code> function and provides the basic skeleton of the application. Each application should have only one <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Application.html#doxid-class-core-1-1-portable-1-1-application"><span class="std std-ref"><span class="pre">Core::Portable::Application</span></span></a></code> object.</p>
+<section id="using-the-application-class">
+<h2>Using the Application class<a class="headerlink" href="#using-the-application-class" title="Link to this heading"></a></h2>
+<p>To create the application object derive an application class from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Application.html#doxid-class-core-1-1-portable-1-1-application"><span class="std std-ref"><span class="pre">Core::Portable::Application</span></span></a></code> and implement the <code class="docutils literal notranslate"><span class="pre">startup</span></code> and <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> methods.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;core/portable/coreapplication.h&quot;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">Core</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">Portable</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nl">MyApp</span><span class="p">:</span> <span class="k">public</span> <span class="n">Application</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="c1">// Application</span>
+  <span class="kt">void</span> <span class="n">startup</span> <span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+  <span class="kt">void</span> <span class="nf">shutdown</span> <span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// Put the application initialization in here</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">shutdown</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// Clean up and free resources</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Since the Core Library runs on a variety of different operating systems and platforms, there’s no general recipe for the <code class="docutils literal notranslate"><span class="pre">main</span></code> function. In many cases, however, the application’s main entry point just obtains a pointer to the application object and calls its <code class="docutils literal notranslate"><span class="pre">startup</span></code> and <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> functions. It may also need to perform other tasks, for instance, it may need to run an application loop.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">MyApp</span><span class="o">*</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">instance</span> <span class="p">();</span>
+
+  <span class="n">instance</span><span class="p">.</span><span class="n">startup</span> <span class="p">();</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="n">running</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="c1">// Do work</span>
+  <span class="p">}</span>
+
+  <span class="n">instance</span><span class="p">.</span><span class="n">shutdown</span> <span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parameters.html" class="btn btn-neutral float-right" title="Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

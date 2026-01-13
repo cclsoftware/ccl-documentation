@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct Core::IGameLibrary &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::IProfiler" href="struct_Core_IProfiler.html" />
+    <link rel="prev" title="struct Core::IGameEnvironment" href="struct_Core_IGameEnvironment.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+      <li class="breadcrumb-item active">struct Core::IGameLibrary</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-core-igamelibrary">
+<span id="doxid-struct-core-1-1-i-game-library"></span><span id="index-0"></span><h1>struct Core::IGameLibrary<a class="headerlink" href="#struct-core-igamelibrary" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coregameinterface.h&gt;</span>
+
+<span class="k">struct</span> <span class="nl">IGameLibrary</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler"><span class="std std-ref">Core::IPropertyHandler</span></a><span></span>
+<span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-i-game-library-1a63ed65a8307df6b2b0e405328ff5abc0"><span></span><span class="n">kIID</span></span><span></span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-coreproperty-8h-1aaa19098360564e23bdcd88686d724e1e"><span class="std std-ref">FOUR_CHAR_ID</span></a><span></span><span class="p">(</span><span class="sc">&#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">G</span></a><span></span><span class="sc">&#39;, &#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">m</span></a><span></span><span class="sc">&#39;, &#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">L</span></a><span></span><span class="sc">&#39;, &#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">b</span></a><span></span><span class="sc">&#39;);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-i-game-library-1adc5d3d2d75c2b0b7ae8a54a0d039b217"><span></span><span class="n">getGameCount</span></span><span></span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-i-game-library-1a7bdd719d6adf14f29e5cc1ce31440f3c"><span></span><span class="n">getGameTitle</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_Core_IGameCore.html#doxid-struct-core-1-1-i-game-core"><span class="std std-ref">IGameCore</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-i-game-library-1ad3a1052ee0022b39e250a6157bead048"><span></span><span class="n">getGameCore</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler-1a63ed65a8307df6b2b0e405328ff5abc0"><span class="std std-ref">kIID</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler-1ac38b57dfaaabc9dbe8c46b406354d106"><span class="std std-ref">setProperty</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler-1a462c3fb4ac8be4838a6bbe7e6c707df7"><span class="std std-ref">getProperty</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler-1aab0a52fdd148a54108e7bf49287d7c47"><span class="std std-ref">release</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_IGameEnvironment.html" class="btn btn-neutral float-left" title="struct Core::IGameEnvironment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_IProfiler.html" class="btn btn-neutral float-right" title="struct Core::IProfiler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

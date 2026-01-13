@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using CMake &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Writing CMake Projects" href="developer.html" />
+    <link rel="prev" title="CMake Guide" href="index.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CMake Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using CMake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-cmake">Install CMake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platform-specific-configuration">Platform-specific Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#visual-studio">Visual Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-projects-using-presets">Generate Projects using Presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-projects-without-presets">Generate Projects without Presets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#command-line-usage">Command Line Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gui-tool">GUI Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#building-projects">Building Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-source-files">Adding Source Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="developer.html">Writing CMake Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CMake Guide</a></li>
+      <li class="breadcrumb-item active">Using CMake</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-cmake">
+<h1>Using CMake<a class="headerlink" href="#using-cmake" title="Link to this heading"></a></h1>
+<p>CMake offers a project description meta language and a tool to generate projects.</p>
+<p>CMake is not a substitute for Visual Studio projects, XCode projects or Makefiles. Instead, CMake can be used to generate them from platform- and IDE-independent descriptions.</p>
+<section id="install-cmake">
+<h2>Install CMake<a class="headerlink" href="#install-cmake" title="Link to this heading"></a></h2>
+<p>Download the latest release from <a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a>.</p>
+<p>The installer contains both the cmake command line tool and the graphical tool cmake-gui.</p>
+<p>Additional information on how to use CMake can be found in the official <a class="reference external" href="https://cmake.org/cmake/help/latest/guide/user-interaction">User Interaction Guide</a></p>
+</section>
+<section id="platform-specific-configuration">
+<h2>Platform-specific Configuration<a class="headerlink" href="#platform-specific-configuration" title="Link to this heading"></a></h2>
+<section id="visual-studio">
+<h3>Visual Studio<a class="headerlink" href="#visual-studio" title="Link to this heading"></a></h3>
+<p>As we use CMake presets, you should configure Visual Studio to use these presets.</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">Tools</span></code> → <code class="docutils literal notranslate"><span class="pre">Options</span></code> → <code class="docutils literal notranslate"><span class="pre">CMake</span></code> set <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">configuration</span> <span class="pre">file:</span></code> to <code class="docutils literal notranslate"><span class="pre">Always</span> <span class="pre">use</span> <span class="pre">CMake</span> <span class="pre">Presets</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Microsoft added support for CMake Presets version 4 in Visual Studio 2022 17.4.
+Make sure to update to 17.4 or later.</p>
+</div>
+</section>
+</section>
+<section id="generate-projects-using-presets">
+<h2>Generate Projects using Presets<a class="headerlink" href="#generate-projects-using-presets" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the recommended way to generate projects. If there is no preset available for your platform/project or you want to use different settings, you can <a class="reference internal" href="#generate-projects-without-presets">Generate Projects without Presets</a>.</p>
+</div>
+<p>Make sure to update to CMake 3.30 or later when using presets.</p>
+<p>Building CMake projects often requires several options to be set to the right values. To make this process easier, CMake introduced presets.</p>
+<p>If there is a CMake preset available for your project (look for a <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file), you can check for available presets:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;appname&gt;/cmake/
+cmake<span class="w"> </span>--list-presets
+</pre></div>
+</div>
+<p>This will produce an output similar to</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Available<span class="w"> </span>configure<span class="w"> </span>presets:
+
+<span class="w">  </span><span class="s2">&quot;win32&quot;</span><span class="w"> </span>-<span class="w"> </span>Windows<span class="w"> </span>32bit
+<span class="w">  </span><span class="s2">&quot;win64&quot;</span><span class="w"> </span>-<span class="w"> </span>Windows<span class="w"> </span>64bit
+<span class="w">  </span>etc.
+</pre></div>
+</div>
+<p>To generate a project using a preset, simply run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--preset<span class="o">=</span>win32
+</pre></div>
+</div>
+<p>You can also load the preset file in cmake-gui if you prefer a GUI tool.</p>
+</section>
+<section id="generate-projects-without-presets">
+<h2>Generate Projects without Presets<a class="headerlink" href="#generate-projects-without-presets" title="Link to this heading"></a></h2>
+<p>To generate a project for your IDE from an existing CMake description, you can either use the command line or the GUI tool cmake-gui.</p>
+<section id="command-line-usage">
+<h3>Command Line Usage<a class="headerlink" href="#command-line-usage" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;appname&gt;/cmake
+mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>-D<span class="w"> </span><span class="nv">CMAKE_MODULE_PATH</span><span class="o">=</span>&lt;repository<span class="w"> </span>root&gt;/build/cmake/modules/shared<span class="w"> </span>..
+</pre></div>
+</div>
+<p>The call to cmake generates a project for your default build system (Visual Studio on Windows, Makefile on Mac/Linux, …).</p>
+<p>The last parameter of this call is the directory of the project’s <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>. This file contains information about source files, compiler options etc.</p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">-D</span> <span class="pre">CMAKE_MODULE_PATH=&lt;repository</span> <span class="pre">root&gt;/build/cmake/modules/shared</span></code> helps CMake find custom modules.</p>
+<p>The project files are generated in the current working directory. You can run cmake from any directory you want. Most people create a directory <code class="docutils literal notranslate"><span class="pre">build</span></code> next to <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>, but you can choose any location.</p>
+<p>If you want to generate a project for a specific IDE, e.g. XCode or an older version of Visual Studio, you can specify a “generator” with the <code class="docutils literal notranslate"><span class="pre">-G</span></code> parameter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-G<span class="w"> </span>Xcode<span class="w"> </span>..
+cmake<span class="w"> </span>-G<span class="w"> </span>Ninja<span class="w"> </span>..
+cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 14 2015&quot;</span><span class="w"> </span>..
+</pre></div>
+</div>
+<p>Note that there is no generator for VS Code. If you want to use a CMake project with VS Code, startup VS Code, install the extensions <code class="docutils literal notranslate"><span class="pre">CMake</span></code>, <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Tools</span></code> and <code class="docutils literal notranslate"><span class="pre">C/C++</span></code> and use <code class="docutils literal notranslate"><span class="pre">File</span></code> → <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder</span></code> to open the directory containing the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file.</p>
+<p>If you want to generate a Visual Studio project for another architecture, you can specify this with the <code class="docutils literal notranslate"><span class="pre">-A</span></code> parameter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 16 2019&quot;</span><span class="w"> </span>-A<span class="w"> </span>ARM64<span class="w"> </span>..
+cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 16 2019&quot;</span><span class="w"> </span>-A<span class="w"> </span>Win32<span class="w"> </span>..
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://cmake.org/cmake/help/v3.30/manual/cmake-generators.7.html">https://cmake.org/cmake/help/v3.30/manual/cmake-generators.7.html</a> for additional options.</p>
+<p>The CMake description of a project might offer some options. To set an option, you can use the <code class="docutils literal notranslate"><span class="pre">-D</span></code> parameter.
+You can use this parameter multiple times.</p>
+<p>For example, to generate a project that uses CCL libraries from a custom location on Windows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-D<span class="w"> </span><span class="nv">CMAKE_MODULE_PATH</span><span class="o">=</span>&lt;repository<span class="w"> </span>root&gt;<span class="se">\b</span>uild<span class="se">\c</span>make<span class="se">\m</span>odules<span class="se">\s</span>hared<span class="w"> </span>-D<span class="w"> </span><span class="nv">CCL_DIR</span><span class="o">=</span>C:<span class="se">\U</span>sers<span class="se">\&lt;</span>username&gt;<span class="se">\m</span>odifiedCCL<span class="w"> </span>..
+</pre></div>
+</div>
+</section>
+<section id="gui-tool">
+<h3>GUI Tool<a class="headerlink" href="#gui-tool" title="Link to this heading"></a></h3>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">cmake-gui</span></code> application.</p>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">Source...</span></code> and select the directory containing your <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file.</p>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">Build...</span></code> and select the directoy you want CMake to write your project files to.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The labels “Where is the source code” and “Where to build the binaries” are a little misleading…</p>
+</div>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Entry</span></code> and add a path parameter <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code> pointing to the cmake modules directory in your working copy.</p>
+<img alt="../_images/cmake-gui.png" src="../_images/cmake-gui.png" />
+<p>Click on “Configure”.
+Depending on your system, CMake might ask you what kind of project you want to generate.</p>
+<img alt="../_images/cmake-gui-compiler.png" src="../_images/cmake-gui-compiler.png" />
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Finish</span></code>.</p>
+<p>If everything goes right, the last line in CMake’s output reads <code class="docutils literal notranslate"><span class="pre">Configuring</span> <span class="pre">done</span></code>.</p>
+<p>You may now change some of the options that are displayed in the table.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Generate</span></code> when you’re done.</p>
+</section>
+</section>
+<section id="building-projects">
+<h2>Building Projects<a class="headerlink" href="#building-projects" title="Link to this heading"></a></h2>
+<p>Once the project files are generated, you can open the project in your IDE and build/debug/run from there.</p>
+<p>If you just want to build the project without opening your IDE, you can do this with CMake too:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>Release
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all “generators” (e.g. Makefile generators) support multi-config projects. This means, not all generators support the <code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">Release</span></code> options. For those generators, add <code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE=Release</span></code> when generating the project.</p>
+</div>
+</section>
+<section id="adding-source-files">
+<h2>Adding Source Files<a class="headerlink" href="#adding-source-files" title="Link to this heading"></a></h2>
+<p>Don’t use your IDE to add/remove/rename files in your projects.
+Changes will be lost the next time CMake runs (e.g. on your next build).</p>
+<p>Instead, open the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file and specify additional source files there. See <a class="reference internal" href="developer.html#cmake-developer"><span class="std std-ref">Writing CMake Projects</span></a> for details.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="CMake Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="developer.html" class="btn btn-neutral float-right" title="Writing CMake Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

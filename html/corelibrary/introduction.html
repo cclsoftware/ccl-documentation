@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Building the Core Library" href="building.html" />
+    <link rel="prev" title="Core Library" href="index.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Core Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#relation-between-core-and-ccl">Relation between Core and CCL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#core-portable">Core::Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-platform">Core::Platform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linking">Linking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Core Library</a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The Core Library is a self-contained part of the CCL Cross-platform Framework. It can be used for small cross-platform software projects, or for application development on RTOS-based embedded platforms with limited memory and processing resources. It follows the same design principles as its bigger sibling to make it easy for developers to switch between firmware and desktop/mobile app development.</p>
+<p>The library has a dedicated low-level abstraction so that adding support for new platforms is straightforward. As of 2026, the following operating systems are supported out of the box:</p>
+<ul class="simple">
+<li><p>Windows (based on Win32)</p></li>
+<li><p>macOS and iOS/iPadOS (based on Cocoa)</p></li>
+<li><p>Linux (desktop and embedded)</p></li>
+<li><p>Android (via JNI, requires all of CCL)</p></li>
+<li><p>Zephyr</p></li>
+<li><p>Azure RTOS</p></li>
+<li><p>Little Kernel</p></li>
+<li><p>CMSIS RTOS</p></li>
+<li><p>CrossWorks Tasking Library (CTL)</p></li>
+</ul>
+<p>The first version of CCL was created by Matthias Juwan in 1999. The framework is distributed and maintained by CCL Software Licensing GmbH. PreSonus is a contributor since 2009. For more information and licensing terms and conditions, please visit <a class="reference external" href="https://ccl.dev">ccl.dev</a>.</p>
+<section id="relation-between-core-and-ccl">
+<h2>Relation between Core and CCL<a class="headerlink" href="#relation-between-core-and-ccl" title="Link to this heading"></a></h2>
+<p>Most classes in the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/group_core.html#doxid-group-core"><span class="std std-ref"><span class="pre">Core</span></span></a></code> namespace are either imported into the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/group_ccl.html#doxid-group-ccl"><span class="std std-ref"><span class="pre">CCL</span></span></a></code> namespace or serve as base classes for their equivalents in CCL. Any changes made to <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/group_core.html#doxid-group-core"><span class="std std-ref"><span class="pre">Core</span></span></a></code> classes need to be checked for compatibility with CCL. The naming scheme and folder structure might seem at little awkward at first, but it illustrates the module relationship between the framework libraries, and it is used to avoid name clashes at class and filename level.</p>
+<p>Here’s a quick, non-exhaustive overview of the folder and class relationships:</p>
+<ul class="simple">
+<li><p>Files from “core/public” can be referenced from files in “ccl/public”</p></li>
+<li><p>Files in “core/gui” correspond to the <strong>cclgui</strong> shared library</p></li>
+<li><p>Files in “core/system” correspond to the <strong>cclsystem</strong> shared library</p></li>
+<li><p>Files in “core/network” correspond to the <strong>cclnet</strong> shared library</p></li>
+<li><p>Files in “core/text” correspond to the <strong>ccltext</strong> shared library</p></li>
+</ul>
+<section id="core-portable">
+<h3>Core::Portable<a class="headerlink" href="#core-portable" title="Link to this heading"></a></h3>
+<p>Contains classes for standalone use (without all of CCL) or use in embedded systems. Implementations are platform-agnostic. Uses simplified CCL equivalent types to fit firmware development needs.</p>
+</section>
+<section id="core-platform">
+<h3>Core::Platform<a class="headerlink" href="#core-platform" title="Link to this heading"></a></h3>
+<p>Contains abstractions for APIs that vary between platforms:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Path</p></th>
+<th class="head"><p>Content</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>shared</em></p></td>
+<td><p>Common APIs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>shared/[platform]</em></p></td>
+<td><p>Platform specific classes wrapping native implementations.</p></td>
+</tr>
+<tr class="row-even"><td><p><em>shared/[multi-platform]</em></p></td>
+<td><p>Additional wrappers leveraging standard multi-platform libraries or interfaces.</p></td>
+</tr>
+</tbody>
+</table>
+<p>API subsets and their implementation are defined in <em>platform/corefeatures.h</em>.</p>
+</section>
+<section id="linking">
+<h3>Linking<a class="headerlink" href="#linking" title="Link to this heading"></a></h3>
+<p>The Core Library is linked statically to <strong>ccltext</strong>, <strong>cclsystem</strong> and <strong>cclnet</strong>, but it is typically not linked to individual applications. A desktop or mobile application can use classes from “core/public” directly. All other classes are considered hidden implementation details of the framework and application code needs to be based on “official” CCL APIs.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/namespace_Core_Threads.html#doxid-namespace-core-1-1-threads"><span class="std std-ref"><span class="pre">Core::Threads</span></span></a></code> namespace is imported into <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/namespace_CCL_Threading.html#doxid-namespace-c-c-l-1-1-threading"><span class="std std-ref"><span class="pre">CCL::Threading</span></span></a></code> namespace</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/namespace_Core_Sockets.html#doxid-namespace-core-1-1-sockets"><span class="std std-ref"><span class="pre">Core::Sockets</span></span></a></code> namespace is imported into <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/namespace_CCL_Net.html#doxid-namespace-c-c-l-1-1-net"><span class="std std-ref"><span class="pre">CCL::Net</span></span></a></code> namespace</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/namespace_Core_Text.html#doxid-namespace-core-1-1-text"><span class="std std-ref"><span class="pre">Core::Text</span></span></a></code> namespace is imported into <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref"><span class="pre">CCL::Text</span></span></a></code> namespace</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Threading::NativeThread</span></code> is derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_Threads_Thread.html#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref"><span class="pre">Core::Threads::Thread</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Net::Socket</span></code> wraps a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_Sockets_Socket.html#doxid-class-core-1-1-sockets-1-1-socket"><span class="std std-ref"><span class="pre">Core::Sockets::Socket</span></span></a></code> instance</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code> is derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits"><span class="std std-ref"><span class="pre">Core::CStringTraits</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code> is derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_MutableCStringTraits.html#doxid-class-core-1-1-mutable-c-string-traits"><span class="std std-ref"><span class="pre">Core::MutableCStringTraits</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref"><span class="pre">Core::Vector</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref"><span class="pre">Core::LinkedList</span></span></a></code> are imported directly into the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../cclframework/reference/group_ccl.html#doxid-group-ccl"><span class="std std-ref"><span class="pre">CCL</span></span></a></code> namespace</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Core Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="building.html" class="btn btn-neutral float-right" title="Building the Core Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

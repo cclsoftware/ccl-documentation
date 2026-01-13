@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::ControlGridPainter &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class CCL::ControlScalePainter" href="class_CCL_ControlScalePainter.html" />
+    <link rel="prev" title="struct CCL::AbstractTouchHandler::GestureItem" href="struct_CCL_AbstractTouchHandler_GestureItem.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+      <li class="breadcrumb-item active">class CCL::ControlGridPainter</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-controlgridpainter">
+<span id="doxid-class-c-c-l-1-1-control-grid-painter"></span><span id="index-0"></span><h1>class CCL::ControlGridPainter<a class="headerlink" href="#class-ccl-controlgridpainter" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;controlscalepainter.h&gt;</span>
+
+<span class="k">class</span> <span class="n">ControlGridPainter</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1aa99b99f98220f8b22b5e2ac4ae8a59d6"><span></span><span class="n">gridColor</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a09500242b42917aed5d04931c7a26a7f"><span></span><span class="n">textColor</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1aa882edd8b06afbb718c0e632c7f16f26"><span></span><span class="n">labelWidthX</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a66f6e9a1f1086f942b492b2f492100aa"><span></span><span class="n">labelSpacingX</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a269102493f269a9346e8fd4a7a963c7b"><span></span><span class="n">labelMarginY</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1aeed86c11b983365de06087f2d426c3eb"><span></span><span class="n">labelAlignmentY</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelAlignmentY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a0ad648e49aa3c4421c65d24c0b311ceb"><span></span><span class="n">labelOffsetY</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelAlignmentY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelOffsetY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a97facd01114955cafc15d9573b2dd14d"><span></span><span class="n">labelPaddingBottomX</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelAlignmentY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelOffsetY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelPaddingBottomX</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/global.html#doxid-coreclassmacros-8h-1a1fd7e9e8910963dbf1178162aa01346b"><span class="std std-ref">PROPERTY_BOOL</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">yReverse</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">YReverse</span></a><span></span><span class="p">)</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">protected</span></a><span></span> <a class="reference internal" href="class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref">SharedPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a5cd2ed7a7cdd1627bca56c72012ebfbd"><span></span><span class="n">xScale</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref">SharedPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a95661482233074c767f80b8ea52b5836"><span></span><span class="n">yScale</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a386fd238fa3446c2bfb8372420933de6"><span></span><span class="n">ControlGridPainter</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectRef</span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="n">xScale</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="n">yScale</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a45455d86e180efcc9f5aac8ed690aab1"><span></span><span class="n">setStyle</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_IVisualStyle.html#doxid-struct-c-c-l-1-1-i-visual-style"><span class="std std-ref">IVisualStyle</span></a><span></span><span class="o">&amp;</span> <span class="n">style</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a6111c406743419f28487fcf3ff348b6b"><span></span><span class="n">setXScale</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="n">scaleParam</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a3f248ea2b804d97b661c67f48dea1e52"><span></span><span class="n">setYScale</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="n">scaleParam</span><span class="p">);</span>
+    <a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a2bb06bf2629ae3784d2a60c8d68692ed"><span></span><span class="n">getXScale</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="struct_CCL_ITickScale.html#doxid-struct-c-c-l-1-1-i-tick-scale"><span class="std std-ref">ITickScale</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a7ba3d3f0a6cd4ad5f4c2099a2a2496f6"><span></span><span class="n">getYScale</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a89c4a83b0092bb4e62921f16c2e13bf6"><span></span><span class="n">draw</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="n">graphics</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ac0c6b4bb93543dd6510fb73b70ef7925"><span></span><span class="n">drawXScaleGrid</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="n">graphics</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">scaleTicksOnly</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a2f448eb1dcd310a7b0907166f1ad89e2"><span></span><span class="n">drawXScaleText</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="n">graphics</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">scaleTicksOnly</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ae9ca7fe4d6c8f3ea0017f1a096f09935"><span></span><span class="n">drawYScaleGrid</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="n">graphics</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">scaleTicksOnly</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a9976990ac08acb2f3fcedff03426d1c8"><span></span><span class="n">drawYScaleText</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="n">graphics</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a30fcb4cb19ea96377253e61eff7fe6e3"><span></span><span class="n">setSize</span></span><span></span> <span class="p">(</span><span class="n">RectRef</span> <span class="n">newSize</span><span class="p">);</span>
+    <span class="n">RectRef</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1acf8ffdc77f63e181a9f85729e97bb8af"><span></span><span class="n">getSize</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ae20f9963afb2223c77a9dc8618e59347"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">fineColor</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">FineColor</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ade835f74e40b6ac5ad7e05bc15e9c417"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">outlineColor</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">OutLineColor</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1aa7f742a7a4406421a6ea96ea9861ccea"><span></span><span class="n">PROPERTY_OBJECT</span></span><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ac94afc305352f17ea041141448ce481e"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">labelWidthY</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthY</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1aa57f14f84600cb3249d8bad08868ea91"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">labelSpacingY</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingY</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a5b57a7d137551f7af8c462181836ea38"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">labelShiftTolerance</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelShiftTolerance</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelAlignmentY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1a42d15433396158168f6271f20cf75e89"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tickDistance</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TickDistance</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">GridColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextColor</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelWidthX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelSpacingX</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelMarginY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelAlignmentY</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelOffsetY</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-control-grid-painter-1ab6c50add1cebde2d442dbca4b6a4087c"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">labelOffsetX</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LabelOffsetX</span></a><span></span>
+    <span class="p">);</span>
+<span class="p">};</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_AbstractTouchHandler_GestureItem.html" class="btn btn-neutral float-left" title="struct CCL::AbstractTouchHandler::GestureItem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_CCL_ControlScalePainter.html" class="btn btn-neutral float-right" title="class CCL::ControlScalePainter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

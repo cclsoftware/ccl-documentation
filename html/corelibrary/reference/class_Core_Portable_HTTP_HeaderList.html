@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Portable::HTTP::HeaderList &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class Core::Portable::HTTP::KeyValueList" href="class_Core_Portable_HTTP_KeyValueList.html" />
+    <link rel="prev" title="class Core::Portable::HTTP::FormReader" href="class_Core_Portable_HTTP_FormReader.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Portable.html">namespace Core::Portable</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Portable_HTTP.html">namespace Core::Portable::HTTP</a></li>
+      <li class="breadcrumb-item active">class Core::Portable::HTTP::HeaderList</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-portable-http-headerlist">
+<span id="doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list"></span><span id="index-0"></span><h1>class Core::Portable::HTTP::HeaderList<a class="headerlink" href="#class-core-portable-http-headerlist" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corewebserver.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">HeaderList</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list"><span class="std std-ref">Core::Portable::HTTP::KeyValueList</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list-1af0c5b1a5f2b3c4ee57baef92c037f3cd"><span></span><span class="n">getContentType</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list-1a9aa448e782d88983f90cb40c45dec91b"><span></span><span class="n">getContentLength</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list-1a5483701bcb7a8fa0e995aee8f30e5006"><span></span><span class="n">send</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">IO::Stream</span></a><span></span><span class="o">&amp;</span> <span class="n">stream</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-header-list-1a998eec667cec5e6c96ab299ac79c9258"><span></span><span class="n">receive</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">IO::Stream</span></a><span></span><span class="o">&amp;</span> <span class="n">stream</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> CString64<span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a274921fbcb2ed5a98116dd62882aba12"><span class="std std-ref">Key</span></a><span></span><span class="p">;</span>
+    <span class="k">typedef</span> CString128<span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a621be357e01188882c16ce16e3beb3c9"><span class="std std-ref">Value</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_Core_Portable_HTTP_KeyValueList_Entry.html#doxid-struct-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1-1-entry"><span class="std std-ref">Entry</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a2e4b8c5ae160b709accdf75682f36d03"><span class="std std-ref">getValue</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1add2f3a8f72361a371cc0065a02fdf1fe"><span class="std std-ref">addValue</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">key</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a262c64184df25a26ab409d3ed3edd744"><span class="std std-ref">getIntVale</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1aed24c7ef3f086f88f3e66f3dced8cc7a"><span class="std std-ref">addIntValue</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">key</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a2cb8f537f9651db1e57caa0b5eff57d3"><span class="std std-ref">getCount</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a8a11bf0e330689897ecfbaeb147ed18d"><span class="std std-ref">getKeyAt</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1acb9dfa3cdbd961eb62f89be51a752982"><span class="std std-ref">getValueAt</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1a9b0a5a3ad9972ab0e8eb0b54873aac6b"><span class="std std-ref">removeAll</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_HTTP_KeyValueList.html#doxid-class-core-1-1-portable-1-1-h-t-t-p-1-1-key-value-list-1af1e6a5fb477a95a876e86ceadf065ffd"><span class="std std-ref">dump</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Portable_HTTP_FormReader.html" class="btn btn-neutral float-left" title="class Core::Portable::HTTP::FormReader" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_Portable_HTTP_KeyValueList.html" class="btn btn-neutral float-right" title="class Core::Portable::HTTP::KeyValueList" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

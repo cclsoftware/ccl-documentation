@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Threads::Thread &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Core-Time" href="group_core_time.html" />
+    <link rel="prev" title="class Core::Threads::Signal" href="class_Core_Threads_Signal.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_thread.html">Core-Threads</a></li>
+      <li class="breadcrumb-item active">class Core::Threads::Thread</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-threads-thread">
+<span id="doxid-class-core-1-1-threads-1-1-thread"></span><span id="index-0"></span><h1>class Core::Threads::Thread<a class="headerlink" href="#class-core-threads-thread" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref">Thread</span></a> class. <a class="reference internal" href="#details-class-core-1-1-threads-1-1-thread"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corethread.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">Thread</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_Core_Platform_IThreadEntry.html#doxid-struct-core-1-1-platform-1-1-i-thread-entry"><span class="std std-ref">Core::Platform::IThreadEntry</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a9ec51c4b96956d57787c6e74e926e900"><span class="std std-ref">Thread</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1af7490362a6ba93fe8051620ab0351878"><span class="std std-ref">Platform::kThreadName</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a22719fb8265c43a4025619b72031d3d1"><span class="std std-ref">Thread</span></a><span></span><span class="p">(</span>ThreadID<span></span> <span class="n">threadId</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a60de64d75454385b23995437f1d72669"><span class="std std-ref">start</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a74a45d2648335936561898c390281a6a"><span class="std std-ref">terminate</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a059e847a2d2e167bbbd7d7ae5fae8a02"><span class="std std-ref">join</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">milliseconds</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a257fc8f8148265762ab350a6a8563ffc"><span class="std std-ref">setPriority</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">priority</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a2ababf04f0e98383d7655adc74027eb9"><span class="std std-ref">setCPUAffinity</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">cpu</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1ad65045bcc70661e1e745edbb1da0377b"><span class="std std-ref">getPriority</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    ThreadID<span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1ab185f0f3edfbbb73d4440487894bec26"><span class="std std-ref">getID</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1acbea4c315198e69750d71b210bb6da3c"><span class="std std-ref">getName</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a0a2e4b940455308ec36291d64c600f03"><span class="std std-ref">getNativePriority</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1ae1ee4dbe589d1ed6b0434f3583ab6e94"><span class="std std-ref">getUserModeTime</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1ad9ffa23f5198c009144ea1a2c64a2589"><span class="std std-ref">getErrors</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a385cf8f8020a7813229caf3f97b3163e"><span class="std std-ref">Platform::Thread</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a6bff17f60215dfc823e8780bedef3e01"><span class="std std-ref">getPlatformThread</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-threads-1-1-thread-1a7d40eabb218d887fa8daaded06f71dea"><span></span><span class="n">threadEntry</span></span><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_BackgroundWorker_WorkerThread.html#doxid-class-background-worker-1-1-worker-thread"><span class="std std-ref">WorkerThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ClientThread.html#doxid-class-client-thread"><span class="std std-ref">ClientThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Test_AtomicTestThread.html#doxid-class-core-1-1-test-1-1-atomic-test-thread"><span class="std std-ref">AtomicTestThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Test_LockingThread.html#doxid-class-core-1-1-test-1-1-locking-thread"><span class="std std-ref">LockingThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Test_SignalThread.html#doxid-class-core-1-1-test-1-1-signal-thread"><span class="std std-ref">SignalThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Test_TestThread.html#doxid-class-core-1-1-test-1-1-test-thread"><span class="std std-ref">TestThread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Portable_HTTP_ServerRunLoop_Thread.html#doxid-class-server-run-loop-1-1-thread"><span class="std std-ref">Thread</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ServerThread.html#doxid-class-server-thread"><span class="std std-ref">ServerThread</span></a><span></span><span class="p">;</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_IThreadEntry.html#doxid-struct-core-1-1-platform-1-1-i-thread-entry-1ae54aee403566cbc4195559dac3e0af60"><span class="std std-ref">threadEntry</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-core-1-1-threads-1-1-thread"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref">Thread</span></a> class.</p>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a9ec51c4b96956d57787c6e74e926e900"><span id="index-1"></span><span></span><span class="n">Thread</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1af7490362a6ba93fe8051620ab0351878"><span class="std std-ref">Platform::kThreadName</span></a><span></span><span class="p">)</span></pre>
+<p><a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref">Thread</span></a> constructor.</p>
+<p>The thread does not start executing</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>Name of the thread</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a22719fb8265c43a4025619b72031d3d1"><span id="index-2"></span><span></span><span class="n">Thread</span><span class="p">(</span>ThreadID<span></span> <span class="n">threadId</span><span class="p">)</span></pre>
+<p><a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread"><span class="std std-ref">Thread</span></a> constructor with thread ID.</p>
+<p>Opens an existing thread with a given ID.</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>threadId</p></td>
+<td><p>ID of an existing thread</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a60de64d75454385b23995437f1d72669"><span id="index-3"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">start</span><span class="p">()</span></pre>
+<p>Start executing.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a74a45d2648335936561898c390281a6a"><span id="index-4"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">terminate</span><span class="p">()</span></pre>
+<p>Terminate.</p>
+<p>Might not be implemented for all platforms. Deprecated This function might be dangerous.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The thread might not exit cleanly and could leave the process in an inconsistent state.</p>
+</div>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a059e847a2d2e167bbbd7d7ae5fae8a02"><span id="index-5"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">join</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">milliseconds</span><span class="p">)</span></pre>
+<p>Wait for the thread to finish.</p>
+<p>Depending on the platform implementation, the thread might be terminated after waiting for <em>milliseconds</em>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Calling this function might block the execution for an unknown amount of time if the platform implementation ignores the parameter.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Calling this function might leave the process in an inconsistent state, see <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a74a45d2648335936561898c390281a6a"><span class="std std-ref">Thread::terminate</span></a>.</p>
+</div>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>milliseconds</p></td>
+<td><p><a class="reference internal" href="class_Core_Time.html#doxid-class-core-1-1-time"><span class="std std-ref">Time</span></a> in milliseconds to wait before terminating the thread.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>true if the thread finished execution, false if the thread was terminated after waiting for <em>milliseconds</em> or joining failed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a257fc8f8148265762ab350a6a8563ffc"><span id="index-6"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">setPriority</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">priority</span><span class="p">)</span></pre>
+<p>Sets the priority of the thread.</p>
+<p>Might not be implemented for all platforms.</p>
+<p>Call this before calling <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a60de64d75454385b23995437f1d72669"><span class="std std-ref">Thread::start</span></a></p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The priority of the thread</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">See also:</p>
+<p><span class="xref std std-ref">Core::Threads::ThreadPriority</span></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a2ababf04f0e98383d7655adc74027eb9"><span id="index-7"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">setCPUAffinity</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">cpu</span><span class="p">)</span></pre>
+<p>Sets the CPU affinity of the thread.</p>
+<p>Might not be implemented for all platforms.</p>
+<p>Call this before calling <a class="reference internal" href="#doxid-class-core-1-1-threads-1-1-thread-1a60de64d75454385b23995437f1d72669"><span class="std std-ref">Thread::start</span></a>.</p>
+<p class="rubric">Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The CPU affinity of the thread</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1ad65045bcc70661e1e745edbb1da0377b"><span id="index-8"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">getPriority</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the current priority of the thread.</p>
+<p class="rubric">Returns:</p>
+<p>The current priority</p>
+<p class="rubric">See also:</p>
+<p><span class="xref std std-ref">Core::Threads::ThreadPriority</span></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1ab185f0f3edfbbb73d4440487894bec26"><span id="index-9"></span>ThreadID<span></span> <span class="n">getID</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the ID of the thread.</p>
+<p class="rubric">Returns:</p>
+<p>The thread ID</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1acbea4c315198e69750d71b210bb6da3c"><span id="index-10"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the name of the thread.</p>
+<p class="rubric">Returns:</p>
+<p>The thread name</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a0a2e4b940455308ec36291d64c600f03"><span id="index-11"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">getNativePriority</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the current priority of the thread represented in a platform-specific way.</p>
+<p class="rubric">Returns:</p>
+<p>The current priority</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1ae1ee4dbe589d1ed6b0434f3583ab6e94"><span id="index-12"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">getUserModeTime</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get the time this thread has executed in used mode.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The exact time representation might be platform-specific</p>
+</div>
+<p class="rubric">Returns:</p>
+<p>The time this thread has executed in user mode</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1ad9ffa23f5198c009144ea1a2c64a2589"><span id="index-13"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">getErrors</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Report if anything went wrong.</p>
+<p class="rubric">Returns:</p>
+<p>A combination of ThreadErrors, or 0 if none</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-core-1-1-threads-1-1-thread-1a6bff17f60215dfc823e8780bedef3e01"><span id="index-14"></span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a385cf8f8020a7813229caf3f97b3163e"><span class="std std-ref">Platform::Thread</span></a><span></span><span class="o">&amp;</span> <span class="n">getPlatformThread</span><span class="p">()</span></pre>
+<p>Get the platform-specific thread implementation object.</p>
+<p>This object might reveal additional methods and attributes.</p>
+<p class="rubric">Returns:</p>
+<p>The platform-specific thread implementation object</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Threads_Signal.html" class="btn btn-neutral float-left" title="class Core::Threads::Signal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="group_core_time.html" class="btn btn-neutral float-right" title="Core-Time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

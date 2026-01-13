@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL How-tos &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorials" href="tutorials/index.html" />
+    <link rel="prev" title="Building CCL" href="building.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Building CCL</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CCL How-tos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-start-with-a-new-ccl-based-application">How do I start with a new CCL-based application?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-add-a-resource-file-and-access-it-from-the-application">How do I add a resource file and access it from the application?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-run-unit-tests">How do I run unit tests?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#from-the-command-line">From the command-line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmake-and-ide-integration">CMake and IDE integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtering-tests">Filtering Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-add-a-unit-test">How do I add a unit test?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-tests">Simple Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-fixtures">Test Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-collections">Test Collections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#range-based-for-loops">Range-based for loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-create-a-new-type">How to create a new type?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rtti">RTTI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identification">Identification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-objects-from-other-modules-with-ccl-new">Creating objects from other modules with ccl_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#more-class-macros">More class macros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-objects-communicate-with-each-other">How can objects communicate with each other?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#isubject">ISubject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signalslot">SignalSlot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#what-does-the-view-model-look-like">What does the View Model look like?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view">View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-views-from-application-code">Accessing views from application code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controls">Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-views">Creating views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-controls">User Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-implement-commands">How can I implement commands?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#translations">Translations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#follow-indicator">Follow indicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-command-registration">Multi command registration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-arguments">Command arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-only">Check only</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-edit-and-debug-skins">How can I edit and debug skins?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-do-something-asynchronously">How can I do something asynchronously?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-kind-of-collections-can-i-use">What kind of collections can I use?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-a-variant">What is a Variant?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Cross-platform Framework</a></li>
+      <li class="breadcrumb-item active">CCL How-tos</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-how-tos">
+<h1>CCL How-tos<a class="headerlink" href="#ccl-how-tos" title="Link to this heading"></a></h1>
+<section id="how-do-i-start-with-a-new-ccl-based-application">
+<span id="ccl-start-application"></span><h2>How do I start with a new CCL-based application?<a class="headerlink" href="#how-do-i-start-with-a-new-ccl-based-application" title="Link to this heading"></a></h2>
+<p>The following steps will create a rudimentary CCL-based app with corresponding CMake project files. The resulting CMake files can in turn be used to generate a Visual Studio solution for Windows, an Xcode project for Mac, etc.</p>
+<ul>
+<li><p>Use the <a class="reference internal" href="cmdtools/builder.html#ccl-tools-cclbuilder"><span class="std std-ref">CCL Builder</span></a> tool for your platform found in:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">CCL SDK</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Mac: ~/Documents/CCL\ SDK-&lt;version&gt;-macOS/bin/cclbuilder
+Linux: /usr/bin/ccl/&lt;version&gt;/linux-x86_64/cclbuilder
+Win: C:\Program Files\Crystal Class Library/&lt;version&gt;/bin/win-x86_64/cclbuilder.exe
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Source Release</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Mac: tools/bin/mac/ccl/cclbuilder
+Linux: tools/bin/linux/ccl/x86_64/cclbuilder
+Win: tools\bin\win\ccl\cclbuilder.exe
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Run <a class="reference internal" href="cmdtools/builder.html#ccl-tools-cclbuilder"><span class="std std-ref">CCL Builder</span></a> without arguments. This prints a list of available presets.</p></li>
+<li><p>Run <a class="reference internal" href="cmdtools/builder.html#ccl-tools-cclbuilder"><span class="std std-ref">CCL Builder</span></a> with your settings:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>tools/bin/win/ccl/cclbuilder
+  -template apptemplate -vendor ccl -platforms win
+  -destination .\applications\ccl\test\testapp ProjectTitle TestApp
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The -dest parameter can be an absolute path or relative to the current working directory of the command line</p></li>
+<li><p>all parameters except the template name are optional, the tool asks for missing values interactively</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For input options, run cclbuilder command without arguments.
+For interactive mode, run cclbuilder with <cite>-i</cite></p>
+</div>
+</li>
+</ul>
+</section>
+<section id="how-do-i-add-a-resource-file-and-access-it-from-the-application">
+<h2>How do I add a resource file and access it from the application?<a class="headerlink" href="#how-do-i-add-a-resource-file-and-access-it-from-the-application" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>In your application’s main CMake file (e.g. “applications/myapp/cmake/CMakeLists.txt”), add your file to the &lt;myapp&gt;_resources list.</p></li>
+<li><p>If this list does not exist, create it (<cite>list (APPEND myapp_resources &lt;resource file&gt; …)</cite>) and add a line <cite>ccl_add_resources (myapp ${myapp_resources})</cite> at the end of your main CMake file</p></li>
+<li><p>Address it in the application code using the ResourceUrl class</p></li>
+</ul>
+</section>
+<section id="how-do-i-run-unit-tests">
+<h2>How do I run unit tests?<a class="headerlink" href="#how-do-i-run-unit-tests" title="Link to this heading"></a></h2>
+<section id="from-the-command-line">
+<h3>From the command-line<a class="headerlink" href="#from-the-command-line" title="Link to this heading"></a></h3>
+<p>The ccltestrunner tool loads test collections from all provided modules in order to run the registered tests. One or more modules can be provided as command-line arguments.</p>
+<p>The following example runs all tests registered in bundles jsengine and sqlite (.dll on Windows).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccltestrunner<span class="w"> </span>jsengine.bundle<span class="w"> </span>sqlite.bundle
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Modules which register tests on <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-browserextender-8cpp-1a2802079ad0ca00a604d63990b3abdf02"><span class="std std-ref"><span class="pre">CCL_KERNEL_INIT_LEVEL</span></span></a></code> need to be linked by the testrunner (e.g. cclgui). Those tests are always available.</p>
+</div>
+<p>By default, all collected tests are run and the results are printed to the console.</p>
+</section>
+<section id="cmake-and-ide-integration">
+<h3>CMake and IDE integration<a class="headerlink" href="#cmake-and-ide-integration" title="Link to this heading"></a></h3>
+<p>Unit test IDE integration is disabled by default and must be enabled by running cmake with option <code class="docutils literal notranslate"><span class="pre">-DCCL_ENABLE_TESTING=ON</span></code>.</p>
+<ul class="simple">
+<li><p>For each module which contains a <em>ccl_add_test (&lt;target&gt;)</em> call, a custom target <em>&lt;target&gt;_unittest</em> is added which runs the tests defined in <em>&lt;target&gt;</em>.</p></li>
+<li><p>For XCode and Visual Studio the testrunner is set as the debug executable for <em>&lt;target&gt;</em> which allows for fast development iterations.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tests registered on <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-browserextender-8cpp-1a2802079ad0ca00a604d63990b3abdf02"><span class="std std-ref"><span class="pre">CCL_KERNEL_INIT_LEVEL</span></span></a></code> are always run by default.</p>
+</div>
+</section>
+<section id="filtering-tests">
+<h3>Filtering Tests<a class="headerlink" href="#filtering-tests" title="Link to this heading"></a></h3>
+<p>The tests to be run can be filtered using wildcards. The following command will run all tests from suite <em>GUITestSuite</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccltestrunner<span class="w"> </span>-filter<span class="o">=</span>GUITestSuite*<span class="w"> </span>ccltest.bundle
+</pre></div>
+</div>
+<p>A single test can be run by specifying:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccltestrunner<span class="w"> </span>-filter<span class="o">=</span>*TestDpiScale<span class="w"> </span>ccltest.bundle
+</pre></div>
+</div>
+<p>Or, if there are multiple tests with the same name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccltestrunner<span class="w"> </span>-filter<span class="o">=</span>GUITestSuite_TestDpiScale<span class="w"> </span>ccltest.bundle
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filtering can also be applied as an argument to the debug executable in XCode and Visual Studio.</p>
+</div>
+</section>
+</section>
+<section id="how-do-i-add-a-unit-test">
+<span id="ccl-add-unit-test"></span><h2>How do I add a unit test?<a class="headerlink" href="#how-do-i-add-a-unit-test" title="Link to this heading"></a></h2>
+<p>Macros and base classes for unit tests can be found in</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>ccl/base/unittest.h
+</pre></div>
+</div>
+<p>Supported test classes are:</p>
+<ul class="simple">
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1a19d924f68651714211eda4221b0bbc4a"><span class="std std-ref"><span class="pre">CCL_TEST</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1acaca1ec010ee3af4a4b31d378c9fd6ec"><span class="std std-ref"><span class="pre">CCL_TEST_F</span></span></a></code> (Tests sharing a test fixture)</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1a5a188c8e9be4ba64f55d96eb34be337d"><span class="std std-ref"><span class="pre">CCL_TEST_P</span></span></a></code> (Parameterized tests)</p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1ae8701d13688af56b19cc163db326582f"><span class="std std-ref"><span class="pre">CCL_TEST_T</span></span></a></code> (Typed tests)</p></li>
+</ul>
+<p>Tests are created from two arguments, the <strong>test suite name</strong> and the <strong>test name</strong>, where a test suite identifies a group of tests.</p>
+<section id="simple-tests">
+<h3>Simple Tests<a class="headerlink" href="#simple-tests" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ccl/base/unittest.h&quot;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">CCL</span><span class="p">;</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">Bicycle</span><span class="o">&gt;</span> <span class="n">bicycle</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Bicycle</span><span class="p">;</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">bicycle</span><span class="o">-&gt;</span><span class="n">getWheelCount</span> <span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="test-fixtures">
+<h3>Test Fixtures<a class="headerlink" href="#test-fixtures" title="Link to this heading"></a></h3>
+<p>A test fixture is a base class shared by multiple tests. Tests using a fixture can access public and protected members through inheritance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The test suite name of a test using a test fixture must be equal to the name of the test fixture. This is a convenient practice among testing frameworks but should not lead to the assumption that the terms “fixture” and “suite” are interchangable or otherwise related.</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ccl/base/unittest.h&quot;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">CCL</span><span class="p">;</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="k">class</span> <span class="nl">BicycleTest</span><span class="p">:</span> <span class="k">public</span> <span class="n">Test</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// Test</span>
+    <span class="kt">void</span> <span class="n">setUp</span> <span class="p">()</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="n">bicycle</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Bicycle</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">Bicycle</span><span class="o">&gt;</span> <span class="n">bicycle</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheelsByDefault</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">bicycle</span><span class="o">-&gt;</span><span class="n">getWheelCount</span> <span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesWithoutWheelsAreUseless</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">removeWheel</span> <span class="p">(</span><span class="n">Bicycle</span><span class="o">::</span><span class="n">kFrontWheel</span><span class="p">);</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">removeWheel</span> <span class="p">(</span><span class="n">Bicycle</span><span class="o">::</span><span class="n">kRearWheel</span><span class="p">);</span>
+
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">bicycle</span><span class="o">-&gt;</span><span class="n">getWheelCount</span> <span class="p">());</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">bicycle</span><span class="o">-&gt;</span><span class="n">isUseless</span> <span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="test-collections">
+<h3>Test Collections<a class="headerlink" href="#test-collections" title="Link to this heading"></a></h3>
+<p>In order to run tests, each module (e.g. plug-in or service) must add and register a test collection using macros <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1a478c5615484dd2c195e0f7b1f1e00e0d"><span class="std std-ref"><span class="pre">CCL_ADD_TEST_COLLECTION</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-unittest-8h-1a3dfbeb0b1a14917fcd50310617613ec2"><span class="std std-ref"><span class="pre">CCL_REGISTER_TEST_COLLECTION</span></span></a></code> (see existing tested modules).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ccl/base/unittest.h&quot;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">CCL</span><span class="p">;</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// Test Factory</span>
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_ADD_TEST_COLLECTION</span> <span class="p">(</span><span class="n">BicycleTests</span><span class="p">)</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// CCLGetClassFactory</span>
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_EXPORT</span> <span class="n">IClassFactory</span><span class="o">*</span> <span class="n">CCL_API</span> <span class="n">CCLGetClassFactory</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ClassFactory</span><span class="o">*</span> <span class="n">factory</span> <span class="o">=</span> <span class="n">ClassFactory</span><span class="o">::</span><span class="n">instance</span> <span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">factory</span><span class="o">-&gt;</span><span class="n">isEmpty</span> <span class="p">())</span>
+    <span class="p">{</span>
+        <span class="p">...</span>
+
+
+         <span class="n">CCL_REGISTER_TEST_COLLECTION</span> <span class="p">(</span><span class="n">factory</span><span class="p">,</span>
+                                      <span class="n">UID</span> <span class="p">(</span><span class="mh">0x704C83F3</span><span class="p">,</span> <span class="mh">0x6C5A</span><span class="p">,</span> <span class="mh">0x4EB2</span><span class="p">,</span> <span class="mh">0x89</span><span class="p">,</span> <span class="mh">0xCC</span><span class="p">,</span> <span class="mh">0x7A</span><span class="p">,</span> <span class="mh">0xE7</span><span class="p">,</span> <span class="mh">0xA3</span><span class="p">,</span> <span class="mh">0xCA</span><span class="p">,</span> <span class="mh">0xC8</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">),</span>
+                                      <span class="n">BicycleTests</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">factory</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="range-based-for-loops">
+<h2>Range-based for loops<a class="headerlink" href="#range-based-for-loops" title="Link to this heading"></a></h2>
+<p>The CCL container classes support the range-based for loops introduced in C++11. Initialization via braced-init-list is also available for some containers:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">intVector</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">};</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">intVector</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>For object-based containers derived from CCL::Container, the iteration returns <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code> pointers:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ObjectList</span> <span class="n">urlList</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">obj</span> <span class="p">:</span> <span class="n">urlList</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Url</span><span class="o">*</span> <span class="n">url</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">Url</span><span class="o">*&gt;</span> <span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">&lt;&lt;</span> <span class="n">UrlFullString</span> <span class="p">(</span><span class="o">*</span><span class="n">url</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The template iterate_as&lt;&gt; can be used to perform a static_cast to a given class internally in the iteration:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">url</span> <span class="p">:</span> <span class="n">iterate_as</span><span class="o">&lt;</span><span class="n">Url</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">urlList</span><span class="p">))</span>
+    <span class="n">string</span> <span class="o">&lt;&lt;</span> <span class="n">UrlFullString</span> <span class="p">(</span><span class="o">*</span><span class="n">url</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-create-a-new-type">
+<h2>How to create a new type?<a class="headerlink" href="#how-to-create-a-new-type" title="Link to this heading"></a></h2>
+<section id="object">
+<h3>Object<a class="headerlink" href="#object" title="Link to this heading"></a></h3>
+<p>New types will in most cases be derived directly or indirectly from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code>. It is the fundamental base class with persistent storage and implements a couple of interfaces to work with.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/objects.svg"><img alt="../_images/objects.svg" src="../_images/objects.svg" style="width: 90%;" />
+</a>
+</figure>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code> inherits <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown"><span class="std std-ref"><span class="pre">CCL::Unknown</span></span></a></code> and thus implements <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref"><span class="pre">CCL::IUnknown</span></span></a></code> for object lifetime handling. Object lifetime is managed by a reference counter:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Object</span><span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Object</span><span class="p">;</span>    <span class="c1">// ref count = 1</span>
+<span class="n">obj</span><span class="o">-&gt;</span><span class="n">retain</span> <span class="p">();</span>              <span class="c1">// ref count = 2</span>
+<span class="n">obj</span><span class="o">-&gt;</span><span class="n">release</span> <span class="p">();</span>             <span class="c1">// ref count = 1</span>
+<span class="n">obj</span><span class="o">-&gt;</span><span class="n">release</span> <span class="p">();</span>             <span class="c1">// ref count = 0 ... delete</span>
+<span class="n">obj</span><span class="o">-&gt;</span><span class="n">release</span> <span class="p">();</span>             <span class="c1">// CRASH!</span>
+</pre></div>
+</div>
+<p>The define <code class="docutils literal notranslate"><span class="pre">NEW</span></code> is used generally instead of <code class="docutils literal notranslate"><span class="pre">new</span></code> and is redirected to an overwritten <code class="docutils literal notranslate"><span class="pre">new</span></code> operator. If <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> is set, this also allows advanced debugging (finding memory leaks).</p>
+</section>
+<section id="rtti">
+<h3>RTTI<a class="headerlink" href="#rtti" title="Link to this heading"></a></h3>
+<p>The macro <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-objectmacros-8h-1a595d8f97de4c5e5eed89145a4c9c95d6"><span class="std std-ref"><span class="pre">DECLARE_CLASS</span></span></a></code> is used in the header file to declare the Runtime Type Information (RTTI) for a class. The necessary definitions are done in the source file using the macro <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-action-8cpp-1a8cbe82d01fd049e3654184445c01efa2"><span class="std std-ref"><span class="pre">DEFINE_CLASS</span></span></a></code>. This declares a couple of functions and a static object of type <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_MetaClass.html#doxid-class-c-c-l-1-1-meta-class"><span class="std std-ref"><span class="pre">CCL::MetaClass</span></span></a></code> that carries the type information. The object is created in the definition and registers the type in the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_MetaClassRegistry.html#doxid-class-c-c-l-1-1-meta-class-registry"><span class="std std-ref"><span class="pre">CCL::MetaClassRegistry</span></span></a></code> in the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Kernel.html#doxid-class-c-c-l-1-1-kernel"><span class="std std-ref"><span class="pre">CCL::Kernel</span></span></a></code> <a class="reference external" href="https://en.wikipedia.org/wiki/Singleton_pattern">singleton</a>. The RTTI is used for allocating objects, casting objects to specific interfaces or figuring out if an object can be used in a certain way (interfaces).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The class macros used in the declaration of types also define the type <code class="docutils literal notranslate"><span class="pre">SuperClass</span></code> for the parent class. You should always use that type in your functions to avoid searching all over your code when changing the inheritance.</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get a reference to the MetaClass object of a type</span>
+<span class="n">MetaClassRef</span> <span class="n">ref</span> <span class="o">=</span> <span class="n">ccl_typeid</span><span class="o">&lt;</span><span class="n">Class</span><span class="o">&gt;</span> <span class="p">();</span>
+
+<span class="c1">// check if an object can be casted to a specific type</span>
+<span class="n">obj</span><span class="o">-&gt;</span><span class="n">can_cast</span> <span class="p">(</span><span class="n">ref</span><span class="p">);</span>
+
+<span class="c1">// get a pointer to a specific interface of an object</span>
+<span class="n">UnkownPtr</span><span class="o">&lt;</span><span class="n">Subject</span><span class="o">&gt;</span> <span class="n">subject</span> <span class="p">(</span><span class="n">object</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
+  <span class="n">subject</span><span class="o">-&gt;</span><span class="n">addObserver</span><span class="p">()</span> <span class="c1">// ...</span>
+</pre></div>
+</div>
+</section>
+<section id="identification">
+<h3>Identification<a class="headerlink" href="#identification" title="Link to this heading"></a></h3>
+<p>Interfaces and types in the class registry are identified using a <a class="reference external" href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>. The GUID (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../corelibrary/reference/struct_Core_UIDBytes.html#doxid-struct-core-1-1-u-i-d-bytes"><span class="std std-ref"><span class="pre">Core::UIDBytes</span></span></a></code>) is generated during development and defined in the header file of an interface or class using the macro <code class="doxyrest-cref docutils literal notranslate"><span class="pre">DEFINE_CID</span></code> for classes (in the namespace CCL::ClassID) and <code class="doxyrest-cref docutils literal notranslate"><span class="pre">DEFINE_IID_</span></code> (in the namespace CCL) for interfaces. This way you can easily create an object or get a specific interface for an object.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// create new instance</span>
+<span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">IFolderSelector</span><span class="o">&gt;</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">ccl_new</span><span class="o">&lt;</span><span class="n">IFolderSelector</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">ClassID</span><span class="o">::</span><span class="n">FolderSelector</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When you implement a type you inherit the queryInterface function for your type from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code> for the basic interfaces. You can also overwrite the queryInterface function and use the macro <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-cclmacros-8h-1ad6569b48b42b698a530a9bf485056011"><span class="std std-ref"><span class="pre">QUERY_INTERFACE</span></span></a></code> within that function to simply return a matching pointer if your type implements that interface (or even simpler use the macro <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-cclmacros-8h-1a26145e2eeee3d1137df9c25e02bbc9c8"><span class="std std-ref"><span class="pre">CLASS_INTERFACE</span></span></a></code> in the class declaration for up to 3 interfaces). You can also provide convenient access to an interface of one the members of your type in your overwritten function. Generally you should pass the queryInterface to your parent class using <code class="docutils literal notranslate"><span class="pre">SuperClass::queryInterface</span></code> for inherited interfaces.</p>
+</section>
+<section id="creating-objects-from-other-modules-with-ccl-new">
+<h3>Creating objects from other modules with ccl_new<a class="headerlink" href="#creating-objects-from-other-modules-with-ccl-new" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ccl_new</span></code> is used to create an instance of a class that is implemented in another module than the calling code (so the object can not be created directly via it’s constructor). This does not work automatically with every class - to support it, the class has to</p>
+<ul class="simple">
+<li><p>use the class macros <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-objectmacros-8h-1a595d8f97de4c5e5eed89145a4c9c95d6"><span class="std std-ref"><span class="pre">DECLARE_CLASS</span></span></a></code> in the declaration</p></li>
+<li><p>use the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-action-8cpp-1a8cbe82d01fd049e3654184445c01efa2"><span class="std std-ref"><span class="pre">DEFINE_CLASS</span></span></a></code> or <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-presetmanager-8cpp-1ab572d434546072c96818d1809808e316"><span class="std std-ref"><span class="pre">DEFINE_CLASS_PERSISTENT</span></span></a></code> in the implementation</p></li>
+<li><p>define a unique class ID with the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-pluginselector-8cpp-1a1113297097145237a28fc53deb9e712d"><span class="std std-ref"><span class="pre">DEFINE_CLASS_UID</span></span></a></code> macro in the implementation</p></li>
+<li><p>this class ID must be made available in a public header file, so that the calling code can access it. It’s typically placed in a namespace <code class="docutils literal notranslate"><span class="pre">ClassID</span></code> inside the namespace of the class (example: <code class="docutils literal notranslate"><span class="pre">Media::ClassID::AudioFile</span></code>)</p></li>
+</ul>
+<p><code class="doxyrest-cref docutils literal notranslate"><span class="pre">ccl_new</span></code> fails if a class with the given class ID was not found, or the class doesn’t implement the interface specified by the template argument Interface of <code class="doxyrest-cref docutils literal notranslate"><span class="pre">ccl_new</span></code>.</p>
+<p>Objects created via <code class="doxyrest-cref docutils literal notranslate"><span class="pre">ccl_new</span></code> should be relased via <code class="doxyrest-cref docutils literal notranslate"><span class="pre">ccl_release</span></code>, to ensure that the framework can unload the corresponding module after the last instances was released. This is not necessary for classes implemented in the application executable or the CCL framework, their instances can be released with a simple <code class="docutils literal notranslate"><span class="pre">release</span> <span class="pre">()</span></code>.</p>
+<p>In the FolderSelector example of the previous section, we created an object that is implemented in the cclgui module (the fully classified class ID is <code class="docutils literal notranslate"><span class="pre">CCL::ClassID::FolderSelector</span></code>), so ccl_release was not necessary.</p>
+<p>Note: there is also a variant of <code class="docutils literal notranslate"><span class="pre">ccl_new</span></code> that takes a class name instead of a UID. This is used mainly for scripting and should be avoided in C++ code.</p>
+</section>
+<section id="more-class-macros">
+<h3>More class macros<a class="headerlink" href="#more-class-macros" title="Link to this heading"></a></h3>
+<p>There are also other macros for class declarations and definitions:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Macro</p></th>
+<th class="head"><p>Use Case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-documentdiagnostic-8cpp-1aeefb69b4887e0de83095be9162982a7a"><span class="std std-ref"><span class="pre">DECLARE_CLASS_ABSTRACT</span></span></a></code> <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-browser-8cpp-1ae81b5fea4374c75d05a542d5439f4436"><span class="std std-ref"><span class="pre">DEFINE_CLASS_ABSTRACT</span></span></a></code></p></td>
+<td><p>These macros can be used for a class that is not created directly (no creation or clone functions).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-documentdiagnostic-8cpp-1aeefb69b4887e0de83095be9162982a7a"><span class="std std-ref"><span class="pre">DECLARE_CLASS_ABSTRACT</span></span></a></code> <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-action-8cpp-1a48d2dfddb8ba23c11bac8376f9593a6f"><span class="std std-ref"><span class="pre">DEFINE_CLASS_ABSTRACT_HIDDEN</span></span></a></code></p></td>
+<td><p>These macros can be used for a class that is not created directly (no creation or clone functions) and should not be added to the class registry.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-objectmacros-8h-1a6c8a34ff9fe172e1a06c7dc8d05c4f0a"><span class="std std-ref"><span class="pre">DEFINE_CLASS_HIDDEN</span></span></a></code></p></td>
+<td><p>This macro can be used if the class construction shall not be added to the class registry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-presetmanager-8cpp-1ab572d434546072c96818d1809808e316"><span class="std std-ref"><span class="pre">DEFINE_CLASS_PERSISTENT</span></span></a></code></p></td>
+<td><p>This macro can be used to overwrite the persistence name of the type (normally the class name is used).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-cclmacros-8h-1a26145e2eeee3d1137df9c25e02bbc9c8"><span class="std std-ref"><span class="pre">CLASS_INTERFACE</span></span></a></code></p></td>
+<td><p>Using this macro (also available for 2+ interfaces) in the public section of the class declaration defines the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref"><span class="pre">CCL::IUnknown::queryInterface</span></span></a></code> member function accordingly.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="how-can-objects-communicate-with-each-other">
+<h2>How can objects communicate with each other?<a class="headerlink" href="#how-can-objects-communicate-with-each-other" title="Link to this heading"></a></h2>
+<section id="isubject">
+<h3>ISubject<a class="headerlink" href="#isubject" title="Link to this heading"></a></h3>
+<p>The interface <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref"><span class="pre">CCL::ISubject</span></span></a></code> is implemented in <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code> to allow messages to be passed between objects using a <a class="reference external" href="https://en.wikipedia.org/wiki/Observer_pattern">observer pattern</a>. If an object wants to be notified upon the change of another object (observer), it would register itself for changes on the other object (subject). Example:</p>
+<p>Observer self registration at fileList:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// the observer adds himself as observer to the subject (fileList)</span>
+<span class="n">fileList</span><span class="o">-&gt;</span><span class="n">addObserver</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+<span class="c1">// the observer must also remove himself if he is no longer</span>
+<span class="c1">// interested in updates (or doesn&#39;t live any longer)</span>
+<span class="n">fileList</span><span class="o">-&gt;</span><span class="n">removeObserver</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Subject fileList sends a message on state change via signal ():</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">signal</span> <span class="p">(</span><span class="n">Message</span> <span class="p">(</span><span class="n">kChanged</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Observer implements notify () to process the incoming signal, identifies sender via subject argument:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CCL_API</span> <span class="n">FileListComponentBase</span><span class="o">::</span><span class="n">notify</span> <span class="p">(</span><span class="n">ISubject</span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <span class="n">MessageRef</span> <span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// check which subject sends the notification (observer might be registered to many subjects)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">subject</span> <span class="o">==</span> <span class="n">fileList</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// check which message is send by the subject</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">msg</span> <span class="o">==</span> <span class="n">kChanged</span><span class="p">)</span>
+      <span class="c1">// react on the message ... e.g. change state</span>
+      <span class="n">updateState</span> <span class="p">();</span>
+
+    <span class="c1">// objects can be passed in the message parameter as Variant</span>
+    <span class="n">Url</span><span class="o">*</span> <span class="n">path</span> <span class="o">=</span> <span class="n">unknown_cast</span><span class="o">&lt;</span><span class="n">Url</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">asUnknown</span> <span class="p">());</span>
+    <span class="c1">// ... or</span>
+    <span class="n">UnknownPtr</span><span class="o">&lt;</span><span class="n">IUrl</span><span class="o">&gt;</span> <span class="n">path</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">asUnknown</span> <span class="p">();</span>
+
+    <span class="c1">// sometimes it makes sense to forwarded the message to other objects</span>
+    <span class="c1">// who are registered to this object as observers</span>
+    <span class="c1">// ... in this perspective this object becomes the subject</span>
+    <span class="n">signal</span> <span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Internally, the actual message passing is much more sophisticated then the described <a class="reference external" href="https://en.wikipedia.org/wiki/Observer_pattern">observer pattern</a> and the messages are processed by the <code class="docutils literal notranslate"><span class="pre">CCL::SignalHandler</span></code> singleton that also implements synchronisation, queuing and scheduling together with several other things.</p>
+</section>
+<section id="signalslot">
+<h3>SignalSlot<a class="headerlink" href="#signalslot" title="Link to this heading"></a></h3>
+<p>For types derived from <code class="docutils literal notranslate"><span class="pre">CCL::Component</span></code> you might also run across the internal member <code class="docutils literal notranslate"><span class="pre">signalSlots</span></code> of type <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_SignalSlotList.html#doxid-class-c-c-l-1-1-signal-slot-list"><span class="std std-ref"><span class="pre">CCL::SignalSlotList</span></span></a></code> where you can register for messages using <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_SignalSlotList.html#doxid-class-c-c-l-1-1-signal-slot-list-1a70d500a3fe9d4a0254893e5c510859a0"><span class="std std-ref"><span class="pre">CCL::SignalSlotList::advise</span></span></a></code>.</p>
+<p>For sending messages to a certain observer (e.g. with the possibility to delay messages), you might run across something like</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">NEW</span> <span class="n">Message</span> <span class="p">(</span><span class="s">&quot;triggerScanning&quot;</span><span class="p">))</span><span class="o">-&gt;</span><span class="n">post</span> <span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where the observer side looks exactly the same. In this example the message is sent to the object itself. This is a common pattern, if you want to do some processing delayed, maybe after the messages caused by your code are already processed. In this case it is important to call <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_SignalSource.html#doxid-class-c-c-l-1-1-signal-source-1a5961d85df991b3ca73a986669b6750e9"><span class="std std-ref"><span class="pre">CCL::SignalSource::cancelSignals</span></span></a></code> in the destructor of the object.</p>
+<p>In <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject"><span class="std std-ref"><span class="pre">CCL::ISubject</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer"><span class="std std-ref"><span class="pre">CCL::IObserver</span></span></a></code> you also find the following static helper methods:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ISubject, observer de-/registration</span>
+<span class="n">addObserver</span> <span class="p">(</span><span class="n">IUnknown</span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <span class="n">IObserver</span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span>
+<span class="n">removeObserver</span> <span class="p">(</span><span class="n">IUnknown</span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <span class="n">IObserver</span><span class="o">*</span> <span class="n">observer</span><span class="p">)</span>
+
+<span class="c1">// IObserver: send message</span>
+<span class="n">notify</span> <span class="p">(</span><span class="n">IUnknown</span><span class="o">*</span> <span class="n">observer</span><span class="p">,</span> <span class="n">ISubject</span><span class="o">*</span> <span class="n">subject</span><span class="p">,</span> <span class="n">MessageRef</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="what-does-the-view-model-look-like">
+<h2>What does the View Model look like?<a class="headerlink" href="#what-does-the-view-model-look-like" title="Link to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/viewmodel.svg"><img alt="../_images/viewmodel.svg" src="../_images/viewmodel.svg" style="width: 90%;" />
+</a>
+</figure>
+<p>The two packages <strong>cclgui</strong> and <strong>cclapp</strong> in the picture do not only translate to namespaces, but also to libraries (<strong>cclgui</strong> is compiled to a dynamic library and <strong>cclapp</strong> is linked statically to the application). The boundary between <strong>cclgui</strong> and <strong>cclapp</strong> is the boundary between a shared library and the application (or another module) and so only interfaces are passed to maintain binary compatibility.</p>
+</section>
+<section id="view">
+<h3>View<a class="headerlink" href="#view" title="Link to this heading"></a></h3>
+<p>The UI of an application is constructed as a tree of <em>view</em> objects. A view occupies a rectangular area on the screen. It’s responsible for drawing itself and can handle user input via keyboard, mouse and touch events. Views can be nested: a view can contain child views and has a pointer to its parent view (<a class="reference external" href="https://en.wikipedia.org/wiki/Composite_pattern">composite</a>). The root of such a view tree is typically a <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Window</span></code> object which represents a window on the screen of the underlying operating system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The base class <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::Window</span></code> is inherited by <code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::NativeWindow</span></code> (a typedef that is set at compile time according to the compile target WINDOWS/MAC/IOS/ANDROID to the real name of the type) and overwrites/calls the Window functions according to the underlying OS.</p>
+</div>
+<p>When a view is resized (e.g. when the user sizes the window or moves a divider), the size member is changed and <code class="docutils literal notranslate"><span class="pre">onSize</span></code> is called, where the child views are layouted according to their size mode (and also <code class="docutils literal notranslate"><span class="pre">onSize</span></code> is called on them, indirectly so they can do the same with their children). On the other hand, when the size of a child view changes (e.g. because some internal condition changed), the parent view is informed by <code class="docutils literal notranslate"><span class="pre">onChildSized</span></code> (this is not recursive … while the parent is doing a resize, he does not care about child size changes).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Keeping a pointer to a view for a longer time can be dangerous, as the view might be destroyed at some point, e.g. when the user closes a window. For safely dealing with this scenario, you can use a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/namespace_CCL.html#doxid-namespace-c-c-l-1af3722a7e99957d209d78a1711f0e19d3"><span class="std std-ref"><span class="pre">CCL::ViewPtr</span></span></a></code>, that automatically nulls the pointer to the view when the view object is destroyed. This is actually just a typedef for the more general <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_ObservedPtr.html#doxid-class-c-c-l-1-1-observed-ptr"><span class="std std-ref"><span class="pre">CCL::ObservedPtr</span></span></a></code>, that can be used with any object that sends a <code class="docutils literal notranslate"><span class="pre">kDestroyed</span></code> message in its destructor (though not every class does that).</p>
+</div>
+</section>
+<section id="accessing-views-from-application-code">
+<h3>Accessing views from application code<a class="headerlink" href="#accessing-views-from-application-code" title="Link to this heading"></a></h3>
+<p>An application can work a framework view via the interfaces <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref"><span class="pre">CCL::IView</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IViewChildren.html#doxid-struct-c-c-l-1-1-i-view-children"><span class="std std-ref"><span class="pre">CCL::IViewChildren</span></span></a></code>. More convenient access is possible with the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_ViewBox.html#doxid-class-c-c-l-1-1-view-box"><span class="std std-ref"><span class="pre">CCL::ViewBox</span></span></a></code> class, that provides more getter and setter methods (many of these wrap calls to <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view-1aa3a120316f116c80bf058f79a4dfbfc2"><span class="std std-ref"><span class="pre">CCL::IView::getViewAttribute</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view-1a2ac4735ad9c8fbb56f122e4e65856f1c"><span class="std std-ref"><span class="pre">CCL::IView::setViewAttribute</span></span></a></code>).</p>
+</section>
+<section id="controls">
+<h3>Controls<a class="headerlink" href="#controls" title="Link to this heading"></a></h3>
+<p>The cclgui framework implements a set of standard views. The most import ones are controls (<code class="doxyrest-cref docutils literal notranslate"><span class="pre">Control</span></code>) like Button, Slider, Knob. A control typcially displays and modifies the state of a parameter object, that is provided by a component of the application.</p>
+<p>There are also more complex views like a <cite>ListView</cite> and <cite>TreeView</cite>. The content displayed in these so called <cite>ItemViews</cite> is provided by the application via the IItemModel interface, that also allows to define how items are displayed and to interact with the data.</p>
+</section>
+<section id="creating-views">
+<h3>Creating views<a class="headerlink" href="#creating-views" title="Link to this heading"></a></h3>
+<p>Views are typically created from a declarative description in a skin XML file, where the basic building block is a <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Form</span></code>.
+Alternatively, views can be created with their class ID and the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">ViewBox</span></code> constructor, and then be assembled to form a view tree.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Control class derived from View adds the implementation of the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IControl.html#doxid-struct-c-c-l-1-1-i-control"><span class="std std-ref"><span class="pre">CCL::IControl</span></span></a></code> interface for parameter handling. See <a class="reference internal" href="tutorials/qt.html#switching-from-qt"><span class="std std-ref">Switching from Qt</span></a> for model view examples.</p>
+</div>
+</section>
+<section id="user-controls">
+<h3>User Controls<a class="headerlink" href="#user-controls" title="Link to this heading"></a></h3>
+<p>For implementing a custom view on the application level, you can’t derive a class directly from the framework’s <code class="doxyrest-cref docutils literal notranslate"><span class="pre">View</span></code> class, because it’s in a different module. Instead, you have to derive from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-usercontrol-8cpp-1a2c6a566b28e321fa7d30b6bc0b75cdc1"><span class="std std-ref"><span class="pre">UserControl</span></span></a></code>. A UserControl is backed by a special view called the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">UserControlHost</span></code>, which represents the control in the view tree in <code class="docutils literal notranslate"><span class="pre">cclgui</span></code>.</p>
+<p><code class="doxyrest-cref docutils literal notranslate"><span class="pre">UserControlHost</span></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-usercontrol-8cpp-1a2c6a566b28e321fa7d30b6bc0b75cdc1"><span class="std std-ref"><span class="pre">UserControl</span></span></a></code> communicate accross module boundaries via the interfaces <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUserControlHost.html#doxid-struct-c-c-l-1-1-i-user-control-host"><span class="std std-ref"><span class="pre">CCL::IUserControlHost</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUserControl.html#doxid-struct-c-c-l-1-1-i-user-control"><span class="std std-ref"><span class="pre">CCL::IUserControl</span></span></a></code>: e.g. all  methods for drawing and event handling are forwared from the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">UserControlHost</span></code> to its <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-usercontrol-8cpp-1a2c6a566b28e321fa7d30b6bc0b75cdc1"><span class="std std-ref"><span class="pre">UserControl</span></span></a></code> via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUserControl.html#doxid-struct-c-c-l-1-1-i-user-control-1accc0888a7c0456fa31c7842b09287dd6"><span class="std std-ref"><span class="pre">CCL::IUserControl::onViewEvent</span></span></a></code>.</p>
+</section>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h2>
+<p>Components are the building blocks of an application. They can help keeping parts of the application logic modular and reusable. Many of the typical tasks of a component are related to the UI, like managing parameters, creating views and handling commands and context menus  - a component can be seen as the backend of the UI.</p>
+<p>The application module (and every other module that links to <code class="docutils literal notranslate"><span class="pre">cclapp</span></code>) has a <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Runtime</span></code> object (of class <code class="doxyrest-cref docutils literal notranslate"><span class="pre">RootComponent</span></code>) that is the root of a global component tree (<a class="reference external" href="https://en.wikipedia.org/wiki/Composite_pattern">composite</a>). Many central instances, including the <code class="docutils literal notranslate"><span class="pre">Application</span></code> object, ‘’DocumentManager`` are part of that tree.</p>
+<p>Other components are assembled dynamically at runtime, they don’t necessarily have to be part of that component tree. A typical example is a component that provides parameters for a modal dialog and only lives while the dialog is open.</p>
+</section>
+<section id="how-can-i-implement-commands">
+<h2>How can I implement commands?<a class="headerlink" href="#how-can-i-implement-commands" title="Link to this heading"></a></h2>
+<p>Implementing commands in your class (<code class="docutils literal notranslate"><span class="pre">UsefulClass</span></code> in this example) is very easy by using inheritance and a couple of macros. First of all you inherit your class from the template <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_CommandDispatcher.html#doxid-class-c-c-l-1-1-command-dispatcher"><span class="std std-ref"><span class="pre">CCL::CommandDispatcher</span></span></a></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">UsefulClass</span><span class="p">:</span> <span class="k">public</span> <span class="n">BaseClass</span><span class="p">,</span>
+                   <span class="k">public</span> <span class="n">CommandDispatcher</span><span class="o">&lt;</span><span class="n">UsefulClass</span><span class="o">&gt;</span>
+<span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the public interface of the class you can use two macros to declare necessary things for the command execution. Additionally you need a method that is executed, when the command is triggered (<code class="docutils literal notranslate"><span class="pre">onDoSomething</span></code> in this example). This method is also public and starts with <code class="docutils literal notranslate"><span class="pre">on...</span></code> usually. The category (<strong>Useful</strong> in this example) is used to add structure to the commands and can be seen in the <strong>Keyboard Shortcuts</strong> window or the <strong>Macro Organizer</strong>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
+  <span class="n">DECLARE_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">)</span>
+  <span class="n">DECLARE_COMMAND_CATEGORY</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="n">BaseClass</span><span class="p">)</span>
+
+  <span class="kt">bool</span> <span class="n">onDoSomething</span> <span class="p">(</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In the implementation, you can also use macros to define everything necessary:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// Commands</span>
+<span class="c1">//////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">BEGIN_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">)</span>
+  <span class="n">DEFINE_COMMAND</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="s">&quot;Do Something&quot;</span><span class="p">,</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span><span class="p">)</span>
+<span class="n">END_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">)</span>
+
+<span class="c1">//************************************************************************</span>
+<span class="c1">// UsefulClass</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="n">IMPLEMENT_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">,</span> <span class="n">BaseClass</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The user will see the command category and name (first and second parameter) in the UI. For this reason, they are localized and should use title capitalization.</p>
+<p>If you do not define commands by using the macros, you need to implement this virtual method in your class to process the command messages:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">interpretCommand</span> <span class="p">(</span><span class="k">const</span> <span class="n">CommandMsg</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="translations">
+<h3>Translations<a class="headerlink" href="#translations" title="Link to this heading"></a></h3>
+<p>If you are using the same string for the commands also in a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-actionjournal-8cpp-1a40dbbc0d97b3d9207742a3f1b4699251"><span class="std std-ref"><span class="pre">BEGIN_XSTRINGS</span></span></a></code> section (this might be necessary, when you also want to add the same command in a menu), you should use “Command” as the context in the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-actionjournal-8cpp-1a40dbbc0d97b3d9207742a3f1b4699251"><span class="std std-ref"><span class="pre">BEGIN_XSTRINGS</span></span></a></code> macro. In that case the localized string is in the same context as the one defined in the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-application-8cpp-1ac2cd04f96e7add2d83c058d00c900a1a"><span class="std std-ref"><span class="pre">DEFINE_COMMAND</span></span></a></code> and only need to be translated once. As an alternative you can get the translated title for a command that is already registered in the command registry by calling</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CommandRegistry</span><span class="o">::</span><span class="n">getCommandTitle</span> <span class="p">(</span><span class="s">&quot;Category&quot;</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The quickest way to add an existing command to a menu is</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">menu</span><span class="o">-&gt;</span><span class="n">addCommandItem</span> <span class="p">(</span><span class="n">CommandRegistry</span><span class="o">::</span><span class="n">find</span> <span class="p">(</span><span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">),</span>
+  <span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;Do Something&quot;</span><span class="p">)),</span> <span class="n">handler</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will add a menu entry with the translated title of the command.</p>
+</section>
+<section id="follow-indicator">
+<h3>Follow indicator<a class="headerlink" href="#follow-indicator" title="Link to this heading"></a></h3>
+<p>If you want to append the typical “…” to a command menu entry to indicate that the execution will be interactive you can simply use the pattern</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">menu</span><span class="o">-&gt;</span><span class="n">addCommandItem</span> <span class="p">(</span><span class="n">String</span> <span class="p">()</span>
+  <span class="o">&lt;&lt;</span> <span class="n">XSTR</span> <span class="p">(</span><span class="n">Useful</span><span class="p">)</span>
+  <span class="o">&lt;&lt;</span> <span class="n">IMenu</span><span class="o">::</span><span class="n">strFollowIndicator</span><span class="p">,</span> <span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="s">&quot;Do Something&quot;</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To achive the same pattern using the command title lookup you need to set the optional
+<code class="docutils literal notranslate"><span class="pre">followIndicator</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">CommandRegistry::addCommandItem</span> <span class="pre">()</span></code> like:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">menu</span><span class="o">-&gt;</span><span class="n">addCommandItem</span> <span class="p">(</span><span class="n">CommandRegistry</span><span class="o">::</span><span class="n">find</span> <span class="p">(</span><span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">),</span>
+  <span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;Do Something&quot;</span><span class="p">)),</span> <span class="n">handler</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="multi-command-registration">
+<h3>Multi command registration<a class="headerlink" href="#multi-command-registration" title="Link to this heading"></a></h3>
+<p>If you like to register several commands in your class using the same method, you can use the macros like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BEGIN_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">)</span>
+  <span class="n">DEFINE_COMMAND</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span><span class="p">)</span>
+<span class="n">END_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">)</span>
+
+<span class="n">REGISTER_COMMAND</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="s">&quot;Do Something Once&quot;</span><span class="p">)</span>
+<span class="n">REGISTER_COMMAND</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="s">&quot;Do Something Twice&quot;</span><span class="p">)</span>
+
+<span class="n">IMPLEMENT_COMMANDS</span> <span class="p">(</span><span class="n">UsefulClass</span><span class="p">,</span> <span class="n">BaseClass</span><span class="p">)</span>
+
+<span class="kt">bool</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span> <span class="p">(</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">&quot;Do Something Once&quot;</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">//...</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">&quot;Do Something Twice&quot;</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="command-arguments">
+<h3>Command arguments<a class="headerlink" href="#command-arguments" title="Link to this heading"></a></h3>
+<p>It is also possible to define arguments for your command. In this example, two arguments named <strong>Description</strong> and <strong>Powerswitch</strong> are added:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DEFINE_COMMAND_ARGS</span> <span class="p">(</span><span class="s">&quot;Useful&quot;</span><span class="p">,</span> <span class="s">&quot;Do Something&quot;</span><span class="p">,</span>
+  <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Description, Powerswitch&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can easily work with the given parameters in the command function using the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_CommandAutomator.html#doxid-class-c-c-l-1-1-command-automator"><span class="std std-ref"><span class="pre">CCL::CommandAutomator</span></span></a></code> like in this example.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span> <span class="p">(</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">String</span> <span class="n">description</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">CommandAutomator</span><span class="o">::</span><span class="n">Arguments</span> <span class="p">(</span><span class="n">args</span><span class="p">).</span><span class="n">getString</span> <span class="p">(</span><span class="s">&quot;Description&quot;</span><span class="p">,</span> <span class="n">description</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s">&quot;not given&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">bool</span> <span class="n">isPowerswitch</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="n">CommandAutomator</span><span class="o">::</span><span class="n">Arguments</span> <span class="p">(</span><span class="n">args</span><span class="p">).</span><span class="n">getBool</span> <span class="p">(</span><span class="s">&quot;Powerswitch&quot;</span><span class="p">,</span> <span class="n">isPowerswitch</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">isPowerswitch</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="check-only">
+<h3>Check only<a class="headerlink" href="#check-only" title="Link to this heading"></a></h3>
+<p>The method for handling the command has a Boolean return value. This return value is especially important for pre-checking the command. A command might not always be executable. To be able to check this before the execution (or even visualize it in the user interface) the command is called first with a special flag that you can get from the CmdArgs parameter using the method <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_CommandMsg.html#doxid-struct-c-c-l-1-1-command-msg-1acbc76f3581db1deed884571003a71d60"><span class="std std-ref"><span class="pre">CCL::CommandMsg::checkOnly</span></span></a></code>. You need to return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the command can be executed or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. In this example the command can always be executed, but the real functionality of the command is only executed, when <code class="docutils literal notranslate"><span class="pre">checkOnly</span> <span class="pre">()</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>;</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">UsefulClass</span><span class="o">::</span><span class="n">onDoSomething</span> <span class="p">(</span><span class="n">CmdArgs</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">args</span><span class="p">.</span><span class="n">checkOnly</span> <span class="p">())</span>
+    <span class="n">someMethodDoingSomething</span> <span class="p">();</span>
+
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-can-i-edit-and-debug-skins">
+<h2>How can I edit and debug skins?<a class="headerlink" href="#how-can-i-edit-and-debug-skins" title="Link to this heading"></a></h2>
+<p>When creating or editing a skin file, you can easily check the result without the need to restart the application. In the debug build of the application you find a menu entry <em>Debug</em> were you can reload the skin using the menu command <em>Reload Skin</em> or <strong>Shift+F10</strong> while the application runs. If you want to inspect the skin of a running application (find the file you need to edit or watch properties of the element you see on screen) the <strong>CCL Spy</strong> comes in handy (menu command <em>Show CCL Spy</em> or <strong>Ctrl+Alt+O</strong>).</p>
+<p>You can inspect elements by pointing the mouse cursor to them and pressing the <strong>Ctrl</strong> key. The <em>Views</em> tab in the CCL Spy navigates to the corresponding element in the tree. On the right hand side you can see details of the selected element and open the skin file by clicking on the file name. The other way round you can click on an element in the tree to have a red rectangle flashing shortly in the application window to highlight the element. A double click toggles a permanent highlight. The <em>Documentation</em> tab in the CCL Spy allows you to browse or search for information about skin elements and styles.</p>
+</section>
+<section id="how-can-i-do-something-asynchronously">
+<h2>How can I do something asynchronously?<a class="headerlink" href="#how-can-i-do-something-asynchronously" title="Link to this heading"></a></h2>
+<p>You are able to execute functions asynchronously using a class that is derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_AsyncOperation.html#doxid-class-c-c-l-1-1-async-operation"><span class="std std-ref"><span class="pre">CCL::AsyncOperation</span></span></a></code> and thus implements the interface <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IAsyncOperation.html#doxid-struct-c-c-l-1-1-i-async-operation"><span class="std std-ref"><span class="pre">CCL::IAsyncOperation</span></span></a></code>.</p>
+<p>In this example we look at a situation where the user wants to rename an object with a double click in a <em>ListView</em>. In this case there is no window opened to enter the new name, but a small edit box is shown above the item that will be renamed. We should not open the edit box synchronously (and wait for the user input). On the other hand we need to apply the user input to the selected object afterwards.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// we get the current object name</span>
+<span class="n">StringRef</span> <span class="n">name</span> <span class="o">=</span> <span class="n">object</span><span class="o">-&gt;</span><span class="n">getName</span> <span class="p">();</span>
+
+<span class="c1">// editString provides us with an IAsyncOperation to let the user enter a string</span>
+<span class="n">IAsyncOperation</span><span class="o">*</span> <span class="n">operation</span> <span class="o">=</span>  <span class="n">editString</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">customRect</span><span class="p">,</span> <span class="o">*</span><span class="n">info</span><span class="p">,</span> <span class="n">editStyle</span><span class="p">);</span>
+
+<span class="c1">// now we can create a promise to execute that operation asynchronously</span>
+<span class="n">Promise</span> <span class="nf">p</span> <span class="p">(</span><span class="n">operation</span><span class="p">);</span>
+
+<span class="c1">// to do the actual editing, we can simply pass a closure to the &#39;then&#39; method</span>
+<span class="n">p</span><span class="p">.</span><span class="n">then</span> <span class="p">([</span><span class="k">this</span><span class="p">,</span> <span class="n">object</span><span class="p">]</span> <span class="p">(</span><span class="n">IAsyncOperation</span><span class="o">&amp;</span> <span class="n">operation</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">operation</span><span class="p">.</span><span class="n">getState</span> <span class="p">()</span> <span class="o">==</span> <span class="n">IAsyncInfo</span><span class="o">::</span><span class="n">kCompleted</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">ObjectFunctions</span> <span class="n">functions</span> <span class="p">(</span><span class="n">object</span><span class="p">);</span>
+    <span class="n">functions</span><span class="p">.</span><span class="n">renameObject</span> <span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">operation</span><span class="p">.</span><span class="n">getResult</span> <span class="p">().</span><span class="n">asString</span> <span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>In this case it is important that the lambda is not executed during the runtime of this method. It is safe to add <em>this</em> and <em>object</em> in the capture, but it would cause undefined behaviour if we pass in automatic variables by reference.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="line-block">
+<div class="line">The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/global.html#doxid-iasyncoperation-8cpp-1a9e48977abb6055e7e6ea5af8bacc2e53"><span class="std std-ref"><span class="pre">IAsyncOperation</span></span></a></code> interface also provides additional functionality:</div>
+<div class="line">- <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IAsyncOperation.html#doxid-struct-c-c-l-1-1-i-async-operation-1a83cd47f36eabc6ab6ce85f1db406bde9"><span class="std std-ref"><span class="pre">CCL::IAsyncOperation::cancel</span></span></a></code> can be called to cancel the operation</div>
+<div class="line">- <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IAsyncOperation.html#doxid-struct-c-c-l-1-1-i-async-operation-1a13948337872f6751caae4b70914d668c"><span class="std std-ref"><span class="pre">CCL::IAsyncOperation::close</span></span></a></code> must be called after the result of the operation is consumed</div>
+<div class="line">- <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IAsyncOperation.html#doxid-struct-c-c-l-1-1-i-async-operation-1a2c332414a440ffcde75fd06d5f796c24"><span class="std std-ref"><span class="pre">CCL::IAsyncOperation::setProgressHandler</span></span></a></code> allows to attach a handler that implements <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref"><span class="pre">CCL::IProgressNotify</span></span></a></code></div>
+</div>
+</div>
+</section>
+<section id="what-kind-of-collections-can-i-use">
+<h2>What kind of collections can I use?<a class="headerlink" href="#what-kind-of-collections-can-i-use" title="Link to this heading"></a></h2>
+<p>The following class diagram gives you a rough overview of some available classes for collections of objects.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/collections.svg"><img alt="../_images/collections.svg" src="../_images/collections.svg" style="width: 90%;" />
+</a>
+</figure>
+<p>Collections based upon templates are shown in green. For most purposes the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref"><span class="pre">Core::Vector</span></span></a></code> is a good choice for collections that are linear in memory (the namespace Core is imported in the namespace CCL).</p>
+<p>The template classes <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../corelibrary/reference/class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref"><span class="pre">Core::LinkedList</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Stack.html#doxid-class-c-c-l-1-1-stack"><span class="std std-ref"><span class="pre">CCL::Stack</span></span></a></code> provide collections that are based upon linked lists. For avoiding the extra collection object holding the pointers for the linked list, the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">Core::IntrusiveLinkedList</span></code> can be used for elements that hold the pointers themselves. You can easily use it by instantiating the collection with <code class="docutils literal notranslate"><span class="pre">IntrusiveLinkedList&lt;Type&gt;</span> <span class="pre">list</span></code> and making sure that <code class="docutils literal notranslate"><span class="pre">Type</span></code> contains the necessary member by inheriting it from <code class="docutils literal notranslate"><span class="pre">InstrusiveLink&lt;Type&gt;</span></code>.</p>
+<p>The classes shown in blue are dealing with objects derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code>. If the type is known (storing collection of things within a class) it is more convenient to use <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_ObjectArray.html#doxid-class-c-c-l-1-1-object-array"><span class="std std-ref"><span class="pre">CCL::ObjectArray</span></span></a></code> to store objects. The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_ObjectStack.html#doxid-class-c-c-l-1-1-object-stack"><span class="std std-ref"><span class="pre">CCL::ObjectStack</span></span></a></code> provides a similar comfort if you need to work with a stack of objects and is based on <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_ObjectList.html#doxid-class-c-c-l-1-1-object-list"><span class="std std-ref"><span class="pre">CCL::ObjectList</span></span></a></code>, that provides a linked list of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code>. This collections (derived from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/class_CCL_Container.html#doxid-class-c-c-l-1-1-container"><span class="std std-ref"><span class="pre">CCL::Container</span></span></a></code>) allow to pass ownership of it’s items by calling <code class="docutils literal notranslate"><span class="pre">objectCleanup</span> <span class="pre">(true)</span></code>.</p>
+</section>
+<section id="what-is-a-variant">
+<h2>What is a Variant?<a class="headerlink" href="#what-is-a-variant" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref"><span class="pre">CCL::Variant</span></span></a></code> is a type that can store different data types and allows accessing them safely. Integer values are always stored as 64 bit integer internally and floating point values as double. The Variant type can also store unicode strings or a pointer to <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref"><span class="pre">CCL::IUnknown</span></span></a></code>. The current type of the variant can be obtained by <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1adbd2b1403464cb013424a2fda1665ceb"><span class="std std-ref"><span class="pre">CCL::Variant::getType</span></span></a></code> that returns a value of the the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/enum_CCL_Variant_Types.html#doxid-struct-c-c-l-1-1-variant-1a8aaeba5aed18516d10d61fe3139c9d32"><span class="std std-ref"><span class="pre">CCL::Variant::Types</span></span></a></code> enum or you can use one of the type methods:</p>
+<ul class="simple">
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a772efbf9d46b2e1e3840763a76307040"><span class="std std-ref"><span class="pre">CCL::Variant::isInt</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a7283345d095683fd5e3a75cb4d3b8410"><span class="std std-ref"><span class="pre">CCL::Variant::isFloat</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a345b371a0aef782ab74b4a8aa0f5eff2"><span class="std std-ref"><span class="pre">CCL::Variant::isNumeric</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1abc9dc0708ec1aae2309621664fa8e5a4"><span class="std std-ref"><span class="pre">CCL::Variant::isString</span></span></a></code></p></li>
+<li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a13b605b2c9876ab317e21637b8646def"><span class="std std-ref"><span class="pre">CCL::Variant::isObject</span></span></a></code></p></li>
+</ul>
+<p>You can pass a Variant safely to another object, when you use <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1ab7b16ddb7b9b970849d02dbd9b92d1ab"><span class="std std-ref"><span class="pre">CCL::Variant::share</span></span></a></code>. It retains the pointer in the variant for non numeric types.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Variant stores internal information in the lower two bytes of the internal type information. The upper two bytes can be used for user defined flags via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a1c03e38bdbc67e2873e7482129ace395"><span class="std std-ref"><span class="pre">CCL::Variant::setUserFlags</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1aa8bee8e8e0dc527aaec182d74dcfba1c"><span class="std std-ref"><span class="pre">CCL::Variant::getUserFlags</span></span></a></code> or to store a user value that will be automatically shifted from/to the upper bytes via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1ae17d4c4360bf04477bcc8e12b16e27e0"><span class="std std-ref"><span class="pre">CCL::Variant::setUserValue</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a6c3f433d11ef2c74618805bbbfeebea0"><span class="std std-ref"><span class="pre">CCL::Variant::getUserValue</span></span></a></code>.</p>
+</div>
+<p>The Variant implements casting and assignment operators as well as comparison operators. You can access the value stored in the Variant using matching methods for the type (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1af8ea74bb61947ad5a3b53e3d30f4bd8e"><span class="std std-ref"><span class="pre">CCL::Variant::asString</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a97d1e7fa5907149aedfadd09466ed88e"><span class="std std-ref"><span class="pre">CCL::Variant::asFloat</span></span></a></code>, …). Conversions are done automatically where applicable.</p>
+<p>In the case of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1af8ea74bb61947ad5a3b53e3d30f4bd8e"><span class="std std-ref"><span class="pre">CCL::Variant::asString</span></span></a></code> the method will return an empty string, when the type is not string. You can use <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1aa8be1bbd61c2640354ad6f2bacbaca40"><span class="std std-ref"><span class="pre">CCL::Variant::toString</span></span></a></code> instead to convert the numeric value to string. The other way round needs the parse functions such as <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a94af0035a886a70fb02a99d2e9a92bf3"><span class="std std-ref"><span class="pre">CCL::Variant::parseInt</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant-1a6787a4d3062e96e815c49ec85be5a246"><span class="std std-ref"><span class="pre">CCL::Variant::parseFloat</span></span></a></code> to convert a string to a numeric value. You can optionally pass in a default value to these functions that is returned if the conversion from string to numerical value fails.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building.html" class="btn btn-neutral float-left" title="Building CCL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials/index.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

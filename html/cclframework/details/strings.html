@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using strings &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Application Model" href="components.html" />
+    <link rel="prev" title="Essentials" href="essentials.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using strings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#unicode-strings">Unicode strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-strings">C-Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#string-reference-types">String reference types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#converting-between-unicode-strings-and-c-strings">Converting between Unicode strings and C-Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#string-constants">String constants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Using strings</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-strings">
+<span id="id1"></span><h1>Using strings<a class="headerlink" href="#using-strings" title="Link to this heading"></a></h1>
+<p>CCL provides classes for managing Unicode strings (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code>) and simple ASCII strings (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code>). Both support copy-on-write semantics and both can be passed safely between ABI boundaries as the memory is managed by the <strong>ccltext</strong> dynamic library.</p>
+<section id="unicode-strings">
+<h2>Unicode strings<a class="headerlink" href="#unicode-strings" title="Link to this heading"></a></h2>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code> class should be used for all strings that are displayed to the user or can be entered by a user (e.g. via an EditBox control in the UI). Unicode strings use 16 bit per character in a subset of the UTF-16 text encoding. On macOS and iOS, the string class is a wrapper around a CFString object and on Windows, Android, and Linux it is a wide character buffer.</p>
+</section>
+<section id="c-strings">
+<h2>C-Strings<a class="headerlink" href="#c-strings" title="Link to this heading"></a></h2>
+<p>Besides mutable strings, there are some more specialized string classes like <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code> which is a light-weight wrapper for a C-string pointer, and Core::CStringBuffer which doesn’t allocate additional heap memory and thus is more suitable for embedded systems.</p>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code> can be used for internal IDs that are never presented to a user.
+They have the advantage of a better performance and lower memory usage.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 71.4%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><span class="pre">CCL::CStringPtr</span></code></p></td>
+<td><p>An alias that should be used instead of const char*</p></td>
+</tr>
+<tr class="row-even"><td><p>class <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code></p></td>
+<td><p>Lightweight wrapper to a plain CStringPtr that provides read-only string methods. Does not own the string’s memory.</p></td>
+</tr>
+<tr class="row-odd"><td><p>class <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code></p></td>
+<td><p>Allows read and write access to a C-String, manages the required memory.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="string-reference-types">
+<span id="id2"></span><h2>String reference types<a class="headerlink" href="#string-reference-types" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref"><span class="pre">CCL::StringRef</span></span></a></code></p></td>
+<td><p>const reference to a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code>, to be used e.g. for read-only arguments in methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref"><span class="pre">CCL::CStringRef</span></span></a></code></p></td>
+<td><p>const reference to a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code>, to be used e.g. for read-only arguments in methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref"><span class="pre">CCL::StringID</span></span></a></code></p></td>
+<td><p>same as <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref"><span class="pre">CCL::CStringRef</span></span></a></code>, additionally expresses “identifier” semantics.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="converting-between-unicode-strings-and-c-strings">
+<span id="converting-strings"></span><h2>Converting between Unicode strings and C-Strings<a class="headerlink" href="#converting-between-unicode-strings-and-c-strings" title="Link to this heading"></a></h2>
+<p>Since a C-String has only one byte per character (with 256 possible values), a TextEncoding is needed for converting between Unicode strings and C-strings. It’s important to choose a reasonable encoding.</p>
+<ul class="simple">
+<li><p>The TextEncoding argument in methods of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code> usually defaults to ASCII. This is only sufficient if the strings are expected to be ASCII-only.</p></li>
+<li><p>When C-strings appear in a certain protocol or file format, the encoding is typically defined in the corresponding specification.</p></li>
+<li><p>When arbitrary Unicode strings need to be losslessly encoded as C-strings, UTF8 is often a good choice.</p></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// create a C-String from a Unicode string</span>
+<span class="n">String</span> <span class="n">userEmail</span><span class="p">;</span>
+<span class="n">queryEmail</span> <span class="p">(</span><span class="n">userEmail</span><span class="p">);</span> <span class="c1">// user input</span>
+<span class="n">MutableCString</span> <span class="nf">utf8UserEmail</span> <span class="p">(</span><span class="n">userEmail</span><span class="p">,</span> <span class="n">Text</span><span class="o">::</span><span class="n">kUTF8</span><span class="p">);</span> <span class="c1">// converts to C-String with UTF8 encoding</span>
+
+<span class="c1">// create a Unicode string from a C-String</span>
+<span class="n">String</span> <span class="nf">email</span> <span class="p">(</span><span class="n">Text</span><span class="o">::</span><span class="n">kUTF8</span><span class="p">,</span> <span class="n">utf8UserEmail</span><span class="p">);</span> <span class="c1">// converts back to the exact same string above</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MutableCString</span> <span class="nf">asciiIdentifier</span> <span class="p">(</span><span class="n">unicodeIdentifier</span><span class="p">);</span> <span class="c1">// defaults to encoding Text::kASCII</span>
+</pre></div>
+</div>
+</section>
+<section id="string-constants">
+<h2>String constants<a class="headerlink" href="#string-constants" title="Link to this heading"></a></h2>
+<p>The framework manages a global hash table of string constants of both <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code>. Using them can be beneficial for often used strings, as it avoids creating the same string object many times and so saves memory. <cite>System::GetConstantString</cite> and <cite>System::GetConstantCString</cite> allocate a String object on the first call for a certain constant and return it on later calls. The macros <cite>CCLSTR</cite> and <cite>CSTR</cite> should be used as shortcuts.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Macro</p></th>
+<th class="head"><p>Shortcut for</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CCLSTR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">System::GetConstantString</span> <span class="pre">(CStringPtr</span> <span class="pre">asciiString)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CSTR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">System::GetConstantCString</span> <span class="pre">(CStringPtr</span> <span class="pre">asciiString</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fileType</span><span class="p">.</span><span class="n">setMimeType</span> <span class="p">(</span><span class="n">CCLSTR</span> <span class="p">(</span><span class="s">&quot;application/octet-stream&quot;</span><span class="p">));</span>
+
+<span class="n">paramList</span><span class="p">.</span><span class="n">addString</span> <span class="p">(</span><span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;documentName&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="essentials.html" class="btn btn-neutral float-left" title="Essentials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="components.html" class="btn btn-neutral float-right" title="Application Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

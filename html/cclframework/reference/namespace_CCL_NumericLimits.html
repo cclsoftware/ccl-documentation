@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::NumericLimits &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::IActivatable" href="struct_CCL_IActivatable.html" />
+    <link rel="prev" title="class CCL::Database::SqlStatement" href="class_CCL_Database_SqlStatement.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+      <li class="breadcrumb-item active">namespace CCL::NumericLimits</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-numericlimits">
+<span id="doxid-namespace-c-c-l-1-1-numeric-limits"></span><span id="index-0"></span><h1>namespace CCL::NumericLimits<a class="headerlink" href="#namespace-ccl-numericlimits" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">NumericLimits</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="n">uint8</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a01fca02679c6cd326cf7ab78c6dcdbbb"><span class="std std-ref">kMaxUnsignedInt8</span></a><span></span> <span class="o">=</span> <span class="mh">0xff</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int8</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a8adebbdd381a480e9b747d34d23ed41f"><span class="std std-ref">kMaxInt8</span></a><span></span> <span class="o">=</span> <span class="mi">127</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int8</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a5c53d0bc487661e6a859aec7b406e60b"><span class="std std-ref">kMinInt8</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">128</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">uint16</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a29a3c55864eac448369c23b065472e69"><span class="std std-ref">kMaxUnsignedInt16</span></a><span></span> <span class="o">=</span> <span class="mh">0xffff</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int16</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a0fef2f0280927854d05c8e0c5d5b1147"><span class="std std-ref">kMaxInt16</span></a><span></span> <span class="o">=</span> <span class="mi">32767</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int16</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1abd23ed20f348f5973dafc06663f9bd72"><span class="std std-ref">kMinInt16</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">32768</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">uint32</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ad8154a0bd721ebd42e3b73a0c78a9b95"><span class="std std-ref">kMaxUnsignedInt32</span></a><span></span> <span class="o">=</span> <span class="mh">0xffffffff</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int32</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ab637a8afc2f49f687a94ea876176b14c"><span class="std std-ref">kMaxInt32</span></a><span></span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int32</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a660b641393d2a40bf5637f74cee5622a"><span class="std std-ref">kMinInt32</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">2147483648</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1aea4ee1cd7d6dd1a43b3534ee0be47980"><span class="std std-ref">kMaxUnsignedInt</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ad8154a0bd721ebd42e3b73a0c78a9b95"><span class="std std-ref">kMaxUnsignedInt32</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a423de8f25d414ef1b7dcd541a75f7063"><span class="std std-ref">kMaxInt</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ab637a8afc2f49f687a94ea876176b14c"><span class="std std-ref">kMaxInt32</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1af8549e39a08eb5662f097d47a0f379af"><span class="std std-ref">kMinInt</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a660b641393d2a40bf5637f74cee5622a"><span class="std std-ref">kMinInt32</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <span class="n">uint64</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a752758495f8e2448d035e2fb2ac7ddbe"><span class="std std-ref">kMaxUnsignedInt64</span></a><span></span> <span class="o">=</span> <span class="mh">0xffffffffffffffffULL</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int64</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a87fba4f53d349353f7289da53f9b2dc6"><span class="std std-ref">kMaxInt64</span></a><span></span> <span class="o">=</span> <span class="mi">9223372036854775807</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <span class="n">int64</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a8cceac51d90bb517016e5238e53acca4"><span class="std std-ref">kMinInt64</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="mi">9223372036854775807</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a><span></span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a622990f4e728b4d0563d3c04dc7de319"><span class="std std-ref">kMaximumFloat</span></a><span></span> <span class="o">=</span> <span class="mf">3.402823466</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">38</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">F</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1aa94ad10edb6941a58fe0b598b95007bf"><span class="std std-ref">kMinimumFloat</span></a><span></span> <span class="o">=</span> <span class="mf">1.175494351</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">38</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">F</span></a><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a79bbee19b6d5a6e1088b51351847f6c2"><span class="std std-ref">kMaximumDouble</span></a><span></span> <span class="o">=</span> <span class="mf">1.7976931348623157</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">308</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a377558d4d0697ee86fa3678dff8a0ef5"><span class="std std-ref">kMinimumDouble</span></a><span></span> <span class="o">=</span> <span class="mf">2.2250738585072014</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">308</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a9e221b3e25d4dee5ea076fd9a66d734b"><span class="std std-ref">kLargeDouble</span></a><span></span> <span class="o">=</span> <span class="mf">1.7976931348623157</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">200</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1aec0661fee192b946513ddc409bd17376"><span class="std std-ref">kSmallDouble</span></a><span></span> <span class="o">=</span> <span class="mf">2.2250738585072014</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">200</span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a76c28299f1653fb0c94bc53706cd9228"><span class="std std-ref">kPrecision</span></a><span></span> <span class="o">=</span> <span class="mi">1</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">12</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1aa1f2d2f2b217467d715f12ffdae92636"><span class="std std-ref">minValue</span></a><span></span> <span class="p">();</span>
+
+<span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ae36412c8f05ac7b92cb2768bd4db11a6"><span class="std std-ref">maxValue</span></a><span></span> <span class="p">();</span>
+
+<span class="n">int8</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a3c3f118e963abafb15b7c32d0ddc9304"><span class="std std-ref">minValue</span></a><span></span> <span class="p">();</span>
+<span class="n">int8</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1ab327613e4a3ca44885e3fa0435a3984f"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint8</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a48c456f592a3620eedda174f9ac90152"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint8</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a8ac909420bbb0a34582b6a98685005dc"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">int16</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a24ec38d7ca092505029c9b6ac88a316a"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">int16</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1aba48218ae184e5181d24467f379747cb"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint16</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1adf86c1d587830ff254e3532621921732"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint16</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a79a5af03b41ced1b58e9264f814a61ba"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1abce37cd2e986cbb888005f1d0d10d955"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a06f1eb51cadf9c8e0c11810c1fa061e8"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint32</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a8341f75f094ce2467a94a133af4d0ba1"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint32</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a3dfedc4b4d9d25435ad98dc0e2125702"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1af64f0fbe83329208e5392c647577af37"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1abf13f9ea7fdf6634b473de0089d59acd"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint64</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a897c08761d00bfe5f5bda5d82f91511d"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<span class="n">uint64</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a44872b9b0cd81c315fa199313c692268"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1ac9df35fc524c3a2ebc83e4f45be7b1e1"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a9724cda256acd57708646ac327279cee"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a685885ca2ebe94aa4c2d77ca3f839e52"><span></span><span class="n">minValue</span></span><span></span> <span class="p">();</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-numeric-limits-1adaded1e4a6677558a27428edf315f0a4"><span></span><span class="n">maxValue</span></span><span></span> <span class="p">();</span>
+
+<span class="p">}</span> <span class="c1">// namespace NumericLimits</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-numeric-limits"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a01fca02679c6cd326cf7ab78c6dcdbbb"><span id="index-1"></span><span></span><span class="k">const</span> <span class="n">uint8</span> <span class="n">kMaxUnsignedInt8</span> <span class="o">=</span> <span class="mh">0xff</span></pre>
+<p>Maximum of 8 bit integer (unsigned).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a8adebbdd381a480e9b747d34d23ed41f"><span id="index-2"></span><span></span><span class="k">const</span> <span class="n">int8</span> <span class="n">kMaxInt8</span> <span class="o">=</span> <span class="mi">127</span></pre>
+<p>Maximum of 8 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a5c53d0bc487661e6a859aec7b406e60b"><span id="index-3"></span><span></span><span class="k">const</span> <span class="n">int8</span> <span class="n">kMinInt8</span> <span class="o">=</span> <span class="o">-</span><span class="mi">128</span></pre>
+<p>Minimum of 8 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a29a3c55864eac448369c23b065472e69"><span id="index-4"></span><span></span><span class="k">const</span> <span class="n">uint16</span> <span class="n">kMaxUnsignedInt16</span> <span class="o">=</span> <span class="mh">0xffff</span></pre>
+<p>Maximum of 16 bit integer (unsigned).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a0fef2f0280927854d05c8e0c5d5b1147"><span id="index-5"></span><span></span><span class="k">const</span> <span class="n">int16</span> <span class="n">kMaxInt16</span> <span class="o">=</span> <span class="mi">32767</span></pre>
+<p>Maximum of 16 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1abd23ed20f348f5973dafc06663f9bd72"><span id="index-6"></span><span></span><span class="k">const</span> <span class="n">int16</span> <span class="n">kMinInt16</span> <span class="o">=</span> <span class="o">-</span><span class="mi">32768</span></pre>
+<p>Minimum of 16 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1ad8154a0bd721ebd42e3b73a0c78a9b95"><span id="index-7"></span><span></span><span class="k">const</span> <span class="n">uint32</span> <span class="n">kMaxUnsignedInt32</span> <span class="o">=</span> <span class="mh">0xffffffff</span></pre>
+<p>Maximum of 32 bit integer (unsigned).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1ab637a8afc2f49f687a94ea876176b14c"><span id="index-8"></span><span></span><span class="k">const</span> <span class="n">int32</span> <span class="n">kMaxInt32</span> <span class="o">=</span> <span class="mi">2147483647</span></pre>
+<p>Maximum of 32 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a660b641393d2a40bf5637f74cee5622a"><span id="index-9"></span><span></span><span class="k">const</span> <span class="n">int32</span> <span class="n">kMinInt32</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2147483648</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a></pre>
+<p>Minimum of 32 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1aea4ee1cd7d6dd1a43b3534ee0be47980"><span id="index-10"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">kMaxUnsignedInt</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ad8154a0bd721ebd42e3b73a0c78a9b95"><span class="std std-ref">kMaxUnsignedInt32</span></a></pre>
+<p>Maximum of 32 bit integer (unsigned).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a423de8f25d414ef1b7dcd541a75f7063"><span id="index-11"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">kMaxInt</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1ab637a8afc2f49f687a94ea876176b14c"><span class="std std-ref">kMaxInt32</span></a></pre>
+<p>Maximum of 32 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1af8549e39a08eb5662f097d47a0f379af"><span id="index-12"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">kMinInt</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-numeric-limits-1a660b641393d2a40bf5637f74cee5622a"><span class="std std-ref">kMinInt32</span></a></pre>
+<p>Minimum of 32 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a752758495f8e2448d035e2fb2ac7ddbe"><span id="index-13"></span><span></span><span class="k">const</span> <span class="n">uint64</span> <span class="n">kMaxUnsignedInt64</span> <span class="o">=</span> <span class="mh">0xffffffffffffffffULL</span></pre>
+<p>Maximum of 64 bit integer (unsigned).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a87fba4f53d349353f7289da53f9b2dc6"><span id="index-14"></span><span></span><span class="k">const</span> <span class="n">int64</span> <span class="n">kMaxInt64</span> <span class="o">=</span> <span class="mi">9223372036854775807</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a></pre>
+<p>Maximum of 64 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a8cceac51d90bb517016e5238e53acca4"><span id="index-15"></span><span></span><span class="k">const</span> <span class="n">int64</span> <span class="n">kMinInt64</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9223372036854775807</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LL</span></a><span></span> <span class="o">-</span> <span class="mi">1</span></pre>
+<p>Minimum of 64 bit integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a622990f4e728b4d0563d3c04dc7de319"><span id="index-16"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">kMaximumFloat</span> <span class="o">=</span> <span class="mf">3.402823466</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">38</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">F</span></a></pre>
+<p>Maximum of 32 bit float.</p>
+<p>Don’t use in computations, because it cause numerical overflow.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1aa94ad10edb6941a58fe0b598b95007bf"><span id="index-17"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">kMinimumFloat</span> <span class="o">=</span> <span class="mf">1.175494351</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">38</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">F</span></a></pre>
+<p>Minimum of 32 bit float.</p>
+<p>Don’t use in computations, because it cause numerical overflow.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a79bbee19b6d5a6e1088b51351847f6c2"><span id="index-18"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">kMaximumDouble</span> <span class="o">=</span> <span class="mf">1.7976931348623157</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">308</span></pre>
+<p>Maximum of 64 bit float.</p>
+<p>Don’t use in computations, because it cause numerical overflow.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a377558d4d0697ee86fa3678dff8a0ef5"><span id="index-19"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">kMinimumDouble</span> <span class="o">=</span> <span class="mf">2.2250738585072014</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">308</span></pre>
+<p>Minimum of 64 bit float.</p>
+<p>Don’t use in computations, because it cause numerical overflow.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a9e221b3e25d4dee5ea076fd9a66d734b"><span id="index-20"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">kLargeDouble</span> <span class="o">=</span> <span class="mf">1.7976931348623157</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">+</span><span class="mi">200</span></pre>
+<p>Maximum of 64 bit float.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1aec0661fee192b946513ddc409bd17376"><span id="index-21"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">kSmallDouble</span> <span class="o">=</span> <span class="mf">2.2250738585072014</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">200</span></pre>
+<p>Minimum of 64 bit float.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a76c28299f1653fb0c94bc53706cd9228"><span id="index-22"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">kPrecision</span> <span class="o">=</span> <span class="mi">1</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">e</span></a><span></span><span class="o">-</span><span class="mi">12</span></pre>
+<p>Small value to be used as tolerance for comparing values.</p>
+</section>
+<section id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1aa1f2d2f2b217467d715f12ffdae92636"><span id="index-23"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">minValue</span> <span class="p">()</span></pre>
+<p>Support of limits in generic functions.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1ae36412c8f05ac7b92cb2768bd4db11a6"><span id="index-24"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span> <span class="n">maxValue</span> <span class="p">()</span></pre>
+<p>template declaration (no implementation, only specializations used)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-numeric-limits-1a3c3f118e963abafb15b7c32d0ddc9304"><span id="index-25"></span><span></span><span class="n">int8</span> <span class="n">minValue</span> <span class="p">()</span></pre>
+<p>template declaration (no implementation, only specializations used)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_Database_SqlStatement.html" class="btn btn-neutral float-left" title="class CCL::Database::SqlStatement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_IActivatable.html" class="btn btn-neutral float-right" title="struct CCL::IActivatable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

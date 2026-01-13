@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Platform::TI32Socket &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class Core::Platform::TextRecordBuilder" href="class_Core_Platform_TextRecordBuilder.html" />
+    <link rel="prev" title="class Core::Platform::StreamBuffer" href="class_Core_Platform_StreamBuffer.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Platform.html">namespace Core::Platform</a></li>
+      <li class="breadcrumb-item active">class Core::Platform::TI32Socket</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-platform-ti32socket">
+<span id="doxid-class-core-1-1-platform-1-1-t-i32-socket"></span><span id="index-0"></span><h1>class Core::Platform::TI32Socket<a class="headerlink" href="#class-core-platform-ti32socket" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coresocket.armti32.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">TI32Socket</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket"><span class="std std-ref">Core::Platform::PosixSocket</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-platform-1-1-t-i32-socket-1a733c6c471671abfbd9582d91d9e9483c"><span></span><span class="n">TI32Socket</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">SocketID</span></a><span></span> <span class="n">socket</span><span class="p">);</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-platform-1-1-t-i32-socket-1a15553be0776d456d250a792261d96e0d"><span></span><span class="n">TI32Socket</span></span><span></span><span class="p">(</span>
+        Sockets::AddressFamily<span></span> <span class="n">addressFamily</span><span class="p">,</span>
+        Sockets::SocketType<span></span> <span class="n">type</span><span class="p">,</span>
+        Sockets::ProtocolType<span></span> <span class="n">protocol</span>
+    <span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">SocketID</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a0912e8a9959ab5af36c5c9ec8209e6dd"><span class="std std-ref">getDescriptor</span></a><span></span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a140d5ff9f4f1c2f66e5a3ff020896a23"><span class="std std-ref">connect</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a268cc38b6d66fa41dcc43b805b2e8794"><span class="std std-ref">disconnect</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1aafb02d80043c14a6b87fbaa8cfaf3e84"><span class="std std-ref">isConnected</span></a><span></span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a8069f6d211c41f782c27bd9f152ace82"><span class="std std-ref">bind</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a8010d8abd4304a58096aaece7322f97e"><span class="std std-ref">listen</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">maxConnections</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">SocketID</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1ac6f9d6870be3fdb7c938821ca7912aa6"><span class="std std-ref">accept</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a7cf245b70bdb31ddafe0ffaed1d4858b"><span class="std std-ref">getPeerAddress</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1abea9ad132de011fbe5ba18003432927e"><span class="std std-ref">getLocalAddress</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1affa6c9bba7e2d283b6ae7f90be94272f"><span class="std std-ref">setOption</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">option</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">value</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1ad94a71ddfe6c1928f08bd8cde2a53fe1"><span class="std std-ref">getOption</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">option</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1abe669b4cc0fee37e676dcd8e5a1dd918"><span class="std std-ref">joinMulticastGroup</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">groupAddress</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">adapterAddress</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1abe2a3ea17fa555a53725ecb6fe4a800d"><span class="std std-ref">leaveMulticastGroup</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">groupAddress</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">adapterAddress</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a48081c9881035828a1e62969a73459ba"><span class="std std-ref">isReadable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a981913ee37f0e7be9c7003df03a39916"><span class="std std-ref">isWritable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a362573c2177cb7e3f5c25e317e06a662"><span class="std std-ref">isAnyError</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a57a1d2bde7120fc68c621096f0846dbc"><span class="std std-ref">send</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1ab5f5a7a12968a6c6aac4e3deff43f990"><span class="std std-ref">sendAll</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1ad96472ec7cb2bbf01d9e702335edf52f"><span class="std std-ref">receive</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a854e30d86408d035b86025703255504a"><span class="std std-ref">getBytesAvailable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">bytesAvailable</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a2456fb03afe1e3755e4b04125b39e536"><span class="std std-ref">sendTo</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a44641d6ec7c14d185cc882a1a3ee13da"><span class="std std-ref">receiveFrom</span></a><span></span><span class="p">(</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a68f19b9fa22d64e5b0f0c6a794f0d815"><span class="std std-ref">getErrorCode</span></a><span></span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="struct_Core_Platform_ISocket.html#doxid-struct-core-1-1-platform-1-1-i-socket-1a4321a04132dad7fec8e77d72361fcdfb"><span class="std std-ref">wouldBlockOperation</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">writeDirection</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">SocketID</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a1f00beb56ff309ddb1989af9e6260aa0"><span class="std std-ref">getDescriptor</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1aff476ec3dc4a4c002479bd5ba9158289"><span class="std std-ref">connect</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a24e2e4c3297f9ad010183d7fa5ff6134"><span class="std std-ref">disconnect</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a13cdcbb84b8f5bf0b9125ef8d0ce41c2"><span class="std std-ref">isConnected</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ae2a4d2e8306699f761bc1e75a56f21a7"><span class="std std-ref">bind</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1adef0062cf1a0478a46945172b96c68ec"><span class="std std-ref">listen</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">maxConnections</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform-1a5acaa0aa6b596217bacb1ca532c6ac72"><span class="std std-ref">SocketID</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ae4a1c2045f6da66d2b31f6379395c819"><span class="std std-ref">accept</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a027d62aa73429215c2bf052a1cfb21cd"><span class="std std-ref">getPeerAddress</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a044fc140625f8d9643a2276e7c0c5497"><span class="std std-ref">getLocalAddress</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a9ddac054052fff2c2da866dbddf7346c"><span class="std std-ref">setOption</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">option</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ab5653a6c30ca2eff38110c2cb9edddee"><span class="std std-ref">getOption</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">option</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a7cb1545f4bd0eed23d368b557cb04421"><span class="std std-ref">joinMulticastGroup</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">groupAddress</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">adapterAddress</span>
+    <span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a74d9083f99b41f61aa13650f5a85e003"><span class="std std-ref">leaveMulticastGroup</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">groupAddress</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-i-p-address"><span class="std std-ref">Sockets::IPAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">adapterAddress</span>
+    <span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a331effcc733901ea00023719c26d1d73"><span class="std std-ref">isReadable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a309b8103c5509901e027f4d886b3185c"><span class="std std-ref">isWritable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1aefa518fcd537951f1f43f76937ef2468"><span class="std std-ref">isAnyError</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">timeout</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a463d2b8ef3550986198607c7afd578be"><span class="std std-ref">send</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ad4e204d5a3a063ab258687eaa37e329b"><span class="std std-ref">sendAll</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a3f54d02ecf070a82c2b9c8b92a48e4a7"><span class="std std-ref">receive</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ae515fba2f835ff296037930890557292"><span class="std std-ref">getBytesAvailable</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="o">&amp;</span> <span class="n">bytesAvailable</span><span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a2913e03cf49b16e6dcbc551ceb09914c"><span class="std std-ref">sendTo</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+    <span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a92a79476541bc38b4a5f4f245f058d3e"><span class="std std-ref">receiveFrom</span></a><span></span><span class="p">(</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">size</span><span class="p">,</span>
+        <a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html#doxid-struct-core-1-1-sockets-1-1-socket-types-1-1-socket-address"><span class="std std-ref">Sockets::SocketAddress</span></a><span></span><span class="o">&amp;</span> <span class="n">address</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+    <span class="p">);</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1ab734b779ad73f9365677051cae8529cd"><span class="std std-ref">getErrorCode</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Platform_PosixSocket.html#doxid-class-core-1-1-platform-1-1-posix-socket-1a45b3dff978765b486c20d8d053ab8179"><span class="std std-ref">wouldBlockOperation</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">writeDirection</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Platform_StreamBuffer.html" class="btn btn-neutral float-left" title="class Core::Platform::StreamBuffer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_Platform_TextRecordBuilder.html" class="btn btn-neutral float-right" title="class Core::Platform::TextRecordBuilder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IO &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::FileTypes" href="namespace_CCL_FileTypes.html" />
+    <link rel="prev" title="template class Core::VectorIterator" href="class_Core_VectorIterator.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+      <li class="breadcrumb-item active">IO</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="io">
+<span id="doxid-group-base-io"></span><span id="index-0"></span><h1>IO<a class="headerlink" href="#io" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p><a class="reference internal" href="namespace_CCL_Persistence.html#doxid-namespace-c-c-l-1-1-persistence"><span class="std std-ref">Persistence</span></a> / <a class="reference internal" href="class_CCL_File.html#doxid-class-c-c-l-1-1-file"><span class="std std-ref">File</span></a> IO.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_FileTypes.html#doxid-namespace-c-c-l-1-1-file-types"><span class="std std-ref">CCL::FileTypes</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_AttributeClassFactory.html#doxid-struct-c-c-l-1-1-attribute-class-factory"><span class="std std-ref">CCL::AttributeClassFactory</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_FileInfo.html#doxid-struct-c-c-l-1-1-file-info"><span class="std std-ref">CCL::FileInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Security_Crypto_IASN1ContentHandler.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-a-s-n1-content-handler"><span class="std std-ref">CCL::Security::Crypto::IASN1ContentHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAttribute.html#doxid-struct-c-c-l-1-1-i-attribute"><span class="std std-ref">CCL::IAttribute</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAttributeFilter.html#doxid-struct-c-c-l-1-1-i-attribute-filter"><span class="std std-ref">CCL::IAttributeFilter</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">CCL::IAttributeList</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IAttributeQueue.html#doxid-struct-c-c-l-1-1-i-attribute-queue"><span class="std std-ref">CCL::IAttributeQueue</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Security_Crypto_Internal_ICryptoService.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-internal-1-1-i-crypto-service"><span class="std std-ref">CCL::Security::Crypto::Internal::ICryptoService</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IDataCompressor.html#doxid-struct-c-c-l-1-1-i-data-compressor"><span class="std std-ref">CCL::IDataCompressor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IDataTransformer.html#doxid-struct-c-c-l-1-1-i-data-transformer"><span class="std std-ref">CCL::IDataTransformer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IDownloadable.html#doxid-struct-c-c-l-1-1-i-downloadable"><span class="std std-ref">CCL::IDownloadable</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileDescriptor.html#doxid-struct-c-c-l-1-1-i-file-descriptor"><span class="std std-ref">CCL::IFileDescriptor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileItemProvider.html#doxid-struct-c-c-l-1-1-i-file-item-provider"><span class="std std-ref">CCL::IFileItemProvider</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileIterator.html#doxid-struct-c-c-l-1-1-i-file-iterator"><span class="std std-ref">CCL::IFileIterator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFilePromise.html#doxid-struct-c-c-l-1-1-i-file-promise"><span class="std std-ref">CCL::IFilePromise</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileResource.html#doxid-struct-c-c-l-1-1-i-file-resource"><span class="std std-ref">CCL::IFileResource</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileSystem.html#doxid-struct-c-c-l-1-1-i-file-system"><span class="std std-ref">CCL::IFileSystem</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IFileTypeFilter.html#doxid-struct-c-c-l-1-1-i-file-type-filter"><span class="std std-ref">CCL::IFileTypeFilter</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Security_Crypto_IInteger.html#doxid-struct-c-c-l-1-1-security-1-1-crypto-1-1-i-integer"><span class="std std-ref">CCL::Security::Crypto::IInteger</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IMemoryStream.html#doxid-struct-c-c-l-1-1-i-memory-stream"><span class="std std-ref">CCL::IMemoryStream</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IPersistAttributes.html#doxid-struct-c-c-l-1-1-i-persist-attributes"><span class="std std-ref">CCL::IPersistAttributes</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IProgressDetails.html#doxid-struct-c-c-l-1-1-i-progress-details"><span class="std std-ref">CCL::IProgressDetails</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">CCL::IProgressNotify</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IProgressProvider.html#doxid-struct-c-c-l-1-1-i-progress-provider"><span class="std std-ref">CCL::IProgressProvider</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Configuration_IRegistry.html#doxid-struct-c-c-l-1-1-configuration-1-1-i-registry"><span class="std std-ref">CCL::Configuration::IRegistry</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IStorable.html#doxid-struct-c-c-l-1-1-i-storable"><span class="std std-ref">CCL::IStorable</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IStorageHandler.html#doxid-struct-c-c-l-1-1-i-storage-handler"><span class="std std-ref">CCL::IStorageHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IStorageRegistry.html#doxid-struct-c-c-l-1-1-i-storage-registry"><span class="std std-ref">CCL::IStorageRegistry</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IStream.html#doxid-struct-c-c-l-1-1-i-stream"><span class="std std-ref">CCL::IStream</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ITransformStream.html#doxid-struct-c-c-l-1-1-i-transform-stream"><span class="std std-ref">CCL::ITransformStream</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUrl.html#doxid-struct-c-c-l-1-1-i-url"><span class="std std-ref">CCL::IUrl</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IUrlFilter.html#doxid-struct-c-c-l-1-1-i-url-filter"><span class="std std-ref">CCL::IUrlFilter</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IXmlNode.html#doxid-struct-c-c-l-1-1-i-xml-node"><span class="std std-ref">CCL::IXmlNode</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_IZLibTransformer.html#doxid-struct-c-c-l-1-1-i-z-lib-transformer"><span class="std std-ref">CCL::IZLibTransformer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_NativePath.html#doxid-struct-c-c-l-1-1-native-path"><span class="std std-ref">CCL::NativePath</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_POSIXPath.html#doxid-struct-c-c-l-1-1-p-o-s-i-x-path"><span class="std std-ref">CCL::POSIXPath</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_PlainFileType.html#doxid-struct-c-c-l-1-1-plain-file-type"><span class="std std-ref">CCL::PlainFileType</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_ProgressNotifyScope.html#doxid-struct-c-c-l-1-1-progress-notify-scope"><span class="std std-ref">CCL::ProgressNotifyScope</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_StreamSizeWriter.html#doxid-struct-c-c-l-1-1-stream-size-writer"><span class="std std-ref">CCL::StreamSizeWriter</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_TransformData.html#doxid-struct-c-c-l-1-1-transform-data"><span class="std std-ref">CCL::TransformData</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractDataTransformer.html#doxid-class-c-c-l-1-1-abstract-data-transformer"><span class="std std-ref">CCL::AbstractDataTransformer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractFileSystem.html#doxid-class-c-c-l-1-1-abstract-file-system"><span class="std std-ref">CCL::AbstractFileSystem</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AbstractProgressNotify.html#doxid-class-c-c-l-1-1-abstract-progress-notify"><span class="std std-ref">CCL::AbstractProgressNotify</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AttributeAccessor.html#doxid-class-c-c-l-1-1-attribute-accessor"><span class="std std-ref">CCL::AttributeAccessor</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AttributeReadAccessor.html#doxid-class-c-c-l-1-1-attribute-read-accessor"><span class="std std-ref">CCL::AttributeReadAccessor</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AttributeReader.html#doxid-class-c-c-l-1-1-attribute-reader"><span class="std std-ref">CCL::AttributeReader</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_AttributeWriter.html#doxid-class-c-c-l-1-1-attribute-writer"><span class="std std-ref">CCL::AttributeWriter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Buffer.html#doxid-class-c-c-l-1-1-buffer"><span class="std std-ref">CCL::Buffer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_CoreStream.html#doxid-class-c-c-l-1-1-core-stream"><span class="std std-ref">CCL::CoreStream</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_FileType.html#doxid-class-c-c-l-1-1-file-type"><span class="std std-ref">CCL::FileType</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_MemoryStream.html#doxid-class-c-c-l-1-1-memory-stream"><span class="std std-ref">CCL::MemoryStream</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_MultiplexStream.html#doxid-class-c-c-l-1-1-multiplex-stream"><span class="std std-ref">CCL::MultiplexStream</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_StreamPacketizer.html#doxid-class-c-c-l-1-1-stream-packetizer"><span class="std std-ref">CCL::StreamPacketizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Streamer.html#doxid-class-c-c-l-1-1-streamer"><span class="std std-ref">CCL::Streamer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_UrlDisplayString.html#doxid-class-c-c-l-1-1-url-display-string"><span class="std std-ref">CCL::UrlDisplayString</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_UrlFilter.html#doxid-class-c-c-l-1-1-url-filter"><span class="std std-ref">CCL::UrlFilter</span></a><span></span><span class="p">;</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_VectorIterator.html" class="btn btn-neutral float-left" title="template class Core::VectorIterator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_FileTypes.html" class="btn btn-neutral float-right" title="namespace CCL::FileTypes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::Web &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::Web::Feed" href="namespace_CCL_Web_Feed.html" />
+    <link rel="prev" title="namespace CCL::ViewNames" href="namespace_CCL_ViewNames.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">namespace CCL::Web</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-web">
+<span id="doxid-namespace-c-c-l-1-1-web"></span><span id="index-0"></span><h1>namespace CCL::Web<a class="headerlink" href="#namespace-ccl-web" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Web</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_Web_Feed.html#doxid-namespace-c-c-l-1-1-web-1-1-feed"><span class="std std-ref">CCL::Web::Feed</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_Web_HTTP.html#doxid-namespace-c-c-l-1-1-web-1-1-h-t-t-p"><span class="std std-ref">CCL::Web::HTTP</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_Web_Meta.html#doxid-namespace-c-c-l-1-1-web-1-1-meta"><span class="std std-ref">CCL::Web::Meta</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_CCL_Web_Permission.html#doxid-namespace-c-c-l-1-1-web-1-1-permission"><span class="std std-ref">CCL::Web::Permission</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IFileTask.html#doxid-struct-c-c-l-1-1-web-1-1-i-file-task"><span class="std std-ref">IFileTask</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IRemoteSession.html#doxid-struct-c-c-l-1-1-web-1-1-i-remote-session"><span class="std std-ref">IRemoteSession</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_ITransfer.html#doxid-struct-c-c-l-1-1-web-1-1-i-transfer"><span class="std std-ref">ITransfer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_ITransferFormatter.html#doxid-struct-c-c-l-1-1-web-1-1-i-transfer-formatter"><span class="std std-ref">ITransferFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_ITransferHandler.html#doxid-struct-c-c-l-1-1-web-1-1-i-transfer-handler"><span class="std std-ref">ITransferHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_ITransferManager.html#doxid-struct-c-c-l-1-1-web-1-1-i-transfer-manager"><span class="std std-ref">ITransferManager</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IUploader.html#doxid-struct-c-c-l-1-1-web-1-1-i-uploader"><span class="std std-ref">IUploader</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebClient.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-client"><span class="std std-ref">IWebClient</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebClientProtocol.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-client-protocol"><span class="std std-ref">IWebClientProtocol</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebCredentials.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-credentials"><span class="std std-ref">IWebCredentials</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebFileBrowserHost.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-file-browser-host"><span class="std std-ref">IWebFileBrowserHost</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebFileBrowserModel.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-file-browser-model"><span class="std std-ref">IWebFileBrowserModel</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebFileClient.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-file-client"><span class="std std-ref">IWebFileClient</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebFileSearchClient.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-file-search-client"><span class="std std-ref">IWebFileSearchClient</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebFileService.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-file-service"><span class="std std-ref">IWebFileService</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebHeaderCollection.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-header-collection"><span class="std std-ref">IWebHeaderCollection</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebNewsFeed.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-news-feed"><span class="std std-ref">IWebNewsFeed</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebNewsItem.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-news-item"><span class="std std-ref">IWebNewsItem</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebNewsLink.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-news-link"><span class="std std-ref">IWebNewsLink</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebNewsReader.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-news-reader"><span class="std std-ref">IWebNewsReader</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebProtocolRegistrar.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-protocol-registrar"><span class="std std-ref">IWebProtocolRegistrar</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebRequest.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-request"><span class="std std-ref">IWebRequest</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebResponse.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-response"><span class="std std-ref">IWebResponse</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebServer.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-server"><span class="std std-ref">IWebServer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebServerApp.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-server-app"><span class="std std-ref">IWebServerApp</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebService.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-service"><span class="std std-ref">IWebService</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IWebSocket.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-socket"><span class="std std-ref">IWebSocket</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Web_IXMLHttpRequest.html#doxid-struct-c-c-l-1-1-web-1-1-i-x-m-l-http-request"><span class="std std-ref">IXMLHttpRequest</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a2bb79203ff585d73885730540e7b14a8"><span></span><span class="n">IWebFileBrowserHost</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ab3e7fa22319b5c41e30af8b154447b52"><span></span><span class="n">IWebFileBrowserModel</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1abff934a5f9b152874d3c55fc6c539dcb"><span></span><span class="n">IUploader</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1adb7b015660cf841b3978b461948b5b12"><span></span><span class="n">ITransfer</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ad0e32bc0650c34565d1a043aec5a8af3"><span></span><span class="n">ITransferHandler</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a65b898c5477badbb7c94fcb00f5223f2"><span></span><span class="n">ITransferFormatter</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a81a7c6cce875951a371789a952f22a63"><span></span><span class="n">ITransferManager</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a196314a0ca9077ba35e60c59c69f8641"><span></span><span class="n">kTransferAdded</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a45da382dfa5f403e322abfc743ebad73"><span></span><span class="n">transferAdded</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ad08443902f463dd1372f071133c7b5f7"><span></span><span class="n">kTransferRemoved</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ae7bfbdb0e3dd42dc2d93e2ab774862ef"><span></span><span class="n">IWebClient</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a9768942344f9ff065a38976b8bb415e3"><span></span><span class="n">kUncached</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ad52b5cd1686e6cd83d2b7f9eb264897f"><span></span><span class="n">uncached</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a8541c21f489814ddd3a0799f56909070"><span></span><span class="n">kSilent</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1acf78a6321e6f844f87da27c9e10f7db8"><span></span><span class="n">IWebCredentials</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a898c91e25b307f7c44c7b5a096677d45"><span></span><span class="n">IWebFileClient</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a6aaeea678abe4a49a6a92cf50b925f08"><span></span><span class="n">IWebFileSearchClient</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a935a72af532398e01c9a449429564649"><span></span><span class="n">kSearchTerms</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1adba2f0a3f101557bfc3a89dd814f95b9"><span></span><span class="n">searchTerms</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a9eb85173c50c8dc305ddea151f33cf17"><span></span><span class="n">kPaginationOffset</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ac5df573ec08ac00c01131f09f1417c0a"><span></span><span class="n">IWebFileService</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a42c71be6d3847f90d46722318846d017"><span></span><span class="n">IRemoteSession</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a21c1b11d02dd30d9872b38ae430835a5"><span></span><span class="n">IFileTask</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a7fe20eaf05c469b82be73bbe6915cf99"><span></span><span class="n">IWebNewsLink</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a280b2ed70925fffe13931ca6815f950f"><span></span><span class="n">IWebNewsItem</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ac7ff374f575d78986d8d8d13e762e868"><span></span><span class="n">IWebNewsFeed</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1acb1b9aefc2f404b9dc6152d72bc2f321"><span></span><span class="n">IWebNewsReader</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1aa61ea7a88346efa7fc41055f21a34a58"><span></span><span class="n">IWebClientProtocol</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a6c1f856c1c23468f2c7fa63b19adbc10"><span></span><span class="n">IWebProtocolRegistrar</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1abbcd2205025ba8468ad409cda0c9c0e3"><span></span><span class="n">IWebHeaderCollection</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a71163a92880e133a379340392a348e25"><span></span><span class="n">IWebRequest</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a3262e2dce4ac3efbfe5145c882a424e3"><span></span><span class="n">IWebResponse</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1adb1671474086d984e097cc7ec7679de6"><span></span><span class="n">IWebServer</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ae02bb3aafef8b021ecea755fb24d3942"><span></span><span class="n">IWebServerApp</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1aa2461fd793c064ac60b125e6d6a1400e"><span></span><span class="n">IWebService</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a8c0b63fe00a5d53036ec7a46a60049b0"><span></span><span class="n">IWebSocket</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1af986fe63dbfcb7178c7c4193b5b8c9c0"><span></span><span class="n">kOnOpen</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a843181a3213d13fbaffd3f2a2e3c461a"><span></span><span class="n">onopen</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a6920c41360eab179e1ac0a0a8078540f"><span></span><span class="n">kOnClose</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a44b5869fc13b898e21c947853ec2a1e5"><span></span><span class="n">onclose</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a79a8552ead066ce165d30c6ab9670934"><span></span><span class="n">kOnMessage</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a77d4d632cd6ac362b99afb06a481a1e4"><span></span><span class="n">onmessage</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a6aec0fc9de88daab39c2b496194bcd23"><span></span><span class="n">kOnError</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ae31e17545cf0b897139e9b6d1ff0c740"><span></span><span class="n">onerror</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ab7979748bb26be647de0c4284b8e0ecd"><span></span><span class="n">kOnReadyStateChange</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1afb4a16b448214a8fb592c7c7b2745f21"><span></span><span class="n">IXMLHttpRequest</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1af247a22b8913386a852c0f12cf40d93e"><span></span><span class="n">kOnLoadStart</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1adb547d3261655e012707cfc44c19c5ab"><span></span><span class="n">onloadstart</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1ac367577a47bde1bd8a4c3afe247c11a4"><span></span><span class="n">kOnProgress</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a8bdce3e325fd3d6a20f7a858d14f33b6"><span></span><span class="n">onprogress</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1affce154ab41e31938132eec2dc8652f3"><span></span><span class="n">kOnAbort</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a5499c5deaff96090519d612c0837e826"><span></span><span class="n">onabort</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a56e1b280cbe3dc467af77c4b03c25b77"><span></span><span class="n">kOnLoad</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a1e17fc440fd7fc0d969aa91b3b0549c9"><span></span><span class="n">onload</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a57cc81d0fabcd443054726790c4c6002"><span></span><span class="n">kOnLoadEnd</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-web-1a8ce8a4b44dfec4d42b0505fcfa8a2551"><span></span><span class="n">onloadend</span></span><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace Web</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_CCL_ViewNames.html" class="btn btn-neutral float-left" title="namespace CCL::ViewNames" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_Web_Feed.html" class="btn btn-neutral float-right" title="namespace CCL::Web::Feed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

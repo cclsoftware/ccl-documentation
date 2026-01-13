@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::Styles::TransitionType &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::IAlertBox" href="struct_CCL_IAlertBox.html" />
+    <link rel="prev" title="enum CCL::Styles::ScrollViewStyles" href="enum_CCL_Styles_ScrollViewStyles.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_view.html">Views</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_dialog.html">Dialogs</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_Styles.html">namespace CCL::Styles</a></li>
+      <li class="breadcrumb-item active">enum CCL::Styles::TransitionType</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-styles-transitiontype">
+<span id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283"></span><span id="index-0"></span><h1>enum CCL::Styles::TransitionType<a class="headerlink" href="#enum-ccl-styles-transitiontype" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Transition types. <a class="reference internal" href="#details-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;styleflags.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">TransitionType</span>
+<span class="p">{</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a6fcd5ebaa9b4cc1828a9246889a59055"><span class="std std-ref">kTransitionNone</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a977389f476948ee05b9b16ef02eb57b8"><span class="std std-ref">kTransitionFade</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;fade&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a9f703183f232ac5202b565057d913a48"><span class="std std-ref">kTransitionMoveIn</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;mvin&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283af05072222270185b02374043cd2ba99e"><span class="std std-ref">kTransitionMoveOut</span></a><span></span>  <span class="o">=</span> <span class="sc">&#39;mvot&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ad723716a22d2574fd8e60a3e93b8fdad"><span class="std std-ref">kTransitionConceal</span></a><span></span>  <span class="o">=</span> <span class="sc">&#39;conc&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283aaa684c3e92ee80b7e84818ebe0732ba1"><span class="std std-ref">kTransitionReveal</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;revl&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a52c80c3befe7b593238e01df911762e5"><span class="std std-ref">kTransitionPush</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;push&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a5072b8489afed31ae06724e3ef30094d"><span class="std std-ref">kTransitionPushLeft</span></a><span></span> <span class="o">=</span> <span class="sc">&#39;pusl&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a89daac6826ceeafa76358862dbdb73b4"><span class="std std-ref">kTransitionPushDown</span></a><span></span> <span class="o">=</span> <span class="sc">&#39;pusd&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ac4126a51e98f0ab6e735535ff0516988"><span class="std std-ref">kTransitionPushUp</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;pusu&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a1c069400b6edb3f7de4e0604c70bfdc3"><span class="std std-ref">kTransitionFall</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;fall&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a6ee7148b0ebbe72f68722411e501f6c4"><span class="std std-ref">kTransitionLift</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;lift&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ae0e09d59b6b40cae061b9e19b4e9b621"><span class="std std-ref">kTransitionRise</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;rise&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a0feb4036e97456dac5247f85ee007282"><span class="std std-ref">kTransitionSink</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;sink&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283aceb7741b946c8c08edd5351bb54825f3"><span class="std std-ref">kTransitionZoomIn</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;zmin&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a3d1828c596020fe705395f84e20b4901"><span class="std std-ref">kTransitionZoomOut</span></a><span></span>  <span class="o">=</span> <span class="sc">&#39;zmot&#39;</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Transition types.</p>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a6fcd5ebaa9b4cc1828a9246889a59055"><span id="index-1"></span><span></span><span class="n">kTransitionNone</span></pre>
+<p>no transition</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a977389f476948ee05b9b16ef02eb57b8"><span id="index-2"></span><span></span><span class="n">kTransitionFade</span></pre>
+<p>old content fades out while new content becomes visible</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a9f703183f232ac5202b565057d913a48"><span id="index-3"></span><span></span><span class="n">kTransitionMoveIn</span></pre>
+<p>new content slides in on top of old content (from left)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283af05072222270185b02374043cd2ba99e"><span id="index-4"></span><span></span><span class="n">kTransitionMoveOut</span></pre>
+<p>old content slides out and new content is revealed (to left - inverse of movein)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ad723716a22d2574fd8e60a3e93b8fdad"><span id="index-5"></span><span></span><span class="n">kTransitionConceal</span></pre>
+<p>new content slides in on top of old content (from right)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283aaa684c3e92ee80b7e84818ebe0732ba1"><span id="index-6"></span><span></span><span class="n">kTransitionReveal</span></pre>
+<p>old content slides out and new content is revealed (to right - inverse of conceal)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a52c80c3befe7b593238e01df911762e5"><span id="index-7"></span><span></span><span class="n">kTransitionPush</span></pre>
+<p>new content pushes old content to the right as it slides in</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a5072b8489afed31ae06724e3ef30094d"><span id="index-8"></span><span></span><span class="n">kTransitionPushLeft</span></pre>
+<p>old content pushed to the left as new content slides in (inverse of push)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a89daac6826ceeafa76358862dbdb73b4"><span id="index-9"></span><span></span><span class="n">kTransitionPushDown</span></pre>
+<p>new content pushes old content to the bottom as it slides in</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ac4126a51e98f0ab6e735535ff0516988"><span id="index-10"></span><span></span><span class="n">kTransitionPushUp</span></pre>
+<p>old content pushed to the top as new content slides in (inverse of pushdown)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a1c069400b6edb3f7de4e0604c70bfdc3"><span id="index-11"></span><span></span><span class="n">kTransitionFall</span></pre>
+<p>new content falls on top of old content</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a6ee7148b0ebbe72f68722411e501f6c4"><span id="index-12"></span><span></span><span class="n">kTransitionLift</span></pre>
+<p>old content lifts up and new content is revealed while (inverse of fall)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283ae0e09d59b6b40cae061b9e19b4e9b621"><span id="index-13"></span><span></span><span class="n">kTransitionRise</span></pre>
+<p>new content rises on top of old content</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a0feb4036e97456dac5247f85ee007282"><span id="index-14"></span><span></span><span class="n">kTransitionSink</span></pre>
+<p>old content sinks down and new content is revealed (inverse of rise)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283aceb7741b946c8c08edd5351bb54825f3"><span id="index-15"></span><span></span><span class="n">kTransitionZoomIn</span></pre>
+<p>new content is zoomed in on top of old content</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-styles-1a4e38d9519e74e10eccdfda5c5b92b283a3d1828c596020fe705395f84e20b4901"><span id="index-16"></span><span></span><span class="n">kTransitionZoomOut</span></pre>
+<p>old content is zoomed out on top of new content (inverse of zoom)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_Styles_ScrollViewStyles.html" class="btn btn-neutral float-left" title="enum CCL::Styles::ScrollViewStyles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_IAlertBox.html" class="btn btn-neutral float-right" title="struct CCL::IAlertBox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

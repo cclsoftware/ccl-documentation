@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct CCL::Variant &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::Variant::Types" href="enum_CCL_Variant_Types.html" />
+    <link rel="prev" title="struct CCL::UID" href="struct_CCL_UID.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+      <li class="breadcrumb-item active">struct CCL::Variant</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-ccl-variant">
+<span id="doxid-struct-c-c-l-1-1-variant"></span><span id="index-0"></span><h1>struct CCL::Variant<a class="headerlink" href="#struct-ccl-variant" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;variant.h&gt;</span>
+
+<span class="k">struct</span> <span class="n">Variant</span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Variant_Types.html#doxid-struct-c-c-l-1-1-variant-1a8aaeba5aed18516d10d61fe3139c9d32"><span class="std std-ref">Types</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1acd579dfd50a9ea905ca697ed8707bf3b"><span></span><span class="n">type</span></span><span></span><span class="p">;</span>
+    <span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a5f1e1c25b8369f660499c967be2cd174"><span></span><span class="n">lValue</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a6bafc550346f61ba3132c11a2330c468"><span></span><span class="n">fValue</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_IString.html#doxid-struct-c-c-l-1-1-i-string"><span class="std std-ref">IString</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a5b510e58633a57da08d06bfdf842e648"><span></span><span class="n">string</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae091e8e667ed7e931591aefd7c84e188"><span></span><span class="n">object</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a3c631cdbf129a354bb091ce47c418f13"><span></span><span class="n">Variant</span></span><span></span> <span class="p">();</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a813796b72cbf09230825a5a46647490d"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae46ae9d052f745ab9fbd8021cde7dd83"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">int64</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ab85bc07de51ba4bb06b9dbc62fe51abf"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">uint64</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aed227f771adf21ca583807e1fee869a2"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a9ee0cae2d3d1e86863c1ec25200ed8d7"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">uint32</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a195451f1a0ceeea3e415bd896e3777ff"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">int16</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a48b6cda5a835369e070412cacd048a83"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">uint16</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae6a2f4015978448772195238a2295352"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">int8</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a43c13ecfa593958479d927b32d152f51"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="n">uint8</span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a31d44d2faba0409ee4b318b7cf23d56a"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">b</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a35d463b1461837d00c6ac20023f13bcc"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aff2b5c70e526c867f38d80a464668e20"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a9dedc410a72889e0a55c88f8febe82de"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">s</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ac54b1cd53d0ae1c35e7ad61feca175d1"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">s</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">shared</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ab470988dc55882a0c03d10598496db6d"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">o</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">shared</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a915d13022158597bf0ffd61600c26aca"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a18a3324169274a81830881d8b82c527f"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_UnknownPtr.html#doxid-class-c-c-l-1-1-unknown-ptr"><span class="std std-ref">UnknownPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a1ac668ffccfe7da1d3cbb48ef5bdcc1f"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_AutoPtr.html#doxid-class-c-c-l-1-1-auto-ptr"><span class="std std-ref">AutoPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a81cbaf903bcdb3299054a93534fd08a2"><span></span><span class="n">Variant</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref">SharedPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1adbd2b1403464cb013424a2fda1665ceb"><span></span><span class="n">getType</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a5bc2a781be2586924afce4e4a4ea6697"><span></span><span class="n">isValid</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a772efbf9d46b2e1e3840763a76307040"><span></span><span class="n">isInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a7283345d095683fd5e3a75cb4d3b8410"><span></span><span class="n">isFloat</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a345b371a0aef782ab74b4a8aa0f5eff2"><span></span><span class="n">isNumeric</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1abc9dc0708ec1aae2309621664fa8e5a4"><span></span><span class="n">isString</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a13b605b2c9876ab317e21637b8646def"><span></span><span class="n">isObject</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa6b4634792a276a0c1852025e18aabd4"><span></span><span class="n">isNil</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1acdf70e82e036c814bb20e366674afccf"><span></span><span class="n">isShared</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1adf7dca30195c372007fea026e9535d60"><span></span><span class="n">isBoolFormat</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ac49a6b2aa1f9cba98a99e489e5d586ce"><span></span><span class="n">setBoolFormat</span></span><span></span> <span class="p">(</span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">state</span> <span class="o">=</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">true</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa8bee8e8e0dc527aaec182d74dcfba1c"><span></span><span class="n">getUserFlags</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a1c03e38bdbc67e2873e7482129ace395"><span></span><span class="n">setUserFlags</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="n">flags</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a6c3f433d11ef2c74618805bbbfeebea0"><span></span><span class="n">getUserValue</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae17d4c4360bf04477bcc8e12b16e27e0"><span></span><span class="n">setUserValue</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">short</span></a><span></span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ac8bb3912a3ce86b15842e79d0b421204"><span></span><span class="n">clear</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ab7b16ddb7b9b970849d02dbd9b92d1ab"><span></span><span class="n">share</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa8be1bbd61c2640354ad6f2bacbaca40"><span></span><span class="n">toString</span></span><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a26b2839c6b49fe42966074e2375553d7"><span></span><span class="n">toString</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a63be9a6850af88a7a54573dbd7fc866e"><span></span><span class="n">fromString</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a7bb9b649a737476c4eaf129b88b57c12"><span></span><span class="n">toCString</span></span><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> <span class="n">encoding</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faaaec5d5a33898d4450836a75ebc93aca87"><span class="std std-ref">Text::kASCII</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ad37f394c6adae5e8e72b0c3fa03d425a"><span></span><span class="n">parseLargeInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a315ce0d821ada16081a30db6d213fb84"><span></span><span class="n">parseLargeInt</span></span><span></span> <span class="p">(</span><span class="n">int64</span> <span class="n">errorValue</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a94af0035a886a70fb02a99d2e9a92bf3"><span></span><span class="n">parseInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a08843033957f90fa9d1069ec04fcd738"><span></span><span class="n">parseInt</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">errorValue</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a230ce4325f123ba1f07efbd80adc38b8"><span></span><span class="n">parseDouble</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a280b7ae625c50e8329412be2e13b43e5"><span></span><span class="n">parseDouble</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">errorValue</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a6787a4d3062e96e815c49ec85be5a246"><span></span><span class="n">parseFloat</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a3f7a98a1376a8670d7dfda2ca321dbf8"><span></span><span class="n">parseFloat</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">errorValue</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae53ac9bbac7993ec2d2fc4d428eac640"><span></span><span class="n">parseBool</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1adac82226eac5f0beceed327e68aa012e"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ad08fb45df7ded2061b3955d7811b4f51"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> <span class="n">t</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1af7c74c2850725f68dbbd1c6ce3d5705d"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">int64</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a3c729fc8740e79b2bc8e8f6134a687b0"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">uint64</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a3b97ebc67cec2ebda89aa56cc757474f"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a27604fa43b683e09a8ec7f4fc8f4a86a"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">uint32</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a4e125cafcb0e5ce42e4d4596a7411090"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">int16</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a53777abb2d7c420bf99962796a333d36"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">uint16</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ac58eee6ef8e51d29820d23f8fad72233"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">int8</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1abd99c7b7eb650d3dcb475a289ac28a53"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="n">uint8</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1af1048f7fa14a36c9f4c82c48e29146fe"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">b</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aacf2a3ecdddf42260e1f9189d0a99120"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae0201ebec14fb67e73774dd181e0dc07"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a47d1978e54a42bfd18da996b6e581cc7"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">s</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a5084e83346f9d6767d77b478c95d38a7"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">s</span><span class="p">);</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a6c6eb59f0aab367dc68bea231d31d01e"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">obj</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aeef99ceaffee745a8ee9b396ad3f0bcb"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_UnknownPtr.html#doxid-class-c-c-l-1-1-unknown-ptr"><span class="std std-ref">UnknownPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">ptr</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a4da8088f86fed5286b838c58a9f201c6"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_AutoPtr.html#doxid-class-c-c-l-1-1-auto-ptr"><span class="std std-ref">AutoPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">ptr</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a68245d6a5a6af169bfda583c49e0e920"><span></span><span class="k">operator</span> <span class="o">=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref">SharedPtr</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">T</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">ptr</span><span class="p">);</span>
+
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a46f573e588184fe4e80473215841fb9f"><span></span><span class="n">takeShared</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">o</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aee7ec99681b4763e28627109f3590a4a"><span></span><span class="k">operator</span> <span class="o">==</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a6ee3041eb07db4d35a0c9a2c30c8120c"><span></span><span class="k">operator</span> <span class="o">!=</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa35c150d9b9c6c87309bedd71e654c12"><span></span><span class="k">operator</span> <span class="o">&gt;</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a784fbb9b82b69c265196b054822b91b6"><span></span><span class="k">operator</span> <span class="o">&lt;</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1af17be3eb49f912aece1a519342a9759b"><span></span><span class="n">compare</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Variant</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ad2500b704d297c0a2cde6256112d770e"><span></span><span class="k">operator</span> <span class="n">String</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1add80b882d154d8ddd97a6a8194d6b87a"><span></span><span class="k">operator</span> <span class="n">IUnknown</span> <span class="o">*</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ae95ec5abd5e39e1b51d2052938dab359"><span></span><span class="k">operator</span> <span class="n">int64</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a2d70708db896f47c09e9cf442dd96700"><span></span><span class="k">operator</span> <span class="n">uint64</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a48d27bd92e68c69527589ea65a9af69f"><span></span><span class="k">operator</span> <span class="kt">int</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1adbf4254653d0dc28131072500d446456"><span></span><span class="k">operator</span> <span class="n">uint32</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a4f88dba4ef546acd5704f74ac586219e"><span></span><span class="k">operator</span> <span class="n">int16</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ab559b99807f34be0e883c4dc257ba543"><span></span><span class="k">operator</span> <span class="n">uint16</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a1a67ac67ac2812905eff5ec57f57f748"><span></span><span class="k">operator</span> <span class="n">int8</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a64362036d7e3fbd0173b843d650ce923"><span></span><span class="k">operator</span> <span class="n">uint8</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a3c5a46ebe31a3699f441668931f2978e"><span></span><span class="k">operator</span> <span class="kt">double</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1abc4ec9f715112697477f2f425122ce21"><span></span><span class="k">operator</span> <span class="kt">float</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a67b76affb3b5d35fa419ac234144038b"><span></span><span class="k">operator</span> <span class="kt">bool</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1af8ea74bb61947ad5a3b53e3d30f4bd8e"><span></span><span class="n">asString</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a170accd6bcfb96c5e7bc8611a526b117"><span></span><span class="n">asUnknown</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">int64</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1afc375dbd9517d75c509f5754cee3643c"><span></span><span class="n">asLargeInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">uint64</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a9056ad85cf0e63afc8abff960b457cee"><span></span><span class="n">asLargeUInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aafa1a9ae7a20989284486d6edd7f6c12"><span></span><span class="n">asInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">uint32</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1adfa551b09196fb5d76ecabf4354214f1"><span></span><span class="n">asUInt</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1ac483232c52e23cedd51e35d4015fe627"><span></span><span class="n">asDouble</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a97d1e7fa5907149aedfadd09466ed88e"><span></span><span class="n">asFloat</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa89e0884952cab63a940c6626ed9a5d6"><span></span><span class="n">asBool</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1a33364b0526f99e9f7c292bbfc772af39"><span></span><span class="n">asResult</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">UIntPtr</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1aa2db6376dc3a2063244fcd808eae0507"><span></span><span class="n">asIntPointer</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Variant</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-variant-1af83ccc336750fab764fd08beb643d5a7"><span></span><span class="n">setIntPointer</span></span><span></span> <span class="p">(</span><span class="n">UIntPtr</span> <span class="n">p</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_UID.html" class="btn btn-neutral float-left" title="struct CCL::UID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Variant_Types.html" class="btn btn-neutral float-right" title="enum CCL::Variant::Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

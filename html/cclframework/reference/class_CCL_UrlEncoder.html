@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::UrlEncoder &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::UrlEncoder::Scheme" href="enum_CCL_UrlEncoder_Scheme.html" />
+    <link rel="prev" title="class CCL::Url::Comparer" href="class_CCL_Url_Comparer.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">class CCL::UrlEncoder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-urlencoder">
+<span id="doxid-class-c-c-l-1-1-url-encoder"></span><span id="index-0"></span><h1>class CCL::UrlEncoder<a class="headerlink" href="#class-ccl-urlencoder" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;urlencoder.h&gt;</span>
+
+<span class="k">class</span> <span class="n">UrlEncoder</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_UrlEncoder_Scheme.html#doxid-class-c-c-l-1-1-url-encoder-1a5c5181a54a4f46149d9c9662b2694167"><span class="std std-ref">Scheme</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-url-encoder-1ad2d7bfc40a69e4a62aa787b8d595c4d1"><span></span><span class="n">UrlEncoder</span></span><span></span> <span class="p">(</span><a class="reference internal" href="enum_CCL_UrlEncoder_Scheme.html#doxid-class-c-c-l-1-1-url-encoder-1a5c5181a54a4f46149d9c9662b2694167"><span class="std std-ref">Scheme</span></a><span></span> <span class="n">scheme</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_UrlEncoder_Scheme.html#doxid-class-c-c-l-1-1-url-encoder-1a5c5181a54a4f46149d9c9662b2694167a398a2c1952b274e43d9ab637830d9737"><span class="std std-ref">kDefault</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> <span class="n">textEncoding</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faaa7fd9945f1c494a4a4ee9446017e790f1"><span class="std std-ref">Text::kUTF8</span></a><span></span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a0394c880a9e4a7e1fa8d3ed30e65441e"><span class="std std-ref">encode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1ab93764aa7897e25eaf6e076dc04d7326"><span class="std std-ref">encode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1ab4601a672fbb0a99213543a82a4d4fe4"><span class="std std-ref">encodePathComponents</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1aa4af90b298bff51a3759689864f63faa"><span class="std std-ref">encodePathComponents</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1acefa4ca3fa767dcb382df7a4bcd87448"><span class="std std-ref">encode</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a7a42dd637c432e759873e08989e2e8a1"><span class="std std-ref">encode</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1acb0d80deea1650a89eabd3df76259928"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a0f44bfdeea49e7ef77441639ba4255e1"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a68843df731599a9739fc521ce7e64ff0"><span class="std std-ref">decodePathComponents</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a7b8db3e51352be1e445af4f533318da8"><span class="std std-ref">decodePathComponents</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1a9ce4cf278eadbd619fbd6e742484faec"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+    <a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-url-encoder-1abeccc16617d2329319f2e23768edb32f"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-url-encoder"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a0394c880a9e4a7e1fa8d3ed30e65441e"><span id="index-1"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">encode</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Encode C-String.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1ab93764aa7897e25eaf6e076dc04d7326"><span id="index-2"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">encode</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Encode <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1ab4601a672fbb0a99213543a82a4d4fe4"><span id="index-3"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">encodePathComponents</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Encode path components respecting “/” delimiter (C-String).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1aa4af90b298bff51a3759689864f63faa"><span id="index-4"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">encodePathComponents</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Encode path components respecting “/” delimiter (<a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1acefa4ca3fa767dcb382df7a4bcd87448"><span id="index-5"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">encode</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">)</span></pre>
+<p>Encode C-String parameters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a7a42dd637c432e759873e08989e2e8a1"><span id="index-6"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">encode</span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">)</span></pre>
+<p>Encode <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> parameters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1acb0d80deea1650a89eabd3df76259928"><span id="index-7"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">decode</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode to C-String.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a0f44bfdeea49e7ef77441639ba4255e1"><span id="index-8"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">decode</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode to <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a68843df731599a9739fc521ce7e64ff0"><span id="index-9"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">decodePathComponents</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode path components respecting “/” delimiter (C-String).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a7b8db3e51352be1e445af4f533318da8"><span id="index-10"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">decodePathComponents</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode path components respecting “/” delimiter (<a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1a9ce4cf278eadbd619fbd6e742484faec"><span id="index-11"></span><a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">decode</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IStringDictionary.html#doxid-struct-c-c-l-1-1-i-string-dictionary"><span class="std std-ref">IStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> parameters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-url-encoder-1abeccc16617d2329319f2e23768edb32f"><span id="index-12"></span><a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">decode</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ICStringDictionary.html#doxid-struct-c-c-l-1-1-i-c-string-dictionary"><span class="std std-ref">ICStringDictionary</span></a><span></span><span class="o">&amp;</span> <span class="n">parameters</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<p>Decode C-String parameters.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_Url_Comparer.html" class="btn btn-neutral float-left" title="class CCL::Url::Comparer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_UrlEncoder_Scheme.html" class="btn btn-neutral float-right" title="enum CCL::UrlEncoder::Scheme" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

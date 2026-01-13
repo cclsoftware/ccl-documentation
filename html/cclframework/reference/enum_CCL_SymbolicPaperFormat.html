@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::SymbolicPaperFormat &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::TextureFlags3D" href="enum_CCL_TextureFlags3D.html" />
+    <link rel="prev" title="enum CCL::RunLevel" href="enum_CCL_RunLevel.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">enum CCL::SymbolicPaperFormat</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-symbolicpaperformat">
+<span id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712"></span><span id="index-0"></span><h1>enum CCL::SymbolicPaperFormat<a class="headerlink" href="#enum-ccl-symbolicpaperformat" title="Link to this heading"></a></h1>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iprintservice.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">SymbolicPaperFormat</span>
+<span class="p">{</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ad0ce83fc10f8064be2cf5e56027c067e"><span></span><span class="n">kPaperFormatUnknown</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a686e4e58eb58999d2a3d3bb519f9d48f"><span></span><span class="n">kPaperFormatLetter</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ae4fba3c0016f8e63b2530e158b08d9a2"><span></span><span class="n">kPaperFormatLetterExtra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a797a81484c9e3e005cd1ffedfb8758ff"><span></span><span class="n">kPaperFormatLetterPlus</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a2c9f2ad92c3ec1f40518b94727e54df2"><span></span><span class="n">kPaperFormatTabloid</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ac266defcde87eeb51b20e20d23ea29ea"><span></span><span class="n">kPaperFormatTabloidExtra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712abbfa5ae35b918b9ff50e91b3f6e85d5c"><span></span><span class="n">kPaperFormatLedger</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ac417be5bc44bf0899d26195dd873c0ff"><span></span><span class="n">kPaperFormatLegal</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712af9cbe0e09add255aa0a2714d67bffb5a"><span></span><span class="n">kPaperFormatLegalExtra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ad1475988b4e3ae775924759a7975c280"><span></span><span class="n">kPaperFormatStatement</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a4d42491313b82b9523c0a437baa665d5"><span></span><span class="n">kPaperFormatExecutive</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a99a19eaa16162b3068992e9dee11f4a4"><span></span><span class="n">kPaperFormatA2</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a58f9a45ff8172857fa245a57f235899f"><span></span><span class="n">kPaperFormatA3</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a5aba8d97589b74595dc3d50b1678d413"><span></span><span class="n">kPaperFormatA3Extra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a00b9a1111e7dbf6b41c56c704fee4ea5"><span></span><span class="n">kPaperFormatA4</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a44d25bcc2361ded3ace309fe2bfbefd6"><span></span><span class="n">kPaperFormatA4Plus</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ad8fd2dc6594b5053248481c50207b7d2"><span></span><span class="n">kPaperFormatA4Extra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a8eb4911d5767112e7a296054248703c9"><span></span><span class="n">kPaperFormatA5</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a82d089fec2cf4019eaca541af99be7b2"><span></span><span class="n">kPaperFormatA5Extra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712acde5e75f491f6a0a0fb55726cea32e5d"><span></span><span class="n">kPaperFormatA6</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ac80fd1d9d5f2e1acb7a5dcea2a6140d5"><span></span><span class="n">kPaperFormatAPlus</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a29259946b50113b9090c6bc71ad63fe4"><span></span><span class="n">kPaperFormatB4</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a8d6a42aecf87f62ec730fa30d5418610"><span></span><span class="n">kPaperFormatB5</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a9f37951153d42e52c00f7dfd1f08b679"><span></span><span class="n">kPaperFormatB5Extra</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712aeeac0eed58b1da92b549d616bc9327ed"><span></span><span class="n">kPaperFormatBPlus</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a23aae7772b2e48a57c66be690aa87c85"><span></span><span class="n">kPaperFormatIsoB4</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ade8a8477ac51b7f60c457f25116a8892"><span></span><span class="n">kPaperFormatFolio</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a32418b21e626bd5aa135f164c323a542"><span></span><span class="n">kPaperFormatQuarto</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712acc46c489ee4b2db58b8efc33e43af12e"><span></span><span class="n">kPaperFormatNote</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a21e9460923a8dea351185bfb08811993"><span></span><span class="n">kPaperFormatJapanesePostcard</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a176faae3a9811a762bd42c9b2927c48d"><span></span><span class="n">kPaperFormat9x11Inch</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712ae41017ca2aa36fe65112fa09c08fb3ee"><span></span><span class="n">kPaperFormat10x11Inch</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712afcb472b0c43636df9971735bf21bd462"><span></span><span class="n">kPaperFormat15x11Inch</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712aa0e7f079637aefc3be3449070f078066"><span></span><span class="n">kPaperFormat10x14Inch</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1a33f5a75b55ba1e1ad865e4345c0a3712a0e920b74444945c8735bce9295028fa6"><span></span><span class="n">kPaperFormat11x17Inch</span></span><span></span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_CCL_RunLevel.html" class="btn btn-neutral float-left" title="enum CCL::RunLevel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_TextureFlags3D.html" class="btn btn-neutral float-right" title="enum CCL::TextureFlags3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

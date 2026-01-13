@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing CMake Projects &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="reference.html" />
+    <link rel="prev" title="Using CMake" href="user.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CMake Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="user.html">Using CMake</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Writing CMake Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ccl-demo">CCL Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profiling">Profiling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CMake Guide</a></li>
+      <li class="breadcrumb-item active">Writing CMake Projects</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="writing-cmake-projects">
+<span id="cmake-developer"></span><h1>Writing CMake Projects<a class="headerlink" href="#writing-cmake-projects" title="Link to this heading"></a></h1>
+<p>This guide is intended to help developers in writing CMake files for CCL-based applications.</p>
+<p>Each application has a <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file, which is located at <code class="docutils literal notranslate"><span class="pre">&lt;appname&gt;/cmake/</span></code>.
+This file describes the application’s source files, dependencies and other settings.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file is located next to the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file.</p>
+<p>Usually, this file does only include a shared presets file, which is located at <code class="docutils literal notranslate"><span class="pre">build/cmake/modules/shared/CMakePresets.json</span></code>.</p>
+<p>A CMake presets file contains presets with default values for variables and options that are needed when building the application.</p>
+<p>Among other settings, the shared presets file adds the directory <code class="docutils literal notranslate"><span class="pre">build/cmake/modules/shared/</span></code> to the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>.</p>
+<section id="ccl-demo">
+<h2>CCL Demo<a class="headerlink" href="#ccl-demo" title="Link to this heading"></a></h2>
+<p>This guide is based on the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file of CCL Demo (updated 02/27/2023).</p>
+<p>The first line specifies the minimum required CMake version. Our shared presets file also specifies a minimum version. However, CMake requires to have this line in every top-level CMakeLists.txt file. Update this version number when you use a feature that is only available in later versions of CMake.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="w"> </span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.30</span><span class="w"> </span><span class="s">FATAL_ERROR</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The next line specifies the name of the project. Think of it as the name of the Visual Studio solution or Xcode workspace.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">project</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;CCL Demo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">PROJECT_VENDOR</span></code> is used to determine the code signing identity and version information in application installers / packages.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="w"> </span><span class="p">(</span><span class="s">PROJECT_VENDOR</span><span class="w"> </span><span class="s">ccl</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, a shared cmake module named <code class="docutils literal notranslate"><span class="pre">vendor</span></code> is included. This cmake module is located at <code class="docutils literal notranslate"><span class="pre">build/cmake/shared/vendor.cmake</span></code>. When including modules, CMake searches in directories specified in the variable <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>. The shared presets file already added <code class="docutils literal notranslate"><span class="pre">build/cmake/shared/</span></code> to this variable, so we can simply include <code class="docutils literal notranslate"><span class="pre">vendor</span></code>:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">include</span><span class="w"> </span><span class="p">(</span><span class="s">vendor</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The vendor module does several things, e.g. it detects the target architecture and the host system, defines variables like <code class="docutils literal notranslate"><span class="pre">REPOSITORY_ROOT</span></code> or <code class="docutils literal notranslate"><span class="pre">REPOSITORY_FRAMEWORKS_DIR</span></code> which help in finding source files, and parses the <code class="docutils literal notranslate"><span class="pre">vendor.h</span></code> file to define <code class="docutils literal notranslate"><span class="pre">VENDOR_NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">VENDOR_PACKAGE_DOMAIN</span></code>, etc.</p>
+<p>The vendor module also adds all directories and subdirectories in <code class="docutils literal notranslate"><span class="pre">build/cmake/</span></code> to the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>.</p>
+<p>CCL Demo depends on CCL and needs Skin XML packages. We also want to include CCL Spy in the CCL Demo project.</p>
+<p>CMake provides a mechanism for finding dependencies with the <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package</a> command.
+When calling <code class="docutils literal notranslate"><span class="pre">find_package</span> <span class="pre">(xy)</span></code>, CMake searches the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULES_PATH</span></code> for a file called <code class="docutils literal notranslate"><span class="pre">Findxy.cmake</span></code>.
+See <a class="reference external" href="https://cmake.org/cmake/help/latest/guide/using-dependencies/">https://cmake.org/cmake/help/latest/guide/using-dependencies/</a> for details.</p>
+<p>There are several <code class="docutils literal notranslate"><span class="pre">Find*.cmake</span></code> modules in <code class="docutils literal notranslate"><span class="pre">build/shared/cmake</span></code> to find and include targets for frameworks, libraries, and third-party dependencies.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">build/cmake/modules/ccl/Findccl.cmake</span></code> looks for the file <code class="docutils literal notranslate"><span class="pre">public/cclversion.h</span></code> in <code class="docutils literal notranslate"><span class="pre">${CCL_FRAMEWORK_DIR}</span></code>, and includes <code class="docutils literal notranslate"><span class="pre">${CCL_FRAMEWORK_DIR}/cmake/ccl-config.cmake</span></code>.
+This file in turn defines all CCL targets, including include paths and transitive dependencies (corelib, pnglib, zlib, …), which can then be used by the application.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="w"> </span><span class="p">(</span><span class="s">ccl</span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">cclapp</span><span class="w"> </span><span class="s">cclbase</span><span class="w"> </span><span class="s">ccltext</span><span class="w"> </span><span class="s">cclsystem</span><span class="w"> </span><span class="s">cclnet</span><span class="w"> </span><span class="s">cclgui</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="w"> </span><span class="p">(</span><span class="s">cclspy</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="w"> </span><span class="p">(</span><span class="s">modelimporter3d</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="w"> </span><span class="p">(</span><span class="s">skins</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we set up some variables and found all dependencies, we can add a target for our application using <code class="docutils literal notranslate"><span class="pre">`ccl_add_app</span></code>.
+<code class="cmake-ref docutils literal notranslate"><a class="reference internal" href="reference.html#coremacros-cmake-ccl-add-app-macro"><span class="std std-ref"><span class="pre">ccl_add_app</span></span></a></code> creates an application target and applies some basic properties. This includes the C++ standard and default include directories. This macro also includes a platform-specific cmake module, e.g. <code class="docutils literal notranslate"><span class="pre">ccldemo.win.cmake</span></code> or <code class="docutils literal notranslate"><span class="pre">ccldemo.mac.cmake</span></code>, which might set platform-specific properties or add platform-specific source files to the target. The GUI flag tells cmake to use a WinMain entry point on Windows and to create an application bundle on Mac.
+We also need some information about the application. Using the <code class="docutils literal notranslate"><span class="pre">VERSION_FILE</span></code> parameter, we tell CMake the path to a header file containing version information for the application.
+We also pass <code class="docutils literal notranslate"><span class="pre">ccl</span></code> as our vendor ID. This ID is used to define CMake-variables and C preprocessor definitions like <code class="docutils literal notranslate"><span class="pre">VENDOR_NAME</span></code>.
+The variable <code class="docutils literal notranslate"><span class="pre">ccldemo_NAME</span></code> has been defined by <code class="cmake-ref docutils literal notranslate"><a class="reference internal" href="reference.html#coremacros-cmake-ccl-add-app-macro"><span class="std std-ref"><span class="pre">ccl_add_app</span></span></a></code> using information from the version header file.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ccl_add_app</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="s">GUI</span>
+<span class="w">    </span><span class="s">VENDOR</span><span class="w"> </span><span class="s">ccl</span>
+<span class="w">    </span><span class="s">VERSION_FILE</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_LIST_DIR}/../source/appversion.h&quot;</span>
+<span class="w">    </span><span class="s">VERSION_PREFIX</span><span class="w"> </span><span class="s">APP</span>
+<span class="p">)</span>
+<span class="nb">ccl_set_product_name</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="o">${</span><span class="nv">ccldemo_NAME</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">ccl_set_startup_project</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All of these macros are defined in <code class="docutils literal notranslate"><span class="pre">core/cmake/coremacros.cmake</span></code>.</p>
+<p><code class="cmake-ref docutils literal notranslate"><a class="reference internal" href="reference.html#coremacros-cmake-ccl-set-startup-project-macro"><span class="std std-ref"><span class="pre">ccl_set_startup_project</span></span></a></code> sets ccldemo to be the startup project in a Visual Studio solution.</p>
+<p>We also set the product name of our application using <code class="cmake-ref docutils literal notranslate"><a class="reference internal" href="reference.html#coremacros-cmake-ccl-set-product-name-macro"><span class="std std-ref"><span class="pre">ccl_set_product_name</span></span></a></code>. Depending on the platform, this may set the name of the generated project and the name of the resulting binary.</p>
+<p>As stated before, CCL Demo needs skin packages.</p>
+<p>We already included the <code class="docutils literal notranslate"><span class="pre">skins</span></code> cmake module using the <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package</a> command. The skins module defines macros that help with using skin packages.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">use_skin_packages</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="s">neutralbase</span><span class="w"> </span><span class="s">neutraldesign</span><span class="p">)</span>
+<span class="nb">add_skin_package</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../skin</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, we define variables that contain paths to CCL Demo’s source files. We will use the variables later to add the source files to the target and to specify how these source files should be grouped in the IDE (filters/folders).</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">ccldemo_resources</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../resource/cclgui.config</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../resource/commands.xml</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../resource/embedded</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../resource/svg</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../resource/menubar.xml</span>
+<span class="p">)</span>
+
+<span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">ccldemo_source_files</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demoapp.h</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demoitem.h</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demoapp.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/coreviewdemo.h</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/compositiondemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/controlsdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/dialogsdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/embeddeddemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/focusdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/graphicsdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/graphicsdemo3d.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/layoutdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/networkdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/spritedemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/svgdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/systemdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/treeviewdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/viewsdemo.cpp</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source/demos/workspacedemo.cpp</span>
+<span class="p">)</span>
+
+<span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">ccldemo_ccl_sources</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CCL_DIR</span><span class="o">}</span><span class="s">/main/cclmain.cpp</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The groups/filters/folders for our IDE are set using the <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/source_group.html">source_group</a> command.</p>
+<p>The first <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/source_group.html">source_group</a> call (with the <code class="docutils literal notranslate"><span class="pre">TREE</span></code> option) works for list of source files where all files share the same prefix. Source files under this prefix will be collected into groups/folders which match the file system folders.</p>
+<p>The second call (without the <code class="docutils literal notranslate"><span class="pre">TREE</span></code> option) moves all files in the list to the given group/folder <code class="docutils literal notranslate"><span class="pre">source\ccl</span></code>. No subfolders are created.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">source_group</span><span class="w"> </span><span class="p">(</span><span class="s">TREE</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="o">}</span><span class="s">/../source</span><span class="w"> </span><span class="s">PREFIX</span><span class="w"> </span><span class="s2">&quot;source&quot;</span><span class="w"> </span><span class="s">FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">ccldemo_source_files</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">source_group</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;source\\ccl&quot;</span><span class="w"> </span><span class="s">FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">ccldemo_ccl_sources</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All source files are addeded to another variable:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">ccldemo_sources</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">ccldemo_source_files</span><span class="o">}</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">ccldemo_ccl_sources</span><span class="o">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>And finally, resources and source files are added to the target and linked against dependencies:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ccl_add_resources</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="o">${</span><span class="nv">ccldemo_resources</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">target_sources</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">ccldemo_sources</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">CCL_LIBRARIES</span><span class="o">}</span><span class="w"> </span><span class="s">corelib</span><span class="p">)</span>
+
+<span class="nb">ccl_add_dependencies</span><span class="w"> </span><span class="p">(</span><span class="s">ccldemo</span><span class="w"> </span><span class="s">cclspy</span><span class="w"> </span><span class="s">modelimporter3d</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Link to this heading"></a></h2>
+<p>The <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/message.html">message</a> command is useful when debugging CMake scripts:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="p">(</span><span class="n">WARNING</span> <span class="s">&quot;this should not happen!&quot;</span><span class="p">)</span>
+<span class="n">message</span> <span class="p">(</span><span class="n">FATAL_ERROR</span> <span class="s">&quot;oops!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Call cmake with <code class="docutils literal notranslate"><span class="pre">--log-level=&lt;ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE&gt;</span></code> to control verbosity.</p>
+</section>
+<section id="profiling">
+<h2>Profiling<a class="headerlink" href="#profiling" title="Link to this heading"></a></h2>
+<p>In case the generation step takes unexpectedly long, you can profile cmake using the <code class="docutils literal notranslate"><span class="pre">--profiling</span></code> and <code class="docutils literal notranslate"><span class="pre">--profiling-format</span></code> flags.</p>
+<p>For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--preset<span class="w"> </span>win64<span class="w"> </span>--profiling-output<span class="o">=</span>perf.json<span class="w"> </span>--profiling-format<span class="o">=</span>google-trace
+</pre></div>
+</div>
+<p>To analyze the resulting <code class="docutils literal notranslate"><span class="pre">perf.json</span></code>, open <a class="reference external" href="https://ui.perfetto.dev/">https://ui.perfetto.dev/</a> in your web browser and load the <code class="docutils literal notranslate"><span class="pre">perf.json</span></code> file.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user.html" class="btn btn-neutral float-left" title="Using CMake" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reference.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

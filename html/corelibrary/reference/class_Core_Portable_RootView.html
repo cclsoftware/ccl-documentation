@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Core::Portable::RootView &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class Core::Portable::RootViewBase" href="class_Core_Portable_RootViewBase.html" />
+    <link rel="prev" title="class Core::Portable::RadioButton" href="class_Core_Portable_RadioButton.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_gui.html">Core-GUI</a></li>
+      <li class="breadcrumb-item active">class Core::Portable::RootView</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-core-portable-rootview">
+<span id="doxid-class-core-1-1-portable-1-1-root-view"></span><span id="index-0"></span><h1>class Core::Portable::RootView<a class="headerlink" href="#class-core-portable-rootview" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coreview.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">RootView</span><span class="p">:</span>
+    <span class="k">public</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view"><span class="std std-ref">Core::Portable::ContainerView</span></a><span></span><span class="p">,</span>
+    <span class="k">public</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base"><span class="std std-ref">Core::Portable::RootViewBase</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a0b9ef2258bdd60b742dc7dafc9790d03"><span></span><span class="n">touchInputView</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ac3ba80e8666111e0c6c9df286d531010"><span></span><span class="n">RootView</span></span><span></span><span class="p">(</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1b1bd80c75d3f50bf5ba16e3dbeab34c"><span class="std std-ref">RectRef</span></a><span></span> <span class="n">size</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ad0f7a18bfc765de0dcf9ee877a40e53f"><span class="std std-ref">Rect</span></a><span></span><span class="p">(),</span>
+        BitmapPixelFormat<span></span> <span class="n">pixelFormat</span> <span class="o">=</span> kBitmapRGBAlpha<span></span><span class="p">,</span>
+        <a class="reference internal" href="enum_Core_Portable_RootViewBase_RenderMode.html#doxid-class-core-1-1-portable-1-1-root-view-base-1ac9e546db27bb4f76f47d7e25f24abb88"><span class="std std-ref">RenderMode</span></a><span></span> <span class="n">renderMode</span> <span class="o">=</span> <a class="reference internal" href="enum_Core_Portable_RootViewBase_RenderMode.html#doxid-class-core-1-1-portable-1-1-root-view-base-1ac9e546db27bb4f76f47d7e25f24abb88a565f236a0fcfa5ba6cb139fc6f679976"><span class="std std-ref">kOffscreenMode</span></a><span></span>
+    <span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a4733dfd89ebf9dc12cdd17a68370a35e"><span></span><span class="n">DECLARE_CORE_CLASS</span></span><span></span><span class="p">(</span><span class="sc">&#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">RtVw</span></a><span></span><span class="sc">&#39;, RootView, </span><a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view"><span class="std std-ref">ContainerView</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ab33b45363a8c1ae91ef0cdc4848656ac"><span></span><span class="n">PROPERTY_BOOL</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">sizable</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Sizable</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">TouchInputView</span></a><span></span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1aa28c61f9ec3b4ee817f7134478a68e7a"><span></span><span class="n">scrollClient</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1b1bd80c75d3f50bf5ba16e3dbeab34c"><span class="std std-ref">RectRef</span></a><span></span> <span class="n">rect</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2444794f6e232d797295d20756357fff"><span class="std std-ref">PointRef</span></a><span></span> <span class="n">delta</span><span class="p">);</span>
+    <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a094458979755ee69ce8a5aea3fd9bd08"><span></span><span class="n">getModalView</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a112fa9d5f08c51f18ac9a52ca8e395d4"><span></span><span class="n">setModalView</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1aa8628cc399b97eb700ee27a11960c890"><span></span><span class="n">resetModalViewDeferred</span></span><span></span><span class="p">();</span>
+    <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ad1a52975a3e99b6b7f6b6c931014db46"><span></span><span class="n">getFocusView</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a3bf7e892515f7933ccb09419d8e92db0"><span></span><span class="n">setFocusView</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ace81086301182212c011a86b76bafb45"><span></span><span class="n">findFirstFocusView</span></span><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ab8300f9419a322eb386667115bc6c627"><span></span><span class="n">viewRemoved</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1afe7ab5fb247660d3fd5d73aabd3525a5"><span></span><span class="n">receiveTouchInput</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_TouchEvent.html#doxid-struct-core-1-1-portable-1-1-touch-event"><span class="std std-ref">TouchEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="n">RootView</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a64e429f818146bee8fbfb7658bbca303"><span></span><span class="n">getRootView</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ad48ba21e347aca6081bb206d44236501"><span></span><span class="n">setSize</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1b1bd80c75d3f50bf5ba16e3dbeab34c"><span class="std std-ref">RectRef</span></a><span></span> <span class="n">newSize</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a2d1129c8432a914483604234bc9b7001"><span></span><span class="n">invalidate</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a1b1bd80c75d3f50bf5ba16e3dbeab34c"><span class="std std-ref">RectRef</span></a><span></span> <span class="n">rect</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a7fb04ce8a7cd8d263f9141aca7d5fc42"><span></span><span class="n">draw</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_DrawEvent.html#doxid-struct-core-1-1-portable-1-1-draw-event"><span class="std std-ref">DrawEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ab49aeb29b4f23c193079b6e6b5dcf82c"><span></span><span class="n">onTouchInput</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_TouchEvent.html#doxid-struct-core-1-1-portable-1-1-touch-event"><span class="std std-ref">TouchEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1ac171ed9d9b2dab54ebc60d4801c155c3"><span></span><span class="n">onWheelInput</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_WheelEvent.html#doxid-struct-core-1-1-portable-1-1-wheel-event"><span class="std std-ref">WheelEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1abdd67fb6c0263b7d91b80bd09652043d"><span></span><span class="n">onKeyInput</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_VirtualKeyEvent.html#doxid-struct-core-1-1-portable-1-1-virtual-key-event"><span class="std std-ref">VirtualKeyEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a973c4c8d418131da9013fc2d3b881d80"><span></span><span class="n">onGestureInput</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_GestureEvent.html#doxid-struct-core-1-1-portable-1-1-gesture-event"><span class="std std-ref">GestureEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a3ec786749e0f74c8d2928c4d24a43551"><span></span><span class="n">getHandledGestures</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core_Portable.html#doxid-namespace-core-1-1-portable-1aea7cf725b9764b0dbe3e5af396ea3ff8"><span class="std std-ref">GestureVector</span></a><span></span><span class="o">&amp;</span> <span class="n">gestures</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2444794f6e232d797295d20756357fff"><span class="std std-ref">PointRef</span></a><span></span> <span class="n">where</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1a00f2fcf8feacf28c2e626e34fd238312"><span></span><span class="n">onIdle</span></span><span></span><span class="p">();</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-portable-1-1-root-view-1aaa96a174aad1ab08a2b8a448db9f094a"><span></span><span class="n">enableGestures</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">state</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">Core</span><span class="o">::</span><span class="n">RectList</span><span class="o">&lt;</span><span class="mi">5</span><span class="o">&gt;</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1aa708448da3da2dd7d9772e59ea150349"><span class="std std-ref">RectList</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_Core_Portable_RootViewBase_RenderMode.html#doxid-class-core-1-1-portable-1-1-root-view-base-1ac9e546db27bb4f76f47d7e25f24abb88"><span class="std std-ref">RenderMode</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerViewBase.html#doxid-class-core-1-1-portable-1-1-container-view-base-1a3db0cb768ac18589e80fe24fd93550d6"><span class="std std-ref">addView</span></a><span></span><span class="p">(</span><span class="n">VC</span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerViewBase.html#doxid-class-core-1-1-portable-1-1-container-view-base-1a188662c667282514a72887027e131b4c"><span class="std std-ref">removeView</span></a><span></span><span class="p">(</span><span class="n">VC</span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span><span class="o">&lt;</span><span class="n">VC</span><span class="o">*&gt;&amp;</span> <a class="reference internal" href="class_Core_Portable_ContainerViewBase.html#doxid-class-core-1-1-portable-1-1-container-view-base-1aea281c27f9a5a6103336df88786a5d5a"><span class="std std-ref">getChildren</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerViewBase.html#doxid-class-core-1-1-portable-1-1-container-view-base-1a7fb04ce8a7cd8d263f9141aca7d5fc42"><span class="std std-ref">draw</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_DrawEvent.html#doxid-struct-core-1-1-portable-1-1-draw-event"><span class="std std-ref">DrawEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1ac09724e163e681dc64f0a1814d2a1f15"><span class="std std-ref">DECLARE_CORE_CLASS</span></a><span></span><span class="p">(</span><span class="sc">&#39;</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">CntV</span></a><span></span><span class="sc">&#39;, </span><a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view"><span class="std std-ref">ContainerView</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a3829c55e414bc8ae54d9279b6437614d"><span class="std std-ref">PROPERTY_POINTER</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Portable_IViewOwner.html#doxid-struct-core-1-1-portable-1-1-i-view-owner"><span class="std std-ref">IViewOwner</span></a><span></span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Owner</span></a><span></span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1aa503dcdef229688f7386c100dce11ffe"><span class="std std-ref">resizeToChildren</span></a><span></span><span class="p">();</span>
+
+    <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a00effefc68a081d26fe60e1aa7a596d6"><span class="std std-ref">findView</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1af09b631d934be68e1425207de8710b39"><span class="std std-ref">Point</span></a><span></span><span class="o">&amp;</span> <span class="n">where</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">deep</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">true</span></a><span></span><span class="p">,</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_ViewFilter.html#doxid-struct-core-1-1-portable-1-1-view-filter"><span class="std std-ref">ViewFilter</span></a><span></span><span class="o">*</span> <span class="n">filter</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1ac02a487e4ea4c6d20f913132ba41a6da"><span class="std std-ref">findView</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_ViewFilter.html#doxid-struct-core-1-1-portable-1-1-view-filter"><span class="std std-ref">ViewFilter</span></a><span></span><span class="o">&amp;</span> <span class="n">filter</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">deep</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">true</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a0babd24341808c8e4ce06dc8f89f58bf"><span class="std std-ref">findView</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">deep</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">true</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a6d4336dc02becf8a5d57abc289554def"><span class="std std-ref">isChildView</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">deep</span> <span class="o">=</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">true</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1ae517af28a7d27cd26174051e69bf6058"><span class="std std-ref">addView</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a46f67609a31538a6e0f1437d5260ddaf"><span class="std std-ref">removeView</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_Core_Portable_View.html#doxid-class-core-1-1-portable-1-1-view"><span class="std std-ref">View</span></a><span></span><span class="o">*</span> <span class="n">view</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view"><span class="std std-ref">ContainerView</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1ab55189b81f59a87528c8dcd2b5e011eb"><span class="std std-ref">asContainer</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1ab49aeb29b4f23c193079b6e6b5dcf82c"><span class="std std-ref">onTouchInput</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_TouchEvent.html#doxid-struct-core-1-1-portable-1-1-touch-event"><span class="std std-ref">TouchEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_ContainerView.html#doxid-class-core-1-1-portable-1-1-container-view-1a00f2fcf8feacf28c2e626e34fd238312"><span class="std std-ref">onIdle</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a47d14d45ec2c9afaecc5088a2945c24a"><span class="std std-ref">PROPERTY_BOOL</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">updateSuspended</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">UpdateSuspended</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="enum_Core_Portable_RootViewBase_RenderMode.html#doxid-class-core-1-1-portable-1-1-root-view-base-1ac9e546db27bb4f76f47d7e25f24abb88"><span class="std std-ref">RenderMode</span></a><span></span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a3363d903ac2108b1bb52ade278c55240"><span class="std std-ref">getRenderMode</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1aa708448da3da2dd7d9772e59ea150349"><span class="std std-ref">RectList</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1acd77eee1b781752daa850136d4d140f1"><span class="std std-ref">getDirtyRegion</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a4156dba4de402f23720bc5ff833569fb"><span class="std std-ref">getNextRenderBuffer</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_Portable_Bitmap.html#doxid-class-core-1-1-portable-1-1-bitmap"><span class="std std-ref">Bitmap</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1ae5b94ecd60736f9326c9ebf5cd656e60"><span class="std std-ref">getActiveBufferBitmap</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_Core_BitmapData.html#doxid-struct-core-1-1-bitmap-data"><span class="std std-ref">BitmapData</span></a><span></span><span class="o">*</span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a65a5588c7e85f1a5c35c40dac32164aa"><span class="std std-ref">accessForRead</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a262f682e3442e9f6ee2706252a8e9ae1"><span class="std std-ref">redraw</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a2dd96d81948d331425adacff1fc18ab4"><span class="std std-ref">redrawTo</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Portable_IGraphicsCommandSink.html#doxid-struct-core-1-1-portable-1-1-i-graphics-command-sink"><span class="std std-ref">IGraphicsCommandSink</span></a><span></span><span class="o">&amp;</span> <span class="n">commandSink</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a8b2d9e797c7fc15cd24af1ff23361c54"><span class="std std-ref">draw</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_Portable_DrawEvent.html#doxid-struct-core-1-1-portable-1-1-draw-event"><span class="std std-ref">DrawEvent</span></a><span></span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_Core_Portable_RadioButton.html" class="btn btn-neutral float-left" title="class Core::Portable::RadioButton" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_Portable_RootViewBase.html" class="btn btn-neutral float-right" title="class Core::Portable::RootViewBase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

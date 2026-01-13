@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::Meta &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::ClassDesc" href="struct_CCL_ClassDesc.html" />
+    <link rel="prev" title="Plugins" href="group_base_plug.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_base.html">CCL-Base</a></li>
+          <li class="breadcrumb-item"><a href="group_base_plug.html">Plugins</a></li>
+      <li class="breadcrumb-item active">namespace CCL::Meta</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-meta">
+<span id="doxid-namespace-c-c-l-1-1-meta"></span><span id="index-0"></span><h1>namespace CCL::Meta<a class="headerlink" href="#namespace-ccl-meta" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>&lt;&gt; <a class="reference internal" href="#details-namespace-c-c-l-1-1-meta"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Meta</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1acca4fbe45bb315e42ff336af71f02b3b"><span class="std std-ref">kDocumentMimeType</span></a><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a938eb4bfe7d1d866d3c4f5f37086da14"><span></span><span class="n">__pad0__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a532eda38148beb7792cab153e2864da8"><span></span><span class="n">kDocumentGenerator</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a1c12bcaa9ef171aba1ee0706a51a5df3"><span></span><span class="n">__pad1__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ae956bb6295d64f5b229711e89ec15d8c"><span></span><span class="n">kDocumentFormatVersion</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a8c4cf285924cec7e75e07f3367846382"><span></span><span class="n">__pad2__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a3686a754ff1ee5b98cd7a0888d783f88"><span></span><span class="n">kDocumentCreator</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1acc2e5a52dbbb0189be6dcc069740aa1c"><span></span><span class="n">__pad3__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ad030e64380fb2f168da2b7a129d94985"><span></span><span class="n">kDocumentTitle</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1af5b0bea042e02a39faa4ddf1b9c086f5"><span></span><span class="n">__pad4__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ab9c5283bbb8739ece8a2c90da5b639c3"><span></span><span class="n">kDocumentLocalizedTitle</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a247e4bae2de73e6459bfeeb308d5704d"><span></span><span class="n">__pad5__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ae69c1e5499b4e6f8c6d61254dcc22f96"><span></span><span class="n">kDocumentDescription</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a91ebb32d45a58aa3aa04aa7b36d7248b"><span></span><span class="n">__pad6__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a0587e2b21e3c7f6fcc71569605ffa174"><span></span><span class="n">kDocumentLocalizedDescription</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ad2af6c457f73893d5aa733e77abe3a0a"><span></span><span class="n">__pad7__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ab3a5f865a632ab0e32b577dda57170d9"><span></span><span class="n">kDocumentKeywords</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a9f71447d497234c84e8c288bf0098618"><span></span><span class="n">__pad8__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a00e2fc658a60a98d60e4b6dbebcb2b8a"><span></span><span class="n">kDocumentNotes</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1ad1f2c1b7335812058f30d287d25a0223"><span class="std std-ref">kPresetDataFile</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1af5a8f33aa87ccc6ad39a0d56116167d4"><span></span><span class="n">kPresetDataMimeType</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a56bc1d03993c6e86a1050e7f202e10b1"><span></span><span class="n">kPresetTypeDescription</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a57bcbdb585d1e4de1a410ea023a5acb5"><span></span><span class="n">kPresetSubFolder</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ac67b0d3e02a052ac74ad6cf2a69fb5f2"><span></span><span class="n">kPresetHandlerLocation</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a7ec1b91cfe048005fcffe1965606aa13"><span></span><span class="n">kPresetHandlerVendorName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ad7b82748bf2391c9086439551d36e3f6"><span></span><span class="n">kFallbackClassID</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1a11c1c4961b35e236e42f82b38b8f3851"><span class="std std-ref">kClassGadgetResource</span></a><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1a77a1dd7ebfc6529bb242cce65d847239"><span class="std std-ref">kMetaClassID</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a7e788e29e67d2c70692a2d8e36b31300"><span></span><span class="n">kAlternativeClassID</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a76226e76a324814373e7022cf385c65e"><span></span><span class="n">kAlternativeClassName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a8ab3d503479ad2f7eec917e3cfec34e8"><span></span><span class="n">kComponentClassID</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a9d017a820f926f002d1188e39741d249"><span></span><span class="n">kClassImageResource</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a51b1e83d126e76eacf2862d32529acb7"><span></span><span class="n">kClassTextResource</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1adab96d719440a0540094e9082e9f881f"><span class="std std-ref">kServicePriority</span></a><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1a656b5b5665dc14b560ae7a6c58cd9554"><span class="std std-ref">kPackagePrefix</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1aecbba489fa193fe62f0f820ef62a3f5b"><span></span><span class="n">kPackageID</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a0fd34d78efcc45d33cca9430720fc4be"><span></span><span class="n">kPackageShortID</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a534f1eb32b71676485969c068adfa207"><span></span><span class="n">kPackageName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a18c015037ee497140acda41271802633"><span></span><span class="n">kPackageLocalizedName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a6ffb25273b5dbc72c6d8633bb530c636"><span></span><span class="n">kPackageCopyright</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1af29c9038c6138931b0ddbc421fd5332e"><span></span><span class="n">kPackageVendor</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1aa22afe36d8acf210b12a99dfaf2fa5d7"><span></span><span class="n">kPackageDescription</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a11ab70cbd2d8b278f7bcddaea2c8bc61"><span></span><span class="n">kPackageLocalizedDescription</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ab2665dc4363a05f56b5729e5f09245e3"><span></span><span class="n">kPackageVersion</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a25c65afe9b30a16556d7ccf86b4366e9"><span></span><span class="n">__pad9__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a861874c5c39660452449378e43af84cd"><span></span><span class="n">kPackageWebsite</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a763c7f1f96bbf515a340ced5f499e3b5"><span></span><span class="n">__pad10__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ae2bd95a6aba4810193df4b06dabdcf31"><span></span><span class="n">kPackageExecutable</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a2f599893b8ef9da0b60e70e3ab8c1155"><span></span><span class="n">__pad11__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a5cd8332f4705662a1549b39feade2a45"><span></span><span class="n">kPackageIcon</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a06b2229b06f6cf255a45c0767818deee"><span></span><span class="n">__pad12__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a0756527cedd06a4c8d00951cbe0fc7e1"><span></span><span class="n">kPackageIconSet</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a99c4d596b4cd647e4823d9320e9ac3d6"><span></span><span class="n">__pad13__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a9667f81e437f87fddd166cab3a8725c6"><span></span><span class="n">kPackageIconSetFileName</span></span><span></span><span class="p">;</span>
+<span class="n">package</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1a4036e19ce1c0d3f6dbdc28ac76aba908"><span class="std std-ref">iconset</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1af42cce399ca842cca876ab372b89a532"><span></span><span class="n">kPackageExternalKeyRequired</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a6eef041e02337d71062f3220cb6d7f23"><span></span><span class="n">__pad14__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a85cc997589c252ff64826c7dbe3e4bc8"><span></span><span class="n">kPackageSharedLocation</span></span><span></span><span class="p">;</span>
+<span class="n">Package</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1aeaa06a88bb16b9c3748b1fbba8ac27ee"><span></span><span class="n">__pad15__</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ad4df1b66021bb0e204c856dbc4f58917"><span></span><span class="n">kPackageHidden</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1adf92ffcc8aa92596eff2a44e37ccc253"><span class="std std-ref">kClassID</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a7479d83e6be6427bf8960314fa55f756"><span></span><span class="n">kClassName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1ab05c161c2abc98bc1f7cfc3d2736d149"><span></span><span class="n">kClassRevision</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1aec7842fc60e1c4db4a9960f7433c859d"><span></span><span class="n">kClassCategory</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a5e585832d412941675ad6ecd8905b516"><span></span><span class="n">kClassSubCategory</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a64735b0d2288fe2f0fa37e92a0aa885b"><span></span><span class="n">kClassVendor</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a5d6008a7e6f8064cd5eacb22750e3ba3"><span></span><span class="n">kClassVersion</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a187a66521e4f380e484d9ede74a763b4"><span></span><span class="n">kClassFolder</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a3963db4aff2ee2c8d8f086fafde85e02"><span></span><span class="n">kClassLocalizedName</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a1bc2ac6b9d70675410f190bf47f34b6f"><span></span><span class="n">kClassLocalizedSubCategory</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a5182a359262d125f0b0d2132cc382fdc"><span></span><span class="n">kClassLocalizedDescription</span></span><span></span><span class="p">;</span>
+ <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-meta-1a74921dd2c20635cee0b962b7d787f9b0"><span class="std std-ref">kTranslationStringTable</span></a><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1a8f25c3ee077749cbef2a69f611e2e208"><span></span><span class="n">kTranslationTableID</span></span><span></span><span class="p">;</span>
+ <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-meta-1af47fef027fb72fea9013cde38b14a373"><span></span><span class="n">kTranslationSharedTableID</span></span><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace Meta</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-meta"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>&lt;&gt;</p>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1acca4fbe45bb315e42ff336af71f02b3b"><span id="index-1"></span><span></span> <span class="n">kDocumentMimeType</span></pre>
+<p><a class="reference internal" href="class_CCL_Document.html#doxid-class-c-c-l-1-1-document"><span class="std std-ref">Document</span></a> MIME type [<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>] (e.g.</p>
+<p>“application/x-document-type”)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1ad1f2c1b7335812058f30d287d25a0223"><span id="index-2"></span><span></span> <span class="n">kPresetDataFile</span></pre>
+<p>Filename of data file inside package [<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>] (e.g.</p>
+<p>“data.bin”).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1a11c1c4961b35e236e42f82b38b8f3851"><span id="index-3"></span><span></span> <span class="n">kClassGadgetResource</span></pre>
+<p>Gadget resource identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1a77a1dd7ebfc6529bb242cce65d847239"><span id="index-4"></span><span></span> <span class="n">kMetaClassID</span></pre>
+<p><a class="reference internal" href="struct_CCL_UID.html#doxid-struct-c-c-l-1-1-u-i-d"><span class="std std-ref">UID</span></a> of meta class.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1adab96d719440a0540094e9082e9f881f"><span id="index-5"></span><span></span> <span class="n">kServicePriority</span></pre>
+<p>Service priority class attribute.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1a656b5b5665dc14b560ae7a6c58cd9554"><span id="index-6"></span><span></span> <span class="n">kPackagePrefix</span></pre>
+<p>Package meta information prefix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1a4036e19ce1c0d3f6dbdc28ac76aba908"><span id="index-7"></span><span></span><span class="n">package</span> <span class="n">iconset</span></pre>
+<p>Package requires external encryption key [bool].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1adf92ffcc8aa92596eff2a44e37ccc253"><span id="index-8"></span><span></span> <span class="n">kClassID</span></pre>
+<p><a class="reference internal" href="namespace_CCL_ClassID.html#doxid-namespace-c-c-l-1-1-class-i-d"><span class="std std-ref">ClassID</span></a> [<a class="reference internal" href="struct_CCL_UID.html#doxid-struct-c-c-l-1-1-u-i-d"><span class="std std-ref">UID</span></a>].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-meta-1a74921dd2c20635cee0b962b7d787f9b0"><span id="index-9"></span><span></span> <span class="n">kTranslationStringTable</span></pre>
+<p>Relative location of string table to load [<a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>].</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="group_base_plug.html" class="btn btn-neutral float-left" title="Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_ClassDesc.html" class="btn btn-neutral float-right" title="struct CCL::ClassDesc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

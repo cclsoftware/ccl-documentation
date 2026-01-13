@@ -1,0 +1,643 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switching from Qt &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CCL in Detail" href="../details/index.html" />
+    <link rel="prev" title="Launch Utility from Parent Application" href="launch.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="launch.html">Launch Utility from Parent Application</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Switching from Qt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#similar-concepts-and-classes-between-ccl-and-qt">Similar concepts and classes between CCL and Qt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#false-friends">False friends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#model-view-architecture">Model-View-Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xml-ui-descriptions">XML UI descriptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keep-multiple-value-presentations-in-sync">Keep multiple value presentations in sync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-list-table-view-example">How to: List/Table View Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-tree-view-example">How to: Tree View Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Switching from Qt</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="switching-from-qt">
+<span id="id1"></span><h1>Switching from Qt<a class="headerlink" href="#switching-from-qt" title="Link to this heading"></a></h1>
+<section id="similar-concepts-and-classes-between-ccl-and-qt">
+<h2>Similar concepts and classes between CCL and Qt<a class="headerlink" href="#similar-concepts-and-classes-between-ccl-and-qt" title="Link to this heading"></a></h2>
+<section id="signals">
+<h3>Signals<a class="headerlink" href="#signals" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: Signals/Slots</p></li>
+<li><p>CCL: Message passing using <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_ISubject.html#doxid-struct-c-c-l-1-1-i-subject-1a6ba3dbd99747e0d5961233eba109422d"><span class="std std-ref"><span class="pre">CCL::ISubject::signal</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IObserver.html#doxid-struct-c-c-l-1-1-i-observer-1a1e77e5b23e3bdbc5a5bcf9f61670c8f7"><span class="std std-ref"><span class="pre">CCL::IObserver::notify</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>No preprocessor involved, synchronous by default. In Qt, signals and slots are the central concept for sending notifications, exchanging data and “connecting” objects. Message passing is a central concept in CCL, too. However, relations between classes are more often determined by explicit composition or aggregation instead of loosely connecting them from the outside. This often results in more readable and better structured code. Instead of using signal/slot definitions as a “protocol” between separate classes, you usually use interfaces in CCL (see the “Interfaces” section below).</p>
+<p>In addition to direct message passing, CCL provides SignalSink’s and SignalSource’s, which can be used to pass messages accross the process via a named atom.</p>
+</section>
+<section id="object">
+<h3>Object<a class="headerlink" href="#object" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QObject</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>No preprocessor involved. No automatic ownership based on parent pointers. <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">CCL::Object</span></span></a></code> inherits from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Unknown.html#doxid-class-c-c-l-1-1-unknown"><span class="std std-ref"><span class="pre">CCL::Unknown</span></span></a></code>, which implements <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref"><span class="pre">CCL::IUnknown</span></span></a></code>.</p>
+</section>
+<section id="cast">
+<h3>Cast<a class="headerlink" href="#cast" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: qobject_cast</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref"><span class="pre">CCL::ccl_cast</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref"><span class="pre">CCL::IUnknown::queryInterface</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>Use ccl_cast for object to object, queryInterface for object to interface or interface to interface.
+ccl_cast does not work across module boundaries.</p>
+<p>qobject_cast works on QObject only, not on interface pointers.</p>
+</section>
+<section id="scoped-pointer">
+<h3>Scoped pointer<a class="headerlink" href="#scoped-pointer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QScopedPointer</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_AutoPtr.html#doxid-class-c-c-l-1-1-auto-ptr"><span class="std std-ref"><span class="pre">CCL::AutoPtr</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>Works only with classes derived from IUnknown</p>
+</section>
+<section id="shared-pointer">
+<h3>Shared pointer<a class="headerlink" href="#shared-pointer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QSharedPointer</p></li>
+<li><p>CCL:<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref"><span class="pre">CCL::SharedPtr</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>Works only with classes derived from IUnknown.</p>
+</section>
+<section id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QString, QByteArray</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">CCL::MutableCString</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CCL::CString</span></span></a></code></p></li>
+</ul>
+</section>
+<section id="variant">
+<h3>Variant<a class="headerlink" href="#variant" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QVariant</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref"><span class="pre">CCL::Variant</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>Cannot be extended with something like Q_DECLARE_METATYPE. Takes <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref"><span class="pre">CCL::IUnknown</span></span></a></code> pointers for objects.</p>
+</section>
+<section id="debug">
+<h3>Debug<a class="headerlink" href="#debug" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: qDebug, qCDebug</p></li>
+<li><p>CCL: Debugger::print, CCL_PRINTF</p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>In Qt, debugging can be configured at runtime by using qCDebug and enabling/disabling specific categories in a config file. In CCL, debugging via CCL_PRINTF can be enabled/disabled at compile time by defining DEBUG_LOG at the top of a .cpp file for this specific file. Alternatively, the Debugger functions can be called directly for debug output in release builds.</p>
+</section>
+<section id="string-translation">
+<h3>String translation<a class="headerlink" href="#string-translation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: tr(“text to translate”)</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-presetfile-8cpp-1a79406c7258db6f9276c44d763d4fc462"><span class="std std-ref"><span class="pre">XSTRING</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><span class="pre">XSTR</span></code> macros</p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>While it is common practice to add translatable strings inline with Qt, these strings are usually defined explicitly in CCL. Search for the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-actionjournal-8cpp-1a40dbbc0d97b3d9207742a3f1b4699251"><span class="std std-ref"><span class="pre">BEGIN_XSTRINGS</span></span></a></code> macro to find examples.
+Note that you can add translatable strings inline using the <code class="doxyrest-cref docutils literal notranslate"><span class="pre">TRANSLATE</span></code> macro if you really need to.</p>
+</section>
+</section>
+<section id="false-friends">
+<h2>False friends<a class="headerlink" href="#false-friends" title="Link to this heading"></a></h2>
+<section id="string-references">
+<h3>String references<a class="headerlink" href="#string-references" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: QStringRef</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref"><span class="pre">CCL::StringRef</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>QStringRef is a wrapper around QString holding substrings, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref"><span class="pre">CCL::StringRef</span></span></a></code> is typedef’d to a const reference of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref"><span class="pre">CCL::String</span></span></a></code>.</p>
+</section>
+<section id="properties">
+<h3>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Qt: Q_PROPERTY</p></li>
+<li><p>CCL: <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../../corelibrary/reference/global.html#doxid-coreclassmacros-8h-1a72c04982008558737083bbf1c1cda3ee"><span class="std std-ref"><span class="pre">PROPERTY_VARIABLE</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../../corelibrary/reference/global.html#doxid-coreclassmacros-8h-1a47b6d8896d3d1ca2172f6fba6e39eba7"><span class="std std-ref"><span class="pre">PROPERTY_POINTER</span></span></a></code></p></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>Q_PROPERTY adds an attribute to the meta system. It does not add getter/setter/member declaration. CCL macros add getters, setters and an member declaration to a class definition. They don’t affect meta classes.</p>
+</section>
+</section>
+<section id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Link to this heading"></a></h2>
+<p>With Qt, interfaces are rarely a thing you care about. When writing plug-ins you just put a Q_DECLARE_INTERFACE and let Qt do some magic. In other contexts you just use abstract classes, which derive from QObject.
+If you need to decouple the implementations of two classes which interact with each other, you often just define some signals and slots in both classes and connect them from the outside. This way, none of the classes needs to include headers of the other class.
+However, it can be quite difficult to understand the application logic if many connections are made from various places in code. Decoupling classes by using signals and slots can also be error prone (if you change a signal/slot definition, you need to ensure that all definitions in connected classes are changed too).</p>
+<p>With CCL, interfaces are much more present. You usually don’t use classes implementing certain functionality directly but use the implemented interfaces instead. This way you can use classes compiled into separate modules (.dll, .so, …) while ensuring ABI compatibility between your module and your dependencies (in the current or future versions and across different compiler ABIs).
+Splitting the code into modules sets some hard boundaries which help to structure the code and allow for independent development of application and framework implementations.
+Because interfaces are well-defined and rarely (at best never) changed, you can rely on the fact that your application using certain interfaces will work with any future version of the modules implementing those interfaces.</p>
+<p>(Note that it is possible to use interfaces in a similar manner in Qt, too. See for example <a class="reference external" href="https://www.d34dl0ck.me/2013/06/mastering-interfaces-with-qt.html">https://www.d34dl0ck.me/2013/06/mastering-interfaces-with-qt.html</a>. It is just not very common.)
+However, while Qt ensures ABI compatibility across versions, it does not ensure ABI compatibility between different compiler ABIs (<a class="reference external" href="https://stackoverflow.com/questions/35497158/qt-dll-compatibility-between-compilers">https://stackoverflow.com/questions/35497158/qt-dll-compatibility-between-compilers</a>). CCL does.</p>
+<p>The concepts of interfaces and reference counting used in CCL are very similar to COM. There is a central interface IUnknown, which provides methods related to reference counting (used by smart pointers), and provides a queryInterface method to access other interfaces implemented by a certain class.
+Pointers to IUnknown are used as a basic type to pass objects around. To actually use an object passed as a IUnknown pointer, you need to either get another interface the object implements using the queryInterface method, or cast the IUnknown pointer to an object using unknown_cast.
+queryInterface takes a unique ID of the interface you want to use. This ID can be obtained by the interface directly, as all (public) CCL interfaces declare an __iid attribute.
+However, you rarely need to call queryInterface directly and use the helper class UnknownPtr instead.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">UnknownPtr example</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LoginHandler</span><span class="o">::</span><span class="n">onRegistrationCompleted</span> <span class="p">(</span><span class="n">IAsyncOperation</span><span class="o">&amp;</span> <span class="n">operation</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">UnknownPtr</span><span class="o">&lt;</span><span class="n">ILicenseServerResult</span><span class="o">&gt;</span> <span class="n">result</span> <span class="p">(</span><span class="n">operation</span><span class="p">.</span><span class="n">getResult</span> <span class="p">().</span><span class="n">asUnknown</span> <span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">unknown_cast example</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">ChannelRecognizer</span><span class="o">::</span><span class="n">recognize</span> <span class="p">(</span><span class="n">IUnknown</span><span class="o">*</span> <span class="n">object</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="n">Engine</span><span class="o">::</span><span class="n">AutomationRegionList</span><span class="o">*</span> <span class="n">regionList</span> <span class="o">=</span> <span class="n">unknown_cast</span><span class="o">&lt;</span><span class="n">Engine</span><span class="o">::</span><span class="n">AutomationRegionList</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">object</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="model-view-architecture">
+<h2>Model-View-Architecture<a class="headerlink" href="#model-view-architecture" title="Link to this heading"></a></h2>
+<p>Model-View-Controller (MVC) is a design pattern originating from Smalltalk that is often used when building user interfaces. In Design Patterns, Gamma et al. write:</p>
+<blockquote>
+<div><p><em>MVC consists of three kinds of objects. The Model is the application object, the View is its screen presentation, and the Controller defines the way the user interface reacts to user input. Before MVC, user interface designs tended to lump these objects together. MVC decouples them to increase flexibility and reuse.</em></p>
+</div></blockquote>
+<section id="data-display-in-qt">
+<h3>Data display in Qt<a class="headerlink" href="#data-display-in-qt" title="Link to this heading"></a></h3>
+<p>Coming from Qt, you are probably familiar with Qt’s model-view architecture.
+Using one of the implementations of QAbstractItemView, you already have an implementation of a view. These views display data, which is contained in a QAbstractItemModel.
+When drawing data items, the view calls QVariant QAbstractItemModel::data(const QModelIndex &amp;index, int role = Qt::DisplayRole) const for each item.
+The index is used to identify the item for which information is needed (usually by row and column). The role determines, what kind of information is needed (display string, tooltip text, background color, …).</p>
+</section>
+<section id="data-display-in-ccl">
+<h3>Data display in CCL<a class="headerlink" href="#data-display-in-ccl" title="Link to this heading"></a></h3>
+<p>Very similar to this concept, there are <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref"><span class="pre">CCL::IItemView</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model"><span class="std std-ref"><span class="pre">CCL::IItemModel</span></span></a></code> in CCL. Derived from these interfaces, there are classes like ListViewModel and ListView.
+Instead of a data method, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model"><span class="std std-ref"><span class="pre">CCL::IItemModel</span></span></a></code> provides methods like getItemTitle, getItemIcon, getItemTooltip, which are used by the view to fetch information about data items.
+Similar to Qt’s QModelIndex, these function take an <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_ItemIndex.html#doxid-class-c-c-l-1-1-item-index"><span class="std std-ref"><span class="pre">CCL::ItemIndex</span></span></a></code> as parameter, which identifies a specific item.</p>
+</section>
+<section id="customized-item-rendering-in-qt">
+<h3>Customized item rendering in Qt<a class="headerlink" href="#customized-item-rendering-in-qt" title="Link to this heading"></a></h3>
+<p>To customize the rendering of specific items, Qt has a concept of delegates. Delegates are classes derived from QAbstractItemDelegate. One can override the paint method to customize rendering.
+To assign delegates to a view, one uses the View’s setItemDelegate, setItemDelegateForRow or setItemDelegateForColumn methods.</p>
+</section>
+<section id="customized-item-rendering-in-ccl">
+<h3>Customized item rendering in CCL<a class="headerlink" href="#customized-item-rendering-in-ccl" title="Link to this heading"></a></h3>
+<p>Instead of using delegates, in CCL one can customize item rendering by overriding <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model-1a3bdc6b6228f635227cf2f788dc357463"><span class="std std-ref"><span class="pre">CCL::IItemModel::drawCell</span></span></a></code>.</p>
+</section>
+<section id="communication-between-model-and-view-in-qt">
+<h3>Communication between Model and View in Qt<a class="headerlink" href="#communication-between-model-and-view-in-qt" title="Link to this heading"></a></h3>
+<p>Models, views, and delegates communicate with each other using signals and slots:</p>
+<ul class="simple">
+<li><p>Signals from the model inform the view about changes to the data held by the data source.</p></li>
+<li><p>Signals from the view provide information about the user’s interaction with the items being displayed.</p></li>
+<li><p>Signals from the delegate are used during editing to tell the model and view about the state of the editor.</p></li>
+</ul>
+</section>
+<section id="communication-between-model-and-view-in-ccl">
+<h3>Communication between Model and View in CCL<a class="headerlink" href="#communication-between-model-and-view-in-ccl" title="Link to this heading"></a></h3>
+<p>To inform the view about changes to the data, messages like kChanged, kItemAdded or kUpdateColumns are passed from the model to the view. This is similar to Qt’s concept of signals and slots.</p>
+<p>To inform the model about user interaction and editing, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model"><span class="std std-ref"><span class="pre">CCL::IItemModel</span></span></a></code> provides several methods. Those include <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model-1a95ddccb0510f7fd2bd555d482a48baa7"><span class="std std-ref"><span class="pre">CCL::IItemModel::openItem</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model-1ac69e0a314dd1cd3e7697bdbe8007e858"><span class="std std-ref"><span class="pre">CCL::IItemModel::onItemFocused</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model-1a123d0b1ef72e181713504c1b3b9efe41"><span class="std std-ref"><span class="pre">CCL::IItemModel::editCell</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IItemModel.html#doxid-struct-c-c-l-1-1-i-item-model-1a62890b29c1d5a9120934955a35c3886e"><span class="std std-ref"><span class="pre">CCL::IItemModel::interpretCommand</span></span></a></code>.</p>
+</section>
+</section>
+<section id="xml-ui-descriptions">
+<h2>XML UI descriptions<a class="headerlink" href="#xml-ui-descriptions" title="Link to this heading"></a></h2>
+<p>Qt supports creating user interfaces based on XML .ui files. These files are converted to C++ code by Qt’s prepressor. The resulting code defines a class in the namespace UI, which contains preconfigured QWidget’s as members.
+To use the generated user interface, one creates another class (usually a QWindow or at least a QObject), which has an instance of the generated UI class as a member and calls view-&gt;setupUi(this) in the constructor (or some other early point of execution).
+The user interface widgets are then connected to the window/object via signals/slots. The window class can act as a model and controller, or just connect the relevant signals to separate controller and model classes (note that these models are not neccessarily derived from QAbstractItemModel).
+User interface widgets usually don’t know about the “parameters” they display or control. They receive values to display via slots and send control changes to the controller or model via signals.</p>
+<p>CCL supports user interface XML descriptions (“skins”) as well. However, these descriptions are interpreted at runtime. You can even edit and reload skin files without needing to restart the application.
+To create a view, a class usually calls <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_ITheme.html#doxid-struct-c-c-l-1-1-i-theme-1a0584a65f5d116f78bba5892ea840241d"><span class="std std-ref"><span class="pre">CCL::ITheme::createView</span></span></a></code>, passing the name of a form defined in the skin XML file and a controller object (often a this pointer). Such a controller class is usually derived from IViewFactory (Component is a prominent example) and overrides the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IViewFactory.html#doxid-struct-c-c-l-1-1-i-view-factory-1a7f0624dbfb4fd0ffc9fd8002e9b88ac4"><span class="std std-ref"><span class="pre">CCL::IViewFactory::createView</span></span></a></code> method.
+Inside the skin XML description, displayed values can be “parameters” or “properties”. Both parameters and properties belong to the controller and are accessed by name.
+Properties are fetched via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object-1adaa809a78b3d61d584edd4734775560a"><span class="std std-ref"><span class="pre">CCL::IObject::getProperty</span></span></a></code>. Properties are evaluated only once when a view is created.
+Parameters can be modified at any time. They are accessed via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IController.html#doxid-struct-c-c-l-1-1-i-controller-1ab0280417dff216a0e025a60f21db70b7"><span class="std std-ref"><span class="pre">CCL::IController::findParameter</span></span></a></code>. When a control changes on user interaction, the corresponding parameter value is set and the controller is notified via <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IParamObserver.html#doxid-struct-c-c-l-1-1-i-param-observer-1a9879cd769a477b959f6b618af8b357c1"><span class="std std-ref"><span class="pre">CCL::IParamObserver::paramChanged</span></span></a></code>.
+While properties have a value only, parameters have a name, a range, a type and other attributes. A control uses these attributes to set it’s own range, type, etc.
+A skin can not only use the properties and parameters of the single controller that is assigned to it on creation, but refer to other controllers by relative or absolute paths.
+In contrast to Qt’s XML description, the author of a CCL skin XML file needs to know the names of controllers, parameters and properties the skin is about to use.</p>
+</section>
+<section id="keep-multiple-value-presentations-in-sync">
+<h2>Keep multiple value presentations in sync<a class="headerlink" href="#keep-multiple-value-presentations-in-sync" title="Link to this heading"></a></h2>
+<p>The same numeric value is displayed in two windows. One window contains text input and a slider that need to be kept in sync.</p>
+<section id="ccl-code">
+<h3>CCL code<a class="headerlink" href="#ccl-code" title="Link to this heading"></a></h3>
+<p>General idea: Use a parameter object, which is shared between multiple controls. The parameter state is an attribute of the parameter object. Controls don’t own a parameter, but interact with a parameter object.</p>
+<p>Create a Component subclass. In the component’s constructor, add a parameter for your numeric value:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">paramList</span><span class="p">.</span><span class="n">addInteger</span> <span class="p">(</span><span class="n">CSTR</span> <span class="p">(</span><span class="s">&quot;numericValue&quot;</span><span class="p">),</span> <span class="n">Tag</span><span class="o">::</span><span class="n">kNumericValue</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Components typically build a tree structure starting at the root component of each module and are addressable from skin XML.</p>
+<p>Create skin files for your windows and use the component’s parameter:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;object://hostapp/MyComponent&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Slider</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;numericValue&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/using&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="qt-code">
+<h3>Qt code<a class="headerlink" href="#qt-code" title="Link to this heading"></a></h3>
+<p>General idea: Controls are independent of each other. Controls store their own state. They don’t know about the parameters or actions they control. Controls are connected via signals to manipulate and/or display values of a model.</p>
+<p>Create a model class. Add an attribute numericValue. Add a slot setNumericValue and a signal numericValueChanged.</p>
+<p>Create windows with controls that should display/manipulate numericValue.</p>
+<p>Connect the controls to the model, e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">someSlider</span><span class="p">,</span> <span class="n">sliderMoved</span><span class="p">,</span> <span class="n">myModel</span><span class="p">,</span> <span class="n">setNumericValue</span><span class="p">);</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">myModel</span><span class="p">,</span> <span class="n">numericValueChanged</span><span class="p">,</span> <span class="n">someSlider</span><span class="p">,</span> <span class="n">setValue</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-to-list-table-view-example">
+<h2>How to: List/Table View Example<a class="headerlink" href="#how-to-list-table-view-example" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>CCL code<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>Basic steps:</p>
+<ul class="simple">
+<li><p>pick model class for your needs (ListViewModel, TreeViewModel), add columns, add items</p></li>
+<li><p>pick corresponding control class (example: ListViewModel &lt;-&gt; &lt;ListView&gt; in skin XML)</p></li>
+<li><p>model is assigned to control via name in skin, it needs to be made available via getObject() from a Component.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">CCL Table View example</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//************************************************************************</span>
+<span class="c1">// DemoTableModel</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">DemoTableModel</span><span class="p">:</span> <span class="k">public</span> <span class="n">ListViewModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">DECLARE_STRINGID_MEMBER</span> <span class="p">(</span><span class="n">kDetailA</span><span class="p">)</span>
+    <span class="n">DECLARE_STRINGID_MEMBER</span> <span class="p">(</span><span class="n">kDetailB</span><span class="p">)</span>
+
+    <span class="n">DemoTableModel</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">getColumns</span> <span class="p">().</span><span class="n">addColumn</span> <span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">kTitleID</span><span class="p">);</span>
+        <span class="n">getColumns</span> <span class="p">().</span><span class="n">addColumn</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">kDetailA</span><span class="p">);</span>
+        <span class="n">getColumns</span> <span class="p">().</span><span class="n">addColumn</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">kDetailB</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">DEFINE_STRINGID_MEMBER_</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="p">,</span> <span class="n">kDetailA</span><span class="p">,</span> <span class="s">&quot;detailA&quot;</span><span class="p">)</span>
+<span class="n">DEFINE_STRINGID_MEMBER_</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="p">,</span> <span class="n">kDetailB</span><span class="p">,</span> <span class="s">&quot;detailB&quot;</span><span class="p">)</span>
+
+<span class="c1">//************************************************************************</span>
+<span class="c1">// TableViewDemo</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">TableViewDemo</span><span class="p">:</span> <span class="k">public</span> <span class="n">DemoComponent</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">TableViewDemo</span> <span class="p">()</span>
+    <span class="o">:</span> <span class="n">tableModel</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DemoTableModel</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">addObject</span> <span class="p">(</span><span class="s">&quot;table&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">tableModel</span><span class="p">);</span>
+
+        <span class="k">auto</span> <span class="n">item1</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">ListViewItem</span> <span class="p">(</span><span class="s">&quot;Item 1&quot;</span><span class="p">);</span>
+        <span class="n">item1</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailA</span><span class="p">,</span> <span class="s">&quot;someDataA&quot;</span><span class="p">);</span>
+        <span class="n">item1</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailB</span><span class="p">,</span> <span class="s">&quot;someDataB&quot;</span><span class="p">);</span>
+        <span class="n">tableModel</span><span class="o">-&gt;</span><span class="n">addItem</span> <span class="p">(</span><span class="n">item1</span><span class="p">);</span>
+
+        <span class="k">auto</span> <span class="n">item2</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">ListViewItem</span> <span class="p">(</span><span class="s">&quot;Item 2&quot;</span><span class="p">);</span>
+        <span class="n">item2</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailA</span><span class="p">,</span> <span class="s">&quot;752&quot;</span><span class="p">);</span>
+        <span class="n">item2</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailB</span><span class="p">,</span> <span class="s">&quot;45&quot;</span><span class="p">);</span>
+        <span class="n">tableModel</span><span class="o">-&gt;</span><span class="n">addItem</span> <span class="p">(</span><span class="n">item2</span><span class="p">);</span>
+
+        <span class="k">auto</span> <span class="n">item3</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">ListViewItem</span> <span class="p">(</span><span class="s">&quot;Item 3&quot;</span><span class="p">);</span>
+        <span class="n">item3</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailA</span><span class="p">,</span> <span class="s">&quot;42&quot;</span><span class="p">);</span>
+        <span class="n">item3</span><span class="o">-&gt;</span><span class="n">getDetails</span> <span class="p">().</span><span class="n">set</span> <span class="p">(</span><span class="n">DemoTableModel</span><span class="o">::</span><span class="n">kDetailB</span><span class="p">,</span> <span class="s">&quot;134&quot;</span><span class="p">);</span>
+        <span class="n">tableModel</span><span class="o">-&gt;</span><span class="n">addItem</span> <span class="p">(</span><span class="n">item3</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">DemoTableModel</span><span class="o">&gt;</span> <span class="n">tableModel</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>Qt code<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>For a general introduction to Qt MV architecture, see <a class="reference external" href="https://doc.qt.io/qt-5/model-view-programming.html">https://doc.qt.io/qt-5/model-view-programming.html</a></p>
+<p>Basic steps:</p>
+<ul class="simple">
+<li><p>pick abstract model class for your needs (list, table, tree), add data, implement all pure virtual methods that are called by the view class (row count, column count, cell data,…)</p></li>
+<li><p>pick corresponding view class (example: QAbstractTableModel &lt;-&gt; QTableView)</p></li>
+<li><p>assign model to view</p></li>
+<li><p>to change data and trigger view updates, use appropriate model methods (e.g. insertRows() or emit dataChanged() signals</p></li>
+</ul>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>model class is not threadsafe, run in UI thread!</p></li>
+<li><p>model data must not necessarily be tied to the model</p></li>
+</ul>
+<p>Further concepts:</p>
+<ul class="simple">
+<li><p>delegates: custom cell renderes</p></li>
+<li><p>proxy models: sorting, filtering</p></li>
+</ul>
+<p>Example</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Table View Example: Read Only Table</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// mymodel.h</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QAbstractTableModel&gt;</span>
+
+<span class="k">class</span> <span class="nl">MyModel</span><span class="p">:</span> <span class="k">public</span> <span class="n">QAbstractTableModel</span>
+<span class="p">{</span>
+<span class="n">Q_OBJECT</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MyModel</span> <span class="p">(</span><span class="n">QObject</span><span class="o">*</span> <span class="n">parent</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">);</span>
+
+    <span class="c1">// Called by view: the number of rows to display.</span>
+    <span class="kt">int</span> <span class="nf">rowCount</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">QModelIndex</span> <span class="p">())</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// Called by view: number of columns to display</span>
+    <span class="kt">int</span> <span class="nf">columnCount</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">QModelIndex</span> <span class="p">())</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
+
+    <span class="c1">// Called by view per table cell represented by &#39;index&#39;;</span>
+    <span class="c1">// role defines the type of cell information (formatting,</span>
+    <span class="c1">// tooltips, etc.)</span>
+    <span class="n">QVariant</span> <span class="nf">data</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="n">index</span><span class="p">,</span> <span class="kt">int</span> <span class="n">role</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">::</span><span class="n">DisplayRole</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////</span>
+
+<span class="c1">// mymodel.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&quot;mymodel.h&quot;</span>
+
+<span class="n">MyModel</span><span class="o">::</span><span class="n">MyModel</span> <span class="p">(</span><span class="n">QObject</span><span class="o">*</span> <span class="n">parent</span><span class="p">)</span>
+<span class="o">:</span> <span class="n">QAbstractTableModel</span> <span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+<span class="p">{}</span>
+
+<span class="kt">int</span> <span class="n">MyModel</span><span class="o">::</span><span class="n">rowCount</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="cm">/*parent*/</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">MyModel</span><span class="o">::</span><span class="n">columnCount</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="cm">/*parent*/</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">QVariant</span> <span class="n">MyModel</span><span class="o">::</span><span class="n">data</span> <span class="p">(</span><span class="k">const</span> <span class="n">QModelIndex</span><span class="o">&amp;</span> <span class="n">index</span><span class="p">,</span> <span class="kt">int</span> <span class="n">role</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="c1">// DisplayRole = Text to display</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">role</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">::</span><span class="n">DisplayRole</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">QString</span> <span class="p">(</span><span class="s">&quot;Row%1, Column%2&quot;</span><span class="p">)</span>
+                  <span class="p">.</span><span class="n">arg</span> <span class="p">(</span><span class="n">index</span><span class="p">.</span><span class="n">row</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                  <span class="p">.</span><span class="n">arg</span> <span class="p">(</span><span class="n">index</span><span class="p">.</span><span class="n">column</span><span class="p">()</span> <span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nf">QVariant</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////</span>
+
+<span class="c1">// main.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QApplication&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QTableView&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;mymodel.h&quot;</span>
+
+<span class="kt">int</span> <span class="n">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="n">QApplication</span> <span class="n">a</span> <span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+    <span class="n">QTableView</span> <span class="n">tableView</span><span class="p">;</span>
+    <span class="n">MyModel</span> <span class="n">myModel</span><span class="p">;</span>
+    <span class="n">tableView</span><span class="p">.</span><span class="n">setModel</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">myModel</span><span class="p">);</span>
+    <span class="n">tableView</span><span class="p">.</span><span class="n">show</span> <span class="p">();</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">exec</span> <span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>For the full example with additional features, see <a class="reference external" href="https://doc.qt.io/qt-5/modelview.html">https://doc.qt.io/qt-5/modelview.html</a></p>
+</section>
+</section>
+<section id="how-to-tree-view-example">
+<h2>How to: Tree View Example<a class="headerlink" href="#how-to-tree-view-example" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>CCL code<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>Apply the same concepts as shown in the table view example above but for TreeViewModel. Alternatively you can implement a custom AbstractItemModel.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">CCL Tree View Example</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//************************************************************************</span>
+<span class="c1">// DemoTreeModel</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">DemoTreeModel</span><span class="p">:</span> <span class="k">public</span> <span class="n">Object</span><span class="p">,</span>
+                     <span class="k">public</span> <span class="n">AbstractItemModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">class</span> <span class="nl">TreeObject</span><span class="p">:</span> <span class="k">public</span> <span class="n">Object</span>
+    <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">DECLARE_CLASS</span> <span class="p">(</span><span class="n">TreeObject</span><span class="p">,</span> <span class="n">Object</span><span class="p">)</span>
+
+        <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
+        <span class="n">ObjectList</span> <span class="n">children</span><span class="p">;</span>
+
+        <span class="n">TreeObject</span> <span class="p">(</span><span class="n">StringRef</span> <span class="n">title</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="o">:</span> <span class="n">title</span> <span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="p">{</span> <span class="n">children</span><span class="p">.</span><span class="n">objectCleanup</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="n">DemoTreeModel</span> <span class="p">()</span>
+    <span class="o">:</span> <span class="n">root</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">TreeObject</span> <span class="p">(</span><span class="n">CCLSTR</span> <span class="p">(</span><span class="s">&quot;root&quot;</span><span class="p">)))</span>
+    <span class="p">{</span>
+        <span class="n">root</span><span class="o">-&gt;</span><span class="n">children</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">TreeObject</span> <span class="p">(</span><span class="n">CCLSTR</span> <span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">)));</span>
+        <span class="n">root</span><span class="o">-&gt;</span><span class="n">children</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">TreeObject</span> <span class="p">(</span><span class="n">CCLSTR</span> <span class="p">(</span><span class="s">&quot;bbb&quot;</span><span class="p">)));</span>
+        <span class="n">root</span><span class="o">-&gt;</span><span class="n">children</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">TreeObject</span> <span class="p">(</span><span class="n">CCLSTR</span> <span class="p">(</span><span class="s">&quot;ccc&quot;</span><span class="p">)));</span>
+    <span class="p">}</span>
+
+    <span class="c1">// IItemModel</span>
+    <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">getRootItem</span> <span class="p">(</span><span class="n">ItemIndex</span><span class="o">&amp;</span> <span class="n">index</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">ItemIndex</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">canExpandItem</span> <span class="p">(</span><span class="n">ItemIndexRef</span> <span class="n">index</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">TreeObject</span><span class="o">*</span> <span class="n">treeObject</span> <span class="o">=</span> <span class="n">unknown_cast</span><span class="o">&lt;</span><span class="n">TreeObject</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">index</span><span class="p">.</span><span class="n">getObject</span> <span class="p">());</span>
+        <span class="k">return</span> <span class="n">treeObject</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">treeObject</span><span class="o">-&gt;</span><span class="n">children</span><span class="p">.</span><span class="n">isEmpty</span> <span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">getSubItems</span> <span class="p">(</span><span class="n">IUnknownList</span><span class="o">&amp;</span> <span class="n">items</span><span class="p">,</span> <span class="n">ItemIndexRef</span> <span class="n">index</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">TreeObject</span><span class="o">*</span> <span class="n">treeObject</span> <span class="o">=</span> <span class="n">unknown_cast</span><span class="o">&lt;</span><span class="n">TreeObject</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">index</span><span class="p">.</span><span class="n">getObject</span> <span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">treeObject</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+        <span class="n">ForEach</span> <span class="p">(</span><span class="n">treeObject</span><span class="o">-&gt;</span><span class="n">children</span><span class="p">,</span> <span class="n">TreeObject</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+            <span class="n">items</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="o">*</span><span class="n">child</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+        <span class="n">EndFor</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">tbool</span> <span class="n">CCL_API</span> <span class="n">getItemTitle</span> <span class="p">(</span><span class="n">String</span><span class="o">&amp;</span> <span class="n">title</span><span class="p">,</span> <span class="n">ItemIndexRef</span> <span class="n">index</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">TreeObject</span><span class="o">*</span> <span class="n">treeObject</span> <span class="o">=</span> <span class="n">unknown_cast</span><span class="o">&lt;</span><span class="n">TreeObject</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">index</span><span class="p">.</span><span class="n">getObject</span> <span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">treeObject</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="n">treeObject</span><span class="o">-&gt;</span><span class="n">title</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">CLASS_INTERFACE</span> <span class="p">(</span><span class="n">IItemModel</span><span class="p">,</span> <span class="n">Object</span><span class="p">)</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">TreeObject</span><span class="o">&gt;</span> <span class="n">root</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">DEFINE_CLASS</span> <span class="p">(</span><span class="n">DemoTreeModel</span><span class="o">::</span><span class="n">TreeObject</span><span class="p">,</span> <span class="n">Object</span><span class="p">)</span>
+
+<span class="c1">//************************************************************************</span>
+<span class="c1">// TreeViewDemo</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">TreeViewDemo</span><span class="p">:</span> <span class="k">public</span> <span class="n">DemoComponent</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">TreeViewDemo</span> <span class="p">()</span>
+    <span class="o">:</span> <span class="n">treeModel</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">DemoTreeModel</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">addObject</span> <span class="p">(</span><span class="s">&quot;treeModel&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">treeModel</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">DemoTreeModel</span><span class="o">&gt;</span> <span class="n">treeModel</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<p>For the full example with additional features, see applications/ccldemo.</p>
+</section>
+<section id="id5">
+<h3>Qt code<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>Apply the same concepts as shown in the table view example above but for QAbstractItemModel. A simple example can be found <a class="reference external" href="https://doc.qt.io/qt-5/qtwidgets-itemviews-simpletreemodel-example.html">here</a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="launch.html" class="btn btn-neutral float-left" title="Launch Utility from Parent Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../details/index.html" class="btn btn-neutral float-right" title="CCL in Detail" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

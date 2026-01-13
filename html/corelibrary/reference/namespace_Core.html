@@ -1,0 +1,744 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace Core &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace Core::Bluetooth" href="namespace_Core_Bluetooth.html" />
+    <link rel="prev" title="enum AttributeFactory::Flags" href="enum_AttributeFactory_Flags.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+      <li class="breadcrumb-item active">namespace Core</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-core">
+<span id="doxid-namespace-core"></span><span id="index-0"></span><h1>namespace Core<a class="headerlink" href="#namespace-core" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Core</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Args.html#doxid-namespace-core-1-1-args"><span class="std std-ref">Core::Args</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Bluetooth.html#doxid-namespace-core-1-1-bluetooth"><span class="std std-ref">Core::Bluetooth</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_CoreSpinLock.html#doxid-namespace-core-1-1-core-spin-lock"><span class="std std-ref">Core::CoreSpinLock</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Errors.html#doxid-namespace-core-1-1-errors"><span class="std std-ref">Core::Errors</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_HTTPDefinitions.html#doxid-namespace-core-1-1-h-t-t-p-definitions"><span class="std std-ref">Core::HTTPDefinitions</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_HighPerformanceClock.html#doxid-namespace-core-1-1-high-performance-clock"><span class="std std-ref">Core::HighPerformanceClock</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_IO.html#doxid-namespace-core-1-1-i-o"><span class="std std-ref">Core::IO</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Java.html#doxid-namespace-core-1-1-java"><span class="std std-ref">Core::Java</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Meta.html#doxid-namespace-core-1-1-meta"><span class="std std-ref">Core::Meta</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform.html#doxid-namespace-core-1-1-platform"><span class="std std-ref">Core::Platform</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_CurrentProcess.html#doxid-namespace-core-1-1-platform-1-1-current-process"><span class="std std-ref">Core::Platform::CurrentProcess</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_CurrentThread.html#doxid-namespace-core-1-1-platform-1-1-current-thread"><span class="std std-ref">Core::Platform::CurrentThread</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_Debug.html#doxid-namespace-core-1-1-platform-1-1-debug"><span class="std std-ref">Core::Platform::Debug</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_FileSystem.html#doxid-namespace-core-1-1-platform-1-1-file-system"><span class="std std-ref">Core::Platform::FileSystem</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_HighPerformanceClock.html#doxid-namespace-core-1-1-platform-1-1-high-performance-clock"><span class="std std-ref">Core::Platform::HighPerformanceClock</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_Network.html#doxid-namespace-core-1-1-platform-1-1-network"><span class="std std-ref">Core::Platform::Network</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_PosixSocketSets.html#doxid-namespace-core-1-1-platform-1-1-posix-socket-sets"><span class="std std-ref">Core::Platform::PosixSocketSets</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SSLTypes.html#doxid-namespace-core-1-1-platform-1-1-s-s-l-types"><span class="std std-ref">Core::Platform::SSLTypes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SocketSets.html#doxid-namespace-core-1-1-platform-1-1-socket-sets"><span class="std std-ref">Core::Platform::SocketSets</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_StaticThreads.html#doxid-namespace-core-1-1-platform-1-1-static-threads"><span class="std std-ref">Core::Platform::StaticThreads</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SystemClock.html#doxid-namespace-core-1-1-platform-1-1-system-clock"><span class="std std-ref">Core::Platform::SystemClock</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_SystemClock_Helper.html#doxid-namespace-core-1-1-platform-1-1-system-clock-1-1-helper"><span class="std std-ref">Core::Platform::SystemClock::Helper</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Platform_TLS.html#doxid-namespace-core-1-1-platform-1-1-t-l-s"><span class="std std-ref">Core::Platform::TLS</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Plugins.html#doxid-namespace-core-1-1-plugins"><span class="std std-ref">Core::Plugins</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable.html#doxid-namespace-core-1-1-portable"><span class="std std-ref">Core::Portable</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_AuthorizationPolicy.html#doxid-namespace-core-1-1-portable-1-1-authorization-policy"><span class="std std-ref">Core::Portable::AuthorizationPolicy</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_BMF.html#doxid-namespace-core-1-1-portable-1-1-b-m-f"><span class="std std-ref">Core::Portable::BMF</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_BitmapFileFormat.html#doxid-namespace-core-1-1-portable-1-1-bitmap-file-format"><span class="std std-ref">Core::Portable::BitmapFileFormat</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_Colors.html#doxid-namespace-core-1-1-portable-1-1-colors"><span class="std std-ref">Core::Portable::Colors</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ComponentFlags.html#doxid-namespace-core-1-1-portable-1-1-component-flags"><span class="std std-ref">Core::Portable::ComponentFlags</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_HTTP.html#doxid-namespace-core-1-1-portable-1-1-h-t-t-p"><span class="std std-ref">Core::Portable::HTTP</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_Logging.html#doxid-namespace-core-1-1-portable-1-1-logging"><span class="std std-ref">Core::Portable::Logging</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ResourceAttributes.html#doxid-namespace-core-1-1-portable-1-1-resource-attributes"><span class="std std-ref">Core::Portable::ResourceAttributes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ThreadAwareCompression.html#doxid-namespace-core-1-1-portable-1-1-thread-aware-compression"><span class="std std-ref">Core::Portable::ThreadAwareCompression</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ViewAttributes.html#doxid-namespace-core-1-1-portable-1-1-view-attributes"><span class="std std-ref">Core::Portable::ViewAttributes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Portable_ViewClasses.html#doxid-namespace-core-1-1-portable-1-1-view-classes"><span class="std std-ref">Core::Portable::ViewClasses</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Security.html#doxid-namespace-core-1-1-security"><span class="std std-ref">Core::Security</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Security_JOSE.html#doxid-namespace-core-1-1-security-1-1-j-o-s-e"><span class="std std-ref">Core::Security::JOSE</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin.html#doxid-namespace-core-1-1-skin"><span class="std std-ref">Core::Skin</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_FileNames.html#doxid-namespace-core-1-1-skin-1-1-file-names"><span class="std std-ref">Core::Skin::FileNames</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_KeyboardCapitalization.html#doxid-namespace-core-1-1-skin-1-1-keyboard-capitalization"><span class="std std-ref">Core::Skin::KeyboardCapitalization</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_KeyboardLayout.html#doxid-namespace-core-1-1-skin-1-1-keyboard-layout"><span class="std std-ref">Core::Skin::KeyboardLayout</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ResourceAttributes.html#doxid-namespace-core-1-1-skin-1-1-resource-attributes"><span class="std std-ref">Core::Skin::ResourceAttributes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ViewAttributes.html#doxid-namespace-core-1-1-skin-1-1-view-attributes"><span class="std std-ref">Core::Skin::ViewAttributes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Skin_ViewClasses.html#doxid-namespace-core-1-1-skin-1-1-view-classes"><span class="std std-ref">Core::Skin::ViewClasses</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets.html#doxid-namespace-core-1-1-sockets"><span class="std std-ref">Core::Sockets</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_Discovery.html#doxid-namespace-core-1-1-sockets-1-1-discovery"><span class="std std-ref">Core::Sockets::Discovery</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_Network.html#doxid-namespace-core-1-1-sockets-1-1-network"><span class="std std-ref">Core::Sockets::Network</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SSLTypes.html#doxid-namespace-core-1-1-sockets-1-1-s-s-l-types"><span class="std std-ref">Core::Sockets::SSLTypes</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SocketTypes.html#doxid-namespace-core-1-1-sockets-1-1-socket-types"><span class="std std-ref">Core::Sockets::SocketTypes</span></a><span></span><span class="p">;</span>
+        <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html#doxid-namespace-core-1-1-sockets-1-1-socket-types-1-1-socket-option"><span class="std std-ref">Core::Sockets::SocketTypes::SocketOption</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_SystemClock.html#doxid-namespace-core-1-1-system-clock"><span class="std std-ref">Core::SystemClock</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Test.html#doxid-namespace-core-1-1-test"><span class="std std-ref">Core::Test</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text.html#doxid-namespace-core-1-1-text"><span class="std std-ref">Core::Text</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_Json.html#doxid-namespace-core-1-1-text-1-1-json"><span class="std std-ref">Core::Text::Json</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_UTFCodec.html#doxid-namespace-core-1-1-text-1-1-u-t-f-codec"><span class="std std-ref">Core::Text::UTFCodec</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Text_UTFFunctions.html#doxid-namespace-core-1-1-text-1-1-u-t-f-functions"><span class="std std-ref">Core::Text::UTFFunctions</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads.html#doxid-namespace-core-1-1-threads"><span class="std std-ref">Core::Threads</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_CurrentProcess.html#doxid-namespace-core-1-1-threads-1-1-current-process"><span class="std std-ref">Core::Threads::CurrentProcess</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_CurrentThread.html#doxid-namespace-core-1-1-threads-1-1-current-thread"><span class="std std-ref">Core::Threads::CurrentThread</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_TLS.html#doxid-namespace-core-1-1-threads-1-1-t-l-s"><span class="std std-ref">Core::Threads::TLS</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Threads_Threading.html#doxid-namespace-core-1-1-threads-1-1-threading"><span class="std std-ref">Core::Threads::Threading</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_URLEncoding.html#doxid-namespace-core-1-1-u-r-l-encoding"><span class="std std-ref">Core::URLEncoding</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Usb.html#doxid-namespace-core-1-1-usb"><span class="std std-ref">Core::Usb</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Core_Zip.html#doxid-namespace-core-1-1-zip"><span class="std std-ref">Core::Zip</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_SwipeRecognizer.html#doxid-class-core-1-1-swipe-recognizer"><span class="std std-ref">SwipeRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a47a370a98896259d5002d28273d94f64"><span></span><span class="n">SwipeRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_SwipeRecognizer.html#doxid-class-core-1-1-swipe-recognizer"><span class="std std-ref">SwipeRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1a47a370a98896259d5002d28273d94f64"><span class="std std-ref">SwipeRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a198304d3d9a547b6f777b09b3ec53d63"><span></span><span class="n">PooledSwipeRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_ZoomRecognizer.html#doxid-class-core-1-1-zoom-recognizer"><span class="std std-ref">ZoomRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a6a3b780a60109dd22b2aa706343d2362"><span></span><span class="n">ZoomRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_ZoomRecognizer.html#doxid-class-core-1-1-zoom-recognizer"><span class="std std-ref">ZoomRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1a6a3b780a60109dd22b2aa706343d2362"><span class="std std-ref">ZoomRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a2f6352a6a88df9e71086a1c6bcf79da2"><span></span><span class="n">PooledZoomRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_RotateRecognizer.html#doxid-class-core-1-1-rotate-recognizer"><span class="std std-ref">RotateRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac931903d11cf5ef122559c8e73afd5cb"><span></span><span class="n">RotateRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_RotateRecognizer.html#doxid-class-core-1-1-rotate-recognizer"><span class="std std-ref">RotateRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1ac931903d11cf5ef122559c8e73afd5cb"><span class="std std-ref">RotateRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac875016e40e560e282514eee0f9e84f4"><span></span><span class="n">PooledRotateRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_LongPressRecognizer.html#doxid-class-core-1-1-long-press-recognizer"><span class="std std-ref">LongPressRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ae018ad477c8982380461869087a1d020"><span></span><span class="n">LongPressRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_LongPressRecognizer.html#doxid-class-core-1-1-long-press-recognizer"><span class="std std-ref">LongPressRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1ae018ad477c8982380461869087a1d020"><span class="std std-ref">LongPressRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ab8d69ececfc16154200480cc6cd2378e"><span></span><span class="n">PooledLongPressRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_SingleTapRecognizer.html#doxid-class-core-1-1-single-tap-recognizer"><span class="std std-ref">SingleTapRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a4aefe7f69865d6f4dc836df400646104"><span></span><span class="n">SingleTapRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_SingleTapRecognizer.html#doxid-class-core-1-1-single-tap-recognizer"><span class="std std-ref">SingleTapRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1a4aefe7f69865d6f4dc836df400646104"><span class="std std-ref">SingleTapRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a78d6010ce268d7a7ebd4c2d9a29cf834"><span></span><span class="n">PooledSingleTapRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_DoubleTapRecognizer.html#doxid-class-core-1-1-double-tap-recognizer"><span class="std std-ref">DoubleTapRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac38c223de51baefccd3c990aabc72c60"><span></span><span class="n">DoubleTapRecognizerPool</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_Core_DoubleTapRecognizer.html#doxid-class-core-1-1-double-tap-recognizer"><span class="std std-ref">DoubleTapRecognizer</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1ac38c223de51baefccd3c990aabc72c60"><span class="std std-ref">DoubleTapRecognizerPool</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a864fda975983068bb1cabd08d4ec9cd9"><span></span><span class="n">PooledDoubleTapRecognizer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span class="std std-ref">FourCharID</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span class="std std-ref">FourCharID</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1ae6767b53c2daa6ff9f73ade1320acd77"><span class="std std-ref">PropertyType</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span class="std std-ref">FourCharID</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span class="std std-ref">ErrorCode</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">signed</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a1b956fe1df85f3c132b21edb4e116458"><span class="std std-ref">int8</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span class="std std-ref">uint8</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">short</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a4355d16fcf9f644c9ac84293f0b1801f"><span class="std std-ref">int16</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">short</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a05f6b0ae8f6a6e135b0e290c25fe0e4e"><span class="std std-ref">uint16</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">long</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">long</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span></span><span class="n">int64</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">long</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">long</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a29940ae63ec06c9998bba873e25407ad"><span></span><span class="n">uint64</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a2420052df278b47ededc67698207c8ac"><span class="std std-ref">IntPtr</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a3ab8e131506805edaf1865edb24cd482"><span class="std std-ref">UIntPtr</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a14d7d5d1107905731ad8e0503b07411e"><span></span><span class="n">int40</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a6fe0bff809cc476042bd439ee5e9a751"><span></span><span class="n">abs_time</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span class="std std-ref">float32</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">double</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a232fad1b0d6dcc7c16aabde98b2e2a80"><span class="std std-ref">float64</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span class="std std-ref">uint8</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a0014d6e5b33789d09adacc8785563998"><span class="std std-ref">tbool</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-namespace-core-1a816ea9cdb1e175ef2c3a35b5aa4fbd18"><span class="std std-ref">ModuleRef</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a05f6b0ae8f6a6e135b0e290c25fe0e4e"><span class="std std-ref">uint16</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a1b8422cae03bef872e8a8f8675f73dcc"><span></span><span class="n">uchar</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a41811a3d77b82e24133899df29d0d16d"><span class="std std-ref">uchar32</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1a1b8422cae03bef872e8a8f8675f73dcc"><span class="std std-ref">uchar</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-namespace-core-1a1ae28fd978239d1b874239a7573f522d"><span class="std std-ref">UStringPtr</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">Core::int32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1ac677252738f903590e1d5b9d066ce479"><span class="std std-ref">ExitCode</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">Core::int32</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1af9b7ba8cfbbb18c743e20e181558d53c"><span class="std std-ref">Severity</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespace-core-1a8905133c673a1c1da88029652633140b"><span class="std std-ref">AlignmentRef</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span class="std std-ref">uint8</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a16bd3a09a698a5962a44cec0a2d1b6f0"><span class="std std-ref">Pixel</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespace-core-1af43f4e2478c7f863264fc54bbf93162c"><span class="std std-ref">ColorRef</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_ColorF.html#doxid-struct-core-1-1-color-f"><span class="std std-ref">ColorF</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespace-core-1a860b651a1959dd24c248c49f8b1d239e"><span class="std std-ref">ColorFRef</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a3ab8e131506805edaf1865edb24cd482"><span class="std std-ref">UIntPtr</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a65cc72b365216698373f3357316ccb6e"><span class="std std-ref">TouchID</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span class="std std-ref">Coord</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span class="std std-ref">CoordF</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span class="std std-ref">Coord</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespace-core-1af09b631d934be68e1425207de8710b39"><span class="std std-ref">Point</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1af09b631d934be68e1425207de8710b39"><span class="std std-ref">Point</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a2444794f6e232d797295d20756357fff"><span></span><span class="n">PointRef</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span class="std std-ref">CoordF</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespace-core-1abd5124ed2fd2940f3e41b54902898207"><span class="std std-ref">PointF</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1abd5124ed2fd2940f3e41b54902898207"><span class="std std-ref">PointF</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a0b3844505e0e7f3aec1a879c83865e4f"><span></span><span class="n">PointFRef</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span class="std std-ref">Coord</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespace-core-1ad0f7a18bfc765de0dcf9ee877a40e53f"><span class="std std-ref">Rect</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1ad0f7a18bfc765de0dcf9ee877a40e53f"><span class="std std-ref">Rect</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a1b1bd80c75d3f50bf5ba16e3dbeab34c"><span></span><span class="n">RectRef</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span class="std std-ref">CoordF</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespace-core-1a2be910befeae2ad8b9c485bfecb7c6c0"><span class="std std-ref">RectF</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1a2be910befeae2ad8b9c485bfecb7c6c0"><span class="std std-ref">RectF</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a8bf7cdf025e38f20b966f4ce0c9851c1"><span></span><span class="n">RectFRef</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_CoordLimits.html#doxid-namespace-core-1aa33055ac5a788867440a2360ff73b6e3"><span class="std std-ref">CoordLimits</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_ExitCodeEnum.html#doxid-namespace-core-1a385a68bdc20d0d0cfd6baad3b87a1ee3"><span class="std std-ref">ExitCodeEnum</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_JoypadButton.html#doxid-namespace-core-1ab6d0ee43009462fc171753896a863c54"><span class="std std-ref">JoypadButton</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_PointerValue.html#doxid-namespace-core-1aaaf5e92349f43628837c348a247c9b81"><span class="std std-ref">PointerValue</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_SeverityEnum.html#doxid-namespace-core-1ae14a3740ea7f06cfb308879e8898d786"><span class="std std-ref">SeverityEnum</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_Core_UIPropertyTypes.html#doxid-namespace-core-1ac5153ebe97df88236b112646f08b3a81"><span class="std std-ref">UIPropertyTypes</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Allocator.html#doxid-struct-core-1-1-allocator"><span class="std std-ref">Allocator</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_AttributeHandler.html#doxid-struct-core-1-1-attribute-handler"><span class="std std-ref">AttributeHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_BitmapData.html#doxid-struct-core-1-1-bitmap-data"><span class="std std-ref">BitmapData</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ColorF.html#doxid-struct-core-1-1-color-f"><span class="std std-ref">ColorF</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ColorHSL.html#doxid-struct-core-1-1-color-h-s-l"><span class="std std-ref">ColorHSL</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ColorHSV.html#doxid-struct-core-1-1-color-h-s-v"><span class="std std-ref">ColorHSV</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ColorProperty.html#doxid-struct-core-1-1-color-property"><span class="std std-ref">ColorProperty</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_DebugInfo.html#doxid-struct-core-1-1-debug-info"><span class="std std-ref">DebugInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_DebugInfoList.html#doxid-struct-core-1-1-debug-info-list"><span class="std std-ref">DebugInfoList</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">size</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_DebugInfoTable.html#doxid-struct-core-1-1-debug-info-table"><span class="std std-ref">DebugInfoTable</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Deleter.html#doxid-struct-core-1-1-deleter"><span class="std std-ref">Deleter</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_EnumInfo.html#doxid-struct-core-1-1-enum-info"><span class="std std-ref">EnumInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_GestureEventArgs.html#doxid-struct-core-1-1-gesture-event-args"><span class="std std-ref">GestureEventArgs</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ICoreView.html#doxid-struct-core-1-1-i-core-view"><span class="std std-ref">ICoreView</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IGameBitmapRenderer.html#doxid-struct-core-1-1-i-game-bitmap-renderer"><span class="std std-ref">IGameBitmapRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IGameCore.html#doxid-struct-core-1-1-i-game-core"><span class="std std-ref">IGameCore</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IGameEnvironment.html#doxid-struct-core-1-1-i-game-environment"><span class="std std-ref">IGameEnvironment</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IGameLibrary.html#doxid-struct-core-1-1-i-game-library"><span class="std std-ref">IGameLibrary</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IProfiler.html#doxid-struct-core-1-1-i-profiler"><span class="std std-ref">IProfiler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IProfilingData.html#doxid-struct-core-1-1-i-profiling-data"><span class="std std-ref">IProfilingData</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler"><span class="std std-ref">IPropertyHandler</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_InterfaceProperty.html#doxid-struct-core-1-1-interface-property"><span class="std std-ref">InterfaceProperty</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_InterpolatorClass.html#doxid-struct-core-1-1-interpolator-class"><span class="std std-ref">InterpolatorClass</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TKey</span><span class="p">,</span> <span class="k">typename</span> <span class="n">TValue</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_KeyValue.html#doxid-struct-core-1-1-key-value"><span class="std std-ref">KeyValue</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_RGBA.html#doxid-struct-core-1-1-r-g-b-a"><span class="std std-ref">RGBA</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">kFlag</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span> <span class="o">=</span> <span class="kt">int</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ScopedFlag.html#doxid-struct-core-1-1-scoped-flag"><span class="std std-ref">ScopedFlag</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ScopedVar.html#doxid-struct-core-1-1-scoped-var"><span class="std std-ref">ScopedVar</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_StringResult.html#doxid-struct-core-1-1-string-result"><span class="std std-ref">StringResult</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_TouchInfo.html#doxid-struct-core-1-1-touch-info"><span class="std std-ref">TouchInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_UIDBytes.html#doxid-struct-core-1-1-u-i-d-bytes"><span class="std std-ref">UIDBytes</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_VectorDeleter.html#doxid-struct-core-1-1-vector-deleter"><span class="std std-ref">VectorDeleter</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_Version.html#doxid-struct-core-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ViewClassProperty.html#doxid-struct-core-1-1-view-class-property"><span class="std std-ref">ViewClassProperty</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ViewNameProperty.html#doxid-struct-core-1-1-view-name-property"><span class="std std-ref">ViewNameProperty</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ViewSizeProperty.html#doxid-struct-core-1-1-view-size-property"><span class="std std-ref">ViewSizeProperty</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_ViewSourceProperty.html#doxid-struct-core-1-1-view-source-property"><span class="std std-ref">ViewSourceProperty</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">a</span><span class="p">,</span> <span class="n">int64</span> <span class="n">b</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_static_max.html#doxid-struct-core-1-1static-max"><span class="std std-ref">static_max</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">a</span><span class="p">,</span> <span class="n">int64</span> <span class="n">b</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_static_min.html#doxid-struct-core-1-1static-min"><span class="std std-ref">static_min</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">base</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_static_power.html#doxid-struct-core-1-1static-power-3-01base-00-010-01-4"><span class="std std-ref">static_power&lt;base, 0&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponent</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_static_power-2.html#doxid-struct-core-1-1static-power"><span class="std std-ref">static_power</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_AtomicStack.html#doxid-class-core-1-1-atomic-stack"><span class="std std-ref">AtomicStack</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_AtomicStackLocked.html#doxid-class-core-1-1-atomic-stack-locked"><span class="std std-ref">AtomicStackLocked</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BMPHandler.html#doxid-class-core-1-1-b-m-p-handler"><span class="std std-ref">BMPHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BitSet.html#doxid-class-core-1-1-bit-set"><span class="std std-ref">BitSet</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BitmapPrimitives.html#doxid-class-core-1-1-bitmap-primitives"><span class="std std-ref">BitmapPrimitives</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BitmapPrimitives16.html#doxid-class-core-1-1-bitmap-primitives16"><span class="std std-ref">BitmapPrimitives16</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BitmapPrimitives32.html#doxid-class-core-1-1-bitmap-primitives32"><span class="std std-ref">BitmapPrimitives32</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_BitmapPrimitivesMonochrome.html#doxid-class-core-1-1-bitmap-primitives-monochrome"><span class="std std-ref">BitmapPrimitivesMonochrome</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">maxSize</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringBuffer.html#doxid-class-core-1-1-c-string-buffer"><span class="std std-ref">CStringBuffer</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier"><span class="std std-ref">CStringClassifier</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringFunctions.html#doxid-class-core-1-1-c-string-functions"><span class="std std-ref">CStringFunctions</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringTokenizer.html#doxid-class-core-1-1-c-string-tokenizer"><span class="std std-ref">CStringTokenizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringTokenizerInplace.html#doxid-class-core-1-1-c-string-tokenizer-inplace"><span class="std std-ref">CStringTokenizerInplace</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits"><span class="std std-ref">CStringTraits</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TKey</span><span class="p">,</span> <span class="k">typename</span> <span class="n">TValue</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ConstMap.html#doxid-class-core-1-1-const-map"><span class="std std-ref">ConstMap</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_ConstString.html#doxid-class-core-1-1-const-string"><span class="std std-ref">ConstString</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_Date.html#doxid-class-core-1-1-date"><span class="std std-ref">Date</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_DateTime.html#doxid-class-core-1-1-date-time"><span class="std std-ref">DateTime</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Deque.html#doxid-class-core-1-1-deque"><span class="std std-ref">Deque</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_DoubleTapRecognizer.html#doxid-class-core-1-1-double-tap-recognizer"><span class="std std-ref">DoubleTapRecognizer</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_FixedDeque.html#doxid-class-core-1-1-fixed-deque"><span class="std std-ref">FixedDeque</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxElements</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter"><span class="std std-ref">FloatFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Formatter.html#doxid-class-core-1-1-formatter"><span class="std std-ref">Formatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_FormatterRegistry.html#doxid-class-core-1-1-formatter-registry"><span class="std std-ref">FormatterRegistry</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_FormatterRegistryList.html#doxid-class-core-1-1-formatter-registry-list"><span class="std std-ref">FormatterRegistryList</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_GestureInfo.html#doxid-class-core-1-1-gesture-info"><span class="std std-ref">GestureInfo</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_GestureRecognition.html#doxid-class-core-1-1-gesture-recognition"><span class="std std-ref">GestureRecognition</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TKey</span><span class="p">,</span> <span class="k">class</span> <span class="n">TValue</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_HashMap.html#doxid-class-core-1-1-hash-map"><span class="std std-ref">HashMap</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TKey</span><span class="p">,</span> <span class="k">class</span> <span class="n">TValue</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_HashMapIterator.html#doxid-class-core-1-1-hash-map-iterator"><span class="std std-ref">HashMapIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_HeapAllocator.html#doxid-class-core-1-1-heap-allocator"><span class="std std-ref">HeapAllocator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_IDSet.html#doxid-class-core-1-1-i-d-set"><span class="std std-ref">IDSet</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_InitializerList.html#doxid-class-core-1-1-initializer-list"><span class="std std-ref">InitializerList</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_IntFormatter.html#doxid-class-core-1-1-int-formatter"><span class="std std-ref">IntFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Interpolator.html#doxid-class-core-1-1-interpolator"><span class="std std-ref">Interpolator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_InterpolatorClassList.html#doxid-class-core-1-1-interpolator-class-list"><span class="std std-ref">InterpolatorClassList</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_InterpolatorFactory.html#doxid-class-core-1-1-interpolator-factory"><span class="std std-ref">InterpolatorFactory</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_LeadingZeroFormatter.html#doxid-class-core-1-1-leading-zero-formatter"><span class="std std-ref">LeadingZeroFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_LinearInterpolator.html#doxid-class-core-1-1-linear-interpolator"><span class="std std-ref">LinearInterpolator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_LinearReverseInterpolator.html#doxid-class-core-1-1-linear-reverse-interpolator"><span class="std std-ref">LinearReverseInterpolator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_LinkedList.html#doxid-class-core-1-1-linked-list"><span class="std std-ref">LinkedList</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ListIterator.html#doxid-class-core-1-1-list-iterator"><span class="std std-ref">ListIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ListLink.html#doxid-class-core-1-1-list-link"><span class="std std-ref">ListLink</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_LongPressRecognizer.html#doxid-class-core-1-1-long-press-recognizer"><span class="std std-ref">LongPressRecognizer</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">AtomicPolicy</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_MemoryPool.html#doxid-class-core-1-1-memory-pool"><span class="std std-ref">MemoryPool</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_MutableCStringTraits.html#doxid-class-core-1-1-mutable-c-string-traits"><span class="std std-ref">MutableCStringTraits</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">ResizePolicy</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector"><span class="std std-ref">MutableVector</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ObserverList.html#doxid-class-core-1-1-observer-list"><span class="std std-ref">ObserverList</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_PNGHandler.html#doxid-class-core-1-1-p-n-g-handler"><span class="std std-ref">PNGHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PercentFormatter.html#doxid-class-core-1-1-percent-formatter"><span class="std std-ref">PercentFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PercentRangeFormatter.html#doxid-class-core-1-1-percent-range-formatter"><span class="std std-ref">PercentRangeFormatter</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span>
+    <span class="k">typename</span> <span class="n">T</span><span class="p">,</span>
+    <span class="n">uint32</span> <span class="n">numBlocks</span><span class="p">,</span>
+    <span class="n">uint32</span> <span class="n">blockSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">uint32</span> <span class="n">alignment</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PoolAllocator.html#doxid-class-core-1-1-pool-allocator"><span class="std std-ref">PoolAllocator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">uint32</span> <span class="n">numBlocks</span><span class="p">,</span> <span class="n">uint32</span> <span class="n">blockSize</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PoolAllocatorExtern.html#doxid-class-core-1-1-pool-allocator-extern"><span class="std std-ref">PoolAllocatorExtern</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">Pool</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PooledObject.html#doxid-class-core-1-1-pooled-object"><span class="std std-ref">PooledObject</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">Pool</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_PooledRecognizer.html#doxid-class-core-1-1-pooled-recognizer"><span class="std std-ref">PooledRecognizer</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_RangeFormatter.html#doxid-class-core-1-1-range-formatter"><span class="std std-ref">RangeFormatter</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Container</span><span class="p">,</span> <span class="k">class</span> <span class="n">Iterator</span><span class="p">,</span> <span class="k">class</span> <span class="n">Element</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_RecognizerPool.html#doxid-class-core-1-1-recognizer-pool"><span class="std std-ref">RecognizerPool</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_RotateRecognizer.html#doxid-class-core-1-1-rotate-recognizer"><span class="std std-ref">RotateRecognizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_SegmentInterpolator.html#doxid-class-core-1-1-segment-interpolator"><span class="std std-ref">SegmentInterpolator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_SingleTapRecognizer.html#doxid-class-core-1-1-single-tap-recognizer"><span class="std std-ref">SingleTapRecognizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_StringListFormatter.html#doxid-class-core-1-1-string-list-formatter"><span class="std std-ref">StringListFormatter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_SwipeRecognizer.html#doxid-class-core-1-1-swipe-recognizer"><span class="std std-ref">SwipeRecognizer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Time.html#doxid-class-core-1-1-time"><span class="std std-ref">Time</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">bool</span> <span class="n">enabled</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_TimedInterval.html#doxid-class-core-1-1-timed-interval"><span class="std std-ref">TimedInterval</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_TimedInterval-2.html#doxid-class-core-1-1-timed-interval-3-01true-01-4"><span class="std std-ref">TimedInterval&lt;true&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_TreeSet.html#doxid-class-core-1-1-tree-set"><span class="std std-ref">TreeSet</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_TreeSetIterator.html#doxid-class-core-1-1-tree-set-iterator"><span class="std std-ref">TreeSetIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_VectorIterator.html#doxid-class-core-1-1-vector-iterator"><span class="std std-ref">VectorIterator</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_Core_WinDeviceNotificationHandler.html#doxid-class-core-1-1-win-device-notification-handler"><span class="std std-ref">WinDeviceNotificationHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ZoomInterpolator.html#doxid-class-core-1-1-zoom-interpolator"><span class="std std-ref">ZoomInterpolator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Core_ZoomRecognizer.html#doxid-class-core-1-1-zoom-recognizer"><span class="std std-ref">ZoomRecognizer</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a198304d3d9a547b6f777b09b3ec53d63"><span class="std std-ref">PooledSwipeRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a2350c0a3dd4064d1286ec4f78713959e"><span></span><span class="n">SwipeRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a2f6352a6a88df9e71086a1c6bcf79da2"><span class="std std-ref">PooledZoomRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a3e88c0d23794b60e926179f07c20b0e2"><span></span><span class="n">ZoomRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ac875016e40e560e282514eee0f9e84f4"><span class="std std-ref">PooledRotateRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a13466bfa7523d588ca03a8fa22dd54bf"><span></span><span class="n">RotateRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ab8d69ececfc16154200480cc6cd2378e"><span class="std std-ref">PooledLongPressRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a04485d388724e9435a432343580da752"><span></span><span class="n">LongPressRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a78d6010ce268d7a7ebd4c2d9a29cf834"><span class="std std-ref">PooledSingleTapRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a75fe8c8d956ba573e9a0a9ea91245d49"><span></span><span class="n">SingleTapRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <a class="reference internal" href="class_Core_FixedSizeVector.html#doxid-class-core-1-1-fixed-size-vector"><span class="std std-ref">FixedSizeVector</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a864fda975983068bb1cabd08d4ec9cd9"><span class="std std-ref">PooledDoubleTapRecognizer</span></a><span></span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a9a93be3fc77408cb76830996711b65a5"><span></span><span class="n">DoubleTapRecognizerPoolinstance</span></span><span></span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1ab4b3e750e4bfb8251ad70ad2cdf429a6"><span class="std std-ref">kCoordLimitsMaxCoord</span></a><span></span> <span class="o">=</span> <span class="mh">0x0fff000</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a5e88520b8181f726d05e8c87b3676260"><span class="std std-ref">kCoordLimitsMinCoord</span></a><span></span> <span class="o">=</span> <span class="o">-</span><span class="n">kCoordLimitsMaxCoord</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a72f92e0a1633619f3b795510d12f2f34"><span class="std std-ref">kAlignmentHCenter</span></a><span></span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a1b0699ecf480e8f38cfa029c591d2d26"><span class="std std-ref">kAlignmentLeft</span></a><span></span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1abaa293e811865dc01293cd9b0d28cd2b"><span class="std std-ref">kAlignmentRight</span></a><span></span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a47d2ab88ba72e1f13d767be297629550"><span></span><span class="n">kAlignmentHMask</span></span><span></span> <span class="o">=</span> <span class="mh">0x0F</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1afe748892ba626c846a4e6abab8d1ed66"><span class="std std-ref">kAlignmentVCenter</span></a><span></span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a47aaef8f8fd89e8434e59789b214c61a"><span class="std std-ref">kAlignmentTop</span></a><span></span> <span class="o">=</span> <span class="mh">0x10</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a1013b67f2eba111fd18afd519f12becc"><span class="std std-ref">kAlignmentBottom</span></a><span></span> <span class="o">=</span> <span class="mh">0x20</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a5dd045cd37d9ad9c1c8bbb9a056a313b"><span></span><span class="n">kAlignmentVMask</span></span><span></span> <span class="o">=</span> <span class="mh">0xF0</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a639b6075833facf5768b9632ae8aa6b6"><span></span><span class="n">kAlignmentCenter</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentHCenter</span><span class="o">|</span><span class="n">kAlignmentVCenter</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a232065236484e97d6b1bffef134b8d6c"><span></span><span class="n">kAlignmentLeftCenter</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentLeft</span><span class="o">|</span><span class="n">kAlignmentVCenter</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a773b05da043c6037e65bd166f8846fbb"><span></span><span class="n">kAlignmentRightCenter</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentRight</span><span class="o">|</span><span class="n">kAlignmentVCenter</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac41bd1aa9a714a9222ed819f16c3136b"><span></span><span class="n">kAlignmentLeftTop</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentLeft</span><span class="o">|</span><span class="n">kAlignmentTop</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1abdb8e32c77d1836670945414b5381fd8"><span></span><span class="n">kAlignmentRightTop</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentRight</span><span class="o">|</span><span class="n">kAlignmentTop</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a16dc6d3dc29a8760a37678e3e37b8dd2"><span></span><span class="n">kAlignmentLeftBottom</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentLeft</span><span class="o">|</span><span class="n">kAlignmentBottom</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a8485bd0cd15149a88288b35ca307512c"><span></span><span class="n">kAlignmentRightBottom</span></span><span></span> <span class="o">=</span> <span class="n">kAlignmentRight</span><span class="o">|</span><span class="n">kAlignmentBottom</span><span class="p">;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="n">handshake</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a9a50f5a13dde879a54153f04b9adfb88"><span></span><span class="n">write</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="n">handshake</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a60f329fb31d0f60069e8bfbb04b2cf7f"><span></span><span class="n">jbyteArray</span></span><span></span><span class="p">;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="n">handshake</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">JLjava</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">lang</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a4548f801abfdff016e4c818dbb56fca0"><span></span><span class="n">String</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-core-1ac7152f1d9154ebc7fb8bce1f03cab4d7"><span></span><span class="n">DECLARE_JNI_CLASS</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">SSLChannel</span></a><span></span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-corejniclass-8h-1a9480615fb19f6fd08c2e13ada03591e4"><span class="std std-ref">CORE_CLASS_PREFIX</span></a><span></span> <span class="s">&quot;SSLChannel&quot;</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac52f7a6b095fce3cea5732bf6456eca2"><span></span><span class="n">DECLARE_JNI_METHOD</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-coresocket-8lwip-8h-1a510ead576f102243b70f612d91b5823b"><span class="std std-ref">close</span></a><span></span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="n">handshake</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a66813620efe38a53ad40ff2a548829e3"><span></span><span class="n">DECLARE_JNI_METHOD</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-coresocket-8lwip-8h-1a688ddfcb57860e52019ef12c0a7992c4"><span class="std std-ref">read</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1a60f329fb31d0f60069e8bfbb04b2cf7f"><span class="std std-ref">jbyteArray</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">jstring</span></a><span></span> <span class="n">handshake</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a45879c73a8cbe752883da7815a1467b7"><span></span><span class="n">END_DECLARE_JNI_CLASS</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">SSLChannel</span></a><span></span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">V</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a9be6598c70e3c7469fc76f00f6575cf1"><span></span><span class="n">DEFINE_JNI_METHOD</span></span><span></span><span class="p">(</span><a class="reference internal" href="global.html#doxid-coresocket-8lwip-8h-1a510ead576f102243b70f612d91b5823b"><span class="std std-ref">close</span></a><span></span><span class="p">,</span> <span class="s">&quot;()V&quot;</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">V</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">V</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a74d48ad62c9788544470534ee93ddf13"><span></span><span class="n">DEFINE_JNI_METHOD</span></span><span></span><span class="p">(</span><a class="reference internal" href="global.html#doxid-coresocket-8lwip-8h-1a688ddfcb57860e52019ef12c0a7992c4"><span class="std std-ref">read</span></a><span></span><span class="p">,</span> <span class="s">&quot;([BI)</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">I&quot;</span></a><span></span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1ac79203ce3fa5a28bd0c3046abbb7f8d2"><span></span><span class="n">byte_swap</span></span><span></span><span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a14c3b7f0bd05c418d234ce5cdcf7dace"><span class="std std-ref">is_power2</span></a><span></span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">get_min</span></a><span></span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespace-core-1aa15200ba5467fafd365974253ffd9d55"><span class="std std-ref">get_max</span></a><span></span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespace-core-1a9a820bd1a8a60bdb9848b15ab61a88df"><span class="std std-ref">get_abs</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespace-core-1a758854e384f29c39e1830c5fbf78cd3f"><span class="std std-ref">bound</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespace-core-1a7c9a6ebc4c1f40f93b9b4cd7283881f4"><span class="std std-ref">sign</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="kt">float</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a88da659f42eb1c695ee47f4a716b9bd2"><span class="std std-ref">round</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">v</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1a987ec24ad851090b98e1335ed09f97db"><span class="std std-ref">swap_vars</span></a><span></span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Interface</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-namespace-core-1abc7579691463dd5a7a726d9bb3cf349e"><span class="std std-ref">GetInterface</span></a><span></span><span class="p">(</span>
+    <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler"><span class="std std-ref">IPropertyHandler</span></a><span></span><span class="o">*</span> <span class="n">handler</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <span class="n">iid</span>
+<span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Interface</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1abd9d7251542e04a5fbd23e94f9310dbd"><span></span><span class="n">GetInterface</span></span><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler"><span class="std std-ref">IPropertyHandler</span></a><span></span><span class="o">*</span> <span class="n">handler</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Class</span><span class="p">,</span> <span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">ImplementGetInterface</span></a><span></span><span class="p">(</span>
+    <span class="n">Class</span><span class="o">*</span> <span class="n">This</span><span class="p">,</span>
+    <a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <span class="n">iid</span>
+<span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Class</span><span class="p">,</span> <span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a9e69ed1297a9e404a59b6721383e742c"><span></span><span class="n">ImplementGetInterface</span></span><span></span><span class="p">(</span>
+    <span class="n">Class</span><span class="o">*</span> <span class="n">This</span><span class="p">,</span>
+    <a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a25ff90f6d1015cb93d117310c4e08711"><span></span><span class="n">DebugPrint</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1a95f0218196047a221256d1811cca84f0"><span></span><span class="n">DebugPrintf</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-core-1af162a4b95ebd0030fab570e2a5634561"><span></span><span class="n">coreTest</span></span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">argc</span><span class="p">,</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">argv</span><span class="p">[]);</span>
+
+<span class="p">}</span> <span class="c1">// namespace Core</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-core"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span id="index-1"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span> <span class="n">FourCharID</span></pre>
+<p>Four-character identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ae6767b53c2daa6ff9f73ade1320acd77"><span id="index-2"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span class="std std-ref">FourCharID</span></a><span></span> <span class="n">PropertyType</span></pre>
+<p><a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a> type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a5e8b4f5c69588afc6636d3dd6a0c5d8a"><span class="std std-ref">FourCharID</span></a><span></span> <span class="n">InterfaceID</span></pre>
+<p>Interface identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span id="index-4"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">ErrorCode</span></pre>
+<p>Error code.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a1b956fe1df85f3c132b21edb4e116458"><span id="index-5"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">signed</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span> <span class="n">int8</span></pre>
+<p>8 Bit integer (signed)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span id="index-6"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span> <span class="n">uint8</span></pre>
+<p>8 Bit integer (unsigned)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a4355d16fcf9f644c9ac84293f0b1801f"><span id="index-7"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">short</span></a><span></span> <span class="n">int16</span></pre>
+<p>16 Bit integer (signed)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a05f6b0ae8f6a6e135b0e290c25fe0e4e"><span id="index-8"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">short</span></a><span></span> <span class="n">uint16</span></pre>
+<p>16 Bit integer (unsigned)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span id="index-9"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">int32</span></pre>
+<p>32 Bit integer (signed)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span id="index-10"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">uint32</span></pre>
+<p>32 Bit integer (unsigned)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a2420052df278b47ededc67698207c8ac"><span id="index-11"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span> <span class="n">IntPtr</span></pre>
+<p>integer pointer (32 Bit)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a3ab8e131506805edaf1865edb24cd482"><span id="index-12"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">UIntPtr</span></pre>
+<p>unsigned integer pointer (32 Bit)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span id="index-13"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">float32</span></pre>
+<p>32 Bit floating-point type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a232fad1b0d6dcc7c16aabde98b2e2a80"><span id="index-14"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">double</span></a><span></span> <span class="n">float64</span></pre>
+<p>64 Bit floating-point type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a0014d6e5b33789d09adacc8785563998"><span id="index-15"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span class="std std-ref">uint8</span></a><span></span> <span class="n">tbool</span></pre>
+<p>Compiler-independent boolean type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a816ea9cdb1e175ef2c3a35b5aa4fbd18"><span id="index-16"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">ModuleRef</span></pre>
+<p>Platform-specific Module Reference.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a41811a3d77b82e24133899df29d0d16d"><span id="index-17"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a1134b580f8da4de94ca6b1de4d37975e"><span class="std std-ref">uint32</span></a><span></span> <span class="n">uchar32</span></pre>
+<p>32 Bit Unicode character (UTF-32)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span id="index-18"></span><span></span><span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">CStringPtr</span></pre>
+<p>Constant C-string pointer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a1ae28fd978239d1b874239a7573f522d"><span id="index-19"></span><span></span><span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1a1b8422cae03bef872e8a8f8675f73dcc"><span class="std std-ref">uchar</span></a><span></span><span class="o">*</span> <span class="n">UStringPtr</span></pre>
+<p>Constant 16 Bit Unicode string pointer (UTF-16).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ac677252738f903590e1d5b9d066ce479"><span id="index-20"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">Core::int32</span></a><span></span> <span class="n">ExitCode</span></pre>
+<p>Process exit code.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1af9b7ba8cfbbb18c743e20e181558d53c"><span id="index-21"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">Core::int32</span></a><span></span> <span class="n">Severity</span></pre>
+<p>Logging severity.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a8905133c673a1c1da88029652633140b"><span id="index-22"></span><span></span><span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span><span class="o">&amp;</span> <span class="n">AlignmentRef</span></pre>
+<p><a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a> reference type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a16bd3a09a698a5962a44cec0a2d1b6f0"><span id="index-23"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1adde6aaee8457bee49c2a92621fe22b79"><span class="std std-ref">uint8</span></a><span></span> <span class="n">Pixel</span></pre>
+<p>Part of 24 Bit RGB pixel.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1af43f4e2478c7f863264fc54bbf93162c"><span id="index-24"></span><span></span><span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a><span></span><span class="o">&amp;</span> <span class="n">ColorRef</span></pre>
+<p><a class="reference internal" href="struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a> reference type (8 bit).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a860b651a1959dd24c248c49f8b1d239e"><span id="index-25"></span><span></span><span class="k">typedef</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_ColorF.html#doxid-struct-core-1-1-color-f"><span class="std std-ref">ColorF</span></a><span></span><span class="o">&amp;</span> <span class="n">ColorFRef</span></pre>
+<p><a class="reference internal" href="struct_Core_Color.html#doxid-struct-core-1-1-color"><span class="std std-ref">Color</span></a> reference type (floating point).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a65cc72b365216698373f3357316ccb6e"><span id="index-26"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1a3ab8e131506805edaf1865edb24cd482"><span class="std std-ref">UIntPtr</span></a><span></span> <span class="n">TouchID</span></pre>
+<p>ID of one touch.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span id="index-27"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">Coord</span></pre>
+<p>Integer coordinate.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span id="index-28"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">CoordF</span></pre>
+<p>Float coordinate.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1af09b631d934be68e1425207de8710b39"><span id="index-29"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span class="std std-ref">Coord</span></a><span></span><span class="o">&gt;</span> <span class="n">Point</span></pre>
+<p>Point with integer coordinates.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1abd5124ed2fd2940f3e41b54902898207"><span id="index-30"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span class="std std-ref">CoordF</span></a><span></span><span class="o">&gt;</span> <span class="n">PointF</span></pre>
+<p>Point with float coordinates.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ad0f7a18bfc765de0dcf9ee877a40e53f"><span id="index-31"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1a486f4b30e604792d9e42a242641b6fc7"><span class="std std-ref">Coord</span></a><span></span><span class="o">&gt;</span> <span class="n">Rect</span></pre>
+<p>Rectangle with integer coordinates.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a2be910befeae2ad8b9c485bfecb7c6c0"><span id="index-32"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_Core_TRect.html#doxid-struct-core-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespace-core-1ac6d72fc2af20980d49027afb0cd9a3cd"><span class="std std-ref">CoordF</span></a><span></span><span class="o">&gt;</span> <span class="n">RectF</span></pre>
+<p>Rectangle with float coordinates.</p>
+</section>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ab4b3e750e4bfb8251ad70ad2cdf429a6"><span id="index-33"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kCoordLimitsMaxCoord</span> <span class="o">=</span> <span class="mh">0x0fff000</span></pre>
+<p>max. coordinate value</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a5e88520b8181f726d05e8c87b3676260"><span id="index-34"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kCoordLimitsMinCoord</span> <span class="o">=</span> <span class="o">-</span><span class="n">kCoordLimitsMaxCoord</span></pre>
+<p>min. coordinate value</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a72f92e0a1633619f3b795510d12f2f34"><span id="index-35"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentHCenter</span> <span class="o">=</span> <span class="mh">0x00</span></pre>
+<p>center horizontally</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a1b0699ecf480e8f38cfa029c591d2d26"><span id="index-36"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentLeft</span> <span class="o">=</span> <span class="mh">0x01</span></pre>
+<p>align left</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1abaa293e811865dc01293cd9b0d28cd2b"><span id="index-37"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentRight</span> <span class="o">=</span> <span class="mh">0x02</span></pre>
+<p>align right</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1afe748892ba626c846a4e6abab8d1ed66"><span id="index-38"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentVCenter</span> <span class="o">=</span> <span class="mh">0x00</span></pre>
+<p>center vertically</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a47aaef8f8fd89e8434e59789b214c61a"><span id="index-39"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentTop</span> <span class="o">=</span> <span class="mh">0x10</span></pre>
+<p>align top</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a1013b67f2eba111fd18afd519f12becc"><span id="index-40"></span><span></span><span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">kAlignmentBottom</span> <span class="o">=</span> <span class="mh">0x20</span></pre>
+<p>align bottom</p>
+</section>
+<section id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a14c3b7f0bd05c418d234ce5cdcf7dace"><span id="index-41"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">is_power2</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span></pre>
+<p>Checks if the given integer is a power of 2.</p>
+<p><a class="reference external" href="http://graphics.stanford.edu/~seander/bithacks.html#DetermineIfPowerOf2">http://graphics.stanford.edu/~seander/bithacks.html#DetermineIfPowerOf2</a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span id="index-42"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">get_min</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span></pre>
+<p>Get minimum of two values.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1aa15200ba5467fafd365974253ffd9d55"><span id="index-43"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">get_max</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span></pre>
+<p>Get maximum of two values.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a9a820bd1a8a60bdb9848b15ab61a88df"><span id="index-44"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">get_abs</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Get the absolute value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a758854e384f29c39e1830c5fbf78cd3f"><span id="index-45"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">bound</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span></pre>
+<p>Bound value between given minimum and maximum.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a7c9a6ebc4c1f40f93b9b4cd7283881f4"><span id="index-46"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">sign</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Get the signum of a value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a88da659f42eb1c695ee47f4a716b9bd2"><span id="index-47"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="kt">float</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">round</span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Round to the given floating point value to integer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1a987ec24ad851090b98e1335ed09f97db"><span id="index-48"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">swap_vars</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span></pre>
+<p>Swap the contents of two variables.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1abc7579691463dd5a7a726d9bb3cf349e"><span id="index-49"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">Interface</span></a><span></span><span class="o">*</span> <span class="n">GetInterface</span><span class="p">(</span>
+    <a class="reference internal" href="struct_Core_IPropertyHandler.html#doxid-struct-core-1-1-i-property-handler"><span class="std std-ref">IPropertyHandler</span></a><span></span><span class="o">*</span> <span class="n">handler</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <span class="n">iid</span>
+<span class="p">)</span></pre>
+<p>Helper to get additional interface.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span id="index-50"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Class</span><span class="p">,</span> <span class="k">class</span> <span class="n">Interface</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">ImplementGetInterface</span><span class="p">(</span>
+    <span class="n">Class</span><span class="o">*</span> <span class="n">This</span><span class="p">,</span>
+    <a class="reference internal" href="struct_Core_Property.html#doxid-struct-core-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-core-1a8843ae979c593705e7698724dce3540b"><span class="std std-ref">InterfaceID</span></a><span></span> <span class="n">iid</span>
+<span class="p">)</span></pre>
+<p>Helper to implement query for interface.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_AttributeFactory_Flags.html" class="btn btn-neutral float-left" title="enum AttributeFactory::Flags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_Core_Bluetooth.html" class="btn btn-neutral float-right" title="namespace Core::Bluetooth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

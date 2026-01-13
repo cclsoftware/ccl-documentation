@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enum CCL::VKey::KeyCodes &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="namespace CCL::ViewNames" href="namespace_CCL_ViewNames.html" />
+    <link rel="prev" title="namespace CCL::VKey" href="namespace_CCL_VKey.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_VKey.html">namespace CCL::VKey</a></li>
+      <li class="breadcrumb-item active">enum CCL::VKey::KeyCodes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-ccl-vkey-keycodes">
+<span id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fc"></span><span id="index-0"></span><h1>enum CCL::VKey::KeyCodes<a class="headerlink" href="#enum-ccl-vkey-keycodes" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;keycodes.h&gt;</span>
+
+<span class="k">enum</span> <span class="n">KeyCodes</span>
+<span class="p">{</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca8e792321b79a4aa90e75bd3fcc2e4141"><span></span><span class="n">kUnknown</span></span><span></span>        <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad47c47a923a598f417eff3f75019f68c"><span class="std std-ref">kBackspace</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca680e72d533a384ce60ff2cf654f9a8db"><span class="std std-ref">kTab</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca30489f081a67ea9fcf9ef0cba74e6651"><span class="std std-ref">kCapsLock</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca64c201f3b4dec38710338195d6589bb3"><span class="std std-ref">kEnter</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcadc9dbec636c1b9a0733a3999c79bfce7"><span class="std std-ref">kReturn</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca5d98ebe7d25e63d2d73a1458550d8268"><span class="std std-ref">kShift</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa8501cb56c31ef8df5f2058f200b49ce"><span class="std std-ref">kCommand</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca166c201f54e89ea0ea8222820841ff22"><span class="std std-ref">kOption</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca559deb9820ca250d1e27a9a18f51ea07"><span class="std std-ref">kControl</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcada50d1ee75f836cf47dfa28a195ce087"><span class="std std-ref">kEscape</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaab823bcc5d8d26fafa6ada800ab21f74"><span class="std std-ref">kSpace</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca2e4192f9895383fbfe62c7b92463d743"><span class="std std-ref">kHome</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca4d86acf93e9e5caa20476fe1ae833fba"><span class="std std-ref">kEnd</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa9953673f54fd9f854de23739ebe2f7a"><span class="std std-ref">kLeft</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca5af6f23f6bf3d9b00b156007f72520be"><span class="std std-ref">kUp</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca28e0f004d9fc43a042d60286f37b6889"><span class="std std-ref">kRight</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca813c94f59f92a709ce69de51185d8752"><span class="std std-ref">kDown</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca54630a41a2ded52f42d84ecd11365e16"><span class="std std-ref">kPageUp</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcabb50bd516dca9304ca73541f81a42684"><span class="std std-ref">kPageDown</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcab91c383be447b0021a2100c6c4f7c659"><span class="std std-ref">kInsert</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1353e180a561ebdc23352ffb61476ad4"><span class="std std-ref">kDelete</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1e1a3e3273b91ccc5866e34205d3aaa0"><span class="std std-ref">kNumPad0</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca00d27cd4a9b95a62cc81b72ab8799a75"><span class="std std-ref">kNumPad1</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae57b9ac4c85cc6ec7a88f570b80bc2d7"><span class="std std-ref">kNumPad2</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca24bad210980f6934ac3a2912f21ed09d"><span class="std std-ref">kNumPad3</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad788927545f39f71c0fd97ca45b85924"><span class="std std-ref">kNumPad4</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3c198130bc16cc8dce5dae7a49da0bda"><span class="std std-ref">kNumPad5</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca34055989f1fa47ba67deb93e57015a10"><span class="std std-ref">kNumPad6</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaadfb9643fa19c7cbe0f1fa908c246366"><span class="std std-ref">kNumPad7</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca50e5d6f9bf161fd26d691719d9e600d4"><span class="std std-ref">kNumPad8</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3cf88d53e50019a628df2987df502168"><span class="std std-ref">kNumPad9</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcab9e7003a5d48eabc8b5c0c6cff3313cd"><span class="std std-ref">kMultiply</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca8d20f6cca2d49a8732f535cfe28812c8"><span class="std std-ref">kAdd</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae1d92bfb6833e8b4a3c16049e764671f"><span class="std std-ref">kSubtract</span></a><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcab90eb305f539b035cc89eb3bda77d717"><span></span><span class="n">kDecimal</span></span><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa6e7dddf3e3aa377204e3f191660ecc1"><span class="std std-ref">kDivide</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa3a93cff4dde9f2590758816ccd8ad27"><span class="std std-ref">kF1</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae6abe5f45e42887d3d2878b2a2a54dd9"><span class="std std-ref">kF2</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca0582977d47a9a3dba69f88b4535445d6"><span class="std std-ref">kF3</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf40301832403a7a6ec9bbc1bb1856a20"><span class="std std-ref">kF4</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcacbf7272ec9730c468599c187746620b9"><span class="std std-ref">kF5</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcabd04b11b7d1cff5b121308817141ba53"><span class="std std-ref">kF6</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa1827a3d93029f9bea1513b26c2e3913"><span class="std std-ref">kF7</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad55bac35ebbaf877bfef1cc40d21c0b8"><span class="std std-ref">kF8</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca236757609fde2e5d34b1fb0e348ff5ee"><span class="std std-ref">kF9</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca17f6dd19a1b797876d601b1f71a818e2"><span class="std std-ref">kF10</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf1099b6bf9199cc54d3f01d489eb27e1"><span class="std std-ref">kF11</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1eb400773419e45c44da80f7b8079410"><span class="std std-ref">kF12</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca2254d53d514924c588de02ca0356e9d2"><span class="std std-ref">kF13</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca0453d2b5c0396e1b8314cf85da951b53"><span class="std std-ref">kF14</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca60240b07a5c0b6772042ace01cc83737"><span class="std std-ref">kF15</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcac08f7abc376cd9c168c33a3169d3d70d"><span class="std std-ref">kF16</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf38fc025c782cd67ad923637eb8f36e2"><span class="std std-ref">kF17</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca28e60bd3a9930772d98d0894660ac7ce"><span class="std std-ref">kF18</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca4faf5c83cd0fd7a081757478598f3fed"><span class="std std-ref">kF19</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca153e71a5a6be390c003494ae6167ba4a"><span class="std std-ref">kF20</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcafbe464ae9d1442034b576e35ed8829d4"><span class="std std-ref">kF21</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca49e99933a0b413eca05bd2c6198dd25a"><span class="std std-ref">kF22</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca9ac33930aaf8d843e65aa6acd11f0896"><span class="std std-ref">kF23</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca11d18b449556fb78be8dcb43e7446e0e"><span class="std std-ref">kF24</span></a><span></span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3baf4228408b0ef2930c7354dd6594fb"><span class="std std-ref">kVolumeMute</span></a><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca9753b0a7077fe97f52cffefbc6256edc"><span></span><span class="n">kVolumeUp</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca44c92b855ab953cd6c76f6234e43413f"><span></span><span class="n">kVolumeDown</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca92a3db2f4ec71748a0b36b0f079a1e79"><span></span><span class="n">kStop</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca25efb0ddb80e83e8068ed6a18d79b7d2"><span></span><span class="n">kPlayPause</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3d70f83949ccf67a879d234b82bcc177"><span></span><span class="n">kPause</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca10af787938972a6f50efabb015e05978"><span></span><span class="n">kRecord</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcacfecdec0e334afc6a655359ccbc76c5b"><span></span><span class="n">kForward</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca73db2c453832041719a5ede4b61c4390"><span></span><span class="n">kRewind</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaed0d4145e5355c06a50fdbae9e7b701b"><span></span><span class="n">kChannelUp</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca133e16ded953a02876682cc13bf9d42c"><span></span><span class="n">kChannelDown</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcadae53e88b328a487003b3f2feb7fb7d6"><span></span><span class="n">kCircumflex</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca295e3db052bb6f0cefdc81de0557c699"><span></span><span class="n">kTilde</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca998c1a63453176cb43feba908ab6ddb8"><span></span><span class="n">kAcute</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca8b660237be1d90b90c493b6703ff3e0d"><span></span><span class="n">kGrave</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca85759bc1e3c70b1d91f7ddd5525072ab"><span></span><span class="n">kDiaeresis</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca8fe7f62e6ef57deb6648b6686a1c1724"><span></span><span class="n">kNumVirtualKeys</span></span><span></span><span class="p">,</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fc"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad47c47a923a598f417eff3f75019f68c"><span id="index-1"></span><span></span><span class="n">kBackspace</span></pre>
+<p>[BACKSPACE]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca680e72d533a384ce60ff2cf654f9a8db"><span id="index-2"></span><span></span><span class="n">kTab</span></pre>
+<p>[TAB]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca30489f081a67ea9fcf9ef0cba74e6651"><span id="index-3"></span><span></span><span class="n">kCapsLock</span></pre>
+<p>[CAPS LOCK]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca64c201f3b4dec38710338195d6589bb3"><span id="index-4"></span><span></span><span class="n">kEnter</span></pre>
+<p>[ENTER]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcadc9dbec636c1b9a0733a3999c79bfce7"><span id="index-5"></span><span></span><span class="n">kReturn</span></pre>
+<p>[RETURN]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca5d98ebe7d25e63d2d73a1458550d8268"><span id="index-6"></span><span></span><span class="n">kShift</span></pre>
+<p>[SHIFT]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa8501cb56c31ef8df5f2058f200b49ce"><span id="index-7"></span><span></span><span class="n">kCommand</span></pre>
+<p>[CTRL] on Windows, [APPLE] on <a class="reference internal" href="namespace_CCL_MacOS.html#doxid-namespace-c-c-l-1-1-mac-o-s"><span class="std std-ref">MacOS</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca166c201f54e89ea0ea8222820841ff22"><span id="index-8"></span><span></span><span class="n">kOption</span></pre>
+<p>[ALT] on Windows, [OPTION] on <a class="reference internal" href="namespace_CCL_MacOS.html#doxid-namespace-c-c-l-1-1-mac-o-s"><span class="std std-ref">MacOS</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca559deb9820ca250d1e27a9a18f51ea07"><span id="index-9"></span><span></span><span class="n">kControl</span></pre>
+<p>[CONTROL] on <a class="reference internal" href="namespace_CCL_MacOS.html#doxid-namespace-c-c-l-1-1-mac-o-s"><span class="std std-ref">MacOS</span></a> only</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcada50d1ee75f836cf47dfa28a195ce087"><span id="index-10"></span><span></span><span class="n">kEscape</span></pre>
+<p>[ESC]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaab823bcc5d8d26fafa6ada800ab21f74"><span id="index-11"></span><span></span><span class="n">kSpace</span></pre>
+<p>[SPACE]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca2e4192f9895383fbfe62c7b92463d743"><span id="index-12"></span><span></span><span class="n">kHome</span></pre>
+<p>[HOME]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca4d86acf93e9e5caa20476fe1ae833fba"><span id="index-13"></span><span></span><span class="n">kEnd</span></pre>
+<p>[END]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa9953673f54fd9f854de23739ebe2f7a"><span id="index-14"></span><span></span><span class="n">kLeft</span></pre>
+<p>[LEFT ARROW]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca5af6f23f6bf3d9b00b156007f72520be"><span id="index-15"></span><span></span><span class="n">kUp</span></pre>
+<p>[UP ARROW]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca28e0f004d9fc43a042d60286f37b6889"><span id="index-16"></span><span></span><span class="n">kRight</span></pre>
+<p>[RIGHT ARROW]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca813c94f59f92a709ce69de51185d8752"><span id="index-17"></span><span></span><span class="n">kDown</span></pre>
+<p>[DOWN ARROW]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca54630a41a2ded52f42d84ecd11365e16"><span id="index-18"></span><span></span><span class="n">kPageUp</span></pre>
+<p>[PAGE UP]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcabb50bd516dca9304ca73541f81a42684"><span id="index-19"></span><span></span><span class="n">kPageDown</span></pre>
+<p>[PAGE DOWN]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcab91c383be447b0021a2100c6c4f7c659"><span id="index-20"></span><span></span><span class="n">kInsert</span></pre>
+<p>[INS]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1353e180a561ebdc23352ffb61476ad4"><span id="index-21"></span><span></span><span class="n">kDelete</span></pre>
+<p>[DEL]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1e1a3e3273b91ccc5866e34205d3aaa0"><span id="index-22"></span><span></span><span class="n">kNumPad0</span></pre>
+<p>0</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca00d27cd4a9b95a62cc81b72ab8799a75"><span id="index-23"></span><span></span><span class="n">kNumPad1</span></pre>
+<p>1</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae57b9ac4c85cc6ec7a88f570b80bc2d7"><span id="index-24"></span><span></span><span class="n">kNumPad2</span></pre>
+<p>2</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca24bad210980f6934ac3a2912f21ed09d"><span id="index-25"></span><span></span><span class="n">kNumPad3</span></pre>
+<p>3</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad788927545f39f71c0fd97ca45b85924"><span id="index-26"></span><span></span><span class="n">kNumPad4</span></pre>
+<p>4</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3c198130bc16cc8dce5dae7a49da0bda"><span id="index-27"></span><span></span><span class="n">kNumPad5</span></pre>
+<p>5</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca34055989f1fa47ba67deb93e57015a10"><span id="index-28"></span><span></span><span class="n">kNumPad6</span></pre>
+<p>6</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaadfb9643fa19c7cbe0f1fa908c246366"><span id="index-29"></span><span></span><span class="n">kNumPad7</span></pre>
+<p>7</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca50e5d6f9bf161fd26d691719d9e600d4"><span id="index-30"></span><span></span><span class="n">kNumPad8</span></pre>
+<p>8</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3cf88d53e50019a628df2987df502168"><span id="index-31"></span><span></span><span class="n">kNumPad9</span></pre>
+<p>9</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcab9e7003a5d48eabc8b5c0c6cff3313cd"><span id="index-32"></span><span></span><span class="n">kMultiply</span></pre>
+<ul class="simple">
+<li></li>
+</ul>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca8d20f6cca2d49a8732f535cfe28812c8"><span id="index-33"></span><span></span><span class="n">kAdd</span></pre>
+<ul class="simple">
+<li></li>
+</ul>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae1d92bfb6833e8b4a3c16049e764671f"><span id="index-34"></span><span></span><span class="n">kSubtract</span></pre>
+<ul class="simple">
+<li></li>
+</ul>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa6e7dddf3e3aa377204e3f191660ecc1"><span id="index-35"></span><span></span><span class="n">kDivide</span></pre>
+<p>/</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa3a93cff4dde9f2590758816ccd8ad27"><span id="index-36"></span><span></span><span class="n">kF1</span></pre>
+<p>[F1]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcae6abe5f45e42887d3d2878b2a2a54dd9"><span id="index-37"></span><span></span><span class="n">kF2</span></pre>
+<p>[F2]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca0582977d47a9a3dba69f88b4535445d6"><span id="index-38"></span><span></span><span class="n">kF3</span></pre>
+<p>[F3]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf40301832403a7a6ec9bbc1bb1856a20"><span id="index-39"></span><span></span><span class="n">kF4</span></pre>
+<p>[F4]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcacbf7272ec9730c468599c187746620b9"><span id="index-40"></span><span></span><span class="n">kF5</span></pre>
+<p>[F5]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcabd04b11b7d1cff5b121308817141ba53"><span id="index-41"></span><span></span><span class="n">kF6</span></pre>
+<p>[F6]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaa1827a3d93029f9bea1513b26c2e3913"><span id="index-42"></span><span></span><span class="n">kF7</span></pre>
+<p>[F7]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcad55bac35ebbaf877bfef1cc40d21c0b8"><span id="index-43"></span><span></span><span class="n">kF8</span></pre>
+<p>[F8]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca236757609fde2e5d34b1fb0e348ff5ee"><span id="index-44"></span><span></span><span class="n">kF9</span></pre>
+<p>[F9]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca17f6dd19a1b797876d601b1f71a818e2"><span id="index-45"></span><span></span><span class="n">kF10</span></pre>
+<p>[F10]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf1099b6bf9199cc54d3f01d489eb27e1"><span id="index-46"></span><span></span><span class="n">kF11</span></pre>
+<p>[F11]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca1eb400773419e45c44da80f7b8079410"><span id="index-47"></span><span></span><span class="n">kF12</span></pre>
+<p>[F12]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca2254d53d514924c588de02ca0356e9d2"><span id="index-48"></span><span></span><span class="n">kF13</span></pre>
+<p>[F13]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca0453d2b5c0396e1b8314cf85da951b53"><span id="index-49"></span><span></span><span class="n">kF14</span></pre>
+<p>[F14]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca60240b07a5c0b6772042ace01cc83737"><span id="index-50"></span><span></span><span class="n">kF15</span></pre>
+<p>[F15]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcac08f7abc376cd9c168c33a3169d3d70d"><span id="index-51"></span><span></span><span class="n">kF16</span></pre>
+<p>[F16]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcaf38fc025c782cd67ad923637eb8f36e2"><span id="index-52"></span><span></span><span class="n">kF17</span></pre>
+<p>[F17]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca28e60bd3a9930772d98d0894660ac7ce"><span id="index-53"></span><span></span><span class="n">kF18</span></pre>
+<p>[F18]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca4faf5c83cd0fd7a081757478598f3fed"><span id="index-54"></span><span></span><span class="n">kF19</span></pre>
+<p>[F19]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca153e71a5a6be390c003494ae6167ba4a"><span id="index-55"></span><span></span><span class="n">kF20</span></pre>
+<p>[F20]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fcafbe464ae9d1442034b576e35ed8829d4"><span id="index-56"></span><span></span><span class="n">kF21</span></pre>
+<p>[F21]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca49e99933a0b413eca05bd2c6198dd25a"><span id="index-57"></span><span></span><span class="n">kF22</span></pre>
+<p>[F22]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca9ac33930aaf8d843e65aa6acd11f0896"><span id="index-58"></span><span></span><span class="n">kF23</span></pre>
+<p>[F23]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca11d18b449556fb78be8dcb43e7446e0e"><span id="index-59"></span><span></span><span class="n">kF24</span></pre>
+<p>[F24]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-v-key-1a269a8dff901283db1b9fb996933b07fca3baf4228408b0ef2930c7354dd6594fb"><span id="index-60"></span><span></span><span class="n">kVolumeMute</span></pre>
+<p>Media Keys.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_CCL_VKey.html" class="btn btn-neutral float-left" title="namespace CCL::VKey" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_CCL_ViewNames.html" class="btn btn-neutral float-right" title="namespace CCL::ViewNames" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

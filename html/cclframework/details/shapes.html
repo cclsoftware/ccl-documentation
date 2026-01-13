@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometric Shape Definitions &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Graphics Implementation" href="gfx.html" />
+    <link rel="prev" title="Plug-ins on Mobile Platforms" href="plugins.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Geometric Shape Definitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#shape-1">Shape 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-2">Shape 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-3">Shape 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-4">Shape 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-5">Shape 5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-6">Shape 6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-7">Shape 7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-8">Shape 8</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">Geometric Shape Definitions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geometric-shape-definitions">
+<h1>Geometric Shape Definitions<a class="headerlink" href="#geometric-shape-definitions" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>How the rect width is determined:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kr">inline</span> <span class="n">Type</span> <span class="n">TRect</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">getWidth</span> <span class="p">()</span> <span class="k">const</span>
+<span class="p">{</span> <span class="k">return</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<section id="shape-1">
+<h2>Shape 1<a class="headerlink" href="#shape-1" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rect</span> <span class="nf">r</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="c1">// r.getWidth () == 8</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">fillRect</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">brush</span><span class="p">)</span>
+<span class="n">IGraphicsPath</span><span class="o">::</span><span class="n">addRect</span> <span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">fill</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">brush</span><span class="p">)</span>
+
+<span class="c1">// same area for:</span>
+<span class="c1">// IGraphics::addClip (r)</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l01" src="../../_images/shape_example1_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-2">
+<h2>Shape 2<a class="headerlink" href="#shape-2" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rect</span> <span class="nf">r</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">drawRect</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+<span class="n">IGraphicsPath</span><span class="o">::</span><span class="n">addRect</span> <span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+
+<span class="c1">// for every path, draw with stroke 1 and</span>
+<span class="c1">// fill must have same outline</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l02" src="../../_images/shape_example2_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-3">
+<h2>Shape 3<a class="headerlink" href="#shape-3" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rect</span> <span class="nf">r</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">2.0f</span><span class="p">);</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">drawRect</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+<span class="n">IGraphicsPath</span><span class="o">::</span><span class="n">addRect</span> <span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l03" src="../../_images/shape_example3_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-4">
+<h2>Shape 4<a class="headerlink" href="#shape-4" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Point</span> <span class="nf">p1</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">Point</span> <span class="nf">p2</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">drawLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">addLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l04" src="../../_images/shape_example4_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-5">
+<h2>Shape 5<a class="headerlink" href="#shape-5" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Point</span> <span class="nf">p1</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">Point</span> <span class="nf">p2</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">2.0f</span><span class="p">);</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">drawLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">addLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+
+<span class="c1">// So addRect looks different than adding</span>
+<span class="c1">// the four sides consecutively to a path</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l05" src="../../_images/shape_example5_aliased.png" /></p></td>
+<td><p><img alt="r05" src="../../_images/shape_example5_normal.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-6">
+<h2>Shape 6<a class="headerlink" href="#shape-6" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Point</span> <span class="nf">p1</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">Point</span> <span class="nf">p2</span> <span class="p">(</span><span class="mi">10</span> <span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">3.0f</span><span class="p">);</span>
+<span class="n">IGraphics</span><span class="o">::</span><span class="n">drawLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">addLine</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l06" src="../../_images/shape_example6_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-7">
+<h2>Shape 7<a class="headerlink" href="#shape-7" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rect</span> <span class="nf">r</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">addRoundRect</span> <span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap (arcs not shown)</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l07" src="../../_images/shape_example7_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-8">
+<h2>Shape 8<a class="headerlink" href="#shape-8" title="Link to this heading"></a></h2>
+<p><strong>Code</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rect</span> <span class="nf">r</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="n">Pen</span> <span class="nf">pen</span> <span class="p">(</span><span class="n">Colors</span><span class="o">::</span><span class="n">kRed</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">addRoundRect</span> <span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="n">QuartzPath</span><span class="o">::</span><span class="n">draw</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">pen</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Resulting Bitmap (arcs not shown)</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>1 pixel per point, with aliasing</p></td>
+<td><p>1 pixel per point, without aliasing</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+<td><p><img alt="pxs" src="../../_images/pixelscale.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="l08" src="../../_images/shape_example8_aliased.png" /></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plugins.html" class="btn btn-neutral float-left" title="Plug-ins on Mobile Platforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gfx.html" class="btn btn-neutral float-right" title="Graphics Implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

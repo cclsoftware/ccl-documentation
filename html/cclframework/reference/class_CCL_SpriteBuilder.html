@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::SpriteBuilder &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="enum CCL::SpriteBuilder::Options" href="enum_CCL_SpriteBuilder_Options.html" />
+    <link rel="prev" title="class CCL::SortedNode" href="class_CCL_SortedNode.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_ccl.html">CCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_CCL.html">namespace CCL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_IAtomicStack.html">namespace IAtomicStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_KernelHelper.html">namespace KernelHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_PluginPresentation.html">namespace PluginPresentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Tag.html">namespace Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_PresetSelectFilter.html">struct PresetSelectFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AsyncSequenceOperation.html">class AsyncSequenceOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ColorPaletteFile.html">class ColorPaletteFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DetailListViewSorter.html">class DetailListViewSorter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DiagnosticListViewItem.html">class DiagnosticListViewItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_DocumentTemplateHandlerStub.html">class DocumentTemplateHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerHookStub.html">class EditHandlerHookStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_EditHandlerStub.html">class EditHandlerStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_InsertPresetDragHandler.html">class InsertPresetDragHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ListViewItemToTextFilter.html">class ListViewItemToTextFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInFavoritesFolderRenamer.html">class PlugInFavoritesFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSortFolderRenamer.html">class PlugInSortFolderRenamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByFolder.html">class PlugInSorterByFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterBySubCategory.html">class PlugInSorterBySubCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByType.html">class PlugInSorterByType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByUserFolder.html">class PlugInSorterByUserFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PlugInSorterByVendor.html">class PlugInSorterByVendor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetDragFilter.html">class PresetDragFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetLocation.html">class PresetLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetMediatorStub.html">class PresetMediatorStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_PresetSortDraghandler.html">class PresetSortDraghandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_SetFocusAction.html">class SetFocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolActionStub.html">class ToolActionStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolConfigurationStub.html">class ToolConfigurationStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolHelpStub.html">class ToolHelpStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolModeStub.html">class ToolModeStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ToolSetStub.html">class ToolSetStub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_UnfocusAction.html">class UnfocusAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
+      <li class="breadcrumb-item active">class CCL::SpriteBuilder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-spritebuilder">
+<span id="doxid-class-c-c-l-1-1-sprite-builder"></span><span id="index-0"></span><h1>class CCL::SpriteBuilder<a class="headerlink" href="#class-ccl-spritebuilder" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Helps building a sprite consisting of items that can have an icon and a text. <a class="reference internal" href="#details-class-c-c-l-1-1-sprite-builder"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;spritebuilder.h&gt;</span>
+
+<span class="k">class</span> <span class="n">SpriteBuilder</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span>
+    <span class="p">{</span>
+        <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a1f9aebf1de3ebbf4283a4dcf73308562af89930491bd09bd4d9e2225ac01b3e15"><span></span><span class="n">kMaxItems</span></span><span></span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="p">};</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_SpriteBuilder_Options.html#doxid-class-c-c-l-1-1-sprite-builder-1adf7c3ac791f996a56160a12f379cbd99"><span class="std std-ref">Options</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a7e042b2b47f11ab1da915a9da04b7d6e"><span></span><span class="n">textBrush</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TextBrush</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/global.html#doxid-coreclassmacros-8h-1a1fd7e9e8910963dbf1178162aa01346b"><span class="std std-ref">PROPERTY_BOOL</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">createSpriteSuspended</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CreateSpriteSuspended</span></a><span></span><span class="p">)</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">protected</span></a><span></span> <a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a2863f9019837464733d6246835f85593"><span></span><span class="n">view</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a1411ea3b26a34297217f0225315d9758"><span></span><span class="n">numItems</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1abd34783732368d4495a77b5d215fb757"><span></span><span class="n">SpriteBuilder</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1ac6853ca46a4873432c5c15b19740eee3"><span></span><span class="n">addHeader</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">group</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a3a4ca3e361ee2785f07b76757b29162b"><span></span><span class="n">addHeader</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">icon</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">group</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a3a1cc9048c56e83cbcf34b91f39c0cc0"><span></span><span class="n">addItem</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">group</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">*</span> <span class="n">font</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="class_CCL_SolidBrush.html#doxid-class-c-c-l-1-1-solid-brush"><span class="std std-ref">SolidBrush</span></a><span></span><span class="o">*</span> <span class="n">textBrush</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a1fd4d0355da8cc0a1deca14a81fa1636"><span></span><span class="n">addItem</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">icon</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">group</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">*</span> <span class="n">font</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="class_CCL_SolidBrush.html#doxid-class-c-c-l-1-1-solid-brush"><span class="std std-ref">SolidBrush</span></a><span></span><span class="o">*</span> <span class="n">textBrush</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a04ca964b3bcedc252bb747a5420d9176"><span></span><span class="n">getLastGroup</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1af51861b283346e3431d0578d34265d70"><span></span><span class="n">hasGroup</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">group</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_ISprite.html#doxid-struct-c-c-l-1-1-i-sprite"><span class="std std-ref">ISprite</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a25df06860a4d1ea14efc8df0c92f466c"><span></span><span class="n">createSprite</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">options</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">Point</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-sprite-builder-1a5d476f02ab3e8a3a64d42c56e8553eca"><span class="std std-ref">getDefaultOffset</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Point</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-sprite-builder-1a184dd55c4e703060294b027fe4cd1771"><span class="std std-ref">getTouchOffset</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a20ee19fd405e3814292fbe5767707972"><span></span><span class="n">getWarningIcon</span></span><span></span> <span class="p">();</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a662ddf8ee34985ac85f28056e450d20a"><span></span><span class="n">replaceItemText</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISprite.html#doxid-struct-c-c-l-1-1-i-sprite"><span class="std std-ref">ISprite</span></a><span></span><span class="o">&amp;</span> <span class="n">sprite</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">);</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1ac06d2aac265370b51ad02ac56bb0d202"><span></span><span class="n">getItemText</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_ISprite.html#doxid-struct-c-c-l-1-1-i-sprite"><span class="std std-ref">ISprite</span></a><span></span><span class="o">&amp;</span> <span class="n">sprite</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a16c57bc928b0cd05416a04b0fcedea07"><span></span><span class="n">setBackgroundBrush</span></span><span></span> <span class="p">(</span>BrushRef<span></span> <span class="n">brush</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a35dbbf853840a94f871fb2c130fbc5e7"><span></span><span class="n">setBorderPen</span></span><span></span> <span class="p">(</span>PenRef<span></span> <span class="n">pen</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a4ac14dbe1bca8e20f6899dce299f8a8e"><span></span><span class="n">setBackgroundImage</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IImage.html#doxid-struct-c-c-l-1-1-i-image"><span class="std std-ref">IImage</span></a><span></span><span class="o">*</span> <span class="n">image</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1adbd31725ffd457430891e5867cd9ce06"><span></span><span class="n">setMargin</span></span><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">margin</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a7f8300c6f206206ac6e7dd9faaefbeca"><span></span><span class="n">setSpacing</span></span><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">spacing</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a580832092c696016c7af039b6c6ec34b"><span></span><span class="n">setRadius</span></span><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">radius</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a7440793afb0785999eace45ef528335e"><span></span><span class="n">setMinWidth</span></span><span></span> <span class="p">(</span><span class="n">Coord</span> <span class="n">width</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1af19bae3dab1dc5d78c1aa8dc3ce90af8"><span></span><span class="n">PROPERTY_OBJECT</span></span><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="p">);</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IVisualStyle.html#doxid-struct-c-c-l-1-1-i-visual-style"><span class="std std-ref">IVisualStyle</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1a824cc301c92eaa38cc72e52924e2a995"><span></span><span class="n">getVisualStyle</span></span><span></span> <span class="p">();</span>
+    <span class="n">StandardSpriteDrawable</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-sprite-builder-1af74cdceec3fb6045eb70cbe891a87f9c"><span></span><span class="n">getDrawable</span></span><span></span> <span class="p">();</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-sprite-builder"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Helps building a sprite consisting of items that can have an icon and a text.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-sprite-builder-1a5d476f02ab3e8a3a64d42c56e8553eca"><span id="index-1"></span><span></span><span class="n">Point</span> <span class="n">getDefaultOffset</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>recommended offset from mouse cursor</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-sprite-builder-1a184dd55c4e703060294b027fe4cd1771"><span id="index-2"></span><span></span><span class="n">Point</span> <span class="n">getTouchOffset</span> <span class="p">()</span> <span class="k">const</span></pre>
+<p>recommended offset from fingertip</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_SortedNode.html" class="btn btn-neutral float-left" title="class CCL::SortedNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_SpriteBuilder_Options.html" class="btn btn-neutral float-right" title="enum CCL::SpriteBuilder::Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

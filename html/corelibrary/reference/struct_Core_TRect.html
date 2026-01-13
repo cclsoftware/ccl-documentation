@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template struct Core::TRect &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::Portable::TextInput" href="struct_Core_Portable_TextInput.html" />
+    <link rel="prev" title="template struct Core::TPoint" href="struct_Core_TPoint.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_core.html">Core</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_core_collect.html">Collections</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_core_gui.html">Core-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_plugin.html">Core-Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_portable.html">Core-Portable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_thread.html">Core-Threads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_time.html">Core-Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_format.html">Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_interpolator.html">Interpolators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_core_string.html">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Args.html">namespace Core::Args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Core_Sockets_SocketTypes_SocketOption.html">namespace Core::Sockets::SocketTypes::SocketOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Deleter.html">template struct Core::Deleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_IPAddress.html">struct Core::Sockets::SocketTypes::IPAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_IO_IStreamStorable.html">struct Core::IO::IStreamStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedFlag.html">template struct Core::ScopedFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_ScopedVar.html">template struct Core::ScopedVar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_Sockets_SocketTypes_SocketAddress.html">struct Core::Sockets::SocketTypes::SocketAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_UIDBytes.html">struct Core::UIDBytes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_Core_VectorDeleter.html">template struct Core::VectorDeleter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Date.html">class Core::Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_DateTime.html">class Core::DateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_MemoryPool.html">template class Core::MemoryPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_MemoryStream.html">class Core::IO::MemoryStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_ObserverList.html">template class Core::ObserverList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_PooledObject.html">template class Core::PooledObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_IO_Stream.html">class Core::IO::Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Core_Time.html">class Core::Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_core.html">Core</a></li>
+          <li class="breadcrumb-item"><a href="group_core_gui.html">Core-GUI</a></li>
+      <li class="breadcrumb-item active">template struct Core::TRect</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-struct-core-trect">
+<span id="doxid-struct-core-1-1-t-rect"></span><span id="index-0"></span><h1>template struct Core::TRect<a class="headerlink" href="#template-struct-core-trect" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Rectangle template class. <a class="reference internal" href="#details-struct-core-1-1-t-rect"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;corerect.h&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">TRect</span>
+<span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a69621ff67c12898644b3a40fbefd5ae1"><span class="std std-ref">left</span></a><span></span><span class="p">;</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1aabe40d29d09a77b72ba75d46bf2fe9bb"><span class="std std-ref">top</span></a><span></span><span class="p">;</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a0dd1381ad66ce9823c0ece5a3d5dfdf7"><span class="std std-ref">right</span></a><span></span><span class="p">;</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a69f80b1f358f881cc68c94f0da149d2b"><span class="std std-ref">bottom</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1af9ec198f4daf57d985e2aee3f36373c3"><span class="std std-ref">TRect</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1abd0dcb3bac532c85add1274c74268e2e"><span class="std std-ref">TRect</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p2</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1aff6396a8ea326c6984078a9fbf3300d3"><span class="std std-ref">TRect</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">l</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ad75e033b430eb1ab64dc650d00087725"><span class="std std-ref">TRect</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a434b5e076895fc076340430d76140474"><span class="std std-ref">operator ()</span></a><span></span> <span class="p">(</span><span class="n">Type</span> <span class="n">l</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span><span class="p">,</span> <span class="n">Type</span> <span class="n">r</span><span class="p">,</span> <span class="n">Type</span> <span class="n">b</span><span class="p">);</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ad4b5af773060d75c4a09f9bfbe7c2777"><span class="std std-ref">getWidth</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ad4a8c7358274ea316af583da0461b5f6"><span class="std std-ref">getHeight</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a651a5db1feefa738834aafaad684daf8"><span class="std std-ref">setWidth</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">w</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1afc09fcb47dd9e2b6f9a050a425287954"><span class="std std-ref">setHeight</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">w</span><span class="p">);</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a732078b3b91390e958b835f3abaabb74"><span class="std std-ref">getSize</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a551039474f4c4872bae16cb308a36de7"><span class="std std-ref">setSize</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">);</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1acec95abe190a4ab562e4c96af678672d"><span class="std std-ref">getLeftTop</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a4b42062ec0e0b4b3c92cfbd2d9eef091"><span class="std std-ref">getRightTop</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a36ffd43dbfc309225ff28dc71f88445f"><span class="std std-ref">getLeftBottom</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a8a7adf15b1f2eb2a2091cf00521033ef"><span class="std std-ref">getRightBottom</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ad2a9c5b34ef82a193c26bf8ea6217fe0"><span class="std std-ref">getCenter</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ae854faa204f0882fb960a9eae4acc269"><span class="std std-ref">offset</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">dx</span><span class="p">,</span> <span class="n">Type</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a8d065efdc591c466e7bbc7b14a76faa7"><span class="std std-ref">offset</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a1144d90d348c5eb7ec36f40f8a7977b5"><span class="std std-ref">moveTo</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1aa472aec250e14d7e9a01448f690e0704"><span class="std std-ref">contract</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">v</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a695314f9510223f5c98c46d7af0d1477"><span class="std std-ref">expand</span></a><span></span><span class="p">(</span><span class="n">Type</span> <span class="n">v</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a5ff69a332ffa632a4365e5d441d1d811"><span class="std std-ref">zoom</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">factor</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a199ad4f1b6280dd4dc4aa5f1f911b4ef"><span class="std std-ref">bound</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a24c6c8f3aaac4cfa05699537bdebc256"><span class="std std-ref">boundH</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a5230f084e0e58f4eac896171678205fd"><span class="std std-ref">boundV</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a215fc761b0a38026da24cf35799c5927"><span class="std std-ref">join</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1affeeaa31c024ccb5acea3b22ed445daa"><span class="std std-ref">join</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1af6420e5482248477e15eca8d1adfdf35"><span class="std std-ref">center</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a1528ede49c8a0bc687627e8484543d33"><span class="std std-ref">centerH</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ac0fa7358e3e7cac9130ba5541a51024c"><span class="std std-ref">centerV</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a3e9194158072974d387b23d73b3744fd"><span class="std std-ref">align</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span><span class="o">&amp;</span> <span class="n">alignment</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1aa33f423f39e1c5624ed388dd7a303f4a"><span class="std std-ref">fitProportionally</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1aca582bbf7d4ef55661f36a569cfc1454"><span class="std std-ref">normalize</span></a><span></span><span class="p">();</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a66ea67ee1133a8f4e7a1baea27169f8e"><span class="std std-ref">setEmpty</span></a><span></span><span class="p">();</span>
+    <span class="n">TRect</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1adf0627059f69791d65c25d4af9fbef47"><span class="std std-ref">setReallyEmpty</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1acf82f9b2937375c7b1cf3dccb3df3312"><span class="std std-ref">isEmpty</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ae9d770177491670fe900400221489c5a"><span class="std std-ref">intersect</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1a41bc5ec555528c1420058d09f367247b"><span class="std std-ref">pointInside</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ab91eff26809d8629b18fc5526883beb8"><span class="std std-ref">rectInside</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ae5d61644b511e66d0f53fdcd8af91d80"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-t-rect-1ad166646b992910b676a7dfbc368ff868"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-core-1-1-t-rect"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Rectangle template class.</p>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a69621ff67c12898644b3a40fbefd5ae1"><span id="index-1"></span><span></span><span class="n">Type</span> <span class="n">left</span></pre>
+<p>left coordinate</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1aabe40d29d09a77b72ba75d46bf2fe9bb"><span id="index-2"></span><span></span><span class="n">Type</span> <span class="n">top</span></pre>
+<p>top coordinate</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a0dd1381ad66ce9823c0ece5a3d5dfdf7"><span id="index-3"></span><span></span><span class="n">Type</span> <span class="n">right</span></pre>
+<p>right coordinate</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a69f80b1f358f881cc68c94f0da149d2b"><span id="index-4"></span><span></span><span class="n">Type</span> <span class="n">bottom</span></pre>
+<p>bottom coordinate</p>
+</section>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1af9ec198f4daf57d985e2aee3f36373c3"><span id="index-5"></span><span></span><span class="n">TRect</span><span class="p">(</span><span class="n">Type</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Type</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Construct rectangle from coordinates.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1abd0dcb3bac532c85add1274c74268e2e"><span id="index-6"></span><span></span><span class="n">TRect</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p2</span><span class="p">)</span></pre>
+<p>Construct rectangle from points (left/top, right/bottom).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1aff6396a8ea326c6984078a9fbf3300d3"><span id="index-7"></span><span></span><span class="n">TRect</span><span class="p">(</span><span class="n">Type</span> <span class="n">l</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Construct rectangle from left/top and size.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ad75e033b430eb1ab64dc650d00087725"><span id="index-8"></span><span></span><span class="n">TRect</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Construct rectangle at (0,0) with given size.</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a434b5e076895fc076340430d76140474"><span id="index-9"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="p">()</span> <span class="p">(</span><span class="n">Type</span> <span class="n">l</span><span class="p">,</span> <span class="n">Type</span> <span class="n">t</span><span class="p">,</span> <span class="n">Type</span> <span class="n">r</span><span class="p">,</span> <span class="n">Type</span> <span class="n">b</span><span class="p">)</span></pre>
+<p>Assign new coordinates.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ad4b5af773060d75c4a09f9bfbe7c2777"><span id="index-10"></span><span></span><span class="n">Type</span> <span class="n">getWidth</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get width.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ad4a8c7358274ea316af583da0461b5f6"><span id="index-11"></span><span></span><span class="n">Type</span> <span class="n">getHeight</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get height.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a651a5db1feefa738834aafaad684daf8"><span id="index-12"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">setWidth</span><span class="p">(</span><span class="n">Type</span> <span class="n">w</span><span class="p">)</span></pre>
+<p>Set width without moving.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1afc09fcb47dd9e2b6f9a050a425287954"><span id="index-13"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">setHeight</span><span class="p">(</span><span class="n">Type</span> <span class="n">w</span><span class="p">)</span></pre>
+<p>Set height without moving.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a732078b3b91390e958b835f3abaabb74"><span id="index-14"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getSize</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get size of rectangle as a point.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a551039474f4c4872bae16cb308a36de7"><span id="index-15"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">setSize</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Set width and height without moving.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1acec95abe190a4ab562e4c96af678672d"><span id="index-16"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getLeftTop</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get left/top position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a4b42062ec0e0b4b3c92cfbd2d9eef091"><span id="index-17"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getRightTop</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get right/top position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a36ffd43dbfc309225ff28dc71f88445f"><span id="index-18"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getLeftBottom</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get left/bottom position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a8a7adf15b1f2eb2a2091cf00521033ef"><span id="index-19"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getRightBottom</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get right/bottom position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ad2a9c5b34ef82a193c26bf8ea6217fe0"><span id="index-20"></span><a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">getCenter</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get center point of rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ae854faa204f0882fb960a9eae4acc269"><span id="index-21"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">offset</span><span class="p">(</span><span class="n">Type</span> <span class="n">dx</span><span class="p">,</span> <span class="n">Type</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Offset by given delta.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a8d065efdc591c466e7bbc7b14a76faa7"><span id="index-22"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">offset</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span></pre>
+<p>Offset by point.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a1144d90d348c5eb7ec36f40f8a7977b5"><span id="index-23"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">moveTo</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span></pre>
+<p>Move origin to new position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1aa472aec250e14d7e9a01448f690e0704"><span id="index-24"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">contract</span><span class="p">(</span><span class="n">Type</span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Shrink all edges by given value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a695314f9510223f5c98c46d7af0d1477"><span id="index-25"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">expand</span><span class="p">(</span><span class="n">Type</span> <span class="n">v</span><span class="p">)</span></pre>
+<p>Expand all edges by given value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a5ff69a332ffa632a4365e5d441d1d811"><span id="index-26"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">zoom</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">float</span></a><span></span> <span class="n">factor</span><span class="p">)</span></pre>
+<p>Multiply all edges by given value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a199ad4f1b6280dd4dc4aa5f1f911b4ef"><span id="index-27"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">bound</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Bound to given rectangle (can cause shrink).</p>
+<p>Returns false, if result is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a24c6c8f3aaac4cfa05699537bdebc256"><span id="index-28"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">boundH</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Bound to given rectangle horizontally (can cause shrink).</p>
+<p>Returns false, if result is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a5230f084e0e58f4eac896171678205fd"><span id="index-29"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">boundV</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Bound to given rectangle vertically (can cause shrink).</p>
+<p>Returns false, if result is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a215fc761b0a38026da24cf35799c5927"><span id="index-30"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">join</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Join given rectangle (can cause expansion).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1affeeaa31c024ccb5acea3b22ed445daa"><span id="index-31"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">join</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span></pre>
+<p>Join with point (can cause expansion).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1af6420e5482248477e15eca8d1adfdf35"><span id="index-32"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">center</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Center in given parent rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a1528ede49c8a0bc687627e8484543d33"><span id="index-33"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">centerH</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Center horizontally in given parent rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ac0fa7358e3e7cac9130ba5541a51024c"><span id="index-34"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">centerV</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Center vertically in given parent rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a3e9194158072974d387b23d73b3744fd"><span id="index-35"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">align</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span><span class="o">&amp;</span> <span class="n">alignment</span><span class="p">)</span></pre>
+<p>Align in given parent rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1aa33f423f39e1c5624ed388dd7a303f4a"><span id="index-36"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">fitProportionally</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span></pre>
+<p>Scale proportionally to fit into parent rectangle.</p>
+<p>(There may be space left in one direction.)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1aca582bbf7d4ef55661f36a569cfc1454"><span id="index-37"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">normalize</span><span class="p">()</span></pre>
+<p>Swap corners if width/height is negative.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a66ea67ee1133a8f4e7a1baea27169f8e"><span id="index-38"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">setEmpty</span><span class="p">()</span></pre>
+<p>Set coordinates to (0,0,0,0).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1adf0627059f69791d65c25d4af9fbef47"><span id="index-39"></span><span></span><span class="n">TRect</span><span class="o">&amp;</span> <span class="n">setReallyEmpty</span><span class="p">()</span></pre>
+<p>Set empty using +- kMaxCoord.</p>
+<p>Use when joining rectangles.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1acf82f9b2937375c7b1cf3dccb3df3312"><span id="index-40"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">isEmpty</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if rectangle is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ae9d770177491670fe900400221489c5a"><span id="index-41"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">intersect</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if this rectangle intersects with other rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1a41bc5ec555528c1420058d09f367247b"><span id="index-42"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">pointInside</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_Core_TPoint.html#doxid-struct-core-1-1-t-point"><span class="std std-ref">TPoint</span></a><span></span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if point is inside.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ab91eff26809d8629b18fc5526883beb8"><span id="index-43"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="n">rectInside</span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Check if rectangle is inside.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ae5d61644b511e66d0f53fdcd8af91d80"><span id="index-44"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="k">operator</span> <span class="o">==</span> <span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Compare rectangles.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-t-rect-1ad166646b992910b676a7dfbc368ff868"><span id="index-45"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">bool</span></a><span></span> <span class="k">operator</span> <span class="o">!=</span> <span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Compare rectangles.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_TPoint.html" class="btn btn-neutral float-left" title="template struct Core::TPoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_Portable_TextInput.html" class="btn btn-neutral float-right" title="struct Core::Portable::TextInput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Components &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GUI for embedded applications" href="views.html" />
+    <link rel="prev" title="Parameters" href="parameters.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="appmodel.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#typedobject">TypedObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-parameters">Adding Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-access">Parameter Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-observation">Parameter Observation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#persistance">Persistance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamically-adding-components">Dynamically Adding Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views.html">GUI for embedded applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicviews.html">GUI for dynamic views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtti.html">Run-time type information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Components</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="components">
+<h1>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h1>
+<p>A fundamental building block of the Core library is the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> class. It follows a Composite pattern using a parent-child hierarchy.</p>
+<section id="typedobject">
+<h2>TypedObject<a class="headerlink" href="#typedobject" title="Link to this heading"></a></h2>
+<p>A Component is a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_TypedObject.html#doxid-class-core-1-1-portable-1-1-typed-object"><span class="std std-ref"><span class="pre">Core::Portable::TypedObject</span></span></a></code> supporting Core Run-time Type Information.</p>
+<p>Declare core class macro:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Connecting a type id of a derived class to that of its base class</span>
+<span class="n">DECLARE_CORE_CLASS</span> <span class="p">(</span><span class="sc">&#39;myCp&#39;</span><span class="p">,</span> <span class="n">MyComponent</span><span class="p">,</span> <span class="n">Component</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then cast objects to a class that has used the core class declaration:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">Component</span><span class="o">*</span> <span class="n">component</span> <span class="o">=</span> <span class="n">core_cast</span><span class="o">&lt;</span><span class="n">Component</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">myComponent</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="c1">// component as Component</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">MyComponent</span><span class="o">*</span> <span class="n">component</span> <span class="o">=</span> <span class="n">core_cast</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">myComponent</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="c1">// component as MyComponent</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-parameters">
+<h2>Adding Parameters<a class="headerlink" href="#adding-parameters" title="Link to this heading"></a></h2>
+<p>You can add <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Parameter.html#doxid-class-core-1-1-portable-1-1-parameter"><span class="std std-ref"><span class="pre">Core::Portable::Parameter</span></span></a></code> objects of various types using provided macros:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BEGIN_PARAMINFO</span> <span class="p">(</span><span class="n">ParamList</span><span class="p">)</span>
+    <span class="n">PARAM_TOGGLE</span> <span class="p">(</span><span class="n">kToggle1</span><span class="p">,</span> <span class="s">&quot;toggle1&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="p">),</span>
+    <span class="n">PARAM_INT</span> <span class="p">(</span><span class="n">kIntValue1</span><span class="p">,</span> <span class="s">&quot;intValue1&quot;</span><span class="p">,</span> <span class="n">kMinValue</span><span class="p">,</span> <span class="n">kMaxValue</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="p">),</span>
+    <span class="n">PARAM_STRING</span> <span class="p">(</span><span class="n">kStringValue1</span><span class="p">,</span> <span class="s">&quot;stringValue1&quot;</span><span class="p">,</span> <span class="n">flags</span><span class="p">),</span>
+    <span class="n">PARAM_LIST</span> <span class="p">(</span><span class="n">kStringList1</span><span class="p">,</span> <span class="s">&quot;stringList1&quot;</span><span class="p">,</span> <span class="n">MyStringList</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="p">),</span>
+    <span class="n">PARAM_ALIAS</span> <span class="p">(</span><span class="n">kParamAlias1</span><span class="p">,</span> <span class="s">&quot;alias1&quot;</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="n">END_PARAMINFO</span>
+</pre></div>
+</div>
+<p>This creates an array of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_Core_Portable_ParamInfo.html#doxid-struct-core-1-1-portable-1-1-param-info"><span class="std std-ref"><span class="pre">Core::Portable::ParamInfo</span></span></a></code> which you can add to the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_ParamList.html#doxid-class-core-1-1-portable-1-1-param-list"><span class="std std-ref"><span class="pre">Core::Portable::ParamList</span></span></a></code> owned by your component.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">paramList</span><span class="p">.</span><span class="n">add</span> <span class="p">(</span><span class="n">ParamList</span><span class="p">,</span> <span class="n">ARRAY_COUNT</span> <span class="p">(</span><span class="n">ParamList</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="parameter-access">
+<h2>Parameter Access<a class="headerlink" href="#parameter-access" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> implements methods to access its parameters as well as parameters of other components.
+Examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span><span class="o">*</span> <span class="n">param1</span> <span class="o">=</span> <span class="n">getParameterAt</span> <span class="p">(</span><span class="n">index</span><span class="p">);</span> <span class="c1">///&lt; our parameter list</span>
+<span class="n">Parameter</span><span class="o">*</span> <span class="n">param2</span> <span class="o">=</span> <span class="n">getParameterByTag</span> <span class="p">(</span><span class="n">tag</span><span class="p">);</span> <span class="c1">///&lt; our parameter list</span>
+<span class="n">Parameter</span><span class="o">*</span> <span class="n">param3</span> <span class="o">=</span> <span class="n">findParameter</span> <span class="p">(</span><span class="s">&quot;paramname&quot;</span><span class="p">);</span> <span class="c1">///&lt; named parameter in our parameter list or overridden to access others</span>
+<span class="n">Parameter</span><span class="o">*</span> <span class="n">param4</span> <span class="o">=</span> <span class="n">getRootComponent</span> <span class="p">()</span><span class="o">-&gt;</span><span class="n">lookupParameter</span> <span class="p">(</span><span class="s">&quot;toplevelcomponent/childcomponent/paramname&quot;</span><span class="p">);</span> <span class="c1">///&lt; any parameter in the component tree</span>
+</pre></div>
+</div>
+</section>
+<section id="parameter-observation">
+<h2>Parameter Observation<a class="headerlink" href="#parameter-observation" title="Link to this heading"></a></h2>
+<p>A Component is a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_Core_Portable_IParamObserver.html#doxid-struct-core-1-1-portable-1-1-i-param-observer"><span class="std std-ref"><span class="pre">Core::Portable::IParamObserver</span></span></a></code>. It automatically observes changes of its own parameters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">MyComponent</span><span class="o">::</span><span class="n">paramChanged</span> <span class="p">(</span><span class="n">Parameter</span><span class="o">*</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">getTag</span> <span class="p">())</span>
+    <span class="p">{</span>
+    <span class="k">case</span> <span class="nl">toggle1</span> <span class="p">:</span>
+        <span class="c1">// do something</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">Component</span><span class="o">::</span><span class="n">paramChanged</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">msg</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> can observe parameters of other components by adding your component as an observer to some other parameter.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span><span class="o">*</span> <span class="n">otherParameter</span> <span class="o">=</span> <span class="n">getRootComponent</span> <span class="p">()</span><span class="o">-&gt;</span><span class="n">lookupParameter</span> <span class="p">(</span><span class="s">&quot;toplevelcomponent/childcomponent/paramname&quot;</span><span class="p">);</span>
+<span class="n">otherParameter</span><span class="o">-&gt;</span><span class="n">addObserver</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="persistance">
+<h2>Persistance<a class="headerlink" href="#persistance" title="Link to this heading"></a></h2>
+<p>The <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> class implements <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component-1a9c73955bb7710466b6c049c0d7db020f"><span class="std std-ref"><span class="pre">Core::Portable::Component::save</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component-1a91332e300b749a2dbfdd70b1186b04e2"><span class="std std-ref"><span class="pre">Core::Portable::Component::load</span></span></a></code> methods to store parameter data to memory section or file system.
+Example using a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_SettingFile.html#doxid-class-core-1-1-portable-1-1-setting-file"><span class="std std-ref"><span class="pre">Core::Portable::SettingFile</span></span></a></code> for storage:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// save</span>
+<span class="n">Attributes</span><span class="o">&amp;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">SettingFile</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">getSection</span> <span class="p">(</span><span class="n">getName</span> <span class="p">());</span>
+<span class="n">AttributesBuilder</span> <span class="nf">builder</span> <span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">OutputStorage</span> <span class="nf">storage</span> <span class="p">(</span><span class="n">builder</span><span class="p">);</span>
+<span class="n">save</span> <span class="p">(</span><span class="n">storage</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// load</span>
+<span class="n">Attributes</span><span class="o">&amp;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">SettingFile</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">getSection</span> <span class="p">(</span><span class="n">getName</span> <span class="p">());</span>
+<span class="n">InputStorage</span> <span class="nf">storage</span> <span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">load</span> <span class="p">(</span><span class="n">storage</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="dynamically-adding-components">
+<h2>Dynamically Adding Components<a class="headerlink" href="#dynamically-adding-components" title="Link to this heading"></a></h2>
+<p>You can dynamically create and add child components to your component. Cleanup is handled by the Component base class.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">addChild</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">SubComponent</span> <span class="p">(</span><span class="s">&quot;mySubComponent&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>You would create a custom <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> class as part of a component tree where it would manage data and functions related to a common purpose.
+Example usage of a component would be a controller for a graphical user interface section.
+In such a case a UI layout may contain several controls that are connected to parameters that are owned by your Component class. Your class can <code class="docutils literal notranslate"><span class="pre">load</span></code> and <code class="docutils literal notranslate"><span class="pre">save</span></code> the parameter values, perform functions related to user changes, etc.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parameters.html" class="btn btn-neutral float-left" title="Parameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="views.html" class="btn btn-neutral float-right" title="GUI for embedded applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

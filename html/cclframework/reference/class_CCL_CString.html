@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::CString &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template class Core::CStringBuffer" href="class_Core_CStringBuffer.html" />
+    <link rel="prev" title="struct CCL::PlainString" href="struct_CCL_PlainString.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
+          <li class="breadcrumb-item"><a href="group_text_string.html">Strings</a></li>
+      <li class="breadcrumb-item active">class CCL::CString</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-cstring">
+<span id="doxid-class-c-c-l-1-1-c-string"></span><span id="index-0"></span><h1>class CCL::CString<a class="headerlink" href="#class-ccl-cstring" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Immutable C-String class, safe for ASCII-encoded text only! <a class="reference internal" href="#details-class-c-c-l-1-1-c-string"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstring.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">CString</span><span class="p">:</span>
+    <span class="k">protected</span> <a class="reference internal" href="struct_CCL_PlainCString.html#doxid-struct-c-c-l-1-1-plain-c-string"><span class="std std-ref">CCL::PlainCString</span></a><span></span><span class="p">,</span>
+    <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits"><span class="std std-ref">Core::CStringTraits</span></a><span></span><span class="p">,</span>
+    <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier"><span class="std std-ref">Core::CStringClassifier</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <span class="n">CString</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1aff2515dfc79f2b87794cbb19310c522b"><span class="std std-ref">kEmpty</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a314d0726b0faf7f328ef97f6428858e3"><span class="std std-ref">CString</span></a><span></span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">text</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a3cf4df52703c7fd23c90600d88ee9331"><span class="std std-ref">CString</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1afb1ab44fdc4e15d81ea49a524c49bb31"><span class="std std-ref">subString</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">count</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a2957a409c05deec99bb9465c312ce2fe"><span class="std std-ref">getBetween</span></a><span></span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">suffix</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a3e129c575248c56cd2ae75ca6967e183"><span class="std std-ref">getBetween</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">suffix</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a1dd1ac25359837048c11ef6ae2194490"><span class="std std-ref">toUnicode</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> <span class="n">encoding</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faaaec5d5a33898d4450836a75ebc93aca87"><span class="std std-ref">Text::kASCII</span></a><span></span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">CString</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a5e7c510a623f18e39904c4c51dcaa457"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">text</span><span class="p">);</span>
+    <span class="n">CString</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1a6b81cad7a03553d1bd1ffe0db9a2515c"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">other</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-c-string-1abedd715503bb3727a8bdd6d5f87a48d1"><span class="std std-ref">getLineEnd</span></a><span></span> <span class="p">(</span><a class="reference internal" href="enum_CCL_Text_LineFormat.html#doxid-namespace-c-c-l-1-1-text-1a1947f5acdb8aaa1922a76aeb72905d7c"><span class="std std-ref">TextLineFormat</span></a><span></span> <span class="n">lineFormat</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_LineFormat.html#doxid-namespace-c-c-l-1-1-text-1a1947f5acdb8aaa1922a76aeb72905d7ca7e5f9c99873fce05491bf7cc4285025c"><span class="std std-ref">Text::kSystemLineFormat</span></a><span></span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">CStringPtr</span> <a class="reference internal" href="struct_CCL_PlainCString.html#doxid-struct-c-c-l-1-1-plain-c-string-1ad968ead0e92fd86453af86ac41d149c2"><span class="std std-ref">text</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_ICString.html#doxid-struct-c-c-l-1-1-i-c-string"><span class="std std-ref">ICString</span></a><span></span><span class="o">*</span> <a class="reference internal" href="struct_CCL_PlainCString.html#doxid-struct-c-c-l-1-1-plain-c-string-1aaa382df8b3c5796281c13e8f440902b3"><span class="std std-ref">theString</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1ad16a9a69e3b4813cf1f3eae57f088ab8"><span class="std std-ref">str</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1acf82f9b2937375c7b1cf3dccb3df3312"><span class="std std-ref">isEmpty</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a91213974fa3ac3959b1c355a9e588f8d"><span class="std std-ref">length</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a568c765460249c1dc70264db7ed945dd"><span class="std std-ref">copyTo</span></a><span></span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">charBuffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bufferSize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1ac5c2c0449a97830cdec20b468da194d0"><span class="std std-ref">index</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a85a96788dd92f5a658df5451977213d3"><span class="std std-ref">contains</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a39de5b68ec0f919fcdfa6620d601f504"><span class="std std-ref">startsWith</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a4dfe72fc3e9d757e290a9a1e66aebe88"><span class="std std-ref">endsWith</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a5e8877bf4a4a0ef2cc78efcc0f9e2ee0"><span class="std std-ref">index</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a42b1fa0e983a4f96f738fc192b08d8a6"><span class="std std-ref">index</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1b8422cae03bef872e8a8f8675f73dcc"><span class="std std-ref">uchar</span></a><span></span> <span class="n">c</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a302802545d099acee03aaedc9c09eb82"><span class="std std-ref">lastIndex</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a318e63f498a01aebeed92fd6fb63fa3e"><span class="std std-ref">lastIndex</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a1b8422cae03bef872e8a8f8675f73dcc"><span class="std std-ref">uchar</span></a><span></span> <span class="n">c</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a47b8c08e876cd300ffee5a1ad5f296b9"><span class="std std-ref">contains</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a352abd82e31491ba83b98af8cab47afe"><span class="std std-ref">compare</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">caseSensitive</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a15c883beeb49f059284748822902531e"><span class="std std-ref">getIntValue</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a56f1a81c92849566ae864511088eb7e8"><span class="std std-ref">int32</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a87d57014342736378ba57dc56bbf4caa"><span class="std std-ref">getIntValue</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a78d65cf7238c36c1b4081c87df829b75"><span class="std std-ref">scanInt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">fallback</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a7f03fef331eab241e0195272d50f23bb"><span class="std std-ref">scanLargetInt</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="n">fallback</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a050849ef2f2c365ef8ece49a1d997e32"><span class="std std-ref">getHexValue</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a6b345ced098231beaf046a4ebb3f66ef"><span class="std std-ref">getFloatValue</span></a><span></span> <span class="p">(</span><span class="kt">double</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1aa5cf2d9eb9a5f8bc3909f94d46227cef"><span class="std std-ref">getFloatValue</span></a><span></span> <span class="p">(</span><span class="kt">float</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1ad9b24526141c24749523c26269a8e7ca"><span class="std std-ref">scanFloat</span></a><span></span> <span class="p">(</span><span class="kt">float</span> <span class="n">fallback</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">double</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1aea2b8b96ff427044859fda80898bfee3"><span class="std std-ref">scanDouble</span></a><span></span> <span class="p">(</span><span class="kt">double</span> <span class="n">fallback</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a47417e3d72c7e00d10c6af6601b6821a"><span class="std std-ref">getHashCode</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a3c8c0698516fba72201b7acdd3f2b3e6"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a6e0158ba8335cff2c04a92a13dc45dad"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">S</span><span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1ab8696476f5643e3d55b7d291b34701fa"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits"><span class="std std-ref">CStringTraits</span></a><span></span> <span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">S</span><span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a60161bfc6f55664d8d2b857156eeb829"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits"><span class="std std-ref">CStringTraits</span></a><span></span> <span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a802947c485e8e367067cae40dfeceeeb"><span class="std std-ref">equalsUnsafe</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a3b621b8d5196fcaf330426d31635848e"><span class="std std-ref">at</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a400794a46ad5a6aafef4ec50a80f17ba"><span class="std std-ref">firstChar</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1ae65796d1515cda155328d28bc72d422d"><span class="std std-ref">lastChar</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a27e5e4cd319385e1e16b91ee521aef76"><span class="std std-ref">operator []</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringTraits.html#doxid-class-core-1-1-c-string-traits-1a515d68f8134bf125a691d6fb190da6fa"><span class="std std-ref">operator CStringPtr</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1ad29572a738360647acbe128e650cb177"><span class="std std-ref">isAlpha</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1ab16b1cdb234f05ccb9dfefb410c26ac0"><span class="std std-ref">isAlphaNumeric</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1a3e9bde0e0b05d6b0f0b70b61150a5e83"><span class="std std-ref">isWhitespace</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1a1044bcfbcf0d32964730d3af27f4b45d"><span class="std std-ref">isDigit</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1a991f6d87e74859f66b40d19c68f918f0"><span class="std std-ref">isASCII</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1a925048196c7dd4e0a6791c53eb6d53d6"><span class="std std-ref">isLowercase</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1aa3a6d39c48436c3c4d7be96e4efc25c1"><span class="std std-ref">isUppercase</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1ae04856d7ca3699055c5b8ed408072c1c"><span class="std std-ref">toLowercase</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">char</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_CStringClassifier.html#doxid-class-core-1-1-c-string-classifier-1aeb85455c5ec44cebbb4b021677f55cae"><span class="std std-ref">toUppercase</span></a><span></span> <span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-c-string"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Immutable C-String class, safe for ASCII-encoded text only!</p>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1aff2515dfc79f2b87794cbb19310c522b"><span id="index-1"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">CString</span> <span class="n">kEmpty</span></pre>
+<p>Empty C-String.</p>
+</section>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a314d0726b0faf7f328ef97f6428858e3"><span id="index-2"></span><span></span><span class="n">CString</span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">text</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">)</span></pre>
+<p>Construct with plain C-String.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a3cf4df52703c7fd23c90600d88ee9331"><span id="index-3"></span><span></span><span class="n">CString</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">other</span><span class="p">)</span></pre>
+<p>Copy constructor.</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1afb1ab44fdc4e15d81ea49a524c49bb31"><span id="index-4"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">subString</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">count</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Create substring.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a2957a409c05deec99bb9465c312ce2fe"><span id="index-5"></span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="n">getBetween</span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">suffix</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns substring between prefix and suffix, string must start with prefix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a3e129c575248c56cd2ae75ca6967e183"><span id="index-6"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">getBetween</span> <span class="p">(</span><a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">CStringPtr</span> <span class="n">suffix</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Sets result to the substring between prefix and suffix, string must start with prefix.</p>
+<p>Returns true if prefix and suffix match, even if the result between is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a1dd1ac25359837048c11ef6ae2194490"><span id="index-7"></span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">toUnicode</span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> <span class="n">encoding</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faaaec5d5a33898d4450836a75ebc93aca87"><span class="std std-ref">Text::kASCII</span></a><span></span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Convert to <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a5e7c510a623f18e39904c4c51dcaa457"><span id="index-8"></span><span></span><span class="n">CString</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">CStringPtr</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Assign plain C-String.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1a6b81cad7a03553d1bd1ffe0db9a2515c"><span id="index-9"></span><span></span><span class="n">CString</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">other</span><span class="p">)</span></pre>
+<p>Assign other C-String.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-c-string-1abedd715503bb3727a8bdd6d5f87a48d1"><span id="index-10"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">getLineEnd</span> <span class="p">(</span><a class="reference internal" href="enum_CCL_Text_LineFormat.html#doxid-namespace-c-c-l-1-1-text-1a1947f5acdb8aaa1922a76aeb72905d7c"><span class="std std-ref">TextLineFormat</span></a><span></span> <span class="n">lineFormat</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Text_LineFormat.html#doxid-namespace-c-c-l-1-1-text-1a1947f5acdb8aaa1922a76aeb72905d7ca7e5f9c99873fce05491bf7cc4285025c"><span class="std std-ref">Text::kSystemLineFormat</span></a><span></span><span class="p">)</span></pre>
+<p>Get line ending of given format.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_PlainString.html" class="btn btn-neutral float-left" title="struct CCL::PlainString" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Core_CStringBuffer.html" class="btn btn-neutral float-right" title="template class Core::CStringBuffer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

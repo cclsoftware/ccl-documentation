@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct Core::Bluetooth::IGattCentralObserver &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::Bluetooth::IGattCentralService" href="struct_Core_Bluetooth_IGattCentralService.html" />
+    <link rel="prev" title="struct Core::Bluetooth::IGattCentralFactory" href="struct_Core_Bluetooth_IGattCentralFactory.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_Bluetooth.html">namespace Core::Bluetooth</a></li>
+      <li class="breadcrumb-item active">struct Core::Bluetooth::IGattCentralObserver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-core-bluetooth-igattcentralobserver">
+<span id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer"></span><span id="index-0"></span><h1>struct Core::Bluetooth::IGattCentralObserver<a class="headerlink" href="#struct-core-bluetooth-igattcentralobserver" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coregattcentral.h&gt;</span>
+
+<span class="k">struct</span> <span class="n">IGattCentralObserver</span>
+<span class="p">{</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1add896b8a3378441e94bcc69288e89ec7"><span class="std std-ref">onStateChanged</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_Core_Bluetooth_GattCentralState.html#doxid-namespace-core-1-1-bluetooth-1ae5d7f9e1703dd335d63c5b6a9d0c1afa"><span class="std std-ref">GattCentralState</span></a><span></span> <span class="n">state</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a81f3649000833d45de524821f0516195"><span class="std std-ref">onDeviceAdded</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a530c2a216179295251f315b0d52a0594"><span class="std std-ref">onDeviceRemoved</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1aef7b5d8d2d1dedb3af2dcc538a0eddd5"><span class="std std-ref">onDeviceUpdated</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a5e61601c3e3746161f8ed4b8de9900d2"><span class="std std-ref">onConnectCompleted</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span class="std std-ref">ErrorCode</span></a><span></span> <span class="n">errorCode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a1277811ae68160f345cc60486f86b331"><span class="std std-ref">onDisconnectCompleted</span></a><span></span><span class="p">(</span>
+        <a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span class="std std-ref">ErrorCode</span></a><span></span> <span class="n">errorCode</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1af46ab04f50a706cf3d5667d6556bbbec"><span class="std std-ref">onConnectionRestored</span></a><span></span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a35a3b73c331feacda53d2bc520d4afb9"><span class="std std-ref">onScanningStarted</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a3c72c71206783929c55fe57c1effdebe"><span class="std std-ref">onScanningStopped</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1add896b8a3378441e94bcc69288e89ec7"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onStateChanged</span><span class="p">(</span><a class="reference internal" href="enum_Core_Bluetooth_GattCentralState.html#doxid-namespace-core-1-1-bluetooth-1ae5d7f9e1703dd335d63c5b6a9d0c1afa"><span class="std std-ref">GattCentralState</span></a><span></span> <span class="n">state</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>This function is called unsolicitedly whenever the global state of the <a class="reference internal" href="struct_Core_Bluetooth_IGattCentral.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central"><span class="std std-ref">IGattCentral</span></a> interface changes.</p>
+<p>Scan and connect methods may only be called when the state is kPoweredOn.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a81f3649000833d45de524821f0516195"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onDeviceAdded</span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>While scanning for devices, an advertisement for a previously undiscovered device has been received.</p>
+<p>This GattCentral instance has not yet communicated with the device or attempted to connect to it. This callback creates a new device instance. The lifetime of this instance ends with either <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a530c2a216179295251f315b0d52a0594"><span class="std std-ref">onDeviceRemoved()</span></a> or <a class="reference internal" href="global.html#doxid-coresocket-8lwip-8h-1a510ead576f102243b70f612d91b5823b"><span class="std std-ref">close()</span></a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a530c2a216179295251f315b0d52a0594"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onDeviceRemoved</span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>While scanning for devices, no advertisements for a previously discovered device have been received for at least kAdvertisementTimeout milliseconds and no connection to this device has been attempted or established.</p>
+<p>The lifetime of the device ends after this function returns.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1aef7b5d8d2d1dedb3af2dcc538a0eddd5"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onDeviceUpdated</span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>While scanning for device, a previously discovered (but not connected) device changed its name or manufacturer data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a5e61601c3e3746161f8ed4b8de9900d2"><span id="index-5"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onConnectCompleted</span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span class="std std-ref">ErrorCode</span></a><span></span> <span class="n">errorCode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>When connecting to a device using connectAsync(), a connection attempt has either failed or been successful.</p>
+<p>This method is never called unsolicitedly. If a device connected automatically (for example because of the autoReconnect flag), it responds with <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">onConnectionEstablished()</span></a> instead.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a1277811ae68160f345cc60486f86b331"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onDisconnectCompleted</span><span class="p">(</span>
+    <a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a2e9ab44e5b23efd9c60e0caf19a8f34e"><span class="std std-ref">ErrorCode</span></a><span></span> <span class="n">errorCode</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>When disconnecting from a device using disconnectAsync(), an existing connection has been terminated.</p>
+<p>This method is never called unsolicitedly.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1af46ab04f50a706cf3d5667d6556bbbec"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onConnectionRestored</span><span class="p">(</span><a class="reference internal" href="struct_Core_Bluetooth_IGattCentralDevice.html#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-device"><span class="std std-ref">IGattCentralDevice</span></a><span></span><span class="o">*</span> <span class="n">device</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>A connection to a device has been automatically reestablished after a short while without a previous call to connectAsync().</p>
+<p>If the connection can’t be restored automatically, it will be removed entirely with <a class="reference internal" href="#doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a530c2a216179295251f315b0d52a0594"><span class="std std-ref">onDeviceRemoved()</span></a> instead.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a35a3b73c331feacda53d2bc520d4afb9"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onScanningStarted</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>The GattCentral has started listening for advertisements.</p>
+<p>This callback may be called significantly later than the startScanning() function that triggered it, or not at all in case of an error.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-bluetooth-1-1-i-gatt-central-observer-1a3c72c71206783929c55fe57c1effdebe"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="n">onScanningStopped</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>The GattCentral has stopped listening for advertisements.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_Bluetooth_IGattCentralFactory.html" class="btn btn-neutral float-left" title="struct Core::Bluetooth::IGattCentralFactory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_Bluetooth_IGattCentralService.html" class="btn btn-neutral float-right" title="struct Core::Bluetooth::IGattCentralService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

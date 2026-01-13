@@ -1,0 +1,1932 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace CCL::ClassID &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct CCL::Win32::DpiAwarenessScope" href="struct_CCL_Win32_DpiAwarenessScope.html" />
+    <link rel="prev" title="struct CCL::ViewBox::StyleModifier" href="struct_CCL_ViewBox_StyleModifier.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+      <li class="breadcrumb-item active">namespace CCL::ClassID</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-ccl-classid">
+<span id="doxid-namespace-c-c-l-1-1-class-i-d"></span><span id="index-0"></span><h1>namespace CCL::ClassID<a class="headerlink" href="#namespace-ccl-classid" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Class IDs to be used with ccl_new. <a class="reference internal" href="#details-namespace-c-c-l-1-1-class-i-d"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">ClassID</span> <span class="p">{</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a9846b920ebe6ac2e25526d24fe9ddb26"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_FileIcons.html#doxid-class-c-c-l-1-1-file-icons"><span class="std std-ref">FileIcons</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x23d1a134</span><span class="p">,</span>
+    <span class="mh">0xc4bf</span><span class="p">,</span>
+    <span class="mh">0x472b</span><span class="p">,</span>
+    <span class="mh">0xb4</span><span class="p">,</span>
+    <span class="mh">0xe8</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0xec</span><span class="p">,</span>
+    <span class="mh">0x16</span><span class="p">,</span>
+    <span class="mh">0x73</span><span class="p">,</span>
+    <span class="mh">0x25</span><span class="p">,</span>
+    <span class="mh">0x69</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a20ef455f6eedbb099b4aacbd96f74290"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ZlibCompression</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xf677662</span><span class="p">,</span>
+    <span class="mh">0xcda7</span><span class="p">,</span>
+    <span class="mh">0x40b0</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0x88</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xbf</span><span class="p">,</span>
+    <span class="mh">0xfc</span><span class="p">,</span>
+    <span class="mh">0xc6</span><span class="p">,</span>
+    <span class="mh">0xfb</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a712c6a951092ea022951983986a0c54f"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Base16Encoding</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb460cac2</span><span class="p">,</span>
+    <span class="mh">0xc56c</span><span class="p">,</span>
+    <span class="mh">0x47e7</span><span class="p">,</span>
+    <span class="mh">0xb4</span><span class="p">,</span>
+    <span class="mh">0xbd</span><span class="p">,</span>
+    <span class="mh">0x9c</span><span class="p">,</span>
+    <span class="mh">0x11</span><span class="p">,</span>
+    <span class="mh">0x4b</span><span class="p">,</span>
+    <span class="mh">0xe4</span><span class="p">,</span>
+    <span class="mh">0xf8</span><span class="p">,</span>
+    <span class="mh">0x72</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a42b991c1e9a2378fd880dd706ad451a8"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Base32Encoding</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x6ed03060</span><span class="p">,</span>
+    <span class="mh">0xbc9e</span><span class="p">,</span>
+    <span class="mh">0x4e9d</span><span class="p">,</span>
+    <span class="mh">0x97</span><span class="p">,</span>
+    <span class="mh">0x7d</span><span class="p">,</span>
+    <span class="mh">0xfe</span><span class="p">,</span>
+    <span class="mh">0xe8</span><span class="p">,</span>
+    <span class="mh">0x80</span><span class="p">,</span>
+    <span class="mh">0xb5</span><span class="p">,</span>
+    <span class="mh">0x5</span><span class="p">,</span>
+    <span class="mh">0x41</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a2db14db605d5adb413173560d89e1266"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Base64Encoding</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x16a5be85</span><span class="p">,</span>
+    <span class="mh">0x5d6b</span><span class="p">,</span>
+    <span class="mh">0x47d0</span><span class="p">,</span>
+    <span class="mh">0xb9</span><span class="p">,</span>
+    <span class="mh">0xb6</span><span class="p">,</span>
+    <span class="mh">0x18</span><span class="p">,</span>
+    <span class="mh">0x4c</span><span class="p">,</span>
+    <span class="mh">0xa2</span><span class="p">,</span>
+    <span class="mh">0xb5</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0x10</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a52770172fa3ea08e07f6e0be7d6db95c"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">View</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbc8b82de</span><span class="p">,</span>
+    <span class="mh">0x3695</span><span class="p">,</span>
+    <span class="mh">0x42b5</span><span class="p">,</span>
+    <span class="mh">0xa5</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0x35</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0xaf</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1acbec562e01611e7cca3b022a9c60d63f"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ScrollView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x4bd10568</span><span class="p">,</span>
+    <span class="mh">0x9659</span><span class="p">,</span>
+    <span class="mh">0x4a5c</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0xdf</span><span class="p">,</span>
+    <span class="mh">0xa6</span><span class="p">,</span>
+    <span class="mh">0x60</span><span class="p">,</span>
+    <span class="mh">0xcf</span><span class="p">,</span>
+    <span class="mh">0xee</span><span class="p">,</span>
+    <span class="mh">0x24</span><span class="p">,</span>
+    <span class="mh">0x82</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a16eae327c2ff6575776e5cdef4bb32cc"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LayoutView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x53176234</span><span class="p">,</span>
+    <span class="mh">0xB55E</span><span class="p">,</span>
+    <span class="mh">0x1749</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x76</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x11</span><span class="p">,</span>
+    <span class="mh">0xED</span><span class="p">,</span>
+    <span class="mh">0x7F</span><span class="p">,</span>
+    <span class="mh">0xDC</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1aac7c1f844cadaa704c0df004e323b1f8"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">BoxLayoutView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xa1d58be3</span><span class="p">,</span>
+    <span class="mh">0x5501</span><span class="p">,</span>
+    <span class="mh">0x4997</span><span class="p">,</span>
+    <span class="mh">0xbe</span><span class="p">,</span>
+    <span class="mh">0x70</span><span class="p">,</span>
+    <span class="mh">0xe</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0x26</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0x59</span><span class="p">,</span>
+    <span class="mh">0xf1</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a172ec39a40e4398b683f1f477c6e0311"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Border</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xaeb1835c</span><span class="p">,</span>
+    <span class="mh">0x90e2</span><span class="p">,</span>
+    <span class="mh">0x4fe8</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xe7</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0x33</span><span class="p">,</span>
+    <span class="mh">0x7d</span><span class="p">,</span>
+    <span class="mh">0x6e</span><span class="p">,</span>
+    <span class="mh">0x3b</span><span class="p">,</span>
+    <span class="mh">0xac</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ae463e1a9d5af7a0a5b13297f9a8a7d3a"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ListControl</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5f53609a</span><span class="p">,</span>
+    <span class="mh">0xfbca</span><span class="p">,</span>
+    <span class="mh">0x4ccd</span><span class="p">,</span>
+    <span class="mh">0xb0</span><span class="p">,</span>
+    <span class="mh">0xb9</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0xee</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0x14</span><span class="p">,</span>
+    <span class="mh">0x60</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a24a222e72721907d999e2ca6d7b6a0df"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DropBoxControl</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x801E6857</span><span class="p">,</span>
+    <span class="mh">0x625B</span><span class="p">,</span>
+    <span class="mh">0x4CC2</span><span class="p">,</span>
+    <span class="mh">0x96</span><span class="p">,</span>
+    <span class="mh">0xFE</span><span class="p">,</span>
+    <span class="mh">0xAC</span><span class="p">,</span>
+    <span class="mh">0x54</span><span class="p">,</span>
+    <span class="mh">0x74</span><span class="p">,</span>
+    <span class="mh">0xCB</span><span class="p">,</span>
+    <span class="mh">0xF5</span><span class="p">,</span>
+    <span class="mh">0xDE</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1adbe5ca8d8edf19d6366795895dd1521d"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Label</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x909eabe6</span><span class="p">,</span>
+    <span class="mh">0x47e3</span><span class="p">,</span>
+    <span class="mh">0x4eab</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0x80</span><span class="p">,</span>
+    <span class="mh">0xc5</span><span class="p">,</span>
+    <span class="mh">0x2b</span><span class="p">,</span>
+    <span class="mh">0xec</span><span class="p">,</span>
+    <span class="mh">0x9e</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0xa5</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ad703e8189cc0dfc847b59b8a948ce428"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DialogGroup</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x7235d21a</span><span class="p">,</span>
+    <span class="mh">0xae3c</span><span class="p">,</span>
+    <span class="mh">0x4d6d</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xd</span><span class="p">,</span>
+    <span class="mh">0x8e</span><span class="p">,</span>
+    <span class="mh">0x2f</span><span class="p">,</span>
+    <span class="mh">0xc0</span><span class="p">,</span>
+    <span class="mh">0xf5</span><span class="p">,</span>
+    <span class="mh">0xde</span><span class="p">,</span>
+    <span class="mh">0xf4</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1aff9e8f1035b51a28862eef97a99599dc"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">EditBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x49292662</span><span class="p">,</span>
+    <span class="mh">0xD30F</span><span class="p">,</span>
+    <span class="mh">0x4C11</span><span class="p">,</span>
+    <span class="mh">0xBA</span><span class="p">,</span>
+    <span class="mh">0x7B</span><span class="p">,</span>
+    <span class="mh">0xAF</span><span class="p">,</span>
+    <span class="mh">0x41</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0xCC</span><span class="p">,</span>
+    <span class="mh">0x17</span><span class="p">,</span>
+    <span class="mh">0xAB</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a46284c8246963537bfaf32c93d87eec3"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ValueBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x3D2770D5</span><span class="p">,</span>
+    <span class="mh">0x7C36</span><span class="p">,</span>
+    <span class="mh">0x40E9</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0xCC</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x79</span><span class="p">,</span>
+    <span class="mh">0xB3</span><span class="p">,</span>
+    <span class="mh">0x7D</span><span class="p">,</span>
+    <span class="mh">0x32</span><span class="p">,</span>
+    <span class="mh">0x7E</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a188e2878392430d55126a97591cb8f40"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ComboBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x8382E45D</span><span class="p">,</span>
+    <span class="mh">0xF6EA</span><span class="p">,</span>
+    <span class="mh">0x499C</span><span class="p">,</span>
+    <span class="mh">0xB8</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0x03</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xA9</span><span class="p">,</span>
+    <span class="mh">0x90</span><span class="p">,</span>
+    <span class="mh">0xB2</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ab548da3017c6be4736d115fe7b37b6bd"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LinkView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x3804ac91</span><span class="p">,</span>
+    <span class="mh">0xd0fb</span><span class="p">,</span>
+    <span class="mh">0x4fec</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0xb</span><span class="p">,</span>
+    <span class="mh">0x86</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0xd9</span><span class="p">,</span>
+    <span class="mh">0x3b</span><span class="p">,</span>
+    <span class="mh">0x5f</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a70c15d548f58a626500f6fc6e4f96ae0"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">VariantView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x571f5de8</span><span class="p">,</span>
+    <span class="mh">0x5f97</span><span class="p">,</span>
+    <span class="mh">0x4f42</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xc2</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0xab</span><span class="p">,</span>
+    <span class="mh">0xb6</span><span class="p">,</span>
+    <span class="mh">0x56</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xc1</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1aaec2812c63effee943a47e26aed6a46e"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Toggle</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x72c02c75</span><span class="p">,</span>
+    <span class="mh">0x1d38</span><span class="p">,</span>
+    <span class="mh">0x44d6</span><span class="p">,</span>
+    <span class="mh">0xaa</span><span class="p">,</span>
+    <span class="mh">0x58</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0xe0</span><span class="p">,</span>
+    <span class="mh">0x5f</span><span class="p">,</span>
+    <span class="mh">0x92</span><span class="p">,</span>
+    <span class="mh">0xc5</span><span class="p">,</span>
+    <span class="mh">0x1f</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a6550858c070201c2e4a0d41d4919f2af"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">RadioButton</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbf2208e3</span><span class="p">,</span>
+    <span class="mh">0xa4</span><span class="p">,</span>
+    <span class="mh">0x4ae2</span><span class="p">,</span>
+    <span class="mh">0x97</span><span class="p">,</span>
+    <span class="mh">0x63</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0x9c</span><span class="p">,</span>
+    <span class="mh">0x5e</span><span class="p">,</span>
+    <span class="mh">0x17</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0xb5</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a90237846ccf186f2536c444301bebd41"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PopupBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xECACA482</span><span class="p">,</span>
+    <span class="mh">0xD7F3</span><span class="p">,</span>
+    <span class="mh">0x416E</span><span class="p">,</span>
+    <span class="mh">0xBB</span><span class="p">,</span>
+    <span class="mh">0x73</span><span class="p">,</span>
+    <span class="mh">0x79</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x28</span><span class="p">,</span>
+    <span class="mh">0xDF</span><span class="p">,</span>
+    <span class="mh">0x8E</span><span class="p">,</span>
+    <span class="mh">0xD8</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a3326201f92a52e7dbd67687888dfd09f"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Knob</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xcc6d91c2</span><span class="p">,</span>
+    <span class="mh">0x4274</span><span class="p">,</span>
+    <span class="mh">0x42ae</span><span class="p">,</span>
+    <span class="mh">0x9f</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0x5</span><span class="p">,</span>
+    <span class="mh">0x3c</span><span class="p">,</span>
+    <span class="mh">0x3f</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x6c</span><span class="p">,</span>
+    <span class="mh">0xf3</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ab922fcc65164011e06facaec7613a452"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AlertBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x9bf3ecb5</span><span class="p">,</span>
+    <span class="mh">0x5bb2</span><span class="p">,</span>
+    <span class="mh">0x4eb4</span><span class="p">,</span>
+    <span class="mh">0xaa</span><span class="p">,</span>
+    <span class="mh">0xac</span><span class="p">,</span>
+    <span class="mh">0x29</span><span class="p">,</span>
+    <span class="mh">0xaf</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0xa5</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a88b79cca4023b514b9b597458d6eb2ab"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">BasicAnimation</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xe6b9650e</span><span class="p">,</span>
+    <span class="mh">0x874e</span><span class="p">,</span>
+    <span class="mh">0x4d1f</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0x8e</span><span class="p">,</span>
+    <span class="mh">0x13</span><span class="p">,</span>
+    <span class="mh">0x8b</span><span class="p">,</span>
+    <span class="mh">0x15</span><span class="p">,</span>
+    <span class="mh">0x4f</span><span class="p">,</span>
+    <span class="mh">0x8a</span><span class="p">,</span>
+    <span class="mh">0xaa</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1acd0705bb7100666bba3545aa68deb724"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AnimationManager</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x85196530</span><span class="p">,</span>
+    <span class="mh">0x58e2</span><span class="p">,</span>
+    <span class="mh">0x4ec1</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0x1</span><span class="p">,</span>
+    <span class="mh">0x1a</span><span class="p">,</span>
+    <span class="mh">0x6</span><span class="p">,</span>
+    <span class="mh">0x15</span><span class="p">,</span>
+    <span class="mh">0xee</span><span class="p">,</span>
+    <span class="mh">0xb6</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a561db4e96396aad2e6003f5264228625"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CommandSelector</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xebd102b8</span><span class="p">,</span>
+    <span class="mh">0xb508</span><span class="p">,</span>
+    <span class="mh">0x4153</span><span class="p">,</span>
+    <span class="mh">0x81</span><span class="p">,</span>
+    <span class="mh">0x22</span><span class="p">,</span>
+    <span class="mh">0x18</span><span class="p">,</span>
+    <span class="mh">0x20</span><span class="p">,</span>
+    <span class="mh">0x6f</span><span class="p">,</span>
+    <span class="mh">0x75</span><span class="p">,</span>
+    <span class="mh">0x4f</span><span class="p">,</span>
+    <span class="mh">0xd7</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a6dd39abbfa34867fd8a19b63a26f76cf"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CommandEditor</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x211bb2f0</span><span class="p">,</span>
+    <span class="mh">0xad36</span><span class="p">,</span>
+    <span class="mh">0x44a8</span><span class="p">,</span>
+    <span class="mh">0x9f</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0x42</span><span class="p">,</span>
+    <span class="mh">0xf2</span><span class="p">,</span>
+    <span class="mh">0x2e</span><span class="p">,</span>
+    <span class="mh">0x6</span><span class="p">,</span>
+    <span class="mh">0xbc</span><span class="p">,</span>
+    <span class="mh">0xcb</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ac34cc70f90441c5a565390deeb518368"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CommandBarModel</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x31074e2a</span><span class="p">,</span>
+    <span class="mh">0xf4b0</span><span class="p">,</span>
+    <span class="mh">0x4827</span><span class="p">,</span>
+    <span class="mh">0x87</span><span class="p">,</span>
+    <span class="mh">0x5</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0x6d</span><span class="p">,</span>
+    <span class="mh">0xe</span><span class="p">,</span>
+    <span class="mh">0x2f</span><span class="p">,</span>
+    <span class="mh">0x82</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a9b57bd89a45da9f0d00a788be0771393"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CommandContainer</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xD0271918</span><span class="p">,</span>
+    <span class="mh">0xF7B0</span><span class="p">,</span>
+    <span class="mh">0x4CB4</span><span class="p">,</span>
+    <span class="mh">0x9A</span><span class="p">,</span>
+    <span class="mh">0xAB</span><span class="p">,</span>
+    <span class="mh">0x96</span><span class="p">,</span>
+    <span class="mh">0x93</span><span class="p">,</span>
+    <span class="mh">0xDE</span><span class="p">,</span>
+    <span class="mh">0x78</span><span class="p">,</span>
+    <span class="mh">0x13</span><span class="p">,</span>
+    <span class="mh">0x9A</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1acd88e916586700e19bcc5cc9b6574fee"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DragSession</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5447ed24</span><span class="p">,</span>
+    <span class="mh">0x42cf</span><span class="p">,</span>
+    <span class="mh">0x43ed</span><span class="p">,</span>
+    <span class="mh">0x8a</span><span class="p">,</span>
+    <span class="mh">0x5b</span><span class="p">,</span>
+    <span class="mh">0xa9</span><span class="p">,</span>
+    <span class="mh">0x56</span><span class="p">,</span>
+    <span class="mh">0x4b</span><span class="p">,</span>
+    <span class="mh">0x93</span><span class="p">,</span>
+    <span class="mh">0xea</span><span class="p">,</span>
+    <span class="mh">0x5f</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a5867ed4cfc1801cc586e5f5424bd8c97"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">FileSelector</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xacfd316a</span><span class="p">,</span>
+    <span class="mh">0x371d</span><span class="p">,</span>
+    <span class="mh">0x4ba2</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0x7e</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0x7a</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0xbf</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ad16baf7d8137a00d071351ac3a921946"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">FolderSelector</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x898fbf4d</span><span class="p">,</span>
+    <span class="mh">0x15d</span><span class="p">,</span>
+    <span class="mh">0x4754</span><span class="p">,</span>
+    <span class="mh">0x93</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0x7a</span><span class="p">,</span>
+    <span class="mh">0xa7</span><span class="p">,</span>
+    <span class="mh">0x0</span><span class="p">,</span>
+    <span class="mh">0x82</span><span class="p">,</span>
+    <span class="mh">0xfc</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1afe07d8313295d722cdea4221e5ee49ae"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Form</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x1528b171</span><span class="p">,</span>
+    <span class="mh">0xcd36</span><span class="p">,</span>
+    <span class="mh">0x44d3</span><span class="p">,</span>
+    <span class="mh">0x81</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0xeb</span><span class="p">,</span>
+    <span class="mh">0x5f</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xa8</span><span class="p">,</span>
+    <span class="mh">0x62</span><span class="p">,</span>
+    <span class="mh">0x1b</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a8ac37b9b3affe8c24f0a358d2d6aeb23"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">HelpInfoBuilder</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5196abae</span><span class="p">,</span>
+    <span class="mh">0xbcf5</span><span class="p">,</span>
+    <span class="mh">0x403f</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0xdb</span><span class="p">,</span>
+    <span class="mh">0xbc</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0xf9</span><span class="p">,</span>
+    <span class="mh">0xe6</span><span class="p">,</span>
+    <span class="mh">0xb2</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ae29f778748b37e5d297147f2c874bbf1"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">HelpInfoCollection</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xee576883</span><span class="p">,</span>
+    <span class="mh">0x638d</span><span class="p">,</span>
+    <span class="mh">0x4a0b</span><span class="p">,</span>
+    <span class="mh">0x8a</span><span class="p">,</span>
+    <span class="mh">0x2e</span><span class="p">,</span>
+    <span class="mh">0x2</span><span class="p">,</span>
+    <span class="mh">0x7e</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x4c</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0xc5</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a420a14a613d0761bfba8e70c3cbd59ae"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ColumnHeaderList</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xE0C5B54B</span><span class="p">,</span>
+    <span class="mh">0xBAA3</span><span class="p">,</span>
+    <span class="mh">0x4DAA</span><span class="p">,</span>
+    <span class="mh">0xBE</span><span class="p">,</span>
+    <span class="mh">0x2D</span><span class="p">,</span>
+    <span class="mh">0xE1</span><span class="p">,</span>
+    <span class="mh">0x4C</span><span class="p">,</span>
+    <span class="mh">0xB5</span><span class="p">,</span>
+    <span class="mh">0x0D</span><span class="p">,</span>
+    <span class="mh">0x56</span><span class="p">,</span>
+    <span class="mh">0x13</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ac754f06f86668a96f088ce264f713ac3"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ItemListSelection</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x7764797A</span><span class="p">,</span>
+    <span class="mh">0xB532</span><span class="p">,</span>
+    <span class="mh">0x48E3</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0x1A</span><span class="p">,</span>
+    <span class="mh">0x22</span><span class="p">,</span>
+    <span class="mh">0x74</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0x70</span><span class="p">,</span>
+    <span class="mh">0x0C</span><span class="p">,</span>
+    <span class="mh">0x61</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1af09db2764085ba6d7cf550560db17649"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Menu</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x1c1ff2c7</span><span class="p">,</span>
+    <span class="mh">0xeabe</span><span class="p">,</span>
+    <span class="mh">0x4b0c</span><span class="p">,</span>
+    <span class="mh">0xab</span><span class="p">,</span>
+    <span class="mh">0x94</span><span class="p">,</span>
+    <span class="mh">0xc2</span><span class="p">,</span>
+    <span class="mh">0x72</span><span class="p">,</span>
+    <span class="mh">0x8b</span><span class="p">,</span>
+    <span class="mh">0xfb</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0x12</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a6d2bb9b75d98c9b93381474e6f65e8e1"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">VariantMenuBar</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xd0d769c9</span><span class="p">,</span>
+    <span class="mh">0xe469</span><span class="p">,</span>
+    <span class="mh">0x445a</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0x9</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x7f</span><span class="p">,</span>
+    <span class="mh">0x55</span><span class="p">,</span>
+    <span class="mh">0xe1</span><span class="p">,</span>
+    <span class="mh">0xa0</span><span class="p">,</span>
+    <span class="mh">0xf5</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1adc4f2d7da73acbe364742aa5a7f8bdff"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AutoScroller</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x2A38F2E9</span><span class="p">,</span>
+    <span class="mh">0x2AD2</span><span class="p">,</span>
+    <span class="mh">0x4C3F</span><span class="p">,</span>
+    <span class="mh">0x9C</span><span class="p">,</span>
+    <span class="mh">0x46</span><span class="p">,</span>
+    <span class="mh">0xA6</span><span class="p">,</span>
+    <span class="mh">0xDD</span><span class="p">,</span>
+    <span class="mh">0xE5</span><span class="p">,</span>
+    <span class="mh">0xBF</span><span class="p">,</span>
+    <span class="mh">0x5A</span><span class="p">,</span>
+    <span class="mh">0xE6</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1af4e8cb0deaac5ae6b1c485bf7393074a"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TouchInputManager</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x6da36ba4</span><span class="p">,</span>
+    <span class="mh">0xb839</span><span class="p">,</span>
+    <span class="mh">0x440b</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0x31</span><span class="p">,</span>
+    <span class="mh">0xea</span><span class="p">,</span>
+    <span class="mh">0x71</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0x11</span><span class="p">,</span>
+    <span class="mh">0x7f</span><span class="p">,</span>
+    <span class="mh">0xfe</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ac3cab1b5f0ae40601af9fb5c3ee01d85"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">NotifyIcon</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x6d51b752</span><span class="p">,</span>
+    <span class="mh">0xb1c9</span><span class="p">,</span>
+    <span class="mh">0x44c2</span><span class="p">,</span>
+    <span class="mh">0xb5</span><span class="p">,</span>
+    <span class="mh">0xb4</span><span class="p">,</span>
+    <span class="mh">0x88</span><span class="p">,</span>
+    <span class="mh">0x6c</span><span class="p">,</span>
+    <span class="mh">0x61</span><span class="p">,</span>
+    <span class="mh">0x10</span><span class="p">,</span>
+    <span class="mh">0xc</span><span class="p">,</span>
+    <span class="mh">0xe4</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a463e59a96b0b3f50bffc3dca18462286"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ColorPalette</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x26368A5A</span><span class="p">,</span>
+    <span class="mh">0x631F</span><span class="p">,</span>
+    <span class="mh">0x49E9</span><span class="p">,</span>
+    <span class="mh">0xA0</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x30</span><span class="p">,</span>
+    <span class="mh">0x4D</span><span class="p">,</span>
+    <span class="mh">0x7B</span><span class="p">,</span>
+    <span class="mh">0x3E</span><span class="p">,</span>
+    <span class="mh">0x2C</span><span class="p">,</span>
+    <span class="mh">0x85</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a5c87aa408121493c352ce841d7918921"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ImagePalette</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x193761d7</span><span class="p">,</span>
+    <span class="mh">0xdd8c</span><span class="p">,</span>
+    <span class="mh">0x4b28</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0xca</span><span class="p">,</span>
+    <span class="mh">0x52</span><span class="p">,</span>
+    <span class="mh">0x85</span><span class="p">,</span>
+    <span class="mh">0x7f</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x4</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab186fe9106442df53e34169a79397f3d"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PaletteModel</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xF6951DE4</span><span class="p">,</span>
+    <span class="mh">0x4EAB</span><span class="p">,</span>
+    <span class="mh">0x4854</span><span class="p">,</span>
+    <span class="mh">0xB5</span><span class="p">,</span>
+    <span class="mh">0x47</span><span class="p">,</span>
+    <span class="mh">0x5B</span><span class="p">,</span>
+    <span class="mh">0x34</span><span class="p">,</span>
+    <span class="mh">0x1D</span><span class="p">,</span>
+    <span class="mh">0x5A</span><span class="p">,</span>
+    <span class="mh">0x82</span><span class="p">,</span>
+    <span class="mh">0x9B</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a077acaf7612ae207d558826b5ba4debe"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ColorPaletteModel</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x60EDF04B</span><span class="p">,</span>
+    <span class="mh">0x5A5B</span><span class="p">,</span>
+    <span class="mh">0x433D</span><span class="p">,</span>
+    <span class="mh">0x90</span><span class="p">,</span>
+    <span class="mh">0xCF</span><span class="p">,</span>
+    <span class="mh">0x3B</span><span class="p">,</span>
+    <span class="mh">0x64</span><span class="p">,</span>
+    <span class="mh">0x8D</span><span class="p">,</span>
+    <span class="mh">0x07</span><span class="p">,</span>
+    <span class="mh">0x4E</span><span class="p">,</span>
+    <span class="mh">0x46</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1aa2ca9a6699645e6b4387387a2feda2e1"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ParameterMenuBuilder</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb56d5931</span><span class="p">,</span>
+    <span class="mh">0x2225</span><span class="p">,</span>
+    <span class="mh">0x42bf</span><span class="p">,</span>
+    <span class="mh">0x8c</span><span class="p">,</span>
+    <span class="mh">0x93</span><span class="p">,</span>
+    <span class="mh">0xe7</span><span class="p">,</span>
+    <span class="mh">0x61</span><span class="p">,</span>
+    <span class="mh">0x8e</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0x71</span><span class="p">,</span>
+    <span class="mh">0x35</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a460835703d71397fea776bb243891622"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PopupSelector</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xFCDB7599</span><span class="p">,</span>
+    <span class="mh">0x685E</span><span class="p">,</span>
+    <span class="mh">0x4E20</span><span class="p">,</span>
+    <span class="mh">0x9C</span><span class="p">,</span>
+    <span class="mh">0x7B</span><span class="p">,</span>
+    <span class="mh">0x4C</span><span class="p">,</span>
+    <span class="mh">0xC2</span><span class="p">,</span>
+    <span class="mh">0x1A</span><span class="p">,</span>
+    <span class="mh">0x2B</span><span class="p">,</span>
+    <span class="mh">0xDE</span><span class="p">,</span>
+    <span class="mh">0x00</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1aefa2a8e4928442a5b40e8331a4e452f3"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ProgressDialog</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x70346f66</span><span class="p">,</span>
+    <span class="mh">0x3984</span><span class="p">,</span>
+    <span class="mh">0x45b3</span><span class="p">,</span>
+    <span class="mh">0xa5</span><span class="p">,</span>
+    <span class="mh">0x7c</span><span class="p">,</span>
+    <span class="mh">0xa6</span><span class="p">,</span>
+    <span class="mh">0x10</span><span class="p">,</span>
+    <span class="mh">0x0</span><span class="p">,</span>
+    <span class="mh">0xf2</span><span class="p">,</span>
+    <span class="mh">0x39</span><span class="p">,</span>
+    <span class="mh">0xc0</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a7b8f82ecfde98245e3f46507a56c54b0"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CoreSkinLoader</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x8683f346</span><span class="p">,</span>
+    <span class="mh">0x6f53</span><span class="p">,</span>
+    <span class="mh">0x4f8e</span><span class="p">,</span>
+    <span class="mh">0x99</span><span class="p">,</span>
+    <span class="mh">0xd5</span><span class="p">,</span>
+    <span class="mh">0x9</span><span class="p">,</span>
+    <span class="mh">0x94</span><span class="p">,</span>
+    <span class="mh">0x53</span><span class="p">,</span>
+    <span class="mh">0x7e</span><span class="p">,</span>
+    <span class="mh">0x48</span><span class="p">,</span>
+    <span class="mh">0xc7</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1afd60d015348166c2ce07994ab1d5a4ad"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ImageElement</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbe10fcf</span><span class="p">,</span>
+    <span class="mh">0xea14</span><span class="p">,</span>
+    <span class="mh">0x40d5</span><span class="p">,</span>
+    <span class="mh">0xaf</span><span class="p">,</span>
+    <span class="mh">0x3b</span><span class="p">,</span>
+    <span class="mh">0x3e</span><span class="p">,</span>
+    <span class="mh">0x1f</span><span class="p">,</span>
+    <span class="mh">0xa8</span><span class="p">,</span>
+    <span class="mh">0xd9</span><span class="p">,</span>
+    <span class="mh">0x4f</span><span class="p">,</span>
+    <span class="mh">0xd1</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a888a7575927bbfcf1bcdbf0106c8d7ed"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">FloatingSprite</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x7da79f66</span><span class="p">,</span>
+    <span class="mh">0x4676</span><span class="p">,</span>
+    <span class="mh">0x460e</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0xde</span><span class="p">,</span>
+    <span class="mh">0xf8</span><span class="p">,</span>
+    <span class="mh">0x74</span><span class="p">,</span>
+    <span class="mh">0xbd</span><span class="p">,</span>
+    <span class="mh">0xf4</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a86b0dc837c67fa40bfd9dc76fbac2050"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">TooltipPopup</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xA077C193</span><span class="p">,</span>
+    <span class="mh">0x3A76</span><span class="p">,</span>
+    <span class="mh">0x4834</span><span class="p">,</span>
+    <span class="mh">0xB2</span><span class="p">,</span>
+    <span class="mh">0x34</span><span class="p">,</span>
+    <span class="mh">0x05</span><span class="p">,</span>
+    <span class="mh">0x78</span><span class="p">,</span>
+    <span class="mh">0xF1</span><span class="p">,</span>
+    <span class="mh">0x13</span><span class="p">,</span>
+    <span class="mh">0xAA</span><span class="p">,</span>
+    <span class="mh">0x32</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1af484342303f71a2d426c2a0dc077cd98"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">UserView3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x87ba8c3d</span><span class="p">,</span>
+    <span class="mh">0x8e1</span><span class="p">,</span>
+    <span class="mh">0x4e7f</span><span class="p">,</span>
+    <span class="mh">0xa8</span><span class="p">,</span>
+    <span class="mh">0x68</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0x56</span><span class="p">,</span>
+    <span class="mh">0x9f</span><span class="p">,</span>
+    <span class="mh">0x26</span><span class="p">,</span>
+    <span class="mh">0x85</span><span class="p">,</span>
+    <span class="mh">0xb5</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a8e807e66838325b9b5e5a66c78b2cb19"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">SolidColorMaterial3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x1c21f76f</span><span class="p">,</span>
+    <span class="mh">0xf4a</span><span class="p">,</span>
+    <span class="mh">0x489b</span><span class="p">,</span>
+    <span class="mh">0x81</span><span class="p">,</span>
+    <span class="mh">0x30</span><span class="p">,</span>
+    <span class="mh">0x12</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0x7a</span><span class="p">,</span>
+    <span class="mh">0x2a</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xce</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ab49149625b5e3dfbb7474c59d287ccb0"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CustomMaterial3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xc3648bad</span><span class="p">,</span>
+    <span class="mh">0xca80</span><span class="p">,</span>
+    <span class="mh">0x4c06</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0xfa</span><span class="p">,</span>
+    <span class="mh">0x4e</span><span class="p">,</span>
+    <span class="mh">0x04</span><span class="p">,</span>
+    <span class="mh">0x25</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xcf</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a3d5def189f32ff85b4ffc6c4df5dab54"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Billboard3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xf14a69e8</span><span class="p">,</span>
+    <span class="mh">0x9864</span><span class="p">,</span>
+    <span class="mh">0x4cc8</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0xbd</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0x5a</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xe4</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0xfa</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a8ba4b8793aa2bce3386de4ff38132036"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Scene3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb0b9e54a</span><span class="p">,</span>
+    <span class="mh">0xa8c7</span><span class="p">,</span>
+    <span class="mh">0x45fd</span><span class="p">,</span>
+    <span class="mh">0x85</span><span class="p">,</span>
+    <span class="mh">0xe1</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0x58</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0x1b</span><span class="p">,</span>
+    <span class="mh">0x44</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1ac635779e3b29d3e5c0bded4963db8b9d"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AmbientLight3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xacacdd9c</span><span class="p">,</span>
+    <span class="mh">0xcee2</span><span class="p">,</span>
+    <span class="mh">0x4765</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0x30</span><span class="p">,</span>
+    <span class="mh">0x59</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0xf0</span><span class="p">,</span>
+    <span class="mh">0xa2</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0xa0</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a5ad54c34af3a26dc0d5b84f84724bc90"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PointLight3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbabe86ca</span><span class="p">,</span>
+    <span class="mh">0x29d2</span><span class="p">,</span>
+    <span class="mh">0x498a</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0x32</span><span class="p">,</span>
+    <span class="mh">0xb0</span><span class="p">,</span>
+    <span class="mh">0xb8</span><span class="p">,</span>
+    <span class="mh">0x34</span><span class="p">,</span>
+    <span class="mh">0x97</span><span class="p">,</span>
+    <span class="mh">0xfb</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1a01f4ee58b601c25866687fd14a6bef45"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CubeTessellator3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xabd9356a</span><span class="p">,</span>
+    <span class="mh">0x7c95</span><span class="p">,</span>
+    <span class="mh">0x4cd8</span><span class="p">,</span>
+    <span class="mh">0x8f</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0x42</span><span class="p">,</span>
+    <span class="mh">0xd8</span><span class="p">,</span>
+    <span class="mh">0x4b</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0xf3</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a5085876fec57a19c9d634073a6fab718"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">BitmapPainter</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x421579be</span><span class="p">,</span>
+    <span class="mh">0x7d53</span><span class="p">,</span>
+    <span class="mh">0x4716</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0x8a</span><span class="p">,</span>
+    <span class="mh">0xa7</span><span class="p">,</span>
+    <span class="mh">0x8f</span><span class="p">,</span>
+    <span class="mh">0xad</span><span class="p">,</span>
+    <span class="mh">0x0</span><span class="p">,</span>
+    <span class="mh">0xf8</span><span class="p">,</span>
+    <span class="mh">0xb</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a23906a2d75b2d19ad453f6e6328b4235"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">BitmapProcessor</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x2aec6ea5</span><span class="p">,</span>
+    <span class="mh">0xbe3f</span><span class="p">,</span>
+    <span class="mh">0x43b7</span><span class="p">,</span>
+    <span class="mh">0x8d</span><span class="p">,</span>
+    <span class="mh">0x43</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x23</span><span class="p">,</span>
+    <span class="mh">0x23</span><span class="p">,</span>
+    <span class="mh">0xad</span><span class="p">,</span>
+    <span class="mh">0x69</span><span class="p">,</span>
+    <span class="mh">0x43</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a984ad3894a7f6b3609834f48dd24b20b"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">RootLayer</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x82116a5c</span><span class="p">,</span>
+    <span class="mh">0x3bc4</span><span class="p">,</span>
+    <span class="mh">0x46d4</span><span class="p">,</span>
+    <span class="mh">0xba</span><span class="p">,</span>
+    <span class="mh">0x22</span><span class="p">,</span>
+    <span class="mh">0x6e</span><span class="p">,</span>
+    <span class="mh">0xc5</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0xb6</span><span class="p">,</span>
+    <span class="mh">0x1a</span><span class="p">,</span>
+    <span class="mh">0xa3</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1aa9764eb62787288f1fc46c060737311e"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">MarkupPainter</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x9253c60e</span><span class="p">,</span>
+    <span class="mh">0xfd30</span><span class="p">,</span>
+    <span class="mh">0x4706</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0x03</span><span class="p">,</span>
+    <span class="mh">0x1d</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0x48</span><span class="p">,</span>
+    <span class="mh">0xfd</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0x49</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a88b59885ab29692bb98e83cd0e028451"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ContextMenu</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x6161c214</span><span class="p">,</span>
+    <span class="mh">0x351a</span><span class="p">,</span>
+    <span class="mh">0x4378</span><span class="p">,</span>
+    <span class="mh">0x94</span><span class="p">,</span>
+    <span class="mh">0x5f</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0xf2</span><span class="p">,</span>
+    <span class="mh">0x1c</span><span class="p">,</span>
+    <span class="mh">0xa8</span><span class="p">,</span>
+    <span class="mh">0x63</span><span class="p">,</span>
+    <span class="mh">0x2f</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a5960e2ed4cd6f8f9947e6c4b08fa48fc"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_Parameter.html#doxid-class-c-c-l-1-1-parameter"><span class="std std-ref">Parameter</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb7856683</span><span class="p">,</span>
+    <span class="mh">0x5f77</span><span class="p">,</span>
+    <span class="mh">0x4c4c</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0xd</span><span class="p">,</span>
+    <span class="mh">0x43</span><span class="p">,</span>
+    <span class="mh">0x50</span><span class="p">,</span>
+    <span class="mh">0xe2</span><span class="p">,</span>
+    <span class="mh">0x51</span><span class="p">,</span>
+    <span class="mh">0xbe</span><span class="p">,</span>
+    <span class="mh">0x66</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a8dc2143b4bc5dc3aa6aa937bc0d7ef9a"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_StringParam.html#doxid-class-c-c-l-1-1-string-param"><span class="std std-ref">StringParam</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xaf7656dc</span><span class="p">,</span>
+    <span class="mh">0xdd3e</span><span class="p">,</span>
+    <span class="mh">0x47b7</span><span class="p">,</span>
+    <span class="mh">0xa7</span><span class="p">,</span>
+    <span class="mh">0x63</span><span class="p">,</span>
+    <span class="mh">0x74</span><span class="p">,</span>
+    <span class="mh">0x6e</span><span class="p">,</span>
+    <span class="mh">0x1b</span><span class="p">,</span>
+    <span class="mh">0xc2</span><span class="p">,</span>
+    <span class="mh">0xc7</span><span class="p">,</span>
+    <span class="mh">0xb3</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1aca5e0bad2775aaa344ffda7d63777b1e"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_MenuParam.html#doxid-class-c-c-l-1-1-menu-param"><span class="std std-ref">MenuParam</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5b640b62</span><span class="p">,</span>
+    <span class="mh">0x3bd9</span><span class="p">,</span>
+    <span class="mh">0x48f3</span><span class="p">,</span>
+    <span class="mh">0x8d</span><span class="p">,</span>
+    <span class="mh">0xca</span><span class="p">,</span>
+    <span class="mh">0xaf</span><span class="p">,</span>
+    <span class="mh">0xc3</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0xea</span><span class="p">,</span>
+    <span class="mh">0x04</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab09f9124f3b471df79e59c55dcdd35d6"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_FloatParam.html#doxid-class-c-c-l-1-1-float-param"><span class="std std-ref">FloatParam</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xf548b970</span><span class="p">,</span>
+    <span class="mh">0xe58b</span><span class="p">,</span>
+    <span class="mh">0x43de</span><span class="p">,</span>
+    <span class="mh">0xa9</span><span class="p">,</span>
+    <span class="mh">0xfe</span><span class="p">,</span>
+    <span class="mh">0x12</span><span class="p">,</span>
+    <span class="mh">0x1d</span><span class="p">,</span>
+    <span class="mh">0x43</span><span class="p">,</span>
+    <span class="mh">0x78</span><span class="p">,</span>
+    <span class="mh">0xbc</span><span class="p">,</span>
+    <span class="mh">0xc5</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a1f0a33daec860d4616fcb3d2459b5284"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_CommandParam.html#doxid-class-c-c-l-1-1-command-param"><span class="std std-ref">CommandParam</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xe046bde8</span><span class="p">,</span>
+    <span class="mh">0xd9cd</span><span class="p">,</span>
+    <span class="mh">0x4a16</span><span class="p">,</span>
+    <span class="mh">0x94</span><span class="p">,</span>
+    <span class="mh">0x6a</span><span class="p">,</span>
+    <span class="mh">0xf0</span><span class="p">,</span>
+    <span class="mh">0xe5</span><span class="p">,</span>
+    <span class="mh">0x2e</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xc6</span><span class="p">,</span>
+    <span class="mh">0xb3</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab83b1d19c1d754b6f8561da6fefb66a3"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_ColorParam.html#doxid-class-c-c-l-1-1-color-param"><span class="std std-ref">ColorParam</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x8167ae15</span><span class="p">,</span>
+    <span class="mh">0x651</span><span class="p">,</span>
+    <span class="mh">0x489a</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0xcb</span><span class="p">,</span>
+    <span class="mh">0x24</span><span class="p">,</span>
+    <span class="mh">0x2a</span><span class="p">,</span>
+    <span class="mh">0x1e</span><span class="p">,</span>
+    <span class="mh">0xa9</span><span class="p">,</span>
+    <span class="mh">0x8d</span>
+<span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespace-c-c-l-1-1-class-i-d-1aac84b73bf098ade4b8eef88d6ebc1120"><span class="std std-ref">DEFINE_CID</span></a><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">SQLite</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xDA833DD2</span><span class="p">,</span>
+    <span class="mh">0x7AC8</span><span class="p">,</span>
+    <span class="mh">0x423F</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0xE9</span><span class="p">,</span>
+    <span class="mh">0xB5</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0x0B</span><span class="p">,</span>
+    <span class="mh">0x04</span><span class="p">,</span>
+    <span class="mh">0x90</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1afc420fa6d5de4de0e265185be39e2897"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_Attributes.html#doxid-class-c-c-l-1-1-attributes"><span class="std std-ref">Attributes</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x138ed4e7</span><span class="p">,</span>
+    <span class="mh">0x1786</span><span class="p">,</span>
+    <span class="mh">0x4a9d</span><span class="p">,</span>
+    <span class="mh">0xa0</span><span class="p">,</span>
+    <span class="mh">0xef</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0x6f</span><span class="p">,</span>
+    <span class="mh">0xba</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0xb4</span><span class="p">,</span>
+    <span class="mh">0xda</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a473703a20e65fa8d166061ae05db8fb0"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ExclusiveLock</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb0a26115</span><span class="p">,</span>
+    <span class="mh">0x732a</span><span class="p">,</span>
+    <span class="mh">0x4351</span><span class="p">,</span>
+    <span class="mh">0x8c</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0xea</span><span class="p">,</span>
+    <span class="mh">0xac</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0xcc</span><span class="p">,</span>
+    <span class="mh">0x8</span><span class="p">,</span>
+    <span class="mh">0x6e</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1aa81eb4f76e918c6937db67fe97004d11"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ReadWriteLock</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x900461d4</span><span class="p">,</span>
+    <span class="mh">0x63c1</span><span class="p">,</span>
+    <span class="mh">0x41df</span><span class="p">,</span>
+    <span class="mh">0xa7</span><span class="p">,</span>
+    <span class="mh">0xa2</span><span class="p">,</span>
+    <span class="mh">0x87</span><span class="p">,</span>
+    <span class="mh">0x6</span><span class="p">,</span>
+    <span class="mh">0x60</span><span class="p">,</span>
+    <span class="mh">0xa4</span><span class="p">,</span>
+    <span class="mh">0x8d</span><span class="p">,</span>
+    <span class="mh">0x89</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ad1f31b1dc9f82a5bf8ccb2ade4d12417"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">FolderPackage</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb94dd3d1</span><span class="p">,</span>
+    <span class="mh">0x7fc7</span><span class="p">,</span>
+    <span class="mh">0x40c3</span><span class="p">,</span>
+    <span class="mh">0xb5</span><span class="p">,</span>
+    <span class="mh">0xf3</span><span class="p">,</span>
+    <span class="mh">0xab</span><span class="p">,</span>
+    <span class="mh">0xc0</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x4b</span><span class="p">,</span>
+    <span class="mh">0xb</span><span class="p">,</span>
+    <span class="mh">0x58</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a796fa40ba552ab4e37c82ccfd201a580"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PackageFile</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x6b4597cd</span><span class="p">,</span>
+    <span class="mh">0xd7f6</span><span class="p">,</span>
+    <span class="mh">0x422a</span><span class="p">,</span>
+    <span class="mh">0x88</span><span class="p">,</span>
+    <span class="mh">0xcc</span><span class="p">,</span>
+    <span class="mh">0x5c</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0xca</span><span class="p">,</span>
+    <span class="mh">0x92</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0x89</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1a7ffa219a7ce1d3114886259fb5ce3e69"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ZipFile</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x706b59b6</span><span class="p">,</span>
+    <span class="mh">0xec0</span><span class="p">,</span>
+    <span class="mh">0x4243</span><span class="p">,</span>
+    <span class="mh">0x90</span><span class="p">,</span>
+    <span class="mh">0x7d</span><span class="p">,</span>
+    <span class="mh">0x9</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0xbc</span><span class="p">,</span>
+    <span class="mh">0x5a</span><span class="p">,</span>
+    <span class="mh">0x7b</span><span class="p">,</span>
+    <span class="mh">0x69</span>
+<span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-class-i-d-1ae0e869368951cea07e133a9ba34b0016"><span></span><span class="n">DEFINE_CID</span></span><span></span> <span class="p">(</span>
+    <span class="n">CriticalSection</span><span class="p">,</span>
+    <span class="mh">0xd50316c0</span><span class="p">,</span>
+    <span class="mh">0x6c0a</span><span class="p">,</span>
+    <span class="mh">0x455b</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0xc</span><span class="p">,</span>
+    <span class="mh">0x5a</span><span class="p">,</span>
+    <span class="mh">0x22</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0xf</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0x8e</span>
+<span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace ClassID</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-class-i-d"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Class IDs to be used with ccl_new.</p>
+<p>&lt;&gt;</p>
+<section id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a9846b920ebe6ac2e25526d24fe9ddb26"><span id="index-1"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_FileIcons.html#doxid-class-c-c-l-1-1-file-icons"><span class="std std-ref">FileIcons</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x23d1a134</span><span class="p">,</span>
+    <span class="mh">0xc4bf</span><span class="p">,</span>
+    <span class="mh">0x472b</span><span class="p">,</span>
+    <span class="mh">0xb4</span><span class="p">,</span>
+    <span class="mh">0xe8</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0xec</span><span class="p">,</span>
+    <span class="mh">0x16</span><span class="p">,</span>
+    <span class="mh">0x73</span><span class="p">,</span>
+    <span class="mh">0x25</span><span class="p">,</span>
+    <span class="mh">0x69</span>
+<span class="p">)</span></pre>
+<p><a class="reference internal" href="class_CCL_File.html#doxid-class-c-c-l-1-1-file"><span class="std std-ref">File</span></a> icons instance.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a20ef455f6eedbb099b4aacbd96f74290"><span id="index-2"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ZlibCompression</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xf677662</span><span class="p">,</span>
+    <span class="mh">0xcda7</span><span class="p">,</span>
+    <span class="mh">0x40b0</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0x88</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xbf</span><span class="p">,</span>
+    <span class="mh">0xfc</span><span class="p">,</span>
+    <span class="mh">0xc6</span><span class="p">,</span>
+    <span class="mh">0xfb</span>
+<span class="p">)</span></pre>
+<p>ZLib Compression.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a52770172fa3ea08e07f6e0be7d6db95c"><span id="index-3"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">View</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbc8b82de</span><span class="p">,</span>
+    <span class="mh">0x3695</span><span class="p">,</span>
+    <span class="mh">0x42b5</span><span class="p">,</span>
+    <span class="mh">0xa5</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0x35</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0xaf</span>
+<span class="p">)</span></pre>
+<p>Basic view class.</p>
+<p>Null view class.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1acbec562e01611e7cca3b022a9c60d63f"><span id="index-4"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ScrollView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x4bd10568</span><span class="p">,</span>
+    <span class="mh">0x9659</span><span class="p">,</span>
+    <span class="mh">0x4a5c</span><span class="p">,</span>
+    <span class="mh">0x91</span><span class="p">,</span>
+    <span class="mh">0xdf</span><span class="p">,</span>
+    <span class="mh">0xa6</span><span class="p">,</span>
+    <span class="mh">0x60</span><span class="p">,</span>
+    <span class="mh">0xcf</span><span class="p">,</span>
+    <span class="mh">0xee</span><span class="p">,</span>
+    <span class="mh">0x24</span><span class="p">,</span>
+    <span class="mh">0x82</span>
+<span class="p">)</span></pre>
+<p>ScrollView (supports <a class="reference internal" href="struct_CCL_IScrollView.html#doxid-struct-c-c-l-1-1-i-scroll-view"><span class="std std-ref">IScrollView</span></a>).</p>
+<p>ScrollBar.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a16eae327c2ff6575776e5cdef4bb32cc"><span id="index-5"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LayoutView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x53176234</span><span class="p">,</span>
+    <span class="mh">0xB55E</span><span class="p">,</span>
+    <span class="mh">0x1749</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x76</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x11</span><span class="p">,</span>
+    <span class="mh">0xED</span><span class="p">,</span>
+    <span class="mh">0x7F</span><span class="p">,</span>
+    <span class="mh">0xDC</span>
+<span class="p">)</span></pre>
+<p>LayoutView.</p>
+<p>AnchorLayoutView.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1aac7c1f844cadaa704c0df004e323b1f8"><span id="index-6"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">BoxLayoutView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xa1d58be3</span><span class="p">,</span>
+    <span class="mh">0x5501</span><span class="p">,</span>
+    <span class="mh">0x4997</span><span class="p">,</span>
+    <span class="mh">0xbe</span><span class="p">,</span>
+    <span class="mh">0x70</span><span class="p">,</span>
+    <span class="mh">0xe</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0x26</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0x59</span><span class="p">,</span>
+    <span class="mh">0xf1</span>
+<span class="p">)</span></pre>
+<p>BoxLayoutView.</p>
+<p>Divider.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a172ec39a40e4398b683f1f477c6e0311"><span id="index-7"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Border</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xaeb1835c</span><span class="p">,</span>
+    <span class="mh">0x90e2</span><span class="p">,</span>
+    <span class="mh">0x4fe8</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xe7</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0x33</span><span class="p">,</span>
+    <span class="mh">0x7d</span><span class="p">,</span>
+    <span class="mh">0x6e</span><span class="p">,</span>
+    <span class="mh">0x3b</span><span class="p">,</span>
+    <span class="mh">0xac</span>
+<span class="p">)</span></pre>
+<p>Border.</p>
+<p>Host view for <a class="reference internal" href="struct_CCL_IUserControl.html#doxid-struct-c-c-l-1-1-i-user-control"><span class="std std-ref">IUserControl</span></a> (supports <a class="reference internal" href="struct_CCL_IUserControlHost.html#doxid-struct-c-c-l-1-1-i-user-control-host"><span class="std std-ref">IUserControlHost</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ae463e1a9d5af7a0a5b13297f9a8a7d3a"><span id="index-8"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ListControl</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5f53609a</span><span class="p">,</span>
+    <span class="mh">0xfbca</span><span class="p">,</span>
+    <span class="mh">0x4ccd</span><span class="p">,</span>
+    <span class="mh">0xb0</span><span class="p">,</span>
+    <span class="mh">0xb9</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0xee</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0x14</span><span class="p">,</span>
+    <span class="mh">0x60</span>
+<span class="p">)</span></pre>
+<p>ListControl (supports <a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a>).</p>
+<p>TreeControl (supports <a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a24a222e72721907d999e2ca6d7b6a0df"><span id="index-9"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DropBoxControl</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x801E6857</span><span class="p">,</span>
+    <span class="mh">0x625B</span><span class="p">,</span>
+    <span class="mh">0x4CC2</span><span class="p">,</span>
+    <span class="mh">0x96</span><span class="p">,</span>
+    <span class="mh">0xFE</span><span class="p">,</span>
+    <span class="mh">0xAC</span><span class="p">,</span>
+    <span class="mh">0x54</span><span class="p">,</span>
+    <span class="mh">0x74</span><span class="p">,</span>
+    <span class="mh">0xCB</span><span class="p">,</span>
+    <span class="mh">0xF5</span><span class="p">,</span>
+    <span class="mh">0xDE</span>
+<span class="p">)</span></pre>
+<p>DropBoxControl (supports <a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a>).</p>
+<p>DropBox (supports <a class="reference internal" href="struct_CCL_IItemView.html#doxid-struct-c-c-l-1-1-i-item-view"><span class="std std-ref">IItemView</span></a>).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1adbe5ca8d8edf19d6366795895dd1521d"><span id="index-10"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Label</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x909eabe6</span><span class="p">,</span>
+    <span class="mh">0x47e3</span><span class="p">,</span>
+    <span class="mh">0x4eab</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0x80</span><span class="p">,</span>
+    <span class="mh">0xc5</span><span class="p">,</span>
+    <span class="mh">0x2b</span><span class="p">,</span>
+    <span class="mh">0xec</span><span class="p">,</span>
+    <span class="mh">0x9e</span><span class="p">,</span>
+    <span class="mh">0xf1</span><span class="p">,</span>
+    <span class="mh">0xa5</span>
+<span class="p">)</span></pre>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> label.</p>
+<p>Heading label.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ad703e8189cc0dfc847b59b8a948ce428"><span id="index-11"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DialogGroup</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x7235d21a</span><span class="p">,</span>
+    <span class="mh">0xae3c</span><span class="p">,</span>
+    <span class="mh">0x4d6d</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xd</span><span class="p">,</span>
+    <span class="mh">0x8e</span><span class="p">,</span>
+    <span class="mh">0x2f</span><span class="p">,</span>
+    <span class="mh">0xc0</span><span class="p">,</span>
+    <span class="mh">0xf5</span><span class="p">,</span>
+    <span class="mh">0xde</span><span class="p">,</span>
+    <span class="mh">0xf4</span>
+<span class="p">)</span></pre>
+<p>Dialog group.</p>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> Box.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1aff9e8f1035b51a28862eef97a99599dc"><span id="index-12"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">EditBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x49292662</span><span class="p">,</span>
+    <span class="mh">0xD30F</span><span class="p">,</span>
+    <span class="mh">0x4C11</span><span class="p">,</span>
+    <span class="mh">0xBA</span><span class="p">,</span>
+    <span class="mh">0x7B</span><span class="p">,</span>
+    <span class="mh">0xAF</span><span class="p">,</span>
+    <span class="mh">0x41</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0xCC</span><span class="p">,</span>
+    <span class="mh">0x17</span><span class="p">,</span>
+    <span class="mh">0xAB</span>
+<span class="p">)</span></pre>
+<p>Edit Box.</p>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> Editor.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a46284c8246963537bfaf32c93d87eec3"><span id="index-13"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ValueBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x3D2770D5</span><span class="p">,</span>
+    <span class="mh">0x7C36</span><span class="p">,</span>
+    <span class="mh">0x40E9</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0xCC</span><span class="p">,</span>
+    <span class="mh">0x27</span><span class="p">,</span>
+    <span class="mh">0x79</span><span class="p">,</span>
+    <span class="mh">0xB3</span><span class="p">,</span>
+    <span class="mh">0x7D</span><span class="p">,</span>
+    <span class="mh">0x32</span><span class="p">,</span>
+    <span class="mh">0x7E</span>
+<span class="p">)</span></pre>
+<p>Value Box.</p>
+<p>Select Box.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a188e2878392430d55126a97591cb8f40"><span id="index-14"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ComboBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x8382E45D</span><span class="p">,</span>
+    <span class="mh">0xF6EA</span><span class="p">,</span>
+    <span class="mh">0x499C</span><span class="p">,</span>
+    <span class="mh">0xB8</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0x03</span><span class="p">,</span>
+    <span class="mh">0x95</span><span class="p">,</span>
+    <span class="mh">0xA9</span><span class="p">,</span>
+    <span class="mh">0x90</span><span class="p">,</span>
+    <span class="mh">0xB2</span>
+<span class="p">)</span></pre>
+<p>Combo Box.</p>
+<p>SegmentBox.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab548da3017c6be4736d115fe7b37b6bd"><span id="index-15"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">LinkView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x3804ac91</span><span class="p">,</span>
+    <span class="mh">0xd0fb</span><span class="p">,</span>
+    <span class="mh">0x4fec</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xa</span><span class="p">,</span>
+    <span class="mh">0xb</span><span class="p">,</span>
+    <span class="mh">0x86</span><span class="p">,</span>
+    <span class="mh">0xae</span><span class="p">,</span>
+    <span class="mh">0xd9</span><span class="p">,</span>
+    <span class="mh">0x3b</span><span class="p">,</span>
+    <span class="mh">0x5f</span>
+<span class="p">)</span></pre>
+<p>Hyperlink View.</p>
+<p>ImageView.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a70c15d548f58a626500f6fc6e4f96ae0"><span id="index-16"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">VariantView</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x571f5de8</span><span class="p">,</span>
+    <span class="mh">0x5f97</span><span class="p">,</span>
+    <span class="mh">0x4f42</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xc2</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0xab</span><span class="p">,</span>
+    <span class="mh">0xb6</span><span class="p">,</span>
+    <span class="mh">0x56</span><span class="p">,</span>
+    <span class="mh">0xb2</span><span class="p">,</span>
+    <span class="mh">0xc1</span>
+<span class="p">)</span></pre>
+<p>VariantView.</p>
+<p>Button.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1aaec2812c63effee943a47e26aed6a46e"><span id="index-17"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Toggle</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x72c02c75</span><span class="p">,</span>
+    <span class="mh">0x1d38</span><span class="p">,</span>
+    <span class="mh">0x44d6</span><span class="p">,</span>
+    <span class="mh">0xaa</span><span class="p">,</span>
+    <span class="mh">0x58</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0xe0</span><span class="p">,</span>
+    <span class="mh">0x5f</span><span class="p">,</span>
+    <span class="mh">0x92</span><span class="p">,</span>
+    <span class="mh">0xc5</span><span class="p">,</span>
+    <span class="mh">0x1f</span>
+<span class="p">)</span></pre>
+<p>Toggle.</p>
+<p>CheckBox.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a6550858c070201c2e4a0d41d4919f2af"><span id="index-18"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">RadioButton</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbf2208e3</span><span class="p">,</span>
+    <span class="mh">0xa4</span><span class="p">,</span>
+    <span class="mh">0x4ae2</span><span class="p">,</span>
+    <span class="mh">0x97</span><span class="p">,</span>
+    <span class="mh">0x63</span><span class="p">,</span>
+    <span class="mh">0x84</span><span class="p">,</span>
+    <span class="mh">0x9c</span><span class="p">,</span>
+    <span class="mh">0x5e</span><span class="p">,</span>
+    <span class="mh">0x17</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0xb5</span>
+<span class="p">)</span></pre>
+<p>Radio Button.</p>
+<p>Tool Button.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a90237846ccf186f2536c444301bebd41"><span id="index-19"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PopupBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xECACA482</span><span class="p">,</span>
+    <span class="mh">0xD7F3</span><span class="p">,</span>
+    <span class="mh">0x416E</span><span class="p">,</span>
+    <span class="mh">0xBB</span><span class="p">,</span>
+    <span class="mh">0x73</span><span class="p">,</span>
+    <span class="mh">0x79</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x28</span><span class="p">,</span>
+    <span class="mh">0xDF</span><span class="p">,</span>
+    <span class="mh">0x8E</span><span class="p">,</span>
+    <span class="mh">0xD8</span>
+<span class="p">)</span></pre>
+<p>PopupBox.</p>
+<p>Slider.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a3326201f92a52e7dbd67687888dfd09f"><span id="index-20"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Knob</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xcc6d91c2</span><span class="p">,</span>
+    <span class="mh">0x4274</span><span class="p">,</span>
+    <span class="mh">0x42ae</span><span class="p">,</span>
+    <span class="mh">0x9f</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0x5</span><span class="p">,</span>
+    <span class="mh">0x3c</span><span class="p">,</span>
+    <span class="mh">0x3f</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x6c</span><span class="p">,</span>
+    <span class="mh">0xf3</span>
+<span class="p">)</span></pre>
+<p>Knob.</p>
+<p>Progress Bar.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab922fcc65164011e06facaec7613a452"><span id="index-21"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AlertBox</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x9bf3ecb5</span><span class="p">,</span>
+    <span class="mh">0x5bb2</span><span class="p">,</span>
+    <span class="mh">0x4eb4</span><span class="p">,</span>
+    <span class="mh">0xaa</span><span class="p">,</span>
+    <span class="mh">0xac</span><span class="p">,</span>
+    <span class="mh">0x29</span><span class="p">,</span>
+    <span class="mh">0xaf</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0x66</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0xa5</span>
+<span class="p">)</span></pre>
+<p><a class="reference internal" href="namespace_CCL_Alert.html#doxid-namespace-c-c-l-1-1-alert"><span class="std std-ref">Alert</span></a> Box [<a class="reference internal" href="struct_CCL_IAlertBox.html#doxid-struct-c-c-l-1-1-i-alert-box"><span class="std std-ref">IAlertBox</span></a>].</p>
+<p>Dialog Information [<a class="reference internal" href="struct_CCL_IDialogInformation.html#doxid-struct-c-c-l-1-1-i-dialog-information"><span class="std std-ref">IDialogInformation</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1afe07d8313295d722cdea4221e5ee49ae"><span id="index-22"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Form</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x1528b171</span><span class="p">,</span>
+    <span class="mh">0xcd36</span><span class="p">,</span>
+    <span class="mh">0x44d3</span><span class="p">,</span>
+    <span class="mh">0x81</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0xeb</span><span class="p">,</span>
+    <span class="mh">0x5f</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xa8</span><span class="p">,</span>
+    <span class="mh">0x62</span><span class="p">,</span>
+    <span class="mh">0x1b</span>
+<span class="p">)</span></pre>
+<p>Form class.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a8ac37b9b3affe8c24f0a358d2d6aeb23"><span id="index-23"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">HelpInfoBuilder</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x5196abae</span><span class="p">,</span>
+    <span class="mh">0xbcf5</span><span class="p">,</span>
+    <span class="mh">0x403f</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0xdb</span><span class="p">,</span>
+    <span class="mh">0xbc</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0xf9</span><span class="p">,</span>
+    <span class="mh">0xe6</span><span class="p">,</span>
+    <span class="mh">0xb2</span>
+<span class="p">)</span></pre>
+<p>Help Info Builder [<a class="reference internal" href="struct_CCL_IHelpInfoBuilder.html#doxid-struct-c-c-l-1-1-i-help-info-builder"><span class="std std-ref">IHelpInfoBuilder</span></a>, <a class="reference internal" href="struct_CCL_IPresentable.html#doxid-struct-c-c-l-1-1-i-presentable"><span class="std std-ref">IPresentable</span></a>].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ae29f778748b37e5d297147f2c874bbf1"><span id="index-24"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">HelpInfoCollection</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xee576883</span><span class="p">,</span>
+    <span class="mh">0x638d</span><span class="p">,</span>
+    <span class="mh">0x4a0b</span><span class="p">,</span>
+    <span class="mh">0x8a</span><span class="p">,</span>
+    <span class="mh">0x2e</span><span class="p">,</span>
+    <span class="mh">0x2</span><span class="p">,</span>
+    <span class="mh">0x7e</span><span class="p">,</span>
+    <span class="mh">0x77</span><span class="p">,</span>
+    <span class="mh">0x4c</span><span class="p">,</span>
+    <span class="mh">0x9a</span><span class="p">,</span>
+    <span class="mh">0xc5</span>
+<span class="p">)</span></pre>
+<p>Help Info Collection [<a class="reference internal" href="struct_CCL_IHelpInfoCollection.html#doxid-struct-c-c-l-1-1-i-help-info-collection"><span class="std std-ref">IHelpInfoCollection</span></a>].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a460835703d71397fea776bb243891622"><span id="index-25"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PopupSelector</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xFCDB7599</span><span class="p">,</span>
+    <span class="mh">0x685E</span><span class="p">,</span>
+    <span class="mh">0x4E20</span><span class="p">,</span>
+    <span class="mh">0x9C</span><span class="p">,</span>
+    <span class="mh">0x7B</span><span class="p">,</span>
+    <span class="mh">0x4C</span><span class="p">,</span>
+    <span class="mh">0xC2</span><span class="p">,</span>
+    <span class="mh">0x1A</span><span class="p">,</span>
+    <span class="mh">0x2B</span><span class="p">,</span>
+    <span class="mh">0xDE</span><span class="p">,</span>
+    <span class="mh">0x00</span>
+<span class="p">)</span></pre>
+<p>Popup Selector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1aefa2a8e4928442a5b40e8331a4e452f3"><span id="index-26"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ProgressDialog</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x70346f66</span><span class="p">,</span>
+    <span class="mh">0x3984</span><span class="p">,</span>
+    <span class="mh">0x45b3</span><span class="p">,</span>
+    <span class="mh">0xa5</span><span class="p">,</span>
+    <span class="mh">0x7c</span><span class="p">,</span>
+    <span class="mh">0xa6</span><span class="p">,</span>
+    <span class="mh">0x10</span><span class="p">,</span>
+    <span class="mh">0x0</span><span class="p">,</span>
+    <span class="mh">0xf2</span><span class="p">,</span>
+    <span class="mh">0x39</span><span class="p">,</span>
+    <span class="mh">0xc0</span>
+<span class="p">)</span></pre>
+<p>Progress dialog (supports <a class="reference internal" href="struct_CCL_IProgressNotify.html#doxid-struct-c-c-l-1-1-i-progress-notify"><span class="std std-ref">IProgressNotify</span></a>, <a class="reference internal" href="struct_CCL_IProgressDialog.html#doxid-struct-c-c-l-1-1-i-progress-dialog"><span class="std std-ref">IProgressDialog</span></a>, <a class="reference internal" href="struct_CCL_IProgressDetails.html#doxid-struct-c-c-l-1-1-i-progress-details"><span class="std std-ref">IProgressDetails</span></a>).</p>
+<p>Modal progress dialog.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a7b8f82ecfde98245e3f46507a56c54b0"><span id="index-27"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CoreSkinLoader</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x8683f346</span><span class="p">,</span>
+    <span class="mh">0x6f53</span><span class="p">,</span>
+    <span class="mh">0x4f8e</span><span class="p">,</span>
+    <span class="mh">0x99</span><span class="p">,</span>
+    <span class="mh">0xd5</span><span class="p">,</span>
+    <span class="mh">0x9</span><span class="p">,</span>
+    <span class="mh">0x94</span><span class="p">,</span>
+    <span class="mh">0x53</span><span class="p">,</span>
+    <span class="mh">0x7e</span><span class="p">,</span>
+    <span class="mh">0x48</span><span class="p">,</span>
+    <span class="mh">0xc7</span>
+<span class="p">)</span></pre>
+<p><a class="reference internal" href="struct_CCL_ISkinLoader.html#doxid-struct-c-c-l-1-1-i-skin-loader"><span class="std std-ref">ISkinLoader</span></a> class for JSON (core) skins, can be created via ccl_new&lt;&gt;.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a8e807e66838325b9b5e5a66c78b2cb19"><span id="index-28"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">SolidColorMaterial3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0x1c21f76f</span><span class="p">,</span>
+    <span class="mh">0xf4a</span><span class="p">,</span>
+    <span class="mh">0x489b</span><span class="p">,</span>
+    <span class="mh">0x81</span><span class="p">,</span>
+    <span class="mh">0x30</span><span class="p">,</span>
+    <span class="mh">0x12</span><span class="p">,</span>
+    <span class="mh">0x5d</span><span class="p">,</span>
+    <span class="mh">0x7a</span><span class="p">,</span>
+    <span class="mh">0x2a</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xce</span>
+<span class="p">)</span></pre>
+<p>3D solid color material [<a class="reference internal" href="struct_CCL_ISolidColorMaterial3D.html#doxid-struct-c-c-l-1-1-i-solid-color-material3-d"><span class="std std-ref">ISolidColorMaterial3D</span></a>]</p>
+<p>3D texture material [<a class="reference internal" href="struct_CCL_ITextureMaterial3D.html#doxid-struct-c-c-l-1-1-i-texture-material3-d"><span class="std std-ref">ITextureMaterial3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ab49149625b5e3dfbb7474c59d287ccb0"><span id="index-29"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CustomMaterial3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xc3648bad</span><span class="p">,</span>
+    <span class="mh">0xca80</span><span class="p">,</span>
+    <span class="mh">0x4c06</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0xfa</span><span class="p">,</span>
+    <span class="mh">0x4e</span><span class="p">,</span>
+    <span class="mh">0x04</span><span class="p">,</span>
+    <span class="mh">0x25</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xcd</span><span class="p">,</span>
+    <span class="mh">0xcf</span>
+<span class="p">)</span></pre>
+<p>3D custom material [<a class="reference internal" href="struct_CCL_ICustomMaterial3D.html#doxid-struct-c-c-l-1-1-i-custom-material3-d"><span class="std std-ref">ICustomMaterial3D</span></a>, <a class="reference internal" href="struct_CCL_ITextureMaterial3D.html#doxid-struct-c-c-l-1-1-i-texture-material3-d"><span class="std std-ref">ITextureMaterial3D</span></a>]</p>
+<p>3D geometry [<a class="reference internal" href="struct_CCL_IGeometry3D.html#doxid-struct-c-c-l-1-1-i-geometry3-d"><span class="std std-ref">IGeometry3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a3d5def189f32ff85b4ffc6c4df5dab54"><span id="index-30"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Billboard3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xf14a69e8</span><span class="p">,</span>
+    <span class="mh">0x9864</span><span class="p">,</span>
+    <span class="mh">0x4cc8</span><span class="p">,</span>
+    <span class="mh">0x9b</span><span class="p">,</span>
+    <span class="mh">0xbd</span><span class="p">,</span>
+    <span class="mh">0x45</span><span class="p">,</span>
+    <span class="mh">0x5a</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0xe4</span><span class="p">,</span>
+    <span class="mh">0xd7</span><span class="p">,</span>
+    <span class="mh">0xfa</span>
+<span class="p">)</span></pre>
+<p>3D billboard (sprite) [<a class="reference internal" href="struct_CCL_IGeometry3D.html#doxid-struct-c-c-l-1-1-i-geometry3-d"><span class="std std-ref">IGeometry3D</span></a>]</p>
+<p>3D model [<a class="reference internal" href="struct_CCL_IModel3D.html#doxid-struct-c-c-l-1-1-i-model3-d"><span class="std std-ref">IModel3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a8ba4b8793aa2bce3386de4ff38132036"><span id="index-31"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Scene3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xb0b9e54a</span><span class="p">,</span>
+    <span class="mh">0xa8c7</span><span class="p">,</span>
+    <span class="mh">0x45fd</span><span class="p">,</span>
+    <span class="mh">0x85</span><span class="p">,</span>
+    <span class="mh">0xe1</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0x58</span><span class="p">,</span>
+    <span class="mh">0x2c</span><span class="p">,</span>
+    <span class="mh">0x1b</span><span class="p">,</span>
+    <span class="mh">0x44</span>
+<span class="p">)</span></pre>
+<p>3D scene [<a class="reference internal" href="struct_CCL_ISceneNode3D.html#doxid-struct-c-c-l-1-1-i-scene-node3-d"><span class="std std-ref">ISceneNode3D</span></a>]</p>
+<p>3D camera [<a class="reference internal" href="struct_CCL_ICamera3D.html#doxid-struct-c-c-l-1-1-i-camera3-d"><span class="std std-ref">ICamera3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1ac635779e3b29d3e5c0bded4963db8b9d"><span id="index-32"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AmbientLight3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xacacdd9c</span><span class="p">,</span>
+    <span class="mh">0xcee2</span><span class="p">,</span>
+    <span class="mh">0x4765</span><span class="p">,</span>
+    <span class="mh">0x98</span><span class="p">,</span>
+    <span class="mh">0x30</span><span class="p">,</span>
+    <span class="mh">0x59</span><span class="p">,</span>
+    <span class="mh">0xa3</span><span class="p">,</span>
+    <span class="mh">0xf0</span><span class="p">,</span>
+    <span class="mh">0xa2</span><span class="p">,</span>
+    <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0xa0</span>
+<span class="p">)</span></pre>
+<p>Ambient light [<a class="reference internal" href="struct_CCL_ILightSource3D.html#doxid-struct-c-c-l-1-1-i-light-source3-d"><span class="std std-ref">ILightSource3D</span></a>].</p>
+<p>Directional light [<a class="reference internal" href="struct_CCL_ILightSource3D.html#doxid-struct-c-c-l-1-1-i-light-source3-d"><span class="std std-ref">ILightSource3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a5ad54c34af3a26dc0d5b84f84724bc90"><span id="index-33"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">PointLight3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xbabe86ca</span><span class="p">,</span>
+    <span class="mh">0x29d2</span><span class="p">,</span>
+    <span class="mh">0x498a</span><span class="p">,</span>
+    <span class="mh">0xa1</span><span class="p">,</span>
+    <span class="mh">0xc8</span><span class="p">,</span>
+    <span class="mh">0x32</span><span class="p">,</span>
+    <span class="mh">0xb0</span><span class="p">,</span>
+    <span class="mh">0xb8</span><span class="p">,</span>
+    <span class="mh">0x34</span><span class="p">,</span>
+    <span class="mh">0x97</span><span class="p">,</span>
+    <span class="mh">0xfb</span>
+<span class="p">)</span></pre>
+<p>Point light [<a class="reference internal" href="struct_CCL_ILightSource3D.html#doxid-struct-c-c-l-1-1-i-light-source3-d"><span class="std std-ref">ILightSource3D</span></a>].</p>
+<p>3D model node [IModelNode]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1a01f4ee58b601c25866687fd14a6bef45"><span id="index-34"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CubeTessellator3D</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xabd9356a</span><span class="p">,</span>
+    <span class="mh">0x7c95</span><span class="p">,</span>
+    <span class="mh">0x4cd8</span><span class="p">,</span>
+    <span class="mh">0x8f</span><span class="p">,</span>
+    <span class="mh">0xb1</span><span class="p">,</span>
+    <span class="mh">0x42</span><span class="p">,</span>
+    <span class="mh">0xd8</span><span class="p">,</span>
+    <span class="mh">0x4b</span><span class="p">,</span>
+    <span class="mh">0xf4</span><span class="p">,</span>
+    <span class="mh">0xce</span><span class="p">,</span>
+    <span class="mh">0xf3</span>
+<span class="p">)</span></pre>
+<p>Cube Tessellator [<a class="reference internal" href="struct_CCL_ICubeTessellator3D.html#doxid-struct-c-c-l-1-1-i-cube-tessellator3-d"><span class="std std-ref">ICubeTessellator3D</span></a>].</p>
+<p>Grid Tessellator [<a class="reference internal" href="struct_CCL_IGridTessellator3D.html#doxid-struct-c-c-l-1-1-i-grid-tessellator3-d"><span class="std std-ref">IGridTessellator3D</span></a>]</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-class-i-d-1aac84b73bf098ade4b8eef88d6ebc1120"><span id="index-35"></span><span></span><span class="n">DEFINE_CID</span> <span class="p">(</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">SQLite</span></a><span></span><span class="p">,</span>
+    <span class="mh">0xDA833DD2</span><span class="p">,</span>
+    <span class="mh">0x7AC8</span><span class="p">,</span>
+    <span class="mh">0x423F</span><span class="p">,</span>
+    <span class="mh">0x89</span><span class="p">,</span>
+    <span class="mh">0xB7</span><span class="p">,</span>
+    <span class="mh">0xE9</span><span class="p">,</span>
+    <span class="mh">0xB5</span><span class="p">,</span>
+    <span class="mh">0x49</span><span class="p">,</span>
+    <span class="mh">0x0B</span><span class="p">,</span>
+    <span class="mh">0x04</span><span class="p">,</span>
+    <span class="mh">0x90</span>
+<span class="p">)</span></pre>
+<p>SQLite database engine class identifer.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_CCL_ViewBox_StyleModifier.html" class="btn btn-neutral float-left" title="struct CCL::ViewBox::StyleModifier" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Win32_DpiAwarenessScope.html" class="btn btn-neutral float-right" title="struct CCL::Win32::DpiAwarenessScope" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

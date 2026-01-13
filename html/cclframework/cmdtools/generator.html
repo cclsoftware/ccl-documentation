@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL Generator &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CCL Modeller" href="modeller.html" />
+    <link rel="prev" title="CCL Builder" href="builder.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL Command-line Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="builder.html">CCL Builder</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CCL Generator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#meta-model-format">Meta Model Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#string-template-usage">String Template Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#version-history">Version history</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="modeller.html">CCL Modeller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xstring.html">CCL String Extractor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Command-line Tools</a></li>
+      <li class="breadcrumb-item active">CCL Generator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-generator">
+<h1>CCL Generator<a class="headerlink" href="#ccl-generator" title="Link to this heading"></a></h1>
+<p><em>This document refers to <a class="reference internal" href="#changelog-generator"><span class="std std-ref">tool version 1.1.0</span></a></em>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The <em>CCL Generator Tool</em> is a command line based utility tool that can generate source code files for different programming languages from different input files, utilizing a meda model input format. A meta model can be passed in directly or be partially generated from classmodel or source files.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclgenerator [mode] &lt;arg1&gt; &lt;arg2&gt; [-part] [-ref] [-v]
+</pre></div>
+</div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><p><strong>[mode]</strong>: one of [-g, -p]:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>-g (generate): create a source file from meta model or classmodel file</p></li>
+<li><p>-p (parse): create a meta model file from source file</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>[input]</strong>: input file (meta model, classmodel, source file)</p></li>
+<li><p><strong>[output]</strong>: output file to write</p></li>
+<li><p><strong>[template]</strong>: template file to apply model data to (parse mode only)</p></li>
+<li><p><strong>[-v]</strong>: print debug logs (optional)</p></li>
+</ul>
+<p>Run the tool without arguments to get usage instructions.</p>
+</section>
+<section id="meta-model-format">
+<h2>Meta Model Format<a class="headerlink" href="#meta-model-format" title="Link to this heading"></a></h2>
+<p>The meta model allows specification of constants, enumerations, definitions and groups in JSON format. Groups may contain constants, definitions, enumerations and other groups recursively.</p>
+<section id="root-structure">
+<h3>Root structure<a class="headerlink" href="#root-structure" title="Link to this heading"></a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;constants&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">    </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;enums&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="constant">
+<h3>Constant<a class="headerlink" href="#constant" title="Link to this heading"></a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;democonstant&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;democonstant_value&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;brief&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brief comment&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;details comment&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading"></a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demodefinition&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;brief&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brief comment&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;details comment&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="enumeration">
+<h3>Enumeration<a class="headerlink" href="#enumeration" title="Link to this heading"></a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demoenum&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;brief&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brief comment&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;details comment&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;enumerators&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;first&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;brief&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brief comment&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;details comment&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;second&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&lt;&lt;1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;brief&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brief comment&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;details comment&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h3>
+<p>Values for constants, definitions, and enumerators may be defined as function calls. Example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;first&quot;,
+    &quot;type&quot;: &quot;int&quot;,
+    &quot;function&quot;:
+    {
+        &quot;name&quot;: &quot;fourcc&quot;,
+        &quot;args&quot;: [&quot;eain&quot;]
+    }
+}
+</pre></div>
+</div>
+<p>Note that the “value” attribute is not set here as the CCL generator tool calculates it automatically. Do not forget to set the “type” attribute to the expected function return type. For readability, the CCL Generator adds a function processing hint to the “brief” attribute, indicating the original function input arguments.</p>
+<p><strong>Supported functions</strong></p>
+<ul>
+<li><p><strong>fourcc</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>arg 0 (<em>string</em>): four-character string, example: “eain”</p></li>
+<li><p>result (<em>int</em>): four-character code (FourCC) for arg 0</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="attribute-notes">
+<h3>Attribute notes:<a class="headerlink" href="#attribute-notes" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>expression</strong>: (string values only): set to true to unquote string type values in the output</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;democonstant&quot;,
+    &quot;value&quot;: &quot;somefunction()&quot;,
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;expression&quot;: true
+}
+</pre></div>
+</div>
+<p>For “true”, cppvalue (…) export “somefunction()” without quotes. For false, “somefunction()” is exported in quotes (being a string value).</p>
+</div></blockquote>
+</li>
+<li><p><strong>autoValue</strong> (Enumeration): set to true to auto-value enum enumerators</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;demoenum&quot;,
+    &quot;autoValue&quot;: true,
+    &quot;enumerators&quot;:
+    [
+        { &quot;name&quot;: &quot;first&quot; },
+        { &quot;name&quot;: &quot;second&quot; },
+    ]
+}
+</pre></div>
+</div>
+<p>Enumerators get values assigned based on their list position index, starting at zero:</p>
+<ul class="simple">
+<li><p>first = 0</p></li>
+<li><p>second = 1</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>type</strong>: needs to be one of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>bool</p></li>
+<li><p>int</p></li>
+<li><p>float</p></li>
+<li><p>double</p></li>
+<li><p>string</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+<section id="string-template-usage">
+<h2>String Template Usage<a class="headerlink" href="#string-template-usage" title="Link to this heading"></a></h2>
+<p>The CCL Generator tool uses the CCL StringTemplate class to generate source files. The StringTemplate class renders a string from an Attributes container, supporting a series of commands to insert data from the container into the string. Supported commands are:</p>
+<ul class="simple">
+<li><p>{{ variable }}</p></li>
+<li><p>{% for %} … {% endfor %}</p></li>
+<li><p>{% include %}</p></li>
+<li><p>{% if %} {% else %} {% endif %}</p></li>
+</ul>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h3>
+<p>Use {{ variable }} to include a variable in the string template output.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The variable value is {{ variable }}.
+</pre></div>
+</div>
+<p>The variable (attribute) needs to exist in the Attributes input data container.</p>
+</section>
+<section id="for-loops">
+<h3>For loops<a class="headerlink" href="#for-loops" title="Link to this heading"></a></h3>
+<p>Loop over an attributes list from the Attributes container, creating output for each list element:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for constant in constants %}
+Constant name is {{ constant.name }}
+{% endfor %}
+</pre></div>
+</div>
+<p>In the example, the attributes container is required to contain a “constants” list attribute.</p>
+<p>Inside a loop statemtent, use the <strong>loop</strong> variable to check for certain loop attributes:</p>
+<ul class="simple">
+<li><p><strong>loop.last</strong>: current iteration is last list entry</p></li>
+<li><p><strong>loop.index</strong>: iterator index, starting at 0</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for constant in constants %}
+Element index: {{ loop.index }}
+Constant name is {{ constant.name }}
+{% if loop.last %}
+{{ constant.name }} is the last element
+{% endif %}
+{% endfor %}
+</pre></div>
+</div>
+</section>
+<section id="if-else">
+<h3>If-else<a class="headerlink" href="#if-else" title="Link to this heading"></a></h3>
+<p>Render or skip certain string sections based on a condition:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% if variable.name %}
+    Variable has a name!
+{% else %}
+    Variable has no name!
+{% endif %}
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current implementation supports a truthness check for string values only.</p>
+</div>
+</section>
+<section id="includes">
+<h3>Includes<a class="headerlink" href="#includes" title="Link to this heading"></a></h3>
+<p>Include another template inside a template:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% include sometemplate.in %}
+</pre></div>
+</div>
+<p>Included templates are expected in the same folder as the template file passed in as argument.</p>
+</section>
+<section id="filters">
+<h3>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h3>
+<p>The string template supports variable filters which can be applied to a {{ variable }} statement. The syntax is:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{{ variable | filter1 | filter2 | ... }}
+</pre></div>
+</div>
+<p>Each filter modifies the value of variable. Filters are applied from left to right. The following filters are available, affecting string values:</p>
+<ul class="simple">
+<li><p><strong>upper</strong>: convert string to uppercase</p></li>
+<li><p><strong>lower</strong>: convert string to lowercase</p></li>
+<li><p><strong>capitalize</strong>: convert first string character to uppercase</p></li>
+<li><p><strong>decapitalize</strong>: convert first string character to lowercase</p></li>
+<li><p><strong>cpptype, javatype, tstype, jstype</strong>: convert meta model type string to language specific type (expects one of supported built-in meta model types)</p></li>
+<li><p><strong>cppvalue, javavalue, tsvalue, jsvalue</strong>: convert meta model value to language specific value</p></li>
+<li><p><strong>sentence</strong>: format string as a sentence (start with capital letter, end with period)</p></li>
+<li><p><strong>identifier</strong>: format string as C++  (and most other languages) compatible identifier</p></li>
+<li><p><strong>deconstify</strong> remove leading ‘k’ in names that qualify as CCL constants (e.g. “kFontStyleNormal”)</p></li>
+</ul>
+</section>
+</section>
+<section id="version-history">
+<span id="changelog-generator"></span><h2>Version history<a class="headerlink" href="#version-history" title="Link to this heading"></a></h2>
+<section id="changelog-v1-1-0">
+<h3>Changelog v1.1.0<a class="headerlink" href="#changelog-v1-1-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>introduce meta model format</p></li>
+<li><p>generate output via string templates</p></li>
+</ul>
+</section>
+<section id="changelog-v1-0-0">
+<h3>Changelog v1.0.0<a class="headerlink" href="#changelog-v1-0-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>initial version</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="builder.html" class="btn btn-neutral float-left" title="CCL Builder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modeller.html" class="btn btn-neutral float-right" title="CCL Modeller" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

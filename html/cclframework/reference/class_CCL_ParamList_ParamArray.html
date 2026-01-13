@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class CCL::ParamList::ParamArray &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class CCL::Format::Percent" href="class_CCL_Format_Percent.html" />
+    <link rel="prev" title="class CCL::ParamList" href="class_CCL_ParamList.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="group_gui_param.html">Parameters</a></li>
+          <li class="breadcrumb-item"><a href="class_CCL_ParamList.html">class CCL::ParamList</a></li>
+      <li class="breadcrumb-item active">class CCL::ParamList::ParamArray</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ccl-paramlist-paramarray">
+<span id="doxid-class-c-c-l-1-1-param-list-1-1-param-array"></span><span id="index-0"></span><h1>class CCL::ParamList::ParamArray<a class="headerlink" href="#class-ccl-paramlist-paramarray" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;paramlist.h&gt;</span>
+
+<span class="k">class</span> <span class="nl">ParamArray</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Core::Vector</span></a><span></span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-param-list-1-1-param-array-1a75e23015d1a243730f8ff8176f08b6ff"><span></span><span class="n">name</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-param-list-1-1-param-array-1a4a6e12633035442c35fe11692f7743b5"><span></span><span class="n">ParamArray</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">name</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1acf82f9b2937375c7b1cf3dccb3df3312"><span class="std std-ref">isEmpty</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a9e0fde1a3bbccee836572b4d81a3e1f1"><span class="std std-ref">count</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a88e67ba0b2c86d90b878b45efecdfd81"><span class="std std-ref">isValidIndex</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a7b1d0d6b0242e10700c5a509e487c960"><span class="std std-ref">at</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a95323f4d07d38dba46c826fbd33d1d80"><span class="std std-ref">first</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a281dc6ddd046bd6f2793f83f83682b4d"><span class="std std-ref">last</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a8b4c39e2d7e7697afc2dcfee272bcdc7"><span class="std std-ref">isEqual</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1ada542a02aebdaa8647498cb51c6f387e"><span class="std std-ref">operator ==</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a8e9e19a319bed3119bcf6b04656790db"><span class="std std-ref">operator !=</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a4a9fec1639a505f5661b483e56b91067"><span class="std std-ref">index</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a4fef904b55d57ced9e390f3aa2646450"><span class="std std-ref">index</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">item</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1adb6c0b1fc5058e1d495e0ed5e96bf9f9"><span class="std std-ref">contains</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a30c6068ae9f390d8511caff9e487c6e9"><span class="std std-ref">containsAnyOf</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a9a052879b8abdd8e9b42062eb1036023"><span class="std std-ref">search</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1adfd4e818105afc4c1022395895f964e5"><span class="std std-ref">findIf</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Predicate</span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a63f718590bdce60a1f109d8851469290"><span class="std std-ref">findIf</span></a><span></span> <span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <span class="n">T</span><span class="o">*</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a65625b12f82ea4362738439643d88dd7"><span class="std std-ref">getItems</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    INLINE<span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a88183fbb9682823fda12b5ecd92d76d4"><span class="std std-ref">operator T*</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_VectorIterator.html#doxid-class-core-1-1-vector-iterator"><span class="std std-ref">VectorIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1ae011a7930104b72151dc79b21d7d6e01"><span class="std std-ref">begin</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_RangeIterator.html#doxid-class-core-1-1-range-iterator"><span class="std std-ref">RangeIterator</span></a><span></span> <span class="o">&lt;</span><a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_VectorIterator.html#doxid-class-core-1-1-vector-iterator"><span class="std std-ref">VectorIterator</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&gt;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1a50ac8c38835633f777ccf7336044d146"><span class="std std-ref">end</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">T</span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector-1ae9d8608d0fb42fd9e150c0ed88dca22b"><span class="std std-ref">getError</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1ac611be9ad4aa62aa4e2e128502f89c47"><span class="std std-ref">zeroFill</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a2309504f8f371a8d2590f7ec7f737ae9"><span class="std std-ref">fill</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a2bd65b2c2581f8179c3577356acfdb60"><span class="std std-ref">add</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1afd60a805721f3efd0f60fd87eea2aa76"><span class="std std-ref">addOnce</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1acd967570cacc8e448ff4221eef3b7cec"><span class="std std-ref">addAll</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a8aba584e0dada4db2a887c05b681511a"><span class="std std-ref">addAllOnce</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_ConstVector.html#doxid-class-core-1-1-const-vector"><span class="std std-ref">ConstVector</span></a><span></span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a4f7ecde4b81729d8ec39a460e1f90af8"><span class="std std-ref">remove</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1abbbbeb214f292a1c9d14b98bd1376dbd"><span class="std std-ref">removeAt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">class</span> <span class="n">Predicate</span><span class="o">&gt;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1aab1d855839cdc31b6d5846a8032d99b5"><span class="std std-ref">removeIf</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">Predicate</span><span class="o">&amp;</span> <span class="n">recognize</span><span class="p">);</span>
+
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a89305f4fa8b29afcf8d95716eb4f8f21"><span class="std std-ref">removeIf</span></a><span></span> <span class="p">(</span>ContainerPredicateFunction<span></span> <span class="n">recognize</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a291e68c36bd5cb789a6b8ced5cfb269d"><span class="std std-ref">removeFirst</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1ae83ce1da44a88a7b0ffc68c82bcede5f"><span class="std std-ref">removeLast</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a62abe49ea9499f270354c586b2b290a8"><span class="std std-ref">insertAt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a9b0a5a3ad9972ab0e8eb0b54873aac6b"><span class="std std-ref">removeAll</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a0d3feb8a189bccc5d1de6ab4d59c6af6"><span class="std std-ref">setCount</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">_count</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a9a4d7b0a805f99ab95362516ee336b3e"><span class="std std-ref">empty</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a47fdc9eea42b6975cdc835bb2e08810e"><span class="std std-ref">sort</span></a><span></span> <span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a8543ac869b8eb59cec8c3cc94b99f438"><span class="std std-ref">sort</span></a><span></span> <span class="p">(</span>VectorCompareFunction<span></span> <span class="n">function</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a310c0bebc002158f5646a91d60e4dc89"><span class="std std-ref">reverse</span></a><span></span> <span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a78dd26ef29faa60e7ee1adcae230801f"><span class="std std-ref">addSorted</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a8f8230815ab167d775a7b396ff10d8a6"><span class="std std-ref">addSorted</span></a><span></span> <span class="p">(</span>
+        <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span>
+        VectorCompareFunction<span></span> <span class="n">function</span><span class="p">,</span>
+        <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">reversed</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1aa28c4b1ed6740e71c059abb36ad175d9"><span class="std std-ref">swap</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">t1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">t2</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1aaeafb3cd547ee7a2e9dda0d28cfcb42e"><span class="std std-ref">swapAt</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">index1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index2</span><span class="p">);</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector"><span class="std std-ref">MutableVector</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_MutableVector.html#doxid-class-core-1-1-mutable-vector-1a27243f6c21c04aba24053af116af6862"><span class="std std-ref">operator &lt;&lt;</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a6cf72a04f4a116efd01f54d9852fc630"><span class="std std-ref">copyVector</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a0cac211b4d7af4e11395f8d2551239c6"><span class="std std-ref">copyVector</span></a><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">vector</span> <span class="p">[],</span> <span class="kt">int</span> <span class="n">count</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a6f2a996bf0f200079eab1ca9b643b02c"><span class="std std-ref">takeVector</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a443e51c3ece5446def42ce0180dc6df2"><span class="std std-ref">operator =</span></a><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+    <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a63aea9131f453ebc76ae8a28ffb4315b"><span class="std std-ref">resize</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a55c7948afb263ab62b93d57c15271998"><span class="std std-ref">setDelta</span></a><span></span> <span class="p">(</span><span class="kt">int</span> <span class="n">delta</span><span class="p">);</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1af00e67bb42361ad03124c6d08ed57846"><span class="std std-ref">getDelta</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Vector.html#doxid-class-core-1-1-vector-1a3f598f3d7113dc318db0ae0cb73ed957"><span class="std std-ref">getCapacity</span></a><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="class_CCL_ParamList.html" class="btn btn-neutral float-left" title="class CCL::ParamList" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_CCL_Format_Percent.html" class="btn btn-neutral float-right" title="class CCL::Format::Percent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

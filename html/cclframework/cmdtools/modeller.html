@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL Modeller &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CCL String Extractor" href="xstring.html" />
+    <link rel="prev" title="CCL Generator" href="generator.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/index.html">CCL in Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL Command-line Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="builder.html">CCL Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generator.html">CCL Generator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CCL Modeller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#version-history">Version history</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="xstring.html">CCL String Extractor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Command-line Tools</a></li>
+      <li class="breadcrumb-item active">CCL Modeller</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-modeller">
+<h1>CCL Modeller<a class="headerlink" href="#ccl-modeller" title="Link to this heading"></a></h1>
+<p><em>This document refers to <a class="reference internal" href="#changelog-modeller"><span class="std std-ref">tool version 1.2.0</span></a></em>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The <em>CCL Modeller Tool</em> is a command line based utility tool that performs different tasks related to CCL type libraries and classmodel files.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller [action] &lt;arg1&gt; &lt;arg2&gt; [-v]
+</pre></div>
+</div>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><strong>[action]</strong>: one of [-list, -export, -scan, -update]</p></li>
+<li><p><strong>arg1</strong>, <strong>arg2</strong>: action specific positional arguments</p></li>
+<li><p><strong>[-v]</strong>: print debug logs</p></li>
+</ul>
+<p>Run the tool without arguments to get usage instructions.</p>
+<section id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h3>
+<section id="list">
+<h4>list<a class="headerlink" href="#list" title="Link to this heading"></a></h4>
+<p>Print a list of all registered type libraries. Usage:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -list
+</pre></div>
+</div>
+</section>
+<section id="export">
+<h4>export<a class="headerlink" href="#export" title="Link to this heading"></a></h4>
+<p>Export type library <em>type library name</em> to <em>classmodel file</em>. Usage:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -export &lt;type library name&gt; &lt;classmodel file&gt;
+</pre></div>
+</div>
+<p>Output <em>classmodel file</em> argument is optional. If not specified, the type library classmodel is exported to working directory. Use <strong>list</strong> action to get a list of known type libraries, use <strong>scan</strong> action to add documentation from source code.</p>
+</section>
+<section id="scan">
+<h4>scan<a class="headerlink" href="#scan" title="Link to this heading"></a></h4>
+<p>Add source code documentation scanned from <em>sourcecode path</em> to <em>classmodel file</em>. Usage:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -scan &lt;sourcecode path&gt; &lt;classmodel file&gt;
+</pre></div>
+</div>
+</section>
+<section id="update">
+<h4>update<a class="headerlink" href="#update" title="Link to this heading"></a></h4>
+<p>Merge <em>prototype classmodel file</em> into <em>classmodel file</em>. Usage:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -update &lt;classmodel file&gt; &lt;prototype classmodel file&gt;
+</pre></div>
+</div>
+<p>Input <em>classmodel file</em> is updated in-place.</p>
+</section>
+</section>
+</section>
+<section id="version-history">
+<span id="changelog-modeller"></span><h2>Version history<a class="headerlink" href="#version-history" title="Link to this heading"></a></h2>
+<section id="changelog-v1-2-0">
+<h3>Changelog v1.2.0<a class="headerlink" href="#changelog-v1-2-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>omit ‘doc’ option</p></li>
+</ul>
+</section>
+<section id="changelog-v1-1-0">
+<h3>Changelog v1.1.0<a class="headerlink" href="#changelog-v1-1-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>add classmodel ‘export’ action</p></li>
+<li><p>add type library names ‘list’ action</p></li>
+<li><p>make output file arg for ‘doc’ action optional</p></li>
+<li><p>omit ‘preparedoc’ option</p></li>
+</ul>
+</section>
+<section id="changelog-v1-0-1">
+<h3>Changelog v1.0.1<a class="headerlink" href="#changelog-v1-0-1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>support escaped periods in docscan</p></li>
+</ul>
+</section>
+<section id="changelog-v1-0-0">
+<h3>Changelog v1.0.0<a class="headerlink" href="#changelog-v1-0-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>initial version</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="generator.html" class="btn btn-neutral float-left" title="CCL Generator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="xstring.html" class="btn btn-neutral float-right" title="CCL String Extractor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

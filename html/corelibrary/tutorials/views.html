@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUI for embedded applications &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GUI for dynamic views" href="dynamicviews.html" />
+    <link rel="prev" title="Components" href="components.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="appmodel.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GUI for embedded applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#static-views">Static views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-views">Dynamic views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-simple-ui">Creating a simple UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rendering-the-ui">Rendering the UI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicviews.html">GUI for dynamic views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtti.html">Run-time type information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">GUI for embedded applications</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gui-for-embedded-applications">
+<h1>GUI for embedded applications<a class="headerlink" href="#gui-for-embedded-applications" title="Link to this heading"></a></h1>
+<p>The Core Library contains an optional toolkit for building graphical user interfaces for embedded applications. Depending on the available system resources, you can choose between two approaches, static or dynamic views. The basic view model is the same for both. Conceptually, a view is a rectangular area on the screen that can display images or text, and can optionally have subviews. The coordinate system starts at (0,0) in the top-left corner. Subviews are positioned relative to their parent and clip their content and children. So far, so common.</p>
+<p>The view tree can be rendered into a bitmap. The following pixel formats are currently supported:</p>
+<ul class="simple">
+<li><p>32 bit RGBA</p></li>
+<li><p>16 bit RGB565</p></li>
+<li><p>Monochrome (1 bit per pixel)</p></li>
+</ul>
+<p>The library provides an implementation for software rendering. The mapping to specific graphics hardware needs to be added externally. Support is limited to lines, gradients, bitmaps, and text, whereas text is implemented with bitmap fonts. No fancy 2D vector algorithms, sorry. See <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Graphics.html#doxid-class-core-1-1-portable-1-1-graphics"><span class="std std-ref"><span class="pre">Core::Portable::Graphics</span></span></a></code> class for more details.</p>
+<p>Instead of writing C++ code, views can be defined in JSON skin files. This simplifies collaboration with designers who can either write JSON directly or use a GUI builder tool and edit forms for the UI graphically. Assets can either be .png or .bmp files.</p>
+<section id="static-views">
+<h2>Static views<a class="headerlink" href="#static-views" title="Link to this heading"></a></h2>
+<p>Static views should be used when memory is limited and there’s no heap and no file system available. You need at least one <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticRootView.html#doxid-class-core-1-1-portable-1-1-static-root-view"><span class="std std-ref"><span class="pre">Core::Portable::StaticRootView</span></span></a></code> and a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> to provide values from the application to the GUI in a unified way.</p>
+<p>When working with the GUI builder, static views can be exported from JSON to C++ code and linked to the application, including all assets.</p>
+<p>Please note that static views are read-only, i.e. they can be used to reflect the status of an embedded system on a small LCD but they do not support direct user interaction. Input from a front panel needs to be processed by the application and then fed into the value controller, which in turn will cause UI updates automatically with the bult-in dependency mechnism.</p>
+</section>
+<section id="dynamic-views">
+<h2>Dynamic views<a class="headerlink" href="#dynamic-views" title="Link to this heading"></a></h2>
+<p>When more system resources are available including a heap and a file system, dynamic views can be used. The application has a tree of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Component.html#doxid-class-core-1-1-portable-1-1-component"><span class="std std-ref"><span class="pre">Core::Portable::Component</span></span></a></code> and <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Parameter.html#doxid-class-core-1-1-portable-1-1-parameter"><span class="std std-ref"><span class="pre">Core::Portable::Parameter</span></span></a></code> objects that can be addressed in JSON skin files. Views are created on the fly via the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_ViewBuilder.html#doxid-class-core-1-1-portable-1-1-view-builder"><span class="std std-ref"><span class="pre">Core::Portable::ViewBuilder</span></span></a></code> singleton which is also responsible to load the skin definition and assets from a .zip file or folder on a flash drive. You need one <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootView.html#doxid-class-core-1-1-portable-1-1-root-view"><span class="std std-ref"><span class="pre">Core::Portable::RootView</span></span></a></code> per screen.</p>
+<p>Dynamic views support multi-touch input with gesture recognition, as well as text input from a built-in on-screen keyboard. Controls that support user input are buttons, text boxes, list views, etc.</p>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<p>Resources to define the look and feel of an application typically are bitmaps, fonts, and styles. On embedded platforms without a file system, all resources can be linked directly into the code.</p>
+<p>Bitmap fonts are based on the popular BMP font binary format (.fnt files). They can be created with the free <a class="reference external" href="https://www.angelcode.com/products/bmfont/">Bitmap Font Generator</a> tool which converts a vector font (i.e. True Type or Open Type fonts) into a bitmap, plus glyph information. The resulting files can then be converted into C arrays and referenced by the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_BitmapInplaceFont.html#doxid-class-core-1-1-portable-1-1-bitmap-inplace-font"><span class="std std-ref"><span class="pre">Core::Portable::BitmapInplaceFont</span></span></a></code> class, or loaded dynamically via the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_FontManager.html#doxid-class-core-1-1-portable-1-1-font-manager"><span class="std std-ref"><span class="pre">Core::Portable::FontManager</span></span></a></code>.</p>
+<p>A style can reference a font and it adds additional attributes like text alignment, background, and foreground colors, etc.</p>
+<p>The following example demonstrates how resources are set up for a custom user interface when exported as code from the GUI Builder tool. It starts with two arrays containing the bitmap and glyph data of a font named Tuffy that was rendered at 16pt.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">Tuffy16_image_code</span><span class="p">[</span><span class="mi">75926</span><span class="p">]</span> <span class="o">=</span>
+<span class="p">{</span>
+  <span class="mh">0x42</span><span class="p">,</span><span class="mh">0x4d</span><span class="p">,</span><span class="mh">0x96</span><span class="p">,</span><span class="mh">0x28</span><span class="p">,</span> <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">Tuffy16_data_code</span><span class="p">[</span><span class="mi">3901</span><span class="p">]</span> <span class="o">=</span>
+<span class="p">{</span>
+  <span class="mh">0x42</span><span class="p">,</span><span class="mh">0x4d</span><span class="p">,</span><span class="mh">0x46</span><span class="p">,</span><span class="mh">0x03</span><span class="p">,</span> <span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Resources</span></code> class accumulates the resources for our application, in this case the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_BitmapInplaceFont.html#doxid-class-core-1-1-portable-1-1-bitmap-inplace-font"><span class="std std-ref"><span class="pre">Core::Portable::BitmapInplaceFont</span></span></a></code> object representing the Tuffy font and a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Style.html#doxid-class-core-1-1-portable-1-1-style"><span class="std std-ref"><span class="pre">Core::Portable::Style</span></span></a></code> object that contains text attributes. The class also derives from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_Core_Portable_FontProvider.html#doxid-struct-core-1-1-portable-1-1-font-provider"><span class="std std-ref"><span class="pre">Core::Portable::FontProvider</span></span></a></code> and implement its <code class="docutils literal notranslate"><span class="pre">getFont</span></code> function used by the library.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">Resources</span><span class="p">:</span> <span class="k">public</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">FontProvider</span><span class="p">,</span>
+                 <span class="k">public</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticSingleton</span><span class="o">&lt;</span><span class="n">Resources</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">Resources</span> <span class="p">();</span>
+
+  <span class="c1">// Core::Portable::FontProvider</span>
+  <span class="k">const</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">BitmapFont</span><span class="o">*</span> <span class="n">getFont</span> <span class="p">(</span><span class="n">Core</span><span class="o">::</span><span class="n">CStringPtr</span> <span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">Style</span> <span class="n">Tuffy16White</span><span class="p">;</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">BitmapInplaceFont</span> <span class="n">Tuffy16</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The class implementation is straightforward. The constructor initializes the <code class="docutils literal notranslate"><span class="pre">Tuffy16</span></code> object using the raw data arrays defined previously. It then adds itself to the global <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_FontManager.html#doxid-class-core-1-1-portable-1-1-font-manager"><span class="std std-ref"><span class="pre">Core::Portable::FontManager</span></span></a></code> instance to make the Tuffy font available to the text rendering engine. The <code class="docutils literal notranslate"><span class="pre">getFont</span></code> function will be called by the rendering engine whenever it references a font of a certain name. The constructor also initializes the rendering attributes of the <code class="docutils literal notranslate"><span class="pre">Tuffy16White</span></code> style object. Note that you don’t need to write this by hand. It’s all generated from JSON skin files.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DEFINE_STATIC_SINGLETON</span> <span class="p">(</span><span class="n">Resources</span><span class="p">)</span>
+
+<span class="n">Resources</span><span class="o">::</span><span class="n">Resources</span> <span class="p">()</span>
+<span class="o">:</span> <span class="n">Tuffy16</span> <span class="p">(</span><span class="s">&quot;Tuffy16&quot;</span><span class="p">,</span> <span class="n">Tuffy16_image_code</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">Tuffy16_image_code</span><span class="p">),</span>
+  <span class="n">Tuffy16_data_code</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">Numbus16_data_code</span><span class="p">)),</span>
+<span class="p">{</span>
+  <span class="n">FontManager</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">setExternalFontProvider</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="n">FontManager</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">setDefaultColorFont</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Tuffy16</span><span class="p">);</span>
+
+  <span class="n">Tuffy16White</span><span class="p">.</span><span class="n">setFontName</span> <span class="p">(</span><span class="s">&quot;Tuffy16&quot;</span><span class="p">);</span>
+  <span class="n">Tuffy16White</span><span class="p">.</span><span class="n">setTextAlign</span> <span class="p">(</span><span class="n">Alignment</span><span class="o">::</span><span class="n">kLeft</span><span class="p">);</span>
+  <span class="n">Tuffy16White</span><span class="p">.</span><span class="n">setTextColor</span> <span class="p">(</span><span class="n">Color</span> <span class="p">(</span><span class="mh">0xFF</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">BitmapFont</span><span class="o">*</span> <span class="n">Resources</span><span class="o">::</span><span class="n">getFont</span> <span class="p">(</span><span class="n">Core</span><span class="o">::</span><span class="n">CStringPtr</span> <span class="n">name</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">Tuffy16</span><span class="p">.</span><span class="n">getName</span> <span class="p">()</span> <span class="o">==</span> <span class="n">name</span><span class="p">)</span>
+      <span class="k">return</span> <span class="o">&amp;</span><span class="n">Tuffy16</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-a-simple-ui">
+<h2>Creating a simple UI<a class="headerlink" href="#creating-a-simple-ui" title="Link to this heading"></a></h2>
+<p>In this section we create a simple UI that presents two values to the user. We start with a <code class="docutils literal notranslate"><span class="pre">SettingsView</span></code> class that derives from <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticView.html#doxid-class-core-1-1-portable-1-1-static-view"><span class="std std-ref"><span class="pre">Core::Portable::StaticView</span></span></a></code> and add two <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticLabel.html#doxid-class-core-1-1-portable-1-1-static-label"><span class="std std-ref"><span class="pre">Core::Portable::StaticLabel</span></span></a></code> objects for static text and two <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticTextBox.html#doxid-class-core-1-1-portable-1-1-static-text-box"><span class="std std-ref"><span class="pre">Core::Portable::StaticTextBox</span></span></a></code> objects that display the values. Again, this code is all generated from JSON skin files.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">SettingsView</span><span class="p">:</span> <span class="k">public</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticView</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">SettingsView</span> <span class="p">();</span>
+
+<span class="k">private</span><span class="o">:</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticLabel</span> <span class="n">label1</span><span class="p">;</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticLabel</span> <span class="n">label2</span><span class="p">;</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticTextBox</span> <span class="n">value1</span><span class="p">;</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticTextBox</span> <span class="n">value2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The class constructor sets the size of the view by calling <code class="docutils literal notranslate"><span class="pre">setSize</span></code> and then proceeds setting size, style, and the text of the labels. Each view is added to its parent via the <code class="docutils literal notranslate"><span class="pre">addView</span></code> function. Note that the names of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticTextBox.html#doxid-class-core-1-1-portable-1-1-static-text-box"><span class="std std-ref"><span class="pre">Core::Portable::StaticTextBox</span></span></a></code> objects equal the names of the value parameters managed by the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController</span></span></a></code> class to connect UI elements with parameters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SettingsView</span><span class="o">::</span><span class="n">SettingsView</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">setSize</span> <span class="p">(</span><span class="n">Rect</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">135</span><span class="p">));</span>
+
+  <span class="n">label1</span><span class="p">.</span><span class="n">setSize</span> <span class="p">(</span><span class="n">Rect</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">70</span><span class="p">));</span>
+  <span class="n">label1</span><span class="p">.</span><span class="n">setStyle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Resources</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">Tuffy16White</span><span class="p">);</span>
+  <span class="n">label1</span><span class="p">.</span><span class="n">setTitle</span> <span class="p">(</span><span class="s">&quot;Value 1:&quot;</span><span class="p">);</span>
+  <span class="n">addView</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">label1</span><span class="p">);</span>
+
+  <span class="n">label2</span><span class="p">.</span><span class="n">setSize</span> <span class="p">(</span><span class="n">Rect</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">90</span><span class="p">));</span>
+  <span class="n">label2</span><span class="p">.</span><span class="n">setStyle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Resources</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">Tuffy16White</span><span class="p">);</span>
+  <span class="n">label2</span><span class="p">.</span><span class="n">setTitle</span> <span class="p">(</span><span class="s">&quot;Value 2:&quot;</span><span class="p">);</span>
+  <span class="n">addView</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">label2</span><span class="p">);</span>
+
+  <span class="n">value1</span><span class="p">.</span><span class="n">setSize</span> <span class="p">(</span><span class="n">Rect</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">70</span><span class="p">));</span>
+  <span class="n">value1</span><span class="p">.</span><span class="n">setName</span> <span class="p">(</span><span class="s">&quot;value1&quot;</span><span class="p">);</span>
+  <span class="n">value1</span><span class="p">.</span><span class="n">setStyle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Resources</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">Tuffy16White</span><span class="p">);</span>
+  <span class="n">addView</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">value1</span><span class="p">);</span>
+
+  <span class="n">value2</span><span class="p">.</span><span class="n">setSize</span> <span class="p">(</span><span class="n">Rect</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">90</span><span class="p">));</span>
+  <span class="n">value2</span><span class="p">.</span><span class="n">setName</span> <span class="p">(</span><span class="s">&quot;value2&quot;</span><span class="p">);</span>
+  <span class="n">value2</span><span class="p">.</span><span class="n">setStyle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Resources</span><span class="o">::</span><span class="n">instance</span> <span class="p">().</span><span class="n">Tuffy16White</span><span class="p">);</span>
+  <span class="n">addView</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">value2</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To use static views for a user interface in an embedded project, declare a <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticRootView.html#doxid-class-core-1-1-portable-1-1-static-root-view"><span class="std std-ref"><span class="pre">Core::Portable::StaticRootView</span></span></a></code> object and a value controller object in the application class (see <a class="reference internal" href="parameters.html#parameters"><span class="std std-ref">Parameters</span></a> for more information on creating a value controller class).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyApp</span><span class="p">:</span> <span class="k">public</span> <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">Application</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">renderUI</span> <span class="p">();</span>
+
+  <span class="c1">// Application</span>
+  <span class="kt">void</span> <span class="nf">startup</span> <span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+  <span class="kt">void</span> <span class="nf">shutdown</span> <span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+
+<span class="k">private</span><span class="o">:</span>
+  <span class="n">Bitmap</span> <span class="n">renderBuffer</span><span class="p">;</span>
+  <span class="n">SettingsView</span> <span class="n">view</span><span class="p">;</span>
+  <span class="n">Core</span><span class="o">::</span><span class="n">Portable</span><span class="o">::</span><span class="n">StaticRootView</span> <span class="n">rootView</span><span class="p">;</span>
+  <span class="n">MyController</span> <span class="n">controller</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Then connect the <code class="docutils literal notranslate"><span class="pre">rootView</span></code> object to the <code class="docutils literal notranslate"><span class="pre">controller</span></code> object by calling <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootValueController.html#doxid-class-core-1-1-portable-1-1-root-value-controller-1a32d7c6d8c5bd3c7d59abd79e7111553a"><span class="std std-ref"><span class="pre">Core::Portable::RootValueController::addObserver</span></span></a></code> and passing the <code class="docutils literal notranslate"><span class="pre">rootView</span></code> as the only argument. This will forward parameter changes to the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticRootView.html#doxid-class-core-1-1-portable-1-1-static-root-view"><span class="std std-ref"><span class="pre">Core::Portable::StaticRootView</span></span></a></code> which would then update the UI accordingly. Next, the <code class="docutils literal notranslate"><span class="pre">initOffscreen</span></code> function is called to add a reference to <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Bitmap.html#doxid-class-core-1-1-portable-1-1-bitmap"><span class="std std-ref"><span class="pre">Core::Portable::Bitmap</span></span></a></code> object that represents the target buffer during the render operation. The <code class="docutils literal notranslate"><span class="pre">SettingsView</span></code> is then added to the root view and and instance of <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_StaticViewConnector.html#doxid-class-core-1-1-portable-1-1-static-view-connector"><span class="std std-ref"><span class="pre">Core::Portable::StaticViewConnector</span></span></a></code> ist used to establish the connection between UI elements and the value controller.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">startup</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">controller</span><span class="p">.</span><span class="n">addObserver</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">rootView</span><span class="p">);</span>
+
+  <span class="n">rootView</span><span class="p">.</span><span class="n">initOffscreen</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">renderBuffer</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+  <span class="n">rootView</span><span class="p">.</span><span class="n">addView</span> <span class="p">(</span><span class="n">view</span><span class="p">);</span>
+  <span class="n">StaticViewConnector</span> <span class="p">(</span><span class="n">controller</span><span class="p">).</span><span class="n">connect</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="rendering-the-ui">
+<h2>Rendering the UI<a class="headerlink" href="#rendering-the-ui" title="Link to this heading"></a></h2>
+<p>Depending on your applications requirements you may want to regularly render the UI to the bitmap buffer in order to show it on the screen. The following code block uses the root view to check whether dirty region is empty, meaning the UI was updated and needs to be rendered. The function then calls <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_RootViewBase.html#doxid-class-core-1-1-portable-1-1-root-view-base-1a262f682e3442e9f6ee2706252a8e9ae1"><span class="std std-ref"><span class="pre">Core::Portable::RootViewBase::redraw</span></span></a></code> to initiate the render operation which will update the data in <code class="docutils literal notranslate"><span class="pre">renderBuffer</span></code>. After the function completes, use the member functions of the <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_Core_Portable_Bitmap.html#doxid-class-core-1-1-portable-1-1-bitmap"><span class="std std-ref"><span class="pre">Core::Portable::Bitmap</span></span></a></code> to access the buffer’s pixel data and send it to the screen.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">renderUI</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">rootView</span><span class="p">.</span><span class="n">isUpdateSuspended</span> <span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">rootView</span><span class="p">.</span><span class="n">getDirtyRegion</span> <span class="p">().</span><span class="n">isEmpty</span> <span class="p">())</span>
+  <span class="p">{</span>
+      <span class="n">rootView</span><span class="p">.</span><span class="n">redraw</span> <span class="p">();</span>
+
+      <span class="c1">// Access the pixel data and send it to the screen.</span>
+      <span class="k">const</span> <span class="n">BitmapData</span><span class="o">*</span> <span class="n">bitmapData</span> <span class="o">=</span> <span class="n">rootView</span><span class="p">.</span><span class="n">accessForRead</span> <span class="p">();</span>
+      <span class="p">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="components.html" class="btn btn-neutral float-left" title="Components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dynamicviews.html" class="btn btn-neutral float-right" title="GUI for dynamic views" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Jan 13, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
