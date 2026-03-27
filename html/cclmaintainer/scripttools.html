@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCL Script Tools &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generated Typings" href="generatedtypings.html" />
+    <link rel="prev" title="Classmodel Updates" href="classmodelupdates.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CCL Maintainer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generatedcode.html">Generated Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classmodelupdates.html">Classmodel Updates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CCL Script Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#makedoc">Makedoc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#projects">Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#typescript-generator">TypeScript Generator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#config-format">Config format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frame-file-format">Frame file format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generatedtypings.html">Generated Typings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Maintainer Guide</a></li>
+      <li class="breadcrumb-item active">CCL Script Tools</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccl-script-tools">
+<span id="cclscripttools"></span><h1>CCL Script Tools<a class="headerlink" href="#ccl-script-tools" title="Link to this heading"></a></h1>
+<section id="makedoc">
+<h2>Makedoc<a class="headerlink" href="#makedoc" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> script is a CCL script tool that serves as a Sphinx wrapper designed to build Sphinx documentation projects by transforming reStructuredText (RST) files into HTML or PDF formats. In addition to Sphinx core functionality, <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> extends Sphinx capabilities by enabling more flexible project structures and integrating content from sources beyond RST files, like <a class="reference external" href="https://www.doxygen.nl/">Doxygen</a> output or CCL classmodel files.</p>
+<p><strong>Usage:</strong></p>
+<ol class="arabic simple">
+<li><p>(install required dependencies, see <a class="reference internal" href="#makedocsetup"><span class="std std-ref">setup section</span></a>)</p></li>
+<li><p>from <code class="docutils literal notranslate"><span class="pre">doctools/makedoc/</span></code> run <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> as follows:</p></li>
+</ol>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ python makedoc.py PROJECT_ID BUILDER [REVISION] [OPTIONS]
+</pre></div>
+</div>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p><strong>PROJECT_ID</strong>, required: id of a documentation project, example: <em>dev.ccl.doc.skinlanguage</em></p></li>
+<li><p><strong>BUILDER</strong>, required: output format, example: <em>HTML</em>, <em>PDF</em></p></li>
+<li><p><strong>REVISION</strong>, optional: revision number to appear in the document, example <em>54234</em></p></li>
+<li><p><strong>OPTIONS</strong>, optional: any of [-h], [-v], [-r]</p></li>
+</ul>
+<p>For argument details, available project ids, and output format builders use the help <em>[-h]</em> option:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ python makedoc.py -h
+</pre></div>
+</div>
+<p><strong>Examples:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># HTML output
+$ python makedoc.py dev.ccl.doc.skinlanguage html
+
+# HTML, with added revision number
+$ python makedoc.py dev.ccl.doc.skinlanguage html 12345
+
+# PDF output, verbose logging
+$ python makedoc.py -v dev.ccl.doc.skinlanguage pdf
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> writes build output to <code class="docutils literal notranslate"><span class="pre">makedoc/output/[projectid]</span></code>, see <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> console log for exact location.</p>
+</section>
+<section id="projects">
+<h3>Projects<a class="headerlink" href="#projects" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> identifies a folder as a documentation project if the folder contains a <code class="docutils literal notranslate"><span class="pre">makedoc.json</span></code> file. A <code class="docutils literal notranslate"><span class="pre">makedoc.json</span></code> file provides documentation project meta info and build steps. The most important attribute is the project id which uniquely identifies the documentation project in current (meta) repository context.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Example <code class="docutils literal notranslate"><span class="pre">makedoc.json</span></code> file</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: &quot;dev.ccl.doc.skinlanguage&quot;,
+  &quot;title&quot;: &quot;CCL Skin Definition Language&quot;,
+  &quot;build&quot;:
+  [
+    {
+      &quot;action&quot;: &quot;classmodelrst&quot;,
+      &quot;description&quot;: &quot;Convert classmodels to RST&quot;,
+      &quot;args&quot;:
+      [
+        &quot;classmodel-config.json&quot;
+      ]
+    }
+  ]
+}
+</pre></div>
+</div>
+</div>
+<p>On start, <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> scans the repository for documentation projects in each <code class="docutils literal notranslate"><span class="pre">documentation</span></code> folder provided by the meta repo <code class="docutils literal notranslate"><span class="pre">repo.json</span></code> file. In CCL framework repository only context, the default assumed location is <code class="docutils literal notranslate"><span class="pre">documentation/</span></code>.</p>
+<p>Reminder: <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> prints a list of all found project ids when invoked with the help option <em>[-h]</em>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ python makedoc.py -h
+</pre></div>
+</div>
+</section>
+<section id="setup">
+<span id="makedocsetup"></span><h3>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h3>
+<p>To run <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code>, some dependencies need to be installed first:</p>
+<section id="required">
+<h4>Required<a class="headerlink" href="#required" title="Link to this heading"></a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> requires Python 3.9, Sphinx and a few additional Python modules to run, thus:</p>
+<ul class="simple">
+<li><p>setup Python 3.9 or later, download installer from <a class="reference external" href="https://www.python.org/">python.org</a></p></li>
+<li><p>important, required for next step: configure Python installer to update environment variables (PATH) so Python and pip are accessible from any working directory</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">makedoc/setup.sh</span></code> to install required Python modules (includes Sphinx), requires pip in PATH</p></li>
+</ul>
+</section>
+<section id="optional">
+<h4>Optional<a class="headerlink" href="#optional" title="Link to this heading"></a></h4>
+<p>Some <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> build steps require external tools. For example, adding <a class="reference external" href="https://www.doxygen.nl/">Doxygen</a> source code documentation requires a local installation of <a class="reference external" href="https://www.doxygen.nl/">doxygen</a>. Build steps vary with the project. To inspect a project for potential external tool dependencies, refer to the <code class="docutils literal notranslate"><span class="pre">build</span></code> section of the project <code class="docutils literal notranslate"><span class="pre">makedoc.json</span></code> file. However, most build step required tools (<em>doctools</em>) are already shipped with <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> and do not need to be installed separately.</p>
+<p>In addition to build step related tools, using the <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> PDF output format option requires <cite>pdflatex</cite> which is part of the <a class="reference external" href="https://miktex.org/">MiKTeX</a> LaTeX distribution.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">makedoc.py</span></code> fails to find an external tool required for building a project, it logs a message to the console. Thus, always check the output for errors.</p>
+</div>
+<section id="id3">
+<h5>Doxygen<a class="headerlink" href="#id3" title="Link to this heading"></a></h5>
+<p>Required for projects that embed <a class="reference external" href="https://www.doxygen.nl/">Doxygen</a> C++ reference output. Download and install from <a class="reference external" href="https://www.doxygen.nl/">doxygen.nl</a>. Add the <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> binary to the system or user environment path. To test the installation, run the following command from terminal:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ doxygen
+</pre></div>
+</div>
+</section>
+<section id="typedoc">
+<h5>TypeDoc<a class="headerlink" href="#typedoc" title="Link to this heading"></a></h5>
+<p>Required for projects that use/generate JavaScript API output. Get TypeDoc from <a class="reference external" href="https://typedoc.org/">typedoc.org</a>, requires <a class="reference external" href="https://nodejs.org/">Node.js</a>. To test the installation, run the following command from terminal:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ typedoc
+</pre></div>
+</div>
+</section>
+<section id="pdflatex">
+<h5>pdfLaTeX<a class="headerlink" href="#pdflatex" title="Link to this heading"></a></h5>
+<p>Required for PDF output format. Install <a class="reference external" href="https://miktex.org/">MiKTeX</a> from <a class="reference external" href="https://miktex.org/">mixtex.org</a>. To test the installation, run the following command from terminal:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ pdflatex
+</pre></div>
+</div>
+<p>The Sphinx generated .tex files may reference additional LaTeX packages that are not installed with <a class="reference external" href="https://miktex.org/">MiKTeX</a> per default. To install them, attempt a PDF build via:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>python makedoc.py [PROJECT_ID] pdf
+</pre></div>
+</div>
+<p>This should cause <a class="reference external" href="https://miktex.org/">MiKTeX</a> to download missing LaTeX packages. It either auto-downloads them in the background or asks for confirmation. The download can take a while and may cause the PDF build to freeze or fail. If so, retry it.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="typescript-generator">
+<h2>TypeScript Generator<a class="headerlink" href="#typescript-generator" title="Link to this heading"></a></h2>
+<section id="id8">
+<h3>Introduction<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p>The TypeScript conversion script <code class="docutils literal notranslate"><span class="pre">classmodeldts.py</span></code> can auto-generate TypeScript script typings from .classmodel files.</p>
+<p><strong>Usage:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>python classmodeldts.py [CONFIG]
+</pre></div>
+</div>
+<p>Due to the number of processing options a configuration file is used to control the script input and output parameters.</p>
+</section>
+<section id="config-format">
+<h3>Config format<a class="headerlink" href="#config-format" title="Link to this heading"></a></h3>
+<p>The configuration file is a JSON file. It has the following structure:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Example config.json</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{
+  &quot;output&quot;: &quot;test.d.ts&quot;,
+  &quot;template&quot;: &quot;testframe.in&quot;,
+  &quot;comments&quot;: false,
+  &quot;app&quot;: &quot;ApplicationName&quot;,
+  &quot;models&quot;:
+  [
+    &quot;TestFile1.classModel&quot;,
+    &quot;TestFile2.classModel&quot;
+  ],
+  &quot;classes&quot;:
+  [
+    &quot;TestClass1&quot;,
+    &quot;TestClass2&quot;
+  ],
+  &quot;objects&quot;:
+  [
+    &quot;.*&quot;
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<ul class="simple">
+<li><p><strong>output</strong>: path to output .d.ts file</p></li>
+<li><p><strong>models</strong>: list of .classmodel files to process</p></li>
+<li><p><strong>template</strong>: <a class="reference external" href="https://jinja.palletsprojects.com/en/3.1.x/">jinja</a> template file to insert generated typings into</p></li>
+<li><p><strong>comments</strong>: generate type comments on/off</p></li>
+<li><p><strong>app</strong>: application name (certain application specific typings may be generated)</p></li>
+<li><p><strong>classes</strong>: classes to include in output (use “.*” for all)</p></li>
+<li><p><strong>objects</strong>: objects to include in output (use “.*” for all)</p></li>
+</ul>
+</section>
+<section id="frame-file-format">
+<h3>Frame file format<a class="headerlink" href="#frame-file-format" title="Link to this heading"></a></h3>
+<p>The frame file can be of any content but ensure it does not conflict with the generated typings. The classmodeldts.py script uses <a class="reference external" href="https://jinja.palletsprojects.com/en/3.1.x/">jinja</a> for templating. Generated typings are inserted into a <code class="docutils literal notranslate"><span class="pre">{{typings}}</span></code> placeholder. Ensure this placeholder is contained in the frame file.</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Frame example file</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">////////////////////////////////</span>
+<span class="o">//</span> <span class="n">A</span> <span class="n">test</span> <span class="n">frame</span> <span class="n">file</span>
+<span class="o">//</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2024</span>
+<span class="o">////////////////////////////////</span>
+
+<span class="o">//</span> <span class="n">Generated</span> <span class="n">typings</span><span class="p">:</span>
+
+<span class="p">{{</span><span class="n">typings</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use different configs with different frame files and class/object filters to customize output to specific needs.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classmodelupdates.html" class="btn btn-neutral float-left" title="Classmodel Updates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generatedtypings.html" class="btn btn-neutral float-right" title="Generated Typings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

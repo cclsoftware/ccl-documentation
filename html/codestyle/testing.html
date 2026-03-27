@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testing &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Design" href="design.html" />
+    <link rel="prev" title="Good Practice" href="goodpractice.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Coding Conventions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectfolders.html">Project Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcefiles.html">Source Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namingrules.html">Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spacingrules.html">Spacing and Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goodpractice.html">Good Practice</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#policy">Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming">Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structure">Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#good-practice">Good Practice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source-files">Source files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectivec.html">Objective-C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Coding Conventions</a></li>
+      <li class="breadcrumb-item active">Testing</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h1>
+<p>Unit tests are an important tool in software development and serve multiple purposes:</p>
+<ul class="simple">
+<li><p><strong>Bug Detection</strong>: Identify bugs early during development</p></li>
+<li><p><strong>Regression Testing</strong>: Ensure that existing functionality remains intact during refactoring or as new features are added</p></li>
+<li><p><strong>Documentation</strong>: Document the requirements and constraints to which the code under test is implemented</p></li>
+<li><p><strong>Software Design</strong>: Encourage modular design with low coupling and high cohesion by creating small, isolated units that can be effectively tested</p></li>
+<li><p><strong>Confidence</strong>: Unit tests provide developers with confidence and peace of mind that their code works as intended</p></li>
+</ul>
+<p>Check out chapter <a class="reference internal" href="../cclframework/howtos.html#ccl-add-unit-test"><span class="std std-ref">“How do I add a unit test?”</span></a> to get started with unit tests.</p>
+<section id="policy">
+<span id="unit-test-policy"></span><h2>Policy<a class="headerlink" href="#policy" title="Link to this heading"></a></h2>
+<p>Unit tests should follow the F.I.R.S.T acronym:</p>
+<ul class="simple">
+<li><p><strong>Fast</strong>: Tests should provide instant feedback</p></li>
+<li><p><strong>Isolated</strong>: Tests must not depend on the execution of other tests</p></li>
+<li><p><strong>Repeatable</strong>: Multiple execution should yield the same results</p></li>
+<li><p><strong>Small</strong>: Readers should be able to determine what’s tested and what has failed at a glance without looking anywhere else</p></li>
+<li><p><strong>Timely</strong>: Tests should be written before or alongside the code that is tested</p></li>
+</ul>
+<p>Add unit tests for</p>
+<ul class="simple">
+<li><p>Non-trivial code (algorithms, math functions, …)</p></li>
+<li><p>Units prone to hard-to-find bugs during regular use (parsers, components with user input, …)</p></li>
+<li><p>Framework units and fundamental building blocks (Core/CCL components, …)</p></li>
+<li><p>Regression bugs</p></li>
+</ul>
+<p>Don’t add unit tests for</p>
+<ul class="simple">
+<li><p>High level code, acting as integration tests</p></li>
+<li><p>Code that can’t be automatically tested (e.g. graphical UI code)</p></li>
+</ul>
+</section>
+<section id="naming">
+<h2>Naming<a class="headerlink" href="#naming" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Test suite names have a “Test” suffix</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// right</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// wrong</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">Bicycle</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Test names describe what is tested and the expected result</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// right</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// wrong</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">WheelTest</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="structure">
+<h2>Structure<a class="headerlink" href="#structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use fixtures where multiple tests use the same initialization</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// right</span>
+
+<span class="c1">//************************************************************************************************</span>
+<span class="c1">// BicycleTest</span>
+<span class="c1">//************************************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">BicycleTest</span><span class="p">:</span> <span class="k">public</span> <span class="n">Test</span>
+<span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">Bicycle</span> <span class="n">bicycle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">wheelCount</span> <span class="o">=</span> <span class="n">bicycle</span><span class="p">.</span><span class="n">getWheelCount</span> <span class="p">();</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">wheelCount</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveABell</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">bicycle</span><span class="p">.</span><span class="n">hasBell</span> <span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// wrong</span>
+
+<span class="c1">//************************************************************************************************</span>
+<span class="c1">// BicycleTest</span>
+<span class="c1">//************************************************************************************************</span>
+
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveTwoWheels</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Bicycle</span> <span class="n">bicycle</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">wheelCount</span> <span class="o">=</span> <span class="n">bicycle</span><span class="p">.</span><span class="n">getWheelCount</span> <span class="p">();</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">wheelCount</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicyclesHaveABell</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Bicycle</span> <span class="n">bicycle</span><span class="p">;</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">bicycle</span><span class="p">.</span><span class="n">hasBell</span> <span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Don’t extract the actual test</p></li>
+<li><p>Don’t use test assertions outside the test body, test set-up or test tear-down methods</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// right</span>
+
+<span class="c1">//************************************************************************************************</span>
+<span class="c1">// BicycleTest</span>
+<span class="c1">//************************************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">BicycleTest</span><span class="p">:</span> <span class="k">public</span> <span class="n">Test</span>
+<span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">Bicycle</span> <span class="n">bicycle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">FrontWheelIsRemoved</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">removeWheel</span> <span class="p">(</span><span class="n">Bicycle</span><span class="o">::</span><span class="n">kFrontWheel</span><span class="p">);</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">bicycle</span><span class="p">.</span><span class="n">getWheelCount</span> <span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">RearWheelIsRemoved</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">removeWheel</span> <span class="p">(</span><span class="n">Bicycle</span><span class="o">::</span><span class="n">kRearWheel</span><span class="p">);</span>
+    <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">bicycle</span><span class="p">.</span><span class="n">getWheelCount</span> <span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// wrong</span>
+
+<span class="c1">//************************************************************************************************</span>
+<span class="c1">// BicycleTest</span>
+<span class="c1">//************************************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">BicycleTest</span><span class="p">:</span> <span class="k">public</span> <span class="n">Test</span>
+<span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">Bicycle</span> <span class="n">bicycle</span><span class="p">;</span>
+
+    <span class="kt">void</span> <span class="nf">testRemoveWheel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">bicycle</span><span class="p">.</span><span class="n">removeWheel</span> <span class="p">(</span><span class="n">index</span><span class="p">);</span>
+        <span class="n">CCL_TEST_ASSERT_EQUAL</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">bicycle</span><span class="p">.</span><span class="n">getWheelCount</span> <span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">FrontWheelIsRemoved</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">testRemoveWheel</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">RearWheelIsRemoved</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">testRemoveWheel</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="good-practice">
+<h2>Good Practice<a class="headerlink" href="#good-practice" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Follow the <strong>AAA</strong> pattern:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>Arrange</strong>: Put system into the desired initial state</p></li>
+<li><p><strong>Act</strong>: Call a <em>single</em> function to test</p></li>
+<li><p><strong>Assert</strong>: Verify system is in the expected state after <strong>Act</strong></p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// example</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">OpposingWindMakesCyclingMoreExhausting</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Arrange</span>
+    <span class="n">Environment</span> <span class="n">environment</span><span class="p">;</span>
+    <span class="n">Rider</span> <span class="n">rider</span><span class="p">;</span>
+    <span class="n">Bicycle</span> <span class="nf">bicycle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">rider</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">environment</span><span class="p">);</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">setSpeed</span> <span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">setDirection</span> <span class="p">(</span><span class="n">Direction</span><span class="o">::</span><span class="n">kWest</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">exhaustmentBefore</span> <span class="o">=</span> <span class="n">rider</span><span class="p">.</span><span class="n">getExhaustmentLevel</span> <span class="p">();</span>
+
+    <span class="c1">// Act</span>
+    <span class="n">environent</span><span class="p">.</span><span class="n">setWind</span> <span class="p">(</span><span class="n">Direction</span><span class="o">::</span><span class="n">kEast</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+    <span class="c1">// Assert</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">rider</span><span class="p">.</span><span class="n">getExhaustmentLevel</span> <span class="p">()</span> <span class="o">&gt;</span> <span class="n">exhaustmentBefore</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If the arrange block or part of the arrangement is shared among multiple tests, it should be placed in the test fixture’s “setUp ()” method</p></li>
+<li><p>The arrangement or scenario must be described well enough by the test fixture name in order to understand it</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//************************************************************************************************</span>
+<span class="c1">// BicycleTest</span>
+<span class="c1">//************************************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">BicycleTest</span><span class="p">:</span> <span class="k">public</span> <span class="n">Test</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// Test</span>
+    <span class="kt">void</span> <span class="n">setUp</span> <span class="p">()</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="c1">// Arrange (shared part)</span>
+        <span class="n">bicycle</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Bicycle</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">rider</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">environment</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="n">Environment</span> <span class="n">environment</span><span class="p">;</span>
+    <span class="n">Rider</span> <span class="n">rider</span><span class="p">;</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">Bicycle</span><span class="o">&gt;</span> <span class="n">bicycle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">OpposingWindMakesCyclingMoreExhausting</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Arrange (individual part)</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">setSpeed</span> <span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">bicycle</span><span class="p">.</span><span class="n">setDirection</span> <span class="p">(</span><span class="n">Direction</span><span class="o">::</span><span class="n">kWest</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">exhaustmentBefore</span> <span class="o">=</span> <span class="n">rider</span><span class="p">.</span><span class="n">getExhaustmentLevel</span> <span class="p">();</span>
+
+    <span class="c1">// Act</span>
+    <span class="n">environent</span><span class="p">.</span><span class="n">setWind</span> <span class="p">(</span><span class="n">Direction</span><span class="o">::</span><span class="n">kEast</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+    <span class="c1">// Assert</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">rider</span><span class="p">.</span><span class="n">getExhaustmentLevel</span> <span class="p">()</span> <span class="o">&gt;</span> <span class="n">exhaustmentBefore</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="n">CCL_TEST_F</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">SomeOtherTest</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Avoid trivial tests</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// don&#39;t test</span>
+<span class="n">CCL_TEST</span> <span class="p">(</span><span class="n">BicycleTest</span><span class="p">,</span> <span class="n">BicycleIsConstructed</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">Bicycle</span><span class="o">&gt;</span> <span class="n">bicycle</span> <span class="p">(</span><span class="n">NEW</span> <span class="n">Bicycle</span> <span class="p">());</span>
+    <span class="n">CCL_TEST_ASSERT</span> <span class="p">(</span><span class="n">bicycle</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="source-files">
+<h3>Source files<a class="headerlink" href="#source-files" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>file names end on <em>test</em> (<em>stringtest.cpp</em>, <em>vectortest.cpp</em>, …)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="goodpractice.html" class="btn btn-neutral float-left" title="Good Practice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="design.html" class="btn btn-neutral float-right" title="Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

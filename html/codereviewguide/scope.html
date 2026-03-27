@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What to look for in a code review? &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Speed of code reviews" href="speed.html" />
+    <link rel="prev" title="Responsibilities" href="responsibilities.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Review Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="responsibilities.html">Responsibilities</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">What to look for in a code review?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#principles">Principles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design">Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functionality">Functionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming-comments">Naming &amp; Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#good-things">Good Things</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="speed.html">Speed of code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">How to write code review comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checklist.html">Review Checklist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Code Review Guide</a></li>
+      <li class="breadcrumb-item active">What to look for in a code review?</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-to-look-for-in-a-code-review">
+<h1>What to look for in a code review?<a class="headerlink" href="#what-to-look-for-in-a-code-review" title="Link to this heading"></a></h1>
+<section id="principles">
+<h2>Principles<a class="headerlink" href="#principles" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Technical facts and data overrule opinions and personal preferences</p></li>
+<li><p>On matters of style, the style guide is the absolute authority. Any purely style point that is not in the style guide is a matter of personal preference
+- The style should be consistent with what is there (function, file, module)
+- If there is no previous style, accept the author’s</p></li>
+</ul>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Do the interactions of code within the change make sense?</p></li>
+<li><p>Is the code in the correct place, should it be moved or extracted?</p></li>
+<li><p>Does it integrate with the rest of the system?</p></li>
+<li><p>Is it a good time for the change to be applied?</p></li>
+</ul>
+</section>
+<section id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Does the change accomplish the intended purpose?</p></li>
+<li><p>Does it add value to the users of the code (Both developers and end users)?</p></li>
+<li><p>Check common issues</p></li>
+</ul>
+</section>
+<section id="complexity">
+<h2>Complexity<a class="headerlink" href="#complexity" title="Link to this heading"></a></h2>
+<p>Complex means “Can’t be understood quickly by readers of the code” or “Bugs are likely to be introduced by other developers working with the code”.
+- Evaluate complexity at every level: line, function, class, …</p>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Does the code contain changes which should be tested?</p></li>
+<li><p>Do the tests have good names?</p></li>
+<li><p>Would the tests fail if the code didn’t do the right thing?</p></li>
+</ul>
+</section>
+<section id="naming-comments">
+<h2>Naming &amp; Comments<a class="headerlink" href="#naming-comments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Did the author pick good names for everything?
+- A good name is long enough to fully communicate what the item is or does, without being so long that it becomes hard to read</p></li>
+<li><p>Are the added comments necessary and meaningful?</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<p>Check if the code requires documentation to be added or changed.</p>
+</section>
+<section id="good-things">
+<h2>Good Things<a class="headerlink" href="#good-things" title="Link to this heading"></a></h2>
+<p>If you see something nice in a changeset, tell the author. Encouraging authors and appreciating work is sometimes even more valuable, in terms of mentoring, than to tell them what they did wrong.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The code is well-designed</p></li>
+<li><p>The functionality is good for the users of the code</p></li>
+<li><p>The code isn’t more complex than it needs to be</p></li>
+<li><p>The developer isn’t implementing things they might need in the future but don’t know they need now</p></li>
+<li><p>The developer used clear names for everything</p></li>
+<li><p>Comments are clear and useful, and mostly explain why instead of what</p></li>
+<li><p>Code is appropriately documented</p></li>
+<li><p>The code conforms to our style guides</p></li>
+<li><p>Code is tested where appropriate</p></li>
+<li><p>If tests covering the change exist, extend them as necessary and make sure they still pass</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="responsibilities.html" class="btn btn-neutral float-left" title="Responsibilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="speed.html" class="btn btn-neutral float-right" title="Speed of code reviews" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generated Code &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classmodel Updates" href="classmodelupdates.html" />
+    <link rel="prev" title="CCL Maintainer Guide" href="index.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CCL Maintainer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generated Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#repository-setup">Repository setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-new-code">Adding new code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#existing-model">Existing model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-model">New model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classmodelupdates.html">Classmodel Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripttools.html">CCL Script Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generatedtypings.html">Generated Typings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Maintainer Guide</a></li>
+      <li class="breadcrumb-item active">Generated Code</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generated-code">
+<h1>Generated Code<a class="headerlink" href="#generated-code" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Code generation is powered by the CCL Generator command-line tool. This tool can generate source code across multiple programming languages. It transforms a programming language-agnostic data model into language-specific source code files using string template files designed to create specific output formats.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/cclgenerator.svg"><img alt="../_images/cclgenerator.svg" src="../_images/cclgenerator.svg" style="width: 65%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Example: transform a model and C++ template file into a C++ source code file. A single model can be combined with different template files to generate source files for different programming languages.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The output format is generally a programming language format, but it doesn’t have to be. It can also be any other text-based format, such as HTML, reStructuredText (RST), or XML. Therefore, the CCL Generator tool should be considered a versatile text file generator, rather than exclusively a programming language source code generator.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<p><strong>Model</strong></p>
+<p>Here is an example of a model .json file: It defines two constants, one of type int and the other of type string, each with specific values. Note that this file is language-agnostic. The data types should be considered abstract and not tied to any specific programming language.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">constants.json</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;constants&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kIntConst&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kStringConst&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p><strong>C++ string template</strong></p>
+<p>This is an example string template file, intended to generate a C++ header file. Note the string template special commands <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">...</span> <span class="pre">}}</span></code>, <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">...</span> <span class="pre">%}</span></code> used as placeholders to insert model data later on:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">constants.h.in</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// This is a demo C++ header file
+
+namespace CCL {
+{% for c in constants %}
+    static const {{ c.type | cpptype }} {{ c.name }} = {{ c.value | cppvalue }};
+{% endfor %}
+} // CCL
+</pre></div>
+</div>
+</div>
+<p>The special <em>filters</em> <code class="docutils literal notranslate"><span class="pre">cpptype</span></code> and <code class="docutils literal notranslate"><span class="pre">cppvalue</span></code> are used to transform an inserted value into the language specific counterpart, for example “string” is transformed to “(CCL::)String” for C++.</p>
+<p><strong>Tool invocation (C++)</strong></p>
+<p>Run the CCL Generator command-line tool with both files as input to render the string template file into an output file <code class="docutils literal notranslate"><span class="pre">constants.h</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclgenerator -g -input constants.json -output constants.h -template constants.h.in
+</pre></div>
+</div>
+<p><strong>C++ output</strong></p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">constants.h</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a demo C++ header file</span>
+
+<span class="k">namespace</span> <span class="n">CCL</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">kIntConst</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="n">String</span> <span class="n">kStringConst</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// CCL</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Java string template</strong></p>
+<p>In addition, consider this second template to generate a .java file:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">constants.java.in</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// This is a demo Java file
+
+public class DemoConstants {
+{% for c in constants %}
+    public static final {{ c.type | javatype }} {{ c.name }} = {{ c.value | javavalue }};
+{% endfor %}
+}
+</pre></div>
+</div>
+</div>
+<p><strong>Tool invocation (Java)</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclgenerator -g -input constants.json -output DemoConstants.java -template constants.java.in
+</pre></div>
+</div>
+<p><strong>Java output</strong></p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">DemoConstants.java</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a demo Java file</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoConstants</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kIntConst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">kStringConst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Note how altering the template can effortlessly transform the model into language-specific code or any other text-based format.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Please refer to the CCL Generator command-line tool documentation found in the CCL Cross-platform framework section for more details.</p>
+</div>
+</section>
+</section>
+<section id="repository-setup">
+<h2>Repository setup<a class="headerlink" href="#repository-setup" title="Link to this heading"></a></h2>
+<p>CCL Generator files are stored in framework level <code class="docutils literal notranslate"><span class="pre">meta</span></code> folders. Example, CCL:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>core/meta
+ccl/meta
+</pre></div>
+</div>
+<p>Each <code class="docutils literal notranslate"><span class="pre">meta</span></code> folder typically contains:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>meta/models -&gt; model .json files
+meta/templates -&gt; string template files (.in)
+meta/generated -&gt; generated source files (.h, .java, ...)
+[build shell script]
+</pre></div>
+</div>
+<p>Language specific files are typically organized by language. Examples:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>meta/generated/cpp
+meta/generated/java
+
+meta/templates/cpp
+meta/templates/java
+</pre></div>
+</div>
+<p>Model .json files are language agnostic, thus not stored per language.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">meta</span></code> folder contained shell script (<code class="docutils literal notranslate"><span class="pre">generate_all.sh</span></code>, …) is used to rebuild all generated files by calling the CCL Generator tool for each model and template combination.</p>
+</section>
+<section id="adding-new-code">
+<h2>Adding new code<a class="headerlink" href="#adding-new-code" title="Link to this heading"></a></h2>
+<p>Add new code by either extending an existing model or introducing a new model .json file.</p>
+<section id="existing-model">
+<h3>Existing model<a class="headerlink" href="#existing-model" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>from <code class="docutils literal notranslate"><span class="pre">meta/models</span></code> pick the model .json file that is the best fit</p></li>
+<li><p>extend model file as needed</p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">generate_all.sh</span></code>, check which string template files are used with the model</p></li>
+<li><p>check if the string template file already handles the added data (like “constants” or “enums”)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>if yes: nothing to do</p></li>
+<li><p>if no: extend the template file</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>rerun the build script</p></li>
+<li><p>update client code (include generated code)</p></li>
+<li><p>check-in updated files</p></li>
+</ol>
+<p>It’s often best practice to design models that contain only constants, enums, or definitions, using templates dedicated to each specific data type for reusability. If a new data type needs to be added, consider creating a separate model for that data type instead of modifying the existing one.</p>
+</section>
+<section id="new-model">
+<h3>New model<a class="headerlink" href="#new-model" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>in <code class="docutils literal notranslate"><span class="pre">meta/models</span></code>, create a new .json file</p></li>
+<li><p>add data to model file as needed</p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">meta/templates/[language]</span></code> …</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>create new template file per target language</p></li>
+<li><p>optional: check if an existing one can be reused</p></li>
+<li><p>name template <code class="docutils literal notranslate"><span class="pre">[model].[language].in</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>update build shell script</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>call cclgenerator for each new model and template combination</p></li>
+<li><p>ensure output file is written to <code class="docutils literal notranslate"><span class="pre">meta/generated/[language]</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>run build shell script</p></li>
+<li><p>add the generated source code file(s) to build system:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>cmake configs</p></li>
+<li><p>TypeScript projects</p></li>
+<li><p>etc.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>update client code (include generated code)</p></li>
+<li><p>check-in updated files</p></li>
+</ol>
+</section>
+</section>
+<section id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading"></a></h2>
+<p>Here are some general tipps on how to utilize the CCL Generator:</p>
+<ul>
+<li><p>share templates between templates via <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">include</span> <span class="pre">...</span> <span class="pre">%}</span></code>, include path being relative to parent template:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">cppconstants.shared.in</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for c in constants %}
+static const {{ c.type | cpptype }} {{ c.name }} = {{ c.value | cppvalue }};
+{% endfor %}
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">parent template</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// Here are cpp constants:
+
+namespace CCL {
+{% include cppconstants.shared.in %}
+}
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>daisy chain filters to rename values</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// Example: &quot;demoName&quot; -&gt; &quot;demoname&quot; -&gt; &quot;Demoname&quot;
+{{ c.name | lower | capitalize }}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>remove CCL constant “k” via <code class="docutils literal notranslate"><span class="pre">deconstify</span></code> filter:</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// &quot;kFirst&quot; -&gt; &quot;First&quot;
+{{ enumerator.name | deconstify }}
+
+// &quot;kFirst&quot; -&gt; &quot;first&quot;
+{{ enumerator.name | deconstify | decapitalize }}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>templates are whitespace sensitive</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>avoid empty space before string template <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">%}</span></code> commands</p></li>
+<li><p>thus, do not indent nested <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">%}</span></code> statements</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>use conditional statements to have more control over output, for example to format documented data differently:</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% if c.brief %}
+/<span class="ge">** {{ c.brief }} *</span>/
+// {{ c.name }}
+{% else %}
+// {{ c.name }}
+{% endif %}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>loops can be nested, example: enums -&gt; enumerators</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for enum in enums %}
+{% for enumerator in enum.enumerators %}
+// {{ enumerator.name }}
+{% endfor %}
+{% endfor %}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>nested model data like enums can be flattened by not exporting the parent element and instead adding some of its attributes to the child element, example:</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for enum in enums %}
+{% for enumerator in enum.enumerators %}
+// {{ enum.name }}{{ enumerator.name }}
+{% endfor %}
+{% endfor %}
+</pre></div>
+</div>
+<p>… instead of:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for enum in enums %}
+enum {{ enum.name }}
+{% for enumerator in enum.enumerators %}
+    // {{ enumerator.name }},
+{% endfor %}
+}
+{% endfor %}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>elements can be renamed by simply adding prefixes or filters, example:</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>// &quot;kFirst&quot; -&gt; &quot;MYPREFIX_KFIRST&quot;
+MYPREFIX_{{ enumerator.name | upper }}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>for hierarchical structure outside of enums, use model “groups”</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>{% for g in groups %}
+{% for c in g.constants %}
+// This is {{ c.name }} of group {{ group.name }}
+{% endfor %}
+{% endfor %}
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>model groups may be defined recursively</p></li>
+<li><p>model groups, enums, classes and definitions can be repurposed in the output, example</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>export groups as namespaces</p></li>
+<li><p>export enums as classes</p></li>
+<li><p>export enums as separator comments</p></li>
+<li><p>etc.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>do not rename lvalues that may appear as rvalues (rvalues would not be renamed)</p></li>
+<li><p>for Java output, public classes require a file named after the class</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="CCL Maintainer Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classmodelupdates.html" class="btn btn-neutral float-right" title="Classmodel Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

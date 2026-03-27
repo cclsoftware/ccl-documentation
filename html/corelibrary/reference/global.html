@@ -49,7 +49,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
@@ -88,6 +88,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
 </ul>
 
         </div>
@@ -216,6 +222,7 @@
 
 <span class="c1">// global variables</span>
 
+<span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">Core::CStringPtr</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-bin2c-8h-1a7535a062ca2fae54384668ac5e117a9c"><span></span><span class="n">bin2c_commentline</span></span><span></span> <span class="o">=</span> <span class="s">&quot;/////////////////////////////////////////////////////////////////////////////////////////////</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
 <a class="reference internal" href="class_Core_HeapAllocator.html#doxid-class-core-1-1-heap-allocator"><span class="std std-ref">HeapAllocator</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-coreallocator-8dspti32-8cpp-1aad207577b190683e8d02c711d6fef975"><span></span><span class="n">defaultAllocator</span></span><span></span><span class="p">;</span>
 <span class="k">struct</span> <span class="n">_static_thread_data</span> <span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1a5451dda5a6645fd63833a3f590ae118a"><span></span><span class="n">__static_thread_data_list_start</span></span><span></span><span class="p">[];</span>
 <span class="k">struct</span> <span class="n">_static_thread_data</span> <span class="doxyrest-code-target target" id="doxid-corestaticthread-8zephyr-8h-1a2a241a85734834c21df16794958c3089"><span></span><span class="n">__static_thread_data_list_end</span></span><span></span><span class="p">[];</span>
@@ -230,6 +237,25 @@
 <span class="k">const</span> <span class="kt">char</span> <span class="doxyrest-code-target target" id="doxid-coresockettest-8cpp-1a133c381234895bf0f428d8b7392dfc7e"><span></span><span class="n">text</span></span><span></span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;This is a test string</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
 
 <span class="c1">// global functions</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">String</span><span class="o">&gt;</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-bin2c-8h-1ae1cce6221918682eda7ec6f352db1d4a"><span></span><span class="n">bin2c_size</span></span><span></span><span class="p">(</span>
+    <span class="n">String</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">Core::CStringPtr</span></a><span></span> <span class="n">arrayName</span>
+<span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">String</span><span class="o">&gt;</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-bin2c-8h-1a621e2050f8a1a7b761f7b11877cb61e3"><span></span><span class="n">bin2c_code</span></span><span></span><span class="p">(</span>
+    <span class="n">String</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">Core::CStringPtr</span></a><span></span> <span class="n">arrayName</span>
+<span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-bin2c-8h-1a49910f525e836808b390f08651395ac6"><span></span><span class="n">bin2c</span></span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Core::IO::Stream</span></a><span></span><span class="o">&amp;</span> <span class="n">writer</span><span class="p">,</span>
+    <a class="reference internal" href="class_Core_IO_Stream.html#doxid-class-core-1-1-i-o-1-1-stream"><span class="std std-ref">Core::IO::Stream</span></a><span></span><span class="o">&amp;</span> <span class="n">reader</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">Core::CStringPtr</span></a><span></span> <span class="n">arrayName</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">filesize</span>
+<span class="p">);</span>
 
 <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coredeleteoperatorstubs-8cpp-1a7ce65fa46e9a9e6b3a8c9af4d2d6a1b1"><span></span><span class="k">operator</span> <span class="k">delete</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
 <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-coredeleteoperatorstubs-8cpp-1a6b01ea39a68d477fb0597e0a03ea7c3b"><span></span><span class="k">operator</span> <span class="k">delete</span><span class="p">[]</span></span><span></span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">);</span>
@@ -999,7 +1025,7 @@ INLINE<span></span> <span class="kt">void</span> <span class="doxyrest-code-targ
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jan 13, 2026.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
       </span></p>
   </div>
 

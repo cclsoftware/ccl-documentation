@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="namespace CCL::FileLocationType" href="namespace_CCL_FileLocationType.html" />
+    <link rel="next" title="enum CCL::DpiScale::RectScalingMode" href="enum_CCL_DpiScale_RectScalingMode.html" />
     <link rel="prev" title="namespace CCL::DocumentStrings" href="namespace_CCL_DocumentStrings.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -49,7 +49,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
@@ -112,6 +112,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
 
         </div>
       </div>
@@ -146,6 +152,10 @@
 </div>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">DpiScale</span> <span class="p">{</span>
 
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555c"><span class="std std-ref">RectScalingMode</span></a><span></span><span class="p">;</span>
+
 <span class="c1">// global variables</span>
 
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">constexpr</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a6e895834d634429cf87d294612203001"><span></span><span class="n">kFloatCoordPrecision</span></span><span></span> <span class="o">=</span> <span class="mf">0.00195</span><span class="p">;</span>
@@ -162,8 +172,19 @@
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a2f522a702e63fe12aafe68feefaad6de"><span></span><span class="n">pixelToCoord</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">pixel</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a249ebbd0564417612f039d95bec3a211"><span></span><span class="n">toPixelPoint</span></span><span></span> <span class="p">(</span><span class="n">Point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a8a50a8a212e188fa8e778ea2d54eb0cf"><span></span><span class="n">toCoordPoint</span></span><span></span> <span class="p">(</span><span class="n">Point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
-<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1ad866ced3b82ec8919227ab4c2f82bea5"><span></span><span class="n">toPixelRect</span></span><span></span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
-<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1ae1bfd21ed701694b9ea488f1d373dd8c"><span></span><span class="n">toCoordRect</span></span><span></span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
+
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1af1eca9d835ea4218c3ecc631ff3ceab4"><span></span><span class="n">toPixelRect</span></span><span></span> <span class="p">(</span>
+    <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555c"><span class="std std-ref">RectScalingMode</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555cad28b44991af6ba507a0a6a755ffe8636"><span class="std std-ref">kScaleRectArea</span></a><span></span>
+<span class="p">);</span>
+
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a48ae96f0451768724000c33678b4f47e"><span></span><span class="n">toCoordRect</span></span><span></span> <span class="p">(</span>
+    <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">,</span>
+    <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555c"><span class="std std-ref">RectScalingMode</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555cad28b44991af6ba507a0a6a755ffe8636"><span class="std std-ref">kScaleRectArea</span></a><span></span>
+<span class="p">);</span>
+
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a2a2f41d6a37f7d016a7b2c5ce1ba8ac4"><span></span><span class="n">toPixelPointF</span></span><span></span> <span class="p">(</span><span class="n">PointF</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a1a2cd4373e1bc3b18262bff0ad669f1e"><span></span><span class="n">toCoordPointF</span></span><span></span> <span class="p">(</span><span class="n">PointF</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
 <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a50f169a5ff3758765ae4f62a55778d00"><span></span><span class="n">toPixelRectF</span></span><span></span> <span class="p">(</span><span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
@@ -171,6 +192,7 @@
 <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a272baeebab54eb34bf87e1ce6b14a086"><span></span><span class="n">isIntAligned</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">f</span><span class="p">);</span>
 <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1aad0bf9e7f681b168493361332792f96f"><span></span><span class="n">isPointIntAligned</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">PointF</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">);</span>
 <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1ae702b0f1fcfe41721512e88c540440a9"><span></span><span class="n">isRectIntAligned</span></span><span></span> <span class="p">(</span><span class="k">const</span> <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">);</span>
+<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-dpi-scale-1a64ae798a7763e6ac6572447cf6b76490"><span></span><span class="n">adjustPositionPixelAligned</span></span><span></span> <span class="p">(</span><span class="n">Point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
 
 <span class="p">}</span> <span class="c1">// namespace DpiScale</span></pre>
 </section>
@@ -180,14 +202,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="namespace_CCL_DocumentStrings.html" class="btn btn-neutral float-left" title="namespace CCL::DocumentStrings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="namespace_CCL_FileLocationType.html" class="btn btn-neutral float-right" title="namespace CCL::FileLocationType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_DpiScale_RectScalingMode.html" class="btn btn-neutral float-right" title="enum CCL::DpiScale::RectScalingMode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jan 13, 2026.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
       </span></p>
   </div>
 

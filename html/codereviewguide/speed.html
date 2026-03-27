@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed of code reviews &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to write code review comments" href="comments.html" />
+    <link rel="prev" title="What to look for in a code review?" href="scope.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Review Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="responsibilities.html">Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scope.html">What to look for in a code review?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Speed of code reviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-long-should-a-code-review-take">How long should a code review take?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-speed-up-code-reviews">How to speed up code reviews</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">How to write code review comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checklist.html">Review Checklist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Code Review Guide</a></li>
+      <li class="breadcrumb-item active">Speed of code reviews</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="speed-of-code-reviews">
+<h1>Speed of code reviews<a class="headerlink" href="#speed-of-code-reviews" title="Link to this heading"></a></h1>
+<p><strong>The speed at which the team can develop a product is more important than the speed at which an individual developer can write code.</strong></p>
+<p>When code reviews are slow, several things happen:</p>
+<ul class="simple">
+<li><p>The velocity of the team is decreased</p></li>
+<li><p>Developers start to protest the code review process</p></li>
+<li><p>Code health can decrease - pressure to accept code due to long iterations</p></li>
+</ul>
+<section id="how-long-should-a-code-review-take">
+<h2>How long should a code review take?<a class="headerlink" href="#how-long-should-a-code-review-take" title="Link to this heading"></a></h2>
+<p>When talking about the speed of code reviews, we are mostly concerned with the response time as opposed to the time it takes for the changeset to get through the whole review and be submitted. Ideally, both should be fast but a timely reponse is more important.</p>
+<ul class="simple">
+<li><p>If you are in the middle of a focused task like coding, don’t interrupt yourself with a code review</p></li>
+<li><p>Wait for a break point in your work, e.g. when a task is completed, after a meeting, after lunch or after taking a break to do a code review</p></li>
+<li><p>If you are not in the middle of a focused task you should do a code review shortly after it comes in</p></li>
+<li><p>If you are too busy to do a full review on a changeset when it comes in, you can still send a quick response that lets the developer know when you will get to it, suggest other reviewers who might be able to respond more quickly, or provide some initial broad comment</p></li>
+</ul>
+</section>
+<section id="how-to-speed-up-code-reviews">
+<h2>How to speed up code reviews<a class="headerlink" href="#how-to-speed-up-code-reviews" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Keep changes to the codebase small</p></li>
+<li><p>If a change is too large to be reviewed presently, ask authors to split into smaller changes which build upon each other</p></li>
+<li><p>If requested changes to the code are small and the reviewer is confident that the author will implement them correctly, the code can be approved with comments</p></li>
+<li><p>If architectural changes are required or the author asks for broad feedback on the general design, avoid reviewing details like style inconsistencies</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scope.html" class="btn btn-neutral float-left" title="What to look for in a code review?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="comments.html" class="btn btn-neutral float-right" title="How to write code review comments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

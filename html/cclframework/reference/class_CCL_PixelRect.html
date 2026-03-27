@@ -49,7 +49,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
@@ -112,6 +112,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
 
         </div>
       </div>
@@ -151,7 +157,11 @@
 <span class="k">public</span><span class="o">:</span>
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-pixel-rect-1a267065bbf3a8e70070c88e034ed17ce3"><span></span><span class="n">PixelRect</span></span><span></span> <span class="p">(</span><span class="n">RectRef</span> <span class="n">rect</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-pixel-rect-1a854daa6949b87d2dfae9cefe96c21a57"><span></span><span class="n">PixelRect</span></span><span></span> <span class="p">(</span>
+        <span class="n">RectRef</span> <span class="n">rect</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">dpiFactor</span><span class="p">,</span>
+        <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555c"><span class="std std-ref">DpiScale::RectScalingMode</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_DpiScale_RectScalingMode.html#doxid-namespace-c-c-l-1-1-dpi-scale-1aa7cf5ce397818e52c41e208d8dcb555cad28b44991af6ba507a0a6a755ffe8636"><span class="std std-ref">DpiScale::kScaleRectArea</span></a><span></span>
+    <span class="p">);</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -167,7 +177,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jan 13, 2026.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
       </span></p>
   </div>
 

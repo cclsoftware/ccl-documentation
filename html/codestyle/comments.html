@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comments &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Good Practice" href="goodpractice.html" />
+    <link rel="prev" title="Classes" href="classes.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Coding Conventions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectfolders.html">Project Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sourcefiles.html">Source Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namingrules.html">Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spacingrules.html">Spacing and Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Comments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-rules">General Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formats">Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="goodpractice.html">Good Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectivec.html">Objective-C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Coding Conventions</a></li>
+      <li class="breadcrumb-item active">Comments</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="comments">
+<h1>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h1>
+<section id="general-rules">
+<h2>General Rules<a class="headerlink" href="#general-rules" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Code and comments are written in American English.</p></li>
+<li><p>Keep comments short and specific.</p></li>
+<li><p>Do not leave your initials anywhere.</p></li>
+<li><p>Do not talk to yourself (<em>“I wonder why …”</em>).</p></li>
+<li><p>Do not state the obvious or repeat the code:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Right</span>
+<span class="c1">// From testing: clients under load may take 600ms to respond.</span>
+<span class="c1">// Set timeout to 1s to avoid false positive connection issues.</span>
+<span class="kt">int</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+
+<span class="c1">// Wrong</span>
+<span class="c1">// Set timeout to 1 second.</span>
+<span class="kt">int</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Be precise:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Right</span>
+<span class="kt">void</span> <span class="n">MyClass</span><span class="o">::</span><span class="n">foo</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// Lazy init as fallback if parent component did not initialize prior.</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">obj</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Object</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Wrong</span>
+<span class="kt">void</span> <span class="n">MyClass</span><span class="o">::</span><span class="n">foo</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// May sometimes not be initialized.</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">obj</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">NEW</span> <span class="n">Object</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Do not express philosophical thoughts.</p></li>
+<li><p>Do not use comments to compensate missing social interaction between programmers.</p></li>
+<li><p>Do not add class method descriptions to file headers.</p></li>
+<li><p>Do not mention ticket numbers.</p></li>
+<li><p>Do not mention related code outside of current scope:</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Right</span>
+<span class="kt">void</span> <span class="nf">process</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// Check if data is valid before processing</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isValid</span> <span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Wrong</span>
+<span class="kt">void</span> <span class="nf">process</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// See validate() in utils.cpp for related logic</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isValid</span> <span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="formats">
+<h2>Formats<a class="headerlink" href="#formats" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Use regular C++ comments for implementation details:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Single-line example comment.</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="cm">/* Alternative single-line example comment. */</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// Multi-line example comment composed</span>
+<span class="c1">// of multiple rows of text.</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="cm">/* Alternative multi-line example comment</span>
+<span class="cm"> composed of multiple rows of text. */</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use Doxygen comments for interfaces:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//********************************************************</span>
+<span class="c1">// IMyInterface</span>
+<span class="cm">/** Demo interface */</span>
+<span class="c1">//********************************************************</span>
+
+<span class="n">interface</span> <span class="n">IMyInterface</span>
+<span class="p">{</span>
+  <span class="cm">/** Do some work.</span>
+<span class="cm">    \param state  some argument</span>
+<span class="cm">    \return kResultOk for success, kResultFalse otherwise.</span>
+<span class="cm">  */</span>
+  <span class="k">virtual</span> <span class="n">tresult</span> <span class="n">CCL_API</span> <span class="n">doWork</span> <span class="p">(</span><span class="kt">bool</span> <span class="n">state</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use Doxygen comments for class declarations:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//************************************************************************</span>
+<span class="c1">// MyClass</span>
+<span class="cm">/** Specify here what your class is doing. */</span>
+<span class="c1">//************************************************************************</span>
+
+<span class="k">class</span> <span class="nl">MyClass</span><span class="p">:</span> <span class="k">public</span> <span class="n">BaseClass</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MyClass</span> <span class="p">();</span>
+
+    <span class="cm">/** Long comment. */</span>
+    <span class="kt">void</span> <span class="nf">testMethodOne</span> <span class="p">();</span>
+    <span class="kt">void</span> <span class="nf">testMethodTwo</span> <span class="p">();</span> <span class="c1">///&lt; short comment</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classes.html" class="btn btn-neutral float-left" title="Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="goodpractice.html" class="btn btn-neutral float-right" title="Good Practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Mar 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
