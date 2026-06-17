@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="struct CCL::Text::ListBegin" href="struct_CCL_Text_ListBegin.html" />
-    <link rel="prev" title="struct CCL::Text::HorizontalLine" href="struct_CCL_Text_HorizontalLine.html" />
+    <link rel="prev" title="struct CCL::Text::LineBreak" href="struct_CCL_Text_LineBreak.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -120,27 +120,24 @@
 <span id="doxid-struct-c-c-l-1-1-text-1-1-link"></span><span id="index-0"></span><h1>struct CCL::Text::Link<a class="headerlink" href="#struct-ccl-text-link" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p><a class="reference internal" href="#doxid-struct-c-c-l-1-1-text-1-1-link"><span class="std std-ref">Link</span></a> to local anchor.</p>
+<p>External link.</p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextbuilder.h&gt;</span>
 
-<span class="k">struct</span> <span class="nl">Link</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk"><span class="std std-ref">CCL::Text::Chunk</span></a><span></span>
+<span class="k">struct</span> <span class="nl">Link</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment"><span class="std std-ref">CCL::Text::Fragment</span></a><span></span>
 <span class="p">{</span>
-    <span class="c1">// fields</span>
-
-    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-text-1-1-link-1a7c4c8468dc8a6e621dec2514f2b4e047"><span></span><span class="n">anchorName</span></span><span></span><span class="p">;</span>
-
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-text-1-1-link-1af5dc2b6677eada58b2085afbb4debb96"><span></span><span class="n">Link</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">anchorName</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">encode</span> <span class="o">=</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">true</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-text-1-1-link-1a756fa412b24ca5a5b134f7fe62ba68fa"><span></span><span class="n">Link</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">url</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">encode</span> <span class="o">=</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">true</span></a><span></span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// fields</span>
 
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk-1ae6cae824050d213c355bfc9f869ca843"><span class="std std-ref">chunkType</span></a><span></span><span class="p">;</span>
-    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk-1a5afce1c98d73512f8ffcb0482df23708"><span class="std std-ref">content</span></a><span></span><span class="p">;</span>
-    <span class="n">tbool</span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk-1ae56590e05797ac3fa6da0ab9af4e41ee"><span class="std std-ref">encode</span></a><span></span><span class="p">;</span></pre>
+    <a class="reference internal" href="enum_CCL_Text_NodeType.html#doxid-namespace-c-c-l-1-1-text-1acac9cbaeea226ed297804c012dc12b16"><span class="std std-ref">TextNodeType</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a718ceff83b765b4fbfec073ea1bbc25f"><span class="std std-ref">nodeType</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a5afce1c98d73512f8ffcb0482df23708"><span class="std std-ref">content</span></a><span></span><span class="p">;</span>
+    <span class="n">tbool</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1ae56590e05797ac3fa6da0ab9af4e41ee"><span class="std std-ref">encode</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a904ebb63472b562671c9946bbf1df22c"><span class="std std-ref">argument</span></a><span></span><span class="p">;</span></pre>
 </section>
 </section>
 
@@ -148,7 +145,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="struct_CCL_Text_HorizontalLine.html" class="btn btn-neutral float-left" title="struct CCL::Text::HorizontalLine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Text_LineBreak.html" class="btn btn-neutral float-left" title="struct CCL::Text::LineBreak" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="struct_CCL_Text_ListBegin.html" class="btn btn-neutral float-right" title="struct CCL::Text::ListBegin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -156,7 +153,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>enum CCL::Text::HeadingLevels &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>struct CCL::IMutableTextModel::InteractionInfo &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::Text::LineFormat" href="enum_CCL_Text_LineFormat.html" />
-    <link rel="prev" title="enum CCL::Text::Encoding" href="enum_CCL_Text_Encoding.html" />
+    <link rel="next" title="struct CCL::INameNavigator" href="struct_CCL_INameNavigator.html" />
+    <link rel="prev" title="enum CCL::IMutableTextModel::EditOptions" href="enum_CCL_IMutableTextModel_EditOptions.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -65,9 +65,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
@@ -105,9 +105,9 @@
           <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
           <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
           <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
-          <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
-          <li class="breadcrumb-item"><a href="namespace_CCL_Text.html">namespace CCL::Text</a></li>
-      <li class="breadcrumb-item active">enum CCL::Text::HeadingLevels</li>
+          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
+          <li class="breadcrumb-item"><a href="struct_CCL_IMutableTextModel.html">struct CCL::IMutableTextModel</a></li>
+      <li class="breadcrumb-item active">struct CCL::IMutableTextModel::InteractionInfo</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -116,16 +116,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="enum-ccl-text-headinglevels">
-<span id="doxid-namespace-c-c-l-1-1-text-1a4de005d46150ad70b9bf967b1ebbcc26"></span><span id="index-0"></span><h1>enum CCL::Text::HeadingLevels<a class="headerlink" href="#enum-ccl-text-headinglevels" title="Link to this heading"></a></h1>
-<p><a class="reference internal" href="struct_CCL_Text_Heading.html#doxid-struct-c-c-l-1-1-text-1-1-heading"><span class="std std-ref">Heading</span></a> level.</p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextbuilder.h&gt;</span>
+  <section id="struct-ccl-imutabletextmodel-interactioninfo">
+<span id="doxid-struct-c-c-l-1-1-i-mutable-text-model-1-1-interaction-info"></span><span id="index-0"></span><h1>struct CCL::IMutableTextModel::InteractionInfo<a class="headerlink" href="#struct-ccl-imutabletextmodel-interactioninfo" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Interaction information.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextmodel.h&gt;</span>
 
-<span class="k">enum</span> <span class="n">HeadingLevels</span>
+<span class="k">struct</span> <span class="n">InteractionInfo</span>
 <span class="p">{</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1a4de005d46150ad70b9bf967b1ebbcc26ac00b21688652c2ef4924a279221515d6"><span></span><span class="n">kH1</span></span><span></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1a4de005d46150ad70b9bf967b1ebbcc26a0669e218c3a61de2275f40f3ec64ee9d"><span></span><span class="n">kH2</span></span><span></span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1a4de005d46150ad70b9bf967b1ebbcc26a9c87f4ca5f6cb0d0fd1a8bf958ef6210"><span></span><span class="n">kH3</span></span><span></span><span class="p">,</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-mutable-text-model-1-1-interaction-info-1ac9e5bdcfbf5e0443ad5f2c7280fadfb2"><span></span><span class="n">view</span></span><span></span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_GUIEvent.html#doxid-struct-c-c-l-1-1-g-u-i-event"><span class="std std-ref">GUIEvent</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-mutable-text-model-1-1-interaction-info-1a445603d7077abc86ae47a6a0a5272a95"><span></span><span class="n">editEvent</span></span><span></span><span class="p">;</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -133,15 +136,15 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_CCL_Text_Encoding.html" class="btn btn-neutral float-left" title="enum CCL::Text::Encoding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_Text_LineFormat.html" class="btn btn-neutral float-right" title="enum CCL::Text::LineFormat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_IMutableTextModel_EditOptions.html" class="btn btn-neutral float-left" title="enum CCL::IMutableTextModel::EditOptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_INameNavigator.html" class="btn btn-neutral float-right" title="struct CCL::INameNavigator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

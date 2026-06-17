@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>class CCL::MarkupBuilder &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>struct CCL::Web::IWebResponseSink &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="template class CCL::MemberFuncCompletionHandler" href="class_CCL_MemberFuncCompletionHandler.html" />
-    <link rel="prev" title="class CCL::MainColorSchemeOption" href="class_CCL_MainColorSchemeOption.html" />
+    <link rel="next" title="struct CCL::Web::IWebServer" href="struct_CCL_Web_IWebServer.html" />
+    <link rel="prev" title="struct CCL::Web::IWebResponse" href="struct_CCL_Web_IWebResponse.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -137,7 +137,8 @@
           <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
           <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
           <li class="breadcrumb-item"><a href="namespace_CCL.html">namespace CCL</a></li>
-      <li class="breadcrumb-item active">class CCL::MarkupBuilder</li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_Web.html">namespace CCL::Web</a></li>
+      <li class="breadcrumb-item active">struct CCL::Web::IWebResponseSink</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -146,49 +147,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="class-ccl-markupbuilder">
-<span id="doxid-class-c-c-l-1-1-markup-builder"></span><span id="index-0"></span><h1>class CCL::MarkupBuilder<a class="headerlink" href="#class-ccl-markupbuilder" title="Link to this heading"></a></h1>
+  <section id="struct-ccl-web-iwebresponsesink">
+<span id="doxid-struct-c-c-l-1-1-web-1-1-i-web-response-sink"></span><span id="index-0"></span><h1>struct CCL::Web::IWebResponseSink<a class="headerlink" href="#struct-ccl-web-iwebresponsesink" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;markuptags.h&gt;</span>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Interface for low-level response notifications. <a class="reference internal" href="#details-struct-c-c-l-1-1-web-1-1-i-web-response-sink"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iwebrequest.h&gt;</span>
 
-<span class="k">class</span> <span class="n">MarkupBuilder</span>
+<span class="k">struct</span> <span class="nl">IWebResponseSink</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
 <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
     <span class="c1">// methods</span>
 
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a2eb297930ba1e7afac3764002537c7ea"><span></span><span class="n">append</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-web-1-1-i-web-response-sink-1afb5f2be169ed07eddb385d2a8a530607"><span class="std std-ref">onHeadersUpdated</span></a><span></span> <span class="p">(</span>
+        <span class="n">int64</span> <span class="n">contentLength</span><span class="p">,</span>
+        <a class="reference internal" href="struct_CCL_Web_IWebHeaderCollection.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-header-collection"><span class="std std-ref">IWebHeaderCollection</span></a><span></span><span class="o">&amp;</span> <span class="n">headers</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a6baa97b4668e6f18e45a0e7ae201061d"><span></span><span class="n">appendTag</span></span><span></span> <span class="p">(</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">tag</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">paramValue</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span>
-    <span class="p">);</span>
-
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1abdfe8153e588a23dace59e5c5a188564"><span></span><span class="n">bold</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a3d6cb0757f87ef4e4dfc7e44c1979086"><span></span><span class="n">italic</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a6e0e8f24f632dc04a9720fbcf5b3222d"><span></span><span class="n">underline</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a4ae88377005c107e14aabf7623e765ce"><span></span><span class="n">superscript</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
-    <span class="n">MarkupBuilder</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a4b42dd96d37deb0fdd9838a6bd68bd02"><span></span><span class="n">subscript</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">);</span>
-    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a4928399480663b84aeca0bc5c97ce567"><span></span><span class="n">asString</span></span><span></span> <span class="p">();</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a7ae06c751f7bccd4ef4de49efaf5bde3"><span></span><span class="n">asString</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-markup-builder-1a382982693ed686b53af904b543360b05"><span></span><span class="k">operator</span> <span class="n">StringRef</span></span><span></span> <span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-web-1-1-i-web-response-sink-1a47515565dc3e09714f13a17d6a07e18a"><span class="std std-ref">onResponseCompleted</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1a52b0b286e2edc4b84619cab377775332"><span class="std std-ref">queryInterface</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref">UIDRef</span></a><span></span> <span class="n">iid</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">**</span> <span class="n">ptr</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa13c59009a778d3f8cd5c5feb7d95c1d"><span class="std std-ref">retain</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown-1aa71da12f0f00e99a88184441212183df"><span class="std std-ref">release</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-c-c-l-1-1-web-1-1-i-web-response-sink"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Interface for low-level response notifications.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-web-1-1-i-web-response-sink-1afb5f2be169ed07eddb385d2a8a530607"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">onHeadersUpdated</span> <span class="p">(</span>
+    <span class="n">int64</span> <span class="n">contentLength</span><span class="p">,</span>
+    <a class="reference internal" href="struct_CCL_Web_IWebHeaderCollection.html#doxid-struct-c-c-l-1-1-web-1-1-i-web-header-collection"><span class="std std-ref">IWebHeaderCollection</span></a><span></span><span class="o">&amp;</span> <span class="n">headers</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Headers have been received and/or content length has been updated (chunked transfer).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-web-1-1-i-web-response-sink-1a47515565dc3e09714f13a17d6a07e18a"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">onResponseCompleted</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Response is complete.</p>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="class_CCL_MainColorSchemeOption.html" class="btn btn-neutral float-left" title="class CCL::MainColorSchemeOption" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="class_CCL_MemberFuncCompletionHandler.html" class="btn btn-neutral float-right" title="template class CCL::MemberFuncCompletionHandler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_CCL_Web_IWebResponse.html" class="btn btn-neutral float-left" title="struct CCL::Web::IWebResponse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Web_IWebServer.html" class="btn btn-neutral float-right" title="struct CCL::Web::IWebServer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

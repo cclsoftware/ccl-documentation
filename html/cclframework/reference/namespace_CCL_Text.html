@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::Text::ChunkTypes" href="enum_CCL_Text_ChunkTypes.html" />
+    <link rel="next" title="enum CCL::Text::CompareResult" href="enum_CCL_Text_CompareResult.html" />
     <link rel="prev" title="namespace CCL::LanguageCode" href="namespace_CCL_LanguageCode.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -126,33 +126,44 @@
 
 <span class="c1">// enums</span>
 
-<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_ChunkTypes.html#doxid-namespace-c-c-l-1-1-text-1add06cd6a2d8aba99839a729f8beef74e"><span class="std std-ref">ChunkTypes</span></a><span></span><span class="p">;</span>
 <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_CompareResult.html#doxid-namespace-c-c-l-1-1-text-1af701370a338671ae24da9926dd39487d"><span class="std std-ref">CompareResult</span></a><span></span><span class="p">;</span>
-<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_Decorations.html#doxid-namespace-c-c-l-1-1-text-1af1d17d6ff3638de424b06d6749f8e18f"><span class="std std-ref">Decorations</span></a><span></span><span class="p">;</span>
 <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">Encoding</span></a><span></span><span class="p">;</span>
-<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_HeadingLevels.html#doxid-namespace-c-c-l-1-1-text-1a4de005d46150ad70b9bf967b1ebbcc26"><span class="std std-ref">HeadingLevels</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_HeadingLevel.html#doxid-namespace-c-c-l-1-1-text-1a5a38d94a20e02003f6c4de28c2877f3b"><span class="std std-ref">HeadingLevel</span></a><span></span><span class="p">;</span>
 <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_LineFormat.html#doxid-namespace-c-c-l-1-1-text-1a1947f5acdb8aaa1922a76aeb72905d7c"><span class="std std-ref">LineFormat</span></a><span></span><span class="p">;</span>
-<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_ListTypes.html#doxid-namespace-c-c-l-1-1-text-1aa641b7a48087de615e1547e21626aca9"><span class="std std-ref">ListTypes</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_ListType.html#doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376"><span class="std std-ref">ListType</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_NodeType.html#doxid-namespace-c-c-l-1-1-text-1acac9cbaeea226ed297804c012dc12b16"><span class="std std-ref">NodeType</span></a><span></span><span class="p">;</span>
 <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_NormalizationForm.html#doxid-namespace-c-c-l-1-1-text-1a3fd3dd9df396ccd989f391bf0937ac7f"><span class="std std-ref">NormalizationForm</span></a><span></span><span class="p">;</span>
 <span class="k">enum</span> <a class="reference internal" href="enum_CCL_Text_StringOptions.html#doxid-namespace-c-c-l-1-1-text-1a1a65220ab29e2985cbc71b607394481c"><span class="std std-ref">StringOptions</span></a><span></span><span class="p">;</span>
 
 <span class="c1">// structs</span>
 
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Anchor.html#doxid-struct-c-c-l-1-1-text-1-1-anchor"><span class="std std-ref">Anchor</span></a><span></span><span class="p">;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Break.html#doxid-struct-c-c-l-1-1-text-1-1-break"><span class="std std-ref">Break</span></a><span></span><span class="p">;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk"><span class="std std-ref">Chunk</span></a><span></span><span class="p">;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Decoration.html#doxid-struct-c-c-l-1-1-text-1-1-decoration"><span class="std std-ref">Decoration</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_BlockQuote.html#doxid-struct-c-c-l-1-1-text-1-1-block-quote"><span class="std std-ref">BlockQuote</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Bold.html#doxid-struct-c-c-l-1-1-text-1-1-bold"><span class="std std-ref">Bold</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_CodeBlock.html#doxid-struct-c-c-l-1-1-text-1-1-code-block"><span class="std std-ref">CodeBlock</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Emphasis.html#doxid-struct-c-c-l-1-1-text-1-1-emphasis"><span class="std std-ref">Emphasis</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_FontColor.html#doxid-struct-c-c-l-1-1-text-1-1-font-color"><span class="std std-ref">FontColor</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_FontSize.html#doxid-struct-c-c-l-1-1-text-1-1-font-size"><span class="std std-ref">FontSize</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment"><span class="std std-ref">Fragment</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_FragmentLink.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-link"><span class="std std-ref">FragmentLink</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Heading.html#doxid-struct-c-c-l-1-1-text-1-1-heading"><span class="std std-ref">Heading</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_HorizontalLine.html#doxid-struct-c-c-l-1-1-text-1-1-horizontal-line"><span class="std std-ref">HorizontalLine</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Italic.html#doxid-struct-c-c-l-1-1-text-1-1-italic"><span class="std std-ref">Italic</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_LineBreak.html#doxid-struct-c-c-l-1-1-text-1-1-line-break"><span class="std std-ref">LineBreak</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Link.html#doxid-struct-c-c-l-1-1-text-1-1-link"><span class="std std-ref">Link</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_ListBegin.html#doxid-struct-c-c-l-1-1-text-1-1-list-begin"><span class="std std-ref">ListBegin</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_ListEnd.html#doxid-struct-c-c-l-1-1-text-1-1-list-end"><span class="std std-ref">ListEnd</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_ListItem.html#doxid-struct-c-c-l-1-1-text-1-1-list-item"><span class="std std-ref">ListItem</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Paragraph.html#doxid-struct-c-c-l-1-1-text-1-1-paragraph"><span class="std std-ref">Paragraph</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Plain.html#doxid-struct-c-c-l-1-1-text-1-1-plain"><span class="std std-ref">Plain</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_SoftBreak.html#doxid-struct-c-c-l-1-1-text-1-1-soft-break"><span class="std std-ref">SoftBreak</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Strong.html#doxid-struct-c-c-l-1-1-text-1-1-strong"><span class="std std-ref">Strong</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_StyleSpan.html#doxid-struct-c-c-l-1-1-text-1-1-style-span"><span class="std std-ref">StyleSpan</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_SubBlock.html#doxid-struct-c-c-l-1-1-text-1-1-sub-block"><span class="std std-ref">SubBlock</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Subscript.html#doxid-struct-c-c-l-1-1-text-1-1-subscript"><span class="std std-ref">Subscript</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Superscript.html#doxid-struct-c-c-l-1-1-text-1-1-superscript"><span class="std std-ref">Superscript</span></a><span></span><span class="p">;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Table.html#doxid-struct-c-c-l-1-1-text-1-1-table"><span class="std std-ref">Table</span></a><span></span><span class="p">;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_URL.html#doxid-struct-c-c-l-1-1-text-1-1-u-r-l"><span class="std std-ref">URL</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Text_Underline.html#doxid-struct-c-c-l-1-1-text-1-1-underline"><span class="std std-ref">Underline</span></a><span></span><span class="p">;</span>
 
 <span class="c1">// global functions</span>
 
@@ -185,14 +196,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="namespace_CCL_LanguageCode.html" class="btn btn-neutral float-left" title="namespace CCL::LanguageCode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_Text_ChunkTypes.html" class="btn btn-neutral float-right" title="enum CCL::Text::ChunkTypes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_Text_CompareResult.html" class="btn btn-neutral float-right" title="enum CCL::Text::CompareResult" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

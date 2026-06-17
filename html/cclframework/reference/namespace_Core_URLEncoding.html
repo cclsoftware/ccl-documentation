@@ -172,7 +172,11 @@
 <span class="p">);</span>
 
 <span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TString</span><span class="o">&gt;</span>
-<span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core_URLEncoding.html#doxid-namespace-core-1-1-u-r-l-encoding-1ae2f5e86834e464ff8a7d3dcda4e50df5"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span><span class="n">TString</span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core_URLEncoding.html#doxid-namespace-core-1-1-u-r-l-encoding-1a219e9d79b57a2104868e813afae5a223"><span class="std std-ref">decode</span></a><span></span> <span class="p">(</span>
+    <span class="n">TString</span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">,</span>
+    <a class="reference internal" href="../../corelibrary/reference/enum_Core_URLEncoding_Scheme.html#doxid-namespace-core-1-1-u-r-l-encoding-1a5c5181a54a4f46149d9c9662b2694167"><span class="std std-ref">Scheme</span></a><span></span> <span class="n">scheme</span>
+<span class="p">);</span>
 
 <span class="p">}</span> <span class="c1">// namespace URLEncoding</span></pre>
 </section>
@@ -187,8 +191,12 @@
     <a class="reference internal" href="../../corelibrary/reference/enum_Core_URLEncoding_Scheme.html#doxid-namespace-core-1-1-u-r-l-encoding-1a5c5181a54a4f46149d9c9662b2694167"><span class="std std-ref">Scheme</span></a><span></span> <span class="n">scheme</span>
 <span class="p">)</span></pre>
 <p>URL-encode string, works with C-string clases.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1-1-u-r-l-encoding-1ae2f5e86834e464ff8a7d3dcda4e50df5"><span id="index-2"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TString</span><span class="o">&gt;</span>
-<span class="kt">void</span> <span class="n">decode</span> <span class="p">(</span><span class="n">TString</span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-core-1-1-u-r-l-encoding-1a219e9d79b57a2104868e813afae5a223"><span id="index-2"></span><span></span><span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TString</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">decode</span> <span class="p">(</span>
+    <span class="n">TString</span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+    <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">,</span>
+    <a class="reference internal" href="../../corelibrary/reference/enum_Core_URLEncoding_Scheme.html#doxid-namespace-core-1-1-u-r-l-encoding-1a5c5181a54a4f46149d9c9662b2694167"><span class="std std-ref">Scheme</span></a><span></span> <span class="n">scheme</span>
+<span class="p">)</span></pre>
 <p>URL-decode string, works with C-string clases.</p>
 </section>
 </section>
@@ -206,7 +214,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

@@ -144,18 +144,16 @@
 
     <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span>CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ae06bda2951b175289280a6e67a677c11"><span></span><span class="n">Font_getDefaultFont</span></span><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a1eb2efc2c3a960e6586232e3af59ddb3"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a859a6d8bb0eb20af06bdc7097f951dbc"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
         <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a072f0f0ef846924340e9ac26a125ffc3"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1a90563b08ed3321f33e98a524527a83e2"><span></span><span class="n">Font_measureString</span></span><span></span> <span class="p">(</span>
         <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
+        <span class="k">const</span> <a class="reference internal" href="class_CCL_Font.html#doxid-class-c-c-l-1-1-font"><span class="std std-ref">Font</span></a><span></span><span class="o">&amp;</span> <span class="n">font</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-internal-1-1-i-graphics-helper-1ae728ac8e22e56321fc659c4c6eb34015"><span></span><span class="n">Font_measureStringImage</span></span><span></span> <span class="p">(</span>
@@ -280,7 +278,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

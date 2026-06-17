@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>enum CCL::Text::Decorations &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>enum CCL::Text::ListType &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::Text::Encoding" href="enum_CCL_Text_Encoding.html" />
-    <link rel="prev" title="enum CCL::Text::CompareResult" href="enum_CCL_Text_CompareResult.html" />
+    <link rel="next" title="enum CCL::Text::NodeType" href="enum_CCL_Text_NodeType.html" />
+    <link rel="prev" title="enum CCL::Text::LineFormat" href="enum_CCL_Text_LineFormat.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -107,7 +107,7 @@
           <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
           <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
           <li class="breadcrumb-item"><a href="namespace_CCL_Text.html">namespace CCL::Text</a></li>
-      <li class="breadcrumb-item active">enum CCL::Text::Decorations</li>
+      <li class="breadcrumb-item active">enum CCL::Text::ListType</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -116,32 +116,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="enum-ccl-text-decorations">
-<span id="doxid-namespace-c-c-l-1-1-text-1af1d17d6ff3638de424b06d6749f8e18f"></span><span id="index-0"></span><h1>enum CCL::Text::Decorations<a class="headerlink" href="#enum-ccl-text-decorations" title="Link to this heading"></a></h1>
-<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> decoration.</p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextbuilder.h&gt;</span>
+  <section id="enum-ccl-text-listtype">
+<span id="doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376"></span><span id="index-0"></span><h1>enum CCL::Text::ListType<a class="headerlink" href="#enum-ccl-text-listtype" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> list type. <a class="reference internal" href="#details-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;textformatting.h&gt;</span>
 
-<span class="k">enum</span> <span class="n">Decorations</span>
+<span class="k">enum</span> <span class="n">ListType</span>
 <span class="p">{</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1af1d17d6ff3638de424b06d6749f8e18fadbbb06d404b3ff31b3c630cd2149c7dc"><span></span><span class="n">kBold</span></span><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1af1d17d6ff3638de424b06d6749f8e18fa6b657aa91573e7996686e7b461c3ad98"><span></span><span class="n">kItalic</span></span><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1af1d17d6ff3638de424b06d6749f8e18fa90b8f9c67f6a2d57ca431e07719b18f5"><span></span><span class="n">kUnderline</span></span><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376af71b1c22d6c74733373a61c3346cffe7"><span></span><span class="n">kListTypeUnknown</span></span><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376aadd4ba4535da913e1da66dca03cbbc84"><span class="std std-ref">kOrderedList</span></a><span></span>     <span class="o">=</span> <span class="sc">&#39;ordr&#39;</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376aff091187075ee9570bcdb63167181ce5"><span class="std std-ref">kUnorderedList</span></a><span></span>   <span class="o">=</span> <span class="sc">&#39;unod&#39;</span><span class="p">,</span>
 <span class="p">};</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="namespace_CCL_Text.html#doxid-namespace-c-c-l-1-1-text"><span class="std std-ref">Text</span></a> list type.</p>
+<section id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376aadd4ba4535da913e1da66dca03cbbc84"><span id="index-1"></span><span></span><span class="n">kOrderedList</span></pre>
+<p>ordered list (1., 2., 3., etc.)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-text-1a6e68f6326f0d9c124fc6f54fc2733376aff091187075ee9570bcdb63167181ce5"><span id="index-2"></span><span></span><span class="n">kUnorderedList</span></pre>
+<p>unordered (bulleted) list</p>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_CCL_Text_CompareResult.html" class="btn btn-neutral float-left" title="enum CCL::Text::CompareResult" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_Text_Encoding.html" class="btn btn-neutral float-right" title="enum CCL::Text::Encoding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_Text_LineFormat.html" class="btn btn-neutral float-left" title="enum CCL::Text::LineFormat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_Text_NodeType.html" class="btn btn-neutral float-right" title="enum CCL::Text::NodeType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

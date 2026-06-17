@@ -132,6 +132,7 @@
     <span class="n">ObjectFilterChain</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-object-filter-chain-1a295203498d634e87d9df1814b9beeca7"><span></span><span class="n">addFilter</span></span><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">CCL::IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">filter</span><span class="p">);</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-object-filter-chain-1a9b0a5a3ad9972ab0e8eb0b54873aac6b"><span></span><span class="n">removeAll</span></span><span></span> <span class="p">();</span>
     <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-object-filter-chain-1a5b4100be50b6b50f265883832ba847da"><span class="std std-ref">matches</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">object</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-object-filter-chain-1a87e7d46e086d1d43ea41f7d6fa63f203"><span class="std std-ref">create</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">filter1</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">filter2</span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
@@ -163,6 +164,9 @@
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-object-filter-chain-1a5b4100be50b6b50f265883832ba847da"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">matches</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">object</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Tell if the object matches a filter condition.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-object-filter-chain-1a87e7d46e086d1d43ea41f7d6fa63f203"><span id="index-2"></span><span></span><span class="k">static</span> <a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">create</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">filter1</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObjectFilter.html#doxid-struct-c-c-l-1-1-i-object-filter"><span class="std std-ref">IObjectFilter</span></a><span></span><span class="o">*</span> <span class="n">filter2</span><span class="p">)</span></pre>
+<p>Creates a chain from 2 filters.</p>
+<p>Shares input filters, caller owns returned filter.</p>
 </section>
 </section>
 </section>
@@ -179,7 +183,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

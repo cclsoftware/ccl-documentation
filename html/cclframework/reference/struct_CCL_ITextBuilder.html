@@ -127,8 +127,12 @@
 <span class="p">{</span>
     <span class="c1">// methods</span>
 
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-builder-1a7a60f501b93a43e31e4d138d718cb340"><span class="std std-ref">printFragment</span></a><span></span> <span class="p">(</span>
+        <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+        <span class="k">const</span> TextFragment<span></span><span class="o">&amp;</span> <span class="n">fragment</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
     <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextTable.html#doxid-struct-c-c-l-1-1-i-text-table"><span class="std std-ref">ITextTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-builder-1a39495f5cdb34c8677bb353073976851c"><span class="std std-ref">createTable</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-text-builder-1a85fa335f33fef58ebeabf688af714b60"><span class="std std-ref">printChunk</span></a><span></span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk"><span class="std std-ref">Text::Chunk</span></a><span></span><span class="o">&amp;</span> <span class="n">chunk</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
@@ -144,10 +148,13 @@
 <span id="details-struct-c-c-l-1-1-i-text-builder"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-builder-1a39495f5cdb34c8677bb353073976851c"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextTable.html#doxid-struct-c-c-l-1-1-i-text-table"><span class="std std-ref">ITextTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createTable</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Create empty table.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-builder-1a85fa335f33fef58ebeabf688af714b60"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">printChunk</span> <span class="p">(</span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_CCL_Text_Chunk.html#doxid-struct-c-c-l-1-1-text-1-1-chunk"><span class="std std-ref">Text::Chunk</span></a><span></span><span class="o">&amp;</span> <span class="n">chunk</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Print given chunk to string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-builder-1a7a60f501b93a43e31e4d138d718cb340"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">printFragment</span> <span class="p">(</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">result</span><span class="p">,</span>
+    <span class="k">const</span> TextFragment<span></span><span class="o">&amp;</span> <span class="n">fragment</span>
+<span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Print given text fragment to string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-text-builder-1a39495f5cdb34c8677bb353073976851c"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextTable.html#doxid-struct-c-c-l-1-1-i-text-table"><span class="std std-ref">ITextTable</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createTable</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Create table (optional, if supported by underlying format).</p>
 </section>
 </section>
 </section>
@@ -164,7 +171,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

@@ -122,8 +122,8 @@
 </div>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>Markup painter provides methods to draw and measure strings containing markup. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-markup-painter"><span class="std std-ref">More…</span></a></p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;imarkuppainter.h&gt;</span>
+<p>Markup painter provides methods to draw and measure strings containing <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l"><span class="std std-ref">CCL</span></a> Markup. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-markup-painter"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;imarkupsupport.h&gt;</span>
 
 <span class="k">struct</span> <span class="nl">IMarkupPainter</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
 <span class="p">{</span>
@@ -147,18 +147,16 @@
         <span class="n">AlignmentRef</span> <span class="n">alignment</span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span> <span class="p">()</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-markup-painter-1a8082dfb20ac123cec0e8fa2207aa7a26"><span class="std std-ref">measureMarkupString</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-markup-painter-1af1686713028b37c6e0ed5c8b65d01f42"><span class="std std-ref">measureMarkupString</span></a><span></span> <span class="p">(</span>
         <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+        FontRef<span></span> <span class="n">font</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-markup-painter-1adefaffd478147b37343ae26001e3aa11"><span class="std std-ref">measureMarkupString</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-markup-painter-1a2e66bf83532b4bb1161e668ddbfea159"><span class="std std-ref">measureMarkupString</span></a><span></span> <span class="p">(</span>
         <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-        FontRef<span></span> <span class="n">font</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+        FontRef<span></span> <span class="n">font</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
@@ -173,7 +171,8 @@
 </section>
 <section id="detailed-documentation">
 <span id="details-struct-c-c-l-1-1-i-markup-painter"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
-<p>Markup painter provides methods to draw and measure strings containing markup.</p>
+<p>Markup painter provides methods to draw and measure strings containing <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l"><span class="std std-ref">CCL</span></a> Markup.</p>
+<p>See MarkupTags namespace for supported tags.</p>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-markup-painter-1a2b4edad7be844531eb5746d459201721"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">drawMarkupString</span> <span class="p">(</span>
@@ -194,20 +193,18 @@
     <span class="n">AlignmentRef</span> <span class="n">alignment</span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/struct_Core_Alignment.html#doxid-struct-core-1-1-alignment"><span class="std std-ref">Alignment</span></a><span></span> <span class="p">()</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Draw <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string containing markup with given brush (floating coordinates).</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-markup-painter-1a8082dfb20ac123cec0e8fa2207aa7a26"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">measureMarkupString</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-markup-painter-1af1686713028b37c6e0ed5c8b65d01f42"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">measureMarkupString</span> <span class="p">(</span>
     <span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    FontRef<span></span> <span class="n">font</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Measure <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string containing markup with given font and <a class="reference internal" href="enum_CCL_ITextLayout_MeasureFlags.html#doxid-struct-c-c-l-1-1-i-text-layout-1a5f4d9efca2d41a29063d216a3045809b"><span class="std std-ref">ITextLayout::MeasureFlags</span></a>.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-markup-painter-1adefaffd478147b37343ae26001e3aa11"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">measureMarkupString</span> <span class="p">(</span>
+<p>Measure <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string containing markup with given font.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-markup-painter-1a2e66bf83532b4bb1161e668ddbfea159"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">measureMarkupString</span> <span class="p">(</span>
     <span class="n">RectF</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">,</span>
-    FontRef<span></span> <span class="n">font</span><span class="p">,</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+    FontRef<span></span> <span class="n">font</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Measure <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string containing markup with given font and <a class="reference internal" href="enum_CCL_ITextLayout_MeasureFlags.html#doxid-struct-c-c-l-1-1-i-text-layout-1a5f4d9efca2d41a29063d216a3045809b"><span class="std std-ref">ITextLayout::MeasureFlags</span></a> (floating coordinates).</p>
+<p>Measure <a class="reference internal" href="namespace_CCL_Unicode.html#doxid-namespace-c-c-l-1-1-unicode"><span class="std std-ref">Unicode</span></a> string containing markup with given font (floating coordinates).</p>
 </section>
 </section>
 </section>
@@ -224,7 +221,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

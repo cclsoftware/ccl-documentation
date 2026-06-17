@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Core Skin Elements Reference" href="../../coreskin/reference/core-skin-elements-classmodel.html" />
+    <link rel="next" title="struct TestContext::FailureInfo" href="struct_TestContext_FailureInfo.html" />
     <link rel="prev" title="class ServerThread" href="class_ServerThread.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -129,10 +129,15 @@
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">class</span> <span class="nl">TestContext</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_Core_Test_ITestContext.html#doxid-struct-core-1-1-test-1-1-i-test-context"><span class="std std-ref">Core::Test::ITestContext</span></a><span></span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_TestContext_FailureInfo.html#doxid-struct-test-context-1-1-failure-info"><span class="std std-ref">FailureInfo</span></a><span></span><span class="p">;</span>
+
     <span class="c1">// methods</span>
 
-    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-test-context-1a24c89a56b350353e54235c16595a492e"><span></span><span class="n">addMessage</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">message</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">sourceFile</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">lineNumber</span><span class="p">);</span>
-    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-test-context-1afa5c0e6496c4848b3e00b7057d6ff810"><span></span><span class="n">addFailure</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">message</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">sourceFile</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">lineNumber</span><span class="p">);</span>
+    <span class="k">const</span> <a class="reference internal" href="class_Core_Vector.html#doxid-class-core-1-1-vector"><span class="std std-ref">Vector</span></a><span></span><span class="o">&lt;</span><span class="n">FailureInfo</span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-test-context-1afbe9594498072376e5cc1895aeaeb7ed"><span></span><span class="n">getFailures</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-test-context-1a2db02f5304fddafb66fddd2bf30fe18a"><span></span><span class="n">addMessage</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">message</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">sourceFile</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">lineNumber</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-test-context-1abd606633c0894a18034d8113e69c147a"><span></span><span class="n">addFailure</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">message</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">sourceFile</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aa7f7f09a983024379a8411822781accb"><span class="std std-ref">int</span></a><span></span> <span class="n">lineNumber</span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
@@ -158,14 +163,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="class_ServerThread.html" class="btn btn-neutral float-left" title="class ServerThread" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../coreskin/reference/core-skin-elements-classmodel.html" class="btn btn-neutral float-right" title="Core Skin Elements Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_TestContext_FailureInfo.html" class="btn btn-neutral float-right" title="struct TestContext::FailureInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

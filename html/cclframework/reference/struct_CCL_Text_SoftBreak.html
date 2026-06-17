@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>struct CCL::ITextModel::DrawInfo &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>struct CCL::Text::SoftBreak &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="struct CCL::ITextModel::InteractionInfo" href="struct_CCL_ITextModel_InteractionInfo.html" />
-    <link rel="prev" title="enum CCL::ITextModel::EditOptions" href="enum_CCL_ITextModel_EditOptions.html" />
+    <link rel="next" title="struct CCL::Text::Strong" href="struct_CCL_Text_Strong.html" />
+    <link rel="prev" title="struct CCL::Text::Plain" href="struct_CCL_Text_Plain.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -65,9 +65,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="group_ccl.html">CCL</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_app.html">CCL-App</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_base.html">CCL-Base</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group_gui.html">CCL-GUI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group_ccl_system.html">CCL-System</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="group_ccl_text.html">CCL-Text</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
@@ -105,9 +105,9 @@
           <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
           <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
           <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
-          <li class="breadcrumb-item"><a href="group_gui.html">CCL-GUI</a></li>
-          <li class="breadcrumb-item"><a href="struct_CCL_ITextModel.html">struct CCL::ITextModel</a></li>
-      <li class="breadcrumb-item active">struct CCL::ITextModel::DrawInfo</li>
+          <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
+          <li class="breadcrumb-item"><a href="namespace_CCL_Text.html">namespace CCL::Text</a></li>
+      <li class="breadcrumb-item active">struct CCL::Text::SoftBreak</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -116,36 +116,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="struct-ccl-itextmodel-drawinfo">
-<span id="doxid-struct-c-c-l-1-1-i-text-model-1-1-draw-info"></span><span id="index-0"></span><h1>struct CCL::ITextModel::DrawInfo<a class="headerlink" href="#struct-ccl-itextmodel-drawinfo" title="Link to this heading"></a></h1>
+  <section id="struct-ccl-text-softbreak">
+<span id="doxid-struct-c-c-l-1-1-text-1-1-soft-break"></span><span id="index-0"></span><h1>struct CCL::Text::SoftBreak<a class="headerlink" href="#struct-ccl-text-softbreak" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>Draw information.</p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextmodel.h&gt;</span>
+<p>Soft break.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextbuilder.h&gt;</span>
 
-<span class="k">struct</span> <span class="n">DrawInfo</span>
+<span class="k">struct</span> <span class="nl">SoftBreak</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment"><span class="std std-ref">CCL::Text::Fragment</span></a><span></span>
 <span class="p">{</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// fields</span>
 
-    <a class="reference internal" href="struct_CCL_IView.html#doxid-struct-c-c-l-1-1-i-view"><span class="std std-ref">IView</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-text-model-1-1-draw-info-1ac9e5bdcfbf5e0443ad5f2c7280fadfb2"><span></span><span class="n">view</span></span><span></span><span class="p">;</span>
-    <a class="reference internal" href="struct_CCL_IGraphics.html#doxid-struct-c-c-l-1-1-i-graphics"><span class="std std-ref">IGraphics</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-text-model-1-1-draw-info-1af87168d94539e806dcd42b3cdc07f2f1"><span></span><span class="n">graphics</span></span><span></span><span class="p">;</span>
-    <span class="k">const</span> <span class="n">Rect</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-text-model-1-1-draw-info-1ae8e94badedaa447f86fda523bc7b8bc9"><span></span><span class="n">rect</span></span><span></span><span class="p">;</span>
-<span class="p">};</span></pre>
+    <a class="reference internal" href="enum_CCL_Text_NodeType.html#doxid-namespace-c-c-l-1-1-text-1acac9cbaeea226ed297804c012dc12b16"><span class="std std-ref">TextNodeType</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a718ceff83b765b4fbfec073ea1bbc25f"><span class="std std-ref">nodeType</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a5afce1c98d73512f8ffcb0482df23708"><span class="std std-ref">content</span></a><span></span><span class="p">;</span>
+    <span class="n">tbool</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1ae56590e05797ac3fa6da0ab9af4e41ee"><span class="std std-ref">encode</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a904ebb63472b562671c9946bbf1df22c"><span class="std std-ref">argument</span></a><span></span><span class="p">;</span></pre>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_CCL_ITextModel_EditOptions.html" class="btn btn-neutral float-left" title="enum CCL::ITextModel::EditOptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_CCL_ITextModel_InteractionInfo.html" class="btn btn-neutral float-right" title="struct CCL::ITextModel::InteractionInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_CCL_Text_Plain.html" class="btn btn-neutral float-left" title="struct CCL::Text::Plain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Text_Strong.html" class="btn btn-neutral float-right" title="struct CCL::Text::Strong" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

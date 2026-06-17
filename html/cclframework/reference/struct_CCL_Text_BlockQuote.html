@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>enum CCL::Text::ListTypes &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>struct CCL::Text::BlockQuote &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::Text::NormalizationForm" href="enum_CCL_Text_NormalizationForm.html" />
-    <link rel="prev" title="enum CCL::Text::LineFormat" href="enum_CCL_Text_LineFormat.html" />
+    <link rel="next" title="struct CCL::Text::Bold" href="struct_CCL_Text_Bold.html" />
+    <link rel="prev" title="struct CCL::Text::Anchor" href="struct_CCL_Text_Anchor.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -107,7 +107,7 @@
           <li class="breadcrumb-item"><a href="group_ccl.html">CCL</a></li>
           <li class="breadcrumb-item"><a href="group_ccl_text.html">CCL-Text</a></li>
           <li class="breadcrumb-item"><a href="namespace_CCL_Text.html">namespace CCL::Text</a></li>
-      <li class="breadcrumb-item active">enum CCL::Text::ListTypes</li>
+      <li class="breadcrumb-item active">struct CCL::Text::BlockQuote</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -116,31 +116,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="enum-ccl-text-listtypes">
-<span id="doxid-namespace-c-c-l-1-1-text-1aa641b7a48087de615e1547e21626aca9"></span><span id="index-0"></span><h1>enum CCL::Text::ListTypes<a class="headerlink" href="#enum-ccl-text-listtypes" title="Link to this heading"></a></h1>
-<p>List type.</p>
+  <section id="struct-ccl-text-blockquote">
+<span id="doxid-struct-c-c-l-1-1-text-1-1-block-quote"></span><span id="index-0"></span><h1>struct CCL::Text::BlockQuote<a class="headerlink" href="#struct-ccl-text-blockquote" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Block quote.</p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;itextbuilder.h&gt;</span>
 
-<span class="k">enum</span> <span class="n">ListTypes</span>
+<span class="k">struct</span> <span class="nl">BlockQuote</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment"><span class="std std-ref">CCL::Text::Fragment</span></a><span></span>
 <span class="p">{</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1aa641b7a48087de615e1547e21626aca9af7bc16285f98d098827aa72f70d9aa87"><span></span><span class="n">kOrdered</span></span><span></span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-text-1aa641b7a48087de615e1547e21626aca9a440cc15447ad101f9a5b0380c9481fe7"><span></span><span class="n">kUnordered</span></span><span></span><span class="p">,</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-text-1-1-block-quote-1ac60c0ed64840b6fdb4bc323f75aa67f1"><span></span><span class="n">BlockQuote</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">,</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">encode</span> <span class="o">=</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">true</span></a><span></span><span class="p">);</span>
 <span class="p">};</span></pre>
+<section id="inherited-members">
+<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="enum_CCL_Text_NodeType.html#doxid-namespace-c-c-l-1-1-text-1acac9cbaeea226ed297804c012dc12b16"><span class="std std-ref">TextNodeType</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a718ceff83b765b4fbfec073ea1bbc25f"><span class="std std-ref">nodeType</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a5afce1c98d73512f8ffcb0482df23708"><span class="std std-ref">content</span></a><span></span><span class="p">;</span>
+    <span class="n">tbool</span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1ae56590e05797ac3fa6da0ab9af4e41ee"><span class="std std-ref">encode</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span> <a class="reference internal" href="struct_CCL_Text_Fragment.html#doxid-struct-c-c-l-1-1-text-1-1-fragment-1a904ebb63472b562671c9946bbf1df22c"><span class="std std-ref">argument</span></a><span></span><span class="p">;</span></pre>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_CCL_Text_LineFormat.html" class="btn btn-neutral float-left" title="enum CCL::Text::LineFormat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_Text_NormalizationForm.html" class="btn btn-neutral float-right" title="enum CCL::Text::NormalizationForm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_CCL_Text_Anchor.html" class="btn btn-neutral float-left" title="struct CCL::Text::Anchor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_CCL_Text_Bold.html" class="btn btn-neutral float-right" title="struct CCL::Text::Bold" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 

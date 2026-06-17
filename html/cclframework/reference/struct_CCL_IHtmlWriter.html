@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="struct CCL::IMarkupWriter" href="struct_CCL_IMarkupWriter.html" />
+    <link rel="next" title="struct CCL::IMarkdownContentHandler" href="struct_CCL_IMarkdownContentHandler.html" />
     <link rel="prev" title="enum CCL::IAttributeHandler::Options" href="enum_CCL_IAttributeHandler_Options.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -127,8 +127,6 @@
 <span class="p">{</span>
     <span class="c1">// methods</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextBuilder.html#doxid-struct-c-c-l-1-1-i-text-builder"><span class="std std-ref">ITextBuilder</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-html-writer-1a2afc07d398390dbebf487c2480b1590e"><span class="std std-ref">createHtmlBuilder</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-html-writer-1a40c1e122c063aff97e7e2da09afdbdf8"><span class="std std-ref">pushMetaElement</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">name</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">,</span>
@@ -155,6 +153,7 @@
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_ITextWriter.html#doxid-struct-c-c-l-1-1-i-text-writer-1a4bc7eab497233542dbef7ea46dc126cc"><span class="std std-ref">endDocument</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_ITextWriter.html#doxid-struct-c-c-l-1-1-i-text-writer-1a34fe6366e36a949c3e3b7358e4d03d69"><span class="std std-ref">writeLine</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">text</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextBuilder.html#doxid-struct-c-c-l-1-1-i-text-builder"><span class="std std-ref">ITextBuilder</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="struct_CCL_ITextWriter.html#doxid-struct-c-c-l-1-1-i-text-writer-1ae47ed0d3a5b8b8b3e72fdf6eb182e17a"><span class="std std-ref">createTextBuilder</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="struct_CCL_IMarkupWriter.html#doxid-struct-c-c-l-1-1-i-markup-writer-1a277d709e5fb4abc488b08247e275644f"><span class="std std-ref">writeMarkup</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">markup</span><span class="p">,</span>
@@ -197,17 +196,15 @@
 <span id="details-struct-c-c-l-1-1-i-html-writer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a2afc07d398390dbebf487c2480b1590e"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ITextBuilder.html#doxid-struct-c-c-l-1-1-i-text-builder"><span class="std std-ref">ITextBuilder</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">createHtmlBuilder</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Create text block builder for HTML.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a40c1e122c063aff97e7e2da09afdbdf8"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">pushMetaElement</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a40c1e122c063aff97e7e2da09afdbdf8"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">pushMetaElement</span> <span class="p">(</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">name</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">content</span><span class="p">,</span>
     <span class="n">tbool</span> <span class="n">isHttpEquiv</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Push &lt;meta&gt; element to be written inside HTML &lt;head&gt;.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a8d9a57172959e72fbb9e871ab966943f"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">pushStyleElement</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">cssContent</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a8d9a57172959e72fbb9e871ab966943f"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">pushStyleElement</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">cssContent</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Push &lt;style&gt; element to be written inside HTML &lt;head&gt;.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a271508ca8f206d213b77157e5118c4d2"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">writeHead</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">title</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-html-writer-1a271508ca8f206d213b77157e5118c4d2"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">writeHead</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">title</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Write &lt;head&gt;&lt;/head&gt; including &lt;title&gt; and all previously pushed meta elements.</p>
 </section>
 </section>
@@ -218,14 +215,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="enum_CCL_IAttributeHandler_Options.html" class="btn btn-neutral float-left" title="enum CCL::IAttributeHandler::Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_CCL_IMarkupWriter.html" class="btn btn-neutral float-right" title="struct CCL::IMarkupWriter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_CCL_IMarkdownContentHandler.html" class="btn btn-neutral float-right" title="struct CCL::IMarkdownContentHandler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Mar 27, 2026.
+      <span class="lastupdated">Last updated on Jun 17, 2026.
       </span></p>
   </div>
 
