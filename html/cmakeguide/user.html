@@ -218,13 +218,17 @@ Depending on your system, CMake might ask you what kind of project you want to g
 <section id="building-projects">
 <h2>Building Projects<a class="headerlink" href="#building-projects" title="Link to this heading"></a></h2>
 <p>Once the project files are generated, you can open the project in your IDE and build/debug/run from there.</p>
-<p>If you just want to build the project without opening your IDE, you can do this with CMake too:</p>
+<p>If you just want to build Windows, macOS or Linux projects without opening your IDE, you can do this with CMake:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>Release
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Not all “generators” (e.g. Makefile generators) support multi-config projects. This means, not all generators support the <code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">Release</span></code> options. For those generators, add <code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE=Release</span></code> when generating the project.</p>
+</div>
+<p>To build Android projects from the command line, you need to use Gradle instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gradle<span class="w"> </span>assembleArm8Release
+</pre></div>
 </div>
 </section>
 <section id="adding-source-files">
@@ -247,7 +251,7 @@ Changes will be lost the next time CMake runs (e.g. on your next build).</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 17, 2026.
+      <span class="lastupdated">Last updated on Jun 29, 2026.
       </span></p>
   </div>
 

@@ -115,16 +115,16 @@
 </section>
 <section id="installation-on-macos">
 <h2>Installation on macOS<a class="headerlink" href="#installation-on-macos" title="Link to this heading"></a></h2>
-<p>A development system runnning macOS can build targets for macOS and iOS/iPadOS.</p>
 <p>Install Xcode from the App Store or Apple’s developer website. Install CMake, e.g. using the Homebrew package manager (<a class="reference external" href="https://brew.sh">https://brew.sh</a>).</p>
-<p>Install the CCL SDK to an arbritrary folder, like the “Documents” folder:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/Documents
+<p>Install the CCL SDK to an arbritrary folder, like the user folder. The installer is a tarball that can be extracted using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>
 tar<span class="w"> </span>-xzf<span class="w"> </span><span class="nv">$HOME</span>/Downloads/CCL<span class="se">\ </span>SDK-&lt;version&gt;-macOS.tar.gz
 </pre></div>
 </div>
-<p>Before running CMake from the command line, the following environment variables need to be set:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CCLSDKROOT</span><span class="o">=</span><span class="nv">$HOME</span>/Documents/CCL<span class="se">\ </span>SDK-&lt;version&gt;-macOS
-<span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_PREFIX_PATH</span><span class="o">=</span><span class="nv">$CCLSDKROOT</span>/Frameworks/cmake/ccl
+<p>To make the CCL SDK available in the CMake user module registry, create the following directory and file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.cmake/packages/ccl
+<span class="nv">CCLSDKROOT</span><span class="o">=</span><span class="nv">$HOME</span>/CCL<span class="se">\ </span>SDK-&lt;version&gt;-macOS
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CCLSDKROOT</span><span class="s2">/Frameworks/cmake/ccl&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>~/.cmake/packages/ccl/&lt;version&gt;
 </pre></div>
 </div>
 </section>
@@ -233,6 +233,7 @@ sudo<span class="w"> </span>./CCL<span class="se">\ </span>SDK-&lt;version&gt;-L
 <li><p>CMake 4.1.2 (must match the CMake version defined in vendor.android.cmake)</p></li>
 </ul>
 <p>IDE heap size must be configured to at least 4096 MB in Android Studio’s memory settings.</p>
+<p>To build on the command line, you will need to install the Gradle build tool on the host system. The recommended version as of this writing is Gradle 9.2.0.</p>
 </section>
 </section>
 
@@ -248,7 +249,7 @@ sudo<span class="w"> </span>./CCL<span class="se">\ </span>SDK-&lt;version&gt;-L
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 17, 2026.
+      <span class="lastupdated">Last updated on Jun 29, 2026.
       </span></p>
   </div>
 

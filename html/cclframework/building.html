@@ -149,6 +149,11 @@ cmake<span class="w"> </span>--preset<span class="w"> </span>android
 </pre></div>
 </div>
 <p>Please place the <code class="docutils literal notranslate"><span class="pre">signing.properties</span></code> file in the same directory as the top level <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> or provide the path to it in the <code class="docutils literal notranslate"><span class="pre">CCL_SIGNING_PROPERTIES</span></code> CMake variable. The <code class="docutils literal notranslate"><span class="pre">CCL_SIGNING_PROPERTIES</span></code> variable takes precedence if set.</p>
+<p>After generating the project, open the project folder in Android Studio to build and test your application.</p>
+<p>Alternatively, you can use Gradle to build on the command line. Run the following command in the generated project folder (build/android by default):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gradle<span class="w"> </span>assembleArm8Release
+</pre></div>
+</div>
 </section>
 <section id="cross-compilation-on-linux">
 <h2>Cross-compilation on Linux<a class="headerlink" href="#cross-compilation-on-linux" title="Link to this heading"></a></h2>
@@ -190,7 +195,7 @@ cmake<span class="w"> </span>--build<span class="w"> </span>.
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 17, 2026.
+      <span class="lastupdated">Last updated on Jun 29, 2026.
       </span></p>
   </div>
 
