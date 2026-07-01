@@ -132,7 +132,7 @@ This file describes the application’s source files, dependencies and other set
 <p>The vendor module also adds all directories and subdirectories in <code class="docutils literal notranslate"><span class="pre">build/cmake/</span></code> to the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>.</p>
 <p>CCL Demo depends on CCL and needs Skin XML packages. We also want to include CCL Spy in the CCL Demo project.</p>
 <p>CMake provides a mechanism for finding dependencies with the <a class="cmake-link reference external" href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package</a> command.
-When calling <code class="docutils literal notranslate"><span class="pre">find_package</span> <span class="pre">(xy)</span></code>, CMake searches the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULES_PATH</span></code> for a file called <code class="docutils literal notranslate"><span class="pre">Findxy.cmake</span></code>.
+When calling <code class="docutils literal notranslate"><span class="pre">find_package</span> <span class="pre">(xy)</span></code>, CMake searches the <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code> for a file called <code class="docutils literal notranslate"><span class="pre">Findxy.cmake</span></code>.
 See <a class="reference external" href="https://cmake.org/cmake/help/latest/guide/using-dependencies/">https://cmake.org/cmake/help/latest/guide/using-dependencies/</a> for details.</p>
 <p>There are several <code class="docutils literal notranslate"><span class="pre">Find*.cmake</span></code> modules in <code class="docutils literal notranslate"><span class="pre">build/shared/cmake</span></code> to find and include targets for frameworks, libraries, and third-party dependencies.</p>
 <p>For example, <code class="docutils literal notranslate"><span class="pre">build/cmake/modules/ccl/Findccl.cmake</span></code> looks for the file <code class="docutils literal notranslate"><span class="pre">public/cclversion.h</span></code> in <code class="docutils literal notranslate"><span class="pre">${CCL_FRAMEWORK_DIR}</span></code>, and includes <code class="docutils literal notranslate"><span class="pre">${CCL_FRAMEWORK_DIR}/cmake/ccl-config.cmake</span></code>.
@@ -257,7 +257,7 @@ The variable <code class="docutils literal notranslate"><span class="pre">ccldem
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Jun 29, 2026.
+      <span class="lastupdated">Last updated on Jul 01, 2026.
       </span></p>
   </div>
 
