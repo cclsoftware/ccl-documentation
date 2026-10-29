@@ -119,34 +119,16 @@
              
   <section id="enum-ccl-idragsession-dropresults">
 <span id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3"></span><span id="index-0"></span><h1>enum CCL::IDragSession::DropResults<a class="headerlink" href="#enum-ccl-idragsession-dropresults" title="Link to this heading"></a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>Drop results. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3"><span class="std std-ref">More…</span></a></p>
+<p>Drop results.</p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;idragndrop.h&gt;</span>
 
 <span class="k">enum</span> <span class="n">DropResults</span>
 <span class="p">{</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3ae556b97328eabf6104588dffb379b6a5"><span class="std std-ref">kDropNone</span></a><span></span>       <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abb37bb05953c89cc8417445efd4326cc"><span class="std std-ref">kDropCopyShared</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abe23f7801559165e9eafda0b34ba0783"><span class="std std-ref">kDropCopyReal</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3a0f652ff03dbce7b4453072574af9cab9"><span class="std std-ref">kDropMove</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3ae556b97328eabf6104588dffb379b6a5"><span></span><span class="n">kDropNone</span></span><span></span>       <span class="o">=</span> <span class="n">kDragSessionDropResultNone</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abb37bb05953c89cc8417445efd4326cc"><span></span><span class="n">kDropCopyShared</span></span><span></span> <span class="o">=</span> <span class="n">kDragSessionDropResultCopyShared</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abe23f7801559165e9eafda0b34ba0783"><span></span><span class="n">kDropCopyReal</span></span><span></span>   <span class="o">=</span> <span class="n">kDragSessionDropResultCopyReal</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3a0f652ff03dbce7b4453072574af9cab9"><span></span><span class="n">kDropMove</span></span><span></span>       <span class="o">=</span> <span class="n">kDragSessionDropResultMove</span><span class="p">,</span>
 <span class="p">};</span></pre>
-</section>
-<section id="detailed-documentation">
-<span id="details-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
-<p>Drop results.</p>
-<section id="enum-values">
-<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3ae556b97328eabf6104588dffb379b6a5"><span id="index-1"></span><span></span><span class="n">kDropNone</span></pre>
-<p>no effect</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abb37bb05953c89cc8417445efd4326cc"><span id="index-2"></span><span></span><span class="n">kDropCopyShared</span></pre>
-<p>drop causes a copy that share the data</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3abe23f7801559165e9eafda0b34ba0783"><span id="index-3"></span><span></span><span class="n">kDropCopyReal</span></pre>
-<p>drop causes a complete copy</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-drag-session-1abd7e0dd22789d95e8d14681904d2f6c3a0f652ff03dbce7b4453072574af9cab9"><span id="index-4"></span><span></span><span class="n">kDropMove</span></pre>
-<p>drop causes move</p>
-</section>
-</section>
 </section>
 
 
@@ -161,7 +143,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::ImageMode::InterpolationMode" href="enum_CCL_ImageMode_InterpolationMode.html" />
+    <link rel="next" title="class CCL::LinearGradientBrush" href="class_CCL_LinearGradientBrush.html" />
     <link rel="prev" title="class CCL::GradientBrush" href="class_CCL_GradientBrush.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -126,26 +126,22 @@
 <span class="k">class</span> <span class="n">ImageMode</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="c1">// enums</span>
-
-    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_ImageMode_InterpolationMode.html#doxid-class-c-c-l-1-1-image-mode-1af2472c68c6e477a2274de642c2fb6f84"><span class="std std-ref">InterpolationMode</span></a><span></span><span class="p">;</span>
-
     <span class="c1">// fields</span>
 
      <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1afe565d09517c0dde1ad7c89017837d93"><span></span><span class="n">interpolationMode</span></span><span></span><span class="p">;</span>
 
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1a3f6e6e1a62998a29d817ff3dbfc18f35"><span></span><span class="n">ImageMode</span></span><span></span> <span class="p">(</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1a4768c75d40aa09bd7ed44fedfcbd76be"><span></span><span class="n">ImageMode</span></span><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">f</span></a><span></span><span class="p">,</span>
-        <a class="reference internal" href="enum_CCL_ImageMode_InterpolationMode.html#doxid-class-c-c-l-1-1-image-mode-1af2472c68c6e477a2274de642c2fb6f84"><span class="std std-ref">InterpolationMode</span></a><span></span> <span class="n">interpolationMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ImageMode_InterpolationMode.html#doxid-class-c-c-l-1-1-image-mode-1af2472c68c6e477a2274de642c2fb6f84a7fbc10005e93bfc1d0c634820ee9e8eb"><span class="std std-ref">kInterpolationDefault</span></a><span></span>
+        ImageInterpolationMode<span></span> <span class="n">interpolationMode</span> <span class="o">=</span> kImageInterpolationDefault<span></span>
     <span class="p">);</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1a8fa7d1a891b5bc70263478f44d9246d3"><span></span><span class="n">ImageMode</span></span><span></span> <span class="p">(</span><a class="reference internal" href="enum_CCL_ImageMode_InterpolationMode.html#doxid-class-c-c-l-1-1-image-mode-1af2472c68c6e477a2274de642c2fb6f84"><span class="std std-ref">InterpolationMode</span></a><span></span> <span class="n">interpolationMode</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1ada68c973cbbd11faa06c7922bd230063"><span></span><span class="n">ImageMode</span></span><span></span> <span class="p">(</span>ImageInterpolationMode<span></span> <span class="n">interpolationMode</span><span class="p">);</span>
 
     <span class="c1">// methods</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1add694dfe2f78e9427afc5d1553f1d0c4"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AlphaF</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-image-mode-1a2fbaa38da29467e76f25fbde3297a746"><span></span><span class="n">PROPERTY_VARIABLE</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">float</span></a><span></span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">AlphaF</span></a><span></span><span class="p">);</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -154,14 +150,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="class_CCL_GradientBrush.html" class="btn btn-neutral float-left" title="class CCL::GradientBrush" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_ImageMode_InterpolationMode.html" class="btn btn-neutral float-right" title="enum CCL::ImageMode::InterpolationMode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_CCL_LinearGradientBrush.html" class="btn btn-neutral float-right" title="class CCL::LinearGradientBrush" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template struct Core::MathUtils::Functions&lt;double&gt; &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="template struct Core::MathUtils::Functions&lt;float&gt;" href="struct_Core_MathUtils_Functions-3.html" />
+    <link rel="prev" title="template struct Core::MathUtils::Functions" href="struct_Core_MathUtils_Functions.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core_MathUtils.html">namespace Core::MathUtils</a></li>
+      <li class="breadcrumb-item active">template struct Core::MathUtils::Functions&lt;double&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-struct-core-mathutils-functions-double">
+<span id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4"></span><span id="index-0"></span><h1>template struct Core::MathUtils::Functions&lt;double&gt;<a class="headerlink" href="#template-struct-core-mathutils-functions-double" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Specialization for 64 bit float.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coremath.h&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <span class="n">Functions</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span>
+<span class="p">{</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1abc3ff74729b107f47f0a3e896678dc93"><span></span><span class="n">abs</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a1927b5c80b3333e6f9dee2e3e641a53a"><span></span><span class="n">sqrt</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a3f0283432a9fdfc432df5c40d5c14cdf"><span></span><span class="n">exp</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a11b25d19f61d323da94059c10fefb655"><span></span><span class="n">log</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a64e4dd8f95498aba7cb5b62af5c2d12c"><span></span><span class="n">log2</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1ad42ece88da5622597687955caabd4b4e"><span></span><span class="n">log10</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1abd818ddbf2c23c40fa6a2f60141e27b0"><span></span><span class="n">tan</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a420de572e7b81547e35bfdf5cc7da824"><span></span><span class="n">atan</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1ab0d26a0d09c3182f1dc8fa0da95d3c85"><span></span><span class="n">sin</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a1acd64ea35a3f274d536fba168d0de04"><span></span><span class="n">cos</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">f</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1a0d3148d75ffc3bf8db6d8d2dd3440448"><span></span><span class="n">pow</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">b</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span> <span class="n">e</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1ab66b1551fa894568e2bbfad70ce6f69d"><span></span><span class="n">isNan</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span><span class="o">&amp;</span> <span class="n">d</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1af2012519156b1840e8e74b9b888289c4"><span></span><span class="n">isDenormal</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span><span class="o">&amp;</span> <span class="n">d</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1-math-utils-1-1-functions-3-01double-01-4-1abbb365039aecf223089178f5fa6a9069"><span></span><span class="n">unDenormalise</span></span><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">double</span></a><span></span><span class="o">&amp;</span> <span class="n">d</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_MathUtils_Functions.html" class="btn btn-neutral float-left" title="template struct Core::MathUtils::Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_MathUtils_Functions-3.html" class="btn btn-neutral float-right" title="template struct Core::MathUtils::Functions&lt;float&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

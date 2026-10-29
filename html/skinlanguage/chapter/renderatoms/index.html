@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Render Atoms &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Colors" href="../colors/index.html" />
+    <link rel="prev" title="Styles" href="../styles/index.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">CCL Skin Definition Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Render Atoms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#atom-properties">Atom Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fitting-content">Fitting Content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-bivrenderer">The BIVRenderer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">CCL Skin Definition Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
+      <li class="breadcrumb-item active">Render Atoms</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="render-atoms">
+<span id="id1"></span><h1>Render Atoms<a class="headerlink" href="#render-atoms" title="Link to this heading"></a></h1>
+<p>A single control is rarely just one flat shape - a button has a background, an optional icon and a text label; a slider has a track and a handle. Rather than give every one of these pieces its own bespoke style syntax, renderers built on &lt;<a class="reference internal" href="../../reference/visual-styles-classmodel.html#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>&gt; break a control down into a small, fixed set of named, reusable building blocks called <strong>render atoms</strong> (e.g. <code class="docutils literal notranslate"><span class="pre">background</span></code>, <code class="docutils literal notranslate"><span class="pre">icon</span></code>, <code class="docutils literal notranslate"><span class="pre">value</span></code>) - referred to simply as <em>atoms</em> for brevity throughout the rest of this chapter. Each render atom is a generic rectangular building block that can carry a fill (solid color, gradient or image) or text, and (optionally) a border - and every one of those aspects is addressed as an ordinary property in a <a class="reference internal" href="../styles/index.html#visual-styles"><span class="std std-ref">Style</span></a>.</p>
+<p>Which atoms a control exposes, and what they are called, depends on the renderer behind it - different controls declare different atoms. What all of them share is the &lt;<a class="reference internal" href="../../reference/visual-styles-classmodel.html#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>&gt; property set and the addressing scheme described here; <a class="reference internal" href="#biv-renderer"><span class="std std-ref">BIVRenderer</span></a> (covered below) is one concrete example.</p>
+<section id="atom-properties">
+<h2>Atom Properties<a class="headerlink" href="#atom-properties" title="Link to this heading"></a></h2>
+<p>An atom’s properties are grouped like this:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>offsetx, offsety</p></td>
+<td><p>point offset added to the atom’s position while drawing</p></td>
+</tr>
+<tr class="row-even"><td><p>scale</p></td>
+<td><p>uniform scale factor applied around the atom’s own center; left unset (or <code class="docutils literal notranslate"><span class="pre">0</span></code>) it behaves as <code class="docutils literal notranslate"><span class="pre">1</span></code> (no scaling). It scales the <em>drawing</em> only - the atom keeps the size it was laid out at.</p></td>
+</tr>
+<tr class="row-odd"><td><p>rotation</p></td>
+<td><p>rotation in degrees, applied around the atom’s own center while drawing</p></td>
+</tr>
+<tr class="row-even"><td><p>color</p></td>
+<td><p>the atom’s fill - a solid color or a gradient, see <a class="reference internal" href="../colors/index.html"><span class="doc">Colors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>opacity</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0..1</span></code> applies to images, gradients, solid fills and text</p></td>
+</tr>
+<tr class="row-even"><td><p>bordercolor, borderwidth</p></td>
+<td><p>an outline drawn around the atom</p></td>
+</tr>
+<tr class="row-odd"><td><p>borderlefttopradius, borderleftbottomradius, borderrighttopradius, borderrightbottomradius</p></td>
+<td><p>independent corner rounding for both the fill and the outline</p></td>
+</tr>
+<tr class="row-even"><td><p>contrastcolorbright, contrastcolordark, contrastcolortransparent, contrastcoloralphablend</p></td>
+<td><p>colors a renderer can draw text or an icon in to stay legible against a color known only at runtime, see <a class="reference internal" href="#atom-contrast-colors"><span class="std std-ref">Contrast Colors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>image, imageframe</p></td>
+<td><p>an image (or one frame of a multi-frame image) drawn instead of the solid/gradient fill</p></td>
+</tr>
+</tbody>
+</table>
+<p>All of these accept an &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-animation"><span class="std std-ref">Animation</span></a>&gt; and can be overridden per &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-stylecondition"><span class="std std-ref">StyleCondition</span></a>&gt;, exactly like any other style property.</p>
+<p>By default, an atom with an image does not fill its area with <code class="docutils literal notranslate"><span class="pre">color</span></code>. If the image has the <code class="docutils literal notranslate"><span class="pre">template</span></code> or <code class="docutils literal notranslate"><span class="pre">adaptive</span></code> attribute (see &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-image"><span class="std std-ref">Image</span></a>&gt;), <code class="docutils literal notranslate"><span class="pre">color</span></code> colorizes it; any other image is drawn as it is.</p>
+<section id="contrast-colors">
+<span id="atom-contrast-colors"></span><h3>Contrast Colors<a class="headerlink" href="#contrast-colors" title="Link to this heading"></a></h3>
+<p>Some controls know a color only at runtime - typically the color of a <code class="docutils literal notranslate"><span class="pre">colorname</span></code> parameter - and keep text or an icon legible against it. The contrast colors of the atom decide the color it is drawn in, checked in this order:</p>
+<ol class="arabic simple">
+<li><p>the runtime color is transparent: <code class="docutils literal notranslate"><span class="pre">contrastcolortransparent</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contrastcolorbright</span></code> is set: <code class="docutils literal notranslate"><span class="pre">contrastcolorbright</span></code> on a dark runtime color (luminance below <code class="docutils literal notranslate"><span class="pre">0.35</span></code>), <code class="docutils literal notranslate"><span class="pre">contrastcolordark</span></code> on a bright one</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contrastcoloralphablend</span></code> is set: the runtime color, blended with <code class="docutils literal notranslate"><span class="pre">contrastcoloralphablend</span></code></p></li>
+<li><p>otherwise: the runtime color itself</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">contrastcolordark</span></code> and <code class="docutils literal notranslate"><span class="pre">contrastcolortransparent</span></code> default to the <code class="docutils literal notranslate"><span class="pre">color</span></code> of the atom. A control can also keep the <code class="docutils literal notranslate"><span class="pre">color</span></code> of the atom as long as neither <code class="docutils literal notranslate"><span class="pre">contrastcolorbright</span></code> nor <code class="docutils literal notranslate"><span class="pre">contrastcoloralphablend</span></code> is set - its style says so.</p>
+</section>
+<section id="addressing-atom-properties">
+<h3>Addressing Atom Properties<a class="headerlink" href="#addressing-atom-properties" title="Link to this heading"></a></h3>
+<p>An atom’s properties are addressed from a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-style"><span class="std std-ref">Style</span></a>&gt; by prefixing the property name with the atom’s name and a dot: <code class="docutils literal notranslate"><span class="pre">&lt;atomName&gt;.&lt;property&gt;</span></code>. A plain &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-metric"><span class="std std-ref">Metric</span></a>&gt;, &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-color"><span class="std std-ref">Color</span></a>&gt; or gradient element then targets it like any other style property:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AccentButton&quot;</span><span class="w"> </span><span class="na">inherit=</span><span class="s">&quot;Standard.Button&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LinearGradient</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;background.color&quot;</span><span class="w"> </span><span class="na">startcolor=</span><span class="s">&quot;red&quot;</span><span class="w"> </span><span class="na">endcolor=</span><span class="s">&quot;magenta&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;background.borderlefttopradius&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;background.borderrightbottomradius&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Color</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value.color&quot;</span><span class="w"> </span><span class="na">color=</span><span class="s">&quot;white&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;StyleCondition</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mouseover&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value.scale&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value.rotation&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/StyleCondition&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">background</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> are atom names; <code class="docutils literal notranslate"><span class="pre">background.color</span></code>, <code class="docutils literal notranslate"><span class="pre">value.scale</span></code> and <code class="docutils literal notranslate"><span class="pre">value.rotation</span></code> each address one property on one atom. A &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-stylecondition"><span class="std std-ref">StyleCondition</span></a>&gt; (here: <code class="docutils literal notranslate"><span class="pre">mouseover</span></code>) overrides atom properties the same way it overrides any other style property.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">color</span></code> is set to a gradient, its start/end points (or center/radius) are computed automatically to cover the atom - explicit geometry authored on the &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-lineargradient"><span class="std std-ref">LinearGradient</span></a>&gt; or &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-radialgradient"><span class="std std-ref">RadialGradient</span></a>&gt; element itself is only honored when <a class="reference internal" href="#atom-content-fit-fill"><span class="std std-ref">isContentFit and isContentFill</span></a> are both unset (see below).</p>
+</section>
+</section>
+<section id="fitting-content">
+<span id="atom-content-fit-fill"></span><h2>Fitting Content<a class="headerlink" href="#fitting-content" title="Link to this heading"></a></h2>
+<p>An atom’s image and (gradient) fill both react to two flags, <code class="docutils literal notranslate"><span class="pre">isContentFit</span></code> and <code class="docutils literal notranslate"><span class="pre">isContentFill</span></code>, in the same way images do on the web with <code class="docutils literal notranslate"><span class="pre">object-fit:</span> <span class="pre">contain</span> <span class="pre">/</span> <span class="pre">cover</span> <span class="pre">/</span> <span class="pre">fill</span> <span class="pre">/</span> <span class="pre">none</span></code>. These two flags are not style properties - they are fixed per atom by the renderer that owns it (e.g. a background atom that is meant to always cover its control regardless of aspect ratio), not something a skin author overrides per instance.</p>
+<a class="reference internal image-reference" href="../../../_images/render-atom-content-modes.svg"><img alt="four content modes (none, fit, fill, fit + fill) shown for an image and a radial gradient atom" class="align-center" src="../../../_images/render-atom-content-modes.svg" width="700" />
+</a>
+<ul class="simple">
+<li><p><strong>fit + fill</strong> - cover the area, preserving aspect ratio: the content gets cropped</p></li>
+<li><p><strong>fit</strong> - fit into the area, preserving aspect ratio: the area is not fully covered</p></li>
+<li><p><strong>fill</strong> - fill the area, distorting the content to match it exactly</p></li>
+<li><p><strong>none</strong> - keep the content at its own original size, centered in the atom</p></li>
+</ul>
+<p>A radial gradient’s shape is a plain, non-elliptical circle, so it cannot be distorted the way an image can: <code class="docutils literal notranslate"><span class="pre">isContentFill</span></code> alone already produces the same cropped, fully-covering circle as <code class="docutils literal notranslate"><span class="pre">fit</span> <span class="pre">+</span> <span class="pre">fill</span></code>. A linear gradient has no aspect ratio of its own either way, so it keeps spanning the atom’s full width whenever either flag is set. For both kinds of gradient, leaving both flags unset leaves the gradient at whatever size and position it was last given, instead of resizing it to the atom.</p>
+</section>
+<section id="the-bivrenderer">
+<span id="biv-renderer"></span><h2>The BIVRenderer<a class="headerlink" href="#the-bivrenderer" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">BIVRenderer</span></code> (“Background-Icon-Value”) is the renderer behind controls that show an icon and/or a text value on top of a background - for example &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-button"><span class="std std-ref">Button</span></a>&gt; and &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>&gt;. It declares exactly three atoms - <code class="docutils literal notranslate"><span class="pre">background</span></code>, <code class="docutils literal notranslate"><span class="pre">icon</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> - addressed as described above (e.g. <code class="docutils literal notranslate"><span class="pre">icon.opacity</span></code>, <code class="docutils literal notranslate"><span class="pre">value.color</span></code>).</p>
+<a class="reference internal image-reference" href="../../../_images/biv-anatomy.svg"><img alt="layout anatomy of a BIVRenderer-based control, showing background, icon and value atoms, padding and icon/value spacing" class="align-center" src="../../../_images/biv-anatomy.svg" width="640" />
+</a>
+<p>Besides the three atoms, its &lt;<a class="reference internal" href="../../reference/visual-styles-classmodel.html#visual-styles-classmodel-class-bivstyle"><span class="std std-ref">BIVStyle</span></a>&gt; adds a handful of layout-only properties that arrange the icon and value within the control, rather than styling either one of them directly:</p>
+<dl class="field-list simple">
+<dt class="field-odd">iconvaluespacing<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gap kept between the icon and the value when both are present</p>
+</dd>
+<dt class="field-even">iconleading<span class="colon">:</span></dt>
+<dd class="field-even"><p>draws the icon before the value instead of after it</p>
+</dd>
+<dt class="field-odd">iconfillfactor<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the icon’s <strong>size</strong> relative to the content area, aspect ratio kept - <code class="docutils literal notranslate"><span class="pre">1</span></code> fills the area, more than <code class="docutils literal notranslate"><span class="pre">1</span></code> reaches beyond it; left unset (or <code class="docutils literal notranslate"><span class="pre">0</span></code>) the icon keeps the size of its image</p>
+</dd>
+<dt class="field-even">iconalign<span class="colon">:</span></dt>
+<dd class="field-even"><p>vertical alignment of the icon within the content area (default: vertically centered); <code class="docutils literal notranslate"><span class="pre">left</span></code>/<code class="docutils literal notranslate"><span class="pre">right</span></code> also align an icon that has no value next to it</p>
+</dd>
+<dt class="field-odd">valuealign<span class="colon">:</span></dt>
+<dd class="field-odd"><p>vertical alignment of the value within the content area, and horizontal alignment of the icon/value group as a whole within the control (default: falls back to the general <code class="docutils literal notranslate"><span class="pre">textalign</span></code> property)</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Standard.Button&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iconvaluespacing&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iconleading&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Metric</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iconfillfactor&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.8&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Align</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;valuealign&quot;</span><span class="w"> </span><span class="na">align=</span><span class="s">&quot;left vcenter&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">iconfillfactor</span></code> and the icon atom’s <code class="docutils literal notranslate"><span class="pre">icon.scale</span></code> look similar but are not interchangeable. <code class="docutils literal notranslate"><span class="pre">iconfillfactor</span></code> is a <em>layout</em> property: it sizes the icon’s box relative to the control’s content area, so the icon grows and shrinks with the control, and <code class="docutils literal notranslate"><span class="pre">iconvaluespacing</span></code>, the alignments and the control’s minimum size all see that box. <code class="docutils literal notranslate"><span class="pre">icon.scale</span></code> is a <em>draw-time</em> transform: it scales the drawing inside a box that keeps its layout size, relative to the image’s own pixel size rather than to the control. Use <code class="docutils literal notranslate"><span class="pre">iconfillfactor</span></code> to give an icon its size, and <code class="docutils literal notranslate"><span class="pre">icon.scale</span></code> in a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-stylecondition"><span class="std std-ref">StyleCondition</span></a>&gt; or &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-animation"><span class="std std-ref">Animation</span></a>&gt; to emphasize it temporarily.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../styles/index.html" class="btn btn-neutral float-left" title="Styles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../colors/index.html" class="btn btn-neutral float-right" title="Colors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

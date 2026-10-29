@@ -207,18 +207,18 @@
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1ad69452b94a6a4130dbc48816d306bc80"><span class="std std-ref">navigateDeferred</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1aa15c234174ac53794430248181764561"><span class="std std-ref">UrlRef</span></a><span></span> <span class="n">url</span><span class="p">);</span>
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1a98025fe2d804daad7ec4011adc7e00ad"><span class="std std-ref">refresh</span></a><span></span> <span class="p">();</span>
 
-    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1a7b1be3f21e7c9b009ca1e7fd2385dcc4"><span class="std std-ref">saveViewState</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1abf291dcf4ed17b4b775cb0f71206a486"><span class="std std-ref">saveViewState</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewID</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewName</span><span class="p">,</span>
         <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">CCL::IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
     <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1a444ec3976af6f5d8937a8ee883cad872"><span class="std std-ref">loadViewState</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1aaf9c648118b399bd6215da6071d3ccdb"><span class="std std-ref">loadViewState</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewID</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewName</span><span class="p">,</span>
         <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span>
-        <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">CCL::IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
+        <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
     <span class="p">);</span>
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-navigator-1ad9089000c61d7fb09058ece6f93b405a"><span class="std std-ref">initialize</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">context</span><span class="p">);</span>
@@ -561,18 +561,18 @@
 <p>Navigate to new location deferred.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1a98025fe2d804daad7ec4011adc7e00ad"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">refresh</span> <span class="p">()</span></pre>
 <p>Refresh current location.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1a7b1be3f21e7c9b009ca1e7fd2385dcc4"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">saveViewState</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1abf291dcf4ed17b4b775cb0f71206a486"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">saveViewState</span> <span class="p">(</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewID</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewName</span><span class="p">,</span>
     <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span>
-    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">CCL::IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
 <span class="p">)</span> <span class="k">const</span></pre>
 <p>Save view state as attributes.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1a444ec3976af6f5d8937a8ee883cad872"><span id="index-5"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">loadViewState</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1aaf9c648118b399bd6215da6071d3ccdb"><span id="index-5"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">loadViewState</span> <span class="p">(</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewID</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">viewName</span><span class="p">,</span>
     <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a><span></span><span class="o">&amp;</span> <span class="n">attributes</span><span class="p">,</span>
-    <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">CCL::IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
+    <a class="reference internal" href="struct_CCL_IViewState.html#doxid-struct-c-c-l-1-1-i-view-state"><span class="std std-ref">IViewState</span></a><span></span><span class="o">*</span> <span class="n">state</span>
 <span class="p">)</span></pre>
 <p>Load view state from attributes.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-navigator-1ad9089000c61d7fb09058ece6f93b405a"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">initialize</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">IUnknown</span></a><span></span><span class="o">*</span> <span class="n">context</span><span class="p">)</span></pre>
@@ -599,7 +599,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

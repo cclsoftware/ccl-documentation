@@ -160,9 +160,9 @@
 <span class="p">{</span>
     <span class="c1">// methods</span>
 
-    <span class="k">virtual</span> <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a7e79dc4447d115ef51d9e72914496814"><span class="std std-ref">getUCharData</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">UStringPtr</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a11aaee5cd4cede8aa5838f0e54de04bd"><span class="std std-ref">getUCharData</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a32f75faf3e70af8f547ec17c5fc84521"><span class="std std-ref">getLength</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a10076fba677d3821956de11d34bddb1f"><span class="std std-ref">getCharData</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">CStringPtr</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a142504a29717b5c564fd7e45bf86e271"><span class="std std-ref">getCharData</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a5aca986c67e7c48b63f033607c596793"><span class="std std-ref">getEncoding</span></a><span></span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
@@ -180,11 +180,11 @@
 <p>Script string value interface.</p>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a7e79dc4447d115ef51d9e72914496814"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span>CCL_API<span></span> <span class="n">getUCharData</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a11aaee5cd4cede8aa5838f0e54de04bd"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="n">UStringPtr</span> CCL_API<span></span> <span class="n">getUCharData</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get string data as uchar.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a32f75faf3e70af8f547ec17c5fc84521"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="n">getLength</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get string length.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a10076fba677d3821956de11d34bddb1f"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getCharData</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a142504a29717b5c564fd7e45bf86e271"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="n">CStringPtr</span> CCL_API<span></span> <span class="n">getCharData</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get string data as char.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-string-value-1a5aca986c67e7c48b63f033607c596793"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_CCL_Text_Encoding.html#doxid-namespace-c-c-l-1-1-text-1afb0564821f132bfe74508af8349a0faa"><span class="std std-ref">TextEncoding</span></a><span></span> CCL_API<span></span> <span class="n">getEncoding</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get character encoding.</p>
@@ -204,7 +204,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

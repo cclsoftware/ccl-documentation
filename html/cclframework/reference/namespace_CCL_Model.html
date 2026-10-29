@@ -150,28 +150,35 @@
 <span id="doxid-namespace-c-c-l-1-1-model"></span><span id="index-0"></span><h1>namespace CCL::Model<a class="headerlink" href="#namespace-ccl-model" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Model</span> <span class="p">{</span>
 
 <span class="c1">// structs</span>
 
 <span class="k">struct</span> <a class="reference internal" href="struct_CCL_Model_AttributeDescription.html#doxid-struct-c-c-l-1-1-model-1-1-attribute-description"><span class="std std-ref">AttributeDescription</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_CCL_Model_MemberDescription.html#doxid-struct-c-c-l-1-1-model-1-1-member-description"><span class="std std-ref">MemberDescription</span></a><span></span><span class="p">;</span>
 
 <span class="c1">// global variables</span>
 
- <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-model-1af036d0ce706fd28ab4c90e5536a4c024"><span></span><span class="n">kClassDocGroup</span></span><span></span><span class="p">;</span>
-<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Class</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-model-1a2f77aa5fbca55302daa29f9943b394df"><span></span><span class="n">__pad0__</span></span><span></span><span class="p">;</span>
-<a class="reference internal" href="class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref">MutableCString</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-model-1a24880ec0832023374fde5fb7eaff8107"><span></span><span class="n">typeName</span></span><span></span><span class="p">;</span>
-<a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ab2e922e111758900c0e6141a7775dfea"><span class="std std-ref">DataType</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-model-1ac52af21f72e9a83ef5e2e7076bae30e4"><span></span><span class="n">type</span></span><span></span><span class="p">;</span>
-
-<span class="c1">// global functions</span>
-
-<span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-model-1a656158d0268ca9f3dc5138bd870fecb7"><span></span><span class="n">MemberDescription</span></span><span></span> <span class="p">(</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">name</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ab2e922e111758900c0e6141a7775dfea"><span class="std std-ref">DataType</span></a><span></span> <span class="n">type</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_ITypeInfo_DataTypes.html#doxid-struct-c-c-l-1-1-i-type-info-1afb6eb4f28419b652027fad41104a6d22ae4bb52f4ef690c9241242dedbf558b5b"><span class="std std-ref">ITypeInfo::kPrimitive</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">typeName</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
-<span class="p">);</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-model-1a8f4ff5a1b5a3109fd343599340f26950"><span class="std std-ref">kClassDocGroup</span></a><span></span> <span class="o">=</span> <span class="s">&quot;Class:DocGroup&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-model-1a379c35744c76867c7602cac359e7706a"><span class="std std-ref">kClassChildGroup</span></a><span></span> <span class="o">=</span> <span class="s">&quot;Class:ChildGroup&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-model-1a609a66b87db133a0425ce44c2d96abef"><span class="std std-ref">kClassSchemaGroups</span></a><span></span> <span class="o">=</span> <span class="s">&quot;Class:SchemaGroups&quot;</span><span class="p">;</span>
 
 <span class="p">}</span> <span class="c1">// namespace Model</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespace-c-c-l-1-1-model"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-model-1a8f4ff5a1b5a3109fd343599340f26950"><span id="index-1"></span><span></span><span class="k">const</span> <span class="n">CStringPtr</span> <span class="n">kClassDocGroup</span> <span class="o">=</span> <span class="s">&quot;Class:DocGroup&quot;</span></pre>
+<p>class documentation group</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-model-1a379c35744c76867c7602cac359e7706a"><span id="index-2"></span><span></span><span class="k">const</span> <span class="n">CStringPtr</span> <span class="n">kClassChildGroup</span> <span class="o">=</span> <span class="s">&quot;Class:ChildGroup&quot;</span></pre>
+<p>class child group</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-model-1a609a66b87db133a0425ce44c2d96abef"><span id="index-3"></span><span></span><span class="k">const</span> <span class="n">CStringPtr</span> <span class="n">kClassSchemaGroups</span> <span class="o">=</span> <span class="s">&quot;Class:SchemaGroups&quot;</span></pre>
+<p>class schema groups</p>
+</section>
+</section>
 </section>
 
 
@@ -186,7 +193,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

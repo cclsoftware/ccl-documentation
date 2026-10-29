@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAssembly Platform Implementation &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Generated Typings" href="generatedtypings.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CCL Maintainer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generatedcode.html">Generated Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classmodelupdates.html">Classmodel Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripttools.html">CCL Script Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generatedtypings.html">Generated Typings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">WebAssembly Platform Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cross-origin-issues">Cross-origin issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sharedarraybuffer-and-multithreading">SharedArrayBuffer and multithreading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#webbrowserview">WebBrowserView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#http-requests">HTTP requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#indexeddb-file-system-vs-host-file-system">IndexedDB file system (vs. host file system)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-selectors-upload-only">File selectors (upload only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#folder-selectors-not-implemented">Folder selectors (not implemented)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#socket-restrictions">Socket restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thread-priorities">Thread priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#font-handling-fallback-fonts">Font handling (fallback fonts)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmake-options">CMake options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linking-plug-ins">Linking plug-ins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#credential-store">Credential store</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL Maintainer Guide</a></li>
+      <li class="breadcrumb-item active">WebAssembly Platform Implementation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="webassembly-platform-implementation">
+<span id="wasm-implementation"></span><h1>WebAssembly Platform Implementation<a class="headerlink" href="#webassembly-platform-implementation" title="Link to this heading"></a></h1>
+<p>The WebAssembly backend (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm</span></code>, based on Emscripten) implements CCL’s platform interfaces against browser APIs (DOM, Fetch, IndexedDB, Web Crypto, …) instead of native system calls. This page documents the implementation details and trade-offs behind that.</p>
+<section id="cross-origin-issues">
+<h2>Cross-origin issues<a class="headerlink" href="#cross-origin-issues" title="Link to this heading"></a></h2>
+<section id="sharedarraybuffer-and-multithreading">
+<h3>SharedArrayBuffer and multithreading<a class="headerlink" href="#sharedarraybuffer-and-multithreading" title="Link to this heading"></a></h3>
+<p>The Wasm build enables Emscripten pthreads (<code class="docutils literal notranslate"><span class="pre">-sUSE_PTHREADS=1</span> <span class="pre">-sSHARED_MEMORY=1</span></code>, see <code class="docutils literal notranslate"><span class="pre">build/cmake/modules/shared/vendor.wasm.cmake</span></code>). Threads are implemented on top of <code class="docutils literal notranslate"><span class="pre">SharedArrayBuffer</span></code>, which browsers only expose to a page that is <em>cross-origin isolated</em>, i.e. served with</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+</pre></div>
+</div>
+<p>response headers. This is a hosting/serving concern, not something the framework or the build can set - if the application is served without these headers, <code class="docutils literal notranslate"><span class="pre">SharedArrayBuffer</span></code> is unavailable and the pthread-based build won’t run. The framework checks the resulting state at runtime via <code class="docutils literal notranslate"><span class="pre">self.crossOriginIsolated</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/gui/webbrowserview.wasm.cpp</span></code>) but does not (and cannot) request the headers itself.</p>
+<p>Single-threaded applications can disable pthreads support in order to avoid COOP/COEP restrictions. See “CMake options” below.</p>
+</section>
+<section id="webbrowserview">
+<h3>WebBrowserView<a class="headerlink" href="#webbrowserview" title="Link to this heading"></a></h3>
+<p>There is no native embedded browser control on Wasm; <code class="docutils literal notranslate"><span class="pre">WasmWebControl</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/gui/webbrowserview.wasm.cpp</span></code>) implements <code class="docutils literal notranslate"><span class="pre">CCL::WebBrowserView</span></code> with a plain <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> placed inside the parent’s DOM element. This has two consequences:</p>
+<ul class="simple">
+<li><p>When the page is cross-origin isolated (see above, required for threads), the browser’s same-origin policy makes <code class="docutils literal notranslate"><span class="pre">navigate</span> <span class="pre">()</span></code> refuse to load cross-origin URLs inside the iframe - only <code class="docutils literal notranslate"><span class="pre">file:</span></code>, protocol-relative, or same-origin URLs are allowed. Anything else is instead handed off to <code class="docutils literal notranslate"><span class="pre">CCL::ISystemShell::openUrl</span></code> (opens the URL in a new tab/window). The same restriction can be requested explicitly via the <code class="docutils literal notranslate"><span class="pre">kWebBrowserViewBehaviorRestrictToLocal</span></code> custom style.</p></li>
+<li><p>Even when a cross-origin page <em>is</em> allowed to load, reading it back out (current URL, title, back/forward history) fails silently: <code class="docutils literal notranslate"><span class="pre">iframe.contentWindow.location</span></code>/<code class="docutils literal notranslate"><span class="pre">.document</span></code> throw once the iframe content is cross-origin, so <code class="docutils literal notranslate"><span class="pre">getUrl</span> <span class="pre">()</span></code>/<code class="docutils literal notranslate"><span class="pre">getTitle</span> <span class="pre">()</span></code>/<code class="docutils literal notranslate"><span class="pre">canGoBack</span> <span class="pre">()</span></code> just return empty/false in that case.</p></li>
+</ul>
+</section>
+<section id="http-requests">
+<h3>HTTP requests<a class="headerlink" href="#http-requests" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">WasmHTTPClient</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/network/httpclient.wasm.cpp</span></code>) is implemented on top of the browser <code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code> API, not a native socket. Ordinary browser CORS rules apply: a cross-origin request to a server that doesn’t send the right <code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Origin</span></code> response header fails the same way it would for a plain web page. There is no way to bypass this from C++. The user agent also cannot be overridden (<code class="docutils literal notranslate"><span class="pre">setUserAgent</span> <span class="pre">()</span></code> returns <code class="docutils literal notranslate"><span class="pre">kResultNotImplemented</span></code>) since <code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code> doesn’t allow it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code> and its response stream are main-thread-only JS APIs, so a request issued from a worker thread is proxied to the main thread and the calling thread polls until the request completes.</p>
+</section>
+</section>
+<section id="indexeddb-file-system-vs-host-file-system">
+<h2>IndexedDB file system (vs. host file system)<a class="headerlink" href="#indexeddb-file-system-vs-host-file-system" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">CCL::INativeFileSystem</span></code> on other platforms addresses the real host file system (or what appears to be the host file system in a sandbox). On Wasm, <code class="docutils literal notranslate"><span class="pre">WasmNativeFileSystem</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/system/nativefilesystem.wasm.cpp</span></code>) is a thin <code class="docutils literal notranslate"><span class="pre">PosixNativeFileSystem</span></code> subclass, but the POSIX calls underneath resolve into Emscripten’s virtual file system rather than a real disk.</p>
+<p>The persistent part of that virtual file system is a browser-side database, not a disk: <code class="docutils literal notranslate"><span class="pre">CCL.initFS</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/js/cclsystem.js</span></code>) mounts Emscripten’s <code class="docutils literal notranslate"><span class="pre">IDBFS</span></code> on <code class="docutils literal notranslate"><span class="pre">/userdata</span></code> with <code class="docutils literal notranslate"><span class="pre">autoPersist:</span> <span class="pre">true</span></code> and does a one-time <code class="docutils literal notranslate"><span class="pre">FS.syncfs</span> <span class="pre">(true,</span> <span class="pre">...)</span></code> on startup to pull any previously persisted data back into memory. From then on, writes are auto-persisted to IndexedDB by Emscripten; there is no explicit periodic sync elsewhere in the framework. Practical implications:</p>
+<ul class="simple">
+<li><p>Data under <code class="docutils literal notranslate"><span class="pre">/userdata</span></code> is scoped to the browser’s storage for the page’s origin - clearing site data/IndexedDB in the browser deletes it, and it is not visible to the real OS file system, or to applications running on other origins. Isolation is per-origin, not per-application: Any other CCL application served from the <em>same</em> origin therefore mounts the exact same database and shares the same <code class="docutils literal notranslate"><span class="pre">/userdata</span></code> file tree with it.</p></li>
+<li><p>There is no file system change notification: <code class="docutils literal notranslate"><span class="pre">WasmFileManager::startWatching</span></code>/<code class="docutils literal notranslate"><span class="pre">stopWatching</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/system/filemanager.wasm.cpp</span></code>) both return <code class="docutils literal notranslate"><span class="pre">kResultNotImplemented</span></code>, since IDBFS has no OS-level watch mechanism to hook into. There also is no need for watching file system changes as the file system is expected to be used by the current application exclusively.</p></li>
+</ul>
+<p>Bundled application resources are loaded through the same shared <code class="docutils literal notranslate"><span class="pre">FrameworkResourceFileSystem</span></code> abstraction used on other platforms (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/system/resourceloader.wasm.cpp</span></code>); they are not part of the IDBFS-backed <code class="docutils literal notranslate"><span class="pre">/userdata</span></code> tree.</p>
+</section>
+<section id="file-selectors-upload-only">
+<h2>File selectors (upload only)<a class="headerlink" href="#file-selectors-upload-only" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">WasmFileSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/gui/fileselector.wasm.cpp</span></code>) implements <code class="docutils literal notranslate"><span class="pre">CCL::IFileSelector</span></code> using a hidden HTML <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;file&quot;&gt;</span></code> element - the browser’s native upload picker. Selected files are copied into a temporary location in the Wasm file system before the rest of the framework sees them as <code class="docutils literal notranslate"><span class="pre">CCL::IUrl</span></code> results.</p>
+<p>There is no native “Save As” dialog letting the user pick an arbitrary destination path: a “save” operation (<code class="docutils literal notranslate"><span class="pre">getSaveBehavior</span> <span class="pre">()</span></code> returns <code class="docutils literal notranslate"><span class="pre">kSaveNeedsContent</span></code>) instead writes the content to a temporary file and triggers a browser <em>download</em> of it (via a <code class="docutils literal notranslate"><span class="pre">Blob</span></code> and a synthetic anchor click). The user only chooses where the download lands through the browser’s own download UI, not through CCL.</p>
+<p>Only the asynchronous selector API works on Wasm - the synchronous <code class="docutils literal notranslate"><span class="pre">runPlatformSelector</span> <span class="pre">()</span></code> variant is stubbed to always fail, since the browser file picker is inherently asynchronous.</p>
+</section>
+<section id="folder-selectors-not-implemented">
+<h2>Folder selectors (not implemented)<a class="headerlink" href="#folder-selectors-not-implemented" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">WasmFolderSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/gui/fileselector.wasm.cpp</span></code>) exists to satisfy <code class="docutils literal notranslate"><span class="pre">CCL::IFolderSelector</span></code>, but both <code class="docutils literal notranslate"><span class="pre">runPlatformSelector</span> <span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">runPlatformSelectorAsync</span> <span class="pre">()</span></code> always fail. Browsers have no picker for an arbitrary host folder that a page could then write into, so there is nothing meaningful to wire up; picking/creating a folder inside the IndexedDB-backed file system with a custom in-app UI would be the only viable alternative, but no such UI exists today.</p>
+</section>
+<section id="socket-restrictions">
+<h2>Socket restrictions<a class="headerlink" href="#socket-restrictions" title="Link to this heading"></a></h2>
+<p>General POSIX sockets (<code class="docutils literal notranslate"><span class="pre">CCL::INetworkService</span></code>’s underlying <code class="docutils literal notranslate"><span class="pre">core/network</span></code> socket layer) are not implemented for Wasm at all - there is no <code class="docutils literal notranslate"><span class="pre">coresocket.wasm.*</span></code>/<code class="docutils literal notranslate"><span class="pre">corenetwork.wasm.*</span></code>, unlike other platforms. Only two narrower network primitives are available, both implemented on top of browser APIs:</p>
+<ul class="simple">
+<li><p>HTTP requests via <code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code> (see “HTTP requests” above), subject to normal CORS rules.</p></li>
+<li><p>WebSockets via <code class="docutils literal notranslate"><span class="pre">WasmWSClient</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/network/wsclient.wasm.cpp</span></code>), wrapping Emscripten’s <code class="docutils literal notranslate"><span class="pre">emscripten/websocket.h</span></code>.</p></li>
+</ul>
+<p>There is also no HTTP <em>server</em> support - <code class="docutils literal notranslate"><span class="pre">WasmWebEngine::createHTTPServer</span> <span class="pre">()</span></code> returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+</section>
+<section id="thread-priorities">
+<h2>Thread priorities<a class="headerlink" href="#thread-priorities" title="Link to this heading"></a></h2>
+<p>Wasm reuses the plain POSIX thread implementation (<code class="docutils literal notranslate"><span class="pre">core/platform/wasm/corethread.wasm.h</span></code> just aliases <code class="docutils literal notranslate"><span class="pre">core/platform/shared/posix/corethread.posix.h</span></code>), so setting a thread’s priority goes through the same <code class="docutils literal notranslate"><span class="pre">pthread_setschedparam</span></code>/<code class="docutils literal notranslate"><span class="pre">SCHED_RR</span></code> calls as on Linux. Emscripten’s pthread shim generally ignores scheduling changes in the browser, so a requested priority change is not guaranteed to have any effect.</p>
+</section>
+<section id="font-handling-fallback-fonts">
+<h2>Font handling (fallback fonts)<a class="headerlink" href="#font-handling-fallback-fonts" title="Link to this heading"></a></h2>
+<p>There is no native font enumeration API available in a browser sandbox, so <code class="docutils literal notranslate"><span class="pre">WasmFontManager</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/gui/fontresource.wasm.cpp</span></code>) resolves fonts from a fixed <code class="docutils literal notranslate"><span class="pre">/fonts</span></code> directory in the Wasm file system via Skia’s <code class="docutils literal notranslate"><span class="pre">SkFontMgr_New_Custom_Directory</span></code>.</p>
+<p>Fallback fonts are a small hardcoded set of named buckets (<code class="docutils literal notranslate"><span class="pre">CCLFallbackJP</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackSC</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackTC</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackKR</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackEmoji</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackSymbols</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackSymbols2</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLFallbackGeneric</span></code>), chosen by BCP-47 language tag or Unicode codepoint range (CJK ideographs are disambiguated using the current system language). The matching bucket’s <code class="docutils literal notranslate"><span class="pre">.ttf</span></code> isn’t bundled up front - it’s fetched on demand (<code class="docutils literal notranslate"><span class="pre">CCL.loadFallbackFont</span></code> in <code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/js/cclgui.js</span></code>, which fetches <code class="docutils literal notranslate"><span class="pre">./fonts/&lt;name&gt;.ttf</span></code> into the Wasm file system) the first time a character needs it, and the glyph is only available once that async load completes and the view is redrawn.</p>
+</section>
+<section id="cmake-options">
+<h2>CMake options<a class="headerlink" href="#cmake-options" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_THREAD_POOL_SIZE</span></code>, if set before <code class="docutils literal notranslate"><span class="pre">ccl_configure_app</span></code> runs (<code class="docutils literal notranslate"><span class="pre">core/cmake/coremacros.wasm.cmake</span></code>), is forwarded to Emscripten’s <code class="docutils literal notranslate"><span class="pre">-sPTHREAD_POOL_SIZE</span></code> link flag, controlling how many worker threads are pre-spawned at startup. If left unset, the pool size defaults to <code class="docutils literal notranslate"><span class="pre">navigator.hardwareConcurrency</span></code> (one worker per detected logical CPU). Pre-spawning avoids the cost and deadlock risk of spawning a worker on demand the first time a thread is created; applications with a known, small thread count can set this variable to a lower fixed number to reduce startup overhead.</p>
+<p>An app that doesn’t need multithreading can avoid the COOP/COEP hosting requirement (see “Cross-origin issues” above) by turning <code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_USE_PTHREADS</span></code> (<code class="docutils literal notranslate"><span class="pre">build/cmake/modules/shared/vendor.wasm.cmake</span></code>) <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.
+This drops <code class="docutils literal notranslate"><span class="pre">-pthread</span></code>/<code class="docutils literal notranslate"><span class="pre">-sUSE_PTHREADS=1</span> <span class="pre">-sSHARED_MEMORY=1</span></code> and the <code class="docutils literal notranslate"><span class="pre">_PTHREADS</span></code>/<code class="docutils literal notranslate"><span class="pre">NVWA_PTHREADS</span></code> compile definitions from every target. <code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_THREAD_POOL_SIZE</span></code> then has no effect. Default is <code class="docutils literal notranslate"><span class="pre">ON</span></code>.</p>
+</section>
+<section id="linking-plug-ins">
+<h2>Linking plug-ins<a class="headerlink" href="#linking-plug-ins" title="Link to this heading"></a></h2>
+<p>Plug-ins are linked dynamically, not statically into a single binary: the application is built as an Emscripten <code class="docutils literal notranslate"><span class="pre">MAIN_MODULE</span></code> and every plug-in as a <code class="docutils literal notranslate"><span class="pre">SIDE_MODULE</span></code> (<code class="docutils literal notranslate"><span class="pre">build/cmake/modules/shared/vendor.wasm.cmake</span></code>), loaded at runtime via <code class="docutils literal notranslate"><span class="pre">dlopen</span> <span class="pre">()</span></code> (<code class="docutils literal notranslate"><span class="pre">WasmExecutableLoader::loadImage</span></code>, <code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/system/system.wasm.cpp</span></code>), the same mechanism used on other platforms. Plug-in <code class="docutils literal notranslate"><span class="pre">.so</span></code> binaries are additionally preloaded into the Wasm file system under <code class="docutils literal notranslate"><span class="pre">/Plugins</span></code> at build time.</p>
+<p>Before plug-ins are actually scanned and loaded, <code class="docutils literal notranslate"><span class="pre">CCL.preloadPlugins</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/js/cclsystem.js</span></code>) performs an async <code class="docutils literal notranslate"><span class="pre">dlopen</span> <span class="pre">()</span></code> pass over everything under <code class="docutils literal notranslate"><span class="pre">/Plugins</span></code> first. This preload is required, not just an optimization: some browsers refuse synchronous instantiation of modules above ~8MB on the main thread, and only a genuine <code class="docutils literal notranslate"><span class="pre">dlopen</span> <span class="pre">()</span></code>/<code class="docutils literal notranslate"><span class="pre">dlsync</span></code> round trip updates Emscripten’s per-module bookkeeping correctly - which is what lets pthread worker threads later “catch up” on already-loaded modules without rerunning their global constructors on top of already-live shared state. Preloads have to happen strictly sequentially, since Emscripten’s dynamic linker takes a process-wide lock during <code class="docutils literal notranslate"><span class="pre">dlopen</span> <span class="pre">()</span></code>.</p>
+</section>
+<section id="credential-store">
+<h2>Credential store<a class="headerlink" href="#credential-store" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">WasmCredentialStore</span></code> (<code class="docutils literal notranslate"><span class="pre">ccl/platform/wasm/security/credentialmanager.wasm.cpp</span></code>) only implements the asynchronous half of <code class="docutils literal notranslate"><span class="pre">CCL::Security::CredentialStore</span></code>: <code class="docutils literal notranslate"><span class="pre">addAsync</span></code>/<code class="docutils literal notranslate"><span class="pre">getAsync</span></code> work (backed by Web Crypto AES-GCM encryption with a non-extractable key, with the encrypted blob stored in local settings), but the synchronous <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">()</span></code>/<code class="docutils literal notranslate"><span class="pre">get</span> <span class="pre">()</span></code> always fail. Browsers only expose credential/key encryption as Promises, which cannot back a synchronous call. Code that needs to run on Wasm must go through the async credential store API; it cannot fall back to the synchronous one.</p>
+<p>Note this is unrelated to any cross-device “sync” of stored credentials - there is none. Credentials are stored per-origin in the browser’s local storage the same way other persistent application data is (see “IndexedDB file system” above).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="generatedtypings.html" class="btn btn-neutral float-left" title="Generated Typings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

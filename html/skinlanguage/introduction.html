@@ -55,7 +55,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../cmakeguide/index.html">CMake Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cclframework/index.html">CCL Cross-platform Framework</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">CCL Skin Definition Language</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concepts">Concepts</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="chapter/index.html">Chapters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/index.html">References</a></li>
 </ul>
@@ -99,7 +102,30 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
 <p>The CCL Cross-platform Framework provides an XML-based user interface definition language to describe the appearance of an application.</p>
 <p>A skin package is used to deploy the relevant assets. It can either be a folder or a ZIP archive with the filename extension .skin, containing XML files, images (in formats like JPEG, PNG, WebP, SVG), fonts, etc. When the application launches, it looks for a skin package at a predefined location, parses its XML content and loads the primary form “ApplicationWindow”.</p>
-<p>Conceptually, the skin system separates the application’s business logic from its graphical representation on screen. Both sides, the application code and the GUI, can address and connect to each other based on a naming scheme. The application code provides a tree of named components with parameters and properties. The skin data model in turn provides resources like images, styles, forms, etc. also associated with names.</p>
+<p>Conceptually, the skin system separates the application’s business logic from its graphical representation on screen. The application code and the GUI can address and connect to each other based on a naming scheme. The application code provides a tree of named components with parameters and properties. The skin data model in turn provides resources like images, styles, forms, etc. also associated with names.</p>
+<p>Because the two sides only ever connect by name, the UI can be laid out, styled, and reworded entirely in XML - without touching or recompiling the underlying code - and changes can be reloaded into a running app to see them take effect immediately (see <a class="reference internal" href="chapter/troubleshooting/index.html#skin-troubleshooting"><span class="std std-ref">Tooling and Troubleshooting</span></a>).</p>
+<section id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Link to this heading"></a></h2>
+<p>The following terms are used throughout this guide:</p>
+<dl class="simple">
+<dt>Skin package</dt><dd><p>The unit of deployment: a folder or <code class="docutils literal notranslate"><span class="pre">.skin</span></code> archive containing a <code class="docutils literal notranslate"><span class="pre">skin.xml</span></code> and everything it references (images, fonts, other XML files). See <a class="reference internal" href="chapter/package/index.html"><span class="doc">Skin Package</span></a>.</p>
+</dd>
+<dt>Form</dt><dd><p>A named group of controls, either a top-level window or a reusable sub-part of another form. See <a class="reference internal" href="chapter/forms/index.html"><span class="doc">Forms</span></a>.</p>
+</dd>
+<dt>Control</dt><dd><p>A single interactive or display element inside a form, such as a button, text box, or label. See <a class="reference internal" href="chapter/controls/index.html"><span class="doc">Controls</span></a>.</p>
+</dd>
+<dt>Style</dt><dd><p>A named, reusable set of appearance properties (colors, fonts, images, …) that controls reference for their look. See <a class="reference internal" href="chapter/styles/index.html#visual-styles"><span class="std std-ref">Styles</span></a>.</p>
+</dd>
+<dt>Resource</dt><dd><p>A named asset - color, image, gradient, or style - declared in a skin package and referenced by name elsewhere in the skin.</p>
+</dd>
+<dt>Controller</dt><dd><p>The component in the application’s tree that a form (or a part of it) is currently bound to; names in skin XML are resolved relative to it. See <a class="reference internal" href="chapter/forms/index.html#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a>.</p>
+</dd>
+<dt>Parameter</dt><dd><p>A named value owned by a component in the application’s tree (e.g. a numeric value, an on/off state, text, etc.) that a control’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute binds to. See <a class="reference internal" href="chapter/forms/index.html#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a>.</p>
+</dd>
+<dt>Workspace</dt><dd><p>The application-level arrangement of windows and panels (perspectives, frames, window classes) that hosts one or more forms at runtime. See <a class="reference internal" href="chapter/workspace/index.html"><span class="doc">Workspaces</span></a>.</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -114,7 +140,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

@@ -224,7 +224,7 @@
 <p>Determine if the application runs in a sandbox where certain restrictions to system objects may apply.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-system-information-1ad54443d2d865b73155c21a7aa7def3f4"><span id="index-19"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IAsyncOperation.html#doxid-struct-c-c-l-1-1-i-async-operation"><span class="std std-ref">IAsyncOperation</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">searchApplications</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">filter</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Search installed applications.</p>
-<p>Filter is a comma or semicolon separated list of search tokens. The tokens are not case sensitive Result of async operation is <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a> with <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a> objects. <a class="reference internal" href="class_CCL_Attributes.html#doxid-class-c-c-l-1-1-attributes"><span class="std std-ref">Attributes</span></a> : kPackageName, kPackageVersion, kPackageVendor, kPackageExecutable</p>
+<p>Filter is a comma or semicolon separated list of search tokens. The tokens are not case sensitive Result of async operation is <a class="reference internal" href="struct_CCL_IUnknownList.html#doxid-struct-c-c-l-1-1-i-unknown-list"><span class="std std-ref">IUnknownList</span></a> with <a class="reference internal" href="struct_CCL_IAttributeList.html#doxid-struct-c-c-l-1-1-i-attribute-list"><span class="std std-ref">IAttributeList</span></a> objects. <a class="reference internal" href="class_CCL_Attributes.html#doxid-class-c-c-l-1-1-attributes"><span class="std std-ref">Attributes</span></a> : kPackageName, kPackageVersion, kPackageVendor, kPackageExecutable, kPackageID (optional)</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-system-information-1a7b66504dea3ae28e842af5b36cece9c1"><span id="index-20"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">terminate</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Cleanup.</p>
 </section>
@@ -243,7 +243,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

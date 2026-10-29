@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAssembly Platform Support &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="File system and URLs" href="filesystem_urls.html" />
+    <link rel="prev" title="Android Startup Sequence" href="android.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CCL Cross-platform Framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building CCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howtos.html">CCL How-tos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CCL in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="essentials.html">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings.html">Using strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WebAssembly Platform Support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cross-origin-issues">Cross-origin issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#indexeddb-file-system-vs-host-file-system">IndexedDB file system (vs. host file system)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-selectors-upload-only">File selectors (upload only)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#folder-selectors-not-implemented">Folder selectors (not implemented)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#socket-restrictions">Socket restrictions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thread-priorities">Thread priorities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#font-handling-fallback-fonts">Font handling (fallback fonts)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmake-options">CMake options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#credential-store">Credential store</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shapes.html">Geometric Shape Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfx.html">Graphics Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gfxupdate.html">Graphical Update Call Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth.html">Authorization Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="isolation.html">Framework Isolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools.html">CCL Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmdtools/index.html">CCL Command-line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CCL Cross-platform Framework</a></li>
+          <li class="breadcrumb-item"><a href="index.html">CCL in Detail</a></li>
+      <li class="breadcrumb-item active">WebAssembly Platform Support</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="webassembly-platform-support">
+<span id="wasm-platform"></span><h1>WebAssembly Platform Support<a class="headerlink" href="#webassembly-platform-support" title="Link to this heading"></a></h1>
+<p>Using the WebAssembly backend (based on Emscripten), CCL applications can run inside a browser sandbox rather than on top of a native OS. Most platform interfaces are implemented against browser APIs (DOM, Fetch, IndexedDB, Web Crypto, …) instead of native system calls, which brings a number of restrictions that don’t exist on the other platforms. This page summarizes the ones that are easy to trip over.</p>
+<section id="cross-origin-issues">
+<h2>Cross-origin issues<a class="headerlink" href="#cross-origin-issues" title="Link to this heading"></a></h2>
+<p>Multithreading requires the page to be served with cross-origin isolation headers (<code class="docutils literal notranslate"><span class="pre">Cross-Origin-Opener-Policy:</span> <span class="pre">same-origin</span></code> and <code class="docutils literal notranslate"><span class="pre">Cross-Origin-Embedder-Policy:</span> <span class="pre">require-corp</span></code>), since threads rely on <code class="docutils literal notranslate"><span class="pre">SharedArrayBuffer</span></code>, which browsers only expose to a cross-origin isolated page. This is a hosting/serving concern your deployment needs to take care of. Apps that don’t need multithreading can instead disable pthreads support at build time to avoid the requirement - see “CMake options” below.</p>
+<p>WebView is backed by a plain <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code>. Once the page is cross-origin isolated, it can only navigate to same-origin/local content - cross-origin URLs are bounced out to a new browser tab instead. Reading back the current URL/title/history of a cross-origin page silently returns empty/false due to the browser’s same-origin policy.</p>
+<p>HTTP requests go through the browser’s <code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code> API and are subject to normal CORS rules - there is no way to bypass CORS from C++, and the user agent cannot be overridden.</p>
+</section>
+<section id="indexeddb-file-system-vs-host-file-system">
+<h2>IndexedDB file system (vs. host file system)<a class="headerlink" href="#indexeddb-file-system-vs-host-file-system" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_INativeFileSystem.html#doxid-struct-c-c-l-1-1-i-native-file-system"><span class="std std-ref"><span class="pre">CCL::INativeFileSystem</span></span></a></code> addresses a real host file system on other platforms, but on Wasm it addresses a browser-side IndexedDB-backed virtual file system instead. Data is scoped to the browser’s storage for the page’s origin - clearing site data/IndexedDB deletes it, and it isn’t visible to the real OS file system, or to applications running on other origins. It is however shared with any other CCL application served from the <em>same</em> origin. File system change notifications are not supported.</p>
+</section>
+<section id="file-selectors-upload-only">
+<h2>File selectors (upload only)<a class="headerlink" href="#file-selectors-upload-only" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IFileSelector.html#doxid-struct-c-c-l-1-1-i-file-selector"><span class="std std-ref"><span class="pre">CCL::IFileSelector</span></span></a></code> uses the browser’s native file upload picker, which is inherently asynchronous - only the async selector API works on Wasm. There is no native “Save As” dialog: saving instead triggers a browser file <em>download</em>, with the destination chosen through the browser’s own download UI, not through CCL.</p>
+</section>
+<section id="folder-selectors-not-implemented">
+<h2>Folder selectors (not implemented)<a class="headerlink" href="#folder-selectors-not-implemented" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IFolderSelector.html#doxid-struct-c-c-l-1-1-i-folder-selector"><span class="std std-ref"><span class="pre">CCL::IFolderSelector</span></span></a></code> has no working implementation on Wasm - browsers have no picker for an arbitrary host folder a page could write into, so any call always fails.</p>
+</section>
+<section id="socket-restrictions">
+<h2>Socket restrictions<a class="headerlink" href="#socket-restrictions" title="Link to this heading"></a></h2>
+<p>General POSIX sockets are not available on Wasm at all. Only HTTP requests (via <code class="docutils literal notranslate"><span class="pre">fetch</span> <span class="pre">()</span></code>) and WebSockets are available as network primitives; there is also no HTTP server support.</p>
+</section>
+<section id="thread-priorities">
+<h2>Thread priorities<a class="headerlink" href="#thread-priorities" title="Link to this heading"></a></h2>
+<p>Thread priority changes are not guaranteed to have any effect - Emscripten’s pthread shim generally ignores OS-level scheduling changes in the browser.</p>
+</section>
+<section id="font-handling-fallback-fonts">
+<h2>Font handling (fallback fonts)<a class="headerlink" href="#font-handling-fallback-fonts" title="Link to this heading"></a></h2>
+<p>There is no native font enumeration API in a browser sandbox. Fallback glyphs (CJK, emoji, symbols, …) are resolved from a small set of bundled fallback fonts, fetched on demand the first time a character needs one.</p>
+</section>
+<section id="cmake-options">
+<h2>CMake options<a class="headerlink" href="#cmake-options" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_THREAD_POOL_SIZE</span></code> controls how many worker threads Emscripten pre-spawns at startup (<code class="docutils literal notranslate"><span class="pre">-sPTHREAD_POOL_SIZE</span></code>); it defaults to one per detected logical CPU. Lowering it can reduce startup overhead for apps with a known, small thread count.</p>
+<p><code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_USE_PTHREADS</span></code> (default <code class="docutils literal notranslate"><span class="pre">ON</span></code>) can be turned <code class="docutils literal notranslate"><span class="pre">OFF</span></code> to disable pthreads support entirely, avoiding the cross-origin isolation requirement for single-threaded apps; <code class="docutils literal notranslate"><span class="pre">VENDOR_WASM_THREAD_POOL_SIZE</span></code> then has no effect.</p>
+</section>
+<section id="credential-store">
+<h2>Credential store<a class="headerlink" href="#credential-store" title="Link to this heading"></a></h2>
+<p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_Security_ICredentialManager.html#doxid-struct-c-c-l-1-1-security-1-1-i-credential-manager"><span class="std std-ref"><span class="pre">CCL::Security::ICredentialManager</span></span></a></code>’s synchronous methods <code class="docutils literal notranslate"><span class="pre">addCredential</span> <span class="pre">()</span></code>, <code class="docutils literal notranslate"><span class="pre">addPassword</span> <span class="pre">()</span></code>, <code class="docutils literal notranslate"><span class="pre">getCredential</span> <span class="pre">()</span></code> always fail on Wasm - only the asynchronous API is implemented, since browsers only expose the underlying credential encryption as Promises. This is unrelated to any cross-device credential sync, which doesn’t exist here; credentials are stored per-origin in the browser’s local storage, like other persistent application data.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="android.html" class="btn btn-neutral float-left" title="Android Startup Sequence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="filesystem_urls.html" class="btn btn-neutral float-right" title="File system and URLs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

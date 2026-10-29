@@ -164,9 +164,9 @@
         <a class="reference internal" href="enum_CCL_Persistence_TableMapping.html#doxid-namespace-c-c-l-1-1-persistence-1a7304b6422fdb6662d56ba2170d03c33b"><span class="std std-ref">TableMapping</span></a><span></span> <span class="n">mapping</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Persistence_TableMapping.html#doxid-namespace-c-c-l-1-1-persistence-1a7304b6422fdb6662d56ba2170d03c33ba0648f0560c12c13cadcbf6fb52f6858c"><span class="std std-ref">kDefaultMapping</span></a><span></span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1ade26114d94793c74313c49c78405f1d7"><span class="std std-ref">setMemberFlags</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1a9e0e46552ba9e051e509cfba9ebb23aa"><span class="std std-ref">setMemberFlags</span></a><span></span> <span class="p">(</span>
         <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITypeInfo.html#doxid-struct-c-c-l-1-1-i-type-info"><span class="std std-ref">ITypeInfo</span></a><span></span><span class="o">*</span> <span class="n">typeInfo</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">memberName</span><span class="p">,</span>
+        <span class="n">CStringPtr</span> <span class="n">memberName</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -182,10 +182,10 @@
         <a class="reference internal" href="struct_CCL_Persistence_IExpression.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression"><span class="std std-ref">IExpression</span></a><span></span><span class="o">*</span> <span class="n">condition</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1ae598ad5e8b9771d7f59e0d1669656577"><span class="std std-ref">collectValues</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1a615ef0e0678d2690ccddfcc8efd95e42"><span class="std std-ref">collectValues</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="struct_CCL_IMutableArray.html#doxid-struct-c-c-l-1-1-i-mutable-array"><span class="std std-ref">IMutableArray</span></a><span></span><span class="o">&amp;</span> <span class="n">values</span><span class="p">,</span>
         <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITypeInfo.html#doxid-struct-c-c-l-1-1-i-type-info"><span class="std std-ref">ITypeInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">typeInfo</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">memberName</span><span class="p">,</span>
+        <span class="n">CStringPtr</span> <span class="n">memberName</span><span class="p">,</span>
         <a class="reference internal" href="struct_CCL_Persistence_IExpression.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression"><span class="std std-ref">IExpression</span></a><span></span><span class="o">*</span> <span class="n">condition</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
@@ -208,9 +208,9 @@
     <a class="reference internal" href="enum_CCL_Persistence_TableMapping.html#doxid-namespace-c-c-l-1-1-persistence-1a7304b6422fdb6662d56ba2170d03c33b"><span class="std std-ref">TableMapping</span></a><span></span> <span class="n">mapping</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Persistence_TableMapping.html#doxid-namespace-c-c-l-1-1-persistence-1a7304b6422fdb6662d56ba2170d03c33ba0648f0560c12c13cadcbf6fb52f6858c"><span class="std std-ref">kDefaultMapping</span></a><span></span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Register a class to be stored.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1ade26114d94793c74313c49c78405f1d7"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setMemberFlags</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1a9e0e46552ba9e051e509cfba9ebb23aa"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">setMemberFlags</span> <span class="p">(</span>
     <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITypeInfo.html#doxid-struct-c-c-l-1-1-i-type-info"><span class="std std-ref">ITypeInfo</span></a><span></span><span class="o">*</span> <span class="n">typeInfo</span><span class="p">,</span>
-    <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">memberName</span><span class="p">,</span>
+    <span class="n">CStringPtr</span> <span class="n">memberName</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Define additional properties for a member of a registered class.</p>
@@ -231,10 +231,10 @@
     <a class="reference internal" href="struct_CCL_Persistence_IExpression.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression"><span class="std std-ref">IExpression</span></a><span></span><span class="o">*</span> <span class="n">condition</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Create a query result iterator for given class and (optional) condition.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1ae598ad5e8b9771d7f59e0d1669656577"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">collectValues</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-persistence-1-1-i-persistent-store-1a615ef0e0678d2690ccddfcc8efd95e42"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">collectValues</span> <span class="p">(</span>
     <a class="reference internal" href="struct_CCL_IMutableArray.html#doxid-struct-c-c-l-1-1-i-mutable-array"><span class="std std-ref">IMutableArray</span></a><span></span><span class="o">&amp;</span> <span class="n">values</span><span class="p">,</span>
     <span class="k">const</span> <a class="reference internal" href="struct_CCL_ITypeInfo.html#doxid-struct-c-c-l-1-1-i-type-info"><span class="std std-ref">ITypeInfo</span></a><span></span><span class="o">&amp;</span> <span class="n">typeInfo</span><span class="p">,</span>
-    <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">char</span></a><span></span><span class="o">*</span> <span class="n">memberName</span><span class="p">,</span>
+    <span class="n">CStringPtr</span> <span class="n">memberName</span><span class="p">,</span>
     <a class="reference internal" href="struct_CCL_Persistence_IExpression.html#doxid-struct-c-c-l-1-1-persistence-1-1-i-expression"><span class="std std-ref">IExpression</span></a><span></span><span class="o">*</span> <span class="n">condition</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Collect all (distinct) value occurances of given class member with (optional) condition.</p>
@@ -254,7 +254,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

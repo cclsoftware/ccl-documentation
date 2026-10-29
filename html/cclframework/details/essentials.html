@@ -75,6 +75,7 @@
 <li class="toctree-l3"><a class="reference internal" href="components.html">Application Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="phases.html">Application Phases</a></li>
 <li class="toctree-l3"><a class="reference internal" href="android.html">Android Startup Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wasm.html">WebAssembly Platform Support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filesystem_urls.html">File system and URLs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="virtualfilesystem.html">Virtual File System</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plugins.html">Plug-ins on Mobile Platforms</a></li>
@@ -153,7 +154,7 @@
 </td>
 </tr>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref"><span class="pre">Object</span></span></a></code></p></td>
-<td><p>Object base class with RTTI, messages, storage</p></td>
+<td><p>Object base class with RTTI, messages, persistence</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_UID.html#doxid-struct-c-c-l-1-1-u-i-d"><span class="std std-ref"><span class="pre">UID</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a58267aac189655034c41d5af20e85c79"><span class="std std-ref"><span class="pre">UIDRef</span></span></a></code></p></td>
 <td><p>16-Byte Globally Unique Identifier.</p>
@@ -167,7 +168,7 @@
 <td><p>Smart pointer. Takes ownership on assignement of raw IUnknown/Object pointer</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_SharedPtr.html#doxid-class-c-c-l-1-1-shared-ptr"><span class="std std-ref"><span class="pre">SharedPtr</span></span></a></code></p></td>
-<td><p>Smart pointer. Similar to AutoPtr, calls addRef and release balanced</p></td>
+<td><p>Smart pointer. Similar to AutoPtr, calls retain and release balanced</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_UnknownPtr.html#doxid-class-c-c-l-1-1-unknown-ptr"><span class="std std-ref"><span class="pre">UnknownPtr</span></span></a></code></p></td>
 <td><p>Smart pointer + queryInterface</p></td>
@@ -201,13 +202,13 @@
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1aca367eab4c59a96a662ae321f84739be"><span class="std std-ref"><span class="pre">ccl_new</span></span></a></code></p></td>
 <td><p>Create instance via Plug-in Manager</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AutoPtr</span><span class="o">&lt;</span><span class="n">IProgressNotify</span><span class="o">&gt;</span> <span class="n">dialog</span><span class="p">;</span>
-<span class="n">dialog</span> <span class="o">=</span> <span class="n">ccl_new</span><span class="o">&lt;</span><span class="n">IProgressNotify</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">CCL</span><span class="o">::</span><span class="n">ClassID</span><span class="o">::</span><span class="n">ProgressDialog</span><span class="p">);</span>
+<span class="n">dialog</span> <span class="o">=</span> <span class="n">ccl_new</span><span class="o">&lt;</span><span class="n">IProgressNotify</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">ClassID</span><span class="o">::</span><span class="n">ProgressDialog</span><span class="p">);</span>
 </pre></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a2d52976d9975f5da4c67050702b953dd"><span class="std std-ref"><span class="pre">ccl_release</span></span></a></code></p></td>
-<td><p>Instances  of ‘real’ plug-ins (dynamically loaded modules) must be released with ccl_release. This can be a little bit tricky, because ccl_release is not not supported by smart pointers.</p></td>
+<td><p>Instances of plug-ins from dynamically loaded modules must be released with ccl_release. This needs to be done manually, because ccl_release is not supported by smart pointers.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a8cf34955799dc17a6ed3d602f0e19d5c"><span class="std std-ref"><span class="pre">isEqualUnknown</span></span></a></code></p></td>
 <td><p>Test if interface pointers have the same implementation class instance</p>
@@ -217,10 +218,10 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Pointers must not be compared directly !</p>
+<p>Pointers must not be compared directly.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>Cast interfaces:</p>
+<tr class="row-odd"><td><p>Cast interfaces with</p>
 <p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_UnknownPtr.html#doxid-class-c-c-l-1-1-unknown-ptr"><span class="std std-ref"><span class="pre">UnknownPtr</span></span></a></code></p>
 </td>
 <td><p>Example for casting one interface to another</p>
@@ -252,7 +253,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 <p><strong>Per reference or pointer:</strong></p>
 <ul class="simple">
 <li><p>String, Variant</p></li>
-<li><p>struct (interface specific with no or inline methods)</p></li>
+<li><p>struct (with public data types)</p></li>
 <li><p>IUnknown and other interfaces but <strong>no implementation classes</strong>.</p></li>
 </ul>
 <table class="docutils align-default">
@@ -282,7 +283,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-ccldoc-8h-1a580b04f6cfa3ed2f779e31c9b01c3084"><span class="std std-ref"><span class="pre">CCL_API</span></span></a></code></p></td>
-<td><p>Calling convention needed for every interface method</p></td>
+<td><p>Calling convention for interface methods</p></td>
 <td><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">tresult</span> <span class="n">CCL_API</span> <span class="nf">interfaceMethod</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -307,7 +308,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-objectmacros-8h-1a595d8f97de4c5e5eed89145a4c9c95d6"><span class="std std-ref"><span class="pre">DECLARE_CLASS</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-documentdiagnostic-8cpp-1aeefb69b4887e0de83095be9162982a7a"><span class="std std-ref"><span class="pre">DECLARE_CLASS_ABSTRACT</span></span></a></code></p></td>
-<td><p>Header: Declare RTTI for Object (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MetaClass.html#doxid-class-c-c-l-1-1-meta-class"><span class="std std-ref"><span class="pre">CCL::MetaClass</span></span></a></code>)</p></td>
+<td><p>Header (.h): Declare RTTI for Object (<code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MetaClass.html#doxid-class-c-c-l-1-1-meta-class"><span class="std std-ref"><span class="pre">CCL::MetaClass</span></span></a></code>)</p></td>
 <td><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyClass</span><span class="p">:</span> <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">Object</span>
 <span class="p">{</span>
   <span class="k">public</span><span class="o">:</span>
@@ -319,7 +320,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-action-8cpp-1a8cbe82d01fd049e3654184445c01efa2"><span class="std std-ref"><span class="pre">DEFINE_CLASS</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-objectmacros-8h-1a6c8a34ff9fe172e1a06c7dc8d05c4f0a"><span class="std std-ref"><span class="pre">DEFINE_CLASS_HIDDEN</span></span></a></code>, …</p></td>
-<td><p>CPP: Define Meta Class</p></td>
+<td><p>Source (.cpp): Define meta class</p></td>
 <td><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DEFINE_CLASS_HIDDEN</span> <span class="p">(</span><span class="n">MyClass</span><span class="p">,</span> <span class="n">Object</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -327,7 +328,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 </td>
 </tr>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-cclmacros-8h-1a26145e2eeee3d1137df9c25e02bbc9c8"><span class="std std-ref"><span class="pre">CLASS_INTERFACE</span></span></a></code>, <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-cclmacros-8h-1ade063c8bb0a54f596d07341793c4dc7f"><span class="std std-ref"><span class="pre">CLASS_INTERFACE2</span></span></a></code> <code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/global.html#doxid-cclmacros-8h-1aeeef2dc35341b4c7206cfbda1893bb46"><span class="std std-ref"><span class="pre">CLASS_INTERFACES</span></span></a></code></p></td>
-<td><p>Define Interfaces in an implementation class</p></td>
+<td><p>Define interfaces in an implementation class</p></td>
 <td><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyClass</span><span class="p">:</span> <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">Object</span><span class="p">,</span>
                <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">IMyInterface</span>
 <span class="p">{</span>
@@ -452,10 +453,10 @@ The idea is that the code has the same binary output with any compiler on a plat
 </ul>
 <p><strong>Object Container</strong></p>
 <ul class="simple">
-<li><p>+ common abstract interfaces (Container, Iterator)</p></li>
-<li><p>+ provide reference counting (but not in ‘remove’)</p></li>
-<li><p>+ provide storage support</p></li>
-<li><p>- content type always unspecific (<code class="docutils literal notranslate"><span class="pre">ccl_cast</span></code> is needed)</p></li>
+<li><p>+ support common abstract base classes (Container, Iterator)</p></li>
+<li><p>+ provide reference counting (while in container, not in ‘remove’)</p></li>
+<li><p>+ support serialization/de-serialization to archives</p></li>
+<li><p>- content type always unspecific (<code class="docutils literal notranslate"><span class="pre">ccl_cast</span></code> or <code class="docutils literal notranslate"><span class="pre">static_cast</span></code> needed)</p></li>
 <li><p>preferred for types derived from Object</p></li>
 <li><p>combine with iterate_as&lt;&gt; in range-for loop</p></li>
 <li><p>use when script access is needed</p></li>
@@ -484,7 +485,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 </tr>
 <tr class="row-odd"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_MutableCString.html#doxid-class-c-c-l-1-1-mutable-c-string"><span class="std std-ref"><span class="pre">MutableCString</span></span></a></code></p></td>
 <td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_CString.html#doxid-class-c-c-l-1-1-c-string"><span class="std std-ref"><span class="pre">CString</span></span></a></code></p></td>
-<td><p>C-String, 8-Bit. CString is read only</p></td>
+<td><p>C-String, 8-Bit. CString is read-only</p></td>
 </tr>
 </tbody>
 </table>
@@ -508,7 +509,7 @@ The idea is that the code has the same binary output with any compiler on a plat
 <td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/struct_CCL_IMessage.html#doxid-struct-c-c-l-1-1-i-message"><span class="std std-ref"><span class="pre">IMessage</span></span></a></code></p>
 <p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref"><span class="pre">MessageRef</span></span></a></code></p>
 </td>
-<td><p>Has Identifier + Parameter. Most messages are specific to a class, but there a some common messages:</p>
+<td><p>Has identifier and arguments. Most messages are specific to a class, but there a some common messages:</p>
 <ul class="simple">
 <li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1a273e834d0d36f49e1af9759e9c3fca3c"><span class="std std-ref"><span class="pre">kChanged</span></span></a></code></p></li>
 <li><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/namespace_CCL.html#doxid-namespace-c-c-l-1ae76b3e87178779108d11f1428cff5364"><span class="std std-ref"><span class="pre">kPropertyChanged</span></span></a></code></p></li>
@@ -636,7 +637,7 @@ isEqualUnknown or other methods that modify the reference count of an object mus
 <td><p>Storage combines Archive and Attributes.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="doxyrest-cref docutils literal notranslate"><a class="reference internal" href="../reference/class_CCL_ArchiveHandler.html#doxid-class-c-c-l-1-1-archive-handler"><span class="std std-ref"><span class="pre">ArchiveHandler</span></span></a></code></p></td>
-<td><p>Helper class to load/save objects from/to a structured storage (Zip-File). An Archive in this case reads/writes a sub-stream (file) of the structured file.</p></td>
+<td><p>Helper class to load/save objects from/to a structured storage (.zip file). An archive in this case reads/writes a sub-stream (file) of the structured file.</p></td>
 </tr>
 </tbody>
 </table>
@@ -659,6 +660,7 @@ isEqualUnknown or other methods that modify the reference count of an object mus
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nl">MyClass</span><span class="p">:</span> <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">Object</span><span class="p">,</span>
                <span class="k">public</span> <span class="n">CCL</span><span class="o">::</span><span class="n">Singleton</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span>
 <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
   <span class="kt">void</span> <span class="n">myMethod</span> <span class="p">();</span>
 <span class="p">};</span>
 
@@ -830,7 +832,7 @@ Is a member ‘paramList’ of <code class="doxyrest-cref docutils literal notra
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

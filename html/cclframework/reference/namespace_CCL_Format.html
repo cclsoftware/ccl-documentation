@@ -163,6 +163,7 @@
 <span class="k">class</span> <a class="reference internal" href="class_CCL_Format_DateTimeVariant.html#doxid-class-c-c-l-1-1-format-1-1-date-time-variant"><span class="std std-ref">DateTimeVariant</span></a><span></span><span class="p">;</span>
 
 <span class="k">class</span> <a class="reference internal" href="class_CCL_Format_Duration.html#doxid-class-c-c-l-1-1-format-1-1-duration"><span class="std std-ref">Duration</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_CCL_Format_Float.html#doxid-class-c-c-l-1-1-format-1-1-float"><span class="std std-ref">Float</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_CCL_Format_FourCharID.html#doxid-class-c-c-l-1-1-format-1-1-four-char-i-d"><span class="std std-ref">FourCharID</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_CCL_Format_ISODateTime.html#doxid-class-c-c-l-1-1-format-1-1-i-s-o-date-time"><span class="std std-ref">ISODateTime</span></a><span></span><span class="p">;</span>
 <span class="k">class</span> <a class="reference internal" href="class_CCL_Format_Int.html#doxid-class-c-c-l-1-1-format-1-1-int"><span class="std std-ref">Int</span></a><span></span><span class="p">;</span>
@@ -181,7 +182,22 @@
 
 <span class="c1">// global variables</span>
 
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1ad3bbb2816587925deed8b18643eae797"><span></span><span class="n">kDuration</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.Duration&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1ab5b474b9578cbb690feb80a5ed39bea1"><span></span><span class="n">kByteSize</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.ByteSize&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a403f039d7b2f1c012b693f324b876201"><span></span><span class="n">kSIByteSize</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.SIByteSize&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a24169c0df09d8dce881cdea6616d218a"><span></span><span class="n">kBytesPerSecond</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.BytesPerSecond&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a677924048a54b4742f99720584d8a3d5"><span></span><span class="n">kSIBytesPerSecond</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.SIBytesPerSecond&quot;</span><span class="p">;</span>
 <span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a87a5e6d27b105542074fa4ab10881309"><span></span><span class="n">kPercent</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.Percent&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a78a6cb3b484fc658ecc7ee57888a6996"><span></span><span class="n">kPercentFloat</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.PercentFloat&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a263fa71f5c4e2b03f0abc9349a0a1be6"><span></span><span class="n">kPercentInt</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.PercentInt&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a21234291fc70eadf7c691e67fa1398be"><span></span><span class="n">kInt</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.Int&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1ac6b65b58f94b30a687c4d7ddf2bfd987"><span></span><span class="n">kFloat</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.Float&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a14f2fdad20ead889676192b7ef2925e7"><span></span><span class="n">kDateTime</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.DateTime&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a5f21cc99f1b92346a73b25ded2b4f2b7"><span></span><span class="n">kPortableDateTime</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.PortableDateTime&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a7cb5b8718e45f698f0c324cf666acaab"><span></span><span class="n">kISODateTime</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.ISODateTime&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a3673552bc4f5d81af4123ca30012b2eb"><span></span><span class="n">kTimeAgo</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.TimeAgo&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a2765d45d30a920e28447a2cd8d1b19ca"><span></span><span class="n">kTimeAhead</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.TimeAhead&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">CStringPtr</span> <span class="doxyrest-code-target target" id="doxid-namespace-c-c-l-1-1-format-1a0e69bb4deff2a8f1461f546c814c74e7"><span></span><span class="n">kOffset1</span></span><span></span> <span class="o">=</span> <span class="s">&quot;System.PlusOne&quot;</span><span class="p">;</span>
 
 <span class="p">}</span> <span class="c1">// namespace Format</span></pre>
 </section>
@@ -198,7 +214,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

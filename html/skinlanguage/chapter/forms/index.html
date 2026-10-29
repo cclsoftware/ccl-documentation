@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Controls" href="../controls/index.html" />
-    <link rel="prev" title="Styles" href="../styles/index.html" />
+    <link rel="prev" title="Tooling and Troubleshooting" href="../troubleshooting/index.html" />
     <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -58,10 +58,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Forms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-binding-and-addressing">Parameter Binding and Addressing</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
@@ -109,12 +114,12 @@
   <section id="forms">
 <h1>Forms<a class="headerlink" href="#forms" title="Link to this heading"></a></h1>
 <p>A &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-form"><span class="std std-ref">Form</span></a>&gt; describes a group of controls which can either appear directly as a window on screen or can be a sub-part of another form. Forms can reference each other without special knowledge of the application to break complex user interfaces into smaller pieces.</p>
-<p>When a form is created by the application, it is associated with a component at a certain point in the component tree. To reference parameters of other components inside the form, they can be addressed either relative or absolute with the using-statement.</p>
+<p>When a form is created by the application, it is associated with a component at a certain point in the component tree. To reference parameters of other components inside the form, they can be addressed either relative or absolute, see <a class="reference internal" href="#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a> below.</p>
 <p>An example &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-form"><span class="std std-ref">Form</span></a>&gt; could be structured like this (simplified):</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Form&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- row 1, include a predefined view --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;Horizontal&gt;</span>
-<span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BrowserTemplate&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OtherView&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/Horizontal&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- row 2, textbox with button --&gt;</span>
@@ -131,13 +136,54 @@
 <span class="nt">&lt;/Form&gt;</span>
 </pre></div>
 </div>
+<section id="parameter-binding-and-addressing">
+<span id="parameter-binding"></span><h2>Parameter Binding and Addressing<a class="headerlink" href="#parameter-binding-and-addressing" title="Link to this heading"></a></h2>
+<p>Most controls display and change a value owned by the application. A control’s <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute doubles as the name of the parameter it binds to, looked up on the component the enclosing &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-form"><span class="std std-ref">Form</span></a>&gt; was created for (its <em>current controller</em>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;EditBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>This binds the edit box to a parameter called “value” on the current controller. If no such parameter exists, the control silently displays nothing and ignores input - see <a class="reference internal" href="../troubleshooting/index.html#skin-troubleshooting"><span class="std std-ref">Tooling and Troubleshooting</span></a> for how to be warned about that instead of guessing.</p>
+<section id="controller-paths">
+<h3>Controller Paths<a class="headerlink" href="#controller-paths" title="Link to this heading"></a></h3>
+<p>To reach a parameter on a different component than the current controller, prefix the parameter name with a <em>controller path</em>, separated from it by the last <code class="docutils literal notranslate"><span class="pre">/</span></code> in the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;EditBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;componentA/value&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Everything before the last <code class="docutils literal notranslate"><span class="pre">/</span></code> is resolved as a controller path; everything after it is the parameter name looked up on whatever component that path resolves to. A controller path is either:</p>
+<ul>
+<li><p><strong>Relative</strong> - a plain child name, or a slash-separated chain of them, resolved by walking down child components starting at the current controller (as in the example above: “componentA” is a child of the current controller).</p></li>
+<li><p><strong>Absolute</strong> - a path starting with <code class="docutils literal notranslate"><span class="pre">object://</span></code> is resolved from the application root instead of the current controller. The segment between <code class="docutils literal notranslate"><span class="pre">://</span></code> and the next <code class="docutils literal notranslate"><span class="pre">/</span></code> names a <em>root object</em> registered with the application (e.g. <code class="docutils literal notranslate"><span class="pre">hostapp</span></code>, <code class="docutils literal notranslate"><span class="pre">WindowManager</span></code>, <code class="docutils literal notranslate"><span class="pre">Workspace</span></code>); everything after it is a relative child-path from there, exactly as above.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;object://WindowManager/MyWindowClass&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;TextBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;object://hostapp/DocumentManager/ActiveDocument/title&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="narrowing-scope-with-using">
+<h3>Narrowing Scope with “using”<a class="headerlink" href="#narrowing-scope-with-using" title="Link to this heading"></a></h3>
+<p>When several controls in a row need the same controller path, wrap them in a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-using"><span class="std std-ref">using</span></a>&gt; element instead of repeating the path on every control. It doesn’t render anything itself - it only changes which controller its children resolve names against, and accepts the same relative or absolute paths described above.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;componentA&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;TextBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CheckBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;enabled&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/using&gt;</span>
+</pre></div>
+</div>
+<p>If the controller path might legitimately not resolve (e.g. an optional sub-component that not every instance has), set <code class="docutils literal notranslate"><span class="pre">optional=&quot;true&quot;</span></code> - otherwise a missing controller is reported as a warning. Either way, the <code class="docutils literal notranslate"><span class="pre">using</span></code> block’s children are skipped when the controller can’t be found.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;componentB&quot;</span><span class="w"> </span><span class="na">optional=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;TextBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;value&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/using&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../styles/index.html" class="btn btn-neutral float-left" title="Styles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting/index.html" class="btn btn-neutral float-left" title="Tooling and Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../controls/index.html" class="btn btn-neutral float-right" title="Controls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -145,7 +191,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

@@ -168,6 +168,7 @@
 <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-url-utils-1a05fe831800e96cc5ac5119e87ff965d2"><span class="std std-ref">stripSlashes</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">);</span>
 <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-url-utils-1a00a70db628a19590021d82a4c97bb426"><span class="std std-ref">toParentPath</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">);</span>
 <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-url-utils-1a2282f38c8c2ecbc93fcfbbb407fb6731"><span class="std std-ref">extractName</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="#doxid-namespace-c-c-l-1-1-url-utils-1ae13ea6d172f156fd912d0cb5414e4808"><span class="std std-ref">isCanonicalAbsolutePath</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">);</span>
 
 <span class="p">}</span> <span class="c1">// namespace UrlUtils</span></pre>
 </section>
@@ -199,6 +200,8 @@
 <p>get path to parent folder</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-url-utils-1a2282f38c8c2ecbc93fcfbbb407fb6731"><span id="index-12"></span><a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="n">extractName</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">)</span></pre>
 <p>extract file/folder name from path</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespace-c-c-l-1-1-url-utils-1ae13ea6d172f156fd912d0cb5414e4808"><span id="index-13"></span><a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">isCanonicalAbsolutePath</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">path</span><span class="p">)</span></pre>
+<p>check if a path is absolute, i.e. starts at root or with a drive letter</p>
 </section>
 </section>
 </section>
@@ -215,7 +218,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

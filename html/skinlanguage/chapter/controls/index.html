@@ -23,7 +23,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Layout" href="../layouts/index.html" />
+    <link rel="next" title="Styles" href="../styles/index.html" />
     <link rel="prev" title="Forms" href="../forms/index.html" />
     <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -58,13 +58,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Controls</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#putting-it-together">Putting It Together</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#control-rendering">Control Rendering</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
@@ -112,11 +115,35 @@
   <section id="controls">
 <h1>Controls<a class="headerlink" href="#controls" title="Link to this heading"></a></h1>
 <p>The CCL framework provides a rich set of standard control types like buttons, check boxes, text edits, etc. as well as more complex controls like list views and tree views. Please see the reference section for a complete list of supported controls.</p>
-<p>The colors, bitmaps, fonts, etc. that make up the appearance of a control on screen can be defined separately as <a class="reference internal" href="../styles/index.html#visual-styles"><span class="std std-ref">visual styles</span></a>. This concept borrows some aspects from CSS used in HTML rendering. A visual style is defined once and can be shared among multiple controls. Additionally, controls provide special options for their behavior on a per-instance basis.</p>
+<p>The colors, images, fonts, etc. that make up the appearance of a control on screen can be defined separately as <a class="reference internal" href="../styles/index.html#visual-styles"><span class="std std-ref">visual styles</span></a>, covered in the next chapter. Additionally, controls provide special options for their behavior on a per-instance basis.</p>
 <p>Controls described in the skin XML definition are bound to parameters provided by the underlying component tree. This separates the graphical representation from the controller logic in the code behind. The parameter concept allows multiple controls to connect to the same parameter and it updates all representations automatically without further coding. For example, a parameter can be attached to a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>&gt; and a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>&gt; at the same time.</p>
+<section id="putting-it-together">
+<h2>Putting It Together<a class="headerlink" href="#putting-it-together" title="Link to this heading"></a></h2>
+<p>The pieces covered so far - forms, controls, parameter binding, and styles - come together like this:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SettingsCheckBox&quot;</span><span class="w"> </span><span class="na">inherit=</span><span class="s">&quot;Standard.CheckBox&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Color</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;textcolor&quot;</span><span class="w"> </span><span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+
+<span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SettingsPanel&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Vertical</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Settings&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;CheckBox</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;enabled&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Enable feature&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;SettingsCheckBox&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Vertical&gt;</span>
+<span class="nt">&lt;/Form&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Style</span> <span class="pre">name=&quot;SettingsCheckBox&quot;</span> <span class="pre">inherit=&quot;Standard.CheckBox&quot;&gt;</span></code> - a custom style that inherits from the default check box style and overrides its text color, see <a class="reference internal" href="../styles/index.html#visual-styles"><span class="std std-ref">Styles</span></a>.</p></li>
+<li><p>&lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-form"><span class="std std-ref">Form</span></a>&gt; - the top-level container for this piece of UI, see <a class="reference internal" href="../forms/index.html"><span class="doc">Forms</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Vertical</span> <span class="pre">attach=&quot;all&quot;&gt;</span></code> - a layout container that fills its parent and stacks its children top to bottom, see <a class="reference internal" href="../layouts/index.html"><span class="doc">Layout</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Label</span> <span class="pre">title=&quot;Settings&quot;/&gt;</span></code> - static text; there is nothing to bind, since it doesn’t represent a value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;CheckBox</span> <span class="pre">name=&quot;enabled&quot;</span> <span class="pre">title=&quot;Enable</span> <span class="pre">feature&quot;</span> <span class="pre">style=&quot;SettingsCheckBox&quot;/&gt;</span></code> - a control bound to a parameter called “enabled” on the form’s current controller (see <a class="reference internal" href="../forms/index.html#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a>), labeled via <code class="docutils literal notranslate"><span class="pre">title</span></code>, and styled by the custom style defined above.</p></li>
+</ul>
+<p>If the current controller doesn’t actually expose an “enabled” parameter, the check box still renders - it just won’t do anything, and a warning shows up in the ways described in <a class="reference internal" href="../troubleshooting/index.html#skin-troubleshooting"><span class="std std-ref">Tooling and Troubleshooting</span></a>.</p>
+</section>
 <section id="control-rendering">
 <h2>Control Rendering<a class="headerlink" href="#control-rendering" title="Link to this heading"></a></h2>
-<p>In general, controls are updated on screen within the paint interval of a window provided by the operating system. The whole view tree is redrawn in an optimized way, where only areas which have been previously invalidated are actually updated. Invalidation is usually caused by parameter changes emited by the underlying component tree.</p>
+<p>In general, controls are updated on screen within the paint interval of a window provided by the operating system. The whole view tree is redrawn in an optimized way, where only areas which have been previously invalidated are actually updated. Invalidation is usually caused by parameter changes emitted by the underlying component tree.</p>
 <p>There are scenarios where bypassing the regular paint interval results in better performance, e.g. when animated controls need to update very fast. This mechanism is called “direct update”. Only the rectangular region of a single control is updated at a time, without checking the whole view tree for invalidated regions. For direct update to work correctly controls must not overlap and they must be able to redraw their background completely opaque. To use alpha-transparency with directly updated controls an option for background composition can be set, where the control takes the background bitmap underneath in the nesting tree to redraw its background.</p>
 <p>Some controls can be set to transparent, which means they react on mouse or keyboard input but do not render anything on screen.</p>
 </section>
@@ -127,14 +154,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../forms/index.html" class="btn btn-neutral float-left" title="Forms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../layouts/index.html" class="btn btn-neutral float-right" title="Layout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../styles/index.html" class="btn btn-neutral float-right" title="Styles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

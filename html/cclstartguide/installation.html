@@ -58,6 +58,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#installation-on-macos">Installation on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-on-linux">Installation on Linux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-for-android-development">Installation for Android development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-for-webassembly-development">Installation for WebAssembly development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="javascriptdebugging.html">JavaScript Debugging</a></li>
@@ -130,7 +131,7 @@ tar<span class="w"> </span>-xzf<span class="w"> </span><span class="nv">$HOME</s
 </section>
 <section id="installation-on-linux">
 <h2>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Link to this heading"></a></h2>
-<p>CCL is being developed and tested on Ubuntu 24.04. It is compatible with Ubuntu 22.04 as well, although some features may be disabled due to missing dependencies. In general, it should be possible to build CCL on any Linux distribution with reasonably up-to-date packages and Wayland support.</p>
+<p>CCL is being developed and tested on Ubuntu 26.04. It is compatible with Ubuntu 22.04 and 24.04 as well, although some features may be disabled due to missing dependencies. In general, it should be possible to build CCL on any Linux distribution with reasonably up-to-date packages and Wayland support.</p>
 <p>CMake presets shipped with CCL use <code class="docutils literal notranslate"><span class="pre">ninja</span></code> and <code class="docutils literal notranslate"><span class="pre">clang</span></code>. Building with a different build system (e.g. <code class="docutils literal notranslate"><span class="pre">make</span></code>) or a different compiler (e.g. <code class="docutils literal notranslate"><span class="pre">gcc</span></code>) is possible, but requires some customization or additional command line arguments when running <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p>
 <p>To install the CCL SDK, download and run the shell installer:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>CCL<span class="se">\ </span>SDK-&lt;version&gt;-Linux.sh
@@ -235,6 +236,24 @@ sudo<span class="w"> </span>./CCL<span class="se">\ </span>SDK-&lt;version&gt;-L
 <p>IDE heap size must be configured to at least 4096 MB in Android Studio’s memory settings.</p>
 <p>To build on the command line, you will need to install the Gradle build tool on the host system. The recommended version as of this writing is Gradle 9.2.0.</p>
 </section>
+<section id="installation-for-webassembly-development">
+<h2>Installation for WebAssembly development<a class="headerlink" href="#installation-for-webassembly-development" title="Link to this heading"></a></h2>
+<p>The Emscripten SDK is required for building WebAssembly apps.</p>
+<p><a class="reference external" href="https://emscripten.org/docs/introducing_emscripten/about_emscripten.html">About Emscripten</a></p>
+<p>At the time of writing, version 4.0.22 is the latest version that is compatible with CCL’s dependencies.</p>
+<p>Clone the SDK from <code class="docutils literal notranslate"><span class="pre">github.com:emscripten-core/emsdk</span></code>, checkout tag 4.0.22, then run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./emsdk<span class="w"> </span>install<span class="w"> </span>latest
+./emsdk<span class="w"> </span>activate<span class="w"> </span>latest
+</pre></div>
+</div>
+<p>In addition, the following tools are required and expected to be found in PATH:</p>
+<ul class="simple">
+<li><p>ninja</p></li>
+<li><p>glslc</p></li>
+<li><p>python</p></li>
+<li><p>sed</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -249,7 +268,7 @@ sudo<span class="w"> </span>./CCL<span class="se">\ </span>SDK-&lt;version&gt;-L
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

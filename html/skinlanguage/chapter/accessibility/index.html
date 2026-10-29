@@ -58,14 +58,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Accessibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#title">Title</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#relations">Relations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-exposing-a-one-shot-action-as-a-button">Toggle: exposing a one-shot action as a Button</a></li>
 </ul>
 </li>
 </ul>
@@ -115,6 +119,29 @@
 <p>All elements defined in Skin XML are accessible by default. The <code class="docutils literal notranslate"><span class="pre">accessibility</span></code> attribute can be used to disable accessibility support per element.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">title</span></code> of a skin element is used as the readable name or title of the user interface element.
 If the <code class="docutils literal notranslate"><span class="pre">title</span></code> is not set, the element’s <code class="docutils literal notranslate"><span class="pre">tooltip</span></code> is used instead.</p>
+<section id="title">
+<h2>Title<a class="headerlink" href="#title" title="Link to this heading"></a></h2>
+<p>Some elements display a title that shouldn’t be used for accessibility tools.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">accessibility.title</span></code> attribute overrides the title announced by accessibility tools, without any
+effect on what the element displays:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Title&quot;</span><span class="w"> </span><span class="na">tooltip=</span><span class="s">&quot;Tooltip&quot;</span><span class="w"> </span><span class="na">accessibility.title=</span><span class="s">&quot;The Title&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>To avoid duplicated text, the attribute may contain the same <code class="docutils literal notranslate"><span class="pre">&#64;keyword[argument]</span></code> text variables as
+a <code class="docutils literal notranslate"><span class="pre">tooltip</span></code>, including <code class="docutils literal notranslate"><span class="pre">&#64;title[]</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;tooltip[]</span></code> for the element’s own title and composed
+tooltip:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Title&quot;</span><span class="w"> </span><span class="na">tooltip=</span><span class="s">&quot;The Title&quot;</span><span class="w"> </span><span class="na">accessibility.title=</span><span class="s">&quot;@tooltip[]&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>The resulting order of precedence for the announced title is <code class="docutils literal notranslate"><span class="pre">accessibility.title</span></code>, the
+<code class="docutils literal notranslate"><span class="pre">accessibility.label</span></code> relation, <code class="docutils literal notranslate"><span class="pre">title</span></code>, and finally <code class="docutils literal notranslate"><span class="pre">tooltip</span></code>. If the resolved
+<code class="docutils literal notranslate"><span class="pre">accessibility.title</span></code> is empty, the element falls back to that default title.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">accessibility.proxy</span></code> the title is taken from the proxied element, so
+<code class="docutils literal notranslate"><span class="pre">accessibility.title</span></code> belongs on the proxied element rather than on the proxying one.</p>
+</div>
+</section>
 <section id="relations">
 <h2>Relations<a class="headerlink" href="#relations" title="Link to this heading"></a></h2>
 <p>In some cases, multiple skin elements are logically related to each other.</p>
@@ -147,6 +174,19 @@ In this case, accessibility tools should be informed that the Label’s title ca
 </tbody>
 </table>
 </section>
+<section id="toggle-exposing-a-one-shot-action-as-a-button">
+<h2>Toggle: exposing a one-shot action as a Button<a class="headerlink" href="#toggle-exposing-a-one-shot-action-as-a-button" title="Link to this heading"></a></h2>
+<p>A &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-toggle"><span class="std std-ref">Toggle</span></a>&gt; exposes “adjustable” and “toggle” capabilities to accessibility tools, in addition
+to being reported as a button. This is correct for a persistent on/off switch, but misleading for a
+one-shot action (e.g. entering or leaving a mode) where the element disappears or is replaced afterward.</p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">accessibility.button=&quot;true&quot;</span></code> on such a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-toggle"><span class="std std-ref">Toggle</span></a>&gt; to expose it as a plain button instead.
+The toggle itself and its interaction with the parameter stay exactly as authored; only what
+accessibility tools are told about it changes.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;editMode&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Enter Edit Mode&quot;</span><span class="w"> </span><span class="na">accessibility.button=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
@@ -161,7 +201,7 @@ In this case, accessibility tools should be informed that the Label’s title ca
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

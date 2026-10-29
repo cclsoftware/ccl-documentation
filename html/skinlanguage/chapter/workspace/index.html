@@ -58,10 +58,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Workspaces</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
@@ -114,6 +116,10 @@
              
   <section id="workspaces">
 <h1>Workspaces<a class="headerlink" href="#workspaces" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is application-level window management - multiple windows, panels, and switchable layouts. If you’re just placing controls on a single form, you don’t need any of this; it only matters once an app has to arrange several windows or let the user switch between layouts.</p>
+</div>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>Workspaces allow structuring the UI of an application in a flexible way.</p>
@@ -149,8 +155,8 @@ It can have an optional command (specified by category and name) for toggling th
 </pre></div>
 </div>
 <p>The window manager of the application maintains a parameter for each window class that reflects the
-open/closed state of the window class. It can be used to toggle it.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://WindowManager/MyClass&quot;</span><span class="nt">/&gt;</span>
+open/closed state of the window class. It can be used to toggle it (see <a class="reference internal" href="../forms/index.html#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a> for the <code class="docutils literal notranslate"><span class="pre">://</span></code> path syntax).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Toggle</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;object://WindowManager/MyClass&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -161,7 +167,6 @@ Frames with a “groups” attribute contain the actual content. They can be eit
 The “groups” attribute is a list of group names from window classes, separated by spaces. It specifies which window classes can appear in the frame.</p>
 <p>Complex arrangements can be built with horizontal or vertical frame groups, which will create a layout container for their contained frames.
 An empty frame (or a frame group with only empty frames) collapses to an empty size, so it doesn’t take any space in the perspective.</p>
-<p>When the application wants to open a window class</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Perspective</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyPerspective&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- layout group --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyFrame1&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
@@ -173,7 +178,7 @@ An empty frame (or a frame group with only empty frames) collapses to an empty s
 <section id="popup-frame">
 <h3>Popup Frame<a class="headerlink" href="#popup-frame" title="Link to this heading"></a></h3>
 <p>A frame with the option “popup” opens in a separate floating popup window (not in the frame structure of the perspective view tree).
-Workspaces often have a least one “popup multiple” frame as target for all floating window content.
+Workspaces often have at least one “popup multiple” frame as target for all floating window content.
 “multiple” here means that each matching window class will open in a new window, instead of replacing content in the existing popup window.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;popup multiple&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Popups&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;Popups&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- --&gt;</span>
 <span class="nt">&lt;Frame</span><span class="w"> </span><span class="na">options=</span><span class="s">&quot;popup&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Song.Popups&quot;</span><span class="w"> </span><span class="na">groups=</span><span class="s">&quot;Song.Popups&quot;</span><span class="nt">/&gt;</span>
@@ -184,14 +189,14 @@ Workspaces often have a least one “popup multiple” frame as target for all f
 <h3>Detached Frame<a class="headerlink" href="#detached-frame" title="Link to this heading"></a></h3>
 <p>A frame with the options “popup detached” is a target for detaching a window class.
 This can be used for a window class that appears in a frame of the regular perspective view tree by default, but can optionally be detached into a separate window.
-The workspace maintains the detached state and uses it to determine if  the window class content should appear in a regular frame or in a detached window.</p>
+The workspace maintains the detached state and uses it to determine if the window class content should appear in a regular frame or in a detached window.</p>
 </section>
 <section id="embedded-frame">
 <h3>Embedded Frame<a class="headerlink" href="#embedded-frame" title="Link to this heading"></a></h3>
 <p>An embedded frame defines a sub tree of frames that can appear in the form of a parent class.
-The <a href="#id1"><span class="problematic" id="id2">|xml.class.EmbeddedFrame|</span></a> element must appear in two places: placed inside the form of a “parent” window class
+The &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-embeddedframe"><span class="std std-ref">EmbeddedFrame</span></a>&gt; element must appear in two places: placed inside the form of a “parent” window class
 and placed in the root frame of a perspective with the same name and a parent class. It defines a separate subtree of frames.</p>
-<p>When a window class is about to be opened, the workspace system ensures that the parent class, whose view contains the EmbeddeFrame view gets opened first.</p>
+<p>When a window class is about to be opened, the workspace system ensures that the parent class, whose view contains the EmbeddedFrame view, gets opened first.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- inside form of parent window --&gt;</span>
 <span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyParentForm&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- ... --&gt;</span>
@@ -219,7 +224,7 @@ In a form description, these parameters can be addressed via the “CustomParams
 <span class="nt">&lt;/Perspective&gt;</span>
 
 <span class="cm">&lt;!-- address via &quot;CustomParams&quot; controller of a perspective: --&gt;</span>
-<span class="nt">&lt;Divider</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;://Workspace/myWorkspaceID/MyPerspective/CustomParams/myParam&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Divider</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;object://Workspace/myWorkspaceID/MyPerspective/CustomParams/myParam&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -230,7 +235,7 @@ In a form description, these parameters can be addressed via the “CustomParams
 The view tree created by the currently selected perspective will be inserted into the PerspectiveContainer.</p>
 <section id="application-workspace">
 <h3>Application Workspace<a class="headerlink" href="#application-workspace" title="Link to this heading"></a></h3>
-<p>An application skin can have multiple workspaces. If a workspace with the applicationID exists, it used as application workspace that provides the content of the main application window.
+<p>An application skin can have multiple workspaces. If a workspace with the applicationID exists, it is used as application workspace that provides the content of the main application window.
 The framework then automatically creates a PerspectiveContainer view for it that fills the application window.
 To customize this, the application skin can define a form “ApplicationWindow” that must contain a view called “PerspectiveContainer” (and optionally adds other elements like decors).</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ApplicationWindow&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;Workspace&quot;</span><span class="w"> </span><span class="na">windowstyle=</span><span class="s">&quot;titlebar sizable restoresize restorepos&quot;</span><span class="nt">&gt;</span>
@@ -241,9 +246,9 @@ To customize this, the application skin can define a form “ApplicationWindow�
 </section>
 <section id="other-workspaces">
 <h3>Other Workspaces<a class="headerlink" href="#other-workspaces" title="Link to this heading"></a></h3>
-<p>To show the content of another workspace, we can reference the workspace as controller and let it create its PerspectiveContainer:</p>
+<p>To show the content of another workspace, reference it as controller and let it create its PerspectiveContainer:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Form</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SomeForm&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;://Workspace/MyWorkspace&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;using</span><span class="w"> </span><span class="na">controller=</span><span class="s">&quot;object://Workspace/MyWorkspace&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PerspectiveContainer&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;0,0,1024,720&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;all&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/using&gt;</span>
 <span class="nt">&lt;/Form&gt;</span>
@@ -265,7 +270,7 @@ To customize this, the application skin can define a form “ApplicationWindow�
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

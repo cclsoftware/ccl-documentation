@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum CCL::IParameter::Type" href="enum_CCL_IParameter_Type.html" />
+    <link rel="next" title="enum CCL::IParameter::TitleFlags" href="enum_CCL_IParameter_TitleFlags.html" />
     <link rel="prev" title="struct CCL::IParameter" href="struct_CCL_IParameter.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -126,22 +126,25 @@
 
 <span class="k">enum</span> <span class="n">Flags</span>
 <span class="p">{</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa887da7e5fe3380d6679bba216ab8d894"><span class="std std-ref">kSignalFirst</span></a><span></span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa981643c9c104b3a5a91c25095ace1ce6"><span class="std std-ref">kSignalAlways</span></a><span></span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa9e0aec247f41c4419ecfdd390cbd161d"><span class="std std-ref">kBipolar</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab2f4a7328b68dea8397e70b5985d30bb"><span class="std std-ref">kReverse</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">4</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa3176fd3562cdcb9ba03f4b4d352a53c7"><span class="std std-ref">kOutOfRange</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">5</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa0a3b9aadec38be5f852c6938f546c89"><span class="std std-ref">kWrapAround</span></a><span></span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">6</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab68c722654d73e7bcac45f146155dfac"><span class="std std-ref">kStorable</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">7</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fae6ab5ec263112c435f4a767288135ea5"><span class="std std-ref">kStoreListValue</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fabaa905fb59ed74ad59011287d74ccab5"><span class="std std-ref">kGroupable</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">9</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa99a5f150fdb2ab30c78d43285448097"><span class="std std-ref">kPublic</span></a><span></span>         <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">10</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa8c41444c814acebdcb80a67cbd47f7eb"><span class="std std-ref">kMutable</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">11</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa0c4a91fdb0f8ebcf327ba8cafa6c3c19"><span class="std std-ref">kReadOnly</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">12</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac9be775c75d3e7536aea916face69af8"><span class="std std-ref">kIsEditing</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">13</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac31ee84737b13fc605891f323cee7f71"><span class="std std-ref">kFeedback</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">14</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c6cb178601b7f0399c713dab229d08c"><span class="std std-ref">kPriorityChange</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">15</span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c2250ff641e5c1d7501ca1dd729059a"><span class="std std-ref">kCanUndo</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="mi">16</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa887da7e5fe3380d6679bba216ab8d894"><span></span><span class="n">kSignalFirst</span></span><span></span>    <span class="o">=</span> <span class="n">kParamBehaviorSignalFirst</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa981643c9c104b3a5a91c25095ace1ce6"><span></span><span class="n">kSignalAlways</span></span><span></span>   <span class="o">=</span> <span class="n">kParamBehaviorSignalAlways</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa9e0aec247f41c4419ecfdd390cbd161d"><span></span><span class="n">kBipolar</span></span><span></span>        <span class="o">=</span> <span class="n">kParamBehaviorBipolar</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab2f4a7328b68dea8397e70b5985d30bb"><span></span><span class="n">kReverse</span></span><span></span>        <span class="o">=</span> <span class="n">kParamBehaviorReverse</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa3176fd3562cdcb9ba03f4b4d352a53c7"><span></span><span class="n">kOutOfRange</span></span><span></span>     <span class="o">=</span> <span class="n">kParamBehaviorOutOfRange</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa0a3b9aadec38be5f852c6938f546c89"><span></span><span class="n">kWrapAround</span></span><span></span>     <span class="o">=</span> <span class="n">kParamBehaviorWrapAround</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab68c722654d73e7bcac45f146155dfac"><span></span><span class="n">kStorable</span></span><span></span>       <span class="o">=</span> <span class="n">kParamSemanticStorable</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fae6ab5ec263112c435f4a767288135ea5"><span></span><span class="n">kStoreListValue</span></span><span></span> <span class="o">=</span> <span class="n">kParamSemanticListValue</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fabaa905fb59ed74ad59011287d74ccab5"><span></span><span class="n">kGroupable</span></span><span></span>      <span class="o">=</span> <span class="n">kParamSemanticGroupable</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa99a5f150fdb2ab30c78d43285448097"><span></span><span class="n">kPublic</span></span><span></span>         <span class="o">=</span> <span class="n">kParamSemanticPublic</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa8c41444c814acebdcb80a67cbd47f7eb"><span></span><span class="n">kMutable</span></span><span></span>        <span class="o">=</span> <span class="n">kParamSemanticMutable</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa0c4a91fdb0f8ebcf327ba8cafa6c3c19"><span></span><span class="n">kReadOnly</span></span><span></span>       <span class="o">=</span> <span class="n">kParamSemanticReadOnly</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faf16b0a81d38059ca25b77fdbdf957a1c"><span></span><span class="n">kUser1</span></span><span></span>          <span class="o">=</span> <span class="n">kParamUserFlag1</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa2d3ba7887c5ce38631c851098f57bc12"><span></span><span class="n">kUser2</span></span><span></span>          <span class="o">=</span> <span class="n">kParamUserFlag2</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa449f761579a15715116cd15a21bccd55"><span></span><span class="n">kUser3</span></span><span></span>          <span class="o">=</span> <span class="n">kParamUserFlag3</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac9be775c75d3e7536aea916face69af8"><span class="std std-ref">kIsEditing</span></a><span></span>      <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">kLastParameterFlag</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac31ee84737b13fc605891f323cee7f71"><span class="std std-ref">kFeedback</span></a><span></span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">kLastParameterFlag</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c6cb178601b7f0399c713dab229d08c"><span class="std std-ref">kPriorityChange</span></a><span></span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">kLastParameterFlag</span><span class="o">+</span><span class="mi">3</span><span class="p">),</span>
+    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c2250ff641e5c1d7501ca1dd729059a"><span class="std std-ref">kCanUndo</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">kLastParameterFlag</span><span class="o">+</span><span class="mi">4</span><span class="p">),</span>
 <span class="p">};</span></pre>
 </section>
 <section id="detailed-documentation">
@@ -149,37 +152,13 @@
 <p><a class="reference internal" href="class_CCL_Parameter.html#doxid-class-c-c-l-1-1-parameter"><span class="std std-ref">Parameter</span></a> flags.</p>
 <section id="enum-values">
 <h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa887da7e5fe3380d6679bba216ab8d894"><span id="index-1"></span><span></span><span class="n">kSignalFirst</span></pre>
-<p>signal with old and with new value</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa981643c9c104b3a5a91c25095ace1ce6"><span id="index-2"></span><span></span><span class="n">kSignalAlways</span></pre>
-<p>signal when setValue is called with current value</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa9e0aec247f41c4419ecfdd390cbd161d"><span id="index-3"></span><span></span><span class="n">kBipolar</span></pre>
-<p>parameter is bipolar, the center is defined by (max-min)/2</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab2f4a7328b68dea8397e70b5985d30bb"><span id="index-4"></span><span></span><span class="n">kReverse</span></pre>
-<p>parameter is reverse, display should be upside down</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa3176fd3562cdcb9ba03f4b4d352a53c7"><span id="index-5"></span><span></span><span class="n">kOutOfRange</span></pre>
-<p>parameter value is out of range</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa0a3b9aadec38be5f852c6938f546c89"><span id="index-6"></span><span></span><span class="n">kWrapAround</span></pre>
-<p>parameter increment/decrement does not stop at min/max</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fab68c722654d73e7bcac45f146155dfac"><span id="index-7"></span><span></span><span class="n">kStorable</span></pre>
-<p>parameter is storable</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fae6ab5ec263112c435f4a767288135ea5"><span id="index-8"></span><span></span><span class="n">kStoreListValue</span></pre>
-<p>store selected list value instead of list index</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fabaa905fb59ed74ad59011287d74ccab5"><span id="index-9"></span><span></span><span class="n">kGroupable</span></pre>
-<p>parameter can be grouped</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295faa99a5f150fdb2ab30c78d43285448097"><span id="index-10"></span><span></span><span class="n">kPublic</span></pre>
-<p>parameter is public</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa8c41444c814acebdcb80a67cbd47f7eb"><span id="index-11"></span><span></span><span class="n">kMutable</span></pre>
-<p>parameter is mutable (min/max, list entries can change)</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa0c4a91fdb0f8ebcf327ba8cafa6c3c19"><span id="index-12"></span><span></span><span class="n">kReadOnly</span></pre>
-<p>parameter is used for display purposes only, no editing</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac9be775c75d3e7536aea916face69af8"><span id="index-13"></span><span></span><span class="n">kIsEditing</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac9be775c75d3e7536aea916face69af8"><span id="index-1"></span><span></span><span class="n">kIsEditing</span></pre>
 <p>reserved for controller to store edit state</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac31ee84737b13fc605891f323cee7f71"><span id="index-14"></span><span></span><span class="n">kFeedback</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fac31ee84737b13fc605891f323cee7f71"><span id="index-2"></span><span></span><span class="n">kFeedback</span></pre>
 <p>controller wants notify() calls as well</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c6cb178601b7f0399c713dab229d08c"><span id="index-15"></span><span></span><span class="n">kPriorityChange</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c6cb178601b7f0399c713dab229d08c"><span id="index-3"></span><span></span><span class="n">kPriorityChange</span></pre>
 <p>priority change pending</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c2250ff641e5c1d7501ca1dd729059a"><span id="index-16"></span><span></span><span class="n">kCanUndo</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1aa705cf7e79a21c2352b00ffe20cd295fa5c2250ff641e5c1d7501ca1dd729059a"><span id="index-4"></span><span></span><span class="n">kCanUndo</span></pre>
 <p>parameter changes can be undone</p>
 </section>
 </section>
@@ -190,14 +169,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="struct_CCL_IParameter.html" class="btn btn-neutral float-left" title="struct CCL::IParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_CCL_IParameter_Type.html" class="btn btn-neutral float-right" title="enum CCL::IParameter::Type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_IParameter_TitleFlags.html" class="btn btn-neutral float-right" title="enum CCL::IParameter::TitleFlags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

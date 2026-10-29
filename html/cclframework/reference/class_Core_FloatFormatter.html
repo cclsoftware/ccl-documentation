@@ -143,15 +143,35 @@
 <span class="k">class</span> <span class="nl">FloatFormatter</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Formatter.html#doxid-class-core-1-1-formatter"><span class="std std-ref">Core::Formatter</span></a><span></span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="kt">char</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1a91b6573633ce9fee107648b59ab05b7b"><span></span><span class="n">FormatString</span></span><span></span><span class="p">[</span><span class="n">kFormatSize</span><span class="p">];</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1ad319624496d71669e6ac672c0d7ef74b"><span></span><span class="n">kDefaultDigits</span></span><span></span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1a2d57cab2eb3a93d54f30917fb8a7d32d"><span></span><span class="n">kFormatSize</span></span><span></span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1a22dde319d3e9348d49c991679ebd1427"><span></span><span class="n">FloatFormatter</span></span><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;float&quot;</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">label</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1a81f2d1cf95682a59840e83af0a42973a"><span></span><span class="n">FloatFormatter</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;float&quot;</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">numDecimalDigits</span> <span class="o">=</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter-1ad319624496d71669e6ac672c0d7ef74b"><span class="std std-ref">kDefaultDigits</span></a><span></span><span class="p">,</span>
+        <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">label</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">);</span>
 
     <span class="c1">// methods</span>
 
     <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter-1af971b347cc85c6926dc8a22af1d0cca5"><span class="std std-ref">print</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Formatter_Data.html#doxid-struct-core-1-1-formatter-1-1-data"><span class="std std-ref">Data</span></a><span></span><span class="o">&amp;</span> <span class="n">d</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
     <span class="k">virtual</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter-1a6349fe7e10f11a3f711e7a9db3f21711"><span class="std std-ref">scan</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/struct_Core_Formatter_Data.html#doxid-struct-core-1-1-formatter-1-1-data"><span class="std std-ref">Data</span></a><span></span><span class="o">&amp;</span> <span class="n">d</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
     <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="../../corelibrary/reference/class_Core_Formatter.html#doxid-class-core-1-1-formatter"><span class="std std-ref">Formatter</span></a><span></span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1a672d56e1f9f00cd75affad74b9f5eedb"><span></span><span class="n">instance</span></span><span></span> <span class="p">();</span>
+
+    <span class="k">static</span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-class-core-1-1-float-formatter-1ae573973ae6bb8303b774113af6c7d8ba"><span></span><span class="n">makeFormatString</span></span><span></span> <span class="p">(</span>
+        <a class="reference internal" href="../../corelibrary/reference/class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter-1a91b6573633ce9fee107648b59ab05b7b"><span class="std std-ref">FormatString</span></a><span></span> <span class="n">formatString</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">numDecimalDigits</span><span class="p">,</span>
+        <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">label</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span>
+    <span class="p">);</span>
+
     <span class="k">static</span> <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <a class="reference internal" href="../../corelibrary/reference/class_Core_FloatFormatter.html#doxid-class-core-1-1-float-formatter-1a09b95991cd1c951e867b0d7d39d29d02"><span class="std std-ref">getFloatValue</span></a><span></span> <span class="p">(</span><span class="kt">float</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> <a class="reference internal" href="../../corelibrary/reference/namespace_Core.html#doxid-namespace-core-1a93c3e70dd75d9a2239d6b6a4ce719b75"><span class="std std-ref">CStringPtr</span></a><span></span> <span class="n">string</span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
@@ -196,7 +216,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

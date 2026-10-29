@@ -173,9 +173,9 @@
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">argCount</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1a8b52c0c6a0b92c1fa8bcd194b1948369"><span class="std std-ref">registerGlobalFunction</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1ac6ef55ee15cbc575382fe964a8a08f0b"><span class="std std-ref">registerGlobalFunction</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">methodName</span><span class="p">,</span>
-        <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">CCL::IObject</span></a><span></span><span class="o">*</span> <span class="n">nativeObject</span>
+        <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">nativeObject</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1a994e1690b2aac8441e38113c0e550e89"><span class="std std-ref">executeScript</span></a><span></span> <span class="p">(</span>
@@ -223,9 +223,9 @@
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Create script object.</p>
 <p>For JavaScript, class name can be “Object”, “Array”, “Int8Array”, etc.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1a8b52c0c6a0b92c1fa8bcd194b1948369"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">registerGlobalFunction</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1ac6ef55ee15cbc575382fe964a8a08f0b"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">registerGlobalFunction</span> <span class="p">(</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a206ceb29311d566ad8d03d6c841e66b5"><span class="std std-ref">CStringRef</span></a><span></span> <span class="n">methodName</span><span class="p">,</span>
-    <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">CCL::IObject</span></a><span></span><span class="o">*</span> <span class="n">nativeObject</span>
+    <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">nativeObject</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Register object method as global function.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-i-context-1a994e1690b2aac8441e38113c0e550e89"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">executeScript</span> <span class="p">(</span>
@@ -260,7 +260,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

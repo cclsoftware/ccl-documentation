@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="struct CCL::IAnimationManager" href="struct_CCL_IAnimationManager.html" />
+    <link rel="next" title="enum CCL::IAnimationHandler::Options" href="enum_CCL_IAnimationHandler_Options.html" />
     <link rel="prev" title="struct CCL::IAnimationCompletionHandler" href="struct_CCL_IAnimationCompletionHandler.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -156,15 +156,21 @@
 
 <span class="k">struct</span> <span class="nl">IAnimationHandler</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="struct_CCL_IUnknown.html#doxid-struct-c-c-l-1-1-i-unknown"><span class="std std-ref">CCL::IUnknown</span></a><span></span>
 <span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_CCL_IAnimationHandler_Options.html#doxid-struct-c-c-l-1-1-i-animation-handler-1adf7c3ac791f996a56160a12f379cbd99"><span class="std std-ref">Options</span></a><span></span><span class="p">;</span>
+
     <span class="c1">// methods</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-animation-handler-1abf4c5a737e83b9e2419c009a3c177253"><span class="std std-ref">addAnimation</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-animation-handler-1a15403fe2d69dc39892b35f3104123ef1"><span class="std std-ref">addAnimation</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">,</span>
-        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">prototype</span>
+        <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">prototype</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">options</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-animation-handler-1a0bf9b9e8ba7f6bf557906ea3dcff49a5"><span class="std std-ref">removeAnimation</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-animation-handler-1ab980161ff8fbca5569a46f80cbe70089"><span class="std std-ref">removeTarget</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
@@ -180,15 +186,18 @@
 <span id="details-struct-c-c-l-1-1-i-animation-handler"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-animation-handler-1abf4c5a737e83b9e2419c009a3c177253"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">addAnimation</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-animation-handler-1a15403fe2d69dc39892b35f3104123ef1"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">addAnimation</span> <span class="p">(</span>
     <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">,</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">,</span>
-    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">prototype</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_CCL_IAnimation.html#doxid-struct-c-c-l-1-1-i-animation"><span class="std std-ref">IAnimation</span></a><span></span><span class="o">*</span> <span class="n">prototype</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">options</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Add animation for given target property.</p>
 <p>Animation object will be copied.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-animation-handler-1a0bf9b9e8ba7f6bf557906ea3dcff49a5"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">removeAnimation</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Remove animation for given target property.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-animation-handler-1ab980161ff8fbca5569a46f80cbe70089"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">removeTarget</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object"><span class="std std-ref">IObject</span></a><span></span><span class="o">*</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>Manually remove target.</p>
 </section>
 </section>
 </section>
@@ -198,14 +207,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="struct_CCL_IAnimationCompletionHandler.html" class="btn btn-neutral float-left" title="struct CCL::IAnimationCompletionHandler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_CCL_IAnimationManager.html" class="btn btn-neutral float-right" title="struct CCL::IAnimationManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_CCL_IAnimationHandler_Options.html" class="btn btn-neutral float-right" title="enum CCL::IAnimationHandler::Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

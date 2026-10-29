@@ -134,9 +134,15 @@
     <span class="c1">// methods</span>
 
     <span class="n">StringWriter</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1a7a8fe0c5a327c9a10d6cd1cb56f4cba8"><span></span><span class="n">append</span></span><span></span> <span class="p">(</span><span class="n">uchar</span> <span class="n">c</span><span class="p">);</span>
-    <span class="n">StringWriter</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1a91d32259251e15e730325bd567ecc6c8"><span></span><span class="n">append</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">wchar_t</span></a><span></span><span class="o">*</span> <span class="n">s</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">charCount</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">template</span>  <span class="o">&lt;</span><span class="k">typename</span> <span class="n">CharType</span><span class="o">&gt;</span>
+    <span class="n">StringWriter</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1a72a18225078feafb78a7d3b7e64cc976"><span></span><span class="n">append</span></span><span></span> <span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">CharType</span></a><span></span> <span class="n">s</span> <span class="p">[],</span>
+        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">charCount</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="p">);</span>
+
     <span class="n">StringWriter</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1a251dd1f925f96871c0bb11653afecfee"><span></span><span class="n">flush</span></span><span></span> <span class="p">();</span>
-    <span class="k">static</span> <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1ab948f138a10394a700c0d1d2c932204b"><span></span><span class="n">fromWideChars</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">wchar_t</span></a><span></span><span class="o">*</span> <span class="n">s</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">charCount</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-string-writer-1a1723087887424d5e4111865a8f6041a3"><span></span><span class="n">fromWideChars</span></span><span></span> <span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">wchar_t</span></a><span></span> <span class="n">s</span> <span class="p">[],</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">charCount</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -152,7 +158,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Workspaces" href="../workspace/index.html" />
-    <link rel="prev" title="Controls" href="../controls/index.html" />
+    <link rel="prev" title="Colors" href="../colors/index.html" />
     <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -58,10 +58,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Layout</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#anchor-layout">Anchor Layout</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#flexbox-layout">Flexbox Layout</a></li>
@@ -117,13 +119,17 @@
 <p>Each view can contain other views as child views. The coordinates of a child view are relative to the parent view. If a part of the child view exceeds the area of the parent view it is clipped.</p>
 <p>Views can be arranged responsively considering outer constraints like the available size within their parent and/or according to inner constrains like the required size to properly display their contents (e.g. a label containing text of a specific length).</p>
 <p>Two layout systems are supported, anchor layouts and a subset of the CSS Flexbox layout system.</p>
-<p>Both can be used side-by-side and nested withing the same view tree. For more information on interfacing between both systems, see chapter <a class="reference internal" href="#flexbox-anchor-interfacing"><span class="std std-ref">Interfacing between Flexbox and Anchor Layouts</span></a>.</p>
+<p>Both can be used side-by-side and nested within the same view tree. For more information on interfacing between both systems, see chapter <a class="reference internal" href="#flexbox-anchor-interfacing"><span class="std std-ref">Interfacing between Flexbox and Anchor Layouts</span></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code class="docutils literal notranslate"><span class="pre">attach=&quot;all&quot;</span></code> keeps a child view’s edges pinned to all four parent edges as the parent resizes - it does not set an initial size by itself. To make a child fill its parent, give it the same size as the parent (e.g. <code class="docutils literal notranslate"><span class="pre">size=&quot;0,0,1024,720&quot;</span></code>) and add <code class="docutils literal notranslate"><span class="pre">attach=&quot;all&quot;</span></code>; read on for finer control over individual edges.</p>
+</div>
 <section id="anchor-layout">
 <h2>Anchor Layout<a class="headerlink" href="#anchor-layout" title="Link to this heading"></a></h2>
-<p>By default, resizing a view doesn’t affect the size or relative position of it’s children. However, the “attach” attribute of a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-view"><span class="std std-ref">View</span></a>&gt; offers several options to define a certain relationship between positions and sizes of child and parent views.</p>
+<p>By default, resizing a view doesn’t affect the size or relative position of its children. However, the “attach” attribute of a &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-view"><span class="std std-ref">View</span></a>&gt; offers several options to define a certain relationship between positions and sizes of child and parent views.</p>
 <section id="basic-layout-of-views">
 <h3>Basic Layout of Views<a class="headerlink" href="#basic-layout-of-views" title="Link to this heading"></a></h3>
-<p>By specifying one or more of the four edge names “left, right, top, bottom” the respective edges of the child follow the corresponding parent edges. When the parent view is resized, the distance between an attached child edge and it’s corresponding parent edge stays fixed as long as possible within the current size limits.</p>
+<p>By specifying one or more of the four edge names “left, right, top, bottom” the respective edges of the child follow the corresponding parent edges. When the parent view is resized, the distance between an attached child edge and its corresponding parent edge stays fixed as long as possible within the current size limits.</p>
 </section>
 <section id="table-3-1-view-attach-examples">
 <h3>Table 3.1. View Attach Examples<a class="headerlink" href="#table-3-1-view-attach-examples" title="Link to this heading"></a></h3>
@@ -159,10 +165,10 @@
 <h3>Responsive Children and Alignment<a class="headerlink" href="#responsive-children-and-alignment" title="Link to this heading"></a></h3>
 <p>Within a tree of views there are in general two types of reaction to a change:</p>
 <ul class="simple">
-<li><p>Parents react to changes within their children e.g. a view suddenly has to provide more information and needs more space so the parent increases it’s size to fit all children</p></li>
-<li><p>Children react to changes within their parent e.g. the parent is restricted to a certain size, maybe due to a small screen, so it’s children have to adapt to the available space</p></li>
+<li><p>Parents react to changes within their children e.g. a view suddenly has to provide more information and needs more space so the parent increases its size to fit all children</p></li>
+<li><p>Children react to changes within their parent e.g. the parent is restricted to a certain size, maybe due to a small screen, so its children have to adapt to the available space</p></li>
 </ul>
-<p>In the latter case, the behaviour of “attach”  must not be confused with alignment, i.e. setting attach=”right” on all children of a view like</p>
+<p>In the latter case, the behaviour of “attach” must not be confused with alignment, i.e. setting attach=”right” on all children of a view like</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Vertical</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;400&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;left right&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;View0...</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;right&quot;</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;View1...</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;120&quot;</span><span class="w"> </span><span class="na">attach=</span><span class="s">&quot;right&quot;</span><span class="nt">/&gt;</span>
@@ -264,7 +270,7 @@
 <span class="w">                </span><span class="cm">&lt;!-- Same as before, but now the label should hug its contents</span>
 <span class="cm">                * The label will be aligned to the left hand side, since the inherited size</span>
 <span class="cm">                takes precedence over align=&quot;stretch&quot; --&gt;</span>
-<span class="w">                </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;A label hugging it&#39;s text&quot;</span><span class="w"> </span><span class="na">flex.sizemode=</span><span class="s">&quot;hug&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;A label hugging its text&quot;</span><span class="w"> </span><span class="na">flex.sizemode=</span><span class="s">&quot;hug&quot;</span><span class="nt">/&gt;</span>
 <span class="w">            </span><span class="nt">&lt;/Flexbox&gt;</span>
 <span class="w">        </span><span class="nt">&lt;/Form&gt;</span>
 
@@ -376,7 +382,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../controls/index.html" class="btn btn-neutral float-left" title="Controls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../colors/index.html" class="btn btn-neutral float-left" title="Colors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../workspace/index.html" class="btn btn-neutral float-right" title="Workspaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -384,7 +390,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

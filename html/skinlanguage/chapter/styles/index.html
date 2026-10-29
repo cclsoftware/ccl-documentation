@@ -23,8 +23,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Forms" href="../forms/index.html" />
-    <link rel="prev" title="Colors" href="../colors/index.html" />
+    <link rel="next" title="Render Atoms" href="../renderatoms/index.html" />
+    <link rel="prev" title="Controls" href="../controls/index.html" />
     <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -58,13 +58,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Styles</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#composite-styles">Composite Styles</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting/index.html">Tooling and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Styles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#advanced">Advanced</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
@@ -111,11 +113,15 @@
              
   <section id="styles">
 <span id="visual-styles"></span><h1>Styles<a class="headerlink" href="#styles" title="Link to this heading"></a></h1>
-<p>A key element defining the appearance of controls is a visual style. This concept borrows some aspects from CSS used in HTML rendering. A visual style is defined once and can be shared among multiple controls. When no specific style is given a default “Standard” style is used.
-(I.e. A button without an explicit style will use the “Standard.Button” style)</p>
+<p>A visual style is the key element defining the appearance of controls. This concept borrows some aspects from CSS used in HTML rendering. A visual style is defined once and can be shared among multiple controls. When no specific style is given a default “Standard” style is used.
+(e.g. a button without an explicit style will use the “Standard.Button” style)</p>
+<p>A style is a named collection of properties such as colors, fonts, and metrics, declared as child elements (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;Color</span> <span class="pre">name=&quot;textcolor&quot;</span> <span class="pre">.../&gt;</span></code>). See <a class="reference internal" href="../colors/index.html"><span class="doc">Colors</span></a> for the color value syntax.</p>
 <p>Instead of defining standard styles for every app - basic design packages can be imported. For a neutral cross-platform design these packages are <a class="reference internal" href="../package/index.html#neutralbase-and-neutraldesign"><span class="std std-ref">neutralbase and neutraldesign</span></a>.</p>
+<section id="advanced">
+<h2>Advanced<a class="headerlink" href="#advanced" title="Link to this heading"></a></h2>
+<p>Most styles are just a single named collection of properties, referenced directly by name - the following only matters once styles start combining or overriding each other.</p>
 <section id="composite-styles">
-<h2>Composite Styles<a class="headerlink" href="#composite-styles" title="Link to this heading"></a></h2>
+<h3>Composite Styles<a class="headerlink" href="#composite-styles" title="Link to this heading"></a></h3>
 <p>Composite styles (e.g. style=”a b”) are merged from the given styles in the order of appearance. (Later styles overwrite earlier ones). Inherited properties are always overwritten by direct properties. (i.e. if there is a style “a” derived from “A” and a style “b” derived from “B” and they appear in a style array in the order [a b], then B.x is overwritten by a.x even though a appears before b.) This is because the composite style [a b] is derived from another ad-hoc built composite style [A B].</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Style</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;A&quot;</span><span class="o">&gt;</span>
@@ -140,20 +146,21 @@
 </div>
 </section>
 </section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../colors/index.html" class="btn btn-neutral float-left" title="Colors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../forms/index.html" class="btn btn-neutral float-right" title="Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../controls/index.html" class="btn btn-neutral float-left" title="Controls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../renderatoms/index.html" class="btn btn-neutral float-right" title="Render Atoms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

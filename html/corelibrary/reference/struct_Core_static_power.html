@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template struct Core::static_power&lt;base, 0&gt; &mdash; CCL Cross-platform Framework Documentation</title>
+  <title>template struct Core::static_power &mdash; CCL Cross-platform Framework Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
@@ -23,7 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="template struct Core::static_power" href="struct_Core_static_power-2.html" />
+    <link rel="next" title="template struct Core::static_power&lt;base, 0&gt;" href="struct_Core_static_power-2.html" />
     <link rel="prev" title="template struct Core::static_min" href="struct_Core_static_min.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -114,7 +114,7 @@
           <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
           <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
           <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
-      <li class="breadcrumb-item active">template struct Core::static_power&lt;base, 0&gt;</li>
+      <li class="breadcrumb-item active">template struct Core::static_power</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -123,18 +123,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="template-struct-core-static-power-base-0">
-<span id="doxid-struct-core-1-1static-power-3-01base-00-010-01-4"></span><span id="index-0"></span><h1>template struct Core::static_power&lt;base, 0&gt;<a class="headerlink" href="#template-struct-core-static-power-base-0" title="Link to this heading"></a></h1>
+  <section id="template-struct-core-static-power">
+<span id="doxid-struct-core-1-1static-power"></span><span id="index-0"></span><h1>template struct Core::static_power<a class="headerlink" href="#template-struct-core-static-power" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<p>Calculates base^exponent at compile time.</p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coremath.h&gt;</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">base</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">static_power</span><span class="o">&lt;</span><span class="n">base</span><span class="p">,</span> <span class="mi">0</span><span class="o">&gt;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="n">int64</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponent</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">static_power</span>
 <span class="p">{</span>
     <span class="c1">// fields</span>
 
-    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1static-power-3-01base-00-010-01-4-1add505510582a0705f5e4b924e125020c"><span></span><span class="n">value</span></span><span></span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aecfc3c54bd29ad5964e1c1c3ccbf89df"><span class="std std-ref">int64</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-core-1-1static-power-1add505510582a0705f5e4b924e125020c"><span></span><span class="n">value</span></span><span></span> <span class="o">=</span> <span class="n">base</span><span class="o">*</span> <span class="n">static_power</span><span class="o">&lt;</span><span class="n">base</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">exponent</span></a><span></span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -143,14 +144,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="struct_Core_static_min.html" class="btn btn-neutral float-left" title="template struct Core::static_min" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_Core_static_power-2.html" class="btn btn-neutral float-right" title="template struct Core::static_power" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_Core_static_power-2.html" class="btn btn-neutral float-right" title="template struct Core::static_power&lt;base, 0&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

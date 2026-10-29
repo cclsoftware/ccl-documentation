@@ -150,6 +150,8 @@
 <span id="doxid-class-c-c-l-1-1-file-transfer-operation"></span><span id="index-0"></span><h1>class CCL::FileTransferOperation<a class="headerlink" href="#class-ccl-filetransferoperation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;fileoperations.h&gt;</span>
 
 <span class="k">class</span> <span class="nl">FileTransferOperation</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_CCL_BatchOperation.html#doxid-class-c-c-l-1-1-batch-operation"><span class="std std-ref">CCL::BatchOperation</span></a><span></span>
@@ -159,12 +161,22 @@
 
     <span class="k">enum</span> <a class="reference internal" href="enum_CCL_FileTransferOperation_TransferMode.html#doxid-class-c-c-l-1-1-file-transfer-operation-1ac6a3bd5749f031b948edd5a5dc74df55"><span class="std std-ref">TransferMode</span></a><span></span><span class="p">;</span>
 
+    <span class="c1">// fields</span>
+
+     <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-file-transfer-operation-1a0c35c96fa9efb0fad5fed2f56d0596ca"><span></span><span class="n">destFolder</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DestFolder</span></a><span></span> <a class="reference internal" href="class_CCL_Object.html#doxid-class-c-c-l-1-1-object"><span class="std std-ref">Object</span></a><span></span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-file-transfer-operation-1ae94611e01d916986668d69b521671ee9"><span></span><span class="n">userData</span></span><span></span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">);</span>
+
     <span class="c1">// construction</span>
 
     <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-file-transfer-operation-1acb7c3cb2c2a656e408f0c24ad1fe7b15"><span></span><span class="n">FileTransferOperation</span></span><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">transferMode</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_FileTransferOperation_TransferMode.html#doxid-class-c-c-l-1-1-file-transfer-operation-1ac6a3bd5749f031b948edd5a5dc74df55a0865c7cbf4cb78f3552f0b1c68d9ba83"><span class="std std-ref">kCopy</span></a><span></span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="#doxid-class-c-c-l-1-1-file-transfer-operation-1a1210c3189ee0058a1e77318d445e3ec6"><span class="std std-ref">PROPERTY_VARIABLE</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">transferMode</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_FileTransferOperation_TransferMode.html#doxid-class-c-c-l-1-1-file-transfer-operation-1ac6a3bd5749f031b948edd5a5dc74df55"><span class="std std-ref">TransferMode</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DestFolder</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-file-transfer-operation-1ac6df923f7784bb0a621c7ec9b1eb8b30"><span class="std std-ref">PROPERTY_BOOL</span></a><span></span> <span class="p">(</span><span class="n">silent</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Silent</span></a><span></span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
-<h2>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h2>
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
 <pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
     <span class="c1">// structs</span>
 
@@ -211,6 +223,17 @@
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">ModalProgress</span></a><span></span> <a class="reference internal" href="class_CCL_BatchOperation.html#doxid-class-c-c-l-1-1-batch-operation-1a3dd7534e38734216a7434cff7ea82e67"><span class="std std-ref">PROPERTY_STRING</span></a><span></span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">stepCountPattern</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">StepCountPattern</span></a><span></span><span class="p">);</span></pre>
 </section>
 </section>
+<section id="detailed-documentation">
+<span id="details-class-c-c-l-1-1-file-transfer-operation"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-file-transfer-operation-1a1210c3189ee0058a1e77318d445e3ec6"><span id="index-1"></span><span></span><span class="n">PROPERTY_VARIABLE</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">transferMode</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_FileTransferOperation_TransferMode.html#doxid-class-c-c-l-1-1-file-transfer-operation-1ac6a3bd5749f031b948edd5a5dc74df55"><span class="std std-ref">TransferMode</span></a><span></span><span class="p">)</span></pre>
+<p>configuration (must be done before adding files)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-file-transfer-operation-1ac6df923f7784bb0a621c7ec9b1eb8b30"><span id="index-2"></span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">DestFolder</span></a><span></span> <span class="n">PROPERTY_BOOL</span> <span class="p">(</span><span class="n">silent</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">Silent</span></a><span></span><span class="p">)</span></pre>
+<p>&lt; common destination folder for copy or move</p>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -224,7 +247,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

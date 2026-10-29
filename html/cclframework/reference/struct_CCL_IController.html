@@ -148,13 +148,13 @@
 <section id="detailed-documentation">
 <span id="details-struct-c-c-l-1-1-i-controller"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
 <p>A controller implements the backend logic for user interaction.</p>
-<p>It provides parameters and other objects used by GUI widgets.</p>
+<p>It provides parameters and other objects used by UI controls.</p>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-controller-1af0dd70a78eccce65edd3f58289ad3420"><span id="index-1"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> CCL_API<span></span> <span class="n">countParameters</span> <span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get number of parameters.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-controller-1a31edfd161578f2ccdbd04366c2bfed36"><span id="index-2"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IParameter.html#doxid-struct-c-c-l-1-1-i-parameter"><span class="std std-ref">IParameter</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getParameterAt</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
-<p>Get parameter by index.</p>
+<p>Get parameter at index.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-controller-1ab0280417dff216a0e025a60f21db70b7"><span id="index-3"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IParameter.html#doxid-struct-c-c-l-1-1-i-parameter"><span class="std std-ref">IParameter</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">findParameter</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a01e3920f73f1308c50057f855453c62f"><span class="std std-ref">StringID</span></a><span></span> <span class="n">name</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Get parameter by name.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-controller-1a7db287aba4c37558950191b8c601fcd5"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="struct_CCL_IParameter.html#doxid-struct-c-c-l-1-1-i-parameter"><span class="std std-ref">IParameter</span></a><span></span><span class="o">*</span>CCL_API<span></span> <span class="n">getParameterByTag</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">tag</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span></pre>
@@ -177,7 +177,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

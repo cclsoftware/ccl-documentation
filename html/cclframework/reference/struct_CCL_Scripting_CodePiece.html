@@ -160,15 +160,15 @@
 <span class="p">{</span>
     <span class="c1">// fields</span>
 
-    <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a2e787c4984233f5528439ebc746fe48c"><span class="std std-ref">code</span></a><span></span><span class="p">;</span>
+    <span class="n">UStringPtr</span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1ab4061df4f08a959d7da10d3ec1970748"><span class="std std-ref">code</span></a><span></span><span class="p">;</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a9f59b34b1f25fe00023291b678246bcc"><span class="std std-ref">length</span></a><span></span><span class="p">;</span>
     <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a3a5f56162810aa1e371620c4c18cc82a"><span class="std std-ref">fileName</span></a><span></span><span class="p">;</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a44bf2f6ee91a35522c07c779325d3ef0"><span class="std std-ref">lineNumber</span></a><span></span><span class="p">;</span>
 
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a7a0b90301dd28172dc97337c6fabfc85"><span></span><span class="n">CodePiece</span></span><span></span> <span class="p">(</span>
-        <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span> <span class="n">code</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a3518798da08f1de4335f091bf5e49a99"><span></span><span class="n">CodePiece</span></span><span></span> <span class="p">(</span>
+        <span class="n">UStringPtr</span> <span class="n">code</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">unsigned</span></a><span></span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1ad320823c69b1ca0765cac9648adfc907"><span class="std std-ref">StringRef</span></a><span></span> <span class="n">fileName</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-documentmanager-8cpp-1a99bdf674d91c716c5586d38320cc9161"><span class="std std-ref">nullptr</span></a><span></span><span class="p">,</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">lineNumber</span> <span class="o">=</span> <span class="mi">0</span>
@@ -180,7 +180,7 @@
 <p>Describes a piece of script code.</p>
 <section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a2e787c4984233f5528439ebc746fe48c"><span id="index-1"></span><span></span><span class="k">const</span> <span class="n">uchar</span><span class="o">*</span> <span class="n">code</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1ab4061df4f08a959d7da10d3ec1970748"><span id="index-1"></span><span></span><span class="n">UStringPtr</span> <span class="n">code</span></pre>
 <p>the actual script code</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-scripting-1-1-code-piece-1a9f59b34b1f25fe00023291b678246bcc"><span id="index-2"></span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">length</span></pre>
 <p>length in characters</p>
@@ -204,7 +204,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

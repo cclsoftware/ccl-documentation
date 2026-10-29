@@ -150,9 +150,9 @@
     <span class="k">virtual</span> <a class="reference internal" href="struct_CCL_ICrashReport.html#doxid-struct-c-c-l-1-1-i-crash-report"><span class="std std-ref">ICrashReport</span></a><span></span><span class="o">*</span>CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-safety-manager-1a271a0b6eb2ca7c380b6cb4cc5aea57d4"><span class="std std-ref">detectCrash</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-safety-manager-1a5973ef59fbba31ed2b39abc9b2859b1d"><span class="std std-ref">checkStability</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-safety-manager-1a7a2b89bf7d84589e56742e9d2f6013c3"><span class="std std-ref">reportException</span></a><span></span> <span class="p">(</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-safety-manager-1ae8694db07f3d3d5a97de89c3cbc757b6"><span class="std std-ref">reportException</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">exceptionInformation</span><span class="p">,</span>
-        <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span> <span class="n">systemDumpFile</span>
+        <span class="n">UStringPtr</span> <span class="n">systemDumpFile</span>
     <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-safety-manager-1ab9937ed0ac30a79ce37fef5c952b716a"><span class="std std-ref">handleException</span></a><span></span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -199,9 +199,9 @@
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-safety-manager-1a5973ef59fbba31ed2b39abc9b2859b1d"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">tresult</span></a><span></span> CCL_API<span></span> <span class="n">checkStability</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Check for unexpected behavior in the current process.</p>
 <p>To be called periodically.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-safety-manager-1a7a2b89bf7d84589e56742e9d2f6013c3"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">reportException</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-safety-manager-1ae8694db07f3d3d5a97de89c3cbc757b6"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> CCL_API<span></span> <span class="n">reportException</span> <span class="p">(</span>
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span><span class="o">*</span> <span class="n">exceptionInformation</span><span class="p">,</span>
-    <span class="k">const</span> <span class="n">uchar</span><span class="o">*</span> <span class="n">systemDumpFile</span>
+    <span class="n">UStringPtr</span> <span class="n">systemDumpFile</span>
 <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span></pre>
 <p>Report an exception.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-safety-manager-1ab9937ed0ac30a79ce37fef5c952b716a"><span id="index-13"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">handleException</span> <span class="p">()</span> <span class="o">=</span> <span class="mi">0</span></pre>
@@ -223,7 +223,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

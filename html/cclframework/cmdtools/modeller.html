@@ -114,7 +114,7 @@
              
   <section id="ccl-modeller">
 <h1>CCL Modeller<a class="headerlink" href="#ccl-modeller" title="Link to this heading"></a></h1>
-<p><em>This document refers to <a class="reference internal" href="#changelog-modeller"><span class="std std-ref">tool version 1.2.0</span></a></em>.</p>
+<p><em>This document refers to <a class="reference internal" href="#changelog-modeller"><span class="std std-ref">tool version 1.3.0</span></a></em>.</p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>The <em>CCL Modeller Tool</em> is a command line based utility tool that performs different tasks related to CCL type libraries and classmodel files.</p>
@@ -126,7 +126,7 @@
 </div>
 <p><strong>Arguments:</strong></p>
 <ul class="simple">
-<li><p><strong>[action]</strong>: one of [-list, -export, -scan, -update]</p></li>
+<li><p><strong>[action]</strong>: one of [-list, -export, -scan, -staticexport, -update]</p></li>
 <li><p><strong>arg1</strong>, <strong>arg2</strong>: action specific positional arguments</p></li>
 <li><p><strong>[-v]</strong>: print debug logs</p></li>
 </ul>
@@ -151,7 +151,21 @@
 <section id="scan">
 <h4>scan<a class="headerlink" href="#scan" title="Link to this heading"></a></h4>
 <p>Add source code documentation scanned from <em>sourcecode path</em> to <em>classmodel file</em>. Usage:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -scan &lt;sourcecode path&gt; &lt;classmodel file&gt;
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -scan &lt;sourcecode path&gt;[;&lt;sourcecode path&gt;...] &lt;classmodel file&gt;
+</pre></div>
+</div>
+<p><em>sourcecode path</em> can be a folder, a single source file, or a semicolon separated list of folders and files (quote the argument in Unix shells), which are scanned as one source tree (e.g. <code class="docutils literal notranslate"><span class="pre">#define</span></code> constants in one folder are resolved for documentation in another). Duplicate paths are ignored with a warning.</p>
+</section>
+<section id="staticexport">
+<h4>staticexport<a class="headerlink" href="#staticexport" title="Link to this heading"></a></h4>
+<p>Build a classmodel by statically scanning <em>sourcecode path</em> for CCL class declaration macros (<code class="docutils literal notranslate"><span class="pre">DEFINE_CLASS</span></code> and friends), without compiling or running the code. Usage:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -staticexport &lt;sourcecode path&gt;[;&lt;sourcecode path&gt;...] &lt;classmodel file&gt; [typelib=&lt;type library&gt;]
+</pre></div>
+</div>
+<p>Output <em>classmodel file</em> argument is optional. If not specified, the classmodel is exported to the working directory, named after the last path component of <em>sourcecode path</em> (the first one, if several are given; without extension for a file). Unlike <strong>export</strong>, this action does not require the code to be compiled and loaded into a running process - use it when the type library cannot be loaded into the modeller (e.g. cross-compiled targets, or code not yet integrated into a plugin). Use <strong>scan</strong> action afterwards to add documentation from source code.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">typelib</span></code> option is given, the action scans <em>sourcecode path</em> for a type library instead, building the classmodel from the entries of <em>type library</em> (e.g. <code class="docutils literal notranslate"><span class="pre">SKIN_TYPELIB</span></code>).</p>
+<p><em>sourcecode path</em> can be a folder, a single source file, or a semicolon separated list of folders and files (quote the argument in Unix shells). All paths are scanned as one source tree, so classes, parent classes and symbols (e.g. string id constants) can be spread across them (duplicate paths are ignored with a warning). Example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ cclmodeller -staticexport &quot;ccl/gui;ccl/base&quot; gui.classModel typelib=SKIN_TYPELIB
 </pre></div>
 </div>
 </section>
@@ -167,6 +181,19 @@
 </section>
 <section id="version-history">
 <span id="changelog-modeller"></span><h2>Version history<a class="headerlink" href="#version-history" title="Link to this heading"></a></h2>
+<section id="changelog-v1-3-0">
+<h3>Changelog v1.3.0<a class="headerlink" href="#changelog-v1-3-0" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>add classmodel ‘staticexport’ action</p></li>
+<li><p>‘scan’ and ‘staticexport’ actions accept source files as well as folders, and a semicolon separated list of them</p></li>
+</ul>
+</section>
+<section id="changelog-v1-2-1">
+<h3>Changelog v1.2.1<a class="headerlink" href="#changelog-v1-2-1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>enums: scan docs from generated ‘inline constexpr’ constants</p></li>
+</ul>
+</section>
 <section id="changelog-v1-2-0">
 <h3>Changelog v1.2.0<a class="headerlink" href="#changelog-v1-2-0" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -209,7 +236,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

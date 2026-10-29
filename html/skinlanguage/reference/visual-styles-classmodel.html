@@ -108,6 +108,25 @@
 <h1>Visual Styles Reference<a class="headerlink" href="#visual-styles-reference" title="Link to this heading"></a></h1>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<section id="bivstyle">
+<span id="visual-styles-classmodel-class-bivstyle"></span><h3>BIVStyle<a class="headerlink" href="#bivstyle" title="Link to this heading"></a></h3>
+<p><strong>Attributes (9)</strong></p>
+<ul class="simple">
+<li><p><strong>background</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>icon</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>iconalign</strong> (<em>enum</em>): vertical alignment of the icon within the content area (default: vcenter) - “left” or “right” additionally align an icon that has no value next to it</p></li>
+<li><p><strong>iconfillfactor</strong> (<em>metric</em>): size of the icon relative to the content area, aspect ratio is kept - more than 1 reaches beyond that area</p></li>
+<li><p><strong>iconleading</strong> (<em>metric</em>): icon is drawn before the value instead of after it</p></li>
+<li><p><strong>iconoverlay</strong> (<em>metric</em>): the icon overlays the value instead of taking away space from it</p></li>
+<li><p><strong>iconvaluespacing</strong> (<em>metric</em>): distance between the icon and the value</p></li>
+<li><p><strong>value</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>valuealign</strong> (<em>enum</em>): vertical alignment of the value within the content area, and horizontal alignment of the whole content (default: “textalign”)</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul class="simple">
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>]</p></li>
+</ul>
+</section>
 <section id="basicstyle">
 <span id="visual-styles-classmodel-class-basicstyle"></span><h3>BasicStyle<a class="headerlink" href="#basicstyle" title="Link to this heading"></a></h3>
 <p>Basic visual style attributes inherited by all other styles.</p>
@@ -125,7 +144,7 @@
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-blockviewstyle"><span class="std std-ref">BlockViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-comboboxstyle"><span class="std std-ref">ComboBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialogbuilderstyle"><span class="std std-ref">DialogBuilderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialoggroupstyle"><span class="std std-ref">DialogGroupStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dividerstyle"><span class="std std-ref">DividerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dropboxstyle"><span class="std std-ref">DropBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-headerviewstyle"><span class="std std-ref">HeaderViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-imageviewstyle"><span class="std std-ref">ImageViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-knobstyle"><span class="std std-ref">KnobStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-labelstyle"><span class="std std-ref">LabelStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-listviewstyle"><span class="std std-ref">ListViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menubarcontrolstyle"><span class="std std-ref">MenuBarControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menucontrolstyle"><span class="std std-ref">MenuControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-pagecontrolstyle"><span class="std std-ref">PageControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-popupselectorstyle"><span class="std std-ref">PopupSelectorStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-progressbarstyle"><span class="std std-ref">ProgressBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-rangesliderstyle"><span class="std std-ref">RangeSliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sceneview3dstyle"><span class="std std-ref">SceneView3DStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbarstyle"><span class="std std-ref">ScrollBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbuttonstyle"><span class="std std-ref">ScrollButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollpickerstyle"><span class="std std-ref">ScrollPickerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollviewstyle"><span class="std std-ref">ScrollViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sliderstyle"><span class="std std-ref">SliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-tabviewstyle"><span class="std std-ref">TabViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-toolbuttonstyle"><span class="std std-ref">ToolButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-trivectorpadstyle"><span class="std std-ref">TriVectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-updownbuttonstyle"><span class="std std-ref">UpDownButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-valuebarstyle"><span class="std std-ref">ValueBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-vectorpadstyle"><span class="std std-ref">VectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-windowbackgroundstyle"><span class="std std-ref">WindowBackgroundStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-blockviewstyle"><span class="std std-ref">BlockViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialogbuilderstyle"><span class="std std-ref">DialogBuilderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dialoggroupstyle"><span class="std std-ref">DialogGroupStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dividerstyle"><span class="std std-ref">DividerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-dropboxstyle"><span class="std std-ref">DropBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-headerviewstyle"><span class="std std-ref">HeaderViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-imageviewstyle"><span class="std std-ref">ImageViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-itemviewstyle"><span class="std std-ref">ItemViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-knobstyle"><span class="std std-ref">KnobStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-labelstyle"><span class="std std-ref">LabelStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-listviewstyle"><span class="std std-ref">ListViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menubarcontrolstyle"><span class="std std-ref">MenuBarControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-menucontrolstyle"><span class="std std-ref">MenuControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-pagecontrolstyle"><span class="std std-ref">PageControlStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-popupselectorstyle"><span class="std std-ref">PopupSelectorStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-progressbarstyle"><span class="std std-ref">ProgressBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-rangesliderstyle"><span class="std std-ref">RangeSliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sceneview3dstyle"><span class="std std-ref">SceneView3DStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbarstyle"><span class="std std-ref">ScrollBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollbuttonstyle"><span class="std std-ref">ScrollButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollpickerstyle"><span class="std std-ref">ScrollPickerStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-scrollviewstyle"><span class="std std-ref">ScrollViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-segmentboxstyle"><span class="std std-ref">SegmentBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-sliderstyle"><span class="std std-ref">SliderStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-tabviewstyle"><span class="std std-ref">TabViewStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-toolbuttonstyle"><span class="std std-ref">ToolButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-trivectorpadstyle"><span class="std std-ref">TriVectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-updownbuttonstyle"><span class="std std-ref">UpDownButtonStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-valuebarstyle"><span class="std std-ref">ValueBarStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-vectorpadstyle"><span class="std std-ref">VectorPadStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-windowbackgroundstyle"><span class="std std-ref">WindowBackgroundStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="blockviewstyle">
@@ -160,84 +179,27 @@
 The background can be an image “background” (or “left” or “right” when the correspending option is set).</p>
 <p>A frame of the image is chosen depending on the mouse state and parameter value.
 Supported frame names are “normal[On]”, “pressed[On]”, “mouseover[On]”, “disabled[On]”, “focus[On]”.</p>
-<p>When an image is used, an additonal background color “backcolor.on” or “backcolor.off” can be drawn underneath the button image.
+<p>Unlike other atoms, the “background” atom fills its “color” behind the image, but only if the image has neither
+the “template” nor the “adaptive” attribute. Otherwise the color colorizes the image.
 When no image is specified, a rectangular frame in color “forecolor” can be drawn with option “border”.
 For the content, a padding can be specified. The content can be an “icon”, “title” or both.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-button"><span class="std std-ref">Button</span></a>]</p>
-<p><strong>Attributes (65)</strong></p>
+<p><strong>Attributes (9)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-bivstyle"><span class="std std-ref">BIVStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
-<li><p><strong>backcolor.off</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (even when a colorParam is used)</p></li>
-<li><p><strong>backcolor.on</strong> (<em>color</em>): background color drawn underneath button image when button is switched on (overwritten by opaque colorParam color)</p></li>
-<li><p><strong>backcolor.radius</strong> (<em>metric</em>): radius for backcolor / forcolor</p></li>
-<li><p><strong>backcolor.transparent</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (when colorParam color is transparent)</p></li>
-<li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
-<li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
-<li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
-<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspect ratio is kept) value: ]0-1]</p></li>
-<li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
-<li><p><strong>iconcolor</strong> (<em>color</em>): used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
-<li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
-<li><p><strong>iconcolor.bright</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.dark</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>iconcolor.darkOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): used when button is disabled</p></li>
-<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.on</strong> (<em>color</em>): used when “colorize.icon” is set and button is switched on</p></li>
-<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
-<li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
-<li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
-<li><p><strong>padding</strong> (<em>metric</em>): padding for icon &amp; title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for title and/or icon</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for title and/or icon</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for title and/or icon</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for title and/or icon</p></li>
-<li><p><strong>right</strong> (<em>image</em>): used instead of “background” image when button has option “right”</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>single</strong> (<em>image</em>): used instead of “background” image when button has option “left” and “right”</p></li>
-<li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
-<li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
-<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): used when the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): used when the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.darkOn</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): used instead of “textcolor” when button is disabled</p></li>
-<li><p><strong>textcolor.disabledOn</strong> (<em>color</em>): used instead of “textcolor.disabled” when button is disabled and on</p></li>
-<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): used instead of “textcolor” when mouse is over button</p></li>
-<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): used instead of “textcolor.on” when mouse is over button</p></li>
-<li><p><strong>textcolor.on</strong> (<em>color</em>): used instead of “textcolor” when button is switched on</p></li>
-<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): used instead of “textcolor” when phase is on and button is disabled</p></li>
-<li><p><strong>textcolor.pressed</strong> (<em>color</em>): used instead of “textcolor.on” when button is pressed and off</p></li>
-<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): used instead of “textcolor.pressed” when button is pressed and on</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used when the current color from colorparam is transparent</p></li>
-<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): used when the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one point if the button is on</p></li>
-<li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
-</ul>
-<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
-<ul class="simple">
-<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
-<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
-<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
-<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
-<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the button title</p></li>
-<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
-<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+<li><p><strong>background</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>icon</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>iconalign</strong> (<em>enum</em>): vertical alignment of the icon within the content area (default: vcenter) - “left” or “right” additionally align an icon that has no value next to it</p></li>
+<li><p><strong>iconfillfactor</strong> (<em>metric</em>): size of the icon relative to the content area, aspect ratio is kept - more than 1 reaches beyond that area</p></li>
+<li><p><strong>iconleading</strong> (<em>metric</em>): icon is drawn before the value instead of after it</p></li>
+<li><p><strong>iconoverlay</strong> (<em>metric</em>): the icon overlays the value instead of taking away space from it</p></li>
+<li><p><strong>iconvaluespacing</strong> (<em>metric</em>): distance between the icon and the value</p></li>
+<li><p><strong>value</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>valuealign</strong> (<em>enum</em>): vertical alignment of the value within the content area, and horizontal alignment of the whole content (default: “textalign”)</p></li>
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-bivstyle"><span class="std std-ref">BIVStyle</span></a>]</p></li>
 <li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-checkboxstyle"><span class="std std-ref">CheckBoxStyle</span></a>]</p></li>
 </ul>
 </section>
@@ -245,108 +207,45 @@ For the content, a padding can be specified. The content can be an “icon”, �
 <span id="visual-styles-classmodel-class-checkboxstyle"></span><h3>CheckBoxStyle<a class="headerlink" href="#checkboxstyle" title="Link to this heading"></a></h3>
 <p>Draws an image that shows the parameter state (typically a checkmark) and an additional title besides the image.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-checkbox"><span class="std std-ref">CheckBox</span></a>]</p>
-<p><strong>Attributes (68)</strong></p>
+<p><strong>Attributes (11)</strong></p>
 <ul class="simple">
-<li><p><strong>buttonstyle</strong> (<em>metric</em>): if this is set (“1”), the control is drawn like a button</p></li>
 <li><p><strong>checkboxrightside</strong> (<em>metric</em>): if this is set (“1”), the checkbox is drawn algined to the right side of the view rect</p></li>
 <li><p><strong>mixedicon</strong> (<em>image</em>): fallback when no mixedicon at the checkbox is defined</p></li>
 </ul>
-<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>]</p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-bivstyle"><span class="std std-ref">BIVStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>animation.filmstrip</strong> (<em>image</em>): an animation filmstrip could be used to show intermediate button states - the visualstyle is responisble to define the appropriate animiation triggers for the phase property</p></li>
-<li><p><strong>backcolor.off</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (even when a colorParam is used)</p></li>
-<li><p><strong>backcolor.on</strong> (<em>color</em>): background color drawn underneath button image when button is switched on (overwritten by opaque colorParam color)</p></li>
-<li><p><strong>backcolor.radius</strong> (<em>metric</em>): radius for backcolor / forcolor</p></li>
-<li><p><strong>backcolor.transparent</strong> (<em>color</em>): background color drawn underneath button image when button is switched off (when colorParam color is transparent)</p></li>
-<li><p><strong>buttonMinHeight</strong> (<em>metric</em>): use minimal button height</p></li>
-<li><p><strong>buttonMinWidth</strong> (<em>metric</em>): use minimal button width</p></li>
-<li><p><strong>colorize.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to colorize the icon (checkmark of CheckBox is always colorized!)</p></li>
-<li><p><strong>fill.icon</strong> (<em>metric</em>): scalable icons (shapes/svgs) are resized to fill out the button size (aspect ratio is kept) value: ]0-1]</p></li>
-<li><p><strong>icon</strong> (<em>image</em>): fallback when no icon at the button is defined</p></li>
-<li><p><strong>iconcolor</strong> (<em>color</em>): used when “colorize.icon” is set (“iconcolor” is CheckBox’s “checkmark” color)</p></li>
-<li><p><strong>iconcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as iconcolor</p></li>
-<li><p><strong>iconcolor.bright</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.brightOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>iconcolor.dark</strong> (<em>color</em>): used when “colorize.icon” is set and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>iconcolor.darkOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current colorparam luminance is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>iconcolor.disabled</strong> (<em>color</em>): used when button is disabled</p></li>
-<li><p><strong>iconcolor.mouseover</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.mouseoverOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.on</strong> (<em>color</em>): used when “colorize.icon” is set and button is switched on</p></li>
-<li><p><strong>iconcolor.pressed</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.pressedOn</strong> (<em>color</em>): used when “colorize.icon” is set</p></li>
-<li><p><strong>iconcolor.transparent</strong> (<em>color</em>): used when “colorize.icon” is set and the current color from colorparam is transparent</p></li>
-<li><p><strong>iconcolor.transparentOn</strong> (<em>color</em>): used when “colorize.icon” is set, the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>left</strong> (<em>image</em>): used instead of “background” image when button has option “left”</p></li>
-<li><p><strong>lightadapt.icon</strong> (<em>metric</em>): set to use “iconcolor” / “iconcolor.on” to modify the icon and adapt the luminance of dark/light pixels to the iconcolor</p></li>
-<li><p><strong>middle</strong> (<em>image</em>): used instead of “background” image when button has option “middle”</p></li>
-<li><p><strong>padding</strong> (<em>metric</em>): padding for icon &amp; title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for title and/or icon</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for title and/or icon</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for title and/or icon</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for title and/or icon</p></li>
-<li><p><strong>right</strong> (<em>image</em>): used instead of “background” image when button has option “right”</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>single</strong> (<em>image</em>): used instead of “background” image when button has option “left” and “right”</p></li>
-<li><p><strong>spacing.icon</strong> (<em>metric</em>): customizable space between icon and the text (default is 3 points)</p></li>
-<li><p><strong>text.width</strong> (<em>metric</em>): truncate title to fit into this width</p></li>
-<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): used when the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.brightOn</strong> (<em>color</em>): used when the parameter is on and the current colorparam luminance is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.darkOn</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): used instead of “textcolor” when button is disabled</p></li>
-<li><p><strong>textcolor.disabledOn</strong> (<em>color</em>): used instead of “textcolor.disabled” when button is disabled and on</p></li>
-<li><p><strong>textcolor.mouseover</strong> (<em>color</em>): used instead of “textcolor” when mouse is over button</p></li>
-<li><p><strong>textcolor.mouseoverOn</strong> (<em>color</em>): used instead of “textcolor.on” when mouse is over button</p></li>
-<li><p><strong>textcolor.on</strong> (<em>color</em>): used instead of “textcolor” when button is switched on</p></li>
-<li><p><strong>textcolor.phaseOn</strong> (<em>color</em>): used instead of “textcolor” when phase is on and button is disabled</p></li>
-<li><p><strong>textcolor.pressed</strong> (<em>color</em>): used instead of “textcolor.on” when button is pressed and off</p></li>
-<li><p><strong>textcolor.pressedOn</strong> (<em>color</em>): used instead of “textcolor.pressed” when button is pressed and on</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used when the current color from colorparam is transparent</p></li>
-<li><p><strong>textcolor.transparentOn</strong> (<em>color</em>): used when the parameter is on and the current color from colorparam is transparent</p></li>
-<li><p><strong>textshiftdown</strong> (<em>metric</em>): the text baseline will be offsetted by one point if the button is on</p></li>
-<li><p><strong>useButtonMinSize</strong> (<em>metric</em>): use minimal button size (uses theme size as default)</p></li>
-</ul>
-<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
-<ul class="simple">
-<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
-<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
-<li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
-<li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
-<li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the button title</p></li>
-<li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
-<li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
+<li><p><strong>background</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>icon</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>iconalign</strong> (<em>enum</em>): vertical alignment of the icon within the content area (default: vcenter) - “left” or “right” additionally align an icon that has no value next to it</p></li>
+<li><p><strong>iconfillfactor</strong> (<em>metric</em>): size of the icon relative to the content area, aspect ratio is kept - more than 1 reaches beyond that area</p></li>
+<li><p><strong>iconleading</strong> (<em>metric</em>): icon is drawn before the value instead of after it</p></li>
+<li><p><strong>iconoverlay</strong> (<em>metric</em>): the icon overlays the value instead of taking away space from it</p></li>
+<li><p><strong>iconvaluespacing</strong> (<em>metric</em>): distance between the icon and the value</p></li>
+<li><p><strong>value</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>)</p></li>
+<li><p><strong>valuealign</strong> (<em>enum</em>): vertical alignment of the value within the content area, and horizontal alignment of the whole content (default: “textalign”)</p></li>
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-buttonstyle"><span class="std std-ref">ButtonStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-bivstyle"><span class="std std-ref">BIVStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="comboboxstyle">
 <span id="visual-styles-classmodel-class-comboboxstyle"></span><h3>ComboBoxStyle<a class="headerlink" href="#comboboxstyle" title="Link to this heading"></a></h3>
-<p>If option “transparent” is not set, a ComboBox draws a background image.</p>
+<p>A ComboBox is drawn like a SelectBox - see the SelectBoxRenderer for the atoms and the layout,
+including the “button” image that indicates the popup.</p>
 <p><strong>Description</strong></p>
-<p>When no image is specified, it is filled in “backcolor”, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
-<p>The “button” image is drawn at the right. The remaining space shows the text field to edit the parameter value with an optional padding.</p>
+<p>Only the value text differs: it comes from the edit parameter instead of the select parameter,
+and it is hidden while the ComboBox is edited, because the edit control draws it then.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-combobox"><span class="std std-ref">ComboBox</span></a>]</p>
-<p><strong>Attributes (15)</strong></p>
+<p><strong>Attributes (10)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that something can popup</p></li>
-<li><p><strong>padding</strong> (<em>metric</em>): padding for title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the displayed string</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the background image and the frame around it</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
@@ -357,7 +256,7 @@ For the content, a padding can be specified. The content can be an “icon”, �
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="dialogbuilderstyle">
@@ -472,42 +371,20 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <span id="visual-styles-classmodel-class-editboxstyle"></span><h3>EditBoxStyle<a class="headerlink" href="#editboxstyle" title="Link to this heading"></a></h3>
 <p>An EditBox is drawn just like a TextBox.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-editbox"><span class="std std-ref">EditBox</span></a>]</p>
-<p><strong>Attributes (30)</strong></p>
-<ul class="simple">
-<li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>native.padding.bottom</strong> (<em>metric</em>): bottom padding for the native text control</p></li>
-<li><p><strong>native.padding.left</strong> (<em>metric</em>): left padding for the native text control</p></li>
-<li><p><strong>native.padding.right</strong> (<em>metric</em>): right padding for the native text control</p></li>
-<li><p><strong>native.padding.top</strong> (<em>metric</em>): top padding for the native text control</p></li>
-<li><p><strong>selectioncolor</strong> (<em>color</em>): background color for selected ranges</p></li>
-<li><p><strong>textcolor.placeholder</strong> (<em>color</em>): dedicated color for optional placeholder string</p></li>
-<li><p><strong>textfont.placeholder</strong> (<em>string</em>): dedicated font for optional placeholder string</p></li>
-</ul>
+<p><strong>Attributes (10)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the displayed string</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the background image and the frame around it</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
 <li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
 <li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
 <li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
 </ul>
@@ -547,23 +424,12 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="imageviewstyle">
 <span id="visual-styles-classmodel-class-imageviewstyle"></span><h3>ImageViewStyle<a class="headerlink" href="#imageviewstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-imageview"><span class="std std-ref">ImageView</span></a>]</p>
-<p><strong>Attributes (18)</strong></p>
-<ul class="simple">
-<li><p><strong>border</strong> (<em>metric</em>): (set automatically for tiled images) - used to optimize redraws when the ImageView is resized</p></li>
-<li><p><strong>fill.image</strong> (<em>metric</em>): image is resized to fill out the ImageView size (aspectratio is kept) value: ]0-1]</p></li>
-<li><p><strong>imagecolor</strong> (<em>color</em>): imagecolor is used to colorize the image (colorize option set)</p></li>
-<li><p><strong>imagecolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as imagecolor</p></li>
-<li><p><strong>imagecolor.bright</strong> (<em>color</em>): imagecolor. Bright is used when colorize option is set and the current luminance of the “colorname” color is below the “imagecolor.threshold”.</p></li>
-<li><p><strong>imagecolor.context</strong> (<em>color</em>): imagecolor. Context is used (colorize option NOT set) to modify the image automatically when supported - needs to be a template/monochrome image (colorize filter is used) or an adaptive image (lightadapt filter is used).</p></li>
-<li><p><strong>imagecolor.on</strong> (<em>color</em>): imagecolor. On is used to colorize the image when the “selectname” is on (colorize option set).</p></li>
-<li><p><strong>imagecolor.threshold</strong> (<em>metric</em>): imagecolor. Bright is used instead of “imagecolor” if the luminance threshold for the current “colorname” color is below this value - default is 0.35.</p></li>
-<li><p><strong>imagecolor.transparent</strong> (<em>color</em>): imagecolor. Transparent is used (colorize option set) when current colorparam color is transparent.</p></li>
-</ul>
+<p><strong>Attributes (9)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>backcolor</strong> (<em>color</em>): fill the view when “selectname” is off (colorize option set) and no image is available</p></li>
-<li><p><strong>background</strong> (<em>image</em>): the image to be drawn</p></li>
-<li><p><strong>forecolor</strong> (<em>color</em>): fill the view when “selectname” is on (colorize option set) and no image is available</p></li>
+<li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): draws the image - its “color” colorizes a template or an adaptive image, and fills the view when there is no image (“colorize” option)</p></li>
+<li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
 <li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
@@ -780,7 +646,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <section id="menucontrolstyle">
 <span id="visual-styles-classmodel-class-menucontrolstyle"></span><h3>MenuControlStyle<a class="headerlink" href="#menucontrolstyle" title="Link to this heading"></a></h3>
 <p>A MenuControl is a custom implementation of a menu (e.g. a context menu).</p>
-<p><strong>Attributes (31)</strong></p>
+<p><strong>Attributes (32)</strong></p>
 <ul class="simple">
 <li><p><strong>bordercolor</strong> (<em>color</em>): used to draw a border around the whole menu</p></li>
 <li><p><strong>checkmarkicon</strong> (<em>image</em>): a checkmark icon drawn after a checked item</p></li>
@@ -804,6 +670,7 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <li><p><strong>separatorcolor</strong> (<em>color</em>): used to draw separator lines</p></li>
 <li><p><strong>smallfont</strong> (<em>string</em>): used for menu item descriptions</p></li>
 <li><p><strong>spacing</strong> (<em>metric</em>): spacing (in points) between items</p></li>
+<li><p><strong>valuetextcolor</strong> (<em>color</em>): used instead of “textcolor” for the value text next to a sub menu entry</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
@@ -925,6 +792,30 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <p><strong>Meta</strong></p>
 <ul class="simple">
 <li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+</ul>
+</section>
+<section id="renderatom">
+<span id="visual-styles-classmodel-class-renderatom"></span><h3>RenderAtom<a class="headerlink" href="#renderatom" title="Link to this heading"></a></h3>
+<p><strong>Attributes (18)</strong></p>
+<ul class="simple">
+<li><p><strong>bordercolor</strong> (<em>color</em>)</p></li>
+<li><p><strong>borderleftbottomradius</strong> (<em>metric</em>)</p></li>
+<li><p><strong>borderlefttopradius</strong> (<em>metric</em>)</p></li>
+<li><p><strong>borderrightbottomradius</strong> (<em>metric</em>)</p></li>
+<li><p><strong>borderrighttopradius</strong> (<em>metric</em>)</p></li>
+<li><p><strong>borderwidth</strong> (<em>metric</em>)</p></li>
+<li><p><strong>color</strong> (<em>color</em>)</p></li>
+<li><p><strong>contrastcoloralphablend</strong> (<em>color</em>)</p></li>
+<li><p><strong>contrastcolorbright</strong> (<em>color</em>)</p></li>
+<li><p><strong>contrastcolordark</strong> (<em>color</em>)</p></li>
+<li><p><strong>contrastcolortransparent</strong> (<em>color</em>)</p></li>
+<li><p><strong>image</strong> (<em>image</em>)</p></li>
+<li><p><strong>imageframe</strong> (<em>metric</em>)</p></li>
+<li><p><strong>offsetx</strong> (<em>metric</em>)</p></li>
+<li><p><strong>offsety</strong> (<em>metric</em>)</p></li>
+<li><p><strong>opacity</strong> (<em>metric</em>)</p></li>
+<li><p><strong>rotation</strong> (<em>metric</em>)</p></li>
+<li><p><strong>scale</strong> (<em>metric</em>)</p></li>
 </ul>
 </section>
 <section id="sceneview3dstyle">
@@ -1083,9 +974,9 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
 </ul>
 </section>
-<section id="segmentbox">
-<span id="visual-styles-classmodel-class-segmentbox"></span><h3>SegmentBox<a class="headerlink" href="#segmentbox" title="Link to this heading"></a></h3>
-<p>See also: [<a class="reference internal" href="#visual-styles-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>]</p>
+<section id="segmentboxstyle">
+<span id="visual-styles-classmodel-class-segmentboxstyle"></span><h3>SegmentBoxStyle<a class="headerlink" href="#segmentboxstyle" title="Link to this heading"></a></h3>
+<p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-segmentbox"><span class="std std-ref">SegmentBox</span></a>]</p>
 <p><strong>Attributes (12)</strong></p>
 <ul class="simple">
 <li><p><strong>state1</strong> (<em>color</em>): alternative text color when the parameter’s visual state is 1</p></li>
@@ -1114,32 +1005,31 @@ If the DialogGroup has a title, it is drawn at the top edge.</p>
 <p>If option “transparent” is not set, a SelectBox draws a background image.</p>
 <p><strong>Description</strong></p>
 <p>When no image is specified, it is filled in “backcolor”, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
-<p>An image “states” can be used to show a different frame for (integer) each parameter value.</p>
-<p>The “button” image is drawn at the right (can be changed with option “leadingbutton”).
-The remaining space shows the text representation of the parameter, with an optional “padding”.</p>
+<p>A SelectBox uses the same render atoms as a Button: the “background” atom draws the background,
+the “icon” atom draws the popup button, and the “value” atom draws the text.</p>
+<p>The background image shows the current parameter value when it has no element state frames: each of
+its frames stands for one (integer) value then, like the frames of a MultiToggle button. Such a state
+image covers the whole control, so it is usually opaque.</p>
+<p>The popup button is pinned to an edge of the area left by “padding”, like the icon of a Button,
+and the value keeps a distance of “iconvaluespacing” to it. The edge is the horizontal part of
+“iconalign”: left and right pin the button, centered leaves it unpinned - which only shows when
+the text is hidden or “iconoverlay” is set, because otherwise the button is pinned to the trailing
+edge to keep the space for the text. With hidden text, an unpinned button is centered within the
+whole control, ignoring “padding”.
+When the parameter provides an image itself, the “value” atom draws this image instead of the text.</p>
+<p>A color parameter (“colorname”) only affects the “value” and the “icon” atom when the atom has a
+“contrastcolorbright” or a “contrastcoloralphablend”. Unlike a Button or a TextBox, a SelectBox never
+draws them in the color of the parameter itself.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-selectbox"><span class="std std-ref">SelectBox</span></a>]</p>
-<p><strong>Attributes (24)</strong></p>
+<p><strong>Attributes (10)</strong></p>
+<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>button</strong> (<em>image</em>): image used to draw the button that indicates that somthing can popup</p></li>
-<li><p><strong>button.beneath</strong> (<em>metric</em>): button image is drawn beneath text or state images and doesn’t affect their drawrect</p></li>
-<li><p><strong>button.leading</strong> (<em>metric</em>): button image is drawn before the text - set can also be set with button-option “leadingbutton”</p></li>
-<li><p><strong>button.trailing</strong> (<em>metric</em>): button image is drawn after the text - can also be set with button-option “trailingbutton”</p></li>
-<li><p><strong>contextcolor</strong> (<em>color</em>): if set, used to create a modified version of the image given by the imageprovider</p></li>
-<li><p><strong>fill.button</strong> (<em>metric</em>): button image is resized to fill out the selectbox height (aspectratio is kept) value: ]0-1]</p></li>
-<li><p><strong>fill.image</strong> (<em>metric</em>): image from imageprovider is resized to fill out the selectbox size (aspectratio is kept) value: ]0-1]</p></li>
-<li><p><strong>padding</strong> (<em>metric</em>): padding for title, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>states</strong> (<em>image</em>): image with frames for each (integer) parameter state</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the displayed string</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the background image and the frame around it</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
@@ -1150,7 +1040,8 @@ The remaining space shows the text representation of the parameter, with an opti
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
-<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>] &lt;- [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-comboboxstyle"><span class="std std-ref">ComboBoxStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="sliderstyle">
@@ -1200,28 +1091,30 @@ The remaining space shows the text representation of the parameter, with an opti
 <section id="tabviewstyle">
 <span id="visual-styles-classmodel-class-tabviewstyle"></span><h3>TabViewStyle<a class="headerlink" href="#tabviewstyle" title="Link to this heading"></a></h3>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-tabview"><span class="std std-ref">TabView</span></a>]</p>
-<p><strong>Attributes (24)</strong></p>
+<p><strong>Attributes (26)</strong></p>
 <ul class="simple">
-<li><p><strong>activecolor</strong> (<em>color</em>): used to draw instead of “backcolor” for the active tab (when no button image available)</p></li>
-<li><p><strong>activetextcolor</strong> (<em>color</em>): used instead of “textcolor” for the active tab</p></li>
-<li><p><strong>borderColor</strong> (<em>color</em>): color of border frame, drawn when no”background” image is available</p></li>
-<li><p><strong>first</strong> (<em>image</em>): background for the first of multiple buttons</p></li>
-<li><p><strong>headerBackground</strong> (<em>image</em>): background for header rect</p></li>
-<li><p><strong>iconSpacing</strong> (<em>metric</em>): spacing between icon and label</p></li>
-<li><p><strong>last</strong> (<em>image</em>): background for the last of multiple buttons</p></li>
-<li><p><strong>menuBackground</strong> (<em>image</em>): background for menu button (shown when not all tabs fit in the view)</p></li>
-<li><p><strong>menuIcon</strong> (<em>image</em>): icon shown on menu button</p></li>
-<li><p><strong>middle</strong> (<em>image</em>): background for the middle buttons</p></li>
-<li><p><strong>prefericon</strong> (<em>metric</em>): in case of an icon and a title - only show the icon</p></li>
-<li><p><strong>single</strong> (<em>image</em>): background for a single button</p></li>
-<li><p><strong>tabHeight</strong> (<em>metric</em>): height of tab buttons</p></li>
-<li><p><strong>tabMargin</strong> (<em>metric</em>): the overall margin (tabMargin = left and right margin combined)</p></li>
-<li><p><strong>tabSpacing</strong> (<em>metric</em>): spacing between tabs</p></li>
+<li><p><strong>header</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the strip behind the tabs</p></li>
+<li><p><strong>iconvaluespacing</strong> (<em>metric</em>): distance between the icon and the title of a tab</p></li>
+<li><p><strong>margin</strong> (<em>metric</em>): distance between the edges of the content area and the child view of the active tab</p></li>
+<li><p><strong>padding</strong> (<em>metric</em>): padding for the icon and the title of a tab, used if one of the paddings for left, top, right, bottom is not specified</p></li>
+<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the icon and the title of a tab</p></li>
+<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the icon and the title of a tab</p></li>
+<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the icon and the title of a tab</p></li>
+<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the icon and the title of a tab</p></li>
+<li><p><strong>popupextended</strong> (<em>metric</em>): displays the menu as an extended menu instead of the default tree menu</p></li>
+<li><p><strong>tab.background</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the background of a tab - the “left”, “middle”, “right” and “menu” style conditions select its position within the row (a single tab has none of them), “on”, “mouseover”, “pressed” and “disabled” its state, the first three also the named frame of its image</p></li>
+<li><p><strong>tab.icon</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the icon of a tab - a tab without an icon of its own (like the menu button) shows the image of this atom, resolved with the “middle” or “menu” condition alone</p></li>
+<li><p><strong>tab.menuicon</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the menu icon the active tab displays (“tabmenu” option)</p></li>
+<li><p><strong>tab.value</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the title of a tab</p></li>
+<li><p><strong>tabheight</strong> (<em>metric</em>): height of the tabs</p></li>
+<li><p><strong>tabmenuspacing</strong> (<em>metric</em>): distance between the title and the menu icon of the active tab</p></li>
+<li><p><strong>tabprefericon</strong> (<em>metric</em>): a tab that has an icon shows only that icon</p></li>
+<li><p><strong>tabspacing</strong> (<em>metric</em>): spacing between the tabs</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background for content rect</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the content area next to the tabs</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
@@ -1239,41 +1132,31 @@ The remaining space shows the text representation of the parameter, with an opti
 <span id="visual-styles-classmodel-class-textboxstyle"></span><h3>TextBoxStyle<a class="headerlink" href="#textboxstyle" title="Link to this heading"></a></h3>
 <p>If option “transparent” is not set, a TextBox draws a background image.</p>
 <p><strong>Description</strong></p>
-<p>When no image is specified, it is filled in “backcolor”, and a rectangular frame in color “forecolor” can be drawn with option “border”.</p>
-<p>The text is drawn with an optional “padding”.</p>
+<p>When no image is specified, it is filled with the background color.
+A frame around it is defined by “background.bordercolor” and “background.borderwidth”, rounded by the
+four “background.border[left,right,top,bottom]radius” metrics - the radii also clip the background
+The text is drawn with an optional “padding”.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-textbox"><span class="std std-ref">TextBox</span></a>]</p>
-<p><strong>Attributes (22)</strong></p>
+<p><strong>Attributes (10)</strong></p>
 <ul class="simple">
-<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the displayed string</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the background image and the frame around it</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
 <li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
 <li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
 <li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
 </ul>
 <p><strong>Meta</strong></p>
 <ul class="simple">
 <li><p>Parents: [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p></li>
-<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p></li>
+<li><p>Children: [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>] [<a class="reference internal" href="#visual-styles-classmodel-class-selectboxstyle"><span class="std std-ref">SelectBoxStyle</span></a>]</p></li>
 </ul>
 </section>
 <section id="toolbuttonstyle">
@@ -1282,11 +1165,11 @@ The remaining space shows the text representation of the parameter, with an opti
 <p><strong>Attributes (16)</strong></p>
 <ul class="simple">
 <li><p><strong>decorform</strong> (<em>string</em>): an optional “decorform” name identifying the form that decorates the popup</p></li>
-<li><p><strong>popup.extended</strong> (<em>metric</em>): displays the popup as an extended menu instead of the default tree menu</p></li>
 <li><p><strong>popup.offset.x</strong> (<em>metric</em>): an additional horizontal offset to the popup position</p></li>
 <li><p><strong>popup.offset.y</strong> (<em>metric</em>): an additional vertical offset to the popup position</p></li>
 <li><p><strong>popup.palette.bottom</strong> (<em>metric</em>): popup the palette on the bottom (mode parameter must be a IPaletteProvider)</p></li>
 <li><p><strong>popup.palette.right</strong> (<em>metric</em>): popup the palette on the right side (mode parameter must be a IPaletteProvider)</p></li>
+<li><p><strong>popupextended</strong> (<em>metric</em>): displays the popup as an extended menu instead of the default tree menu</p></li>
 <li><p><strong>popupstyle</strong> (<em>metric</em>): when “popupstyle” is true - the toolButton visualStyle is also used for the popup</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
@@ -1458,43 +1341,20 @@ The remaining space shows the text representation of the parameter, with an opti
 <span id="visual-styles-classmodel-class-valueboxstyle"></span><h3>ValueBoxStyle<a class="headerlink" href="#valueboxstyle" title="Link to this heading"></a></h3>
 <p>Drawn like an EditBox.</p>
 <p>See also: [<a class="reference internal" href="skin-elements-classmodel.html#skin-elements-classmodel-class-valuebox"><span class="std std-ref">ValueBox</span></a>]</p>
-<p><strong>Attributes (30)</strong></p>
-<p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-editboxstyle"><span class="std std-ref">EditBoxStyle</span></a>]</p>
-<ul class="simple">
-<li><p><strong>native.padding</strong> (<em>metric</em>): padding for the native text control, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>native.padding.bottom</strong> (<em>metric</em>): bottom padding for the native text control</p></li>
-<li><p><strong>native.padding.left</strong> (<em>metric</em>): left padding for the native text control</p></li>
-<li><p><strong>native.padding.right</strong> (<em>metric</em>): right padding for the native text control</p></li>
-<li><p><strong>native.padding.top</strong> (<em>metric</em>): top padding for the native text control</p></li>
-<li><p><strong>selectioncolor</strong> (<em>color</em>): background color for selected ranges</p></li>
-<li><p><strong>textcolor.placeholder</strong> (<em>color</em>): dedicated color for optional placeholder string</p></li>
-<li><p><strong>textfont.placeholder</strong> (<em>string</em>): dedicated font for optional placeholder string</p></li>
-</ul>
+<p><strong>Attributes (10)</strong></p>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-textboxstyle"><span class="std std-ref">TextBoxStyle</span></a>]</p>
 <ul class="simple">
-<li><p><strong>padding</strong> (<em>metric</em>): padding for the text, used if one of the paddings for left, top, right, bottom is not specified</p></li>
-<li><p><strong>padding.bottom</strong> (<em>metric</em>): bottom padding for the text</p></li>
-<li><p><strong>padding.left</strong> (<em>metric</em>): left padding for the text</p></li>
-<li><p><strong>padding.right</strong> (<em>metric</em>): right padding for the text</p></li>
-<li><p><strong>padding.top</strong> (<em>metric</em>): top padding for the text</p></li>
-<li><p><strong>scaletext.maxfont</strong> (<em>metric</em>): explicit maximal fontsize when scaletext option is set</p></li>
-<li><p><strong>scaletext.minfont</strong> (<em>metric</em>): explicit minimal fontsize when scaletext option is set</p></li>
-<li><p><strong>textcolor.alphablend</strong> (<em>color</em>): the non-transparent “colorname” color will be alphablended with this color (using “color.alphablend” as fallback) and used as textcolor</p></li>
-<li><p><strong>textcolor.bright</strong> (<em>color</em>): used instead of “textcolor” if the current luminance of the “colorname” color is below the “textcolor.threshold”</p></li>
-<li><p><strong>textcolor.dark</strong> (<em>color</em>): used when the current luminance of the “colorname” color is above the “textcolor.threshold” (using “textcolor” as fallback, needs definition of textcolor. Bright).</p></li>
-<li><p><strong>textcolor.disabled</strong> (<em>color</em>): text color used (instead of “textcolor”) when control is disabled</p></li>
-<li><p><strong>textcolor.threshold</strong> (<em>metric</em>): “textcolor.bright” is used instead of “textcolor” if the luminance threshold for the current “colorname” color is below this value - default is 0. 35.</p></li>
-<li><p><strong>textcolor.transparent</strong> (<em>color</em>): used instead of “textcolor” if the TextBox’s option “transparent” is set or “colorname” color is transparent</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="#visual-styles-classmodel-class-renderatom"><span class="std std-ref">RenderAtom</span></a>): the displayed string</p></li>
 </ul>
 <p>Inherited from [<a class="reference internal" href="#visual-styles-classmodel-class-basicstyle"><span class="std std-ref">BasicStyle</span></a>]</p>
 <ul class="simple">
 <li><p><strong>backcolor</strong> (<em>color</em>): backgound color</p></li>
-<li><p><strong>background</strong> (<em>image</em>): background image</p></li>
+<li><p><strong>background</strong> (<em>RenderAtom</em>): the background image and the frame around it</p></li>
 <li><p><strong>forecolor</strong> (<em>color</em>): color used for foreground elements</p></li>
 <li><p><strong>hilitecolor</strong> (<em>color</em>): color used for a hilite state</p></li>
 <li><p><strong>strokewidth</strong> (<em>metric</em>): width in pixels used when lines are drawn</p></li>
 <li><p><strong>textalign</strong> (<em>enum</em>): alignment of text</p></li>
-<li><p><strong>textcolor</strong> (<em>color</em>): textcolor for the displayed string</p></li>
+<li><p><strong>textcolor</strong> (<em>color</em>): color used for drawing text</p></li>
 <li><p><strong>textfont</strong> (<em>string</em>): font used for drawing text</p></li>
 <li><p><strong>textoptions</strong> (<em>enum</em>): additional options for drawing text. Supported option: “wordbreak” (for multiline text).</p></li>
 </ul>
@@ -1888,7 +1748,7 @@ if no image is available, “backcolor” is used.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

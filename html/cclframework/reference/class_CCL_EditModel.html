@@ -265,11 +265,7 @@
     <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-c-c-l-1-1-edit-model-1ab1bc084b42b965de58282c137a2a2992"><span></span><span class="n">getSelectionSize</span></span><span></span> <span class="p">(</span><span class="n">Rect</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="class_CCL_EditView.html#doxid-class-c-c-l-1-1-edit-view"><span class="std std-ref">EditView</span></a><span></span><span class="o">&amp;</span> <span class="n">editView</span><span class="p">);</span>
 
     <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-edit-model-1a5bd40f6193723b89211583554a651730"><span class="std std-ref">getProperty</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">var</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object-1aaff754b15aa981c3e3426e9e758bb405"><span class="std std-ref">MemberID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-
-    <span class="k">virtual</span> <span class="n">CCL</span><span class="o">::</span><span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-edit-model-1a31527bf3a9551ad56af2a5bfae244e47"><span class="std std-ref">invokeMethod</span></a><span></span> <span class="p">(</span>
-        <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">CCL::Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">returnValue</span><span class="p">,</span>
-        <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">CCL::MessageRef</span></a><span></span> <span class="n">msg</span>
-    <span class="p">);</span>
+    <span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-edit-model-1a5b8a2ea9556e3b0faf733f9765c68101"><span class="std std-ref">invokeMethod</span></a><span></span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">returnValue</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">MessageRef</span></a><span></span> <span class="n">msg</span><span class="p">);</span>
 <span class="p">};</span></pre>
 <section id="inherited-members">
 <h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Link to this heading"></a></h3>
@@ -445,10 +441,7 @@
 <p>Notification when new edit view gets attached.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-edit-model-1a5bd40f6193723b89211583554a651730"><span id="index-44"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">getProperty</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">var</span><span class="p">,</span> <a class="reference internal" href="struct_CCL_IObject.html#doxid-struct-c-c-l-1-1-i-object-1aaff754b15aa981c3e3426e9e758bb405"><span class="std std-ref">MemberID</span></a><span></span> <span class="n">propertyId</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Get property value by name.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-edit-model-1a31527bf3a9551ad56af2a5bfae244e47"><span id="index-45"></span><span></span><span class="k">virtual</span> <span class="n">CCL</span><span class="o">::</span><span class="n">tbool</span> CCL_API<span></span> <span class="n">invokeMethod</span> <span class="p">(</span>
-    <a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">CCL::Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">returnValue</span><span class="p">,</span>
-    <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">CCL::MessageRef</span></a><span></span> <span class="n">msg</span>
-<span class="p">)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-edit-model-1a5b8a2ea9556e3b0faf733f9765c68101"><span id="index-45"></span><span></span><span class="k">virtual</span> <span class="n">tbool</span> CCL_API<span></span> <span class="n">invokeMethod</span> <span class="p">(</span><a class="reference internal" href="struct_CCL_Variant.html#doxid-struct-c-c-l-1-1-variant"><span class="std std-ref">Variant</span></a><span></span><span class="o">&amp;</span> <span class="n">returnValue</span><span class="p">,</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a167ae7b101924ecea488409468b90a0b"><span class="std std-ref">MessageRef</span></a><span></span> <span class="n">msg</span><span class="p">)</span></pre>
 <p>Call method.</p>
 </section>
 </section>
@@ -466,7 +459,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

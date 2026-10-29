@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tooling and Troubleshooting &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Forms" href="../forms/index.html" />
+    <link rel="prev" title="Skin Package" href="../package/index.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">CCL Skin Definition Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Chapters</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../package/index.html">Skin Package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tooling and Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ccl-skin-language-vs-code-extension">CCL Skin Language VS Code Extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runtime-warnings">Runtime Warnings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/index.html">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../styles/index.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../renderatoms/index.html">Render Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../colors/index.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layouts/index.html">Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workspace/index.html">Workspaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessibility/index.html">Accessibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corelibrary/index.html">Core Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">CCL Skin Definition Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Chapters</a></li>
+      <li class="breadcrumb-item active">Tooling and Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tooling-and-troubleshooting">
+<span id="skin-troubleshooting"></span><h1>Tooling and Troubleshooting<a class="headerlink" href="#tooling-and-troubleshooting" title="Link to this heading"></a></h1>
+<p>Skin XML is data, not code - there is no compiler built into the format itself. Two complementary layers of tooling catch mistakes instead: an editor extension that checks the skin XML statically while you type, and runtime warnings that catch anything only the running application can know about, such as whether a parameter actually exists.</p>
+<section id="ccl-skin-language-vs-code-extension">
+<h2>CCL Skin Language VS Code Extension<a class="headerlink" href="#ccl-skin-language-vs-code-extension" title="Link to this heading"></a></h2>
+<p>The <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=cclsoftware.ccl-skin-language">CCL Skin Language Support</a> extension adds IntelliSense for Skin XML to Visual Studio Code, and is the fastest way to catch mistakes before ever running the app:</p>
+<ul class="simple">
+<li><p><strong>Error checking</strong> - squiggles for classes, attributes, or attribute values that aren’t defined or have invalid values, validated against the same classmodel schemas (<code class="docutils literal notranslate"><span class="pre">Skin</span> <span class="pre">Elements.classModel</span></code>, <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Styles.classModel</span></code>) that generate the <a class="reference internal" href="../../reference/index.html#skinsdk-references-index"><span class="std std-ref">reference</span></a>.</p></li>
+<li><p><strong>Hover documentation</strong> - hovering an element shows its classmodel documentation; hovering a variable or a relative URL shows its resolved value or absolute path.</p></li>
+<li><p><strong>Autocomplete</strong> - completion for styles, colors, enums, URLs, forms, variables, and attribute names, drawn from the classmodel and from every definition in the currently edited skin pack, not just the current file.</p></li>
+<li><p><strong>Color editor</strong> - concrete color values show a swatch and open a color picker on hover.</p></li>
+<li><p><strong>Go to Definition / Find All References / Rename Symbol</strong> - navigate to and refactor styles, colors, shapes, images, forms, and URLs across the whole skin pack.</p></li>
+</ul>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h3>
+<p>The extension locates the classmodel files and skin packs it needs via a <code class="docutils literal notranslate"><span class="pre">repo.json</span></code> at the project root, defaulting to <code class="docutils literal notranslate"><span class="pre">&lt;root&gt;/skins</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;root&gt;/classmodels</span></code> if left empty. In this repository those defaults already match - <code class="docutils literal notranslate"><span class="pre">classmodels/Skin</span> <span class="pre">Elements.classModel</span></code>, <code class="docutils literal notranslate"><span class="pre">classmodels/Visual</span> <span class="pre">Styles.classModel</span></code>, and the top-level <code class="docutils literal notranslate"><span class="pre">skins/</span></code> folder - so an empty <code class="docutils literal notranslate"><span class="pre">repo.json</span></code> at the repository root is enough. Paths can also be set explicitly via the <code class="docutils literal notranslate"><span class="pre">CCLSkin.classmodel.skinElements</span></code>, <code class="docutils literal notranslate"><span class="pre">CCLSkin.classmodel.visualStyles</span></code>, and <code class="docutils literal notranslate"><span class="pre">CCLSkin.skinsLocations</span></code> settings.</p>
+</section>
+</section>
+<section id="runtime-warnings">
+<h2>Runtime Warnings<a class="headerlink" href="#runtime-warnings" title="Link to this heading"></a></h2>
+<p>Some mistakes can’t be caught statically - most notably whether a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute actually matches a parameter the running application exposes, since that depends on the live component tree rather than anything declared in the skin XML. For these, the skin system resolves names lazily while it builds the UI and reports a warning wherever one doesn’t resolve.</p>
+<section id="live-editing">
+<h3>Live Editing<a class="headerlink" href="#live-editing" title="Link to this heading"></a></h3>
+<p><strong>CCL Spy</strong> is the tool for iterating on a skin without restarting the app - it works in both debug and release builds. Open it with Ctrl+Alt+O (Cmd+Alt+O on macOS), which works in either build type; the <strong>Debug</strong> menu offers the same command, but only exists in debug builds.</p>
+<p>CCL Spy shows the full view hierarchy as it exists at runtime; hold Ctrl (Cmd on macOS) and point at any on-screen element to select it in that hierarchy, where it also shows the skin XML file and line it originated from. Its <strong>Reload Skin</strong> command (Shift+F10) re-parses the skin package and rebuilds the current UI in place, so you can keep editing a form without losing your place in the app.</p>
+</section>
+<section id="reading-warnings">
+<h3>Reading Warnings<a class="headerlink" href="#reading-warnings" title="Link to this heading"></a></h3>
+<p>When a name doesn’t resolve, the skin system logs a warning of the form:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Skin] path/to/file.xml:42 &#39;controlName&#39;: Parameter not found: &#39;value&#39;
+</pre></div>
+</div>
+<p>The most common messages:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Message</p></th>
+<th class="head"><p>Cause</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Controller</span> <span class="pre">not</span> <span class="pre">found</span> <span class="pre">for</span> <span class="pre">Parameter:</span> <span class="pre">'X'</span></code></p></td>
+<td><p>The controller path before the last <code class="docutils literal notranslate"><span class="pre">/</span></code> in a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute didn’t resolve to any component. See <a class="reference internal" href="../forms/index.html#parameter-binding"><span class="std std-ref">Parameter Binding and Addressing</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Parameter</span> <span class="pre">not</span> <span class="pre">found:</span> <span class="pre">'X'</span></code></p></td>
+<td><p>The controller resolved, but it has no parameter with that name.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Controller</span> <span class="pre">not</span> <span class="pre">found</span> <span class="pre">for</span> <span class="pre">using</span> <span class="pre">statement:</span> <span class="pre">'X'</span></code></p></td>
+<td><p>A &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-using"><span class="std std-ref">using</span></a>&gt; element’s <code class="docutils literal notranslate"><span class="pre">controller</span></code> path didn’t resolve; its children were skipped. Add <code class="docutils literal notranslate"><span class="pre">optional=&quot;true&quot;</span></code> if that is expected.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Color/Image/Style/Gradient</span> <span class="pre">Element</span> <span class="pre">not</span> <span class="pre">found:</span> <span class="pre">'X'</span></code></p></td>
+<td><p>A resource reference (e.g. <code class="docutils literal notranslate"><span class="pre">color=&quot;&#64;X&quot;</span></code>) didn’t resolve. The VS Code extension normally catches this for literal references before you run the app; it shows up at runtime mainly for names built dynamically via skin variables.</p></td>
+</tr>
+</tbody>
+</table>
+<p>These warnings always show up in the debugger output of a debug build. To also have them collected as log events (with file and line), turn on skin warnings for the running app - either via <strong>CCL Spy</strong>, or by setting the <code class="docutils literal notranslate"><span class="pre">GUI.Skin.skinWarningsEnabled</span></code> framework configuration option to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Skin warnings are opt-in and disabled by default, since a large app can accumulate a lot of intentionally-optional references (e.g. an optional &lt;<a class="reference internal" href="../../reference/skin-elements-classmodel.html#skin-elements-classmodel-class-using"><span class="std std-ref">using</span></a>&gt; block). Enable them while actively editing a skin, not as a permanent setting.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../package/index.html" class="btn btn-neutral float-left" title="Skin Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../forms/index.html" class="btn btn-neutral float-right" title="Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

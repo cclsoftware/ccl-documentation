@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="struct CCL::IParameterMenuBuilder" href="struct_CCL_IParameterMenuBuilder.html" />
-    <link rel="prev" title="enum CCL::IParameter::Flags" href="enum_CCL_IParameter_Flags.html" />
+    <link rel="prev" title="enum CCL::IParameter::TitleFlags" href="enum_CCL_IParameter_TitleFlags.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -119,63 +119,31 @@
              
   <section id="enum-ccl-iparameter-type">
 <span id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7"></span><span id="index-0"></span><h1>enum CCL::IParameter::Type<a class="headerlink" href="#enum-ccl-iparameter-type" title="Link to this heading"></a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p><a class="reference internal" href="class_CCL_Parameter.html#doxid-class-c-c-l-1-1-parameter"><span class="std std-ref">Parameter</span></a> types. <a class="reference internal" href="#details-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7"><span class="std std-ref">More…</span></a></p>
+<p><a class="reference internal" href="class_CCL_Parameter.html#doxid-class-c-c-l-1-1-parameter"><span class="std std-ref">Parameter</span></a> types.</p>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;iparameter.h&gt;</span>
 
 <span class="k">enum</span> <span class="n">Type</span>
 <span class="p">{</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a50aee1b1e326b648bfa4bdf8c4853da2"><span class="std std-ref">kToggle</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa1acc5720dd4e85ceea5578a6cf14ae6"><span class="std std-ref">kInteger</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a5686197bafb177bdc82550848416a1ad"><span class="std std-ref">kFloat</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afab53ea4a643325262b9c140af093279"><span class="std std-ref">kString</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7acbb9303aa12d973993eb06a7f811aaa0"><span class="std std-ref">kList</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa8501cb56c31ef8df5f2058f200b49ce"><span class="std std-ref">kCommand</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afc0133ebaa6c307b2388ecf5f72f6fdf"><span class="std std-ref">kColor</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a9df07847c20cd540354c92617d62ee38"><span class="std std-ref">kImage</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a8b40b532bdf61b0a64fa1a20cdfa6e43"><span class="std std-ref">kSegments</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7ade907c15fd2f28b7847a5a1f8254f2f5"><span class="std std-ref">kScroll</span></a><span></span><span class="p">,</span>
-    <a class="reference internal" href="#doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a76a35856a9d1eab89d34b6c3cac071a4"><span class="std std-ref">kTextModel</span></a><span></span><span class="p">,</span>
-    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a2e41f479d98dd1d3172118dbfe454688"><span></span><span class="n">kNumTypes</span></span><span></span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a50aee1b1e326b648bfa4bdf8c4853da2"><span></span><span class="n">kToggle</span></span><span></span>    <span class="o">=</span> <span class="n">kParamTypeToggle</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa1acc5720dd4e85ceea5578a6cf14ae6"><span></span><span class="n">kInteger</span></span><span></span>   <span class="o">=</span> <span class="n">kParamTypeInteger</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a5686197bafb177bdc82550848416a1ad"><span></span><span class="n">kFloat</span></span><span></span>     <span class="o">=</span> <span class="n">kParamTypeFloat</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afab53ea4a643325262b9c140af093279"><span></span><span class="n">kString</span></span><span></span>    <span class="o">=</span> <span class="n">kParamTypeString</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7acbb9303aa12d973993eb06a7f811aaa0"><span></span><span class="n">kList</span></span><span></span>      <span class="o">=</span> <span class="n">kParamTypeList</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa8501cb56c31ef8df5f2058f200b49ce"><span></span><span class="n">kCommand</span></span><span></span>   <span class="o">=</span> <span class="n">kParamTypeCommand</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afc0133ebaa6c307b2388ecf5f72f6fdf"><span></span><span class="n">kColor</span></span><span></span>     <span class="o">=</span> <span class="n">kParamTypeColor</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a9df07847c20cd540354c92617d62ee38"><span></span><span class="n">kImage</span></span><span></span>     <span class="o">=</span> <span class="n">kParamTypeImage</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a8b40b532bdf61b0a64fa1a20cdfa6e43"><span></span><span class="n">kSegments</span></span><span></span>  <span class="o">=</span> <span class="n">kParamTypeSegments</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7ade907c15fd2f28b7847a5a1f8254f2f5"><span></span><span class="n">kScroll</span></span><span></span>    <span class="o">=</span> <span class="n">kParamTypeScroll</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a76a35856a9d1eab89d34b6c3cac071a4"><span></span><span class="n">kTextModel</span></span><span></span> <span class="o">=</span> <span class="n">kParamTypeTextModel</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a2e41f479d98dd1d3172118dbfe454688"><span></span><span class="n">kNumTypes</span></span><span></span>  <span class="o">=</span> <span class="n">kNumParamTypes</span><span class="p">,</span>
 <span class="p">};</span></pre>
-</section>
-<section id="detailed-documentation">
-<span id="details-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
-<p><a class="reference internal" href="class_CCL_Parameter.html#doxid-class-c-c-l-1-1-parameter"><span class="std std-ref">Parameter</span></a> types.</p>
-<section id="enum-values">
-<h3>Enum Values<a class="headerlink" href="#enum-values" title="Link to this heading"></a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a50aee1b1e326b648bfa4bdf8c4853da2"><span id="index-1"></span><span></span><span class="n">kToggle</span></pre>
-<p>toggle between on/off</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa1acc5720dd4e85ceea5578a6cf14ae6"><span id="index-2"></span><span></span><span class="n">kInteger</span></pre>
-<p>numerical value integer</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a5686197bafb177bdc82550848416a1ad"><span id="index-3"></span><span></span><span class="n">kFloat</span></pre>
-<p>numerical value floating point</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afab53ea4a643325262b9c140af093279"><span id="index-4"></span><span></span><span class="n">kString</span></pre>
-<p>string value</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7acbb9303aa12d973993eb06a7f811aaa0"><span id="index-5"></span><span></span><span class="n">kList</span></pre>
-<p>list of values</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7aa8501cb56c31ef8df5f2058f200b49ce"><span id="index-6"></span><span></span><span class="n">kCommand</span></pre>
-<p>command</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7afc0133ebaa6c307b2388ecf5f72f6fdf"><span id="index-7"></span><span></span><span class="n">kColor</span></pre>
-<p>color value</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a9df07847c20cd540354c92617d62ee38"><span id="index-8"></span><span></span><span class="n">kImage</span></pre>
-<p>image provider</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a8b40b532bdf61b0a64fa1a20cdfa6e43"><span id="index-9"></span><span></span><span class="n">kSegments</span></pre>
-<p>segments using <a class="reference internal" href="struct_CCL_IParamSplitter.html#doxid-struct-c-c-l-1-1-i-param-splitter"><span class="std std-ref">IParamSplitter</span></a></p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7ade907c15fd2f28b7847a5a1f8254f2f5"><span id="index-10"></span><span></span><span class="n">kScroll</span></pre>
-<p>scroll parameter</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-c-c-l-1-1-i-parameter-1a1d1cfd8ffb84e947f82999c682b666a7a76a35856a9d1eab89d34b6c3cac071a4"><span id="index-11"></span><span></span><span class="n">kTextModel</span></pre>
-<p>text model provider</p>
-</section>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_CCL_IParameter_Flags.html" class="btn btn-neutral float-left" title="enum CCL::IParameter::Flags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_CCL_IParameter_TitleFlags.html" class="btn btn-neutral float-left" title="enum CCL::IParameter::TitleFlags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="struct_CCL_IParameterMenuBuilder.html" class="btn btn-neutral float-right" title="struct CCL::IParameterMenuBuilder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -183,7 +151,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 

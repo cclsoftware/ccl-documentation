@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>struct Core::AudioIOData &mdash; CCL Cross-platform Framework Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/cmakerole-sphinx_rtd_theme.css?v=982d3367" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-pygments.css?v=ff3f4257" />
+      <link rel="stylesheet" type="text/css" href="../../_static/doxyrest-sphinx_rtd_theme.css?v=b6ca47bd" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/target-highlight.js?v=df7d332b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="struct Core::AudioIOData::StreamData" href="struct_Core_AudioIOData_StreamData.html" />
+    <link rel="prev" title="struct Core::AudioDataSpan" href="struct_Core_AudioDataSpan.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #293F50" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using CCL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cclstartguide/index.html">Getting Started with CCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmakeguide/index.html">CMake Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclframework/index.html">CCL Cross-platform Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../skinlanguage/index.html">CCL Skin Definition Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Core Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building.html">Building the Core Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="group_core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_deprecated.html">Deprecated List</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_AttributeFactory.html">namespace AttributeFactory</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="namespace_Core.html">namespace Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_libb64.html">namespace libb64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_EvenNumberFunctor.html">struct EvenNumberFunctor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_ResolveContext.html">struct ResolveContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_SecBufferList.html">struct SecBufferList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_TestStorable.html">struct TestStorable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attribute2.html">class Attribute2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeQueue2.html">class AttributeQueue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_AttributeValue2.html">class AttributeValue2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_Attributes2.html">class Attributes2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ClientThread.html">class ClientThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_RegTypeString.html">class RegTypeString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_ServerThread.html">class ServerThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_TestContext.html">class TestContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coreskin/reference/core-skin-elements-classmodel.html">Core Skin Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/index.html">Extension Developer Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maintaining CCL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../codestyle/index.html">Coding Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../codereviewguide/index.html">Code Review Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cclmaintainer/index.html">CCL Maintainer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #293F50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CCL Cross-platform Framework Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Core Library</a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Core.html">namespace Core</a></li>
+      <li class="breadcrumb-item active">struct Core::AudioIOData</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-core-audioiodata">
+<span id="doxid-struct-core-1-1-audio-i-o-data"></span><span id="index-0"></span><h1>struct Core::AudioIOData<a class="headerlink" href="#struct-core-audioiodata" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Audio data block definition for synchronous I/O of multiple audio streams. <a class="reference internal" href="#details-struct-core-1-1-audio-i-o-data"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;coreaudioiodata.h&gt;</span>
+
+<span class="k">struct</span> <span class="n">AudioIOData</span>
+<span class="p">{</span>
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_Core_AudioIOData_StreamData.html#doxid-struct-core-1-1-audio-i-o-data-1-1-stream-data"><span class="std std-ref">StreamData</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a4fdcd896e00567c130d4acfb3091858c"><span class="std std-ref">numInputs</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a4d23abfcd2fe2042faf7cf5f91eb46d2"><span class="std std-ref">numOutputs</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a34f4bd05a5e400f6cf132f57c76208ce"><span class="std std-ref">numSamples</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="enum_Core_AudioFloatType.html#doxid-namespace-core-1a415ec698f5b19a1f043b9d0fd8cb0049"><span class="std std-ref">AudioFloatType</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1ae9faa91688f459940ef97dea36de4117"><span class="std std-ref">floatType</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_AudioIOData_StreamData.html#doxid-struct-core-1-1-audio-i-o-data-1-1-stream-data"><span class="std std-ref">StreamData</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a74fa30a944e44a0e5c14184bf2ddbd6e"><span class="std std-ref">inputs</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_Core_AudioIOData_StreamData.html#doxid-struct-core-1-1-audio-i-o-data-1-1-stream-data"><span class="std std-ref">StreamData</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a8d95d52fe3d68d03dbeddb1fe1e6aec0"><span class="std std-ref">outputs</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1ae523edc031c2a2d1fef3896d88f6141d"><span class="std std-ref">allocateStreamData</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numInputs</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numOutputs</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1aeb9f5764be831c14ee099deb1ce146e2"><span class="std std-ref">deallocateStreamData</span></a><span></span><span class="p">();</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a9522e3a16011d780bfc70eec017eb4f2"><span class="std std-ref">allocateStreams</span></a><span></span><span class="p">(</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numInputs</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numOutputs</span><span class="p">,</span>
+        <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">maxChannels</span> <span class="o">=</span> <span class="n">kMaxAudioStreamChannels</span>
+    <span class="p">);</span>
+
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a7a4d7aa362eda9f68a48b5c89af398be"><span class="std std-ref">deallocateStreams</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1ab2b1bedca71852199afd65e949a1002e"><span class="std std-ref">setInputStreamBuffers</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span class="std std-ref">float32</span></a><span></span><span class="o">*</span> <span class="n">buffers</span><span class="p">[],</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numChannels</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-struct-core-1-1-audio-i-o-data-1a1248d856bff2f0dbf4a5f8b912498b51"><span class="std std-ref">setOutputStreamBuffers</span></a><span></span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span class="std std-ref">float32</span></a><span></span><span class="o">*</span> <span class="n">buffers</span><span class="p">[],</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numChannels</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// direct descendants</span>
+
+<span class="k">template</span> <span class="o">&lt;</span>
+    <span class="kt">int</span> <span class="n">kNumInputs</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">kNumOutputs</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">kMaxChannels</span> <span class="o">=</span> <span class="n">kMaxAudioStreamChannels</span>
+<span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Core_StaticAudioIOData.html#doxid-struct-core-1-1-static-audio-i-o-data"><span class="std std-ref">StaticAudioIOData</span></a><span></span><span class="p">;</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-struct-core-1-1-audio-i-o-data"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Link to this heading"></a></h2>
+<p>Audio data block definition for synchronous I/O of multiple audio streams.</p>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a4fdcd896e00567c130d4acfb3091858c"><span id="index-1"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numInputs</span></pre>
+<p>number of input streams</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a4d23abfcd2fe2042faf7cf5f91eb46d2"><span id="index-2"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numOutputs</span></pre>
+<p>number of output streams</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a34f4bd05a5e400f6cf132f57c76208ce"><span id="index-3"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numSamples</span></pre>
+<p>number of samples per stream buffer</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1ae9faa91688f459940ef97dea36de4117"><span id="index-4"></span><a class="reference internal" href="enum_Core_AudioFloatType.html#doxid-namespace-core-1a415ec698f5b19a1f043b9d0fd8cb0049"><span class="std std-ref">AudioFloatType</span></a><span></span> <span class="n">floatType</span></pre>
+<p>audio floating-point type (32 or 64 Bit)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a74fa30a944e44a0e5c14184bf2ddbd6e"><span id="index-5"></span><a class="reference internal" href="struct_Core_AudioIOData_StreamData.html#doxid-struct-core-1-1-audio-i-o-data-1-1-stream-data"><span class="std std-ref">StreamData</span></a><span></span><span class="o">*</span> <span class="n">inputs</span></pre>
+<p>input streams</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a8d95d52fe3d68d03dbeddb1fe1e6aec0"><span id="index-6"></span><a class="reference internal" href="struct_Core_AudioIOData_StreamData.html#doxid-struct-core-1-1-audio-i-o-data-1-1-stream-data"><span class="std std-ref">StreamData</span></a><span></span><span class="o">*</span> <span class="n">outputs</span></pre>
+<p>output streams</p>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1ae523edc031c2a2d1fef3896d88f6141d"><span id="index-7"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">allocateStreamData</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numInputs</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numOutputs</span><span class="p">)</span></pre>
+<p>Allocate stream data arrays for specified number of I/Os.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1aeb9f5764be831c14ee099deb1ce146e2"><span id="index-8"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">deallocateStreamData</span><span class="p">()</span></pre>
+<p>Deallocate stream data arrays.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a9522e3a16011d780bfc70eec017eb4f2"><span id="index-9"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">allocateStreams</span><span class="p">(</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numInputs</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numOutputs</span><span class="p">,</span>
+    <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">maxChannels</span> <span class="o">=</span> <span class="n">kMaxAudioStreamChannels</span>
+<span class="p">)</span></pre>
+<p>Allocate stream arrays and audio buffer arrays for specified number of I/Os.</p>
+<p>Calls allocateStreamData.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a7a4d7aa362eda9f68a48b5c89af398be"><span id="index-10"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">deallocateStreams</span><span class="p">()</span></pre>
+<p>Deallocate stream arrays and audio buffer arrays.</p>
+<p>Calls deallocateStreamData.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1ab2b1bedca71852199afd65e949a1002e"><span id="index-11"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">setInputStreamBuffers</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span class="std std-ref">float32</span></a><span></span><span class="o">*</span> <span class="n">buffers</span><span class="p">[],</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numChannels</span><span class="p">)</span></pre>
+<p>Assign buffer addresses for given input stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-struct-core-1-1-audio-i-o-data-1a1248d856bff2f0dbf4a5f8b912498b51"><span id="index-12"></span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">void</span></a><span></span> <span class="n">setOutputStreamBuffers</span><span class="p">(</span><a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">index</span><span class="p">,</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1aacdc525d6f7bddb3ae95d5c311bd06a1"><span class="std std-ref">float32</span></a><span></span><span class="o">*</span> <span class="n">buffers</span><span class="p">[],</span> <a class="reference internal" href="namespace_Core.html#doxid-namespace-core-1ae7c9cd658cc6c090cff428a3e43f7ba5"><span class="std std-ref">int</span></a><span></span> <span class="n">numChannels</span><span class="p">)</span></pre>
+<p>Assign buffer addresses for given output stream.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_Core_AudioDataSpan.html" class="btn btn-neutral float-left" title="struct Core::AudioDataSpan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Core_AudioIOData_StreamData.html" class="btn btn-neutral float-right" title="struct Core::AudioIOData::StreamData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -201,6 +201,8 @@
         <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/enum_Core_Alignment_Flags.html#doxid-struct-core-1-1-alignment-1aa705cf7e79a21c2352b00ffe20cd295facd74755b504e8afaa23eb23d68ecae77"><span class="std std-ref">Alignment::kLeftTop</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_TextFormat_Flags.html#doxid-class-c-c-l-1-1-text-format-1aa705cf7e79a21c2352b00ffe20cd295faf2b7ba5e359949b27c448f765442971d"><span class="std std-ref">TextFormat::kWordBreak</span></a><span></span><span class="p">)</span>
     <span class="p">);</span>
 
+    <span class="k">static</span> <span class="n">CoordF</span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1a71c11cbad042c6f3facd86f2e10aafcc"><span class="std std-ref">measureLineHeight</span></a><span></span> <span class="p">(</span>FontRef<span></span> <span class="n">font</span><span class="p">);</span>
+
     <span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <a class="reference internal" href="#doxid-class-c-c-l-1-1-font-1aed9190c9c01eba82648f19e60f88648e"><span class="std std-ref">collapseString</span></a><span></span> <span class="p">(</span>
         <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
         <span class="n">Coord</span> <span class="n">maxWidth</span><span class="p">,</span>
@@ -267,7 +269,9 @@
     <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1a391513d7de0131f0849567c6ce494680"><span class="std std-ref">TextFormatRef</span></a><span></span> <span class="n">format</span> <span class="o">=</span> <a class="reference internal" href="class_CCL_TextFormat.html#doxid-class-c-c-l-1-1-text-format"><span class="std std-ref">TextFormat</span></a><span></span> <span class="p">(</span><a class="reference internal" href="../../corelibrary/reference/enum_Core_Alignment_Flags.html#doxid-struct-core-1-1-alignment-1aa705cf7e79a21c2352b00ffe20cd295facd74755b504e8afaa23eb23d68ecae77"><span class="std std-ref">Alignment::kLeftTop</span></a><span></span><span class="p">,</span> <a class="reference internal" href="enum_CCL_TextFormat_Flags.html#doxid-class-c-c-l-1-1-text-format-1aa705cf7e79a21c2352b00ffe20cd295faf2b7ba5e359949b27c448f765442971d"><span class="std std-ref">TextFormat::kWordBreak</span></a><span></span><span class="p">)</span>
 <span class="p">)</span></pre>
 <p>Get extent of a multiline text area.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1aed9190c9c01eba82648f19e60f88648e"><span id="index-8"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">collapseString</span> <span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a71c11cbad042c6f3facd86f2e10aafcc"><span id="index-8"></span><span></span><span class="k">static</span> <span class="n">CoordF</span> <span class="n">measureLineHeight</span> <span class="p">(</span>FontRef<span></span> <span class="n">font</span><span class="p">)</span></pre>
+<p>Get minimum line height to fit all common characters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1aed9190c9c01eba82648f19e60f88648e"><span id="index-9"></span><span></span><span class="k">static</span> <a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">void</span></a><span></span> <span class="n">collapseString</span> <span class="p">(</span>
     <a class="reference internal" href="class_CCL_String.html#doxid-class-c-c-l-1-1-string"><span class="std std-ref">String</span></a><span></span><span class="o">&amp;</span> <span class="n">string</span><span class="p">,</span>
     <span class="n">Coord</span> <span class="n">maxWidth</span><span class="p">,</span>
     FontRef<span></span> <span class="n">font</span><span class="p">,</span>
@@ -275,7 +279,7 @@
     <a class="reference internal" href="global.html#doxid-file-8cpp-1af6a258d8f3ee5206d682d799316314b1"><span class="std std-ref">bool</span></a><span></span> <span class="n">exact</span> <span class="o">=</span> <a class="reference internal" href="global.html#doxid-packagedocument-8cpp-1a45feb2e450b5db8437447fee5b826ccd"><span class="std std-ref">false</span></a><span></span>
 <span class="p">)</span></pre>
 <p>Collapse string to fit into given width (replacing characters with “..”).</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a934a957222054a971fbff8c193d114c7"><span id="index-9"></span><span></span><span class="k">static</span> <a class="reference internal" href="struct_CCL_IFontTable.html#doxid-struct-c-c-l-1-1-i-font-table"><span class="std std-ref">IFontTable</span></a><span></span><span class="o">*</span> <span class="n">collectFonts</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_CollectFontFlags.html#doxid-class-c-c-l-1-1-font-1aaf53b71ac98b2f705ae271d2ee16d313a458c52c97ebcef938c8043c66dd44d7e"><span class="std std-ref">kCollectAppFonts</span></a><span></span><span class="p">)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-c-c-l-1-1-font-1a934a957222054a971fbff8c193d114c7"><span id="index-10"></span><span></span><span class="k">static</span> <a class="reference internal" href="struct_CCL_IFontTable.html#doxid-struct-c-c-l-1-1-i-font-table"><span class="std std-ref">IFontTable</span></a><span></span><span class="o">*</span> <span class="n">collectFonts</span> <span class="p">(</span><a class="reference internal" href="namespace_CCL.html#doxid-namespace-c-c-l-1acd705038499fe2347d5e8f757ffc999c"><span class="std std-ref">int</span></a><span></span> <span class="n">flags</span> <span class="o">=</span> <a class="reference internal" href="enum_CCL_Font_CollectFontFlags.html#doxid-class-c-c-l-1-1-font-1aaf53b71ac98b2f705ae271d2ee16d313a458c52c97ebcef938c8043c66dd44d7e"><span class="std std-ref">kCollectAppFonts</span></a><span></span><span class="p">)</span></pre>
 <p>Create list of fonts.</p>
 </section>
 </section>
@@ -293,7 +297,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, CCL Software Licensing GmbH.
-      <span class="lastupdated">Last updated on Aug 14, 2026.
+      <span class="lastupdated">Last updated on Oct 29, 2026.
       </span></p>
   </div>
 
